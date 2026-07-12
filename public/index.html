@@ -16,23 +16,33 @@
   <!-- Background Glows -->
   <div class="glow-bg glow-1"></div>
   <div class="glow-bg glow-2"></div>
+  <div class="glow-bg glow-3"></div>
 
   <header>
     <div class="logo">
       <span class="logo-accent">TheFuture</span>Loop
     </div>
+    <nav class="nav-links">
+      <a href="#about-section">About</a>
+      <a href="#originals-section">Originals</a>
+      <a href="#verticals-section">Verticals</a>
+      <a href="#stats-section">Stats</a>
+      <a href="#archive-section">Archive</a>
+    </nav>
     <div class="tagline-badge">Sourced by TopStatsZone</div>
   </header>
 
   <main>
-    <section class="hero">
+    <!-- Hero / Brand Manifesto Section -->
+    <section class="hero" id="about-section">
+      <div class="hero-tagline-main">DATA &middot; CODE &middot; BREAKTHROUGHS</div>
       <h1 class="hero-title">
-        Understand the breakthroughs shaping our future - in 10 minutes each week.
+        The Digital Content Network for High-Scale Deep Tech, AI, and Life Sciences.
       </h1>
       <p class="hero-subtitle">
-        TheFutureLoop analyzes research papers, open-source codebases, engineering histories, and physical sciences so you don't have to.
+        TheFutureLoop (TFL) is a premium research intelligence network. We bypass secondary news to scan, extract, and synthesize raw scientific evidence and codebase benchmarks into high-density, binge-worthy content.
       </p>
-      <p class="hero-subinfo" style="font-size: 0.95rem; color: var(--text-secondary); max-width: 600px; margin: -0.5rem auto 2rem auto; line-height: 1.6;">
+      <p class="hero-subinfo">
         We link directly to primary evidence - peer-reviewed publications, open-source repositories, and verified datasets, bypassing secondary press coverage.
       </p>
 
@@ -40,8 +50,8 @@
       <div class="signup-card">
         <div class="card-glow"></div>
         <div class="card-content">
-          <h3>Primary sources. Objective analysis.</h3>
-          <p style="margin-bottom: 1.25rem;">One high-density briefing delivered every Saturday. Direct links to the evidence. No sponsored analysis.</p>
+          <h3>Join The TFL Network</h3>
+          <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">One high-density briefing delivered every Saturday. Direct links to the evidence. No sponsored analysis.</p>
           
           <form id="subscribe-form" class="subscribe-form" data-netlify="true" name="newsletter">
             <div class="input-container">
@@ -61,57 +71,96 @@
       </div>
     </section>
 
-    <!-- Editorial Process Section -->
-    <section class="process-section">
-      <h3 class="process-title">How FutureLoop works</h3>
-      <div class="process-pipeline">
-        <div class="process-step">
-          <div class="step-num">01</div>
-          <div class="step-name">Deep Ingestion</div>
-          <p>We scan hundreds of scientific journals, codebases, historical patents, and technical releases daily.</p>
+    <!-- Binge-Worthy Originals Section (TVF Style) -->
+    <section class="originals-section" id="originals-section">
+      <div class="section-header">
+        <h2 class="section-title">Binge-Worthy Originals</h2>
+        <p class="section-subtitle">Our weekly high-signal content series focused on engineering, systems, and clinical progress.</p>
+      </div>
+      <div class="originals-grid">
+        <div class="original-card">
+          <div class="card-badge">Weekly &middot; Tuesday</div>
+          <h4>Code Schema Audit</h4>
+          <p>Stepping line-by-line through open-source software structures and database engines to isolate how code decisions yield real-world execution changes.</p>
         </div>
-         <div class="process-arrow">&rarr;</div>
-        <div class="process-step">
-          <div class="step-num">02</div>
-          <div class="step-name">Evidence Extraction</div>
-          <p>We filter out marketing hype, isolating raw performance benchmarks, parameters, and measured metrics.</p>
+        <div class="original-card">
+          <div class="card-badge">Weekly &middot; Thursday</div>
+          <h4>Structural Forensic File</h4>
+          <p>Complete technical reconstructions of engineering, computing, and systemic failures using stress calculations, logs, and failure post-mortems.</p>
         </div>
-         <div class="process-arrow">&rarr;</div>
-        <div class="process-step">
-          <div class="step-num">03</div>
-          <div class="step-name">Structural Synthesis</div>
-          <p>We evaluate underlying architectures, system limitations, and long-term scientific viability.</p>
+        <div class="original-card">
+          <div class="card-badge">Weekly &middot; Saturday</div>
+          <h4>Biotech Synopsis</h4>
+          <p>Analyzing clinical trial protocols, GCP compliance, molecular data, FDA/EMA filings, and pharmacovigilance safety metrics across key global markets.</p>
         </div>
-         <div class="process-arrow">&rarr;</div>
-        <div class="process-step">
-          <div class="step-num">04</div>
-          <div class="step-name">Permanent Repository</div>
-          <p>We index findings into a searchable research repository, delivered as a concise weekly brief.</p>
+        <div class="original-card">
+          <div class="card-badge">Monthly &middot; Friday</div>
+          <h4>The Boundary Condition</h4>
+          <p>Deep-dives analyzing operations at the absolute physical edge of system limits, from space operations to subsea data centers.</p>
         </div>
       </div>
     </section>
 
-    <!-- Who Reads FutureLoop Section -->
-    <section class="audience-section">
-      <h3 class="audience-title">Who reads TheFutureLoop?</h3>
-      <div class="audience-grid">
-        <span class="audience-tag">AI Engineers</span>
-        <span class="audience-tag">Systems Architects</span>
-        <span class="audience-tag">Computational Biologists</span>
-        <span class="audience-tag">Clinical Trial Directors</span>
-        <span class="audience-tag">Regulatory Affairs Specialists</span>
-        <span class="audience-tag">Pharmacovigilance Leads</span>
-        <span class="audience-tag">Deep Tech Founders</span>
-        <span class="audience-tag">Scientific Researchers</span>
-        <span class="audience-tag">Venture Capitalists</span>
-        <span class="audience-tag">Hardware Designers</span>
-        <span class="audience-tag">Technical Product Builders</span>
+    <!-- Our Specialized Verticals Section (TVF Sister Channels Style) -->
+    <section class="verticals-section" id="verticals-section">
+      <div class="section-header">
+        <h2 class="section-title">Our Specialized Verticals</h2>
+        <p class="section-subtitle">Targeted publication channels serving specialized global technical groups.</p>
+      </div>
+      <div class="verticals-grid">
+        <div class="vertical-card">
+          <div class="vertical-icon">💻</div>
+          <h4>TFL Compute</h4>
+          <div class="vertical-subscribers">70K+ Engineers & Architects</div>
+          <p>Covering LLM context windows, compiler architectures, GPU memory layouts, and high-performance databases.</p>
+        </div>
+        <div class="vertical-card">
+          <div class="vertical-icon">🧬</div>
+          <h4>TFL Bio-Genomics</h4>
+          <div class="vertical-subscribers">50K+ Bioinformaticians & Leads</div>
+          <p>Computational biology, oncology pipelines, GCP clinical trial protocols, and global safety tracking (CTRAPV).</p>
+        </div>
+        <div class="vertical-card">
+          <div class="vertical-icon">🚀</div>
+          <h4>TFL Deep-Tech</h4>
+          <div class="vertical-subscribers">40K+ Founders & VCs</div>
+          <p>Semiconductor lithography, reusable aerospace alloys, nuclear fusion configurations, and battery grid density.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Stats Section -->
+    <section class="stats-section" id="stats-section">
+      <div class="section-header">
+        <h2 class="section-title">Disrupting Scientific Communication</h2>
+        <p class="section-subtitle">Bridging the gap between peer-reviewed evidence and high-velocity organic reach.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num">150+</div>
+          <p class="stat-desc">Daily Scraped Sources Monitored</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">30</div>
+          <p class="stat-desc">Daily High-Density Briefings</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">10x</div>
+          <p class="stat-desc">Data Verification Standard</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">0</div>
+          <p class="stat-desc">Sponsored Fluff or Ad Bias</p>
+        </div>
       </div>
     </section>
 
     <!-- Archive Section -->
     <section class="archive-section" id="archive-section" style="display: none;">
-      <h3 class="archive-title">📁 Past Intelligence Briefings</h3>
+      <div class="section-header">
+        <h2 class="section-title">📁 Past Intelligence Briefings</h2>
+        <p class="section-subtitle">Read previous weekly editions and datasets compiled by TFL.</p>
+      </div>
       <div class="archive-grid" id="archive-grid">
         <!-- Rendered dynamically -->
       </div>
@@ -119,15 +168,30 @@
   </main>
 
   <footer>
-    <div class="footer-links">
-      <a href="#">Research</a>
-      <a href="#archive-section">Archive</a>
-      <a href="#">Datasets</a>
-      <a href="#">About</a>
-      <a href="https://x.com/futureloop_co" target="_blank" rel="noopener noreferrer">X</a>
-      <a href="https://github.com/thefutureloop" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="#">Research</a>
+        <a href="#archive-section">Archive</a>
+        <a href="#">Datasets</a>
+        <a href="#">About</a>
+        <a href="https://x.com/thefutureloop_co" target="_blank" rel="noopener noreferrer">X</a>
+        <a href="https://github.com/thefutureloop" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+      
+      <!-- Sweden-India Dual Address Block (TVF Style) -->
+      <div class="footer-addresses">
+        <div class="address-col">
+          <h5>🇸🇪 Nordics Hub</h5>
+          <p>Sahlgrenska Science Park, Medicinaregatan 8A, 413 90 Gothenburg, Sweden</p>
+        </div>
+        <div class="address-col">
+          <h5>🇮🇳 India Hub</h5>
+          <p>Hitec City Phase II, Madhapur, Hyderabad, Telangana 500081, India</p>
+        </div>
+      </div>
+      
+      <p class="footer-copyright">&copy; 2026 TheFutureLoop. All rights reserved.</p>
     </div>
-    <p class="footer-copyright">&copy; 2026 TheFutureLoop. All rights reserved.</p>
   </footer>
 
   <!-- Script -->
