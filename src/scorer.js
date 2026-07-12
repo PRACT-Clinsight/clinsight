@@ -118,8 +118,8 @@ export async function scoreItems(rawItems, dateStr) {
   
   const ai = new GoogleGenAI({ apiKey });
   const prompt = `
-You are an expert scientific researcher and content ranking officer for "@futureloop_co" (FutureLoop), a premium data-driven research intelligence publication.
-Your focus is strictly AI for Biomedicine, computational biology, bioinformatics, drug discovery, clinical trials, deep tech startups, developer workflows, and researcher productivity.
+You are an expert scientific researcher and content ranking officer for "@thefutureloop_co" (TheFutureLoop), a premium data-driven research intelligence publication.
+Your focus is strictly AI for Biomedicine, computational biology, bioinformatics, drug discovery, clinical trials, regulatory compliance (FDA/EMA/CDSCO/MHRA/Läkemedelsverket/Swissmedic), pharmacovigilance safety, deep tech startups, developer workflows, and researcher productivity.
 
 Analyze the following list of raw scraped items. Score each item from 1 to 10 on these parameters:
 1. Novelty: How fresh, unique, or rare is this scientific news, startup model, or tech paper?

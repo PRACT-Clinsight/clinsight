@@ -1,211 +1,123 @@
 [
   {
-    "title": "Old and new apps, via modern coding agents by Terry Tao",
+    "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+    "link": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+    "source": "Hacker News",
+    "description": "Score: 95 by systima with 48 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T18:25:51.000Z"
+  },
+  {
+    "title": "I love LLMs, I hate hype",
+    "link": "https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html",
+    "source": "Hacker News",
+    "description": "Score: 28 by therepanic with 6 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T18:31:56.000Z"
+  },
+  {
+    "title": "The shingles vaccine may reduce the risk of dementia",
+    "link": "https://www.economist.com/leaders/2026/07/09/a-no-brainer-for-protecting-your-brain",
+    "source": "Hacker News",
+    "description": "Score: 117 by saikatsg with 95 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T15:23:59.000Z"
+  },
+  {
+    "title": "Old and new apps, via modern coding agents",
     "link": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
     "source": "Hacker News",
-    "description": "Score: 122 by subset with 29 comments",
+    "description": "Score: 350 by subset with 99 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T11:09:42.000Z"
   },
   {
-    "title": "Yt-Dlp Sequence Diagrams",
-    "link": "https://app.ilograph.com/demo.ilograph.yt-dlp/Download%2520a%2520YouTube%2520Video",
+    "title": "Don't you mean extinct?",
+    "link": "https://fabiensanglard.net/extinct/index.html",
     "source": "Hacker News",
-    "description": "Score: 53 by billyp-rva with 9 comments",
+    "description": "Score: 122 by zdw with 54 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-12T11:49:38.000Z"
+    "timestamp": "2026-07-12T15:17:20.000Z"
+  },
+  {
+    "title": "Automation Without Understanding",
+    "link": "https://arxiv.org/abs/2607.06377",
+    "source": "Hacker News",
+    "description": "Score: 38 by root-parent with 22 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T16:54:47.000Z"
+  },
+  {
+    "title": "Why write code in 2026",
+    "link": "https://softwaredoug.com/blog/2026/07/09/write-code",
+    "source": "Hacker News",
+    "description": "Score: 22 by softwaredoug with 68 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-10T16:12:52.000Z"
+  },
+  {
+    "title": "Show HN: Shirei, cross-platform GUI framework in native Go",
+    "link": "https://github.com/hasenj/go-shirei/",
+    "source": "Hacker News",
+    "description": "Score: 48 by hsn915 with 27 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T16:55:42.000Z"
+  },
+  {
+    "title": "Can We Understand How Large Language Models Reason?",
+    "link": "https://cacm.acm.org/news/can-we-understand-how-large-language-models-reason/",
+    "source": "Hacker News",
+    "description": "Score: 13 by adunk with 4 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T18:04:41.000Z"
+  },
+  {
+    "title": "Against Usefulness",
+    "link": "https://www.motivenotes.ai/p/against-usefulness",
+    "source": "Hacker News",
+    "description": "Score: 28 by supo with 5 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T17:47:07.000Z"
+  },
+  {
+    "title": "LARP – Revenue infrastructure for serious founders",
+    "link": "https://www.larp.website/",
+    "source": "Hacker News",
+    "description": "Score: 34 by BerislavLopac with 5 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T16:56:41.000Z"
+  },
+  {
+    "title": "Why study Diophantine equations?",
+    "link": "https://hidden-phenomena.com/articles/modular",
+    "source": "Hacker News",
+    "description": "Score: 42 by mb1699 with 12 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T15:53:53.000Z"
   },
   {
     "title": "Understanding the Odin Programming Language",
     "link": "https://odinbook.com/",
     "source": "Hacker News",
-    "description": "Score: 30 by AlexeyBrin with 1 comments",
+    "description": "Score: 122 by AlexeyBrin with 61 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T12:08:07.000Z"
+  },
+  {
+    "title": "Theo de Raadt: \"You've been smoking something mind altering\" (2007)",
+    "link": "https://marc.info/?l=openbsd-misc&m=119318909016582",
+    "source": "Hacker News",
+    "description": "Score: 50 by turrini with 36 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T16:05:29.000Z"
   },
   {
     "title": "Ghostel.el: Terminal emulator powered by libghostty",
     "link": "https://dakra.github.io/ghostel/",
     "source": "Hacker News",
-    "description": "Score: 78 by signa11 with 5 comments",
+    "description": "Score: 230 by signa11 with 38 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T08:52:59.000Z"
-  },
-  {
-    "title": "Vint Cerf, a “father of the Internet”, is retiring",
-    "link": "https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/",
-    "source": "Hacker News",
-    "description": "Score: 167 by compiler-guy with 98 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-10T00:06:59.000Z"
-  },
-  {
-    "title": "Unauthenticated RCE in Motorola's MR2600 Router",
-    "link": "https://mrbruh.com/motorola/",
-    "source": "Hacker News",
-    "description": "Score: 12 by MrBruh with 0 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-12T11:52:21.000Z"
-  },
-  {
-    "title": "Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase",
-    "link": "https://github.com/cosmtrek/mindwalk",
-    "source": "Hacker News",
-    "description": "Score: 103 by cosmtrek with 46 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-12T05:51:32.000Z"
-  },
-  {
-    "title": "Mesh LLM: distributed AI computing on iroh",
-    "link": "https://www.iroh.computer/blog/mesh-llm",
-    "source": "Hacker News",
-    "description": "Score: 291 by tionis with 67 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-11T22:38:57.000Z"
-  },
-  {
-    "title": "Protobuf-py: Protobuf for Python, without compromises",
-    "link": "https://buf.build/blog/protobuf-py",
-    "source": "Hacker News",
-    "description": "Score: 85 by ming13 with 18 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-08T03:16:38.000Z"
-  },
-  {
-    "title": "Xbox 'OG' Adventures",
-    "link": "https://mamoniem.com/xbox-og-adventures/",
-    "source": "Hacker News",
-    "description": "Score: 23 by davikr with 2 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-07T04:35:55.000Z"
-  },
-  {
-    "title": "Lessons from the Vasa Shipwreck",
-    "link": "https://www.ft.com/content/200a6c44-9b66-4af3-82eb-98acb53898e4",
-    "source": "Hacker News",
-    "description": "Score: 4 by bookofjoe with 1 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-08T22:07:05.000Z"
-  },
-  {
-    "title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
-    "link": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
-    "source": "Hacker News",
-    "description": "Score: 304 by adletbalzhanov with 121 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-11T17:21:49.000Z"
-  },
-  {
-    "title": "Handsum: An LQIP Image File Format",
-    "link": "https://nigeltao.github.io/blog/2026/handsum.html",
-    "source": "Hacker News",
-    "description": "Score: 32 by dmit with 2 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-08T12:07:59.000Z"
-  },
-  {
-    "title": "Ditching Zotero for a Text File",
-    "link": "https://atthis.link/blog/2026/57207.html",
-    "source": "Hacker News",
-    "description": "Score: 12 by speckx with 7 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-06T20:17:19.000Z"
-  },
-  {
-    "title": "An agent in 100 lines of Lisp",
-    "link": "https://thebeach.dev/posts/lisp-agent/",
-    "source": "Hacker News",
-    "description": "Score: 183 by jamiebeach with 51 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-07T21:21:09.000Z"
-  },
-  {
-    "title": "Discord Server Link",
-    "link": "https://www.reddit.com/r/singularity/comments/1tg1y16/discord_server_link/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/DnDNecromantic  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-05-17T21:10:00.000Z"
-  },
-  {
-    "title": "The worst people are fighting",
-    "link": "https://www.reddit.com/r/singularity/comments/1uu8vjo/the_worst_people_are_fighting/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/VariationLivid3193  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-12T07:41:00.000Z"
-  },
-  {
-    "title": "Sam Altman showing signs of singularity",
-    "link": "https://www.reddit.com/r/singularity/comments/1utq7zm/sam_altman_showing_signs_of_singularity/",
-    "source": "r/singularity",
-    "description": "It’s quite interesting to me how (relatively) cheap it is. That’s the headline for me.\n Combined with the recent math finding it’s also starting to show how general models are the way even for frontier intelligence. I would also say small/medium coding tasks is pretty much solved too (not engineering/system design etc, idea -> code in small tasks), in unison with competitive coding as a whole with the recent atcoder competition.\n Claude code + fable does better with multi agent workflows than Sol + terra which means either Claude code harness is amazing or Anthropic trains the models to just be aware agentically. This is again exciting as there may come a time we can have sort of frontier harness. Claude released Claude science because clearly Claude code wasn’t built for it. Maybe, in the future , one harness does all.\n Great release from OpenAI nonetheless.\n    submitted by    /u/Fearless-Elephant-81  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-11T17:30:41.000Z"
-  },
-  {
-    "title": "Lidl owner wants to build one of several artificial intelligence “gigafactories” planned by the EU",
-    "link": "https://www.reddit.com/r/singularity/comments/1uu997q/lidl_owner_wants_to_build_one_of_several/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/Distinct-Question-16  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-12T08:02:57.000Z"
-  },
-  {
-    "title": "Tim cook writes to sam altman",
-    "link": "https://www.reddit.com/r/singularity/comments/1utjtok/tim_cook_writes_to_sam_altman/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/VariationLivid3193  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-11T13:14:20.000Z"
-  },
-  {
-    "title": "The thing is they're both right",
-    "link": "https://www.reddit.com/r/singularity/comments/1utqiej/the_thing_is_theyre_both_right/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/Effective_Scheme2158  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-11T17:41:34.000Z"
-  },
-  {
-    "title": "While Musk's Neuralink drills into skulls, China's BrainCo bets the future of brain tech is wearable",
-    "link": "https://www.reddit.com/r/singularity/comments/1utwxb9/while_musks_neuralink_drills_into_skulls_chinas/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/yogthos  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-11T21:58:17.000Z"
-  },
-  {
-    "title": "Tesla dismantles Fremont car production line in one month, making way for Optimus production with a target of 1 million units per year",
-    "link": "https://www.reddit.com/r/singularity/comments/1utktst/tesla_dismantles_fremont_car_production_line_in/",
-    "source": "r/singularity",
-    "description": "https://x.com/i/status/2075636160508866562\n    submitted by    /u/Distinct-Question-16  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-11T13:56:51.000Z"
-  },
-  {
-    "title": "What’s your personal prediction for RSI (recursive self improvement)? Realistically.",
-    "link": "https://www.reddit.com/r/singularity/comments/1uu6l4n/whats_your_personal_prediction_for_rsi_recursive/",
-    "source": "r/singularity",
-    "description": "Do you think it’s possible? If so when and what do you think it’ll look like. This concept fascinates me endlessly.\n    submitted by    /u/domdod9  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-12T05:35:13.000Z"
-  },
-  {
-    "title": "GPT-5.5 with tools now surpasses the 10-year-old level on the BabyVision benchmark",
-    "link": "https://www.reddit.com/r/singularity/comments/1utm334/gpt55_with_tools_now_surpasses_the_10yearold/",
-    "source": "r/singularity",
-    "description": "I couldn't find the numerical performance values for the different age groups of children, but based on a visual inspection of the chart, the average scores appear to be approximately:\n 3 years old: ~40%\n 6 years old: ~66%\n 10 years old: ~74%\n 12 years old: ~87%\n https://unipat.ai/benchmarks/BabyVision\n    submitted by    /u/Waiting4AniHaremFDVR  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-11T14:48:44.000Z"
-  },
-  {
-    "title": "Miora",
-    "link": "https://www.producthunt.com/products/miora-2",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-07T15:48:10.000Z"
   },
   {
     "title": "JustVibe",
@@ -216,12 +128,28 @@
     "timestamp": "2026-07-06T17:33:19.000Z"
   },
   {
+    "title": "ServiceBeard",
+    "link": "https://www.producthunt.com/products/servicebeard",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-05T21:47:41.000Z"
+  },
+  {
     "title": "FetchSandbox",
     "link": "https://www.producthunt.com/products/fetchsandbox",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-06-19T04:12:56.000Z"
+  },
+  {
+    "title": "Miora",
+    "link": "https://www.producthunt.com/products/miora-2",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-07T15:48:10.000Z"
   },
   {
     "title": "Second Brain for AI v2",
@@ -232,12 +160,12 @@
     "timestamp": "2026-06-25T03:43:33.000Z"
   },
   {
-    "title": "ServiceBeard",
-    "link": "https://www.producthunt.com/products/servicebeard",
+    "title": "Breathing In Labour",
+    "link": "https://www.producthunt.com/products/breathing-in-labour",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-05T21:47:41.000Z"
+    "timestamp": "2026-06-24T17:18:24.000Z"
   },
   {
     "title": "Basedash SCIM",
@@ -246,14 +174,6 @@
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-07-11T02:40:25.000Z"
-  },
-  {
-    "title": "Breathing In Labour",
-    "link": "https://www.producthunt.com/products/breathing-in-labour",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-06-24T17:18:24.000Z"
   },
   {
     "title": "San Fran Sim",
@@ -272,20 +192,20 @@
     "timestamp": "2026-07-08T17:36:25.000Z"
   },
   {
-    "title": "Kickbacks CLI",
-    "link": "https://www.producthunt.com/products/kickbacks-cli",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-07T02:18:04.000Z"
-  },
-  {
     "title": "Effects SDK",
     "link": "https://www.producthunt.com/products/effects-sdk",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-06-23T06:17:54.000Z"
+  },
+  {
+    "title": "Kickbacks CLI",
+    "link": "https://www.producthunt.com/products/kickbacks-cli",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-07T02:18:04.000Z"
   },
   {
     "title": "SoundPipe",
@@ -304,20 +224,20 @@
     "timestamp": "2026-07-09T17:16:44.000Z"
   },
   {
-    "title": "Sim",
-    "link": "https://www.producthunt.com/products/sim-studio",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-08T18:55:06.000Z"
-  },
-  {
     "title": "ChatCut",
     "link": "https://www.producthunt.com/products/chatcut-ai-video-editor",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-07-09T06:50:16.000Z"
+  },
+  {
+    "title": "Sim",
+    "link": "https://www.producthunt.com/products/sim-studio",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-08T18:55:06.000Z"
   },
   {
     "title": "Play2Perfect: What Matters in Dexterous Play Pretraining for Precise Assembly?",
@@ -638,5 +558,85 @@
     "description": "Should Anthropic trust Elon Musk to host its models? With about $40 billion in revenue at stake, Musk insists that the company can.",
     "category": "Deep Tech & Startups",
     "timestamp": "2026-07-09T21:57:42.000Z"
+  },
+  {
+    "title": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+    "link": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/",
+    "source": "MIT Technology Review",
+    "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Anthropic found a hidden space where Claude puzzles over concepts The AI firm Anthropic has got the clearest glimpse yet at what’s really going on inside large language models as they…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-10T12:10:00.000Z"
+  },
+  {
+    "title": "Sperm donors need limits, says a European fertility group",
+    "link": "https://www.technologyreview.com/2026/07/10/1140289/sperm-donors-need-limits-says-a-european-fertility-group/",
+    "source": "MIT Technology Review",
+    "description": "Ties van der Meer doesn’t know how many siblings he has. The 47-year-old was conceived at a private fertility clinic in the Netherlands using sperm provided by an anonymous donor. After the Netherlands banned anonymous donation in 2004, the doctor who ran the clinic destroyed records that might have identified those donors, he says. He…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-10T09:00:00.000Z"
+  },
+  {
+    "title": "Anthropic found a hidden space where Claude puzzles over concepts",
+    "link": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
+    "source": "MIT Technology Review",
+    "description": "The AI firm Anthropic has developed a technique that has given it the clearest glimpse yet at what’s really going on inside large language models as they answer questions or carry out tasks. What they found ranges from the mundane to the unnerving. Researchers at the company built a tool called the Jacobian lens (or…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-09T20:22:28.000Z"
+  },
+  {
+    "title": "The Download: a nuclear landmark, and China eyes Nvidia chips",
+    "link": "https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/",
+    "source": "MIT Technology Review",
+    "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Four nuclear reactors hit a big milestone in the US —Casey Crownhart I was really looking forward to July 4, and not just because I love a poolside barbecue. This year…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-09T12:10:00.000Z"
+  },
+  {
+    "title": "Four nuclear reactors hit a big milestone in the US",
+    "link": "https://www.technologyreview.com/2026/07/09/1140235/nuclear-reactor-milestone-criticality/",
+    "source": "MIT Technology Review",
+    "description": "I was really looking forward to July 4, and not just because I love a poolside barbecue. This year the American holiday also marked a big symbolic deadline for US nuclear power. Last year the Trump administration set a goal to see three new microreactors achieve criticality, a technical milestone establishing that a reactor can…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-09T08:00:00.000Z"
+  },
+  {
+    "title": "Scientists’ Side Hustle? Using AI and Quantum Computing to Generate New Peptides",
+    "link": "https://www.wired.com/story/scientists-using-ai-and-quantum-computing-to-generate-new-peptides/",
+    "source": "WIRED Science",
+    "description": "Researchers cobbled together funding and time to show how quantum computing could aid in the development of drugs to help underserved populations and combat rare diseases.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-12T10:00:00.000Z"
+  },
+  {
+    "title": "China’s Tianwen-2 Space Probe Has Rendezvoused With Earth’s Quasi-Moon",
+    "link": "https://www.wired.com/story/chinas-tianwen-2-space-probe-earth-quasi-moon/",
+    "source": "WIRED Science",
+    "description": "The probe sent back the first pictures of the asteroid Kamo’oalewa. Next step: landing on the surface and collecting samples to send back to Earth.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-11T09:30:00.000Z"
+  },
+  {
+    "title": "El Niño Is Already Wreaking Havoc on Pacific Fisheries",
+    "link": "https://www.wired.com/story/el-nino-wreaking-havoc-on-pacific-fisheries/",
+    "source": "WIRED Science",
+    "description": "As the climate phenomenon sends warm water surging across the eastern Pacific, some parts of the fishing industry are suffering—but other regions are seeing a windfall.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-11T09:00:00.000Z"
+  },
+  {
+    "title": "Microsoft Reports a Massive 25 Percent Jump in Emissions",
+    "link": "https://www.wired.com/story/microsoft-25-percent-jump-in-carbon-emissions/",
+    "source": "WIRED Science",
+    "description": "Data centers are driving up the company’s use of electricity—and carbon pollution.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T23:16:56.000Z"
+  },
+  {
+    "title": "What Watching a Soccer Final Does to Your Body, According to Science",
+    "link": "https://www.wired.com/story/what-watching-soccer-final-does-to-your-body/",
+    "source": "WIRED Science",
+    "description": "A recent study tracked hundreds of soccer fans until their favorite team reached the final of a tournament. Their stress levels skyrocketed, and their heart rates jumped too.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T15:41:31.000Z"
   }
 ]

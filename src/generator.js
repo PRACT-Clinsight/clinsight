@@ -134,16 +134,17 @@ export async function generateContent(top5Items, dateStr) {
   }
   
   const prompt = `
-You are an expert scientific editor, systems architect, and head analyst for "@futureloop_co" (FutureLoop), a premium data-driven research intelligence publication in Deep Tech, AI Startups, and Biotech breakthroughs.
+You are an expert scientific editor, systems architect, and head analyst for "@thefutureloop_co" (TheFutureLoop), a premium data-driven research intelligence publication in Deep Tech, AI Startups, and Biotech breakthroughs.
 Your tone is: objective, academic-level rigor, analytical, concise, defensive, and data-first. Avoid hyperbole or marketing fluff (e.g. do not say "revolutionize", "game changer", or "unprecedented").
 
 Recent Traction Context:
 ${tractionSummary || "No historical traction data logged yet. Focus on high-substance clinical, compute, and deep-tech breakthroughs organically based on the scraped source items."}
 
 Target Audience & Geos:
-- USA: Tech founders, venture capital, biotech ecosystems, deep tech investors.
-- India: High-scale software engineering, fintech infrastructure, global tech systems.
-- Nordics: Deep tech hubs, healthtech/biotech innovations, clean energy, sustainability systems.
+- USA: Tech founders, venture capital, biotech startups, deep tech investors.
+- India: High-scale software engineering, biotech ecosystem, global tech systems.
+- Nordics, Switzerland, & EU: Deep tech hubs, healthtech/biotech innovations, clinical trial networks, clean energy, and sustainability systems.
+- Special Focus: Keep a special eye on biotech startups, clinical trial designs, and regulatory updates (FDA, EMA, CDSCO, WHO, Läkemedelsverket, Swissmedic, MHRA, UMC) in these key regions.
 
 Sourced Items:
 ${JSON.stringify(top5Items, null, 2)}
@@ -212,7 +213,7 @@ Return the content formatted as a JSON object matching the requested schema.
     // Format and save newsletter markdown separately
     const newsletterPath = path.join(config.dirs.newsletters, `newsletter_${dateStr}.md`);
     let newsletterMd = `# ${draftData.newsletter.title}\n\n`;
-    newsletterMd += `*Date: ${dateStr} | Sourced by FutureLoop (@futureloop_co)*\n\n`;
+    newsletterMd += `*Date: ${dateStr} | Sourced by TheFutureLoop (@thefutureloop_co)*\n\n`;
     newsletterMd += `${draftData.newsletter.introduction}\n\n`;
     newsletterMd += `## 🚀 Today's Top Stories\n\n`;
     
@@ -223,7 +224,7 @@ Return the content formatted as a JSON object matching the requested schema.
     
     newsletterMd += `## 💡 Actionable Takeaway\n\n`;
     newsletterMd += `${draftData.newsletter.takeaway}\n\n`;
-    newsletterMd += `---\n*Thanks for reading! Retweet our daily insights on X: [@futureloop_co](https://x.com/futureloop_co)*\n`;
+    newsletterMd += `---\n*Thanks for reading! Retweet our daily insights on X: [@thefutureloop_co](https://x.com/thefutureloop_co)*\n`;
     
     fs.writeFileSync(newsletterPath, newsletterMd, 'utf-8');
     console.log(`Saved formatted newsletter Markdown to ${newsletterPath}`);

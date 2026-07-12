@@ -353,6 +353,47 @@ async function fetchFinanceAndGeopoliticalNews() {
 }
 
 /**
+ * Fetch regulatory alerts and policy updates from FDA, MHRA, WHO, etc.
+ */
+async function fetchRegulatoryAlerts() {
+  const feeds = [
+    { name: 'FDA News Releases', url: 'https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml', cat: 'Biotech & Pharma' },
+    { name: 'UK MHRA Updates', url: 'https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency.atom', cat: 'Biotech & Pharma' }
+  ];
+  
+  const results = [];
+  
+  for (const feed of feeds) {
+    try {
+      const response = await fetch(feed.url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'application/xml, text/xml, */*'
+        }
+      });
+      if (!response.ok) throw new Error(`HTTP status ${response.status}`);
+      const xmlText = await response.text();
+      const parsed = await parser.parseString(xmlText);
+      
+      const items = parsed.items.slice(0, 5).map(item => ({
+        title: item.title,
+        link: item.link,
+        source: feed.name,
+        description: item.contentSnippet || item.content || '',
+        category: feed.cat,
+        timestamp: item.isoDate || new Date().toISOString()
+      }));
+      
+      results.push(...items);
+    } catch (error) {
+      console.error(`Error fetching ${feed.name}:`, error.message);
+    }
+  }
+  
+  return results;
+}
+
+/**
  * Fetch trending biomedical papers from PubMed Trending
  */
 async function fetchPubMedTrending() {
@@ -394,7 +435,7 @@ async function fetchPubMedTrending() {
 export async function scrapeAllSources() {
   console.log('Sourcing trending items...');
   
-  const [hn, singularity, technology, startups, productHunt, arxiv, biotech, hardware, newsOutlets, markets, pubmed] = await Promise.all([
+  const [hn, singularity, technology, startups, productHunt, arxiv, biotech, hardware, newsOutlets, markets, pubmed, regulatory] = await Promise.all([
     fetchHackerNews(),
     fetchRedditSubreddit('singularity', 'AI News & Future'),
     fetchRedditSubreddit('technology', 'Technology Trends'),
@@ -405,11 +446,12 @@ export async function scrapeAllSources() {
     fetchPremiumTechAndHardwareNews(),
     fetchPremiumNewspapersAndOutlets(),
     fetchFinanceAndGeopoliticalNews(),
-    fetchPubMedTrending()
+    fetchPubMedTrending(),
+    fetchRegulatoryAlerts()
   ]);
   
   const conferences = fetchUpcomingConferences();
-  const allItems = [...hn, ...singularity, ...technology, ...startups, ...productHunt, ...arxiv, ...biotech, ...hardware, ...newsOutlets, ...markets, ...pubmed, ...conferences];
+  const allItems = [...hn, ...singularity, ...technology, ...startups, ...productHunt, ...arxiv, ...biotech, ...hardware, ...newsOutlets, ...markets, ...pubmed, ...regulatory, ...conferences];
   console.log(`Successfully fetched ${allItems.length} raw stories.`);
   
   // Deduplicate by normalized title & URL
