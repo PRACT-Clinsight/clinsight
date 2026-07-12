@@ -124,8 +124,8 @@ Your focus is strictly AI for Biomedicine, computational biology, bioinformatics
 Analyze the following list of raw scraped items. Score each item from 1 to 10 on these parameters:
 1. Novelty: How fresh, unique, or rare is this scientific news, startup model, or tech paper?
 2. Virality: Will this hook deep-tech and biology research audiences on X and LinkedIn?
-3. Educational Value: Does it present clear evidence, codebase details, molecular data, or a reproducibility framework?
-4. Evergreen Potential: Will this research, system structure, or dataset still be valuable in 6 months?
+3. Rigor & Evidence Quality: Does it present clean baselines, controls, ablations, and reproducible codebase elements?
+4. Potential Impact: How strongly does it shift workflow speeds, B2B engineering costs, or regulatory timelines?
 5. Business Relevance: Does it connect to high-value bio-ML tools, startup funding, digital datasets, or developer SaaS?
 
 Provide a concise 1-sentence explanation of why it got these scores.

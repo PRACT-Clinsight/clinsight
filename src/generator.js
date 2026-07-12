@@ -187,8 +187,17 @@ Instructions:
 5. "newsletter":
    - Create a newsletter draft.
    - It must summarize all 5 items, linking to them.
-   - For each item, explicitly separate "Measured Evidence" from "Interpretation".
-   - Include a final actionable framework, code snippet, or prompt.
+   - For each item, apply the proprietary **TheFutureLoop signature analysis framework**:
+     * One-Sentence Finding: State the core result in under 40 words.
+     * Key Benchmark: Present a clear comparison details block or table comparing metrics to legacy baselines.
+     * The TFL Evidence Ladder: Classify into E1 (Hypothesis only), E2 (Computational evidence), E3 (Internal experimental validation), E4 (Independent replication), or E5 (Production deployment).
+     * The Dual-Score Matrix: Assign a Confidence Score (1-10, weighted by benchmark validity 30%, methodological rigor 25%, reproducibility 20%, external validation 15%, deployment feasibility 10%) AND a Potential Impact Score (1-10).
+     * Time-to-Impact Timeline: Classify as Immediate (<12 months), Emerging (1-3 years), Strategic (3-7 years), or Horizon (7+ years).
+     * Engineering Cost & Complexity: Document training/inference cost, GPU/memory footprint, and regulatory (GCP/RAPS) burden.
+     * Reality Check (Assumptions & Missing Controls): Call out hidden flaws (e.g. data leakage, weak unoptimized baselines, missing ablation checks, closed source weights).
+     * Affected Landscape: List specific companies, startups, or platforms that win or lose from this shift.
+     * Practical Implication: Provide 3 actionable takeaways for active engineers, founders, or researchers.
+   - Include a weekly Forecast/Prediction block with a concrete target review date to build accountability.
 
 Return the content formatted as a JSON object matching the requested schema.
   `;
