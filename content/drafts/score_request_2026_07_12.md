@@ -35,77 +35,77 @@ Write a JSON block containing the scored items. Format it exactly like this:
 ### [1] Old and new apps, via modern coding agents by Terry Tao
 - **Link:** https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/
 - **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 47 by subset with 5 comments
+- **Info:** Score: 119 by subset with 26 comments
 
-### [2] Ghostel.el: Terminal emulator powered by libghostty
+### [2] Yt-Dlp Sequence Diagrams
+- **Link:** https://app.ilograph.com/demo.ilograph.yt-dlp/Download%2520a%2520YouTube%2520Video
+- **Source:** Hacker News (Tech News & Discussions)
+- **Info:** Score: 49 by billyp-rva with 9 comments
+
+### [3] Understanding the Odin Programming Language
+- **Link:** https://odinbook.com/
+- **Source:** Hacker News (Tech News & Discussions)
+- **Info:** Score: 25 by AlexeyBrin with 0 comments
+
+### [4] Ghostel.el: Terminal emulator powered by libghostty
 - **Link:** https://dakra.github.io/ghostel/
 - **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 35 by signa11 with 0 comments
+- **Info:** Score: 76 by signa11 with 4 comments
 
-### [3] Vint Cerf, a “father of the Internet”, is retiring
+### [5] Vint Cerf, a “father of the Internet”, is retiring
 - **Link:** https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/
 - **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 129 by compiler-guy with 84 comments
+- **Info:** Score: 164 by compiler-guy with 98 comments
 
-### [4] Woman in Brazil enslaved for 55 years by 3 generations of the same family
-- **Link:** https://english.elpais.com/international/2026-07-10/woman-rescued-in-brazil-after-being-enslaved-for-55-years-by-three-generations-of-the-same-family.html
-- **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 57 by RetroTechie with 26 comments
-
-### [5] Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase
+### [6] Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase
 - **Link:** https://github.com/cosmtrek/mindwalk
 - **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 91 by cosmtrek with 40 comments
+- **Info:** Score: 101 by cosmtrek with 46 comments
 
-### [6] Mesh LLM: distributed AI computing on iroh
+### [7] Mesh LLM: distributed AI computing on iroh
 - **Link:** https://www.iroh.computer/blog/mesh-llm
 - **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 276 by tionis with 63 comments
+- **Info:** Score: 288 by tionis with 66 comments
 
-### [7] Protobuf-py: Protobuf for Python, without compromises
+### [8] Protobuf-py: Protobuf for Python, without compromises
 - **Link:** https://buf.build/blog/protobuf-py
 - **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 66 by ming13 with 14 comments
+- **Info:** Score: 82 by ming13 with 17 comments
 
-### [8] Xbox 'OG' Adventures
+### [9] Unauthenticated RCE in Motorola's MR2600 Router
+- **Link:** https://mrbruh.com/motorola/
+- **Source:** Hacker News (Tech News & Discussions)
+- **Info:** Score: 8 by MrBruh with 0 comments
+
+### [10] Xbox 'OG' Adventures
 - **Link:** https://mamoniem.com/xbox-og-adventures/
 - **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 8 by davikr with 0 comments
+- **Info:** Score: 21 by davikr with 2 comments
 
-### [9] An agent in 100 lines of Lisp
-- **Link:** https://thebeach.dev/posts/lisp-agent/
-- **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 177 by jamiebeach with 41 comments
-
-### [10] Handsum: An LQIP Image File Format
-- **Link:** https://nigeltao.github.io/blog/2026/handsum.html
-- **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 29 by dmit with 1 comments
-
-### [11] Show HN: Ant – A JavaScript runtime and ecosystem
-- **Link:** https://antjs.org
-- **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 286 by theMackabu with 129 comments
-
-### [12] Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom
+### [11] Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom
 - **Link:** https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom
 - **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 287 by adletbalzhanov with 113 comments
+- **Info:** Score: 303 by adletbalzhanov with 121 comments
 
-### [13] RISCBoy is an open-source portable games console, designed from scratch
+### [12] Handsum: An LQIP Image File Format
+- **Link:** https://nigeltao.github.io/blog/2026/handsum.html
+- **Source:** Hacker News (Tech News & Discussions)
+- **Info:** Score: 32 by dmit with 2 comments
+
+### [13] Ditching Zotero for a Text File
+- **Link:** https://atthis.link/blog/2026/57207.html
+- **Source:** Hacker News (Tech News & Discussions)
+- **Info:** Score: 12 by speckx with 7 comments
+
+### [14] An agent in 100 lines of Lisp
+- **Link:** https://thebeach.dev/posts/lisp-agent/
+- **Source:** Hacker News (Tech News & Discussions)
+- **Info:** Score: 183 by jamiebeach with 51 comments
+
+### [15] RISCBoy is an open-source portable games console, designed from scratch
 - **Link:** https://github.com/Wren6991/RISCBoy
 - **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 159 by mariuz with 21 comments
-
-### [14] Text art tools
-- **Link:** https://hlnet.notion.site/text-art-tools
-- **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 59 by surprisetalk with 19 comments
-
-### [15] I Did Not Kill Stanley Lieber: How to Draw (With 9front)
-- **Link:** https://triapul.cz/automa/i_did_not_kill_stanley_lieber
-- **Source:** Hacker News (Tech News & Discussions)
-- **Info:** Score: 80 by c-c-c-c-c with 26 comments
+- **Info:** Score: 168 by mariuz with 23 comments
 
 ### [16] Discord Server Link
 - **Link:** https://www.reddit.com/r/singularity/comments/1tg1y16/discord_server_link/
@@ -129,16 +129,16 @@ Write a JSON block containing the scored items. Format it exactly like this:
     submitted by    /u/Fearless-Elephant-81  
  [link]   [comments]
 
-### [19] Tim cook writes to sam altman
-- **Link:** https://www.reddit.com/r/singularity/comments/1utjtok/tim_cook_writes_to_sam_altman/
-- **Source:** r/singularity (AI News & Future)
-- **Info:** submitted by    /u/VariationLivid3193  
- [link]   [comments]
-
-### [20] Lidl owner wants to build one of several artificial intelligence “gigafactories” planned by the EU
+### [19] Lidl owner wants to build one of several artificial intelligence “gigafactories” planned by the EU
 - **Link:** https://www.reddit.com/r/singularity/comments/1uu997q/lidl_owner_wants_to_build_one_of_several/
 - **Source:** r/singularity (AI News & Future)
 - **Info:** submitted by    /u/Distinct-Question-16  
+ [link]   [comments]
+
+### [20] Tim cook writes to sam altman
+- **Link:** https://www.reddit.com/r/singularity/comments/1utjtok/tim_cook_writes_to_sam_altman/
+- **Source:** r/singularity (AI News & Future)
+- **Info:** submitted by    /u/VariationLivid3193  
  [link]   [comments]
 
 ### [21] The thing is they're both right
@@ -160,7 +160,14 @@ Write a JSON block containing the scored items. Format it exactly like this:
     submitted by    /u/Distinct-Question-16  
  [link]   [comments]
 
-### [24] GPT-5.5 with tools now surpasses the 10-year-old level on the BabyVision benchmark
+### [24] What’s your personal prediction for RSI (recursive self improvement)? Realistically.
+- **Link:** https://www.reddit.com/r/singularity/comments/1uu6l4n/whats_your_personal_prediction_for_rsi_recursive/
+- **Source:** r/singularity (AI News & Future)
+- **Info:** Do you think it’s possible? If so when and what do you think it’ll look like. This concept fascinates me endlessly.
+    submitted by    /u/domdod9  
+ [link]   [comments]
+
+### [25] GPT-5.5 with tools now surpasses the 10-year-old level on the BabyVision benchmark
 - **Link:** https://www.reddit.com/r/singularity/comments/1utm334/gpt55_with_tools_now_surpasses_the_10yearold/
 - **Source:** r/singularity (AI News & Future)
 - **Info:** I couldn't find the numerical performance values for the different age groups of children, but based on a visual inspection of the chart, the average scores appear to be approximately:
@@ -172,21 +179,15 @@ Write a JSON block containing the scored items. Format it exactly like this:
     submitted by    /u/Waiting4AniHaremFDVR  
  [link]   [comments]
 
-### [25] Brain-inspired hardware brings faster, lower-power anomaly detection to AI systems
-- **Link:** https://www.reddit.com/r/singularity/comments/1utxob9/braininspired_hardware_brings_faster_lowerpower/
-- **Source:** r/singularity (AI News & Future)
-- **Info:** submitted by    /u/striketheviol  
- [link]   [comments]
-
-### [26] Second Brain for AI v2
-- **Link:** https://www.producthunt.com/products/second-brain-cloudflare
+### [26] FetchSandbox
+- **Link:** https://www.producthunt.com/products/fetchsandbox
 - **Source:** Product Hunt (Product Releases)
 - **Info:** Discussion
             |
             Link
 
-### [27] JustVibe
-- **Link:** https://www.producthunt.com/products/justvibe
+### [27] Second Brain for AI v2
+- **Link:** https://www.producthunt.com/products/second-brain-cloudflare
 - **Source:** Product Hunt (Product Releases)
 - **Info:** Discussion
             |
@@ -199,57 +200,57 @@ Write a JSON block containing the scored items. Format it exactly like this:
             |
             Link
 
-### [29] FetchSandbox
-- **Link:** https://www.producthunt.com/products/fetchsandbox
-- **Source:** Product Hunt (Product Releases)
-- **Info:** Discussion
-            |
-            Link
-
-### [30] Miora
+### [29] Miora
 - **Link:** https://www.producthunt.com/products/miora-2
 - **Source:** Product Hunt (Product Releases)
 - **Info:** Discussion
             |
             Link
 
-### [31] Breathing In Labour
-- **Link:** https://www.producthunt.com/products/breathing-in-labour
+### [30] JustVibe
+- **Link:** https://www.producthunt.com/products/justvibe
 - **Source:** Product Hunt (Product Releases)
 - **Info:** Discussion
             |
             Link
 
-### [32] San Fran Sim
-- **Link:** https://www.producthunt.com/products/san-fran-sim
-- **Source:** Product Hunt (Product Releases)
-- **Info:** Discussion
-            |
-            Link
-
-### [33] Basedash SCIM
+### [31] Basedash SCIM
 - **Link:** https://www.producthunt.com/products/basedash
 - **Source:** Product Hunt (Product Releases)
 - **Info:** Discussion
             |
             Link
 
-### [34] Effects SDK
-- **Link:** https://www.producthunt.com/products/effects-sdk
+### [32] Breathing In Labour
+- **Link:** https://www.producthunt.com/products/breathing-in-labour
 - **Source:** Product Hunt (Product Releases)
 - **Info:** Discussion
             |
             Link
 
-### [35] Cloudflare Drop
+### [33] San Fran Sim
+- **Link:** https://www.producthunt.com/products/san-fran-sim
+- **Source:** Product Hunt (Product Releases)
+- **Info:** Discussion
+            |
+            Link
+
+### [34] Cloudflare Drop
 - **Link:** https://www.producthunt.com/products/cloudflare
 - **Source:** Product Hunt (Product Releases)
 - **Info:** Discussion
             |
             Link
 
-### [36] ChatGPT Work
-- **Link:** https://www.producthunt.com/products/chatgpt-work
+### [35] Kickbacks CLI
+- **Link:** https://www.producthunt.com/products/kickbacks-cli
+- **Source:** Product Hunt (Product Releases)
+- **Info:** Discussion
+            |
+            Link
+
+### [36] Effects SDK
+- **Link:** https://www.producthunt.com/products/effects-sdk
 - **Source:** Product Hunt (Product Releases)
 - **Info:** Discussion
             |
@@ -262,22 +263,22 @@ Write a JSON block containing the scored items. Format it exactly like this:
             |
             Link
 
-### [38] Kickbacks CLI
-- **Link:** https://www.producthunt.com/products/kickbacks-cli
+### [38] ChatGPT Work
+- **Link:** https://www.producthunt.com/products/chatgpt-work
 - **Source:** Product Hunt (Product Releases)
 - **Info:** Discussion
             |
             Link
 
-### [39] Sim
-- **Link:** https://www.producthunt.com/products/sim-studio
-- **Source:** Product Hunt (Product Releases)
-- **Info:** Discussion
-            |
-            Link
-
-### [40] ChatCut
+### [39] ChatCut
 - **Link:** https://www.producthunt.com/products/chatcut-ai-video-editor
+- **Source:** Product Hunt (Product Releases)
+- **Info:** Discussion
+            |
+            Link
+
+### [40] RepStandard
+- **Link:** https://www.producthunt.com/products/repstandard
 - **Source:** Product Hunt (Product Releases)
 - **Info:** Discussion
             |

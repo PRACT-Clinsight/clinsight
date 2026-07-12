@@ -215,6 +215,12 @@ async function main() {
       break;
     }
     
+    case 'start-scheduler': {
+      console.log('Starting background scheduler daemon...');
+      import('./scheduler.js');
+      break;
+    }
+    
     default: {
       console.error(`Unknown command: ${command}`);
       printHelp();
@@ -251,6 +257,8 @@ Commands:
   report-monthly [date] Brainstorm 30 evergreen posts, digital products, sponsors.
   
   start-server          Launch local landing page web server for capturing subscribers.
+  
+  start-scheduler       Launch background scheduler daemon running pipeline every 12h.
 `);
 }
 

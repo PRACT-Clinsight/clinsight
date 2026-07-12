@@ -3,15 +3,31 @@
     "title": "Old and new apps, via modern coding agents by Terry Tao",
     "link": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
     "source": "Hacker News",
-    "description": "Score: 47 by subset with 5 comments",
+    "description": "Score: 119 by subset with 26 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T11:09:42.000Z"
+  },
+  {
+    "title": "Yt-Dlp Sequence Diagrams",
+    "link": "https://app.ilograph.com/demo.ilograph.yt-dlp/Download%2520a%2520YouTube%2520Video",
+    "source": "Hacker News",
+    "description": "Score: 49 by billyp-rva with 9 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T11:49:38.000Z"
+  },
+  {
+    "title": "Understanding the Odin Programming Language",
+    "link": "https://odinbook.com/",
+    "source": "Hacker News",
+    "description": "Score: 25 by AlexeyBrin with 0 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T12:08:07.000Z"
   },
   {
     "title": "Ghostel.el: Terminal emulator powered by libghostty",
     "link": "https://dakra.github.io/ghostel/",
     "source": "Hacker News",
-    "description": "Score: 35 by signa11 with 0 comments",
+    "description": "Score: 76 by signa11 with 4 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T08:52:59.000Z"
   },
@@ -19,23 +35,15 @@
     "title": "Vint Cerf, a “father of the Internet”, is retiring",
     "link": "https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/",
     "source": "Hacker News",
-    "description": "Score: 129 by compiler-guy with 84 comments",
+    "description": "Score: 164 by compiler-guy with 98 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-10T00:06:59.000Z"
-  },
-  {
-    "title": "Woman in Brazil enslaved for 55 years by 3 generations of the same family",
-    "link": "https://english.elpais.com/international/2026-07-10/woman-rescued-in-brazil-after-being-enslaved-for-55-years-by-three-generations-of-the-same-family.html",
-    "source": "Hacker News",
-    "description": "Score: 57 by RetroTechie with 26 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-12T11:18:32.000Z"
   },
   {
     "title": "Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase",
     "link": "https://github.com/cosmtrek/mindwalk",
     "source": "Hacker News",
-    "description": "Score: 91 by cosmtrek with 40 comments",
+    "description": "Score: 101 by cosmtrek with 46 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T05:51:32.000Z"
   },
@@ -43,7 +51,7 @@
     "title": "Mesh LLM: distributed AI computing on iroh",
     "link": "https://www.iroh.computer/blog/mesh-llm",
     "source": "Hacker News",
-    "description": "Score: 276 by tionis with 63 comments",
+    "description": "Score: 288 by tionis with 66 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-11T22:38:57.000Z"
   },
@@ -51,73 +59,65 @@
     "title": "Protobuf-py: Protobuf for Python, without compromises",
     "link": "https://buf.build/blog/protobuf-py",
     "source": "Hacker News",
-    "description": "Score: 66 by ming13 with 14 comments",
+    "description": "Score: 82 by ming13 with 17 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-08T03:16:38.000Z"
+  },
+  {
+    "title": "Unauthenticated RCE in Motorola's MR2600 Router",
+    "link": "https://mrbruh.com/motorola/",
+    "source": "Hacker News",
+    "description": "Score: 8 by MrBruh with 0 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T11:52:21.000Z"
   },
   {
     "title": "Xbox 'OG' Adventures",
     "link": "https://mamoniem.com/xbox-og-adventures/",
     "source": "Hacker News",
-    "description": "Score: 8 by davikr with 0 comments",
+    "description": "Score: 21 by davikr with 2 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-07T04:35:55.000Z"
-  },
-  {
-    "title": "An agent in 100 lines of Lisp",
-    "link": "https://thebeach.dev/posts/lisp-agent/",
-    "source": "Hacker News",
-    "description": "Score: 177 by jamiebeach with 41 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-07T21:21:09.000Z"
-  },
-  {
-    "title": "Handsum: An LQIP Image File Format",
-    "link": "https://nigeltao.github.io/blog/2026/handsum.html",
-    "source": "Hacker News",
-    "description": "Score: 29 by dmit with 1 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-08T12:07:59.000Z"
-  },
-  {
-    "title": "Show HN: Ant – A JavaScript runtime and ecosystem",
-    "link": "https://antjs.org",
-    "source": "Hacker News",
-    "description": "Score: 286 by theMackabu with 129 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-11T20:07:18.000Z"
   },
   {
     "title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
     "link": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
     "source": "Hacker News",
-    "description": "Score: 287 by adletbalzhanov with 113 comments",
+    "description": "Score: 303 by adletbalzhanov with 121 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-11T17:21:49.000Z"
+  },
+  {
+    "title": "Handsum: An LQIP Image File Format",
+    "link": "https://nigeltao.github.io/blog/2026/handsum.html",
+    "source": "Hacker News",
+    "description": "Score: 32 by dmit with 2 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-08T12:07:59.000Z"
+  },
+  {
+    "title": "Ditching Zotero for a Text File",
+    "link": "https://atthis.link/blog/2026/57207.html",
+    "source": "Hacker News",
+    "description": "Score: 12 by speckx with 7 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-06T20:17:19.000Z"
+  },
+  {
+    "title": "An agent in 100 lines of Lisp",
+    "link": "https://thebeach.dev/posts/lisp-agent/",
+    "source": "Hacker News",
+    "description": "Score: 183 by jamiebeach with 51 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-07T21:21:09.000Z"
   },
   {
     "title": "RISCBoy is an open-source portable games console, designed from scratch",
     "link": "https://github.com/Wren6991/RISCBoy",
     "source": "Hacker News",
-    "description": "Score: 159 by mariuz with 21 comments",
+    "description": "Score: 168 by mariuz with 23 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-11T21:58:00.000Z"
-  },
-  {
-    "title": "Text art tools",
-    "link": "https://hlnet.notion.site/text-art-tools",
-    "source": "Hacker News",
-    "description": "Score: 59 by surprisetalk with 19 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-08T13:00:43.000Z"
-  },
-  {
-    "title": "I Did Not Kill Stanley Lieber: How to Draw (With 9front)",
-    "link": "https://triapul.cz/automa/i_did_not_kill_stanley_lieber",
-    "source": "Hacker News",
-    "description": "Score: 80 by c-c-c-c-c with 26 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-09T14:10:04.000Z"
   },
   {
     "title": "Discord Server Link",
@@ -144,20 +144,20 @@
     "timestamp": "2026-07-11T17:30:41.000Z"
   },
   {
-    "title": "Tim cook writes to sam altman",
-    "link": "https://www.reddit.com/r/singularity/comments/1utjtok/tim_cook_writes_to_sam_altman/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/VariationLivid3193  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-11T13:14:20.000Z"
-  },
-  {
     "title": "Lidl owner wants to build one of several artificial intelligence “gigafactories” planned by the EU",
     "link": "https://www.reddit.com/r/singularity/comments/1uu997q/lidl_owner_wants_to_build_one_of_several/",
     "source": "r/singularity",
     "description": "submitted by    /u/Distinct-Question-16  \n [link]   [comments]",
     "category": "AI News & Future",
     "timestamp": "2026-07-12T08:02:57.000Z"
+  },
+  {
+    "title": "Tim cook writes to sam altman",
+    "link": "https://www.reddit.com/r/singularity/comments/1utjtok/tim_cook_writes_to_sam_altman/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/VariationLivid3193  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-11T13:14:20.000Z"
   },
   {
     "title": "The thing is they're both right",
@@ -184,44 +184,20 @@
     "timestamp": "2026-07-11T13:56:51.000Z"
   },
   {
+    "title": "What’s your personal prediction for RSI (recursive self improvement)? Realistically.",
+    "link": "https://www.reddit.com/r/singularity/comments/1uu6l4n/whats_your_personal_prediction_for_rsi_recursive/",
+    "source": "r/singularity",
+    "description": "Do you think it’s possible? If so when and what do you think it’ll look like. This concept fascinates me endlessly.\n    submitted by    /u/domdod9  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-12T05:35:13.000Z"
+  },
+  {
     "title": "GPT-5.5 with tools now surpasses the 10-year-old level on the BabyVision benchmark",
     "link": "https://www.reddit.com/r/singularity/comments/1utm334/gpt55_with_tools_now_surpasses_the_10yearold/",
     "source": "r/singularity",
     "description": "I couldn't find the numerical performance values for the different age groups of children, but based on a visual inspection of the chart, the average scores appear to be approximately:\n 3 years old: ~40%\n 6 years old: ~66%\n 10 years old: ~74%\n 12 years old: ~87%\n https://unipat.ai/benchmarks/BabyVision\n    submitted by    /u/Waiting4AniHaremFDVR  \n [link]   [comments]",
     "category": "AI News & Future",
     "timestamp": "2026-07-11T14:48:44.000Z"
-  },
-  {
-    "title": "Brain-inspired hardware brings faster, lower-power anomaly detection to AI systems",
-    "link": "https://www.reddit.com/r/singularity/comments/1utxob9/braininspired_hardware_brings_faster_lowerpower/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/striketheviol  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-11T22:30:12.000Z"
-  },
-  {
-    "title": "Second Brain for AI v2",
-    "link": "https://www.producthunt.com/products/second-brain-cloudflare",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-06-25T03:43:33.000Z"
-  },
-  {
-    "title": "JustVibe",
-    "link": "https://www.producthunt.com/products/justvibe",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-06T17:33:19.000Z"
-  },
-  {
-    "title": "ServiceBeard",
-    "link": "https://www.producthunt.com/products/servicebeard",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-05T21:47:41.000Z"
   },
   {
     "title": "FetchSandbox",
@@ -232,12 +208,44 @@
     "timestamp": "2026-06-19T04:12:56.000Z"
   },
   {
+    "title": "Second Brain for AI v2",
+    "link": "https://www.producthunt.com/products/second-brain-cloudflare",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-06-25T03:43:33.000Z"
+  },
+  {
+    "title": "ServiceBeard",
+    "link": "https://www.producthunt.com/products/servicebeard",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-05T21:47:41.000Z"
+  },
+  {
     "title": "Miora",
     "link": "https://www.producthunt.com/products/miora-2",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-07-07T15:48:10.000Z"
+  },
+  {
+    "title": "JustVibe",
+    "link": "https://www.producthunt.com/products/justvibe",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-06T17:33:19.000Z"
+  },
+  {
+    "title": "Basedash SCIM",
+    "link": "https://www.producthunt.com/products/basedash",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-11T02:40:25.000Z"
   },
   {
     "title": "Breathing In Labour",
@@ -256,44 +264,12 @@
     "timestamp": "2026-07-10T08:07:45.000Z"
   },
   {
-    "title": "Basedash SCIM",
-    "link": "https://www.producthunt.com/products/basedash",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-11T02:40:25.000Z"
-  },
-  {
-    "title": "Effects SDK",
-    "link": "https://www.producthunt.com/products/effects-sdk",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-06-23T06:17:54.000Z"
-  },
-  {
     "title": "Cloudflare Drop",
     "link": "https://www.producthunt.com/products/cloudflare",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-07-08T17:36:25.000Z"
-  },
-  {
-    "title": "ChatGPT Work",
-    "link": "https://www.producthunt.com/products/chatgpt-work",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-09T17:16:44.000Z"
-  },
-  {
-    "title": "SoundPipe",
-    "link": "https://www.producthunt.com/products/soundpipe",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-10T22:27:30.000Z"
   },
   {
     "title": "Kickbacks CLI",
@@ -304,12 +280,28 @@
     "timestamp": "2026-07-07T02:18:04.000Z"
   },
   {
-    "title": "Sim",
-    "link": "https://www.producthunt.com/products/sim-studio",
+    "title": "Effects SDK",
+    "link": "https://www.producthunt.com/products/effects-sdk",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-08T18:55:06.000Z"
+    "timestamp": "2026-06-23T06:17:54.000Z"
+  },
+  {
+    "title": "SoundPipe",
+    "link": "https://www.producthunt.com/products/soundpipe",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-10T22:27:30.000Z"
+  },
+  {
+    "title": "ChatGPT Work",
+    "link": "https://www.producthunt.com/products/chatgpt-work",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-09T17:16:44.000Z"
   },
   {
     "title": "ChatCut",
@@ -318,6 +310,14 @@
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-07-09T06:50:16.000Z"
+  },
+  {
+    "title": "RepStandard",
+    "link": "https://www.producthunt.com/products/repstandard",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-10T04:31:51.000Z"
   },
   {
     "title": "Play2Perfect: What Matters in Dexterous Play Pretraining for Precise Assembly?",

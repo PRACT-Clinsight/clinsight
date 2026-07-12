@@ -63,49 +63,54 @@ function calculateWeightedScore(scores) {
 /**
  * Run scoring on items
  */
+function writeScoreRequestFile(rawItems, dateStr) {
+  const requestFile = path.join(config.dirs.drafts, `score_request_${dateStr}.md`);
+  let mdContent = `# Content Scoring Request (${dateStr})\n\n`;
+  mdContent += `Please score the following ${rawItems.length} items. Rank each item from 1-10 on:\n`;
+  mdContent += `- **Novelty** (Weight: 20%)\n`;
+  mdContent += `- **Virality** (Weight: 25%)\n`;
+  mdContent += `- **Educational value** (Weight: 20%)\n`;
+  mdContent += `- **Evergreen potential** (Weight: 15%)\n`;
+  mdContent += `- **Business relevance** (Weight: 20%)\n\n`;
+  mdContent += `Write a JSON block containing the scored items. Format it exactly like this:\n`;
+  mdContent += '```json\n';
+  mdContent += JSON.stringify({
+    scoredItems: [
+      {
+        title: "Item Title",
+        link: "Item URL",
+        source: "Item Source",
+        description: "Description",
+        category: "Category",
+        scores: { novelty: 8, virality: 9, educationalValue: 7, evergreenPotential: 6, businessRelevance: 8 },
+        explanation: "Explanation here"
+      }
+    ]
+  }, null, 2);
+  mdContent += '\n```\n\n## Raw Items\n\n';
+  
+  rawItems.forEach((item, idx) => {
+    mdContent += `### [${idx + 1}] ${item.title}\n`;
+    mdContent += `- **Link:** ${item.link}\n`;
+    mdContent += `- **Source:** ${item.source} (${item.category})\n`;
+    mdContent += `- **Info:** ${item.description}\n\n`;
+  });
+  
+  fs.writeFileSync(requestFile, mdContent, 'utf-8');
+  console.log(`\n[Agent-Assisted Mode] Scoring request written to: ${requestFile}`);
+  console.log(`Please read this file, perform the scoring, and save the result to content/drafts/scored_${dateStr}.json`);
+}
+
+/**
+ * Run scoring on items
+ */
 export async function scoreItems(rawItems, dateStr) {
   const apiKey = config.geminiApiKey;
   
   if (!apiKey) {
     console.log('--- GEMINI_API_KEY NOT SET ---');
     console.log('Creating agent-assisted scoring request file.');
-    
-    const requestFile = path.join(config.dirs.drafts, `score_request_${dateStr}.md`);
-    let mdContent = `# Content Scoring Request (${dateStr})\n\n`;
-    mdContent += `Please score the following ${rawItems.length} items. Rank each item from 1-10 on:\n`;
-    mdContent += `- **Novelty** (Weight: 20%)\n`;
-    mdContent += `- **Virality** (Weight: 25%)\n`;
-    mdContent += `- **Educational value** (Weight: 20%)\n`;
-    mdContent += `- **Evergreen potential** (Weight: 15%)\n`;
-    mdContent += `- **Business relevance** (Weight: 20%)\n\n`;
-    mdContent += `Write a JSON block containing the scored items. Format it exactly like this:\n`;
-    mdContent += '```json\n';
-    mdContent += JSON.stringify({
-      scoredItems: [
-        {
-          title: "Item Title",
-          link: "Item URL",
-          source: "Item Source",
-          description: "Description",
-          category: "Category",
-          scores: { novelty: 8, virality: 9, educationalValue: 7, evergreenPotential: 6, businessRelevance: 8 },
-          explanation: "Explanation here"
-        }
-      ]
-    }, null, 2);
-    mdContent += '\n```\n\n## Raw Items\n\n';
-    
-    rawItems.forEach((item, idx) => {
-      mdContent += `### [${idx + 1}] ${item.title}\n`;
-      mdContent += `- **Link:** ${item.link}\n`;
-      mdContent += `- **Source:** ${item.source} (${item.category})\n`;
-      mdContent += `- **Info:** ${item.description}\n\n`;
-    });
-    
-    fs.writeFileSync(requestFile, mdContent, 'utf-8');
-    console.log(`\n[Agent-Assisted Mode] Scoring request written to: ${requestFile}`);
-    console.log(`Please read this file, perform the scoring, and save the result to content/drafts/scored_${dateStr}.json`);
-    
+    writeScoreRequestFile(rawItems, dateStr);
     return null;
   }
   
@@ -175,6 +180,8 @@ ${JSON.stringify(rawItems.map((item, idx) => ({ id: idx, title: item.title, desc
     return top5;
   } catch (error) {
     console.error('Error during scoring with Gemini:', error.message);
-    throw error;
+    console.log('Falling back gracefully to Agent-Assisted Mode...');
+    writeScoreRequestFile(rawItems, dateStr);
+    return null;
   }
 }

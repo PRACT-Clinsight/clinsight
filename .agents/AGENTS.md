@@ -18,6 +18,7 @@ All sourced items, newsletter content, and posts must be scored and selected to 
 *   **Original Citations**: Every quantitative claim or benchmark metric must be accompanied by the direct citation link to the peer-reviewed paper, pre-print, or official regulatory database.
 *   **No Overstatement**: Replace sweeping marketing hype (e.g. "revolutionizing science") with precise, defensive framings (e.g. "substantially reduces search space in specific workflows before experimental validation").
 *   **Evidence vs. Interpretation**: Keep reported benchmark metrics separate from subjective interpretations of what it means for laboratory or system workflows.
+*   **Absolute Accuracy (Verify 10x)**: Never invent or change statistics. Every number, percentage, and metric must match the source data verbatim. Double-check raw files and source papers up to 10 times before framing or publishing to ensure absolute truthfulness.
 
 ## 4. The Three Editorial Questions
 Every single newsletter story or thread must answer:
