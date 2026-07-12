@@ -195,7 +195,7 @@ function renderDashboardHtml(subs, totalUSD, totalSEK, progressPercent, posts, t
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FutureLoop | Partner Dashboard</title>
+  <title>TheFutureLoop | Partner Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -260,8 +260,8 @@ function renderDashboardHtml(subs, totalUSD, totalSEK, progressPercent, posts, t
 <body>
   <div class="container">
     <header>
-      <div class="logo"><span>Future</span>Loop Research & Intelligence</div>
-      <div class="badge">Niche: Tech & Biotech</div>
+      <div class="logo"><span>TheFuture</span>Loop Research & Intelligence</div>
+      <div class="badge">Niche: Deep Tech, Compute & Bio-Genomics</div>
     </header>
     
     <!-- Milestone Progress Card -->
