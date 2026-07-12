@@ -139,7 +139,14 @@ Instructions:
    - Topics: AI in biomedicine, computational biology, bioinformatics, drug discovery, clinical trials, and researcher productivity.
    - Style: High-hook, statistical, data-focused, minimal emojis, no hashtags. Under 280 chars. 
    - Timing: Distribute these posts evenly across a 24-hour cycle (e.g. 00:00, 00:45, 01:30, 02:15... up to 23:15) so we can test audience traction at all hours.
-   - Rankings & Lists: Design at least 8 of the 30 posts specifically as ranked comparison lists of recent releases (e.g. 'Top 5 AI tools launched this week', 'Top 5 PubMed trending oncology papers', 'Top 5 open-source bio-repos'). Format them clearly (using 1 to 5, or 1 to 10 if they fit under the character limit) and include the original source URL for each item so readers click and go directly to the primary source.
+   - Rankings & Lists: Design at least 8 of the 30 posts specifically as ranked comparison lists of recent breakthrough research. Do NOT use generic source-based lists (like 'Top 5 on Nature' or 'Top 5 on PubMed'). Instead, focus each list on a specific high-impact scientific domain, therapeutic area, or disease mechanism, such as:
+     * Oncology (Cancer research & immunology breakthroughs)
+     * GLP-1 agonists, Metabolic, & Cardiovascular diseases
+     * Autophagy, Stem Cells, & Cellular Longevity/Aging
+     * Immunology, Vaccinology, & Autoimmune pathways
+     * Psychiatry, Neuroscience, & Neurodegenerative diseases (e.g. Alzheimer's)
+     * AI for Drug Discovery & Bioinformatics developer tools
+     Format them clearly (using 1 to 5, or 1 to 10 if they fit under the character limit) and include the original source URL for each item so readers click and go directly to the primary evidence.
    - Language: Simplify complex academic terms into clear, readable concepts (keep it accessible without sacrificing truthfulness). Use numbered ranking lists or structured bullet points to organize stats. Be 100% accurate to the source material.
    - Integrate links where appropriate. Make them feel like premium research highlights.
 2. "xThreads":
