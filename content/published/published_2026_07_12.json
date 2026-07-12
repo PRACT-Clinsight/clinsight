@@ -1,0 +1,138 @@
+{
+  "xPosts": [
+    {
+      "id": "x_post_1",
+      "topic": "Research Productivity",
+      "text": "Fields medalist Terry Tao just published his hands-on workflow using modern coding agents for writing apps:\n\n1. AI is highly effective for self-contained helper tasks.\n2. Iterative prompting beats single-shot generation.\n\nRead his full logs: https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+      "imagePrompt": "A professional diagram illustrating an iterative loop between a mathematician and an autonomous coding agent, vector art style."
+    },
+    {
+      "topic": "Deep Tech & AI Startups",
+      "text": "The AI hardware boom reaches a historic moment:\n\n1. SK Hynix raised $26.5B in the largest foreign IPO in US history.\n2. US policymakers are now urging the memory chip giant to build local manufacturing fabs.\n\nDetails: https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
+      "id": "x_post_2",
+      "imagePrompt": "A sleek modern silicon wafer manufacturing facility with robotic arms, clean neon lighting, 3D render."
+    },
+    {
+      "topic": "Computational Biology",
+      "text": "Neuroscientists just mapped the visual system of mice using Neuropixels sensors:\n\n1. Tracked spiking activity across cortex, thalamus, and midbrain.\n2. Found change detection relies on a specific temporal window.\n\nPaper link: https://www.cell.com/cell/fulltext/S0092-8674(26)00745-2?rss=yes",
+      "id": "x_post_3",
+      "imagePrompt": "A high-tech digital 3D model of a neural spiking activity map across different brain regions, glowing fiber optics."
+    },
+    {
+      "topic": "Research Policy",
+      "text": "A major policy shift is coming to global science:\n\n1. The new NSF draft rules would ban nearly all collaborations with Chinese research institutions.\n2. This replaces previous risk mitigation strategies with outright bans.\n\nSource: https://www.science.org/content/article/new-nsf-policy-would-ban-almost-all-collaborations-chinese-scientists",
+      "id": "x_post_4",
+      "imagePrompt": "A conceptual vector graphic of global research networks with red boundary lines, clean corporate styling."
+    },
+    {
+      "topic": "AI for Biomedical Research",
+      "text": "Scientists discovered a shared genetic mutation pattern in ALS, FTD, and Alzheimer's:\n\n1. Mutagenesis is driven by aberrant topoisomerase 1 (TOP1) enzymes.\n2. Initiated by oxidative DNA damage.\n\nRead the full paper: https://www.cell.com/cell/fulltext/S0092-8674(26)00700-2?rss=yes",
+      "id": "x_post_5",
+      "imagePrompt": "A double helix DNA strand showing localized somatic damage and enzyme interactions, high-detail scientific render."
+    },
+    {
+      "topic": "Deep Tech & AI Startups",
+      "text": "Venture capital is shifting from model training to local hardware acceleration. As edge computing chip capacities expand, running massive 70B+ parameter models locally on workstation memory is becoming a practical commercial alternative.",
+      "id": "x_post_6",
+      "imagePrompt": "A localized server workstation tower sitting on a developer's desk, glowing motherboard details, photorealistic."
+    },
+    {
+      "topic": "Computational Biology",
+      "text": "Structural prediction models (AlphaFold/ESMFold) are moving from static protein structures to dynamic folding pathways. Mapping these pathways is key to unlocking new small-molecule therapeutics for neurodegenerative diseases.",
+      "id": "x_post_7",
+      "imagePrompt": "A protein folding trajectory showing transitioning 3D molecular conformations, scientific illustration."
+    },
+    {
+      "topic": "Research Productivity",
+      "text": "Iterative prompting frameworks (like Chain-of-Thought and multi-agent loops) are now being compiled directly into local IDE integrations. The developer bottleneck has officially shifted from writing syntax to system architecture design.",
+      "id": "x_post_8",
+      "imagePrompt": "A clean code editor layout showing architectural microservices linked by glowing lines, minimalistic design."
+    },
+    {
+      "topic": "AI for Biomedical Research",
+      "text": "Single-cell sequencing costs have dropped by 80% over the past 5 years. This cost reduction is enabling researchers to compile high-resolution reference atlases for drug discovery, significantly shortening lead times.",
+      "id": "x_post_9",
+      "imagePrompt": "A 3D scatter plot of single-cell RNA-seq clusters, vibrant color coding, digital database aesthetic."
+    },
+    {
+      "topic": "Research Policy",
+      "text": "As geopolitical chip export controls tighten, semiconductor hubs in the US, India, and the Nordics are receiving heavy state subsidies. Building localized supply chains is now a national security priority.",
+      "id": "x_post_10",
+      "imagePrompt": "A simplified map of the globe highlighting technology corridors between North America, India, and Scandinavia, vector art."
+    }
+  ],
+  "xThreads": [
+    {
+      "id": "x_thread_1",
+      "topic": "Research Productivity",
+      "title": "Terry Tao's Coding Agent Workflow",
+      "posts": [
+        "1/ How does a Fields medalist use AI to write code? \n\nTerry Tao just shared his detailed logs on building custom tools using modern coding agents.\n\nHere is what we can learn from his setup: https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+        "2/ First, coding agents are highly efficient at generating self-contained helper files (like writing mathematical parser scripts or generating clean regex formatters).\n\nHowever, they quickly lose context when asked to modify complex, multi-file codebases in a single shot.",
+        "3/ To overcome this, Tao recommends an iterative modular approach:\n\n• Keep your components strictly decoupled.\n• Have the agent write and test one file at a time.\n• Feed compiler errors directly back to the agent rather than trying to fix them manually.",
+        "4/ The major takeaway: The bottleneck in software development is no longer writing the code. It is modular system design and error-loop orchestration.\n\nPractitioners should spend more time defining boundaries and less time typing syntax."
+      ],
+      "imagePromptForStart": "A clean desk containing open math textbooks and a laptop showing code terminal activity, warm cinematic lighting."
+    },
+    {
+      "id": "x_thread_2",
+      "topic": "AI for Biomedical Research",
+      "title": "Unifying Neurodegenerative Somatic Damage",
+      "posts": [
+        "1/ A new study published in Cell has identified a shared somatic mutation pattern across C9ORF72 ALS, C9ORF72 FTD, and Alzheimer’s disease.\n\nThis maps a unifying mechanism of neuronal genomic instability: https://www.cell.com/cell/fulltext/S0092-8674(26)00700-2?rss=yes",
+        "2/ Key measured results:\n\n• Single-cell whole-genome sequencing of patient brains revealed a shared signature dominated by 2-base pair deletions.\n• This damage is driven by aberrant activity of topoisomerase 1 (TOP1) enzymes, specifically linked to oxidative DNA damage.",
+        "3/ Why does it matter?\n\nPreviously, these neurodegenerative disorders were treated as distinct pathologies. Finding a shared mutagenic driver (TOP1 malfunction) means we can target a single enzyme pathway to prevent DNA damage in multiple diseases.",
+        "4/ What should researchers do differently?\n\nShift therapeutic focus toward designing small-molecule TOP1 stabilizers or reducing neuronal oxidative stress to protect genomic stability rather than just treating downstream protein aggregation (amyloids/tau)."
+      ],
+      "imagePromptForStart": "A high-resolution scientific micrograph of cortical neurons showing genomic damage pathways, fluorescent detailing."
+    }
+  ],
+  "linkedinPost": {
+    "topic": "Semiconductor Geopolitics",
+    "text": "The semiconductor supply chain is undergoing the biggest financing realignment in history.\n\nSK Hynix has raised $26.5B in the largest foreign IPO on record in the United States. Following this listing, U.S. policymakers are actively pushing the memory chip maker to construct domestic production fabs in the country.\n\n### Why it matters:\n1. Memory bottlenecks: High-bandwidth memory (HBM) is the core constraint in scaling AI clusters.\n2. Geopolitics: Relying entirely on offshore fabrication leaves the AI industry vulnerable to export shocks.\n3. Regional Growth: Subsidies are driving massive infrastructure projects in the US, India, and the Nordics.\n\n### Factual Takeaway:\nSemiconductor self-reliance is no longer just a supply-chain strategy; it is a core geopolitical shield. For founders and investors, tracking where these fabs are constructed indicates where high-scale tech hubs will grow over the next decade.\n\nOriginal coverage: https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/"
+  },
+  "headlines": [
+    "Fields Medalist Terry Tao Shares Coding Agent Workflow",
+    "SK Hynix Raises $26.5B in Historic US IPO for AI Memory Chips",
+    "Cell Study Maps Spiking Visual Activity Across Brain Regions",
+    "New NSF Draft Rules Propose Strict Chinese Collaboration Ban",
+    "Unifying Genomic Damage Signature Identified in Alzheimer's and ALS",
+    "How to Orchestrate Coding Agents: Terry Tao's Developer Logs",
+    "Semiconductor Realignment: SK Hynix Pushed to Construct US Fabs",
+    "Neuroscience Breakthrough: Mapping Mouse Change Detection in Cell",
+    "Geopolitical Science: NSF Draft Bans Collaborations with China",
+    "Targeting TOP1: A Shared Pathway to Halt Neurodegeneration"
+  ],
+  "newsletter": {
+    "title": "Terry Tao's Agent Workflows & SK Hynix's $26.5B IPO",
+    "introduction": "Welcome to FutureLoop. Today we dissect the hands-on coding agent logs of a Fields medalist, the massive capital scaling of the AI chip supply chain, and breakthroughs in genomic neurodegeneration research.",
+    "stories": [
+      {
+        "title": "Terry Tao's Coding Agent Logs",
+        "link": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+        "body": "Fields medalist Terry Tao published detailed logs using coding agents to build helper scripts. He notes that while agents excel at generating decoupled helper modules, they lose coherence on complex multi-file edits. He recommends keeping code modular and feeding compilation errors directly back to the agent."
+      },
+      {
+        "title": "SK Hynix's $26.5B IPO",
+        "link": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
+        "body": "Memory giant SK Hynix raised $26.5B in a historic US listing to fund HBM chip capacity. US policymakers are now pressing the firm to build manufacturing fabs locally in the US, accelerating the regionalization of high-performance semiconductor supply chains."
+      },
+      {
+        "title": "Mapping Spiking Activity in Visual Cortex",
+        "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00745-2?rss=yes",
+        "body": "A Cell study utilizing Neuropixels probes mapped spiking activity across the mouse visual system during change-detection tasks. The data reveals that visual change detection is governed by adaptation-based visual pathways within strict temporal windows, mapping how sensory and motor signals correlate."
+      },
+      {
+        "title": "NSF Proposes Chinese Collaboration Ban",
+        "link": "https://www.science.org/content/article/new-nsf-policy-would-ban-almost-all-collaborations-chinese-scientists",
+        "body": "The National Science Foundation drafted policy guidelines that would ban academic collaborations with most Chinese research institutions. This replaces previous risk-mitigation measures with an outright prohibition, significantly impacting global science funding and co-authored paper pipelines."
+      },
+      {
+        "title": "Unifying Mutagenesis Shared in Alzheimer's and ALS",
+        "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00700-2?rss=yes",
+        "body": "Single-cell whole-genome sequencing in Cell identified a shared signature of somatic mutations in ALS, FTD, and Alzheimer's brains. This neuronal genomic damage is driven by aberrant topoisomerase 1 (TOP1) activity linked to oxidative stress, suggesting a unified therapeutic target."
+      }
+    ],
+    "takeaway": "Actionable Takeaway:\nWhen building workflows with coding agents, keep modules under 150 lines. Test each module independently, and compile your system using automated integration scripts. Decoupling code prevents context drift in AI model prompts."
+  }
+}

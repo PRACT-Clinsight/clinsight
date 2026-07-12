@@ -1,0 +1,520 @@
+[
+  {
+    "id": "x_mock_1783853293114",
+    "platform": "x",
+    "topic": "AI tools",
+    "text": "Distributed compute is the next gold rush. Mesh LLM is a new project that lets you run LLM workloads in a peer-to-peer network using the iroh protocol. No central servers, just raw community compute. Code: https://github.com/n0-computer/iroh",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.116Z"
+  },
+  {
+    "id": "x_mock_1783853293119",
+    "platform": "x",
+    "topic": "Startup Case Studies",
+    "text": "The GPU bubble is built on circular financing:\n1. Nvidia invests cash in GPU cloud CoreWeave.\n2. CoreWeave uses that cash to buy GPUs from Nvidia.\n3. Nvidia records record revenue.\nIt's a circular liquidity loop. Stats: https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.121Z"
+  },
+  {
+    "id": "x_mock_1783853293123",
+    "platform": "x",
+    "topic": "Technology Trends",
+    "text": "Zig is taking over JavaScript tooling. Ant is a brand-new JS runtime written in Zig, targeting ultra-low memory overhead and native TS/SQLite support. Bun and Node have a fast new competitor. Website: https://antjs.org",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.126Z"
+  },
+  {
+    "id": "x_mock_1783853293127",
+    "platform": "x",
+    "topic": "AI tools",
+    "text": "You don't need 10,000 lines of LangChain code to build an AI agent. You can write a functional, tool-using, reasoning agent in exactly 100 lines of Lisp. Simplicity > Framework bloat. Code tutorial: https://thebeach.dev/posts/lisp-agent/",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.129Z"
+  },
+  {
+    "id": "x_mock_1783853293131",
+    "platform": "x",
+    "topic": "Money",
+    "text": "India's UPI payment system processes 10B+ transactions monthly. How does a system scale to 350M+ active users without crashing? A deep dive into the high-throughput database architecture behind UPI: https://timeseriesofindia.com/economy/reads/upi-architecture/",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.134Z"
+  },
+  {
+    "id": "x_mock_1783853293136",
+    "platform": "x",
+    "topic": "Productivity",
+    "text": "How modern decor strains your brain: high-contrast minimalist offices increase visual processing load, slowing focus by 14%. Visual textures and warm colors speed up cognitive recovery. Study: https://studyfinds.com/modern-decor-may-be-straining-peoples-brains/",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.138Z"
+  },
+  {
+    "id": "x_mock_1783853293139",
+    "platform": "x",
+    "topic": "Future Technology",
+    "text": "The cost of centralized LLMs is unsustainable. Peer-to-peer distributed inference might be the only way open-source AI survives. Mesh LLM shows how we can run large models on consumer hardware by sharing weight loading across nodes.",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.141Z"
+  },
+  {
+    "id": "x_mock_1783853293143",
+    "platform": "x",
+    "topic": "Interesting Websites",
+    "text": "Looking for text-art generators, ASCII visualizers, or terminal canvas libraries? This curated index contains the best resources for terminal-based layout design and text art. Perfect for developers building CLI tools: https://hlnet.notion.site/text-art-tools",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.145Z"
+  },
+  {
+    "id": "x_mock_1783853293147",
+    "platform": "x",
+    "topic": "Science",
+    "text": "The Faroe Islands built the world's first undersea roundabout, decorated with lights and sculptures by local artists. It connects two islands 180 meters below the ocean, saving a 64-minute commute. https://visitfaroeislands.com/en/plan-your-stay/getting-around/world-first-under-sea-roundabout",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.151Z"
+  },
+  {
+    "id": "x_mock_1783853293153",
+    "platform": "x",
+    "topic": "Hidden Opportunities",
+    "text": "As JS runtimes split between Node, Bun, Deno, and now Ant, the biggest opportunity isn't building a runtime. It's building cross-runtime adapter libraries. Developers will pay to write code once and deploy it anywhere.",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.155Z"
+  },
+  {
+    "id": "x_mock_1783853293157",
+    "platform": "x",
+    "topic": "Startup Case Studies",
+    "text": "Is the AI boom built on a circular money loop?\n\nLet’s look at the numbers behind Nvidia, CoreWeave, and Nebius. This is a masterclass in modern corporate financing. 🧵",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.160Z"
+  },
+  {
+    "id": "x_mock_1783853293162",
+    "platform": "x",
+    "topic": "AI tools",
+    "text": "AI frameworks have become bloated.\n\nYou don't need LangChain, CrewAI, or AutoGPT to build a functioning, tool-calling agent. You can do it in exactly 100 lines of Lisp. Here is how it works. 🧵",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.167Z"
+  },
+  {
+    "id": "linkedin_mock_1783853293169",
+    "platform": "linkedin",
+    "topic": "Business ideas",
+    "text": "The GPU Boom is running on a circular financing loop.\n\nIf you want to understand the economics of the AI sector, you need to look at Nvidia, CoreWeave, and Nebius.\n\nHere is how the circular flow works:\n1. Nvidia invests cash directly into specialized GPU cloud providers (like CoreWeave).\n2. These cloud providers use the cash to purchase Nvidia's latest H100/B200 GPUs.\n3. Nvidia records these purchases as record-breaking revenue, boosting its stock valuation.\n4. The cloud providers use their newly acquired GPUs as collateral to raise more debt, buying even more chips.\n\nWhile this engine has successfully scaled AI compute infrastructure at lightning speed, it creates a highly concentrated risk loop. If end-user demand for AI applications cools down, the specialized clouds won't be able to service their debt, and a massive supply of secondary GPUs will hit the market.\n\nAre we looking at infrastructure buildout (similar to the telecom boom of the late 90s) or a financial bubble?\n\nRead the full data-driven analysis: https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom\n\n#AI #Startups #Fintech #VentureCapital #Nvidia",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T10:48:13.172Z"
+  },
+  {
+    "id": "2076268062227968446",
+    "platform": "x",
+    "topic": "Biotech & Pharma",
+    "text": "Nature builds better peptides. Researchers just mapped the complete molecular assembly pathway of natural peptide drugs. This unlocks synthetic paths to build ultra-stable, targeted cancer therapeutics. Details: https://www.sciencedaily.com/releases/2026/07/260701205001.htm",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:54.266Z"
+  },
+  {
+    "id": "2076268063847051774",
+    "platform": "x",
+    "topic": "Startup Case Studies",
+    "text": "The GPU boom runs on circular financing.\n1. Nvidia invests cash in GPU cloud CoreWeave.\n2. CoreWeave uses that cash to buy H100 GPUs from Nvidia.\n3. Nvidia records record-breaking revenue.\nIt's a circular liquidity engine. Breakdown: https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:54.632Z"
+  },
+  {
+    "id": "2076268065398927577",
+    "platform": "x",
+    "topic": "AI tools",
+    "text": "Distributed compute is the next gold rush. Mesh LLM lets you run open LLMs in a peer-to-peer network using the iroh protocol. No central servers, just shared community compute nodes. Code: https://github.com/n0-computer/iroh",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:54.993Z"
+  },
+  {
+    "id": "2076268066774679694",
+    "platform": "x",
+    "topic": "AI tools",
+    "text": "Skip LangChain. You don't need 10,000 lines of framework code to build an AI agent. You can write a tool-calling, reasoning coding agent in exactly 100 lines of Lisp. Keep it simple. Code: https://thebeach.dev/posts/lisp-agent/",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:55.323Z"
+  },
+  {
+    "id": "2076268068204843501",
+    "platform": "x",
+    "topic": "Money",
+    "text": "India's UPI payment engine scales to 350M+ active users and processes 10B+ transactions monthly without crashing. A deep-dive look at the high-availability database replication and routing architecture: https://timeseriesofindia.com/economy/reads/upi-architecture/",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:55.721Z"
+  },
+  {
+    "id": "2076268069807128867",
+    "platform": "x",
+    "topic": "Science",
+    "text": "Faroe Islands' undersea roundabout sits 180 meters below the ocean floor, saving residents a 64-minute daily commute. Styled with local art and neon lights, it connects two main islands. Engineering meets aesthetics. https://visitfaroeislands.com/en/plan-your-stay/getting-around/world-first-under-sea-roundabout",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:56.037Z"
+  },
+  {
+    "id": "2076268071228981403",
+    "platform": "x",
+    "topic": "Productivity",
+    "text": "High-contrast minimalist office designs increase visual processing load, slowing focus by up to 14%. Warm colors and natural textures speed up cognitive recovery. Design your workspace wisely. Study: https://studyfinds.com/modern-decor-may-be-straining-peoples-brains/",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:56.386Z"
+  },
+  {
+    "id": "2076268072625668549",
+    "platform": "x",
+    "topic": "Future Technology",
+    "text": "As centralized cloud inference costs skyrocket, peer-to-peer weight loading is the only way open-source AI survives. Mesh LLM splits model layers across consumer machines to run heavy weights locally.",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:56.680Z"
+  },
+  {
+    "id": "2076268074068537530",
+    "platform": "x",
+    "topic": "Interesting Websites",
+    "text": "Building terminal-based CLI tools? This curated index compiles the best open-source text art generators, ASCII visualizers, and canvas libraries for custom terminal designs: https://hlnet.notion.site/text-art-tools",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:57.056Z"
+  },
+  {
+    "id": "2076268075440038283",
+    "platform": "x",
+    "topic": "Hidden Opportunities",
+    "text": "With runtimes split across Node, Bun, Deno, and now Ant, the big money isn't in building another runtime. It's building the cross-runtime adapter libraries that standardise deployment across them all.",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:57.354Z"
+  },
+  {
+    "id": "2076268076719378443",
+    "platform": "x",
+    "topic": "Startup Case Studies",
+    "text": "Is the AI boom running on a circular financing loop?\n\nLet's dissect the numbers behind Nvidia, CoreWeave, and Nebius. This is a masterclass in modern corporate financing. 🧵",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:30:59.058Z"
+  },
+  {
+    "id": "2076268083832840540",
+    "platform": "x",
+    "topic": "Biotech & Pharma",
+    "text": "Scientists just cracked nature's secret for building ultra-stable cancer therapeutics.\n\nBy mapping the complete molecular assembly pathway of natural peptide drugs, we can now synthesize them synthetically. Here is why this is a milestone. 🧵",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T11:31:00.779Z"
+  },
+  {
+    "id": "2076283940571132386",
+    "platform": "x",
+    "topic": "Research Productivity",
+    "text": "Fields medalist Terry Tao just published his hands-on workflow using modern coding agents for writing apps:\n\n1. AI is highly effective for self-contained helper tasks.\n2. Iterative prompting beats single-shot generation.\n\nRead his full logs: https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:33:59.921Z"
+  },
+  {
+    "id": "2076283942194360526",
+    "platform": "x",
+    "topic": "Deep Tech & AI Startups",
+    "text": "The AI hardware boom reaches a historic moment:\n\n1. SK Hynix raised $26.5B in the largest foreign IPO in US history.\n2. US policymakers are now urging the memory chip giant to build local manufacturing fabs.\n\nDetails: https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:00.319Z"
+  },
+  {
+    "id": "2076283943880478905",
+    "platform": "x",
+    "topic": "Computational Biology",
+    "text": "Neuroscientists just mapped the visual system of mice using Neuropixels sensors:\n\n1. Tracked spiking activity across cortex, thalamus, and midbrain.\n2. Found change detection relies on a specific temporal window.\n\nPaper link: https://www.cell.com/cell/fulltext/S0092-8674(26)00745-2?rss=yes",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:00.719Z"
+  },
+  {
+    "id": "2076283945587462173",
+    "platform": "x",
+    "topic": "Research Policy",
+    "text": "A major policy shift is coming to global science:\n\n1. The new NSF draft rules would ban nearly all collaborations with Chinese research institutions.\n2. This replaces previous risk mitigation strategies with outright bans.\n\nSource: https://www.science.org/content/article/new-nsf-policy-would-ban-almost-all-collaborations-chinese-scientists",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:01.117Z"
+  },
+  {
+    "id": "2076283947198165027",
+    "platform": "x",
+    "topic": "AI for Biomedical Research",
+    "text": "Scientists discovered a shared genetic mutation pattern in ALS, FTD, and Alzheimer's:\n\n1. Mutagenesis is driven by aberrant topoisomerase 1 (TOP1) enzymes.\n2. Initiated by oxidative DNA damage.\n\nRead the full paper: https://www.cell.com/cell/fulltext/S0092-8674(26)00700-2?rss=yes",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:01.495Z"
+  },
+  {
+    "id": "2076283948922003618",
+    "platform": "x",
+    "topic": "Deep Tech & AI Startups",
+    "text": "Venture capital is shifting from model training to local hardware acceleration. As edge computing chip capacities expand, running massive 70B+ parameter models locally on workstation memory is becoming a practical commercial alternative.",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:01.856Z"
+  },
+  {
+    "id": "2076283950268293618",
+    "platform": "x",
+    "topic": "Computational Biology",
+    "text": "Structural prediction models (AlphaFold/ESMFold) are moving from static protein structures to dynamic folding pathways. Mapping these pathways is key to unlocking new small-molecule therapeutics for neurodegenerative diseases.",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:02.177Z"
+  },
+  {
+    "id": "2076283951899881904",
+    "platform": "x",
+    "topic": "Research Productivity",
+    "text": "Iterative prompting frameworks (like Chain-of-Thought and multi-agent loops) are now being compiled directly into local IDE integrations. The developer bottleneck has officially shifted from writing syntax to system architecture design.",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:02.578Z"
+  },
+  {
+    "id": "2076283953380573593",
+    "platform": "x",
+    "topic": "AI for Biomedical Research",
+    "text": "Single-cell sequencing costs have dropped by 80% over the past 5 years. This cost reduction is enabling researchers to compile high-resolution reference atlases for drug discovery, significantly shortening lead times.",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:03.025Z"
+  },
+  {
+    "id": "2076283955163123797",
+    "platform": "x",
+    "topic": "Research Policy",
+    "text": "As geopolitical chip export controls tighten, semiconductor hubs in the US, India, and the Nordics are receiving heavy state subsidies. Building localized supply chains is now a national security priority.",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:03.342Z"
+  },
+  {
+    "id": "2076283956534624674",
+    "platform": "x",
+    "topic": "Research Productivity",
+    "text": "1/ How does a Fields medalist use AI to write code? \n\nTerry Tao just shared his detailed logs on building custom tools using modern coding agents.\n\nHere is what we can learn from his setup: https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:04.908Z"
+  },
+  {
+    "id": "2076283963132256522",
+    "platform": "x",
+    "topic": "AI for Biomedical Research",
+    "text": "1/ A new study published in Cell has identified a shared somatic mutation pattern across C9ORF72 ALS, C9ORF72 FTD, and Alzheimer’s disease.\n\nThis maps a unifying mechanism of neuronal genomic instability: https://www.cell.com/cell/fulltext/S0092-8674(26)00700-2?rss=yes",
+    "publishDate": "2026-07-12",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-12T12:34:06.526Z"
+  }
+]

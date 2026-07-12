@@ -1,0 +1,58 @@
+[
+  {
+    "name": "BIO International Convention 2026",
+    "dates": "June 15-18, 2026",
+    "location": "Boston, MA, USA",
+    "focus": "The world's largest biotechnology event, covering partnering, drug discovery, biopharma policy, and emerging clinical pipelines.",
+    "link": "https://www.bio.org/events/bio-international-convention"
+  },
+  {
+    "name": "ASCO Annual Meeting 2026",
+    "dates": "May 29 - June 2, 2026",
+    "location": "Chicago, IL, USA",
+    "focus": "American Society of Clinical Oncology. The premier event for clinical oncology research, showcasing major clinical trial results for new cancer drugs (CAR-T, ADCs).",
+    "link": "https://meetings.asco.org/annual-meeting"
+  },
+  {
+    "name": "AACR Annual Meeting 2026",
+    "dates": "April 10-15, 2026",
+    "location": "Chicago, IL, USA",
+    "focus": "American Association for Cancer Research. Highlights the latest discoveries in cancer research, drug discovery, and translational oncology.",
+    "link": "https://www.aacr.org/meeting/aacr-annual-meeting-2026/"
+  },
+  {
+    "name": "ICML 2026",
+    "dates": "July 12-18, 2026",
+    "location": "Vienna, Austria",
+    "focus": "International Conference on Machine Learning. One of the top two global academic conferences in AI, deep learning, and reinforcement learning.",
+    "link": "https://icml.cc/"
+  },
+  {
+    "name": "CVPR 2026",
+    "dates": "June 15-19, 2026",
+    "location": "Seattle, WA, USA",
+    "focus": "IEEE/CVF Conference on Computer Vision and Pattern Recognition. The leading event in computer vision, robotics, and generative image/video modeling.",
+    "link": "https://cvpr.thecvf.com/"
+  },
+  {
+    "name": "NeurIPS 2026",
+    "dates": "December 6-12, 2026",
+    "location": "Vancouver, Canada",
+    "focus": "Conference on Neural Information Processing Systems. The largest neural network and AI conference in the world, showcasing foundation models and LLM theoretical breakthroughs.",
+    "link": "https://neurips.cc/"
+  },
+  {
+    "name": "KDD 2026",
+    "dates": "August 16-20, 2026",
+    "location": "Munich, Germany",
+    "focus": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining. The premier data science conference covering large-scale graph databases, recommender systems, and analytics.",
+    "link": "https://kdd.acm.org/kdd2026/"
+  },
+  {
+    "name": "JP Morgan Healthcare Conference 2027",
+    "dates": "January 11-14, 2027",
+    "location": "San Francisco, CA, USA",
+    "focus": "The largest and most informative healthcare investment symposium in the industry, connecting global industry leaders, fast-growth startups, and investors.",
+    "link": "https://www.jpmorgan.com/solutions/cib/insights/health-care-conference"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "name": "futureloop-content-system",
+  "version": "1.0.0",
+  "description": "Daily Autonomous Content System for X, LinkedIn, and Newsletter",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "pipeline": "node src/index.js pipeline",
+    "publish": "node src/index.js publish",
+    "report-weekly": "node src/index.js report-weekly",
+    "report-monthly": "node src/index.js report-monthly"
+  },
+  "dependencies": {
+    "@google/genai": "^2.11.0",
+    "dotenv": "^16.4.5",
+    "rss-parser": "^3.13.0",
+    "twitter-api-v2": "^1.18.2"
+  }
+}

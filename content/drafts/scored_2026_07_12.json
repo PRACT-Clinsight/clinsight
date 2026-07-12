@@ -1,0 +1,94 @@
+{
+  "scoredItems": [
+    {
+      "title": "Old and new apps, via modern coding agents by Terry Tao",
+      "link": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+      "source": "Hacker News",
+      "description": "Score: 46 by Terry Tao on creating apps using modern coding agents and developer workflows.",
+      "category": "Research Productivity & Career",
+      "scores": {
+        "novelty": 9,
+        "virality": 9.5,
+        "educationalValue": 9.5,
+        "evergreenPotential": 8.5,
+        "businessRelevance": 8.0
+      },
+      "explanation": "Field medalist Terry Tao sharing hands-on coding agent workflows is highly educational, authoritative, and viral."
+    },
+    {
+      "title": "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to build new US fabs",
+      "link": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
+      "source": "TechCrunch Hardware",
+      "description": "The AI chip boom produces its biggest Wall Street moment yet as SK Hynix raises $26.5B and faces pressure to build U.S. memory fabs.",
+      "category": "Deep Tech & AI Startups",
+      "scores": {
+        "novelty": 9.0,
+        "virality": 9.2,
+        "educationalValue": 8.5,
+        "evergreenPotential": 8.8,
+        "businessRelevance": 9.5
+      },
+      "explanation": "A massive market and geopolitical story highlighting the capital scaling of the AI chip supply chain."
+    },
+    {
+      "title": "Map of spiking activity underlying change detection in the mouse visual system",
+      "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00745-2?rss=yes",
+      "source": "Cell",
+      "description": "Large-scale Neuropixels recordings across the mouse visual system map sensory and task engagement signals during change detection tasks.",
+      "category": "Computational Biology & Bioinformatics",
+      "scores": {
+        "novelty": 9.5,
+        "virality": 8.8,
+        "educationalValue": 9.0,
+        "evergreenPotential": 9.2,
+        "businessRelevance": 7.5
+      },
+      "explanation": "High-impact neurobiology paper detailing spatial spiking maps and adaptation-based visual strategies in visual visual cortex."
+    },
+    {
+      "title": "New NSF policy would ban almost all collaborations with Chinese scientists",
+      "link": "https://www.science.org/content/article/new-nsf-policy-would-ban-almost-all-collaborations-chinese-scientists",
+      "source": "Science Magazine",
+      "description": "National Science Foundation proposes outright prohibition on working with most Chinese research institutions, replacing risk mitigation.",
+      "category": "Research Productivity & Career",
+      "scores": {
+        "novelty": 9.2,
+        "virality": 9.4,
+        "educationalValue": 8.0,
+        "evergreenPotential": 8.5,
+        "businessRelevance": 8.5
+      },
+      "explanation": "Major geopolitical policy shift with massive funding and collaboration implications for global labs."
+    },
+    {
+      "title": "Recurrent patterns of TOP1-mediated neuronal genomic damage shared by major neurodegenerative disorders",
+      "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00700-2?rss=yes",
+      "source": "Cell",
+      "description": "Single-cell whole-genome sequencing reveals shared somatic mutation patterns in ALS, FTD, and Alzheimer's linked to TOP1 mutagenesis.",
+      "category": "AI for Biomedical Research",
+      "scores": {
+        "novelty": 9.3,
+        "virality": 8.5,
+        "educationalValue": 9.0,
+        "evergreenPotential": 9.0,
+        "businessRelevance": 8.0
+      },
+      "explanation": "Discovers a unifying mechanism of neuronal genomic instability in neurodegeneration, vital for therapeutic targets."
+    },
+    {
+      "title": "Mesh LLM: distributed AI computing on iroh",
+      "link": "https://www.iroh.computer/blog/mesh-llm",
+      "source": "Hacker News",
+      "description": "Score: 276 on building distributed LLM computing mesh setups locally using iroh network libraries.",
+      "category": "Deep Tech & AI Startups",
+      "scores": {
+        "novelty": 8.5,
+        "virality": 8.7,
+        "educationalValue": 8.5,
+        "evergreenPotential": 8.0,
+        "businessRelevance": 8.0
+      },
+      "explanation": "Highly interesting developer project for decentralizing local AI compute mesh networks."
+    }
+  ]
+}

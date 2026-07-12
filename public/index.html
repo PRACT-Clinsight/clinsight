@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FutureLoop - Premium research, datasets, and intelligence in Deep Tech, AI Startups, and Biotech breakthroughs.">
+  <title>FutureLoop | Deep Tech, AI Startups & Biotech Intelligence</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Background Glows -->
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+
+  <header>
+    <div class="logo">
+      <span class="logo-accent">Future</span>Loop
+    </div>
+    <div class="tagline-badge">Sourced by TopStatsZone</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">
+        The research repository for <br>
+        <span class="text-gradient">Deep Tech & Biotech.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Bridging computational biology, AI startups, and developer workflows. We read the original papers and source codes from Nature, Hacker News, Science, and Product Hunt.
+      </p>
+      <div class="target-geos">
+        <span class="geo-tag">🇺🇸 USA Tech</span>
+        <span class="geo-tag">🇮🇳 Engineering</span>
+        <span class="geo-tag">🇸🇪 Nordic Deeptech</span>
+      </div>
+
+      <!-- Signup Card with Lead Magnet -->
+      <div class="signup-card">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <h3>Join the loop. Zero slop.</h3>
+          <p>Get weekly data-driven intelligence reports dissecting AI, deep tech, and biotech breakthroughs directly in your inbox.</p>
+          
+          <form id="subscribe-form" class="subscribe-form" data-netlify="true" name="newsletter">
+            <div class="input-container">
+              <input type="email" id="email" name="email" placeholder="Enter your work email" required autocomplete="email">
+              <button type="submit" id="submit-btn">
+                <span>Subscribe</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+            <div id="form-message" class="form-message"></div>
+          </form>
+          
+          <div class="form-footer">
+            🔒 Direct source links included. Unsubscribe in 1 click.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Ladder / Features Section -->
+    <section class="features">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h4>Deep Tech & AI Startups</h4>
+        <p>Dissecting codebases, developer workflows, system architectures, and early-stage startup funding models.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔬</div>
+        <h4>Biotech breakthroughs</h4>
+        <p>Tracking clinical oncology trial metrics, CAR-T therapeutics, computational biology systems, and AlphaFold applications.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📁</div>
+        <h4>Premium Datasets</h4>
+        <p>Access our library of organized research calendars, startup funding rounds, and bio-ML developer index tables.</p>
+      </div>
+    <!-- Archive Section -->
+    <section class="archive-section" id="archive-section" style="display: none;">
+      <h3 class="archive-title">📁 Past Intelligence Briefings</h3>
+      <div class="archive-grid" id="archive-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 FutureLoop. All rights reserved. Follow us on X: <a href="https://x.com/futureloop_co" target="_blank" rel="noopener noreferrer">@futureloop_co</a></p>
+  </footer>
+
+  <!-- Script -->
+  <script src="index.js"></script>
+</body>
+</html>
