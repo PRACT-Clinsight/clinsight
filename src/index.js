@@ -2,7 +2,7 @@ import { scrapeAllSources, saveRawItems } from './scraper.js';
 import { scoreItems } from './scorer.js';
 import { generateContent } from './generator.js';
 import { scheduleDraft, publishPost } from './publisher.js';
-import { logEngagement, checkHighPerformanceAndFollowUp, registerPublishedPost, logRevenue, checkMilestoneStatus } from './monitor.js';
+import { logEngagement, checkHighPerformanceAndFollowUp, registerPublishedPost, logRevenue, checkMilestoneStatus, addToPublishedHistory } from './monitor.js';
 import { generateWeeklyReport, generateMonthlyAssets } from './reporter.js';
 import config, { ensureDirectories } from './config.js';
 import fs from 'fs';
@@ -135,6 +135,46 @@ async function main() {
           });
         } else {
           console.log('\nSkipping LinkedIn Post (no credentials provided/disabled).');
+        }
+        
+        // Extract all URLs and add them to published history to prevent future duplicates
+        try {
+          const publishedItems = [];
+          
+          if (Array.isArray(scheduleData.xPosts)) {
+            for (const post of scheduleData.xPosts) {
+              const urls = post.text.match(/https?:\/\/[^\s"'()]+/g) || [];
+              urls.forEach(url => {
+                publishedItems.push({ title: post.title || post.topic || 'X Post', link: url });
+              });
+            }
+          }
+          
+          if (Array.isArray(scheduleData.xThreads)) {
+            for (const thread of scheduleData.xThreads) {
+              if (Array.isArray(thread.posts)) {
+                thread.posts.forEach(pText => {
+                  const urls = pText.match(/https?:\/\/[^\s"'()]+/g) || [];
+                  urls.forEach(url => {
+                    publishedItems.push({ title: thread.title || thread.topic || 'X Thread', link: url });
+                  });
+                });
+              }
+            }
+          }
+          
+          if (scheduleData.newsletter) {
+            const introUrls = scheduleData.newsletter.introduction?.match(/https?:\/\/[^\s"'()]+/g) || [];
+            introUrls.forEach(url => {
+              publishedItems.push({ title: scheduleData.newsletter.title || 'Newsletter', link: url });
+            });
+          }
+          
+          if (publishedItems.length > 0) {
+            addToPublishedHistory(publishedItems);
+          }
+        } catch (historyErr) {
+          console.error('Warning: Failed to log published history:', historyErr.message);
         }
         
         // Move scheduled file to published

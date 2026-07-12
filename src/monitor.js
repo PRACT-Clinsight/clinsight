@@ -277,3 +277,45 @@ export function checkMilestoneStatus() {
   
   return { totalUSD, totalSEK, percentage, achieved: totalSEK >= targetSEK };
 }
+
+/**
+ * Loads the published URL/title history database to prevent duplicates
+ */
+export function loadPublishedHistory() {
+  const historyPath = path.join(config.dirs.analytics, 'published_history.json');
+  if (!fs.existsSync(historyPath)) {
+    return [];
+  }
+  try {
+    return JSON.parse(fs.readFileSync(historyPath, 'utf-8'));
+  } catch (err) {
+    console.error('Failed to parse published history, returning empty array.');
+    return [];
+  }
+}
+
+/**
+ * Appends selected items to the published history database
+ */
+export function addToPublishedHistory(items) {
+  const historyPath = path.join(config.dirs.analytics, 'published_history.json');
+  const db = loadPublishedHistory();
+  const dateStr = new Date().toISOString().split('T')[0];
+  
+  items.forEach(item => {
+    if (!item.link) return;
+    // Prevent adding duplicates
+    if (!db.some(h => h.link === item.link)) {
+      db.push({
+        title: item.title || '',
+        link: item.link,
+        date: dateStr,
+        timestamp: new Date().toISOString()
+      });
+    }
+  });
+  
+  fs.writeFileSync(historyPath, JSON.stringify(db, null, 2), 'utf-8');
+  console.log(`Saved ${items.length} items to published history database.`);
+}
+

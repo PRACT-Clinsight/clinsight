@@ -2,6 +2,7 @@ import Parser from 'rss-parser';
 import fs from 'fs';
 import path from 'path';
 import config from './config.js';
+import { loadPublishedHistory } from './monitor.js';
 
 const parser = new Parser({
   headers: {
@@ -454,7 +455,19 @@ export async function scrapeAllSources() {
   const allItems = [...hn, ...singularity, ...technology, ...startups, ...productHunt, ...arxiv, ...biotech, ...hardware, ...newsOutlets, ...markets, ...pubmed, ...regulatory, ...conferences];
   console.log(`Successfully fetched ${allItems.length} raw stories.`);
   
-  // Deduplicate by normalized title & URL
+  // Deduplicate by normalized title & URL, including historical published list
+  let publishedUrls = new Set();
+  let publishedTitles = new Set();
+  try {
+    const history = loadPublishedHistory();
+    history.forEach(h => {
+      if (h.link) publishedUrls.add(h.link);
+      if (h.title) publishedTitles.add(normalizeTitle(h.title));
+    });
+  } catch (err) {
+    console.error('Failed to load published history for deduplication:', err.message);
+  }
+
   const seenTitles = new Set();
   const seenLinks = new Set();
   const uniqueItems = [];
@@ -462,6 +475,10 @@ export async function scrapeAllSources() {
   for (const item of allItems) {
     const normTitle = normalizeTitle(item.title);
     if (!normTitle || seenTitles.has(normTitle) || seenLinks.has(item.link)) {
+      continue;
+    }
+    // Historical duplicate filter
+    if (publishedUrls.has(item.link) || publishedTitles.has(normTitle)) {
       continue;
     }
     seenTitles.add(normTitle);
