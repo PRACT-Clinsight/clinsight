@@ -8,13 +8,11 @@ These rules govern all content generation, scoring, and publication strategies f
 ## 1. Brand Position: Research Intelligence Publication
 Do not write like a generic "AI news aggregator" or a low-ticket "content creator." Position the brand as a premium **Research Intelligence Publication** for computational biologists, deep tech builders, and scientific/technical founders.
 
-## 2. Topic Pyramid & Content Mix
-All sourced items and posts must be scored and selected to fit the following strategic pyramid distributions:
-*   **Research Productivity & Career (20%)**: Sourcing tools like Consensus, Elicit, papers, grants, conferences, and reproducibility tips. (Audience growth).
-*   **Deep Tech & AI Startups (30%)**: Codebases, developer workflows, system architectures, and early-stage startup funding models. (Practical value).
-*   **AI for Biomedical Research (25%)**: Literature monitoring workflows, automation, and LLM coding integrations for wet lab/dry lab. (Practical value).
-*   **Computational Biology & Bioinformatics (15%)**: RNA-seq, single-cell analysis, CRISPR systems, and structural prediction tools (AlphaFold). (Core expertise).
-*   **Frontier Breakthroughs (10%)**: Virtual cell models, genomic world models (Evo), and complex genomic variants (AlphaGenome). (Thought leadership).
+## 2. Strategic Editorial Focus & Content Mix
+All sourced items, newsletter content, and posts must be scored and selected to fit the following strategic distribution:
+*   **AI for Life Sciences (~50%)**: Computational biology, drug discovery, bioinformatics, genomics, and AI-enabled laboratory workflows.
+*   **AI Engineering & Developer Tools (~30%)**: Large language models, developer workflows, system architectures, software agents, infrastructure, and open-source projects.
+*   **Deep-Tech Ecosystem (~20%)**: High-scale startups, funding rounds, upcoming conferences, notable hardware advancements (semiconductors/chips), and global policy research.
 
 ## 3. Strict Evidence and Citation Standards
 *   **Original Citations**: Every quantitative claim or benchmark metric must be accompanied by the direct citation link to the peer-reviewed paper, pre-print, or official regulatory database.
