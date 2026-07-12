@@ -9,16 +9,17 @@ const responseSchema = {
   properties: {
     xPosts: {
       type: "ARRAY",
-      description: "List of 10 short X posts rotating between AI tools, business, money, productivity, science, technology.",
+      description: "List of 30 short X posts rotating between AI tools, business, money, productivity, science, technology, spaced throughout the day.",
       items: {
         type: "OBJECT",
         properties: {
           id: { type: "STRING" },
           topic: { type: "STRING" },
           text: { type: "STRING", description: "The X post body text (under 280 characters). Make hooks strong. Do not use hashtags or emojis unless highly relevant." },
-          imagePrompt: { type: "STRING", description: "Visual prompt for AI image generation related to this post." }
+          imagePrompt: { type: "STRING", description: "Visual prompt for AI image generation related to this post." },
+          scheduledTime: { type: "STRING", description: "Recommended UTC publication time (HH:MM format) to test different timezone audiences, spaced evenly." }
         },
-        required: ["id", "topic", "text", "imagePrompt"]
+        required: ["id", "topic", "text", "imagePrompt", "scheduledTime"]
       }
     },
     xThreads: {
@@ -134,9 +135,10 @@ Strict Editorial & Style Guidelines:
 
 Instructions:
 1. "xPosts":
-   - Create 10 X posts.
+   - Create 30 X posts.
    - Topics: AI in biomedicine, computational biology, bioinformatics, drug discovery, clinical trials, and researcher productivity.
    - Style: High-hook, statistical, data-focused, minimal emojis, no hashtags. Under 280 chars. 
+   - Timing: Distribute these posts evenly across a 24-hour cycle (e.g. 00:00, 00:45, 01:30, 02:15... up to 23:15) so we can test audience traction at all hours.
    - Language: Simplify complex academic terms into clear, readable concepts (keep it accessible without sacrificing truthfulness). Use numbered ranking lists or structured bullet points to organize stats. Be 100% accurate to the source material.
    - Integrate links where appropriate. Make them feel like premium research highlights.
 2. "xThreads":
