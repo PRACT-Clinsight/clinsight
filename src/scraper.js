@@ -353,12 +353,48 @@ async function fetchFinanceAndGeopoliticalNews() {
 }
 
 /**
+ * Fetch trending biomedical papers from PubMed Trending
+ */
+async function fetchPubMedTrending() {
+  try {
+    const response = await fetch('https://pubmed.ncbi.nlm.nih.gov/trending/', {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
+    });
+    if (!response.ok) throw new Error(`HTTP status ${response.status}`);
+    const html = await response.text();
+    
+    const regex = /<a[^>]*class="docsum-title"[^>]*href="\/(\d+)\/"[^>]*>\s*([\s\S]*?)\s*<\/a>/g;
+    let match;
+    const papers = [];
+    
+    while ((match = regex.exec(html)) !== null && papers.length < 10) {
+      const pmid = match[1];
+      const title = match[2].replace(/<\/?[^>]+(>|$)/g, '').trim().replace(/\s+/g, ' ');
+      papers.push({
+        title: title,
+        link: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
+        source: 'PubMed Trending',
+        description: `PubMed Trending article. PMID: ${pmid}. Title: ${title}`,
+        category: 'Biotech & Pharma',
+        timestamp: new Date().toISOString()
+      });
+    }
+    return papers;
+  } catch (error) {
+    console.error('Error fetching PubMed Trending:', error.message);
+    return [];
+  }
+}
+
+/**
  * Run the full scraper pipeline
  */
 export async function scrapeAllSources() {
   console.log('Sourcing trending items...');
   
-  const [hn, singularity, technology, startups, productHunt, arxiv, biotech, hardware, newsOutlets, markets] = await Promise.all([
+  const [hn, singularity, technology, startups, productHunt, arxiv, biotech, hardware, newsOutlets, markets, pubmed] = await Promise.all([
     fetchHackerNews(),
     fetchRedditSubreddit('singularity', 'AI News & Future'),
     fetchRedditSubreddit('technology', 'Technology Trends'),
@@ -368,11 +404,12 @@ export async function scrapeAllSources() {
     fetchPremiumScienceNews(),
     fetchPremiumTechAndHardwareNews(),
     fetchPremiumNewspapersAndOutlets(),
-    fetchFinanceAndGeopoliticalNews()
+    fetchFinanceAndGeopoliticalNews(),
+    fetchPubMedTrending()
   ]);
   
   const conferences = fetchUpcomingConferences();
-  const allItems = [...hn, ...singularity, ...technology, ...startups, ...productHunt, ...arxiv, ...biotech, ...hardware, ...newsOutlets, ...markets, ...conferences];
+  const allItems = [...hn, ...singularity, ...technology, ...startups, ...productHunt, ...arxiv, ...biotech, ...hardware, ...newsOutlets, ...markets, ...pubmed, ...conferences];
   console.log(`Successfully fetched ${allItems.length} raw stories.`);
   
   // Deduplicate by normalized title & URL

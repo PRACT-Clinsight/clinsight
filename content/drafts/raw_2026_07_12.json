@@ -3,7 +3,7 @@
     "title": "Old and new apps, via modern coding agents by Terry Tao",
     "link": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
     "source": "Hacker News",
-    "description": "Score: 119 by subset with 26 comments",
+    "description": "Score: 122 by subset with 29 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T11:09:42.000Z"
   },
@@ -11,7 +11,7 @@
     "title": "Yt-Dlp Sequence Diagrams",
     "link": "https://app.ilograph.com/demo.ilograph.yt-dlp/Download%2520a%2520YouTube%2520Video",
     "source": "Hacker News",
-    "description": "Score: 49 by billyp-rva with 9 comments",
+    "description": "Score: 53 by billyp-rva with 9 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T11:49:38.000Z"
   },
@@ -19,7 +19,7 @@
     "title": "Understanding the Odin Programming Language",
     "link": "https://odinbook.com/",
     "source": "Hacker News",
-    "description": "Score: 25 by AlexeyBrin with 0 comments",
+    "description": "Score: 30 by AlexeyBrin with 1 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T12:08:07.000Z"
   },
@@ -27,7 +27,7 @@
     "title": "Ghostel.el: Terminal emulator powered by libghostty",
     "link": "https://dakra.github.io/ghostel/",
     "source": "Hacker News",
-    "description": "Score: 76 by signa11 with 4 comments",
+    "description": "Score: 78 by signa11 with 5 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T08:52:59.000Z"
   },
@@ -35,15 +35,23 @@
     "title": "Vint Cerf, a “father of the Internet”, is retiring",
     "link": "https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/",
     "source": "Hacker News",
-    "description": "Score: 164 by compiler-guy with 98 comments",
+    "description": "Score: 167 by compiler-guy with 98 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-10T00:06:59.000Z"
+  },
+  {
+    "title": "Unauthenticated RCE in Motorola's MR2600 Router",
+    "link": "https://mrbruh.com/motorola/",
+    "source": "Hacker News",
+    "description": "Score: 12 by MrBruh with 0 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T11:52:21.000Z"
   },
   {
     "title": "Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase",
     "link": "https://github.com/cosmtrek/mindwalk",
     "source": "Hacker News",
-    "description": "Score: 101 by cosmtrek with 46 comments",
+    "description": "Score: 103 by cosmtrek with 46 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-12T05:51:32.000Z"
   },
@@ -51,7 +59,7 @@
     "title": "Mesh LLM: distributed AI computing on iroh",
     "link": "https://www.iroh.computer/blog/mesh-llm",
     "source": "Hacker News",
-    "description": "Score: 288 by tionis with 66 comments",
+    "description": "Score: 291 by tionis with 67 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-11T22:38:57.000Z"
   },
@@ -59,31 +67,31 @@
     "title": "Protobuf-py: Protobuf for Python, without compromises",
     "link": "https://buf.build/blog/protobuf-py",
     "source": "Hacker News",
-    "description": "Score: 82 by ming13 with 17 comments",
+    "description": "Score: 85 by ming13 with 18 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-08T03:16:38.000Z"
-  },
-  {
-    "title": "Unauthenticated RCE in Motorola's MR2600 Router",
-    "link": "https://mrbruh.com/motorola/",
-    "source": "Hacker News",
-    "description": "Score: 8 by MrBruh with 0 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-12T11:52:21.000Z"
   },
   {
     "title": "Xbox 'OG' Adventures",
     "link": "https://mamoniem.com/xbox-og-adventures/",
     "source": "Hacker News",
-    "description": "Score: 21 by davikr with 2 comments",
+    "description": "Score: 23 by davikr with 2 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-07T04:35:55.000Z"
+  },
+  {
+    "title": "Lessons from the Vasa Shipwreck",
+    "link": "https://www.ft.com/content/200a6c44-9b66-4af3-82eb-98acb53898e4",
+    "source": "Hacker News",
+    "description": "Score: 4 by bookofjoe with 1 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-08T22:07:05.000Z"
   },
   {
     "title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
     "link": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
     "source": "Hacker News",
-    "description": "Score: 303 by adletbalzhanov with 121 comments",
+    "description": "Score: 304 by adletbalzhanov with 121 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-11T17:21:49.000Z"
   },
@@ -110,14 +118,6 @@
     "description": "Score: 183 by jamiebeach with 51 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-07T21:21:09.000Z"
-  },
-  {
-    "title": "RISCBoy is an open-source portable games console, designed from scratch",
-    "link": "https://github.com/Wren6991/RISCBoy",
-    "source": "Hacker News",
-    "description": "Score: 168 by mariuz with 23 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-11T21:58:00.000Z"
   },
   {
     "title": "Discord Server Link",
@@ -200,6 +200,22 @@
     "timestamp": "2026-07-11T14:48:44.000Z"
   },
   {
+    "title": "Miora",
+    "link": "https://www.producthunt.com/products/miora-2",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-07T15:48:10.000Z"
+  },
+  {
+    "title": "JustVibe",
+    "link": "https://www.producthunt.com/products/justvibe",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-06T17:33:19.000Z"
+  },
+  {
     "title": "FetchSandbox",
     "link": "https://www.producthunt.com/products/fetchsandbox",
     "source": "Product Hunt",
@@ -222,22 +238,6 @@
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-07-05T21:47:41.000Z"
-  },
-  {
-    "title": "Miora",
-    "link": "https://www.producthunt.com/products/miora-2",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-07T15:48:10.000Z"
-  },
-  {
-    "title": "JustVibe",
-    "link": "https://www.producthunt.com/products/justvibe",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-06T17:33:19.000Z"
   },
   {
     "title": "Basedash SCIM",
@@ -304,20 +304,20 @@
     "timestamp": "2026-07-09T17:16:44.000Z"
   },
   {
+    "title": "Sim",
+    "link": "https://www.producthunt.com/products/sim-studio",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-08T18:55:06.000Z"
+  },
+  {
     "title": "ChatCut",
     "link": "https://www.producthunt.com/products/chatcut-ai-video-editor",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-07-09T06:50:16.000Z"
-  },
-  {
-    "title": "RepStandard",
-    "link": "https://www.producthunt.com/products/repstandard",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-10T04:31:51.000Z"
   },
   {
     "title": "Play2Perfect: What Matters in Dexterous Play Pretraining for Precise Assembly?",
