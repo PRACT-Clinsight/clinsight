@@ -159,7 +159,8 @@ Strict Editorial & Style Guidelines:
   2. Why does it matter? (The computational, scientific, or market analysis).
   3. What should practitioners do differently? (Actionable advice or workflow adjustment).
 - Keep paragraphs and sentences short and punchy.
-- Always link to the original source paper, database, or trial.
+- Always link to the original primary source paper, database, or engineering blog.
+- Primary Sources Only: Never frame posts around secondary news articles or general summaries (like ScienceDaily, TechCrunch, StudyFinds). Always locate and cite the primary paper (Nature, Cell, Science, arXiv, bioRxiv, etc.), official engineering repository, or company tech logs directly. Banish wellness and soft-science color psychology topics completely.
 
 Instructions:
 1. "xPosts":

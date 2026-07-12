@@ -128,6 +128,10 @@ Analyze the following list of raw scraped items. Score each item from 1 to 10 on
 4. Potential Impact: How strongly does it shift workflow speeds, B2B engineering costs, or regulatory timelines?
 5. Business Relevance: Does it connect to high-value bio-ML tools, startup funding, digital datasets, or developer SaaS?
 
+STRICT CONTENT FILTERING CONSTRAINTS:
+- ELITE SOURCE MANDATE: We do not publish soft-science, wellness, or general lifestyle productivity topics (such as office designs, sleep schedules, workspace color psychology). Discard them entirely.
+- PRIMARY DATA FOCUS: Give significantly higher scores to items linking directly to primary data sources (Nature, Cell, Science, arXiv, bioRxiv, GitHub, official engineering papers, or company tech logs) rather than secondary aggregator sites (like TechCrunch, ScienceDaily, StudyFinds, general newspapers). Secondary aggregator items must receive a low Rigor score (maximum 3/10).
+
 Provide a concise 1-sentence explanation of why it got these scores.
 
 Items to score:
