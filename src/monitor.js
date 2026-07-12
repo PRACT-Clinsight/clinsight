@@ -55,7 +55,7 @@ export function saveAnalyticsDb(db) {
 /**
  * Logs engagement for a specific post
  */
-export function logEngagement(postId, likes, reposts, replies) {
+export function logEngagement(postId, likes, reposts, replies, views) {
   const db = loadAnalyticsDb();
   const post = db.find(p => p.id === postId);
   
@@ -67,11 +67,12 @@ export function logEngagement(postId, likes, reposts, replies) {
     likes: parseInt(likes, 10) || 0,
     reposts: parseInt(reposts, 10) || 0,
     replies: parseInt(replies, 10) || 0,
+    views: parseInt(views, 10) || 0,
     lastUpdated: new Date().toISOString()
   };
   
   saveAnalyticsDb(db);
-  console.log(`Updated engagement for post ${postId}: Likes: ${likes}, Reposts: ${reposts}, Replies: ${replies}`);
+  console.log(`Updated engagement for post ${postId}: Likes: ${likes}, Reposts: ${reposts}, Replies: ${replies}, Views/Impressions: ${views || 0}`);
   return post;
 }
 

@@ -153,14 +153,15 @@ async function main() {
       const likes = args[2];
       const reposts = args[3];
       const replies = args[4];
+      const views = args[5];
       
       if (!postId || !likes) {
-        console.error('Usage: node src/index.js log-engagement <postId> <likes> [reposts] [replies]');
+        console.error('Usage: node src/index.js log-engagement <postId> <likes> [reposts] [replies] [views]');
         return;
       }
       
       try {
-        logEngagement(postId, likes, reposts, replies);
+        logEngagement(postId, likes, reposts, replies, views);
       } catch (err) {
         console.error('Failed to log engagement:', err.message);
       }
@@ -244,7 +245,7 @@ Commands:
   
   publish [date]        Publish approved schedule to social media / Buffer API.
   
-  log-engagement <id> <likes> <reposts> <replies>
+  log-engagement <id> <likes> <reposts> <replies> [views]
                         Log analytics for a post.
                         
   log-revenue <source> <amountUSD>

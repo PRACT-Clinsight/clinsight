@@ -1,6 +1,7 @@
 import { GoogleGenAI } from '@google/genai';
 import fs from 'fs';
 import path from 'path';
+import { loadAnalyticsDb } from './monitor.js';
 import config from './config.js';
 
 // Schema for content generation structure
@@ -109,9 +110,35 @@ export async function generateContent(top5Items, dateStr) {
   console.log('Generating content using Gemini...');
   const ai = new GoogleGenAI({ apiKey });
   
+  // Dynamic Traction Feedback Loop: Load recent post performance to automatically adjust topics
+  const analytics = loadAnalyticsDb();
+  let tractionSummary = '';
+  if (analytics && analytics.length > 0) {
+    const topicEngagement = {};
+    analytics.forEach(post => {
+      if (!post.topic) return;
+      const likes = post.metrics?.likes || 0;
+      const reposts = post.metrics?.reposts || 0;
+      const replies = post.metrics?.replies || 0;
+      const views = post.metrics?.views || 0;
+      const score = (likes * 1) + (reposts * 4) + (replies * 2) + (views * 0.05);
+      topicEngagement[post.topic] = (topicEngagement[post.topic] || 0) + score;
+    });
+    
+    const sortedTopics = Object.entries(topicEngagement).sort((a, b) => b[1] - a[1]);
+    if (sortedTopics.length > 0) {
+      tractionSummary = `\nRecent audience traction metrics (higher score = more impressions and engagement):\n` +
+        sortedTopics.map(([topic, score]) => `- ${topic}: Traction Score ${score.toFixed(1)}`).join('\n') +
+        `\n\nInstructions: Dynamically adjust the topic distribution of generated posts based on this traction. Prioritize generating more posts and deeper coverage in high-scoring categories. If today's source materials contain strong substance in those high-traction categories, generate more of those and scale back on lower-scoring categories to optimize organic growth.`;
+    }
+  }
+  
   const prompt = `
 You are an expert scientific editor, systems architect, and head analyst for "@futureloop_co" (FutureLoop), a premium data-driven research intelligence publication in Deep Tech, AI Startups, and Biotech breakthroughs.
 Your tone is: objective, academic-level rigor, analytical, concise, defensive, and data-first. Avoid hyperbole or marketing fluff (e.g. do not say "revolutionize", "game changer", or "unprecedented").
+
+Recent Traction Context:
+${tractionSummary || "No historical traction data logged yet. Focus on high-substance clinical, compute, and deep-tech breakthroughs organically based on the scraped source items."}
 
 Target Audience & Geos:
 - USA: Tech founders, venture capital, biotech ecosystems, deep tech investors.
