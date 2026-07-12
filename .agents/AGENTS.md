@@ -9,8 +9,7 @@ These rules govern all content generation, scoring, and publication strategies f
 Do not write like a generic "AI news aggregator" or a low-ticket "content creator." Position the brand as a premium **Research Intelligence Publication** for computational biologists, deep tech builders, and scientific/technical founders.
 
 ## 2. Strategic Editorial Focus & Content Mix
-All sourced items, newsletter content, and posts must be scored and selected to fit the following strategic distribution:
-*   **AI for Life Sciences (~50%)**: Computational biology, drug discovery, bioinformatics, genomics, and AI-enabled laboratory workflows.
+*   **AI & Medicine / Life Sciences (~50%)**: Computational biology, drug discovery, bioinformatics, genomics, clinical trial designs & protocols (Phase I/II/III, GCP, Helsinki declarations), regulatory affairs (FDA/EMA approvals, RAPS standards), and pharmacovigilance (drug safety, adverse events, post-market surveillance).
 *   **AI Engineering & Developer Tools (~30%)**: Large language models, developer workflows, system architectures, software agents, infrastructure, and open-source projects.
 *   **Deep-Tech Ecosystem (~20%)**: High-scale startups, funding rounds, upcoming conferences, notable hardware advancements (semiconductors/chips), and global policy research.
 

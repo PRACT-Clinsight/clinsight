@@ -100,7 +100,9 @@ Neuroscience
 Diagnostics
 Synthetic biology
 Medical AI
-Clinical research
+Clinical research & trial designs (Phase I/II/III/IV, GCP compliance)
+Regulatory affairs (FDA/EMA submissions, RAPS compliance standards)
+Pharmacovigilance (post-market safety, adverse event reporting)
 
 ---
 
