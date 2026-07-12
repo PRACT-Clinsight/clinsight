@@ -14,6 +14,12 @@ All sourced items, newsletter content, and posts must be scored and selected to 
 *   **AI Engineering & Developer Tools (~30%)**: Large language models, developer workflows, system architectures, software agents, infrastructure, and open-source projects.
 *   **Deep-Tech Ecosystem (~20%)**: High-scale startups, funding rounds, upcoming conferences, notable hardware advancements (semiconductors/chips), and global policy research.
 
+**Speed & Authority Balance (Monetization Curation Rule):**
+To maintain maximum audience relevance and monetization velocity, daily digests and newsletters must balance fast-breaking commercial developments with academic rigor:
+*   **3 Commercial Speed-catchers**: Sourced from Hacker News, Product Hunt, TechCrunch, and market/finance portals. Covers immediate developer tool launches, chip announcements (e.g. Nvidia/AMD), startup funding, and market movements as soon as they break.
+*   **2 Authority anchors**: Sourced from PubMed, Cell, Nature, Science, NEJM, and arXiv. Deep-dives into validated research papers and clinical trial results, citing the primary paper directly (rather than secondary press coverage).
+This structure ensures we capture high-traffic viral trends for quick sponsor conversion while maintaining elite deep-tech research credibility.
+
 ## 3. Strict Evidence and Citation Standards
 *   **Original Citations**: Every quantitative claim or benchmark metric must be accompanied by the direct citation link to the peer-reviewed paper, pre-print, or official regulatory database.
 *   **No Overstatement**: Replace sweeping marketing hype (e.g. "revolutionizing science") with precise, defensive framings (e.g. "substantially reduces search space in specific workflows before experimental validation").
