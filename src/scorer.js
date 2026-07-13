@@ -131,6 +131,7 @@ Analyze the following list of raw scraped items. Score each item from 1 to 10 on
 STRICT CONTENT FILTERING CONSTRAINTS:
 - ELITE SOURCE MANDATE: We do not publish soft-science, wellness, or general lifestyle productivity topics (such as office designs, sleep schedules, workspace color psychology). Discard them entirely.
 - PRIMARY DATA FOCUS: Give significantly higher scores to items linking directly to primary data sources (Nature, Cell, Science, arXiv, bioRxiv, GitHub, official engineering papers, or company tech logs) rather than secondary aggregator sites (like TechCrunch, ScienceDaily, StudyFinds, general newspapers). Secondary aggregator items must receive a low Rigor score (maximum 3/10).
+- CRITICAL SCIENTIFIC INTERROGATION: Prioritize scoring of primary research that reports a surprising negative/null result over generic shared mechanism headlines. Dock Rigor scores if abstract headlines make sweeps ("unifying mechanism") when one of the tested diseases/systems has weak, low-confidence evidence in the figures.
 
 Provide a concise 1-sentence explanation of why it got these scores.
 

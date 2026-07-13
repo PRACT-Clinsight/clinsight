@@ -161,6 +161,12 @@ Strict Editorial & Style Guidelines:
 - Keep paragraphs and sentences short and punchy.
 - Always link to the original primary source paper, database, or engineering blog.
 - Primary Sources Only: Never frame posts around secondary news articles or general summaries (like ScienceDaily, TechCrunch, StudyFinds). Always locate and cite the primary paper (Nature, Cell, Science, arXiv, bioRxiv, etc.), official engineering repository, or company tech logs directly. Banish wellness and soft-science color psychology topics completely.
+- CRITICAL INTERROGATION FRAMEWORK:
+  * Never simply relay abstract summaries. Look for actual figures and metrics.
+  * Dissect "tripods": If a paper claims a unifying mechanism across multiple diseases or systems, check if one of the legs has significantly weaker evidence (e.g., a low effect size or insignificant p-value). Explicitly call out this weak link.
+  * Highlight buried negative/null results: Identify findings that contradict the field's standard assumptions (e.g., a knockdown that unexpectedly did not induce somatic mutation increase). Prioritize these null results over the mainstream shared mechanism.
+  * Question preprint-to-publication drift: Note if figures (like cell counts or sample sizes) shifted between preprint and final journal versions, and highlight the difference.
+
 
 Instructions:
 1. "xPosts":
