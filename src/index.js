@@ -1,7 +1,7 @@
 import { scrapeAllSources, saveRawItems } from './scraper.js';
 import { scoreItems } from './scorer.js';
 import { generateContent } from './generator.js';
-import { scheduleDraft, publishPost } from './publisher.js';
+import { scheduleDraft, publishPost, publishDuePosts } from './publisher.js';
 import { logEngagement, checkHighPerformanceAndFollowUp, registerPublishedPost, logRevenue, checkMilestoneStatus, addToPublishedHistory } from './monitor.js';
 import { generateWeeklyReport, generateMonthlyAssets } from './reporter.js';
 import config, { ensureDirectories } from './config.js';
@@ -87,101 +87,8 @@ async function main() {
     
     case 'publish': {
       const dateTarget = args[1] || today;
-      const scheduledPath = path.join(config.dirs.scheduled, `scheduled_${dateTarget}.json`);
-      
-      if (!fs.existsSync(scheduledPath)) {
-        console.error(`No scheduled content found for ${dateTarget}. Run 'approve' first.`);
-        return;
-      }
-      
       try {
-        console.log(`Loading scheduled posts for ${dateTarget}...`);
-        const scheduleData = JSON.parse(fs.readFileSync(scheduledPath, 'utf-8'));
-        
-        // 1. Publish X Posts
-        console.log('\nPublishing X Posts...');
-        for (const post of scheduleData.xPosts) {
-          const res = await publishPost(post.text, 'x');
-          registerPublishedPost({
-            id: res.id,
-            platform: 'x',
-            topic: post.topic,
-            text: post.text
-          });
-        }
-        
-        // 2. Publish X Threads
-        console.log('\nPublishing X Threads...');
-        for (const thread of scheduleData.xThreads) {
-          const res = await publishPost(thread.posts, 'x');
-          registerPublishedPost({
-            id: res.id,
-            platform: 'x',
-            topic: thread.topic,
-            text: thread.posts[0] // log the starting tweet
-          });
-        }
-        
-        // 3. Publish LinkedIn Post
-        if ((config.linkedinAccessToken && config.linkedinPersonId) || (config.bufferAccessToken && config.bufferProfileIds.length > 0)) {
-          console.log('\nPublishing LinkedIn Post...');
-          const liPost = scheduleData.linkedinPost;
-          const resLi = await publishPost(liPost.text, 'linkedin');
-          registerPublishedPost({
-            id: resLi.id,
-            platform: 'linkedin',
-            topic: liPost.topic,
-            text: liPost.text
-          });
-        } else {
-          console.log('\nSkipping LinkedIn Post (no credentials provided/disabled).');
-        }
-        
-        // Extract all URLs and add them to published history to prevent future duplicates
-        try {
-          const publishedItems = [];
-          
-          if (Array.isArray(scheduleData.xPosts)) {
-            for (const post of scheduleData.xPosts) {
-              const urls = post.text.match(/https?:\/\/[^\s"'()]+/g) || [];
-              urls.forEach(url => {
-                publishedItems.push({ title: post.title || post.topic || 'X Post', link: url });
-              });
-            }
-          }
-          
-          if (Array.isArray(scheduleData.xThreads)) {
-            for (const thread of scheduleData.xThreads) {
-              if (Array.isArray(thread.posts)) {
-                thread.posts.forEach(pText => {
-                  const urls = pText.match(/https?:\/\/[^\s"'()]+/g) || [];
-                  urls.forEach(url => {
-                    publishedItems.push({ title: thread.title || thread.topic || 'X Thread', link: url });
-                  });
-                });
-              }
-            }
-          }
-          
-          if (scheduleData.newsletter) {
-            const introUrls = scheduleData.newsletter.introduction?.match(/https?:\/\/[^\s"'()]+/g) || [];
-            introUrls.forEach(url => {
-              publishedItems.push({ title: scheduleData.newsletter.title || 'Newsletter', link: url });
-            });
-          }
-          
-          if (publishedItems.length > 0) {
-            addToPublishedHistory(publishedItems);
-          }
-        } catch (historyErr) {
-          console.error('Warning: Failed to log published history:', historyErr.message);
-        }
-        
-        // Move scheduled file to published
-        const publishedPath = path.join(config.dirs.published, `published_${dateTarget}.json`);
-        fs.renameSync(scheduledPath, publishedPath);
-        console.log(`\nSuccessfully published all scheduled items for ${dateTarget}! Logged database updated.`);
-        
+        await publishDuePosts(dateTarget);
       } catch (err) {
         console.error('Publishing run failed:', err.message);
       }

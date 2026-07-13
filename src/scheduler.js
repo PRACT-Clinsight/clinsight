@@ -1,6 +1,7 @@
 import { scrapeAllSources, saveRawItems } from './scraper.js';
 import { scoreItems } from './scorer.js';
 import { generateContent } from './generator.js';
+import { publishDuePosts } from './publisher.js';
 import config, { ensureDirectories } from './config.js';
 import path from 'path';
 import fs from 'fs';
@@ -56,3 +57,21 @@ runScheduledPipeline();
 
 // Schedule future iterations
 setInterval(runScheduledPipeline, INTERVAL_MS);
+
+// Auto-publish checking interval: every 5 minutes (300,000 ms)
+const AUTO_PUBLISH_INTERVAL_MS = 5 * 60 * 1000;
+
+async function checkAndPublishDue() {
+  const today = getTodayDateStr();
+  try {
+    await publishDuePosts(today);
+  } catch (err) {
+    console.error('[SCHEDULER] Auto-publish check failed:', err.message);
+  }
+}
+
+// Run auto-publish check immediately on start
+checkAndPublishDue();
+
+// Run check every 5 minutes
+setInterval(checkAndPublishDue, AUTO_PUBLISH_INTERVAL_MS);

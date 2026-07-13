@@ -5,210 +5,224 @@
       "topic": "AI Research",
       "text": "Anthropic researchers developed the Jacobian Lens tool, exposing an activation space where models puzzle over intermediate concepts before outputting tokens.\n\nFactual details: https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
       "imagePrompt": "A schematic showing neural activation paths splitting into an intermediate conceptual map, vector style.",
-      "scheduledTime": "00:00"
+      "scheduledTime": "06:00",
+      "published": true
     },
     {
       "id": "x_post_2",
       "topic": "Compute & Semis",
       "text": "Gray-market corridors in Asia are actively leasing advanced Nvidia H100 GPU clusters to bypass export controls.\n\nSource: https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/",
       "imagePrompt": "A clean rendering of high-density server racks with illuminated fiber cables, cinematic lighting.",
-      "scheduledTime": "00:45"
+      "scheduledTime": "06:48",
+      "published": true
     },
     {
       "id": "x_post_3",
       "topic": "Open Source & Dev Infra",
       "text": "A 15-year-old stack Use-After-Free flaw named GhostLock has been disclosed across all major Linux kernel distributions.\n\nTechnical report: https://nebusec.ai/research/ionstack-part-2/",
       "imagePrompt": "A digital block diagram illustrating memory allocation leaks and pointer corruption, dark aesthetic.",
-      "scheduledTime": "01:30"
+      "scheduledTime": "07:36",
+      "published": true
     },
     {
       "id": "x_post_4",
       "topic": "Compute & Semis",
       "text": "Google paid a $250K bounty for a high-severity guest VM escape vulnerability in core Linux virtualization layers.\n\nDetails: https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/",
       "imagePrompt": "A conceptual diagram showing virtual machine containers breaking boundaries, minimalist vector.",
-      "scheduledTime": "02:15"
+      "scheduledTime": "08:24",
+      "published": true
     },
     {
       "id": "x_post_5",
       "topic": "Open Source & Dev Infra",
       "text": "\"88% of arXiv LaTeX submissions contain hidden information.\"\n\nSounds catastrophic. What's in the 88%: mostly comments and to-do lists.\n\nActual credentials leaked: 171 passwords, 265 API keys. Across 2.7M papers. ~0.02%.\n\nThe scary number and the serious number aren't the same number.\n\nSource: https://www.nature.com/articles/d41586-026-02057-8",
       "imagePrompt": "A close-up view of colorful LaTeX code lines on a black background, glowing text highlights.",
-      "scheduledTime": "03:00"
+      "scheduledTime": "09:12"
     },
     {
       "id": "x_post_6",
       "topic": "AI Research",
       "text": "Evaluating VLM visual-cognitive error rates over a decade reveals that complex reasoning fails frequently under cluttered layout benchmarks.\n\nArxiv: http://arxiv.org/abs/2607.09654v1",
       "imagePrompt": "A split grid displaying geometric layouts and incorrect bounding boxes, research data aesthetic.",
-      "scheduledTime": "03:45"
+      "scheduledTime": "10:00",
+      "published": true,
+      "publishedId": "2076704805540462598"
     },
     {
       "id": "x_post_7",
       "topic": "Open Source & Dev Infra",
       "text": "The PHINN-EEG framework leverages topological data analysis (Betti curves) to classify sleep dream-state EEG signals with 0.76 AUC.\n\nSource: http://arxiv.org/abs/2607.09662v1",
       "imagePrompt": "A complex 3D topological manifold displaying Betti curves, vibrant purple and blue styling.",
-      "scheduledTime": "04:30"
+      "scheduledTime": "10:48",
+      "published": true,
+      "publishedId": "2076704807058809124"
     },
     {
       "id": "x_post_8",
       "topic": "AI Research",
       "text": "Language Models Need Sleep (arXiv) introduces a self-modifying memory consolidation phase to prevent catastrophic forgetting in dynamic environments.\n\nLink: http://arxiv.org/abs/2606.03979v2",
       "imagePrompt": "A modular memory bank with transferring data streams during inactive cycles, conceptual render.",
-      "scheduledTime": "05:15"
+      "scheduledTime": "11:36",
+      "published": true,
+      "publishedId": "2076704808581394782"
     },
     {
       "id": "x_post_9",
       "topic": "Cross-Disciplinary Roundup",
       "text": "Today's research highlights:\n1. [AI-ML] Jacobian Lens probes hidden reasoning spaces: https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/\n2. [Semis] Gray-market Nvidia leasing bypasses barriers: https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/\n3. [Dev-Infra] 88% of arXiv LaTeX source files leak metadata: https://www.nature.com/articles/d41586-026-02057-8",
       "imagePrompt": "A split layout featuring a silicon wafer, a neural network node, and a document paper stack, vector graphic.",
-      "scheduledTime": "06:00"
+      "scheduledTime": "12:24",
+      "published": true,
+      "publishedId": "2076704810372403474"
     },
     {
       "id": "x_post_10",
       "topic": "Oncology Focus List",
       "text": "Recent clinical benchmarks in oncology:\n1. [Immunotherapy] CAR-T solid tumor target selection: https://meetings.asco.org/annual-meeting\n2. [ADCs] Linker stability in metastatic trials: https://www.aacr.org/meeting/aacr-annual-meeting-2026/\n3. [Genomics] somatic maps in cancer tracking: https://www.bio.org/events/bio-international-convention",
       "imagePrompt": "A high-detail 3D model of molecular cell receptor bindings, scientific render.",
-      "scheduledTime": "06:45"
+      "scheduledTime": "13:12",
+      "published": true,
+      "publishedId": "2076704811940979028"
     },
     {
       "id": "x_post_11",
       "topic": "AI Research",
       "text": "ConceptSMILE audits Concept XAI models, exposing that 30% of concept explanations are highly sensitive to minor input perturbations.\n\nSource: http://arxiv.org/abs/2607.09649v1",
       "imagePrompt": "A perturbation noise diagram overlaid on top of a neural network layer structure.",
-      "scheduledTime": "07:30"
+      "scheduledTime": "14:00"
     },
     {
       "id": "x_post_12",
       "topic": "Compute & Semis",
       "text": "High-throughput evaluation of deep Gaussian processes on DAGs improves gene-regulatory network modeling speeds by 40%.\n\nPaper: http://arxiv.org/abs/2607.09645v1",
       "imagePrompt": "A directed acyclic graph layout with cascading probability distributions, clear tech styling.",
-      "scheduledTime": "08:15"
+      "scheduledTime": "14:48"
     },
     {
       "id": "x_post_13",
       "topic": "Open Source & Dev Infra",
       "text": "Fudge MCP is a new tool that integrates terminal diagnostics directly with local LLM agent execution loops.\n\nSource: https://www.producthunt.com/products/fudge-mcp",
       "imagePrompt": "A clean dark terminal window displaying structured agent diagnostic outputs, green neon accents.",
-      "scheduledTime": "09:00"
+      "scheduledTime": "15:36"
     },
     {
       "id": "x_post_14",
       "topic": "AI Research",
       "text": "Scalable Visual Pretraining for Language Intelligence incorporates document layout coordinate maps to reduce formatting parsing errors by 18%.\n\nPaper: http://arxiv.org/abs/2607.09657v1",
       "imagePrompt": "A document layout page showing coordinate bounding boxes and text parsing blocks.",
-      "scheduledTime": "09:45"
+      "scheduledTime": "16:24"
     },
     {
       "id": "x_post_15",
       "topic": "Open Source & Dev Infra",
       "text": "The real security story in the Nature arXiv audit is buried:\n\n7,326 preprints contained GPS-tagged images. 235 spanned commutable distances. \n\nSpot-checks on 10 showed 9 pinpointed both a research lab and the author's home address.\n\nSource: https://www.nature.com/articles/d41586-026-02057-8",
       "imagePrompt": "A padlock overlying a sheet of typesetting formulas, minimalist vector graphic.",
-      "scheduledTime": "10:30"
+      "scheduledTime": "17:12"
     },
     {
       "id": "x_post_16",
       "topic": "Cross-Disciplinary Roundup",
       "text": "Today's systems updates:\n1. [Compute] Linux GhostLock vulnerability details: https://nebusec.ai/research/ionstack-part-2/\n2. [Dev-Infra] arXiv preprints leak home GPS coordinates: https://www.nature.com/articles/d41586-026-02057-8\n3. [AI-ML] VEXAIoT automates IoT exploits with agents: http://arxiv.org/abs/2607.09653v1",
       "imagePrompt": "A flat icon set showing a lock icon, a router, and a satellite pin locator, corporate style.",
-      "scheduledTime": "11:15"
+      "scheduledTime": "18:00"
     },
     {
       "id": "x_post_17",
       "topic": "AI Research",
       "text": "VEXAIoT details agentic frameworks that discover and execute firmware overflows in legacy IoT configurations autonomously.\n\nArxiv: http://arxiv.org/abs/2607.09653v1",
       "imagePrompt": "An automated testing flow showing diagnostic sweeps targeting a smart hub controller.",
-      "scheduledTime": "12:00"
+      "scheduledTime": "18:48"
     },
     {
       "id": "x_post_18",
       "topic": "Compute & Semis",
       "text": "Gray-market access to Nvidia H100 processing loops highlights that hardware blocks fail to restrict remote compute leasing.\n\nSource: https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/",
       "imagePrompt": "A data link showing remote server queries bypassing a global firewall block, blue glowing lights.",
-      "scheduledTime": "12:45"
+      "scheduledTime": "19:36"
     },
     {
       "id": "x_post_19",
       "topic": "Open Source & Dev Infra",
       "text": "The GhostLock vulnerability utilizes stack-UAF in Linux ION memory allocators to bypass standard OS privilege boundaries.\n\nDetails: https://nebusec.ai/research/ionstack-part-2/",
       "imagePrompt": "A close-up diagram of computer memory registers being manipulated by offset errors, dark styling.",
-      "scheduledTime": "13:30"
+      "scheduledTime": "20:24"
     },
     {
       "id": "x_post_20",
       "topic": "Genomics Focus List",
       "text": "Academic updates in Genomics & Bioinformatic pipelines:\n1. [Topoisomerase] somatics in AD & FTD: https://www.cell.com/cell/fulltext/S0092-8674(26)00700-2?rss=yes\n2. [Cas12a] off-target translocation assays: https://www.nature.com/nbt/feed\n3. [EEG-Dreams] Betti classification curves: http://arxiv.org/abs/2607.09662v1",
       "imagePrompt": "A molecular structure showing DNA base pairs interacting with enzyme proteins, scientific render.",
-      "scheduledTime": "14:15"
+      "scheduledTime": "21:12"
     },
     {
       "id": "x_post_21",
       "topic": "AI Research",
       "text": "Evaluating VLM mistakes over ten generations shows that spatial reasoning errors persist despite increases in parameters.\n\nArxiv: http://arxiv.org/abs/2607.09654v1",
       "imagePrompt": "A spatial map showing overlapping 3D boxes and classification metrics.",
-      "scheduledTime": "15:00"
+      "scheduledTime": "22:00"
     },
     {
       "id": "x_post_22",
       "topic": "Compute & Semis",
       "text": "Google's $250K guest VM escape bounty confirms that virtualization layers represent critical attack surfaces in cloud clusters.\n\nDetails: https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/",
       "imagePrompt": "A lock icon surrounding virtual server cards, secure datacenter aesthetic.",
-      "scheduledTime": "15:45"
+      "scheduledTime": "22:48"
     },
     {
       "id": "x_post_23",
       "topic": "Open Source & Dev Infra",
       "text": "AgentKey is an open-source development kit for wrapping LLM tool calls into local filesystem hooks.\n\nSource: https://www.producthunt.com/products/agentkey",
       "imagePrompt": "A folder hierarchy linked to a brain outline, minimalist graphic.",
-      "scheduledTime": "16:30"
+      "scheduledTime": "23:36"
     },
     {
       "id": "x_post_24",
       "topic": "Cross-Disciplinary Roundup",
       "text": "Today's security updates:\n1. [Compute] VM escape bounty is $250K: https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/\n2. [Dev-Infra] GhostLock Linux vulnerability: https://nebusec.ai/research/ionstack-part-2/\n3. [AI] VEXAIoT agents auto-exploit IoT flaws: http://arxiv.org/abs/2607.09653v1",
       "imagePrompt": "A cluster of computer screens displaying security log entries and diagnostic graphs.",
-      "scheduledTime": "17:15"
+      "scheduledTime": "00:24"
     },
     {
       "id": "x_post_25",
       "topic": "Semiconductors Focus List",
       "text": "Hardware and Silicon packaging updates:\n1. [Metadata] 88% of arXiv preprints leak source code comments: https://www.nature.com/articles/d41586-026-02057-8\n2. [GPU] Gray-market Nvidia silicon flows: https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/\n3. [Packaging] CoWoS packaging reticle area limits: https://feeds.arstechnica.com/arstechnica/technology-lab",
       "imagePrompt": "A clean shot of a microchip interposer displaying golden micro-circuits.",
-      "scheduledTime": "18:00"
+      "scheduledTime": "01:12"
     },
     {
       "id": "x_post_26",
       "topic": "AI Research",
       "text": "The Jacobian Lens shows that models represent intermediate attributes as linear directions in embedding spaces.\n\nSource: https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
       "imagePrompt": "A vector space diagram displaying linear cluster groups and direction arrows.",
-      "scheduledTime": "18:45"
+      "scheduledTime": "02:00"
     },
     {
       "id": "x_post_27",
       "topic": "Compute & Semis",
       "text": "Google pays $250K bounty for VM escapes, highlighting how easily guests can run host code under outdated kernel maps.\n\nDetails: https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/",
       "imagePrompt": "A metallic key unlocking a server rack cabinet doors, photorealistic.",
-      "scheduledTime": "19:30"
+      "scheduledTime": "02:48"
     },
     {
       "id": "x_post_28",
       "topic": "Open Source & Dev Infra",
       "text": "TailMux is an open-source multiplexer designed for remote terminal session sharing across team environments.\n\nSource: https://www.producthunt.com/products/tailmux",
       "imagePrompt": "A split terminal layout showing active command inputs and diagnostic logs.",
-      "scheduledTime": "20:15"
+      "scheduledTime": "03:36"
     },
     {
       "id": "x_post_29",
       "topic": "Cross-Disciplinary Roundup",
       "text": "Systems engineering highlights:\n1. [Semis] China eyes Nvidia supply chain leaks: https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/\n2. [Compute] VM Guest Escape vulnerability: https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/\n3. [Dev-Infra] Preprints leak home locations: https://www.nature.com/articles/d41586-026-02057-8",
       "imagePrompt": "A minimal black icon sheet showing server towers, lock symbols, and map pins.",
-      "scheduledTime": "21:00"
+      "scheduledTime": "04:24"
     },
     {
       "id": "x_post_30",
       "topic": "AI Research",
       "text": "ConceptSMILE perturbation tests verify XAI accuracy, helping developer teams audit model explanation reliability.\n\nSource: http://arxiv.org/abs/2607.09649v1",
       "imagePrompt": "A scatter plot grid illustrating outlier classifications and decision boundaries.",
-      "scheduledTime": "21:45"
+      "scheduledTime": "05:12"
     }
   ],
   "xThreads": [
@@ -222,7 +236,8 @@
         "3/ Why it matters:\nInstead of jumping directly from input to output, models process intermediate attributes first (e.g. classifying the user's intent, checking syntax rules) in dedicated hidden steps.",
         "4/ What to do:\nUnderstanding this linear attribute structure allows developers to build direct activation steering modules, tuning model output styles without needing expensive fine-tuning."
       ],
-      "imagePromptForStart": "A glowing geometric grid illustrating linear projections and vector pathways in dark space."
+      "imagePromptForStart": "A glowing geometric grid illustrating linear projections and vector pathways in dark space.",
+      "scheduledTime": "11:00"
     },
     {
       "id": "x_thread_2",
@@ -234,12 +249,15 @@
         "3/ Why it matters:\nMost researchers assume only the compiled PDF is public. Once uploaded to arXiv, raw LaTeX source files and assets remain public permanently. Silent deletions afterward are ineffective.",
         "4/ What to do:\nSanitize preprints before uploading. Use Google's `arxiv_latex_cleaner`, the team's new `ALC-NG` tool, or write preprints in Markdown using `Rxiv-maker` to compile clean source code."
       ],
-      "imagePromptForStart": "A laptop showing open terminal commands cleaning LaTeX files, minimal styling."
+      "imagePromptForStart": "A laptop showing open terminal commands cleaning LaTeX files, minimal styling.",
+      "scheduledTime": "19:00"
     }
   ],
   "linkedinPost": {
     "topic": "Open Source & Dev Infra",
-    "text": "A security audit published in Nature exposes a massive distinction between sensational security headlines and real, actionable threat vectors.\n\nWhile the headline states \"88% of arXiv preprints contain hidden information,\" the data reveals that the 88% is almost entirely composed of harmless LaTeX source comments and draft notes. Actual security credentials leaked were 171 passwords and 265 API keys across 2.7 million papers (~0.016%).\n\nHowever, a much more alarming finding was buried in the study:\n7,326 preprints contained GPS-tagged images, with 235 spanning commutable distances. In a random spot-check of 10 cases, 9 of them pinpointed both the author's research lab and their private home address.\n\n### Why it matters:\n1. Metadata oversight: Most authors assume uploading images to preprints only exposes the visual content, forgetting that default EXIF tags carry spatial GPS coordinates.\n2. Permanent archives: Once uploaded, mirrors and archival logs ensure these documents stay public forever.\n3. Automation risks: With LLMs gaining power, scanning public repositories for leaked keys and spatial patterns is becoming a trivial target.\n\n### Practical Implication:\nFor active research groups, clearing EXIF metadata from all assets is a security mandate. Developers should integrate Google's `arxiv_latex_cleaner` or use Markdown compiler frameworks like `Rxiv-maker` to ensure credentials and metadata never hit public repositories.\n\nOriginal coverage: https://www.nature.com/articles/d41586-026-02057-8"
+    "text": "A security audit published in Nature exposes a massive distinction between sensational security headlines and real, actionable threat vectors.\n\nWhile the headline states \"88% of arXiv preprints contain hidden information,\" the data reveals that the 88% is almost entirely composed of harmless LaTeX source comments and draft notes. Actual security credentials leaked were 171 passwords and 265 API keys across 2.7 million papers (~0.016%).\n\nHowever, a much more alarming finding was buried in the study:\n7,326 preprints contained GPS-tagged images, with 235 spanning commutable distances. In a random spot-check of 10 cases, 9 of them pinpointed both the author's research lab and their private home address.\n\n### Why it matters:\n1. Metadata oversight: Most authors assume uploading images to preprints only exposes the visual content, forgetting that default EXIF tags carry spatial GPS coordinates.\n2. Permanent archives: Once uploaded, mirrors and archival logs ensure these documents stay public forever.\n3. Automation risks: With LLMs gaining power, scanning public repositories for leaked keys and spatial patterns is becoming a trivial target.\n\n### Practical Implication:\nFor active research groups, clearing EXIF metadata from all assets is a security mandate. Developers should integrate Google's `arxiv_latex_cleaner` or use Markdown compiler frameworks like `Rxiv-maker` to ensure credentials and metadata never hit public repositories.\n\nOriginal coverage: https://www.nature.com/articles/d41586-026-02057-8",
+    "scheduledTime": "12:00",
+    "published": true
   },
   "headlines": [
     "Nature Audit: 88% of arXiv Preprints Leak Hidden Metadata & Comments",

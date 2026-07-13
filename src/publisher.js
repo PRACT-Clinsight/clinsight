@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import config from './config.js';
 import { stripDirectoryMetadata } from './stripper.js';
+import { registerPublishedPost, addToPublishedHistory } from './monitor.js';
 
 function markdownToHtml(md) {
   let html = md
@@ -339,4 +340,160 @@ export function scheduleDraft(dateStr) {
   }
 
   return scheduledFile;
+}
+
+/**
+ * Sweeps scheduled drafts and publishes only the posts that are due based on scheduledTime
+ */
+export async function publishDuePosts(dateStr) {
+  const scheduledPath = path.join(config.dirs.scheduled, `scheduled_${dateStr}.json`);
+  if (!fs.existsSync(scheduledPath)) {
+    console.log(`[publisher] No scheduled file found at ${scheduledPath}`);
+    return;
+  }
+
+  let scheduleData;
+  try {
+    scheduleData = JSON.parse(fs.readFileSync(scheduledPath, 'utf-8'));
+  } catch (e) {
+    console.error('[publisher] Failed to read scheduled file:', e.message);
+    return;
+  }
+
+  const now = new Date();
+  const currentUTC = `${String(now.getUTCHours()).padStart(2, '0')}:${String(now.getUTCMinutes()).padStart(2, '0')}`;
+  console.log(`[publisher] Checking due posts for UTC time: ${currentUTC}`);
+
+  let updated = false;
+  let allDone = true;
+
+  // Process X Posts
+  if (Array.isArray(scheduleData.xPosts)) {
+    for (const post of scheduleData.xPosts) {
+      if (post.published) continue;
+      
+      if (post.scheduledTime <= currentUTC) {
+        try {
+          console.log(`[publisher] Publishing due post ${post.id} (Scheduled: ${post.scheduledTime})...`);
+          const res = await publishPost(post.text, 'x');
+          post.published = true;
+          post.publishedId = res.id;
+          updated = true;
+
+          registerPublishedPost({
+            id: res.id,
+            platform: 'x',
+            topic: post.topic,
+            text: post.text
+          });
+
+          // Log to published history
+          const urls = post.text.match(/https?:\/\/[^\s"'()]+/g) || [];
+          if (urls.length > 0) {
+            addToPublishedHistory(urls.map(url => ({ title: post.topic || 'X Post', link: url })));
+          }
+        } catch (err) {
+          console.error(`[publisher] Failed to publish post ${post.id}:`, err.message);
+          allDone = false;
+        }
+        // Exit loop and process only one post per run to prevent rate-limit burst spikes
+        break;
+      } else {
+        allDone = false;
+      }
+    }
+  }
+
+  // Process X Threads (Only if we didn't just publish a post to avoid simultaneous rate limits)
+  if (!updated && Array.isArray(scheduleData.xThreads)) {
+    for (const thread of scheduleData.xThreads) {
+      if (thread.published) continue;
+
+      if (!thread.scheduledTime) {
+        thread.scheduledTime = thread.id === 'x_thread_1' ? '11:00' : '19:00';
+      }
+
+      if (thread.scheduledTime <= currentUTC) {
+        try {
+          console.log(`[publisher] Publishing due thread ${thread.id} (Scheduled: ${thread.scheduledTime})...`);
+          const res = await publishPost(thread.posts, 'x');
+          thread.published = true;
+          thread.publishedId = res.id;
+          updated = true;
+
+          registerPublishedPost({
+            id: res.id,
+            platform: 'x',
+            topic: thread.topic,
+            text: thread.posts[0]
+          });
+
+          // Log to published history
+          const urls = [];
+          thread.posts.forEach(p => {
+            const matches = p.match(/https?:\/\/[^\s"'()]+/g) || [];
+            urls.push(...matches);
+          });
+          if (urls.length > 0) {
+            addToPublishedHistory(urls.map(url => ({ title: thread.topic || 'X Thread', link: url })));
+          }
+        } catch (err) {
+          console.error(`[publisher] Failed to publish thread ${thread.id}:`, err.message);
+          allDone = false;
+        }
+        // Exit loop
+        break;
+      } else {
+        allDone = false;
+      }
+    }
+  }
+
+  // Process LinkedIn Post (Only if we didn't just publish a post/thread to avoid bursts)
+  if (!updated && scheduleData.linkedinPost && !scheduleData.linkedinPost.published) {
+    if (!scheduleData.linkedinPost.scheduledTime) {
+      scheduleData.linkedinPost.scheduledTime = '12:00';
+    }
+
+    if (scheduleData.linkedinPost.scheduledTime <= currentUTC) {
+      try {
+        if ((config.linkedinAccessToken && config.linkedinPersonId) || (config.bufferAccessToken && config.bufferProfileIds.length > 0)) {
+          console.log(`[publisher] Publishing due LinkedIn post (Scheduled: ${scheduleData.linkedinPost.scheduledTime})...`);
+          const res = await publishPost(scheduleData.linkedinPost.text, 'linkedin');
+          scheduleData.linkedinPost.published = true;
+          scheduleData.linkedinPost.publishedId = res.id;
+          updated = true;
+
+          registerPublishedPost({
+            id: res.id,
+            platform: 'linkedin',
+            topic: scheduleData.linkedinPost.topic,
+            text: scheduleData.linkedinPost.text
+          });
+        } else {
+          console.log(`[publisher] Skipping LinkedIn post (credentials not set). Marking as simulated/skipped.`);
+          scheduleData.linkedinPost.published = true;
+          updated = true;
+        }
+      } catch (err) {
+        console.error(`[publisher] Failed to publish LinkedIn post:`, err.message);
+        allDone = false;
+      }
+    } else {
+      allDone = false;
+    }
+  }
+
+  // Save changes back to scheduled file
+  if (updated) {
+    fs.writeFileSync(scheduledPath, JSON.stringify(scheduleData, null, 2), 'utf-8');
+    console.log(`[publisher] Updated scheduled state file: ${scheduledPath}`);
+  }
+
+  // If everything has been published, move the file to published directory
+  if (allDone) {
+    const publishedPath = path.join(config.dirs.published, `published_${dateStr}.json`);
+    fs.renameSync(scheduledPath, publishedPath);
+    console.log(`[publisher] All scheduled items for ${dateStr} successfully published! Moved to ${publishedPath}`);
+  }
 }

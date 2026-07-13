@@ -1,17 +1,25 @@
 [
   {
-    "title": "Zig Creator Calls Spade a Spade, Anthropic Blows Smoke",
-    "link": "https://raymyers.org/post/zed-creator-calls-spade-a-spade/",
+    "title": "The art and engineering of Sega CD Silpheed",
+    "link": "https://fabiensanglard.net/silpheed/index.html",
     "source": "Hacker News",
-    "description": "Score: 937 by crowdhailer with 466 comments",
+    "description": "Score: 84 by ibobev with 12 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T08:39:39.000Z"
+    "timestamp": "2026-07-13T14:52:33.000Z"
+  },
+  {
+    "title": "Apple's new SpeechAnalyzer API, benchmarked against Whisper and its predecessor",
+    "link": "https://get-inscribe.com/blog/apple-speech-api-benchmark.html",
+    "source": "Hacker News",
+    "description": "Score: 19 by get-inscribe with 3 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T16:06:08.000Z"
   },
   {
     "title": "A voxel Tokyo in real Japan time – ride the Yamanote line and study Japanese",
     "link": "https://jivx.com/densha",
     "source": "Hacker News",
-    "description": "Score: 129 by momentmaker with 12 comments",
+    "description": "Score: 224 by momentmaker with 27 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T11:18:30.000Z"
   },
@@ -19,105 +27,97 @@
     "title": "Grok uploaded my user directory to xAI's servers",
     "link": "https://twitter.com/a_green_being/status/2076598897779020159",
     "source": "Hacker News",
-    "description": "Score: 121 by tnolet with 53 comments",
+    "description": "Score: 388 by tnolet with 201 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T13:39:59.000Z"
   },
   {
-    "title": "Show HN: DOM-docx – HTML to native, editable Word docs (MIT)",
-    "link": "https://github.com/floodtide/dom-docx",
+    "title": "LAPD lets contract with surveillance giant Flock expire",
+    "link": "https://techcrunch.com/2026/07/13/lapd-lets-contract-with-surveillance-giant-flock-expire-citing-serious-concerns-over-civil-liberties-and-privacy/",
     "source": "Hacker News",
-    "description": "Score: 48 by fishbone with 18 comments",
+    "description": "Score: 94 by forks with 33 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T11:51:56.000Z"
+    "timestamp": "2026-07-13T15:11:50.000Z"
   },
   {
-    "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
-    "link": "https://github.com/clawkwork/clawk",
+    "title": "DOGE is done. What happened to its records?",
+    "link": "https://www.ms.now/opinion/doge-government-efficiency-records-job-cuts-elon-musk-foia",
     "source": "Hacker News",
-    "description": "Score: 14 by celrenheit with 7 comments",
+    "description": "Score: 95 by ndsipa_pomu with 23 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T14:02:03.000Z"
+    "timestamp": "2026-07-13T15:56:39.000Z"
+  },
+  {
+    "title": "Precursor",
+    "link": "https://blog.cloudflare.com/introducing-precursor/",
+    "source": "Hacker News",
+    "description": "Score: 99 by AznHisoka with 83 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T14:39:38.000Z"
   },
   {
     "title": "Grok CLI uploaded the whole home directory to GCS",
     "link": "https://twitter.com/i/status/2076598897779020159",
     "source": "Hacker News",
-    "description": "Score: 79 by denysvitali with 26 comments",
+    "description": "Score: 237 by denysvitali with 86 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T13:35:32.000Z"
+  },
+  {
+    "title": "Show HN: DOM-docx – HTML to native, editable Word docs (MIT)",
+    "link": "https://github.com/floodtide/dom-docx",
+    "source": "Hacker News",
+    "description": "Score: 85 by fishbone with 23 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T11:51:56.000Z"
   },
   {
     "title": "The 'absolute magic' of Morse code that still connects people globally",
     "link": "https://www.bbc.com/news/articles/cwye0dlzgejo",
     "source": "Hacker News",
-    "description": "Score: 30 by austinallegro with 11 comments",
+    "description": "Score: 65 by austinallegro with 24 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-08T14:20:09.000Z"
-  },
-  {
-    "title": "Interrail: 6,379Km and 13 Countries over 7 weeks",
-    "link": "https://shkspr.mobi/blog/2026/07/another-ridiculous-interrail-holiday-6379km-and-13-countries-over-7-weeks/",
-    "source": "Hacker News",
-    "description": "Score: 152 by coinfused with 91 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T08:04:30.000Z"
-  },
-  {
-    "title": "Backtrack-Free Cursive",
-    "link": "https://mmapped.blog/posts/52-backtrack-free-cursive",
-    "source": "Hacker News",
-    "description": "Score: 155 by dmit with 66 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T06:08:12.000Z"
-  },
-  {
-    "title": "The social physics of conversation: Communication patterns matter",
-    "link": "https://andiroberts.com/citizenship/the-social-physics-of-conversation-citizenship-leadership",
-    "source": "Hacker News",
-    "description": "Score: 105 by kiyanwang with 22 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-08T07:05:49.000Z"
-  },
-  {
-    "title": "GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years",
-    "link": "https://nebusec.ai/research/ionstack-part-2/",
-    "source": "Hacker News",
-    "description": "Score: 342 by ranger_danger with 153 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-08T16:53:58.000Z"
   },
   {
     "title": "The Graph That Should Be Front-Page News",
     "link": "https://www.lyrebirddreaming.com/post/the-graph-that-should-be-front-page-news",
     "source": "Hacker News",
-    "description": "Score: 304 by rakel_rakel with 180 comments",
+    "description": "Score: 441 by rakel_rakel with 244 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T05:35:27.000Z"
   },
   {
-    "title": "Control the Ideas, Not the Code",
-    "link": "https://antirez.com/news/169",
+    "title": "Backtrack-Free Cursive",
+    "link": "https://mmapped.blog/posts/52-backtrack-free-cursive",
     "source": "Hacker News",
-    "description": "Score: 115 by surprisetalk with 69 comments",
+    "description": "Score: 198 by dmit with 87 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T11:45:36.000Z"
+    "timestamp": "2026-07-13T06:08:12.000Z"
   },
   {
-    "title": "Cyberpunk Comics, Manga and Graphic Novels",
-    "link": "https://shellzine.net/cyberpunk-comics/",
+    "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
+    "link": "https://github.com/clawkwork/clawk",
     "source": "Hacker News",
-    "description": "Score: 252 by zdw with 102 comments",
+    "description": "Score: 99 by celrenheit with 105 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-12T22:45:31.000Z"
+    "timestamp": "2026-07-13T14:02:03.000Z"
   },
   {
-    "title": "Tiny Emulators",
-    "link": "https://floooh.github.io/tiny8bit-preview/index.html",
+    "title": "Cursed circuits #6: reverse avalanche oscillator",
+    "link": "https://lcamtuf.substack.com/p/cursed-circuits-6-reverse-avalanche",
     "source": "Hacker News",
-    "description": "Score: 303 by naves with 26 comments",
+    "description": "Score: 35 by surprisetalk with 7 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-12T20:23:05.000Z"
+    "timestamp": "2026-07-09T07:00:17.000Z"
+  },
+  {
+    "title": "Counting ArXiv Delays",
+    "link": "https://fi-le.net/arxiv/",
+    "source": "Hacker News",
+    "description": "Score: 6 by fi-le with 0 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-10T04:52:34.000Z"
   },
   {
     "title": "Discord Server Link",
@@ -136,6 +136,14 @@
     "timestamp": "2026-07-13T06:12:03.000Z"
   },
   {
+    "title": "Majority of U.S. workers support an AI wealth fund as tech layoffs surge, survey finds | Sixty-nine percent of Americans now support “forcing” AI firms to transfer 50% of their stock to a public sovereign wealth fund",
+    "link": "https://www.reddit.com/r/singularity/comments/1uvboti/majority_of_us_workers_support_an_ai_wealth_fund/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/SnoozeDoggyDog  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-13T13:32:16.000Z"
+  },
+  {
     "title": "What Ever Happened To This?",
     "link": "https://www.reddit.com/r/singularity/comments/1uv7jzs/what_ever_happened_to_this/",
     "source": "r/singularity",
@@ -144,12 +152,12 @@
     "timestamp": "2026-07-13T10:19:38.000Z"
   },
   {
-    "title": "Majority of U.S. workers support an AI wealth fund as tech layoffs surge, survey finds | Sixty-nine percent of Americans now support “forcing” AI firms to transfer 50% of their stock to a public sovereign wealth fund",
-    "link": "https://www.reddit.com/r/singularity/comments/1uvboti/majority_of_us_workers_support_an_ai_wealth_fund/",
+    "title": "Richard Sutton launches Oak Lab - \"Our holy grail: A trillion-parameter agent that learns and plans in real-time with 20 watts of energy\"",
+    "link": "https://www.reddit.com/r/singularity/comments/1uvfrjg/richard_sutton_launches_oak_lab_our_holy_grail_a/",
     "source": "r/singularity",
-    "description": "submitted by    /u/SnoozeDoggyDog  \n [link]   [comments]",
+    "description": "Some background: Richard Sutton has been talking about a grand architecture for intelligence for the past year or two, which he's labeled \"OaK\", short for \"Options and Knowledge\". It's a proposed blueprint for AGI that relies on dynamic RL where an AI learns continuously from its own experiences, builds its own concepts and skills, and uses those learned skills to plan and improve over time rather than relying mainly on pre-trained data.\n Rich Sutton, The OaK Architecture: A Vision of SuperIntelligence from Experience - RLC 2025\n Khurram Javed described what the lab's goals are in the next few years on X:\n  \nWe will be sharing our progress often and aim to build a prototype of the complete OaK architecture in the next few years. A successful prototype will be closer to a baby learning in its first year than it will be to any of the current AI systems.\n  \nhttps://x.com/kjaved_/status/2076663868160459214\n    submitted by    /u/Mindrust  \n [link]   [comments]",
     "category": "AI News & Future",
-    "timestamp": "2026-07-13T13:32:16.000Z"
+    "timestamp": "2026-07-13T16:03:56.000Z"
   },
   {
     "title": "I think the safeguards are too strict. They’re flagging basically anything",
@@ -160,20 +168,20 @@
     "timestamp": "2026-07-12T23:08:07.000Z"
   },
   {
-    "title": "Schrodinger's Fable",
-    "link": "https://www.reddit.com/r/singularity/comments/1uuy50w/schrodingers_fable/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/Sorcerer12345  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-13T01:52:02.000Z"
-  },
-  {
     "title": "‘World’s First’ Fully Robotic Pharmacy Fills Prescriptions in 60 Seconds | Queue’s $18.6M-backed kiosk dispenses 600 pills per minute at a Palo Alto pilot, targeting broader rollout by early 2027",
     "link": "https://www.reddit.com/r/singularity/comments/1uv9ij0/worlds_first_fully_robotic_pharmacy_fills/",
     "source": "r/singularity",
     "description": "submitted by    /u/SnoozeDoggyDog  \n [link]   [comments]",
     "category": "AI News & Future",
     "timestamp": "2026-07-13T11:59:26.000Z"
+  },
+  {
+    "title": "Schrodinger's Fable",
+    "link": "https://www.reddit.com/r/singularity/comments/1uuy50w/schrodingers_fable/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/Sorcerer12345  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-13T01:52:02.000Z"
   },
   {
     "title": "usage limit reset and massively, 5H limits removed entirely. Your move Anthropic",
@@ -192,52 +200,12 @@
     "timestamp": "2026-07-12T21:24:23.000Z"
   },
   {
-    "title": "The worst people are fighting",
-    "link": "https://www.reddit.com/r/singularity/comments/1uu8vjo/the_worst_people_are_fighting/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/VariationLivid3193  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-12T07:41:00.000Z"
-  },
-  {
-    "title": "AI Media Buyer By Creatify",
-    "link": "https://www.producthunt.com/products/creatify",
+    "title": "Marked QL",
+    "link": "https://www.producthunt.com/products/marked-ql",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-03T22:38:25.000Z"
-  },
-  {
-    "title": "Loomal",
-    "link": "https://www.producthunt.com/products/loomal",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-07T07:36:59.000Z"
-  },
-  {
-    "title": "AgentKey",
-    "link": "https://www.producthunt.com/products/agentkey",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-10T04:48:14.000Z"
-  },
-  {
-    "title": "Osaurus",
-    "link": "https://www.producthunt.com/products/osaurus",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-07T23:40:15.000Z"
-  },
-  {
-    "title": "UnitPay",
-    "link": "https://www.producthunt.com/products/unitpay",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-04-13T12:36:20.000Z"
+    "timestamp": "2026-07-09T12:39:18.000Z"
   },
   {
     "title": "Fudge MCP",
@@ -248,28 +216,12 @@
     "timestamp": "2026-07-10T14:06:45.000Z"
   },
   {
-    "title": "Playground",
-    "link": "https://www.producthunt.com/products/nyx-4",
+    "title": "AgentKey",
+    "link": "https://www.producthunt.com/products/agentkey",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-12T22:32:12.000Z"
-  },
-  {
-    "title": "NoMac.app",
-    "link": "https://www.producthunt.com/products/nomac",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-10T21:07:45.000Z"
-  },
-  {
-    "title": "Simba Voice Agents",
-    "link": "https://www.producthunt.com/products/speechify",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-08T17:33:04.000Z"
+    "timestamp": "2026-07-10T04:48:14.000Z"
   },
   {
     "title": "Knockoff",
@@ -280,6 +232,54 @@
     "timestamp": "2026-07-10T11:40:04.000Z"
   },
   {
+    "title": "UnitPay",
+    "link": "https://www.producthunt.com/products/unitpay",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-04-13T12:36:20.000Z"
+  },
+  {
+    "title": "Loomal",
+    "link": "https://www.producthunt.com/products/loomal",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-07T07:36:59.000Z"
+  },
+  {
+    "title": "AI Media Buyer By Creatify",
+    "link": "https://www.producthunt.com/products/creatify",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-03T22:38:25.000Z"
+  },
+  {
+    "title": "Osaurus",
+    "link": "https://www.producthunt.com/products/osaurus",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-07T23:40:15.000Z"
+  },
+  {
+    "title": "Playground",
+    "link": "https://www.producthunt.com/products/nyx-4",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-12T22:32:12.000Z"
+  },
+  {
+    "title": "Simba Voice Agents",
+    "link": "https://www.producthunt.com/products/speechify",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-08T17:33:04.000Z"
+  },
+  {
     "title": "TailMux",
     "link": "https://www.producthunt.com/products/tailmux",
     "source": "Product Hunt",
@@ -288,12 +288,20 @@
     "timestamp": "2026-07-13T06:32:29.000Z"
   },
   {
-    "title": "Marked QL",
-    "link": "https://www.producthunt.com/products/marked-ql",
+    "title": "NoMac.app",
+    "link": "https://www.producthunt.com/products/nomac",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-09T12:39:18.000Z"
+    "timestamp": "2026-07-10T21:07:45.000Z"
+  },
+  {
+    "title": "ServiceBeard",
+    "link": "https://www.producthunt.com/products/servicebeard",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-05T21:47:41.000Z"
   },
   {
     "title": "JustVibe",
@@ -304,28 +312,12 @@
     "timestamp": "2026-07-06T17:33:19.000Z"
   },
   {
-    "title": "Miora",
-    "link": "https://www.producthunt.com/products/miora-2",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-07T15:48:10.000Z"
-  },
-  {
     "title": "FetchSandbox",
     "link": "https://www.producthunt.com/products/fetchsandbox",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-06-19T04:12:56.000Z"
-  },
-  {
-    "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
-    "link": "http://arxiv.org/abs/2607.09662v1",
-    "source": "arXiv CS.AI",
-    "description": "Current electroencephalography (EEG)-based dream detection relies on power spectral density (PSD) and statistical moment features, achieving a state-of-the-art area under the receiver operating characteristic curve (AUC) of approximately 0.70 on the DREAM database (Wong et al., 2025, Nature Communic...",
-    "category": "Research Papers",
-    "timestamp": "2026-07-10T17:59:45Z"
   },
   {
     "title": "Scalable Visual Pretraining for Language Intelligence",
@@ -336,28 +328,12 @@
     "timestamp": "2026-07-10T17:57:03Z"
   },
   {
-    "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
-    "link": "http://arxiv.org/abs/2607.09654v1",
-    "source": "arXiv CS.AI",
-    "description": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, only a handful of non-curated human descriptions as a benchmark, and have not focus...",
-    "category": "Research Papers",
-    "timestamp": "2026-07-10T17:53:37Z"
-  },
-  {
     "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
     "link": "http://arxiv.org/abs/2607.09653v1",
     "source": "arXiv CS.AI",
     "description": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While recent adoptions of Large Language Model (LLM) agents have demonstrated promise...",
     "category": "Research Papers",
     "timestamp": "2026-07-10T17:52:29Z"
-  },
-  {
-    "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories",
-    "link": "http://arxiv.org/abs/2606.03979v2",
-    "source": "arXiv CS.AI",
-    "description": "The past few decades have witnessed significant advances in the design of machine learning algorithms, from early studies on task-specific shallow models to more general deep Large Language Models (LLMs). Despite showing promising results in tasks that require instant prediction or in-context learni...",
-    "category": "Research Papers",
-    "timestamp": "2026-06-02T17:56:55Z"
   },
   {
     "title": "ConceptSMILE: Auditing the Trustworthiness of Concept-Based Explainable AI",
@@ -400,6 +376,14 @@
     "timestamp": "2026-07-10T17:39:00Z"
   },
   {
+    "title": "Perovskite–organic tandem solar cells with a photo-transformable stabilizer",
+    "link": "https://www.nature.com/articles/s41586-026-10869-x",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-13T00:00:00.000Z"
+  },
+  {
     "title": "Author Correction: OR7A10 GPCR engineering boosts CAR-NK therapy against solid tumours",
     "link": "https://www.nature.com/articles/s41586-026-10855-3",
     "source": "Nature Journal",
@@ -432,20 +416,12 @@
     "timestamp": "2026-07-13T00:00:00.000Z"
   },
   {
-    "title": "The rise of evidence-based medicine and the ‘mavericks’ who championed it",
-    "link": "https://www.nature.com/articles/d41586-026-02153-9",
-    "source": "Nature Journal",
-    "description": "",
-    "category": "Biotech & Pharma",
-    "timestamp": "2026-07-13T00:00:00.000Z"
-  },
-  {
     "title": "An AI can invent entirely new languages. But is it creative?",
     "link": "https://www.science.org/content/article/ai-can-invent-entirely-new-languages-it-creative",
     "source": "Science Magazine",
     "description": "Researchers debate whether tool produces genuinely novel tongues, or simply spits out a remix",
     "category": "Biotech & Pharma",
-    "timestamp": "2026-07-13T08:00:15.000Z"
+    "timestamp": "2026-07-13T08:00:00.000Z"
   },
   {
     "title": "New NSF policy would ban almost all collaborations with Chinese scientists",
@@ -638,5 +614,29 @@
     "description": "Vivo's joint venture could become a template for Chinese smartphone makers in India.",
     "category": "Deep Tech & Startups",
     "timestamp": "2026-07-10T04:36:20.000Z"
+  },
+  {
+    "title": "The Download: a donor conception cap and world models for AI",
+    "link": "https://www.technologyreview.com/2026/07/13/1140339/the-download-sperm-donor-limits-ai-world-models/",
+    "source": "MIT Technology Review",
+    "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Sperm donors need limits, says a European fertility group Ties van der Meer doesn’t know how many siblings he has. The 47-year-old was conceived at a private fertility clinic using sperm…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-13T12:10:00.000Z"
+  },
+  {
+    "title": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+    "link": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/",
+    "source": "MIT Technology Review",
+    "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Anthropic found a hidden space where Claude puzzles over concepts The AI firm Anthropic has got the clearest glimpse yet at what’s really going on inside large language models as they…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-10T12:10:00.000Z"
+  },
+  {
+    "title": "Sperm donors need limits, says a European fertility group",
+    "link": "https://www.technologyreview.com/2026/07/10/1140289/sperm-donors-need-limits-says-a-european-fertility-group/",
+    "source": "MIT Technology Review",
+    "description": "Ties van der Meer doesn’t know how many siblings he has. The 47-year-old was conceived at a private fertility clinic in the Netherlands using sperm provided by an anonymous donor. After the Netherlands banned anonymous donation in 2004, the doctor who ran the clinic destroyed records that might have identified those donors, he says. He…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-10T09:00:00.000Z"
   }
 ]

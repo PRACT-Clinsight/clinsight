@@ -516,5 +516,131 @@
     },
     "followedUp": false,
     "timestamp": "2026-07-12T12:34:06.526Z"
+  },
+  {
+    "id": "2076704188722036973",
+    "platform": "x",
+    "topic": "AI Research",
+    "text": "Anthropic researchers developed the Jacobian Lens tool, exposing an activation space where models puzzle over intermediate concepts before outputting tokens.\n\nFactual details: https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
+    "publishDate": "2026-07-13",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-13T16:23:56.193Z"
+  },
+  {
+    "id": "2076704190328455298",
+    "platform": "x",
+    "topic": "Compute & Semis",
+    "text": "Gray-market corridors in Asia are actively leasing advanced Nvidia H100 GPU clusters to bypass export controls.\n\nSource: https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/",
+    "publishDate": "2026-07-13",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-13T16:23:56.551Z"
+  },
+  {
+    "id": "2076704191695712489",
+    "platform": "x",
+    "topic": "Open Source & Dev Infra",
+    "text": "A 15-year-old stack Use-After-Free flaw named GhostLock has been disclosed across all major Linux kernel distributions.\n\nTechnical report: https://nebusec.ai/research/ionstack-part-2/",
+    "publishDate": "2026-07-13",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-13T16:23:56.883Z"
+  },
+  {
+    "id": "2076704193075659204",
+    "platform": "x",
+    "topic": "Compute & Semis",
+    "text": "Google paid a $250K bounty for a high-severity guest VM escape vulnerability in core Linux virtualization layers.\n\nDetails: https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/",
+    "publishDate": "2026-07-13",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-13T16:23:57.202Z"
+  },
+  {
+    "id": "2076704805540462598",
+    "platform": "x",
+    "topic": "AI Research",
+    "text": "Evaluating VLM visual-cognitive error rates over a decade reveals that complex reasoning fails frequently under cluttered layout benchmarks.\n\nArxiv: http://arxiv.org/abs/2607.09654v1",
+    "publishDate": "2026-07-13",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-13T16:26:23.244Z"
+  },
+  {
+    "id": "2076704807058809124",
+    "platform": "x",
+    "topic": "Open Source & Dev Infra",
+    "text": "The PHINN-EEG framework leverages topological data analysis (Betti curves) to classify sleep dream-state EEG signals with 0.76 AUC.\n\nSource: http://arxiv.org/abs/2607.09662v1",
+    "publishDate": "2026-07-13",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-13T16:26:23.606Z"
+  },
+  {
+    "id": "2076704808581394782",
+    "platform": "x",
+    "topic": "AI Research",
+    "text": "Language Models Need Sleep (arXiv) introduces a self-modifying memory consolidation phase to prevent catastrophic forgetting in dynamic environments.\n\nLink: http://arxiv.org/abs/2606.03979v2",
+    "publishDate": "2026-07-13",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-13T16:26:24.020Z"
+  },
+  {
+    "id": "2076704810372403474",
+    "platform": "x",
+    "topic": "Cross-Disciplinary Roundup",
+    "text": "Today's research highlights:\n1. [AI-ML] Jacobian Lens probes hidden reasoning spaces: https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/\n2. [Semis] Gray-market Nvidia leasing bypasses barriers: https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/\n3. [Dev-Infra] 88% of arXiv LaTeX source files leak metadata: https://www.nature.com/articles/d41586-026-02057-8",
+    "publishDate": "2026-07-13",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-13T16:26:24.401Z"
+  },
+  {
+    "id": "2076704811940979028",
+    "platform": "x",
+    "topic": "Oncology Focus List",
+    "text": "Recent clinical benchmarks in oncology:\n1. [Immunotherapy] CAR-T solid tumor target selection: https://meetings.asco.org/annual-meeting\n2. [ADCs] Linker stability in metastatic trials: https://www.aacr.org/meeting/aacr-annual-meeting-2026/\n3. [Genomics] somatic maps in cancer tracking: https://www.bio.org/events/bio-international-convention",
+    "publishDate": "2026-07-13",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    },
+    "followedUp": false,
+    "timestamp": "2026-07-13T16:26:24.773Z"
   }
 ]

@@ -255,6 +255,17 @@ Return the content formatted as a JSON object matching the requested schema.
     
     const draftData = JSON.parse(response.text);
     
+    // Enforce Time Spacing: Spaced 48 minutes apart starting at 8:00 AM Stockholm time (06:00 UTC)
+    if (Array.isArray(draftData.xPosts)) {
+      console.log('[generator] Aligning scheduled times (48m intervals starting at 06:00 UTC / 8:00 AM Stockholm)...');
+      draftData.xPosts.forEach((post, index) => {
+        const totalMinutes = 6 * 60 + index * 48;
+        const hour = String(Math.floor((totalMinutes / 60) % 24)).padStart(2, '0');
+        const min = String(totalMinutes % 60).padStart(2, '0');
+        post.scheduledTime = `${hour}:${min}`;
+      });
+    }
+
     // Save draft JSON
     const draftPath = path.join(config.dirs.drafts, `draft_${dateStr}.json`);
     fs.writeFileSync(draftPath, JSON.stringify(draftData, null, 2), 'utf-8');
