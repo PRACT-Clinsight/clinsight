@@ -3,5 +3,20 @@
     "date": "2026_07_12",
     "title": "Terry Tao's Agent Workflows & SK Hynix's $26.5B IPO",
     "path": "newsletters/newsletter_2026_07_12.html"
+  },
+  {
+    "date": "2026_07_05",
+    "title": "Silicon Co-packaging Bottlenecks & CRISPR-Cas12a Efficacy readouts",
+    "path": "newsletters/newsletter_2026_07_05.html"
+  },
+  {
+    "date": "2026_06_28",
+    "title": "LLM Inference Optimizations, GPU Interconnect limits & ALS Mutagenesis somatic maps",
+    "path": "newsletters/newsletter_2026_06_28.html"
+  },
+  {
+    "date": "2026_06_21",
+    "title": "Solid State Battery Density Limits & FDA Oncology Approvals Update",
+    "path": "newsletters/newsletter_2026_06_21.html"
   }
 ]

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM Inference, GPU Interconnects & ALS Somatic Mutagenesis | FutureLoop Briefing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #030712;
+      --card-bg: rgba(17, 24, 39, 0.7);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-primary: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --accent-blue: #3b82f6;
+      --accent-purple: #8b5cf6;
+      --font-sans: 'Outfit', sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      padding: 4rem 1.5rem;
+      min-height: 100vh;
+      line-height: 1.7;
+      position: relative;
+    }
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, var(--accent-purple) 0%, transparent 70%);
+      top: -10%;
+      right: 10%;
+      opacity: 0.12;
+      z-index: -1;
+      filter: blur(100px);
+      pointer-events: none;
+    }
+    .container { max-width: 750px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; }
+    .back-link {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent-blue); }
+    header { border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    header h1 { font-family: var(--font-mono); font-size: 2.25rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+    .meta { font-size: 0.9rem; color: var(--text-secondary); font-family: var(--font-mono); }
+    
+    article { display: flex; flex-direction: column; gap: 1.5rem; font-size: 1.1rem; }
+    article p { margin-bottom: 0.5rem; }
+    article h2 { font-family: var(--font-mono); font-size: 1.5rem; margin-top: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem; color: var(--accent-blue); }
+    article h3 { font-family: var(--font-mono); font-size: 1.2rem; margin-top: 1rem; color: var(--text-primary); }
+    article a { color: var(--accent-blue); text-decoration: none; border-bottom: 1px dashed var(--accent-blue); transition: color 0.2s; }
+    article a:hover { color: var(--accent-purple); border-bottom-style: solid; }
+    article li { margin-left: 1.5rem; margin-bottom: 0.5rem; list-style-type: square; }
+    
+    footer { border-top: 1px solid var(--border-color); padding-top: 2rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="container">
+    <a href="/" class="back-link">&larr; Back to landing page</a>
+    
+    <header>
+      <h1>LLM Inference, GPU Interconnects & ALS Somatic Mutagenesis</h1>
+      <div class="meta">Published: 2026-06-28 | Sourced by FutureLoop</div>
+    </header>
+    
+    <article>
+      <p>Welcome to FutureLoop. Today we dissect the somatic mutation audit in neurodegeneration, optical versus copper interconnect configurations, and context-length GPU memory boundaries.</p>
+      <p>---</p>
+      
+      <h2>1. The somatic mutation signature in ALS, FTD, and AD</h2>
+      <p>
+        <strong>Source:</strong> <a href="https://www.cell.com" target="_blank">Cell Journal</a> (Volume 189, Issue 12)<br>
+        <strong>One-Sentence Finding:</strong> Single-cell whole-genome sequencing of 469 human neurons identifies a shared 2-bp deletion signature driven by aberrant topoisomerase 1 (TOP1) activity linked to DNA oxidative damage in FTD and Alzheimer's, but showing significantly weaker penetration in ALS.<br>
+        <strong>The FutureLoop Interrogation:</strong>
+        *   <em>Audit the Tripod:</em> While headlines claim a unifying neurodegenerative mechanism across all three diseases, the data reveals a weak leg: the 2-bp deletion signature is present in 79% of FTD neurons and 65% of Alzheimer's neurons, but drops to only 28% in ALS. Somatic SNV burden in ALS did not rise significantly at all (p > 0.05).
+        *   <em>The Buried Null:</em> TDP-43-depleted neurons did NOT carry a higher mutation burden than TDP-43-positive control neurons, and TDP-43 knockdown failed to induce TOP1cc accumulation in-vitro. This null result cuts directly against standard molecular repair assumptions.
+        *   <em>Preprint-to-Pub Drift:</em> The bioRxiv preprint reported results on 429 neurons, whereas the peer-reviewed Cell release expanded to 469 neurons. 
+        *   <em>Evidence Level:</em> E3 (Internal human post-mortem brain tissue sequencing assays).
+      </p>
+      <p>---</p>
+
+      <h2>2. Optical Interconnect Capacity Barriers in AI Clusters</h2>
+      <p>
+        <strong>Source:</strong> <a href="https://www.technologyreview.com/feed/" target="_blank">MIT Technology Review</a><br>
+        <strong>What happened:</strong> Latency and power budgets inside ultra-scale clusters are shifting interconnect designs from optical fibers to short-reach co-packaged copper lines for clusters under 100 meters.<br>
+        <strong>Why it matters:</strong> Optoelectronic conversion steps add up to 15% system latency at context lengths over 2M tokens. Standard copper remains superior for localized high-availability matrix calculations.<br>
+        <strong>What to do:</strong> Cluster operators should optimize model parallel placement to ensure matrix weights reside strictly within copper-connected clusters.
+      </p>
+      <p>---</p>
+
+      <h2>3. FP4/INT4 KV Cache Quantization Trade-offs</h2>
+      <p>
+        <strong>Source:</strong> <a href="https://arxiv.org" target="_blank">arXiv CS.CL</a><br>
+        <strong>What happened:</strong> A systematic benchmark of FP4 and INT4 quantization profiles on Llama-3 models shows a 45% reduction in memory capacity footprint at the cost of a 1.2% drop in perplexity scores.<br>
+        <strong>Why it matters:</strong> Low-precision KV caching allows hosting 70B+ parameter models on a single developer workstation memory stack, rendering consumer-grade hardware viable for private enterprise tools.<br>
+        <strong>What to do:</strong> Incorporate dynamic activation scaling into quantizers to preserve model accuracy across extended contexts.
+      </p>
+      <p>---</p>
+
+      <h2>Actionable Takeaway</h2>
+      <p>
+        When evaluating model pipeline latency, do not focus exclusively on token-per-second outputs. Check the interconnect network topology (copper vs optical loops) as this determines scaling latency limits.
+      </p>
+    </article>
+    
+    <footer>
+      <p>&copy; 2026 FutureLoop. Follow us on X: <a href="https://x.com/futureloop_co" target="_blank">@futureloop_co</a></p>
+    </footer>
+  </div>
+</body>
+</html>
