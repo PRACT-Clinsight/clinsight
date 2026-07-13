@@ -83,6 +83,40 @@ const responseSchema = {
  * Generates all daily content formats
  */
 export async function generateContent(top5Items, dateStr) {
+  const draftPath = path.join(config.dirs.drafts, `draft_${dateStr}.json`);
+  const newsletterPath = path.join(config.dirs.newsletters, `newsletter_${dateStr}.md`);
+  
+  if (fs.existsSync(draftPath)) {
+    console.log(`[generator] Found existing draft file at ${draftPath}. Loading draft...`);
+    try {
+      const draftData = JSON.parse(fs.readFileSync(draftPath, 'utf-8'));
+      if (fs.existsSync(newsletterPath)) {
+        console.log(`[generator] Newsletter markdown already exists at ${newsletterPath}`);
+      } else {
+        // Generate newsletter markdown from the loaded draft
+        let newsletterMd = `# ${draftData.newsletter.title}\n\n`;
+        newsletterMd += `*Date: ${dateStr} | Sourced by TheFutureLoop (@thefutureloop_co)*\n\n`;
+        newsletterMd += `${draftData.newsletter.introduction}\n\n`;
+        newsletterMd += `## 🚀 Today's Top Stories\n\n`;
+        
+        draftData.newsletter.stories.forEach((story, idx) => {
+          newsletterMd += `### ${idx + 1}. [${story.title}](${story.link})\n`;
+          newsletterMd += `${story.body}\n\n`;
+        });
+        
+        newsletterMd += `## 💡 Actionable Takeaway\n\n`;
+        newsletterMd += `${draftData.newsletter.takeaway}\n\n`;
+        newsletterMd += `---\n*Thanks for reading! Retweet our daily insights on X: [@thefutureloop_co](https://x.com/thefutureloop_co)*\n`;
+        
+        fs.writeFileSync(newsletterPath, newsletterMd, 'utf-8');
+        console.log(`[generator] Generated missing newsletter markdown at ${newsletterPath}`);
+      }
+      return { draftData, draftPath, newsletterPath };
+    } catch (e) {
+      console.error(`[generator] Failed to parse manual draft file:`, e.message);
+    }
+  }
+
   const apiKey = config.geminiApiKey;
   
   if (!apiKey) {

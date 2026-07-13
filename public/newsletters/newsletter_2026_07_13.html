@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anthropic's Jacobian Lens & arXiv Metadata Leakage | FutureLoop Briefing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #030712;
+      --card-bg: rgba(17, 24, 39, 0.7);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-primary: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --accent-blue: #3b82f6;
+      --accent-purple: #8b5cf6;
+      --font-sans: 'Outfit', sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      padding: 4rem 1.5rem;
+      min-height: 100vh;
+      line-height: 1.7;
+      position: relative;
+    }
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, var(--accent-purple) 0%, transparent 70%);
+      top: -10%;
+      right: 10%;
+      opacity: 0.12;
+      z-index: -1;
+      filter: blur(100px);
+      pointer-events: none;
+    }
+    .container { max-width: 750px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; }
+    .back-link {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent-blue); }
+    header { border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    header h1 { font-family: var(--font-mono); font-size: 2.25rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+    .meta { font-size: 0.9rem; color: var(--text-secondary); font-family: var(--font-mono); }
+    
+    article { display: flex; flex-direction: column; gap: 1.5rem; font-size: 1.1rem; }
+    article p { margin-bottom: 0.5rem; }
+    article h2 { font-family: var(--font-mono); font-size: 1.5rem; margin-top: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem; color: var(--accent-blue); }
+    article h3 { font-family: var(--font-mono); font-size: 1.2rem; margin-top: 1rem; color: var(--text-primary); }
+    article a { color: var(--accent-blue); text-decoration: none; border-bottom: 1px dashed var(--accent-blue); transition: color 0.2s; }
+    article a:hover { color: var(--accent-purple); border-bottom-style: solid; }
+    article li { margin-left: 1.5rem; margin-bottom: 0.5rem; list-style-type: square; }
+    
+    footer { border-top: 1px solid var(--border-color); padding-top: 2rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="container">
+    <a href="/" class="back-link">&larr; Back to landing page</a>
+    
+    <header>
+      <h1>Anthropic's Jacobian Lens & arXiv Metadata Leakage</h1>
+      <div class="meta">Published: 2026-07-13 | Sourced by FutureLoop</div>
+    </header>
+    
+    <article>
+      <h1>Anthropic's Jacobian Lens & arXiv Metadata Leakage</h1>
+<p><em>Date: 2026_07_13 | Sourced by TheFutureLoop (@thefutureloop_co)</em></p>
+<p>Welcome to FutureLoop. Today we dissect Anthropic's Jacobian Lens research, a critical Nature security audit exposing metadata leakage on arXiv, and Linux VM escape vulnerabilities.</p>
+<h2>🚀 Today's Top Stories</h2>
+<h3>1. <a href="https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/" target="_blank">Anthropic found a hidden space where Claude puzzles over concepts</a></h3>
+Anthropic researchers developed the Jacobian Lens tool, revealing that models process logic in linear directions in high-dimensional embedding spaces. This provides a direct path to steering model outputs without fine-tuning.
+<h3>2. <a href="https://www.nature.com/articles/d41586-026-02057-8" target="_blank">Whoops! Most arXiv papers contain information never meant to be shared</a></h3>
+A security audit of 2.7 million preprints published in Nature shows that 88% of submissions containing LaTeX files leak private comments and to-do notes. While actual credential leaks (passwords and API keys) affected ~0.016%, a more alarming finding was that 7,326 preprints contained GPS-tagged images, with spot-checks showing 9 out of 10 pinpointing the author's home address.
+<h3>3. <a href="https://nebusec.ai/research/ionstack-part-2/" target="_blank">GhostLock: A 15-year-old stack-UAF in all Linux distributions</a></h3>
+The disclosure of GhostLock exposes a stack Use-After-Free flaw inside core Linux memory allocators, allowing untrusted local users to escalate privileges to root.
+<h3>4. <a href="https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/" target="_blank">Google pays $250K for Linux guest VM escape vulnerability</a></h3>
+A high-payout VM escape bug in Linux kernel virtualization layers allows root access on host nodes, representing a critical security risk for multi-tenant datacenters.
+<h3>5. <a href="https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/" target="_blank">The Download: a nuclear landmark, and China eyes Nvidia chips</a></h3>
+Gray-market leasing channels in Asia continue to secure remote access to Nvidia H100 clusters, highlighting the limits of physical export controls on compute availability.
+<h2>💡 Actionable Takeaway</h2>
+<p>Always run Google's `arxiv_latex_cleaner` on your source directories and strip EXIF metadata from all images before uploading preprints. This prevents private comments, GPS tags, and credentials from entering public records.</p>
+<p>---<br><em>Thanks for reading! Retweet our daily insights on X: <a href="https://x.com/thefutureloop_co" target="_blank">@thefutureloop_co</a></em></p>
+    </article>
+    
+    <footer>
+      <p>&copy; 2026 FutureLoop. Follow us on X: <a href="https://x.com/futureloop_co" target="_blank">@futureloop_co</a></p>
+    </footer>
+  </div>
+</body>
+</html>

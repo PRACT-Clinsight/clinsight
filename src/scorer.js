@@ -105,6 +105,23 @@ function writeScoreRequestFile(rawItems, dateStr) {
  * Run scoring on items
  */
 export async function scoreItems(rawItems, dateStr) {
+  const filepath = path.join(config.dirs.drafts, `scored_${dateStr}.json`);
+  if (fs.existsSync(filepath)) {
+    console.log(`[scorer] Found existing scored file at ${filepath}. Loading scores...`);
+    try {
+      const scoredItems = JSON.parse(fs.readFileSync(filepath, 'utf-8'));
+      scoredItems.sort((a, b) => b.finalScore - a.finalScore);
+      const top5 = scoredItems.slice(0, 5);
+      console.log(`Top 5 items loaded:`);
+      top5.forEach((item, index) => {
+        console.log(`  ${index + 1}. [${item.finalScore}] ${item.title} (${item.source})`);
+      });
+      return top5;
+    } catch (e) {
+      console.error(`[scorer] Failed to parse manual score file:`, e.message);
+    }
+  }
+
   const apiKey = config.geminiApiKey;
   
   if (!apiKey) {

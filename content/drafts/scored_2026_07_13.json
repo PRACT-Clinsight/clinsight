@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Anthropic found a hidden space where Claude puzzles over concepts",
+    "link": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
+    "source": "MIT Technology Review",
+    "description": "Anthropic developed the Jacobian Lens tool, exposing an activation space where models represent intermediate reasoning concepts as linear directions before generating output tokens.",
+    "category": "AI Research",
+    "scores": {
+      "novelty": 9,
+      "virality": 9,
+      "educationalValue": 8,
+      "evergreenPotential": 8,
+      "businessRelevance": 8
+    },
+    "finalScore": 8.45,
+    "explanation": "Anthropic's Jacobian Lens research exposes activation space features showing intermediate conceptual computations.",
+    "timestamp": "2026-07-13T14:40:28.805Z"
+  },
+  {
+    "title": "Whoops! Most arXiv papers contain information never meant to be shared",
+    "link": "https://www.nature.com/articles/d41586-026-02057-8",
+    "source": "Nature Journal",
+    "description": "A security audit of 2.7 million arXiv papers reveals that 88% of submissions containing LaTeX source files leak comments, passwords, GPS coordinates of homes, and API keys.",
+    "category": "Open Source & Dev Infra",
+    "scores": {
+      "novelty": 9.5,
+      "virality": 9.5,
+      "educationalValue": 9,
+      "evergreenPotential": 8,
+      "businessRelevance": 8
+    },
+    "finalScore": 8.95,
+    "explanation": "Nature security audit of 2.7M papers shows 88% of preprints leak comments, GPS coordinates, passwords, and API keys.",
+    "timestamp": "2026-07-13T14:40:28.808Z"
+  },
+  {
+    "title": "The Download: a nuclear landmark, and China eyes Nvidia chips",
+    "link": "https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/",
+    "source": "MIT Technology Review",
+    "description": "Tracks ongoing trade flow maneuvers around advanced Nvidia silicon access inside Chinese gray-market and remote-leasing channels.",
+    "category": "Compute & Semis",
+    "scores": {
+      "novelty": 8,
+      "virality": 9,
+      "educationalValue": 7,
+      "evergreenPotential": 7,
+      "businessRelevance": 9
+    },
+    "finalScore": 8.1,
+    "explanation": "Tracks ongoing trade flow maneuvers around advanced Nvidia silicon access inside Chinese market channels.",
+    "timestamp": "2026-07-13T14:40:28.808Z"
+  },
+  {
+    "title": "GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years",
+    "link": "https://nebusec.ai/research/ionstack-part-2/",
+    "source": "Hacker News",
+    "description": "A high-severity 15-year-old stack Use-After-Free flaw in Linux ION memory allocators allows local privilege escalation to root.",
+    "category": "Open Source & Dev Infra",
+    "scores": {
+      "novelty": 9,
+      "virality": 8,
+      "educationalValue": 9,
+      "evergreenPotential": 8,
+      "businessRelevance": 7.5
+    },
+    "finalScore": 8.15,
+    "explanation": "A high-severity 15-year-old stack Use-After-Free flaw exposes vulnerability loops in core Linux distribution kernels.",
+    "timestamp": "2026-07-13T14:40:28.808Z"
+  },
+  {
+    "title": "Google pays $250K for Linux vulnerability allowing guest VM escapes",
+    "link": "https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/",
+    "source": "Ars Technica",
+    "description": "A high-payout VM escape bug in Linux kernel virtualization layers allows root access on host nodes, representing a critical security risk for multi-tenant datacenters.",
+    "category": "Compute & Semis",
+    "scores": {
+      "novelty": 8,
+      "virality": 8,
+      "educationalValue": 8.5,
+      "evergreenPotential": 7.5,
+      "businessRelevance": 8
+    },
+    "finalScore": 8,
+    "explanation": "High-payout VM escape bug highlights core sandbox vulnerability risks inside cloud server clusters.",
+    "timestamp": "2026-07-13T14:40:28.808Z"
+  }
+]

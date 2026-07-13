@@ -2,6 +2,7 @@ import { TwitterApi } from 'twitter-api-v2';
 import fs from 'fs';
 import path from 'path';
 import config from './config.js';
+import { stripDirectoryMetadata } from './stripper.js';
 
 function markdownToHtml(md) {
   let html = md
@@ -327,6 +328,14 @@ export function scheduleDraft(dateStr) {
     }
   } catch (err) {
     console.error('Failed to compile static newsletter page:', err.message);
+  }
+
+  // Enforce Anonymity: Automatically strip all metadata from public files before publishing
+  try {
+    console.log('[stripper] Cleaning metadata from public assets folder to enforce anonymity...');
+    stripDirectoryMetadata(path.join(process.cwd(), 'public'));
+  } catch (stripErr) {
+    console.error('Warning: Failed to clean assets directory metadata:', stripErr.message);
   }
 
   return scheduledFile;

@@ -1,27 +1,219 @@
 [
   {
-    "title": "Beavis Ultrasound PnP ISA Sound Card Replica",
-    "link": "https://github.com/schlae/BeavisUltrasound",
+    "title": "Zig Creator Calls Spade a Spade, Anthropic Blows Smoke",
+    "link": "https://raymyers.org/post/zed-creator-calls-spade-a-spade/",
     "source": "Hacker News",
-    "description": "Score: 45 by mariuz with 12 comments",
+    "description": "Score: 937 by crowdhailer with 466 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T05:15:14.000Z"
+    "timestamp": "2026-07-13T08:39:39.000Z"
+  },
+  {
+    "title": "A voxel Tokyo in real Japan time – ride the Yamanote line and study Japanese",
+    "link": "https://jivx.com/densha",
+    "source": "Hacker News",
+    "description": "Score: 129 by momentmaker with 12 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T11:18:30.000Z"
+  },
+  {
+    "title": "Grok uploaded my user directory to xAI's servers",
+    "link": "https://twitter.com/a_green_being/status/2076598897779020159",
+    "source": "Hacker News",
+    "description": "Score: 121 by tnolet with 53 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T13:39:59.000Z"
+  },
+  {
+    "title": "Show HN: DOM-docx – HTML to native, editable Word docs (MIT)",
+    "link": "https://github.com/floodtide/dom-docx",
+    "source": "Hacker News",
+    "description": "Score: 48 by fishbone with 18 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T11:51:56.000Z"
+  },
+  {
+    "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
+    "link": "https://github.com/clawkwork/clawk",
+    "source": "Hacker News",
+    "description": "Score: 14 by celrenheit with 7 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T14:02:03.000Z"
+  },
+  {
+    "title": "Grok CLI uploaded the whole home directory to GCS",
+    "link": "https://twitter.com/i/status/2076598897779020159",
+    "source": "Hacker News",
+    "description": "Score: 79 by denysvitali with 26 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T13:35:32.000Z"
+  },
+  {
+    "title": "The 'absolute magic' of Morse code that still connects people globally",
+    "link": "https://www.bbc.com/news/articles/cwye0dlzgejo",
+    "source": "Hacker News",
+    "description": "Score: 30 by austinallegro with 11 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-08T14:20:09.000Z"
+  },
+  {
+    "title": "Interrail: 6,379Km and 13 Countries over 7 weeks",
+    "link": "https://shkspr.mobi/blog/2026/07/another-ridiculous-interrail-holiday-6379km-and-13-countries-over-7-weeks/",
+    "source": "Hacker News",
+    "description": "Score: 152 by coinfused with 91 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T08:04:30.000Z"
+  },
+  {
+    "title": "Backtrack-Free Cursive",
+    "link": "https://mmapped.blog/posts/52-backtrack-free-cursive",
+    "source": "Hacker News",
+    "description": "Score: 155 by dmit with 66 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T06:08:12.000Z"
+  },
+  {
+    "title": "The social physics of conversation: Communication patterns matter",
+    "link": "https://andiroberts.com/citizenship/the-social-physics-of-conversation-citizenship-leadership",
+    "source": "Hacker News",
+    "description": "Score: 105 by kiyanwang with 22 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-08T07:05:49.000Z"
   },
   {
     "title": "GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years",
     "link": "https://nebusec.ai/research/ionstack-part-2/",
     "source": "Hacker News",
-    "description": "Score: 239 by ranger_danger with 84 comments",
+    "description": "Score: 342 by ranger_danger with 153 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-08T16:53:58.000Z"
   },
   {
-    "title": "Fudge MCP",
-    "link": "https://www.producthunt.com/products/fudge-mcp",
+    "title": "The Graph That Should Be Front-Page News",
+    "link": "https://www.lyrebirddreaming.com/post/the-graph-that-should-be-front-page-news",
+    "source": "Hacker News",
+    "description": "Score: 304 by rakel_rakel with 180 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T05:35:27.000Z"
+  },
+  {
+    "title": "Control the Ideas, Not the Code",
+    "link": "https://antirez.com/news/169",
+    "source": "Hacker News",
+    "description": "Score: 115 by surprisetalk with 69 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T11:45:36.000Z"
+  },
+  {
+    "title": "Cyberpunk Comics, Manga and Graphic Novels",
+    "link": "https://shellzine.net/cyberpunk-comics/",
+    "source": "Hacker News",
+    "description": "Score: 252 by zdw with 102 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T22:45:31.000Z"
+  },
+  {
+    "title": "Tiny Emulators",
+    "link": "https://floooh.github.io/tiny8bit-preview/index.html",
+    "source": "Hacker News",
+    "description": "Score: 303 by naves with 26 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-12T20:23:05.000Z"
+  },
+  {
+    "title": "Discord Server Link",
+    "link": "https://www.reddit.com/r/singularity/comments/1tg1y16/discord_server_link/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/DnDNecromantic  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-05-17T21:10:00.000Z"
+  },
+  {
+    "title": "Yuji Tachikawa, one of the world’s leading theoretical physicists, reports Claude Fable solved a problem that he and his collaborators had gotten stuck on for the past 6 months",
+    "link": "https://www.reddit.com/r/singularity/comments/1uv399n/yuji_tachikawa_one_of_the_worlds_leading/",
+    "source": "r/singularity",
+    "description": "Link to tweet:\n https://x.com/yujitach/status/2076327681562644709?s=20\n    submitted by    /u/socoolandawesome  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-13T06:12:03.000Z"
+  },
+  {
+    "title": "What Ever Happened To This?",
+    "link": "https://www.reddit.com/r/singularity/comments/1uv7jzs/what_ever_happened_to_this/",
+    "source": "r/singularity",
+    "description": "For context fable is 10T parameters \n    submitted by    /u/aditipawarr  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-13T10:19:38.000Z"
+  },
+  {
+    "title": "Majority of U.S. workers support an AI wealth fund as tech layoffs surge, survey finds | Sixty-nine percent of Americans now support “forcing” AI firms to transfer 50% of their stock to a public sovereign wealth fund",
+    "link": "https://www.reddit.com/r/singularity/comments/1uvboti/majority_of_us_workers_support_an_ai_wealth_fund/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/SnoozeDoggyDog  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-13T13:32:16.000Z"
+  },
+  {
+    "title": "I think the safeguards are too strict. They’re flagging basically anything",
+    "link": "https://www.reddit.com/r/singularity/comments/1uuuia3/i_think_the_safeguards_are_too_strict_theyre/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/Internal-Constant216  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-12T23:08:07.000Z"
+  },
+  {
+    "title": "Schrodinger's Fable",
+    "link": "https://www.reddit.com/r/singularity/comments/1uuy50w/schrodingers_fable/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/Sorcerer12345  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-13T01:52:02.000Z"
+  },
+  {
+    "title": "‘World’s First’ Fully Robotic Pharmacy Fills Prescriptions in 60 Seconds | Queue’s $18.6M-backed kiosk dispenses 600 pills per minute at a Palo Alto pilot, targeting broader rollout by early 2027",
+    "link": "https://www.reddit.com/r/singularity/comments/1uv9ij0/worlds_first_fully_robotic_pharmacy_fills/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/SnoozeDoggyDog  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-13T11:59:26.000Z"
+  },
+  {
+    "title": "usage limit reset and massively, 5H limits removed entirely. Your move Anthropic",
+    "link": "https://www.reddit.com/r/singularity/comments/1uuprtu/usage_limit_reset_and_massively_5h_limits_removed/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/Exodus_Green  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-12T19:57:18.000Z"
+  },
+  {
+    "title": "I am altering the deal. Pray I alter it further",
+    "link": "https://www.reddit.com/r/singularity/comments/1uurzz8/i_am_altering_the_deal_pray_i_alter_it_further/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/ClarityInMadness  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-12T21:24:23.000Z"
+  },
+  {
+    "title": "The worst people are fighting",
+    "link": "https://www.reddit.com/r/singularity/comments/1uu8vjo/the_worst_people_are_fighting/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/VariationLivid3193  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-12T07:41:00.000Z"
+  },
+  {
+    "title": "AI Media Buyer By Creatify",
+    "link": "https://www.producthunt.com/products/creatify",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-10T14:06:45.000Z"
+    "timestamp": "2026-07-03T22:38:25.000Z"
+  },
+  {
+    "title": "Loomal",
+    "link": "https://www.producthunt.com/products/loomal",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-07T07:36:59.000Z"
   },
   {
     "title": "AgentKey",
@@ -32,20 +224,28 @@
     "timestamp": "2026-07-10T04:48:14.000Z"
   },
   {
-    "title": "TailMux",
-    "link": "https://www.producthunt.com/products/tailmux",
+    "title": "Osaurus",
+    "link": "https://www.producthunt.com/products/osaurus",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-13T06:32:29.000Z"
+    "timestamp": "2026-07-07T23:40:15.000Z"
   },
   {
-    "title": "Simba Voice Agents",
-    "link": "https://www.producthunt.com/products/speechify",
+    "title": "UnitPay",
+    "link": "https://www.producthunt.com/products/unitpay",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-08T17:33:04.000Z"
+    "timestamp": "2026-04-13T12:36:20.000Z"
+  },
+  {
+    "title": "Fudge MCP",
+    "link": "https://www.producthunt.com/products/fudge-mcp",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-10T14:06:45.000Z"
   },
   {
     "title": "Playground",
@@ -64,44 +264,12 @@
     "timestamp": "2026-07-10T21:07:45.000Z"
   },
   {
-    "title": "AI Media Buyer By Creatify",
-    "link": "https://www.producthunt.com/products/creatify",
+    "title": "Simba Voice Agents",
+    "link": "https://www.producthunt.com/products/speechify",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-03T22:38:25.000Z"
-  },
-  {
-    "title": "UnitPay",
-    "link": "https://www.producthunt.com/products/unitpay",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-04-13T12:36:20.000Z"
-  },
-  {
-    "title": "Loomal",
-    "link": "https://www.producthunt.com/products/loomal",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-07T07:36:59.000Z"
-  },
-  {
-    "title": "Osaurus",
-    "link": "https://www.producthunt.com/products/osaurus",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-07T23:40:15.000Z"
-  },
-  {
-    "title": "Marked QL",
-    "link": "https://www.producthunt.com/products/marked-ql",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-09T12:39:18.000Z"
+    "timestamp": "2026-07-08T17:33:04.000Z"
   },
   {
     "title": "Knockoff",
@@ -112,6 +280,22 @@
     "timestamp": "2026-07-10T11:40:04.000Z"
   },
   {
+    "title": "TailMux",
+    "link": "https://www.producthunt.com/products/tailmux",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-13T06:32:29.000Z"
+  },
+  {
+    "title": "Marked QL",
+    "link": "https://www.producthunt.com/products/marked-ql",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-09T12:39:18.000Z"
+  },
+  {
     "title": "JustVibe",
     "link": "https://www.producthunt.com/products/justvibe",
     "source": "Product Hunt",
@@ -120,20 +304,20 @@
     "timestamp": "2026-07-06T17:33:19.000Z"
   },
   {
-    "title": "ServiceBeard",
-    "link": "https://www.producthunt.com/products/servicebeard",
+    "title": "Miora",
+    "link": "https://www.producthunt.com/products/miora-2",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-05T21:47:41.000Z"
+    "timestamp": "2026-07-07T15:48:10.000Z"
   },
   {
-    "title": "Second Brain for AI v2",
-    "link": "https://www.producthunt.com/products/second-brain-cloudflare",
+    "title": "FetchSandbox",
+    "link": "https://www.producthunt.com/products/fetchsandbox",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-06-25T03:43:33.000Z"
+    "timestamp": "2026-06-19T04:12:56.000Z"
   },
   {
     "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
@@ -216,44 +400,164 @@
     "timestamp": "2026-07-10T17:39:00Z"
   },
   {
-    "title": "Author Correction: Authigenic mineral phases as a driver of the upper-ocean iron cycle",
-    "link": "https://www.nature.com/articles/s41586-026-10853-5",
+    "title": "Author Correction: OR7A10 GPCR engineering boosts CAR-NK therapy against solid tumours",
+    "link": "https://www.nature.com/articles/s41586-026-10855-3",
     "source": "Nature Journal",
     "description": "",
     "category": "Biotech & Pharma",
-    "timestamp": "2026-07-10T00:00:00.000Z"
+    "timestamp": "2026-07-13T00:00:00.000Z"
   },
   {
-    "title": "Alpine crossing took a heavy toll on Hannibal’s elephants and troops",
-    "link": "https://www.nature.com/articles/d41586-026-02113-3",
+    "title": "Tall and small trees are equally vulnerable to drought",
+    "link": "https://www.nature.com/articles/d41586-026-02121-3",
     "source": "Nature Journal",
     "description": "",
     "category": "Biotech & Pharma",
-    "timestamp": "2026-07-10T00:00:00.000Z"
+    "timestamp": "2026-07-13T00:00:00.000Z"
   },
   {
-    "title": "Briefing Chat: The 30 year-legacy of a science icon — Dolly the sheep",
-    "link": "https://www.nature.com/articles/d41586-026-02185-1",
+    "title": "Rights for rivers and ice cream for all: top reads for the summer holidays",
+    "link": "https://www.nature.com/articles/d41586-026-02152-w",
     "source": "Nature Journal",
     "description": "",
     "category": "Biotech & Pharma",
-    "timestamp": "2026-07-10T00:00:00.000Z"
+    "timestamp": "2026-07-13T00:00:00.000Z"
   },
   {
-    "title": "Which ‘AI scientist’ suits your lab? A guide for the perplexed",
-    "link": "https://www.nature.com/articles/d41586-026-02091-6",
+    "title": "How voluntary work can boost your career in science",
+    "link": "https://www.nature.com/articles/d41586-026-01339-5",
     "source": "Nature Journal",
     "description": "",
     "category": "Biotech & Pharma",
-    "timestamp": "2026-07-10T00:00:00.000Z"
+    "timestamp": "2026-07-13T00:00:00.000Z"
   },
   {
-    "title": "Think preprints are unreliable? Analysis of 70,000 studies might change your mind",
-    "link": "https://www.nature.com/articles/d41586-026-02167-3",
+    "title": "The rise of evidence-based medicine and the ‘mavericks’ who championed it",
+    "link": "https://www.nature.com/articles/d41586-026-02153-9",
     "source": "Nature Journal",
     "description": "",
     "category": "Biotech & Pharma",
-    "timestamp": "2026-07-10T00:00:00.000Z"
+    "timestamp": "2026-07-13T00:00:00.000Z"
+  },
+  {
+    "title": "An AI can invent entirely new languages. But is it creative?",
+    "link": "https://www.science.org/content/article/ai-can-invent-entirely-new-languages-it-creative",
+    "source": "Science Magazine",
+    "description": "Researchers debate whether tool produces genuinely novel tongues, or simply spits out a remix",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-13T08:00:15.000Z"
+  },
+  {
+    "title": "New NSF policy would ban almost all collaborations with Chinese scientists",
+    "link": "https://www.science.org/content/article/new-nsf-policy-would-ban-almost-all-collaborations-chinese-scientists",
+    "source": "Science Magazine",
+    "description": "Agency drops attempt to mitigate risk in favor of outright prohibition on working with most Chinese research institutions",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T05:55:28.000Z"
+  },
+  {
+    "title": "Ancient DNA solves Medici murder mystery",
+    "link": "https://www.science.org/content/article/ancient-dna-solves-medici-murder-mystery",
+    "source": "Science Magazine",
+    "description": "Malaria, not poisoning, killed a prominent 16th century duke",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T05:05:00.000Z"
+  },
+  {
+    "title": "DNA could act like a famed gravity-defying pump",
+    "link": "https://www.science.org/content/article/dna-could-act-famed-gravity-defying-pump",
+    "source": "Science Magazine",
+    "description": "Shrunken version of Archimedes screw could allow researchers to move molecules around at tiny scales",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T02:23:00.000Z"
+  },
+  {
+    "title": "NSF makes billion-dollar gamble on research with an economic payoff",
+    "link": "https://www.science.org/content/article/nsf-makes-billion-dollar-gamble-research-economic-payoff",
+    "source": "Science Magazine",
+    "description": "New X-Labs initiative aims to develop breakthrough technologies—but academics aren’t sure they are welcome",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T01:15:50.000Z"
+  },
+  {
+    "title": "Setmelanotide for the Treatment of Acquired Hypothalamic Obesity",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2512275?af=R",
+    "source": "NEJM",
+    "description": "New England Journal of Medicine, Volume 395, Issue 2, Page 138-150, July 9, 2026.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-08T09:00:02.000Z"
+  },
+  {
+    "title": "Ensartinib in Resected ALK-Positive Non–Small-Cell Lung Cancer",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2518990?af=R",
+    "source": "NEJM",
+    "description": "New England Journal of Medicine, Volume 395, Issue 2, Page 151-161, July 9, 2026.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-08T09:00:02.000Z"
+  },
+  {
+    "title": "Phase 3 Trials of Inhaled Treprostinil for Idiopathic Pulmonary Fibrosis",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2501488?af=R",
+    "source": "NEJM",
+    "description": "New England Journal of Medicine, Volume 395, Issue 2, Page 115-126, July 9, 2026.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-05-18T04:27:00.000Z"
+  },
+  {
+    "title": "Inhaled Treprostinil for Idiopathic Pulmonary Fibrosis",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2512911?af=R",
+    "source": "NEJM",
+    "description": "New England Journal of Medicine, Volume 395, Issue 2, Page 127-137, July 9, 2026.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-03-11T09:00:00.000Z"
+  },
+  {
+    "title": "Nutrition Therapy in Critically Ill Adults",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMra2506111?af=R",
+    "source": "NEJM",
+    "description": "New England Journal of Medicine, Volume 395, Issue 2, Page 162-174, July 9, 2026.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-08T09:00:02.000Z"
+  },
+  {
+    "title": "Map of spiking activity underlying change detection in the mouse visual system",
+    "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00745-2?rss=yes",
+    "source": "Cell",
+    "description": "Large-scale Neuropixels recordings across the mouse visual system during an image-change detection task map how sensory, motor, and task engagement signals are distributed across the cortex, thalamus, and midbrain. Task and novelty signals differentially modulate activity along this hierarchy, and combined decoding and optogenetics suggest mice detect changes via an adaptation-based strategy within a critical time window.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-08T00:00:00.000Z"
+  },
+  {
+    "title": "A viral ORFeome library for systems-level genetic dissection of host-pathogen interactions",
+    "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00583-0?rss=yes",
+    "source": "Cell",
+    "description": "A scalable library of ∼13,000 barcoded viral open reading frames from >500 viral species enables functional genomic screens across the virome. Applying this platform identified viral regulators of cellular proliferation, antigen presentation, and interferon signaling. This platform enables systematic exploration of viral protein function.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-02T00:00:00.000Z"
+  },
+  {
+    "title": "Four-dimensional molecular mapping from a spatial snapshot reveals the dynamics of hair follicle organogenesis",
+    "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00702-6?rss=yes",
+    "source": "Cell",
+    "description": "A deep-tissue spatial transcriptomics method simultaneously captures hundreds of hair follicles spanning organogenesis in mouse skin. Ordering follicles by molecular age transforms this snapshot into a map of organogenesis in both space and time, revealing the choreography of organ assembly and how it goes awry in genetically hairless mice.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-01T00:00:00.000Z"
+  },
+  {
+    "title": "Co-option of lysosomal machinery shapes the evolution of the intracellular photosymbiosis supporting coral reefs",
+    "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00701-4?rss=yes",
+    "source": "Cell",
+    "description": "Corals harbor intracellular algal symbionts in specialized organelles that enable them to build diverse reef ecosystems. Corals and other cnidarians have repeatedly evolved this symbiosis through the co-option of lysosomal machinery to simultaneously support photosynthesis and extract photosynthetic products from the algae.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-01T00:00:00.000Z"
+  },
+  {
+    "title": "Recurrent patterns of TOP1-mediated neuronal genomic damage shared by major neurodegenerative disorders",
+    "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00700-2?rss=yes",
+    "source": "Cell",
+    "description": "Single-cell whole-genome sequencing reveals a shared pattern of excessive somatic mutations across C9ORF72 ALS, C9ORF72 FTD, and Alzheimer’s disease, dominated by 2-bp deletions. These mutations arise from aberrant topoisomerase 1 (TOP1)-mediated mutagenesis linked to oxidative DNA damage, identifying a unifying mechanism of neuronal genomic instability in neurodegeneration.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-01T00:00:00.000Z"
   },
   {
     "title": "Patch for Windows Defender 0-day could allow attackers to fill hard disk",
@@ -296,107 +600,43 @@
     "timestamp": "2026-07-08T13:26:10.000Z"
   },
   {
-    "title": "The Download: Claude’s inner workings and OpenAI’s “super app”",
-    "link": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/",
-    "source": "MIT Technology Review",
-    "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Anthropic found a hidden space where Claude puzzles over concepts The AI firm Anthropic has got the clearest glimpse yet at what’s really going on inside large language models as they…",
+    "title": "This slushie machine was a lifesaver during NYC’s heat wave",
+    "link": "https://techcrunch.com/2026/07/11/this-slushie-machine-was-a-lifesaver-during-nycs-heat-wave/",
+    "source": "TechCrunch Hardware",
+    "description": "Ninja's latest slushie machine builds on the popularity of the original Slushi, but with a big upgrade.",
     "category": "Deep Tech & Startups",
-    "timestamp": "2026-07-10T12:10:00.000Z"
+    "timestamp": "2026-07-11T22:00:00.000Z"
   },
   {
-    "title": "Sperm donors need limits, says a European fertility group",
-    "link": "https://www.technologyreview.com/2026/07/10/1140289/sperm-donors-need-limits-says-a-european-fertility-group/",
-    "source": "MIT Technology Review",
-    "description": "Ties van der Meer doesn’t know how many siblings he has. The 47-year-old was conceived at a private fertility clinic in the Netherlands using sperm provided by an anonymous donor. After the Netherlands banned anonymous donation in 2004, the doctor who ran the clinic destroyed records that might have identified those donors, he says. He…",
+    "title": "Smart glasses without a camera? Even Realities bets productivity beats recording everyone",
+    "link": "https://techcrunch.com/2026/07/11/smart-glasses-without-a-camera-even-realities-bets-productivity-beats-recording-everyone/",
+    "source": "TechCrunch Hardware",
+    "description": "The glasses are targeted at people who might be constantly in meetings, giving presentations, and traveling to countries where different languages are spoken.",
     "category": "Deep Tech & Startups",
-    "timestamp": "2026-07-10T09:00:00.000Z"
+    "timestamp": "2026-07-11T17:30:00.000Z"
   },
   {
-    "title": "Anthropic found a hidden space where Claude puzzles over concepts",
-    "link": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
-    "source": "MIT Technology Review",
-    "description": "The AI firm Anthropic has developed a technique that has given it the clearest glimpse yet at what’s really going on inside large language models as they answer questions or carry out tasks. What they found ranges from the mundane to the unnerving. Researchers at the company built a tool called the Jacobian lens (or…",
+    "title": "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to build new US fabs",
+    "link": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
+    "source": "TechCrunch Hardware",
+    "description": "The AI chip boom just produced its biggest Wall Street moment yet. Now SK Hynix and Samsung are being asked to build U.S. factories.",
     "category": "Deep Tech & Startups",
-    "timestamp": "2026-07-09T20:22:28.000Z"
+    "timestamp": "2026-07-10T17:17:12.000Z"
   },
   {
-    "title": "The Download: a nuclear landmark, and China eyes Nvidia chips",
-    "link": "https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/",
-    "source": "MIT Technology Review",
-    "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Four nuclear reactors hit a big milestone in the US —Casey Crownhart I was really looking forward to July 4, and not just because I love a poolside barbecue. This year…",
+    "title": "Dumb Co dared me to trade my iPhone for a hacked flip phone",
+    "link": "https://techcrunch.com/2026/07/10/dumb-co-dared-me-to-trade-my-iphone-for-a-hacked-flip-phone/",
+    "source": "TechCrunch Hardware",
+    "description": "Dumb Co sells flip phones that sync to your smartphone, bridging the infinite connectivity of the iPhone and the unrealistic limitations of an early 2000s relic.",
     "category": "Deep Tech & Startups",
-    "timestamp": "2026-07-09T12:10:00.000Z"
+    "timestamp": "2026-07-10T16:06:49.000Z"
   },
   {
-    "title": "Four nuclear reactors hit a big milestone in the US",
-    "link": "https://www.technologyreview.com/2026/07/09/1140235/nuclear-reactor-milestone-criticality/",
-    "source": "MIT Technology Review",
-    "description": "I was really looking forward to July 4, and not just because I love a poolside barbecue. This year the American holiday also marked a big symbolic deadline for US nuclear power. Last year the Trump administration set a goal to see three new microreactors achieve criticality, a technical milestone establishing that a reactor can…",
+    "title": "After Apple, India’s smartphone manufacturing boom enters new phase with Vivo JV",
+    "link": "https://techcrunch.com/2026/07/09/after-apple-indias-smartphone-manufacturing-boom-enters-new-phase-with-vivo-jv/",
+    "source": "TechCrunch Hardware",
+    "description": "Vivo's joint venture could become a template for Chinese smartphone makers in India.",
     "category": "Deep Tech & Startups",
-    "timestamp": "2026-07-09T08:00:00.000Z"
-  },
-  {
-    "title": "BIO International Convention 2026 (June 15-18, 2026)",
-    "link": "https://www.bio.org/events/bio-international-convention",
-    "source": "Conference Calendar",
-    "description": "BIO International Convention 2026 takes place in Boston, MA, USA on June 15-18, 2026. Focus: The world's largest biotechnology event, covering partnering, drug discovery, biopharma policy, and emerging clinical pipelines.. URL: https://www.bio.org/events/bio-international-convention",
-    "category": "Conferences",
-    "timestamp": "2026-07-13T07:37:54.073Z"
-  },
-  {
-    "title": "ASCO Annual Meeting 2026 (May 29 - June 2, 2026)",
-    "link": "https://meetings.asco.org/annual-meeting",
-    "source": "Conference Calendar",
-    "description": "ASCO Annual Meeting 2026 takes place in Chicago, IL, USA on May 29 - June 2, 2026. Focus: American Society of Clinical Oncology. The premier event for clinical oncology research, showcasing major clinical trial results for new cancer drugs (CAR-T, ADCs).. URL: https://meetings.asco.org/annual-meeting",
-    "category": "Conferences",
-    "timestamp": "2026-07-13T07:37:54.073Z"
-  },
-  {
-    "title": "AACR Annual Meeting 2026 (April 10-15, 2026)",
-    "link": "https://www.aacr.org/meeting/aacr-annual-meeting-2026/",
-    "source": "Conference Calendar",
-    "description": "AACR Annual Meeting 2026 takes place in Chicago, IL, USA on April 10-15, 2026. Focus: American Association for Cancer Research. Highlights the latest discoveries in cancer research, drug discovery, and translational oncology.. URL: https://www.aacr.org/meeting/aacr-annual-meeting-2026/",
-    "category": "Conferences",
-    "timestamp": "2026-07-13T07:37:54.073Z"
-  },
-  {
-    "title": "ICML 2026 (July 12-18, 2026)",
-    "link": "https://icml.cc/",
-    "source": "Conference Calendar",
-    "description": "ICML 2026 takes place in Vienna, Austria on July 12-18, 2026. Focus: International Conference on Machine Learning. One of the top two global academic conferences in AI, deep learning, and reinforcement learning.. URL: https://icml.cc/",
-    "category": "Conferences",
-    "timestamp": "2026-07-13T07:37:54.073Z"
-  },
-  {
-    "title": "CVPR 2026 (June 15-19, 2026)",
-    "link": "https://cvpr.thecvf.com/",
-    "source": "Conference Calendar",
-    "description": "CVPR 2026 takes place in Seattle, WA, USA on June 15-19, 2026. Focus: IEEE/CVF Conference on Computer Vision and Pattern Recognition. The leading event in computer vision, robotics, and generative image/video modeling.. URL: https://cvpr.thecvf.com/",
-    "category": "Conferences",
-    "timestamp": "2026-07-13T07:37:54.073Z"
-  },
-  {
-    "title": "NeurIPS 2026 (December 6-12, 2026)",
-    "link": "https://neurips.cc/",
-    "source": "Conference Calendar",
-    "description": "NeurIPS 2026 takes place in Vancouver, Canada on December 6-12, 2026. Focus: Conference on Neural Information Processing Systems. The largest neural network and AI conference in the world, showcasing foundation models and LLM theoretical breakthroughs.. URL: https://neurips.cc/",
-    "category": "Conferences",
-    "timestamp": "2026-07-13T07:37:54.073Z"
-  },
-  {
-    "title": "KDD 2026 (August 16-20, 2026)",
-    "link": "https://kdd.acm.org/kdd2026/",
-    "source": "Conference Calendar",
-    "description": "KDD 2026 takes place in Munich, Germany on August 16-20, 2026. Focus: ACM SIGKDD Conference on Knowledge Discovery and Data Mining. The premier data science conference covering large-scale graph databases, recommender systems, and analytics.. URL: https://kdd.acm.org/kdd2026/",
-    "category": "Conferences",
-    "timestamp": "2026-07-13T07:37:54.073Z"
-  },
-  {
-    "title": "JP Morgan Healthcare Conference 2027 (January 11-14, 2027)",
-    "link": "https://www.jpmorgan.com/solutions/cib/insights/health-care-conference",
-    "source": "Conference Calendar",
-    "description": "JP Morgan Healthcare Conference 2027 takes place in San Francisco, CA, USA on January 11-14, 2027. Focus: The largest and most informative healthcare investment symposium in the industry, connecting global industry leaders, fast-growth startups, and investors.. URL: https://www.jpmorgan.com/solutions/cib/insights/health-care-conference",
-    "category": "Conferences",
-    "timestamp": "2026-07-13T07:37:54.073Z"
+    "timestamp": "2026-07-10T04:36:20.000Z"
   }
 ]
