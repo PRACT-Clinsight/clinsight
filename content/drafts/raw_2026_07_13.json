@@ -1,0 +1,402 @@
+[
+  {
+    "title": "Beavis Ultrasound PnP ISA Sound Card Replica",
+    "link": "https://github.com/schlae/BeavisUltrasound",
+    "source": "Hacker News",
+    "description": "Score: 45 by mariuz with 12 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T05:15:14.000Z"
+  },
+  {
+    "title": "GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years",
+    "link": "https://nebusec.ai/research/ionstack-part-2/",
+    "source": "Hacker News",
+    "description": "Score: 239 by ranger_danger with 84 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-08T16:53:58.000Z"
+  },
+  {
+    "title": "Fudge MCP",
+    "link": "https://www.producthunt.com/products/fudge-mcp",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-10T14:06:45.000Z"
+  },
+  {
+    "title": "AgentKey",
+    "link": "https://www.producthunt.com/products/agentkey",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-10T04:48:14.000Z"
+  },
+  {
+    "title": "TailMux",
+    "link": "https://www.producthunt.com/products/tailmux",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-13T06:32:29.000Z"
+  },
+  {
+    "title": "Simba Voice Agents",
+    "link": "https://www.producthunt.com/products/speechify",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-08T17:33:04.000Z"
+  },
+  {
+    "title": "Playground",
+    "link": "https://www.producthunt.com/products/nyx-4",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-12T22:32:12.000Z"
+  },
+  {
+    "title": "NoMac.app",
+    "link": "https://www.producthunt.com/products/nomac",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-10T21:07:45.000Z"
+  },
+  {
+    "title": "AI Media Buyer By Creatify",
+    "link": "https://www.producthunt.com/products/creatify",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-03T22:38:25.000Z"
+  },
+  {
+    "title": "UnitPay",
+    "link": "https://www.producthunt.com/products/unitpay",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-04-13T12:36:20.000Z"
+  },
+  {
+    "title": "Loomal",
+    "link": "https://www.producthunt.com/products/loomal",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-07T07:36:59.000Z"
+  },
+  {
+    "title": "Osaurus",
+    "link": "https://www.producthunt.com/products/osaurus",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-07T23:40:15.000Z"
+  },
+  {
+    "title": "Marked QL",
+    "link": "https://www.producthunt.com/products/marked-ql",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-09T12:39:18.000Z"
+  },
+  {
+    "title": "Knockoff",
+    "link": "https://www.producthunt.com/products/knockoff-2",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-10T11:40:04.000Z"
+  },
+  {
+    "title": "JustVibe",
+    "link": "https://www.producthunt.com/products/justvibe",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-06T17:33:19.000Z"
+  },
+  {
+    "title": "ServiceBeard",
+    "link": "https://www.producthunt.com/products/servicebeard",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-05T21:47:41.000Z"
+  },
+  {
+    "title": "Second Brain for AI v2",
+    "link": "https://www.producthunt.com/products/second-brain-cloudflare",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-06-25T03:43:33.000Z"
+  },
+  {
+    "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
+    "link": "http://arxiv.org/abs/2607.09662v1",
+    "source": "arXiv CS.AI",
+    "description": "Current electroencephalography (EEG)-based dream detection relies on power spectral density (PSD) and statistical moment features, achieving a state-of-the-art area under the receiver operating characteristic curve (AUC) of approximately 0.70 on the DREAM database (Wong et al., 2025, Nature Communic...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-10T17:59:45Z"
+  },
+  {
+    "title": "Scalable Visual Pretraining for Language Intelligence",
+    "link": "http://arxiv.org/abs/2607.09657v1",
+    "source": "arXiv CS.AI",
+    "description": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, where figures, typeset equations, and page layouts carry rich information that cannot be faithfully or...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-10T17:57:03Z"
+  },
+  {
+    "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+    "link": "http://arxiv.org/abs/2607.09654v1",
+    "source": "arXiv CS.AI",
+    "description": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, only a handful of non-curated human descriptions as a benchmark, and have not focus...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-10T17:53:37Z"
+  },
+  {
+    "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+    "link": "http://arxiv.org/abs/2607.09653v1",
+    "source": "arXiv CS.AI",
+    "description": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While recent adoptions of Large Language Model (LLM) agents have demonstrated promise...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-10T17:52:29Z"
+  },
+  {
+    "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories",
+    "link": "http://arxiv.org/abs/2606.03979v2",
+    "source": "arXiv CS.AI",
+    "description": "The past few decades have witnessed significant advances in the design of machine learning algorithms, from early studies on task-specific shallow models to more general deep Large Language Models (LLMs). Despite showing promising results in tasks that require instant prediction or in-context learni...",
+    "category": "Research Papers",
+    "timestamp": "2026-06-02T17:56:55Z"
+  },
+  {
+    "title": "ConceptSMILE: Auditing the Trustworthiness of Concept-Based Explainable AI",
+    "link": "http://arxiv.org/abs/2607.09649v1",
+    "source": "arXiv CS.AI",
+    "description": "Concept-based explainable artificial intelligence (AI) can make model reasoning more human-understandable, but concept-level outputs are not automatically trustworthy. We introduce ConceptSMILE, a model-agnostic perturbation-based auditing framework for evaluating the reliability of concept-based ex...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-10T17:47:38Z"
+  },
+  {
+    "title": "Machine Learning for Network Attacks Classification and Statistical Evaluation of Adversarial Learning Methodologies for Synthetic Data Generation",
+    "link": "http://arxiv.org/abs/2603.17717v4",
+    "source": "arXiv CS.AI",
+    "description": "Supervised detection of network attacks has always been a critical part of network intrusion detection systems (NIDS). Nowadays, in a pivotal time for artificial intelligence (AI), with even more sophisticated attacks that utilize advanced techniques, such as generative artificial intelligence (GenA...",
+    "category": "Research Papers",
+    "timestamp": "2026-03-18T13:35:02Z"
+  },
+  {
+    "title": "Deep Gaussian Processes on Directed Acyclic Graphs",
+    "link": "http://arxiv.org/abs/2607.09645v1",
+    "source": "arXiv CS.AI",
+    "description": "Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG). In causal modelling, these correspond to the underlying mechanisms; in engineering, to multiple fidelity levels; and in gene-regulatory networks, to transcription factors. These functions ...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-10T17:41:11Z"
+  },
+  {
+    "title": "XAI and Statistical Analysis for Reliable Intrusion Detection in the UAVIDS-2025 Dataset: From Tree to Hybrid and Tabular DNN Ensembles",
+    "link": "http://arxiv.org/abs/2605.13922v2",
+    "source": "arXiv CS.AI",
+    "description": "During thDuring the last few years, the term Mechanistic Interpretability, a specific area, under the umbrella of explainable artificial intelligence (XAI), has been introduced, to explain the decisions made by complex machine learning (ML) models in critical systems like UAV intrusion detection sys...",
+    "category": "Research Papers",
+    "timestamp": "2026-05-13T14:08:36Z"
+  },
+  {
+    "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+    "link": "http://arxiv.org/abs/2607.09641v1",
+    "source": "arXiv CS.AI",
+    "description": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdiction with customer friction. To overcome this without distortive data resampling, w...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-10T17:39:00Z"
+  },
+  {
+    "title": "Author Correction: Authigenic mineral phases as a driver of the upper-ocean iron cycle",
+    "link": "https://www.nature.com/articles/s41586-026-10853-5",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T00:00:00.000Z"
+  },
+  {
+    "title": "Alpine crossing took a heavy toll on Hannibal’s elephants and troops",
+    "link": "https://www.nature.com/articles/d41586-026-02113-3",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T00:00:00.000Z"
+  },
+  {
+    "title": "Briefing Chat: The 30 year-legacy of a science icon — Dolly the sheep",
+    "link": "https://www.nature.com/articles/d41586-026-02185-1",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T00:00:00.000Z"
+  },
+  {
+    "title": "Which ‘AI scientist’ suits your lab? A guide for the perplexed",
+    "link": "https://www.nature.com/articles/d41586-026-02091-6",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T00:00:00.000Z"
+  },
+  {
+    "title": "Think preprints are unreliable? Analysis of 70,000 studies might change your mind",
+    "link": "https://www.nature.com/articles/d41586-026-02167-3",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-10T00:00:00.000Z"
+  },
+  {
+    "title": "Patch for Windows Defender 0-day could allow attackers to fill hard disk",
+    "link": "https://arstechnica.com/security/2026/07/patch-for-windows-defender-0-day-could-allow-attackers-to-fill-hard-disk/",
+    "source": "Ars Technica",
+    "description": "The feud between NightmareEclipse and Microsoft shows no signs of resolving soon.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-09T20:52:55.000Z"
+  },
+  {
+    "title": "Allstate accuses Broadcom of auditing it because it quit VMware, CA",
+    "link": "https://arstechnica.com/information-technology/2026/07/allstate-accuses-broadcom-of-auditing-it-because-it-quit-vmware-ca/",
+    "source": "Ars Technica",
+    "description": "Broadcom accuses Allstate of dodging VMware audits.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-09T20:28:55.000Z"
+  },
+  {
+    "title": "Google pays $250K for Linux vulnerability allowing guest VM escapes",
+    "link": "https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/",
+    "source": "Ars Technica",
+    "description": "Both vulnerabilities allow untrusted users to gain root privileges.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-08T19:01:19.000Z"
+  },
+  {
+    "title": "Aussie gov't tells volunteers to throw out thousands of functioning test routers",
+    "link": "https://arstechnica.com/gadgets/2026/07/thousands-of-routers-bricked-after-government-program-concludes-in-australia/",
+    "source": "Ars Technica",
+    "description": "But the devices could \"easily be reflashed.\"",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-08T18:10:16.000Z"
+  },
+  {
+    "title": "US rare earths flow to Asia as domestic demand is slow to emerge",
+    "link": "https://arstechnica.com/science/2026/07/us-rare-earths-flow-to-asia-as-domestic-demand-is-slow-to-emerge/",
+    "source": "Ars Technica",
+    "description": "Miners backed by Trump admin sell to Japan, South Korea despite push to develop domestic supply chain.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-08T13:26:10.000Z"
+  },
+  {
+    "title": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+    "link": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/",
+    "source": "MIT Technology Review",
+    "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Anthropic found a hidden space where Claude puzzles over concepts The AI firm Anthropic has got the clearest glimpse yet at what’s really going on inside large language models as they…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-10T12:10:00.000Z"
+  },
+  {
+    "title": "Sperm donors need limits, says a European fertility group",
+    "link": "https://www.technologyreview.com/2026/07/10/1140289/sperm-donors-need-limits-says-a-european-fertility-group/",
+    "source": "MIT Technology Review",
+    "description": "Ties van der Meer doesn’t know how many siblings he has. The 47-year-old was conceived at a private fertility clinic in the Netherlands using sperm provided by an anonymous donor. After the Netherlands banned anonymous donation in 2004, the doctor who ran the clinic destroyed records that might have identified those donors, he says. He…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-10T09:00:00.000Z"
+  },
+  {
+    "title": "Anthropic found a hidden space where Claude puzzles over concepts",
+    "link": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
+    "source": "MIT Technology Review",
+    "description": "The AI firm Anthropic has developed a technique that has given it the clearest glimpse yet at what’s really going on inside large language models as they answer questions or carry out tasks. What they found ranges from the mundane to the unnerving. Researchers at the company built a tool called the Jacobian lens (or…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-09T20:22:28.000Z"
+  },
+  {
+    "title": "The Download: a nuclear landmark, and China eyes Nvidia chips",
+    "link": "https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/",
+    "source": "MIT Technology Review",
+    "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Four nuclear reactors hit a big milestone in the US —Casey Crownhart I was really looking forward to July 4, and not just because I love a poolside barbecue. This year…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-09T12:10:00.000Z"
+  },
+  {
+    "title": "Four nuclear reactors hit a big milestone in the US",
+    "link": "https://www.technologyreview.com/2026/07/09/1140235/nuclear-reactor-milestone-criticality/",
+    "source": "MIT Technology Review",
+    "description": "I was really looking forward to July 4, and not just because I love a poolside barbecue. This year the American holiday also marked a big symbolic deadline for US nuclear power. Last year the Trump administration set a goal to see three new microreactors achieve criticality, a technical milestone establishing that a reactor can…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-09T08:00:00.000Z"
+  },
+  {
+    "title": "BIO International Convention 2026 (June 15-18, 2026)",
+    "link": "https://www.bio.org/events/bio-international-convention",
+    "source": "Conference Calendar",
+    "description": "BIO International Convention 2026 takes place in Boston, MA, USA on June 15-18, 2026. Focus: The world's largest biotechnology event, covering partnering, drug discovery, biopharma policy, and emerging clinical pipelines.. URL: https://www.bio.org/events/bio-international-convention",
+    "category": "Conferences",
+    "timestamp": "2026-07-13T07:37:54.073Z"
+  },
+  {
+    "title": "ASCO Annual Meeting 2026 (May 29 - June 2, 2026)",
+    "link": "https://meetings.asco.org/annual-meeting",
+    "source": "Conference Calendar",
+    "description": "ASCO Annual Meeting 2026 takes place in Chicago, IL, USA on May 29 - June 2, 2026. Focus: American Society of Clinical Oncology. The premier event for clinical oncology research, showcasing major clinical trial results for new cancer drugs (CAR-T, ADCs).. URL: https://meetings.asco.org/annual-meeting",
+    "category": "Conferences",
+    "timestamp": "2026-07-13T07:37:54.073Z"
+  },
+  {
+    "title": "AACR Annual Meeting 2026 (April 10-15, 2026)",
+    "link": "https://www.aacr.org/meeting/aacr-annual-meeting-2026/",
+    "source": "Conference Calendar",
+    "description": "AACR Annual Meeting 2026 takes place in Chicago, IL, USA on April 10-15, 2026. Focus: American Association for Cancer Research. Highlights the latest discoveries in cancer research, drug discovery, and translational oncology.. URL: https://www.aacr.org/meeting/aacr-annual-meeting-2026/",
+    "category": "Conferences",
+    "timestamp": "2026-07-13T07:37:54.073Z"
+  },
+  {
+    "title": "ICML 2026 (July 12-18, 2026)",
+    "link": "https://icml.cc/",
+    "source": "Conference Calendar",
+    "description": "ICML 2026 takes place in Vienna, Austria on July 12-18, 2026. Focus: International Conference on Machine Learning. One of the top two global academic conferences in AI, deep learning, and reinforcement learning.. URL: https://icml.cc/",
+    "category": "Conferences",
+    "timestamp": "2026-07-13T07:37:54.073Z"
+  },
+  {
+    "title": "CVPR 2026 (June 15-19, 2026)",
+    "link": "https://cvpr.thecvf.com/",
+    "source": "Conference Calendar",
+    "description": "CVPR 2026 takes place in Seattle, WA, USA on June 15-19, 2026. Focus: IEEE/CVF Conference on Computer Vision and Pattern Recognition. The leading event in computer vision, robotics, and generative image/video modeling.. URL: https://cvpr.thecvf.com/",
+    "category": "Conferences",
+    "timestamp": "2026-07-13T07:37:54.073Z"
+  },
+  {
+    "title": "NeurIPS 2026 (December 6-12, 2026)",
+    "link": "https://neurips.cc/",
+    "source": "Conference Calendar",
+    "description": "NeurIPS 2026 takes place in Vancouver, Canada on December 6-12, 2026. Focus: Conference on Neural Information Processing Systems. The largest neural network and AI conference in the world, showcasing foundation models and LLM theoretical breakthroughs.. URL: https://neurips.cc/",
+    "category": "Conferences",
+    "timestamp": "2026-07-13T07:37:54.073Z"
+  },
+  {
+    "title": "KDD 2026 (August 16-20, 2026)",
+    "link": "https://kdd.acm.org/kdd2026/",
+    "source": "Conference Calendar",
+    "description": "KDD 2026 takes place in Munich, Germany on August 16-20, 2026. Focus: ACM SIGKDD Conference on Knowledge Discovery and Data Mining. The premier data science conference covering large-scale graph databases, recommender systems, and analytics.. URL: https://kdd.acm.org/kdd2026/",
+    "category": "Conferences",
+    "timestamp": "2026-07-13T07:37:54.073Z"
+  },
+  {
+    "title": "JP Morgan Healthcare Conference 2027 (January 11-14, 2027)",
+    "link": "https://www.jpmorgan.com/solutions/cib/insights/health-care-conference",
+    "source": "Conference Calendar",
+    "description": "JP Morgan Healthcare Conference 2027 takes place in San Francisco, CA, USA on January 11-14, 2027. Focus: The largest and most informative healthcare investment symposium in the industry, connecting global industry leaders, fast-growth startups, and investors.. URL: https://www.jpmorgan.com/solutions/cib/insights/health-care-conference",
+    "category": "Conferences",
+    "timestamp": "2026-07-13T07:37:54.073Z"
+  }
+]
