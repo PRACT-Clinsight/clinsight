@@ -34,7 +34,7 @@ function getNewsletterTemplate(title, dateStr, contentHtml) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title} | FutureLoop Briefing</title>
+  <title>${title} | TheFutureLoop Briefing</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -104,7 +104,7 @@ function getNewsletterTemplate(title, dateStr, contentHtml) {
     
     <header>
       <h1>${title}</h1>
-      <div class="meta">Published: ${dateStr.replace(/_/g, '-')} | Sourced by FutureLoop</div>
+      <div class="meta">Published: ${dateStr.replace(/_/g, '-')} | Sourced by TheFutureLoop (TFL)</div>
     </header>
     
     <article>
@@ -112,7 +112,7 @@ function getNewsletterTemplate(title, dateStr, contentHtml) {
     </article>
     
     <footer>
-      <p>&copy; 2026 FutureLoop. Follow us on X: <a href="https://x.com/futureloop_co" target="_blank">@futureloop_co</a></p>
+      <p>&copy; 2026 TheFutureLoop. Follow us on X: <a href="https://x.com/futureloop_co" target="_blank">@futureloop_co</a></p>
     </footer>
   </div>
 </body>

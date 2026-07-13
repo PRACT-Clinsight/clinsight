@@ -1,38 +1,50 @@
-# Editorial and Strategic Rules for FutureLoop
+# Editorial and Strategic Rules for FutureLoop (v2.0)
 
 > **Motto:** *"Arise, awake, and stop not till the goal is reached."* — Swami Vivekananda
-> (This is the guiding philosophy behind all FutureLoop operations, curation, and monetization milestones).
 
 These rules govern all content generation, scoring, and publication strategies for the FutureLoop brand (@futureloop_co / thefutureloop.com).
 
 ## 1. Brand Position: Research Intelligence Publication
 Do not write like a generic "AI news aggregator" or a low-ticket "content creator." Position the brand as a premium **Research Intelligence Publication** for computational biologists, deep tech builders, and scientific/technical founders.
+*   **The core move:** We read the primary source and check whether the number holds up.
+*   **The public stance:** *"Don't trust us. Open the link."*
 
-## 2. Strategic Editorial Focus & Content Mix
-*   **AI & Medicine / Life Sciences (~50%)**: Computational biology, drug discovery, bioinformatics, genomics, clinical trial designs & protocols (Phase I/II/III, GCP, Helsinki declarations), regulatory affairs (FDA/EMA approvals, RAPS standards), and pharmacovigilance (drug safety, adverse events, post-market surveillance).
-*   **AI Engineering & Developer Tools (~30%)**: Large language models, developer workflows, system architectures, software agents, infrastructure, and open-source projects.
-*   **Deep-Tech Ecosystem (~20%)**: High-scale startups, funding rounds, upcoming conferences, notable hardware advancements (semiconductors/chips), and global policy research.
+## 2. Strategic Editorial Focus & Source Mix
+*   **Beats:** AI & Life Sciences (~50%), AI Engineering & Dev Tools (~30%), and Deep-Tech Ecosystem (~20%).
+*   **Widened Sources (Papers ≈ 25%):** Shift away from preprints-only. Include SEC filings (capex), spec sheets, hardware benchmarks (MLPerf), repository adoption tables, trial registries (clinical readouts), and retraction logs (PubPeer/Retraction Watch).
 
-**Speed & Authority Balance (Monetization Curation Rule):**
-To maintain maximum audience relevance and monetization velocity, daily digests and newsletters must balance fast-breaking commercial developments with academic rigor:
-*   **3 Commercial Speed-catchers**: Sourced from Hacker News, Product Hunt, TechCrunch, and market/finance portals. Covers immediate developer tool launches, chip announcements (e.g. Nvidia/AMD), startup funding, and market movements as soon as they break.
-*   **2 Authority anchors**: Sourced from PubMed, Cell, Nature, Science, NEJM, and arXiv. Deep-dives into validated research papers and clinical trial results, citing the primary paper directly (rather than secondary press coverage).
-This structure ensures we capture high-traffic viral trends for quick sponsor conversion while maintaining elite deep-tech research credibility.
+## 3. Curation and Publishing Limits
+*   **Daily limit:** 8 posts/day (max 240/month to stay strictly within the X API Free Tier cap).
+    *   ~5 speed-catchers (launches, filings, repos).
+    *   ~3 authority anchors (papers, preprints, regulatory clearances).
+*   **Banned sources:** Wellness, soft-science, color psychology, and secondary tech press rewrites (ScienceDaily, TechCrunch).
 
-## 3. Strict Evidence and Citation Standards
-*   **Original Citations**: Every quantitative claim or benchmark metric must be accompanied by the direct citation link to the peer-reviewed paper, pre-print, or official regulatory database.
-*   **No Overstatement**: Replace sweeping marketing hype (e.g. "revolutionizing science") with precise, defensive framings (e.g. "substantially reduces search space in specific workflows before experimental validation").
-*   **Evidence vs. Interpretation**: Keep reported benchmark metrics separate from subjective interpretations of what it means for laboratory or system workflows.
-*   **Absolute Accuracy (Verify 10x)**: Never invent or change statistics. Every number, percentage, and metric must match the source data verbatim. Double-check raw files and source papers up to 10 times before framing or publishing to ensure absolute truthfulness.
+## 4. Strict Evidence and Verification (The A/B/C Grader)
+*   **Machine Verification:** The scanner fetches full text and must extract the verbatim sentence containing the benchmark/number and its exact location.
+    *   **Grade A (Unambiguous/verbatim):** Auto-post.
+    *   **Grade B (Context ambiguous):** Human gate (GitHub issue).
+    *   **Grade C (Not found):** Rejected.
+*   **Banned overstatement:** Banish words like *revolutionizing, game-changer, pivotal, breakthrough*. Use defensive, precise framing.
+*   **Dissect the tripod:** Identify if one leg of a multi-disease/system claim is carried by significantly weaker statistical evidence.
 
-## 4. The Three Editorial Questions
-Every single newsletter story or thread must answer:
-1.  **What happened?** (The raw, measured evidence/result).
-2.  **Why does it matter?** (The computational, scientific, or market analysis).
-3.  **What should practitioners do differently?** (The direct, actionable advice or workflow adjustment).
+## 5. Presentation & Post Formatting
+*   **No URLs in post bodies:** Place all source links exclusively in **Reply 1** to prevent reach penalties.
+*   **Format T1 (The Hype Gap):** Contrast headline percentages with actual critical counts.
+*   **Format T2 (The Buried Lead):** Highlight null results or buried findings in the figures.
+*   **Engagement hooks:** End every post with a technical question/reply hook to drive verified user engagement.
+*   **Retired:** Discontinue cross-disciplinary link-dumps and roundups.
 
-## 5. Post Formatting & Readability Guidelines
-*   **Accessible Language:** Simplify complex academic jargon into clear, readable concepts without sacrificing factual accuracy or truthfulness.
-*   **Scannable Layouts:** Format social media posts and threads using vertical numbered ranking lists or structured bullet points to present key statistics and sequence steps.
-*   **Visual Prompts:** Accompany research highlights with descriptive, clean image prompt ideas suitable for professional diagrams or science renderings.
-*   **Absolute Accuracy:** Never invent or change statistics. Every number must match the source data verbatim.
+## 6. The Newsletter (9-Point Signature Framework)
+Analyze every briefing item using:
+1. One-Sentence Finding
+2. Key Benchmark
+3. TFL Evidence Ladder (E1 to E5)
+4. Dual Score (Confidence / Impact)
+5. Time-to-Impact
+6. Cost & Complexity
+7. Reality Check (Assumptions/flaws)
+8. Affected Landscape
+9. Practical Implication (3 workflow adjustments)
+
+## 7. Metadata Security Firewall (EXIF Stripping)
+*   Recursively strip EXIF/metadata from all public assets (images, PDFs, datasets) before scheduling to protect brand anonymity.
