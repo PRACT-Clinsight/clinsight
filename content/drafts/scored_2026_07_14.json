@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Claude Fable solves 6-month physics problem for leading theorist Yuji Tachikawa",
+    "link": "https://x.com/yujitach/status/2076327681562644709",
+    "source": "Yuji Tachikawa (X)",
+    "description": "Leading theoretical physicist Yuji Tachikawa reports that Claude Fable successfully solved a mathematical physics problem that he and his collaborators had been stuck on for the past 6 months.",
+    "category": "AI Research",
+    "scores": {
+      "novelty": 9.5,
+      "virality": 9.5,
+      "educationalValue": 9,
+      "evergreenPotential": 8.5,
+      "businessRelevance": 8.5
+    },
+    "finalScore": 9.2,
+    "explanation": "Frontier AI model solves a complex theoretical physics problem that resisted expert human collaborators for half a year.",
+    "timestamp": "2026-07-13T17:01:48.187Z"
+  },
+  {
+    "title": "Grok CLI security bug uploads entire user home directory to GCS",
+    "link": "https://twitter.com/a_green_being/status/2076598897779020159",
+    "source": "Hacker News / Twitter",
+    "description": "A severe security vulnerability in the Grok CLI results in the tool uploading the user's entire home directory to xAI's servers and public GCS paths during standard execution.",
+    "category": "Open Source & Dev Infra",
+    "scores": {
+      "novelty": 9,
+      "virality": 9.5,
+      "educationalValue": 8.5,
+      "evergreenPotential": 8,
+      "businessRelevance": 9
+    },
+    "finalScore": 9.1,
+    "explanation": "Critical security leak in public CLI tool exposes raw local staging directories to cloud storage buckets.",
+    "timestamp": "2026-07-13T17:01:48.191Z"
+  },
+  {
+    "title": "Richard Sutton launches Oak Lab for real-time planning on 20 watts",
+    "link": "https://x.com/kjaved_/status/2076663868160459214",
+    "source": "Oak Lab (X)",
+    "description": "Reinforcement Learning pioneer Richard Sutton announces the OaK (Options and Knowledge) Lab, aiming to build a trillion-parameter real-time planning agent operating under a 20-watt power constraint.",
+    "category": "AI Research",
+    "scores": {
+      "novelty": 9.5,
+      "virality": 8.5,
+      "educationalValue": 9,
+      "evergreenPotential": 9,
+      "businessRelevance": 8.5
+    },
+    "finalScore": 8.9,
+    "explanation": "Pioneering lab launches research into real-time planning architectures under strict hardware power constraints.",
+    "timestamp": "2026-07-13T17:01:48.191Z"
+  },
+  {
+    "title": "Show HN: Clawk - Disposable Linux VMs for Coding Agents",
+    "link": "https://github.com/clawkwork/clawk",
+    "source": "GitHub / Hacker News",
+    "description": "An open-source developer framework designed to run LLM coding agents inside isolated, disposable Linux micro-VMs instead of exposing the host developer machine.",
+    "category": "Open Source & Dev Infra",
+    "scores": {
+      "novelty": 8.5,
+      "virality": 8.5,
+      "educationalValue": 9,
+      "evergreenPotential": 8.5,
+      "businessRelevance": 8.5
+    },
+    "finalScore": 8.6,
+    "explanation": "Sandboxing agent execution prevents malicious code execution or unintended data reads on developer laptops.",
+    "timestamp": "2026-07-13T17:01:48.191Z"
+  },
+  {
+    "title": "Cloudflare launches Precursor edge compute sandbox",
+    "link": "https://blog.cloudflare.com/introducing-precursor/",
+    "source": "Cloudflare Blog",
+    "description": "Cloudflare introduces Precursor, a highly optimized edge compute sandbox designed to reduce cold start latencies for high-throughput distributed serverless runtimes.",
+    "category": "Open Source & Dev Infra",
+    "scores": {
+      "novelty": 8,
+      "virality": 8.5,
+      "educationalValue": 8,
+      "evergreenPotential": 8,
+      "businessRelevance": 9
+    },
+    "finalScore": 8.5,
+    "explanation": "High-throughput edge virtualization framework improves distributed workload dispatch speeds.",
+    "timestamp": "2026-07-13T17:01:48.191Z"
+  }
+]

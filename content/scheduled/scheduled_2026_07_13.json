@@ -222,7 +222,8 @@
         "3/ Why it matters:\nInstead of jumping directly from input to output, models process intermediate attributes first (e.g. classifying the user's intent, checking syntax rules) in dedicated hidden steps.",
         "4/ What to do:\nUnderstanding this linear attribute structure allows developers to build direct activation steering modules, tuning model output styles without needing expensive fine-tuning."
       ],
-      "imagePromptForStart": "A glowing geometric grid illustrating linear projections and vector pathways in dark space."
+      "imagePromptForStart": "A glowing geometric grid illustrating linear projections and vector pathways in dark space.",
+      "scheduledTime": "11:00"
     },
     {
       "id": "x_thread_2",
@@ -239,7 +240,9 @@
   ],
   "linkedinPost": {
     "topic": "Open Source & Dev Infra",
-    "text": "A security audit published in Nature exposes a massive distinction between sensational security headlines and real, actionable threat vectors.\n\nWhile the headline states \"88% of arXiv preprints contain hidden information,\" the data reveals that the 88% is almost entirely composed of harmless LaTeX source comments and draft notes. Actual security credentials leaked were 171 passwords and 265 API keys across 2.7 million papers (~0.016%).\n\nHowever, a much more alarming finding was buried in the study:\n7,326 preprints contained GPS-tagged images, with 235 spanning commutable distances. In a random spot-check of 10 cases, 9 of them pinpointed both the author's research lab and their private home address.\n\n### Why it matters:\n1. Metadata oversight: Most authors assume uploading images to preprints only exposes the visual content, forgetting that default EXIF tags carry spatial GPS coordinates.\n2. Permanent archives: Once uploaded, mirrors and archival logs ensure these documents stay public forever.\n3. Automation risks: With LLMs gaining power, scanning public repositories for leaked keys and spatial patterns is becoming a trivial target.\n\n### Practical Implication:\nFor active research groups, clearing EXIF metadata from all assets is a security mandate. Developers should integrate Google's `arxiv_latex_cleaner` or use Markdown compiler frameworks like `Rxiv-maker` to ensure credentials and metadata never hit public repositories.\n\nOriginal coverage: https://www.nature.com/articles/d41586-026-02057-8"
+    "text": "A security audit published in Nature exposes a massive distinction between sensational security headlines and real, actionable threat vectors.\n\nWhile the headline states \"88% of arXiv preprints contain hidden information,\" the data reveals that the 88% is almost entirely composed of harmless LaTeX source comments and draft notes. Actual security credentials leaked were 171 passwords and 265 API keys across 2.7 million papers (~0.016%).\n\nHowever, a much more alarming finding was buried in the study:\n7,326 preprints contained GPS-tagged images, with 235 spanning commutable distances. In a random spot-check of 10 cases, 9 of them pinpointed both the author's research lab and their private home address.\n\n### Why it matters:\n1. Metadata oversight: Most authors assume uploading images to preprints only exposes the visual content, forgetting that default EXIF tags carry spatial GPS coordinates.\n2. Permanent archives: Once uploaded, mirrors and archival logs ensure these documents stay public forever.\n3. Automation risks: With LLMs gaining power, scanning public repositories for leaked keys and spatial patterns is becoming a trivial target.\n\n### Practical Implication:\nFor active research groups, clearing EXIF metadata from all assets is a security mandate. Developers should integrate Google's `arxiv_latex_cleaner` or use Markdown compiler frameworks like `Rxiv-maker` to ensure credentials and metadata never hit public repositories.\n\nOriginal coverage: https://www.nature.com/articles/d41586-026-02057-8",
+    "scheduledTime": "12:00",
+    "published": true
   },
   "headlines": [
     "Nature Audit: 88% of arXiv Preprints Leak Hidden Metadata & Comments",

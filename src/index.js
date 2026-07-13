@@ -35,13 +35,14 @@ async function main() {
   
   switch (command) {
     case 'pipeline': {
-      console.log(`Starting content pipeline for ${today}...`);
+      const dateTarget = args[1] && !args[1].startsWith('--') ? args[1] : today;
+      console.log(`Starting content pipeline for ${dateTarget}...`);
       const dryRun = args.includes('--dry-run');
       
       try {
         // Step 1: Scrape
         const rawItems = await scrapeAllSources();
-        saveRawItems(rawItems, today);
+        saveRawItems(rawItems, dateTarget);
         
         if (rawItems.length === 0) {
           console.log('No raw items found to process.');
@@ -55,17 +56,17 @@ async function main() {
         }
         
         // Step 2: Score
-        const top5 = await scoreItems(rawItems, today);
+        const top5 = await scoreItems(rawItems, dateTarget);
         if (!top5) {
           // Paused for agent-assisted scoring
           return;
         }
         
         // Step 3: Generate
-        await generateContent(top5, today);
+        await generateContent(top5, dateTarget);
         console.log('\nPipeline run completed successfully! Review your drafts in:');
-        console.log(`  - JSON Draft: content/drafts/draft_${today}.json`);
-        console.log(`  - Newsletter: content/newsletters/newsletter_${today}.md`);
+        console.log(`  - JSON Draft: content/drafts/draft_${dateTarget}.json`);
+        console.log(`  - Newsletter: content/newsletters/newsletter_${dateTarget}.md`);
         
       } catch (err) {
         console.error('Pipeline execution failed:', err.message);

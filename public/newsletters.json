@@ -23,5 +23,10 @@
     "date": "2026_07_13",
     "title": "Anthropic's Jacobian Lens & arXiv Metadata Leakage",
     "path": "newsletters/newsletter_2026_07_13.html"
+  },
+  {
+    "date": "2026_07_14",
+    "title": "Frontier Physics Solvers & Grok CLI Security Vulnerabilities",
+    "path": "newsletters/newsletter_2026_07_14.html"
   }
 ]

@@ -3,7 +3,7 @@
     "title": "The art and engineering of Sega CD Silpheed",
     "link": "https://fabiensanglard.net/silpheed/index.html",
     "source": "Hacker News",
-    "description": "Score: 84 by ibobev with 12 comments",
+    "description": "Score: 101 by ibobev with 16 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T14:52:33.000Z"
   },
@@ -11,7 +11,7 @@
     "title": "Apple's new SpeechAnalyzer API, benchmarked against Whisper and its predecessor",
     "link": "https://get-inscribe.com/blog/apple-speech-api-benchmark.html",
     "source": "Hacker News",
-    "description": "Score: 19 by get-inscribe with 3 comments",
+    "description": "Score: 53 by get-inscribe with 35 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T16:06:08.000Z"
   },
@@ -19,7 +19,7 @@
     "title": "A voxel Tokyo in real Japan time – ride the Yamanote line and study Japanese",
     "link": "https://jivx.com/densha",
     "source": "Hacker News",
-    "description": "Score: 224 by momentmaker with 27 comments",
+    "description": "Score: 231 by momentmaker with 33 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T11:18:30.000Z"
   },
@@ -27,7 +27,7 @@
     "title": "Grok uploaded my user directory to xAI's servers",
     "link": "https://twitter.com/a_green_being/status/2076598897779020159",
     "source": "Hacker News",
-    "description": "Score: 388 by tnolet with 201 comments",
+    "description": "Score: 432 by tnolet with 227 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T13:39:59.000Z"
   },
@@ -35,7 +35,7 @@
     "title": "LAPD lets contract with surveillance giant Flock expire",
     "link": "https://techcrunch.com/2026/07/13/lapd-lets-contract-with-surveillance-giant-flock-expire-citing-serious-concerns-over-civil-liberties-and-privacy/",
     "source": "Hacker News",
-    "description": "Score: 94 by forks with 33 comments",
+    "description": "Score: 128 by forks with 61 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T15:11:50.000Z"
   },
@@ -43,47 +43,63 @@
     "title": "DOGE is done. What happened to its records?",
     "link": "https://www.ms.now/opinion/doge-government-efficiency-records-job-cuts-elon-musk-foia",
     "source": "Hacker News",
-    "description": "Score: 95 by ndsipa_pomu with 23 comments",
+    "description": "Score: 145 by ndsipa_pomu with 76 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T15:56:39.000Z"
-  },
-  {
-    "title": "Precursor",
-    "link": "https://blog.cloudflare.com/introducing-precursor/",
-    "source": "Hacker News",
-    "description": "Score: 99 by AznHisoka with 83 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T14:39:38.000Z"
-  },
-  {
-    "title": "Grok CLI uploaded the whole home directory to GCS",
-    "link": "https://twitter.com/i/status/2076598897779020159",
-    "source": "Hacker News",
-    "description": "Score: 237 by denysvitali with 86 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T13:35:32.000Z"
   },
   {
     "title": "Show HN: DOM-docx – HTML to native, editable Word docs (MIT)",
     "link": "https://github.com/floodtide/dom-docx",
     "source": "Hacker News",
-    "description": "Score: 85 by fishbone with 23 comments",
+    "description": "Score: 87 by fishbone with 23 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T11:51:56.000Z"
+  },
+  {
+    "title": "Grok CLI uploaded the whole home directory to GCS",
+    "link": "https://twitter.com/i/status/2076598897779020159",
+    "source": "Hacker News",
+    "description": "Score: 258 by denysvitali with 98 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T13:35:32.000Z"
   },
   {
     "title": "The 'absolute magic' of Morse code that still connects people globally",
     "link": "https://www.bbc.com/news/articles/cwye0dlzgejo",
     "source": "Hacker News",
-    "description": "Score: 65 by austinallegro with 24 comments",
+    "description": "Score: 73 by austinallegro with 31 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-08T14:20:09.000Z"
+  },
+  {
+    "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
+    "link": "https://github.com/clawkwork/clawk",
+    "source": "Hacker News",
+    "description": "Score: 109 by celrenheit with 107 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T14:02:03.000Z"
+  },
+  {
+    "title": "Precursor",
+    "link": "https://blog.cloudflare.com/introducing-precursor/",
+    "source": "Hacker News",
+    "description": "Score: 111 by AznHisoka with 97 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T14:39:38.000Z"
+  },
+  {
+    "title": "Counting ArXiv Delays",
+    "link": "https://fi-le.net/arxiv/",
+    "source": "Hacker News",
+    "description": "Score: 8 by fi-le with 1 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-10T04:52:34.000Z"
   },
   {
     "title": "The Graph That Should Be Front-Page News",
     "link": "https://www.lyrebirddreaming.com/post/the-graph-that-should-be-front-page-news",
     "source": "Hacker News",
-    "description": "Score: 441 by rakel_rakel with 244 comments",
+    "description": "Score: 460 by rakel_rakel with 267 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T05:35:27.000Z"
   },
@@ -91,33 +107,17 @@
     "title": "Backtrack-Free Cursive",
     "link": "https://mmapped.blog/posts/52-backtrack-free-cursive",
     "source": "Hacker News",
-    "description": "Score: 198 by dmit with 87 comments",
+    "description": "Score: 203 by dmit with 91 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T06:08:12.000Z"
-  },
-  {
-    "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
-    "link": "https://github.com/clawkwork/clawk",
-    "source": "Hacker News",
-    "description": "Score: 99 by celrenheit with 105 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T14:02:03.000Z"
   },
   {
     "title": "Cursed circuits #6: reverse avalanche oscillator",
     "link": "https://lcamtuf.substack.com/p/cursed-circuits-6-reverse-avalanche",
     "source": "Hacker News",
-    "description": "Score: 35 by surprisetalk with 7 comments",
+    "description": "Score: 36 by surprisetalk with 7 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-09T07:00:17.000Z"
-  },
-  {
-    "title": "Counting ArXiv Delays",
-    "link": "https://fi-le.net/arxiv/",
-    "source": "Hacker News",
-    "description": "Score: 6 by fi-le with 0 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-10T04:52:34.000Z"
   },
   {
     "title": "Discord Server Link",
@@ -144,14 +144,6 @@
     "timestamp": "2026-07-13T13:32:16.000Z"
   },
   {
-    "title": "What Ever Happened To This?",
-    "link": "https://www.reddit.com/r/singularity/comments/1uv7jzs/what_ever_happened_to_this/",
-    "source": "r/singularity",
-    "description": "For context fable is 10T parameters \n    submitted by    /u/aditipawarr  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-13T10:19:38.000Z"
-  },
-  {
     "title": "Richard Sutton launches Oak Lab - \"Our holy grail: A trillion-parameter agent that learns and plans in real-time with 20 watts of energy\"",
     "link": "https://www.reddit.com/r/singularity/comments/1uvfrjg/richard_sutton_launches_oak_lab_our_holy_grail_a/",
     "source": "r/singularity",
@@ -160,12 +152,12 @@
     "timestamp": "2026-07-13T16:03:56.000Z"
   },
   {
-    "title": "I think the safeguards are too strict. They’re flagging basically anything",
-    "link": "https://www.reddit.com/r/singularity/comments/1uuuia3/i_think_the_safeguards_are_too_strict_theyre/",
+    "title": "What Ever Happened To This?",
+    "link": "https://www.reddit.com/r/singularity/comments/1uv7jzs/what_ever_happened_to_this/",
     "source": "r/singularity",
-    "description": "submitted by    /u/Internal-Constant216  \n [link]   [comments]",
+    "description": "For context fable is 10T parameters \n    submitted by    /u/aditipawarr  \n [link]   [comments]",
     "category": "AI News & Future",
-    "timestamp": "2026-07-12T23:08:07.000Z"
+    "timestamp": "2026-07-13T10:19:38.000Z"
   },
   {
     "title": "‘World’s First’ Fully Robotic Pharmacy Fills Prescriptions in 60 Seconds | Queue’s $18.6M-backed kiosk dispenses 600 pills per minute at a Palo Alto pilot, targeting broader rollout by early 2027",
@@ -174,6 +166,14 @@
     "description": "submitted by    /u/SnoozeDoggyDog  \n [link]   [comments]",
     "category": "AI News & Future",
     "timestamp": "2026-07-13T11:59:26.000Z"
+  },
+  {
+    "title": "I think the safeguards are too strict. They’re flagging basically anything",
+    "link": "https://www.reddit.com/r/singularity/comments/1uuuia3/i_think_the_safeguards_are_too_strict_theyre/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/Internal-Constant216  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-12T23:08:07.000Z"
   },
   {
     "title": "Schrodinger's Fable",
@@ -224,12 +224,12 @@
     "timestamp": "2026-07-10T04:48:14.000Z"
   },
   {
-    "title": "Knockoff",
-    "link": "https://www.producthunt.com/products/knockoff-2",
+    "title": "NoMac.app",
+    "link": "https://www.producthunt.com/products/nomac",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-10T11:40:04.000Z"
+    "timestamp": "2026-07-10T21:07:45.000Z"
   },
   {
     "title": "UnitPay",
@@ -238,6 +238,14 @@
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
     "timestamp": "2026-04-13T12:36:20.000Z"
+  },
+  {
+    "title": "Playground",
+    "link": "https://www.producthunt.com/products/nyx-4",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-12T22:32:12.000Z"
   },
   {
     "title": "Loomal",
@@ -256,6 +264,14 @@
     "timestamp": "2026-07-03T22:38:25.000Z"
   },
   {
+    "title": "Simba Voice Agents",
+    "link": "https://www.producthunt.com/products/speechify",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-08T17:33:04.000Z"
+  },
+  {
     "title": "Osaurus",
     "link": "https://www.producthunt.com/products/osaurus",
     "source": "Product Hunt",
@@ -264,20 +280,12 @@
     "timestamp": "2026-07-07T23:40:15.000Z"
   },
   {
-    "title": "Playground",
-    "link": "https://www.producthunt.com/products/nyx-4",
+    "title": "Knockoff",
+    "link": "https://www.producthunt.com/products/knockoff-2",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-12T22:32:12.000Z"
-  },
-  {
-    "title": "Simba Voice Agents",
-    "link": "https://www.producthunt.com/products/speechify",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-08T17:33:04.000Z"
+    "timestamp": "2026-07-10T11:40:04.000Z"
   },
   {
     "title": "TailMux",
@@ -288,22 +296,6 @@
     "timestamp": "2026-07-13T06:32:29.000Z"
   },
   {
-    "title": "NoMac.app",
-    "link": "https://www.producthunt.com/products/nomac",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-10T21:07:45.000Z"
-  },
-  {
-    "title": "ServiceBeard",
-    "link": "https://www.producthunt.com/products/servicebeard",
-    "source": "Product Hunt",
-    "description": "Discussion\n            |\n            Link",
-    "category": "Product Releases",
-    "timestamp": "2026-07-05T21:47:41.000Z"
-  },
-  {
     "title": "JustVibe",
     "link": "https://www.producthunt.com/products/justvibe",
     "source": "Product Hunt",
@@ -312,12 +304,20 @@
     "timestamp": "2026-07-06T17:33:19.000Z"
   },
   {
-    "title": "FetchSandbox",
-    "link": "https://www.producthunt.com/products/fetchsandbox",
+    "title": "Miora",
+    "link": "https://www.producthunt.com/products/miora-2",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-06-19T04:12:56.000Z"
+    "timestamp": "2026-07-07T15:48:10.000Z"
+  },
+  {
+    "title": "Second Brain for AI v2",
+    "link": "https://www.producthunt.com/products/second-brain-cloudflare",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-06-25T03:43:33.000Z"
   },
   {
     "title": "Scalable Visual Pretraining for Language Intelligence",
