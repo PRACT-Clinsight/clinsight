@@ -34,7 +34,7 @@ function getNewsletterTemplate(title, dateStr, contentHtml) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title} | TheFutureLoop Briefing</title>
+  <title>${title} | FutureLoop Briefing</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -104,7 +104,7 @@ function getNewsletterTemplate(title, dateStr, contentHtml) {
     
     <header>
       <h1>${title}</h1>
-      <div class="meta">Published: ${dateStr.replace(/_/g, '-')} | Sourced by TheFutureLoop (TFL)</div>
+      <div class="meta">Published: ${dateStr.replace(/_/g, '-')} | Sourced by FutureLoop</div>
     </header>
     
     <article>
@@ -112,7 +112,7 @@ function getNewsletterTemplate(title, dateStr, contentHtml) {
     </article>
     
     <footer>
-      <p>&copy; 2026 TheFutureLoop. Follow us on X: <a href="https://x.com/futureloop_co" target="_blank">@futureloop_co</a></p>
+      <p>&copy; 2026 FutureLoop. Follow us on X: <a href="https://x.com/futureloop_co" target="_blank">@futureloop_co</a></p>
     </footer>
   </div>
 </body>
@@ -386,6 +386,33 @@ export async function publishDuePosts(dateStr) {
             topic: post.topic,
             text: post.text
           });
+
+          // Log verification audit trail to posted.csv
+          try {
+            const csvPath = path.resolve('content/analytics/posted.csv');
+            const dir = path.dirname(csvPath);
+            if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+            
+            if (!fs.existsSync(csvPath)) {
+              fs.writeFileSync(csvPath, 'timestamp,post_id,platform,text,resolved_url,grade,published_id\n', 'utf-8');
+            }
+            
+            const escapeCsv = val => `"${(val || '').toString().replace(/"/g, '""')}"`;
+            const row = [
+              new Date().toISOString(),
+              post.id,
+              'x',
+              post.text,
+              post.resolvedUrl || '',
+              post.grade || 'A',
+              res.id
+            ].map(escapeCsv).join(',');
+            
+            fs.appendFileSync(csvPath, row + '\n', 'utf-8');
+            console.log(`[publisher] Logged verification audit trail to ${csvPath}`);
+          } catch (csvErr) {
+            console.warn('[publisher] Failed to write verification audit trail to CSV:', csvErr.message);
+          }
 
           // Log to published history
           const urls = post.text.match(/https?:\/\/[^\s"'()]+/g) || [];

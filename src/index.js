@@ -1,3 +1,4 @@
+import { resolveToPrimarySource, fetchFullText, gradeItem, validateQuote } from './grader.js';
 import { scrapeAllSources, saveRawItems } from './scraper.js';
 import { scoreItems } from './scorer.js';
 import { generateContent } from './generator.js';
@@ -17,6 +18,74 @@ function getTodayDateStr() {
   const month = String(d.getMonth() + 1).padStart(2, '0');
   const day = String(d.getDate()).padStart(2, '0');
   return `${year}_${month}_${day}`;
+}
+
+/**
+ * Filter raw items through the verification gate
+ */
+async function verifyAndFilterItems(rawItems, dateTarget) {
+  const verifiedList = [];
+  const rejectsPath = path.resolve('content/drafts/rejects.jsonl');
+  
+  console.log(`[verifier] Verification started. Scanning ${rawItems.length} raw items...`);
+  
+  for (const item of rawItems) {
+    const { resolvedUrl, reason } = resolveToPrimarySource(item);
+    
+    if (!resolvedUrl) {
+      const rejectRecord = {
+        title: item.title,
+        link: item.link,
+        reason: reason || 'banned_or_no_tier_a',
+        timestamp: new Date().toISOString()
+      };
+      fs.appendFileSync(rejectsPath, JSON.stringify(rejectRecord) + '\n', 'utf-8');
+      continue;
+    }
+    
+    const textBody = await fetchFullText(resolvedUrl);
+    if (!textBody || textBody.length < 500) {
+      const rejectRecord = {
+        title: item.title,
+        link: resolvedUrl,
+        reason: !textBody ? 'fetch_failed' : 'text_too_short',
+        timestamp: new Date().toISOString()
+      };
+      fs.appendFileSync(rejectsPath, JSON.stringify(rejectRecord) + '\n', 'utf-8');
+      continue;
+    }
+    
+    const gradeResult = await gradeItem(textBody, item.title);
+    const isQuoteMatch = validateQuote(textBody, gradeResult.verbatim_quote);
+    
+    if (gradeResult.grade === 'C' || !isQuoteMatch) {
+      const rejectRecord = {
+        title: item.title,
+        link: resolvedUrl,
+        reason: !isQuoteMatch ? 'quote_not_found' : 'grade_c',
+        timestamp: new Date().toISOString()
+      };
+      fs.appendFileSync(rejectsPath, JSON.stringify(rejectRecord) + '\n', 'utf-8');
+      continue;
+    }
+    
+    if (gradeResult.grade === 'B') {
+      console.log(`[verifier] Grade B (Human review required): "${item.title}"`);
+      const reviewPath = path.resolve(`content/drafts/review_${dateTarget}.json`);
+      let reviewQueue = [];
+      if (fs.existsSync(reviewPath)) {
+        reviewQueue = JSON.parse(fs.readFileSync(reviewPath, 'utf-8'));
+      }
+      reviewQueue.push({ ...item, resolvedUrl, gradeResult });
+      fs.writeFileSync(reviewPath, JSON.stringify(reviewQueue, null, 2), 'utf-8');
+    } else {
+      console.log(`[verifier] Grade A verified: "${item.title}"`);
+      verifiedList.push({ ...item, resolvedUrl, gradeResult });
+    }
+  }
+  
+  console.log(`[verifier] Verification completed. Verified: ${verifiedList.length} items.`);
+  return verifiedList;
 }
 
 async function main() {
@@ -54,9 +123,17 @@ async function main() {
           console.log('Sourced items successfully. Skipping Gemini scoring & content generation.');
           return;
         }
+
+        // Step 1b: Verify & Gate
+        const verifiedItems = await verifyAndFilterItems(rawItems, dateTarget);
+        if (verifiedItems.length === 0) {
+          console.log('\n--- PIPELINE HALTED ---');
+          console.log('Zero primary evidence items passed the verification gate. Never pad the queue.');
+          return;
+        }
         
         // Step 2: Score
-        const top5 = await scoreItems(rawItems, dateTarget);
+        const top5 = await scoreItems(verifiedItems, dateTarget);
         if (!top5) {
           // Paused for agent-assisted scoring
           return;

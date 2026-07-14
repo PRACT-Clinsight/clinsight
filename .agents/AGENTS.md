@@ -2,7 +2,7 @@
 
 > **Motto:** *"Arise, awake, and stop not till the goal is reached."* — Swami Vivekananda
 
-These rules govern all content generation, scoring, and publication strategies for the FutureLoop brand (@futureloop_co / thefutureloop.com).
+These rules govern all content generation, scoring, and publication strategies for the FutureLoop brand (@thefutureloop_co / thefutureloop.com).
 
 ## 1. Brand Position: Research Intelligence Publication
 Do not write like a generic "AI news aggregator" or a low-ticket "content creator." Position the brand as a premium **Research Intelligence Publication** for computational biologists, deep tech builders, and scientific/technical founders.

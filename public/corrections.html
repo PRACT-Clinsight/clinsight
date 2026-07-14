@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FutureLoop Corrections Log - Our public, permanent commitment to data accuracy and verifiability.">
+  <title>Corrections Policy & Log | FutureLoop</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .corrections-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .corrections-header {
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 2rem;
+    }
+    .corrections-header h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .corrections-header p {
+      color: var(--text-secondary);
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .corrections-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .corrections-section h2 {
+      font-family: var(--font-mono);
+      font-size: 1.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 0.5rem;
+      color: var(--accent-blue);
+    }
+    .corrections-section p {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    .corrections-log-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .correction-item {
+      background: rgba(17, 24, 39, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .correction-meta {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent-purple);
+      display: flex;
+      justify-content: space-between;
+    }
+    .correction-original {
+      text-decoration: line-through;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .correction-resolved {
+      color: var(--text-primary);
+      font-size: 1rem;
+      border-left: 3px solid var(--accent-blue);
+      padding-left: 0.75rem;
+    }
+    .back-btn {
+      align-self: center;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Glows -->
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+  <div class="glow-bg glow-3"></div>
+
+  <header>
+    <div class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+      <a href="/" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem;">
+        <img src="logo.svg" alt="FutureLoop Brand Icon" style="width: 32px; height: 32px;">
+        <span>FutureLoop</span>
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="/" style="color: var(--text-primary);">Home</a>
+      <a href="https://x.com/thefutureloop_co" target="_blank" rel="noopener noreferrer">X</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="corrections-content">
+      <div class="corrections-header">
+        <h1>Corrections Policy & Log</h1>
+        <p>A public, permanent record of error resolution. We would rather be embarrassed on Tuesday than wrong forever.</p>
+      </div>
+
+      <!-- Policy Section -->
+      <div class="corrections-section">
+        <h2>🛡️ Corrections Policy</h2>
+        <p>
+          FutureLoop is an anonymous, verification-first research publication. Because we trade entirely on our verifiability rather than personal names, our corrections policy is transparent and permanent.
+        </p>
+        <p>
+          We do not execute quiet rewrites or silent deletions of posts that aged poorly. If we make an error in our numbers, metrics, or citations, we log the correction openly below with a date stamp, leaving the struck-through original claim visible.
+        </p>
+        <p>
+          <strong>Found an error?</strong> Send the details, including the primary source document, to: <a href="mailto:corrections@thefutureloop.com" style="color: var(--accent-blue);">corrections@thefutureloop.com</a>. Every verified error will be added to this log immediately.
+        </p>
+      </div>
+
+      <!-- Log Section -->
+      <div class="corrections-section">
+        <h2>📋 The Corrections Log</h2>
+        <div class="corrections-log-list">
+          <!-- Active corrections will be logged here -->
+          <div class="correction-item" style="text-align: center; color: var(--text-secondary); padding: 3rem 1.5rem;">
+            <p style="font-size: 1rem; margin: 0;">No corrections have been logged yet. All published briefings are currently verified matching their primary sources.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="/" class="back-btn">&larr; Return to Home Page</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p class="footer-copyright">&copy; 2026 FutureLoop. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
