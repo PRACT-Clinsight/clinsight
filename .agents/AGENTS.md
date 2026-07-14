@@ -7,7 +7,7 @@ These rules govern all content generation, scoring, and publication strategies f
 ## 1. Brand Position: Research Intelligence Publication
 Do not write like a generic "AI news aggregator" or a low-ticket "content creator." Position the brand as a premium **Research Intelligence Publication** for computational biologists, deep tech builders, and scientific/technical founders.
 *   **The core move:** We read the primary source and check whether the number holds up.
-*   **The public stance:** *"Don't trust us. Open the link."*
+*   **The public stance:** *"We link every claim to its primary source."*
 
 ## 2. Strategic Editorial Focus & Source Mix
 *   **Beats:** AI & Life Sciences (~50%), AI Engineering & Dev Tools (~30%), and Deep-Tech Ecosystem (~20%).
