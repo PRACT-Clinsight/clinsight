@@ -1,123 +1,83 @@
 [
   {
-    "title": "The art and engineering of Sega CD Silpheed",
-    "link": "https://fabiensanglard.net/silpheed/index.html",
+    "title": "Japan develops a method to recover up to 90% of lithium from used EV batteries",
+    "link": "https://tech.supercarblondie.com/japan-recovers-up-to-90-of-lithium-from-used-ev-batteries/",
     "source": "Hacker News",
-    "description": "Score: 104 by ibobev with 16 comments",
+    "description": "Score: 327 by donohoe with 80 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T14:52:33.000Z"
+    "timestamp": "2026-07-14T02:27:20.000Z"
+  },
+  {
+    "title": "YouTrackDB is a general-use object-oriented graph database",
+    "link": "https://github.com/JetBrains/youtrackdb",
+    "source": "Hacker News",
+    "description": "Score: 82 by gjvc with 17 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T03:39:55.000Z"
+  },
+  {
+    "title": "The Git history command deserves more attention",
+    "link": "https://lalitm.com/post/git-history/",
+    "source": "Hacker News",
+    "description": "Score: 226 by turbocon with 129 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T00:57:11.000Z"
+  },
+  {
+    "title": "Fundamentals of Wireless Communication (2005)",
+    "link": "https://web.stanford.edu/~dntse/wireless_book.html",
+    "source": "Hacker News",
+    "description": "Score: 111 by teleforce with 3 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T02:10:19.000Z"
+  },
+  {
+    "title": "How to build a circular LCD clock",
+    "link": "https://blinry.org/lcd-clock/",
+    "source": "Hacker News",
+    "description": "Score: 55 by birdculture with 14 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-11T15:23:54.000Z"
+  },
+  {
+    "title": "Building and shipping Mac and iOS apps without opening Xcode",
+    "link": "https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/",
+    "source": "Hacker News",
+    "description": "Score: 421 by speckx with 186 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-13T18:22:16.000Z"
+  },
+  {
+    "title": "The Economics of Recursive Self-Improvement [pdf]",
+    "link": "https://elasticity.institute/rsi-paper.pdf",
+    "source": "Hacker News",
+    "description": "Score: 74 by apsec112 with 17 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T01:35:23.000Z"
   },
   {
     "title": "Apple's new SpeechAnalyzer API, benchmarked against Whisper and its predecessor",
     "link": "https://get-inscribe.com/blog/apple-speech-api-benchmark.html",
     "source": "Hacker News",
-    "description": "Score: 65 by get-inscribe with 40 comments",
+    "description": "Score: 520 by get-inscribe with 209 comments",
     "category": "Tech News & Discussions",
     "timestamp": "2026-07-13T16:06:08.000Z"
   },
   {
-    "title": "A voxel Tokyo in real Japan time – ride the Yamanote line and study Japanese",
-    "link": "https://jivx.com/densha",
+    "title": "Is x86 ready to ACE it?",
+    "link": "https://chipsandcheese.com/p/is-x86-ready-to-ace-it",
     "source": "Hacker News",
-    "description": "Score: 233 by momentmaker with 35 comments",
+    "description": "Score: 58 by mfiguiere with 7 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T11:18:30.000Z"
+    "timestamp": "2026-07-14T01:36:13.000Z"
   },
   {
-    "title": "Grok uploaded my user directory to xAI's servers",
-    "link": "https://twitter.com/a_green_being/status/2076598897779020159",
+    "title": "Satellite Tracker – Live Map of Starlink and 30k Satellites",
+    "link": "https://satellitemap.space/",
     "source": "Hacker News",
-    "description": "Score: 435 by tnolet with 232 comments",
+    "description": "Score: 68 by rolph with 21 comments",
     "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T13:39:59.000Z"
-  },
-  {
-    "title": "LAPD lets contract with surveillance giant Flock expire",
-    "link": "https://techcrunch.com/2026/07/13/lapd-lets-contract-with-surveillance-giant-flock-expire-citing-serious-concerns-over-civil-liberties-and-privacy/",
-    "source": "Hacker News",
-    "description": "Score: 131 by forks with 64 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T15:11:50.000Z"
-  },
-  {
-    "title": "PgDog (YC P25) Is Hiring a Founding Software Engineer",
-    "link": "https://www.ycombinator.com/companies/pgdog/jobs/uWymUYy-founding-software-engineer",
-    "source": "Hacker News",
-    "description": "Score: 1 by levkk with 0 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T17:00:54.000Z"
-  },
-  {
-    "title": "DOGE is done. What happened to its records?",
-    "link": "https://www.ms.now/opinion/doge-government-efficiency-records-job-cuts-elon-musk-foia",
-    "source": "Hacker News",
-    "description": "Score: 156 by ndsipa_pomu with 89 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T15:56:39.000Z"
-  },
-  {
-    "title": "Show HN: DOM-docx – HTML to native, editable Word docs (MIT)",
-    "link": "https://github.com/floodtide/dom-docx",
-    "source": "Hacker News",
-    "description": "Score: 88 by fishbone with 23 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T11:51:56.000Z"
-  },
-  {
-    "title": "Grok CLI uploaded the whole home directory to GCS",
-    "link": "https://twitter.com/i/status/2076598897779020159",
-    "source": "Hacker News",
-    "description": "Score: 259 by denysvitali with 100 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T13:35:32.000Z"
-  },
-  {
-    "title": "The 'absolute magic' of Morse code that still connects people globally",
-    "link": "https://www.bbc.com/news/articles/cwye0dlzgejo",
-    "source": "Hacker News",
-    "description": "Score: 74 by austinallegro with 32 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-08T14:20:09.000Z"
-  },
-  {
-    "title": "Benchmarking 15 \"E-Waste\" GPUs with Modern Workloads",
-    "link": "https://esologic.com/benchmarking-tesla-gpus/",
-    "source": "Hacker News",
-    "description": "Score: 22 by eso_logic with 5 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T13:48:42.000Z"
-  },
-  {
-    "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
-    "link": "https://github.com/clawkwork/clawk",
-    "source": "Hacker News",
-    "description": "Score: 110 by celrenheit with 107 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T14:02:03.000Z"
-  },
-  {
-    "title": "Precursor",
-    "link": "https://blog.cloudflare.com/introducing-precursor/",
-    "source": "Hacker News",
-    "description": "Score: 113 by AznHisoka with 97 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T14:39:38.000Z"
-  },
-  {
-    "title": "Counting ArXiv Delays",
-    "link": "https://fi-le.net/arxiv/",
-    "source": "Hacker News",
-    "description": "Score: 9 by fi-le with 2 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-10T04:52:34.000Z"
-  },
-  {
-    "title": "Backtrack-Free Cursive",
-    "link": "https://mmapped.blog/posts/52-backtrack-free-cursive",
-    "source": "Hacker News",
-    "description": "Score: 205 by dmit with 92 comments",
-    "category": "Tech News & Discussions",
-    "timestamp": "2026-07-13T06:08:12.000Z"
+    "timestamp": "2026-07-14T01:55:24.000Z"
   },
   {
     "title": "Discord Server Link",
@@ -128,10 +88,42 @@
     "timestamp": "2026-05-17T21:10:00.000Z"
   },
   {
+    "title": "Another 50+ year-old Erdős problem falls to GPT-5.6",
+    "link": "https://www.reddit.com/r/singularity/comments/1uvrtl0/another_50_yearold_erdős_problem_falls_to_gpt56/",
+    "source": "r/singularity",
+    "description": "Link to tweets:\n https://x.com/jdlichtman/status/2076778478326653431\n https://x.com/prz\\_chojecki/status/2076749164067565872\n https://x.com/SebastienBubeck/status/2076782523464765717\n    submitted by    /u/socoolandawesome  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-13T23:26:03.000Z"
+  },
+  {
+    "title": "Sam Altman spends the day roasting Anthropic on X",
+    "link": "https://www.reddit.com/r/singularity/comments/1uvzhej/sam_altman_spends_the_day_roasting_anthropic_on_x/",
+    "source": "r/singularity",
+    "description": "It's interesting to see the shift in Sam's online presence. For a long time he was mostly on the receiving end of public criticism from Elon Musk, and now he's becoming much more willing to publicly jab at competitors himself. So he's a lot more engaged on X than he used to be. \n In the last 24 hours:\n  \nCalled Claude's latest marketing campaign \"satire.\"\n Mocked Anthropic's weekly Fable extensions and restrictive access\n Replied \"i lol'd\" to a tweet comparing the situation to an unhealthy relationship\n \"Come for the best model, stay because we don't treat you with contempt.\"\n  \n   submitted by    /u/TorturedPoet30  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T05:24:07.000Z"
+  },
+  {
+    "title": "GPT-5.6 Sol on minebench soon",
+    "link": "https://www.reddit.com/r/singularity/comments/1uvyi2j/gpt56_sol_on_minebench_soon/",
+    "source": "r/singularity",
+    "description": "The minebench X account posted a sneak peek of one of 5.6 Sol's builds 👀\n As amazing as the build is, it seems like the cost might not be worth it?\n source: https://x.com/minebench_ai/status/2076885499193741624\n    submitted by    /u/Ballist1cGamer  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T04:33:41.000Z"
+  },
+  {
+    "title": "Richard Sutton launches Oak Lab - \"Our holy grail: A trillion-parameter agent that learns and plans in real-time with 20 watts of energy\"",
+    "link": "https://www.reddit.com/r/singularity/comments/1uvfrjg/richard_sutton_launches_oak_lab_our_holy_grail_a/",
+    "source": "r/singularity",
+    "description": "Some background: Richard Sutton has been talking about a grand architecture for intelligence for the past year or two, which he's labeled \"OaK\", short for \"Options and Knowledge\". It's a proposed blueprint for AGI that relies on dynamic RL where an AI learns continuously from its own experiences, builds its own concepts and skills, and uses those learned skills to plan and improve over time rather than relying mainly on pre-trained data.\n Rich Sutton, The OaK Architecture: A Vision of SuperIntelligence from Experience - RLC 2025\n Khurram Javed described what the lab's goals are in the next few years on X:\n  \nWe will be sharing our progress often and aim to build a prototype of the complete OaK architecture in the next few years. A successful prototype will be closer to a baby learning in its first year than it will be to any of the current AI systems.\n  \nhttps://x.com/kjaved_/status/2076663868160459214\n    submitted by    /u/Mindrust  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-13T16:03:56.000Z"
+  },
+  {
     "title": "Yuji Tachikawa, one of the world’s leading theoretical physicists, reports Claude Fable solved a problem that he and his collaborators had gotten stuck on for the past 6 months",
     "link": "https://www.reddit.com/r/singularity/comments/1uv399n/yuji_tachikawa_one_of_the_worlds_leading/",
     "source": "r/singularity",
-    "description": "Link to tweet:\n https://x.com/yujitach/status/2076327681562644709?s=20\n    submitted by    /u/socoolandawesome  \n [link]   [comments]",
+    "description": "Link to tweet:\n https://x.com/yujitach/status/2076327681562644709?s=20\n Edit: \n He has since deleted his tweet, not because he takes back what he said or anything like that, but because he didn’t like the type of attention he was getting:\n https://x.com/yujitach/status/2076682201626992776?s=20\n    submitted by    /u/socoolandawesome  \n [link]   [comments]",
     "category": "AI News & Future",
     "timestamp": "2026-07-13T06:12:03.000Z"
   },
@@ -144,236 +136,228 @@
     "timestamp": "2026-07-13T13:32:16.000Z"
   },
   {
-    "title": "Richard Sutton launches Oak Lab - \"Our holy grail: A trillion-parameter agent that learns and plans in real-time with 20 watts of energy\"",
-    "link": "https://www.reddit.com/r/singularity/comments/1uvfrjg/richard_sutton_launches_oak_lab_our_holy_grail_a/",
+    "title": "Now any video can fill a 70mm IMAX screen",
+    "link": "https://www.reddit.com/r/singularity/comments/1uvnj9k/now_any_video_can_fill_a_70mm_imax_screen/",
     "source": "r/singularity",
-    "description": "Some background: Richard Sutton has been talking about a grand architecture for intelligence for the past year or two, which he's labeled \"OaK\", short for \"Options and Knowledge\". It's a proposed blueprint for AGI that relies on dynamic RL where an AI learns continuously from its own experiences, builds its own concepts and skills, and uses those learned skills to plan and improve over time rather than relying mainly on pre-trained data.\n Rich Sutton, The OaK Architecture: A Vision of SuperIntelligence from Experience - RLC 2025\n Khurram Javed described what the lab's goals are in the next few years on X:\n  \nWe will be sharing our progress often and aim to build a prototype of the complete OaK architecture in the next few years. A successful prototype will be closer to a baby learning in its first year than it will be to any of the current AI systems.\n  \nhttps://x.com/kjaved_/status/2076663868160459214\n    submitted by    /u/Mindrust  \n [link]   [comments]",
+    "description": "submitted by    /u/ItsTheWeeBabySeamus  \n [link]   [comments]",
     "category": "AI News & Future",
-    "timestamp": "2026-07-13T16:03:56.000Z"
+    "timestamp": "2026-07-13T20:39:12.000Z"
   },
   {
-    "title": "What Ever Happened To This?",
-    "link": "https://www.reddit.com/r/singularity/comments/1uv7jzs/what_ever_happened_to_this/",
+    "title": "You can make a custom pet with the new codex update",
+    "link": "https://www.reddit.com/r/singularity/comments/1uw04ye/you_can_make_a_custom_pet_with_the_new_codex/",
     "source": "r/singularity",
-    "description": "For context fable is 10T parameters \n    submitted by    /u/aditipawarr  \n [link]   [comments]",
+    "description": "I've spent all my weekly credits on 100$ plan. Worth it. \n    submitted by    /u/Mad3250  \n [link]   [comments]",
     "category": "AI News & Future",
-    "timestamp": "2026-07-13T10:19:38.000Z"
+    "timestamp": "2026-07-14T06:00:23.000Z"
   },
   {
-    "title": "‘World’s First’ Fully Robotic Pharmacy Fills Prescriptions in 60 Seconds | Queue’s $18.6M-backed kiosk dispenses 600 pills per minute at a Palo Alto pilot, targeting broader rollout by early 2027",
-    "link": "https://www.reddit.com/r/singularity/comments/1uv9ij0/worlds_first_fully_robotic_pharmacy_fills/",
+    "title": "An open-weight, MIT trillion-param model (Ant's Ring-2.6) reportedly matches the closed frontier on reasoning + agent benchmarks. Does \"open\" catching up actually change the trajectory?",
+    "link": "https://www.reddit.com/r/singularity/comments/1uw0wbh/an_openweight_mit_trillionparam_model_ants_ring26/",
     "source": "r/singularity",
-    "description": "submitted by    /u/SnoozeDoggyDog  \n [link]   [comments]",
+    "description": "Ant's InclusionAI put out a technical report (arXiv 2606.15079) for the Ling-2.6 / Ring-2.6 family, and the whole thing is open weights under MIT, including a trillion-parameter reasoning model. Per their own numbers it's trading blows with the current closed frontier on ARC-AGI-v2, AIME, and a stack of agent benchmarks.\n Vendor benchmarks always deserve side-eye, but assume it's even roughly true. If frontier-level agentic capability is now something you can just download and run (given enough hardware), does that move the timeline for anything real, or is the compute wall to actually serve a 1T model big enough that \"open\" stays mostly symbolic? Where do you land?\n    submitted by    /u/T3SLX69  \n [link]   [comments]",
     "category": "AI News & Future",
-    "timestamp": "2026-07-13T11:59:26.000Z"
+    "timestamp": "2026-07-14T06:42:38.000Z"
   },
   {
-    "title": "I think the safeguards are too strict. They’re flagging basically anything",
-    "link": "https://www.reddit.com/r/singularity/comments/1uuuia3/i_think_the_safeguards_are_too_strict_theyre/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/Internal-Constant216  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-12T23:08:07.000Z"
-  },
-  {
-    "title": "Schrodinger's Fable",
-    "link": "https://www.reddit.com/r/singularity/comments/1uuy50w/schrodingers_fable/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/Sorcerer12345  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-13T01:52:02.000Z"
-  },
-  {
-    "title": "usage limit reset and massively, 5H limits removed entirely. Your move Anthropic",
-    "link": "https://www.reddit.com/r/singularity/comments/1uuprtu/usage_limit_reset_and_massively_5h_limits_removed/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/Exodus_Green  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-12T19:57:18.000Z"
-  },
-  {
-    "title": "I am altering the deal. Pray I alter it further",
-    "link": "https://www.reddit.com/r/singularity/comments/1uurzz8/i_am_altering_the_deal_pray_i_alter_it_further/",
-    "source": "r/singularity",
-    "description": "submitted by    /u/ClarityInMadness  \n [link]   [comments]",
-    "category": "AI News & Future",
-    "timestamp": "2026-07-12T21:24:23.000Z"
-  },
-  {
-    "title": "Playground",
-    "link": "https://www.producthunt.com/products/nyx-4",
+    "title": "Flyout",
+    "link": "https://www.producthunt.com/products/flyout",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-12T22:32:12.000Z"
+    "timestamp": "2026-07-13T10:10:46.000Z"
   },
   {
-    "title": "Fudge MCP",
-    "link": "https://www.producthunt.com/products/fudge-mcp",
+    "title": "Agentcard for companies",
+    "link": "https://www.producthunt.com/products/agent-card",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-10T14:06:45.000Z"
+    "timestamp": "2026-07-14T03:22:01.000Z"
   },
   {
-    "title": "NoMac.app",
-    "link": "https://www.producthunt.com/products/nomac",
+    "title": "ClipFlow",
+    "link": "https://www.producthunt.com/products/clipflow-2",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-10T21:07:45.000Z"
+    "timestamp": "2026-07-13T09:45:28.000Z"
   },
   {
-    "title": "Loomal",
-    "link": "https://www.producthunt.com/products/loomal",
+    "title": "Altersend",
+    "link": "https://www.producthunt.com/products/altersend",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-07T07:36:59.000Z"
+    "timestamp": "2026-07-11T12:33:17.000Z"
   },
   {
-    "title": "UnitPay",
-    "link": "https://www.producthunt.com/products/unitpay",
+    "title": "Sales Studio",
+    "link": "https://www.producthunt.com/products/sales-studio",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-04-13T12:36:20.000Z"
+    "timestamp": "2026-07-09T01:28:43.000Z"
   },
   {
-    "title": "Marked QL",
-    "link": "https://www.producthunt.com/products/marked-ql",
+    "title": "Portero",
+    "link": "https://www.producthunt.com/products/portero",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-09T12:39:18.000Z"
+    "timestamp": "2026-07-14T03:50:15.000Z"
   },
   {
-    "title": "AI Media Buyer By Creatify",
-    "link": "https://www.producthunt.com/products/creatify",
+    "title": "AutoShelf 2.0",
+    "link": "https://www.producthunt.com/products/autoshelf",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-03T22:38:25.000Z"
+    "timestamp": "2026-07-07T16:24:56.000Z"
   },
   {
-    "title": "AgentKey",
-    "link": "https://www.producthunt.com/products/agentkey",
+    "title": "Claude Overlay",
+    "link": "https://www.producthunt.com/products/claude-overlay",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-10T04:48:14.000Z"
+    "timestamp": "2026-07-10T14:54:54.000Z"
   },
   {
-    "title": "Osaurus",
-    "link": "https://www.producthunt.com/products/osaurus",
+    "title": "ClawTeams",
+    "link": "https://www.producthunt.com/products/clawteams",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-07T23:40:15.000Z"
+    "timestamp": "2026-07-09T01:25:53.000Z"
   },
   {
-    "title": "Simba Voice Agents",
-    "link": "https://www.producthunt.com/products/speechify",
+    "title": "Mojave Paint",
+    "link": "https://www.producthunt.com/products/mojave-paint",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-08T17:33:04.000Z"
+    "timestamp": "2026-07-14T03:39:00.000Z"
   },
   {
-    "title": "Knockoff",
-    "link": "https://www.producthunt.com/products/knockoff-2",
+    "title": "Trump Accounts",
+    "link": "https://www.producthunt.com/products/trump-accounts",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-10T11:40:04.000Z"
+    "timestamp": "2026-07-12T02:57:39.000Z"
   },
   {
-    "title": "TailMux",
-    "link": "https://www.producthunt.com/products/tailmux",
+    "title": "Sourclip",
+    "link": "https://www.producthunt.com/products/sourclip",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-13T06:32:29.000Z"
+    "timestamp": "2026-07-10T18:08:01.000Z"
   },
   {
-    "title": "FetchSandbox",
-    "link": "https://www.producthunt.com/products/fetchsandbox",
+    "title": "loopclub",
+    "link": "https://www.producthunt.com/products/loopclub",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-06-19T04:12:56.000Z"
+    "timestamp": "2026-07-13T14:15:15.000Z"
   },
   {
-    "title": "JustVibe",
-    "link": "https://www.producthunt.com/products/justvibe",
+    "title": "Pazi",
+    "link": "https://www.producthunt.com/products/pazi",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-06T17:33:19.000Z"
+    "timestamp": "2026-06-25T22:37:53.000Z"
   },
   {
-    "title": "Miora",
-    "link": "https://www.producthunt.com/products/miora-2",
+    "title": "Breva",
+    "link": "https://www.producthunt.com/products/breva",
     "source": "Product Hunt",
     "description": "Discussion\n            |\n            Link",
     "category": "Product Releases",
-    "timestamp": "2026-07-07T15:48:10.000Z"
+    "timestamp": "2026-07-08T09:55:11.000Z"
   },
   {
-    "title": "Scalable Visual Pretraining for Language Intelligence",
-    "link": "http://arxiv.org/abs/2607.09657v1",
+    "title": "Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data",
+    "link": "http://arxiv.org/abs/2607.11883v1",
     "source": "arXiv CS.AI",
-    "description": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, where figures, typeset equations, and page layouts carry rich information that cannot be faithfully or...",
+    "description": "Compression is fundamental to intelligence. A model that can represent its training data as a short code has discovered regularities that enable generalization. Large neural networks may learn functions far simpler than their parameter counts suggest, but it is challenging to construct codes that re...",
     "category": "Research Papers",
-    "timestamp": "2026-07-10T17:57:03Z"
+    "timestamp": "2026-07-13T17:58:50Z"
   },
   {
-    "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
-    "link": "http://arxiv.org/abs/2607.09653v1",
+    "title": "Metacognition in LLMs: Foundations, Progress, and Opportunities",
+    "link": "http://arxiv.org/abs/2607.11881v1",
     "source": "arXiv CS.AI",
-    "description": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While recent adoptions of Large Language Model (LLM) agents have demonstrated promise...",
+    "description": "Metacognition is a foundational component of intelligence critical to effective learning, problem solving, decision-making, communication, and more. In recent years, it has become increasingly recognized as a cornerstone of capable, transparent AI systems. Yet while LLMs have made significant progre...",
     "category": "Research Papers",
-    "timestamp": "2026-07-10T17:52:29Z"
+    "timestamp": "2026-07-13T17:58:37Z"
   },
   {
-    "title": "ConceptSMILE: Auditing the Trustworthiness of Concept-Based Explainable AI",
-    "link": "http://arxiv.org/abs/2607.09649v1",
+    "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks",
+    "link": "http://arxiv.org/abs/2607.11875v1",
     "source": "arXiv CS.AI",
-    "description": "Concept-based explainable artificial intelligence (AI) can make model reasoning more human-understandable, but concept-level outputs are not automatically trustworthy. We introduce ConceptSMILE, a model-agnostic perturbation-based auditing framework for evaluating the reliability of concept-based ex...",
+    "description": "We present a theoretical framework to explain the emergence of inductive reasoning abilities in Transformer language models. While previous works on Transformer learning dynamics have so far been mostly tied to specific tasks, we study a generalized class of inductive tasks that unifies several synt...",
     "category": "Research Papers",
-    "timestamp": "2026-07-10T17:47:38Z"
+    "timestamp": "2026-07-13T17:56:11Z"
   },
   {
-    "title": "Machine Learning for Network Attacks Classification and Statistical Evaluation of Adversarial Learning Methodologies for Synthetic Data Generation",
-    "link": "http://arxiv.org/abs/2603.17717v4",
+    "title": "A Minimalist Retargeting-Guided Reinforcement Learning Recipe for Dexterous Manipulation",
+    "link": "http://arxiv.org/abs/2607.11874v1",
     "source": "arXiv CS.AI",
-    "description": "Supervised detection of network attacks has always been a critical part of network intrusion detection systems (NIDS). Nowadays, in a pivotal time for artificial intelligence (AI), with even more sophisticated attacks that utilize advanced techniques, such as generative artificial intelligence (GenA...",
+    "description": "Recent work in humanoid whole-body control has found success with a simple recipe: retarget human motion to robot kinematic references, then train policies via reinforcement learning (RL) to track them. But how does this recipe transfer to dexterous manipulation? The answer is not obvious, as manipu...",
     "category": "Research Papers",
-    "timestamp": "2026-03-18T13:35:02Z"
+    "timestamp": "2026-07-13T17:56:08Z"
   },
   {
-    "title": "Deep Gaussian Processes on Directed Acyclic Graphs",
-    "link": "http://arxiv.org/abs/2607.09645v1",
+    "title": "A Durability and Cross-Language Transfer Benchmark for a Validated Teaching-Feedback Classification Protocol",
+    "link": "http://arxiv.org/abs/2607.11873v1",
     "source": "arXiv CS.AI",
-    "description": "Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG). In causal modelling, these correspond to the underlying mechanisms; in engineering, to multiple fidelity levels; and in gene-regulatory networks, to transcription factors. These functions ...",
+    "description": "Institutions collect far more open-ended teaching-evaluation feedback than they read. A prior study introduced a validated protocol for classifying such comments by thematic category and sentiment, built from a documented annotation guide, an intra-annotator reliability measurement, stratified cross...",
     "category": "Research Papers",
-    "timestamp": "2026-07-10T17:41:11Z"
+    "timestamp": "2026-07-13T17:56:05Z"
   },
   {
-    "title": "XAI and Statistical Analysis for Reliable Intrusion Detection in the UAVIDS-2025 Dataset: From Tree to Hybrid and Tabular DNN Ensembles",
-    "link": "http://arxiv.org/abs/2605.13922v2",
+    "title": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
+    "link": "http://arxiv.org/abs/2607.11871v1",
     "source": "arXiv CS.AI",
-    "description": "During thDuring the last few years, the term Mechanistic Interpretability, a specific area, under the umbrella of explainable artificial intelligence (XAI), has been introduced, to explain the decisions made by complex machine learning (ML) models in critical systems like UAV intrusion detection sys...",
+    "description": "Existing studies of LLM-as-judge scoring bias work predominantly at the input-output level: they perturb inputs, measure score deltas, and propose prompt-level mitigations. We argue that the same biases admit a representation-level account in the judge's hidden state, complementary to the input-outp...",
     "category": "Research Papers",
-    "timestamp": "2026-05-13T14:08:36Z"
+    "timestamp": "2026-07-13T17:55:19Z"
   },
   {
-    "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
-    "link": "http://arxiv.org/abs/2607.09641v1",
+    "title": "Evidence-Backed Video Question Answering",
+    "link": "http://arxiv.org/abs/2607.11862v1",
     "source": "arXiv CS.AI",
-    "description": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdiction with customer friction. To overcome this without distortive data resampling, w...",
+    "description": "Current Video Large Language Models (Video LLMs) excel in question answering (QA) but largely operate as black boxes, providing textual answers without verifiable visual grounding. Existing explainability efforts rely on textual rationales or sparse bounding boxes, which struggle to capture complex ...",
     "category": "Research Papers",
-    "timestamp": "2026-07-10T17:39:00Z"
+    "timestamp": "2026-07-13T17:49:10Z"
+  },
+  {
+    "title": "Causal Discovery in Mixtures of Populations",
+    "link": "http://arxiv.org/abs/2311.07454v6",
+    "source": "arXiv CS.AI",
+    "description": "Causal discovery aims to learn causal structures up to certain symmetries. Diverse populations or changing environments give rise to heterogeneous data in the following sense: each population/environment is a ``source'' which idiosyncratically determines the forms of causal effects. From this perspe...",
+    "category": "Research Papers",
+    "timestamp": "2023-11-13T16:35:34Z"
+  },
+  {
+    "title": "PiCSAR: Probabilistic Confidence Selection And Ranking for Reasoning Chains",
+    "link": "http://arxiv.org/abs/2508.21787v3",
+    "source": "arXiv CS.AI",
+    "description": "Best-of-n sampling improves the accuracy of large language models (LLMs) and large reasoning models (LRMs) by generating multiple candidate solutions and selecting the one with the highest reward. The key challenge for reasoning tasks is designing a scoring function that can identify correct reasoni...",
+    "category": "Research Papers",
+    "timestamp": "2025-08-29T17:03:47Z"
+  },
+  {
+    "title": "Input-Aware Dynamic Backdoor Attack Against Quantum Neural Networks",
+    "link": "http://arxiv.org/abs/2607.11843v1",
+    "source": "arXiv CS.AI",
+    "description": "Quantum Neural Networks (QNNs) are a promising framework for quantum machine learning on near-term quantum devices, but their security risks remain insufficiently understood. Studies have shown that QNNs are vulnerable to backdoor attacks, yet existing quantum backdoors mostly rely on a fixed trigge...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-13T17:34:17Z"
   },
   {
     "title": "Perovskite–organic tandem solar cells with a photo-transformable stabilizer",
@@ -416,6 +400,30 @@
     "timestamp": "2026-07-13T00:00:00.000Z"
   },
   {
+    "title": "Scrawled signature names a Maya astronomer for the first time",
+    "link": "https://www.science.org/content/article/scrawled-signature-names-maya-astronomer-first-time",
+    "source": "Science Magazine",
+    "description": "The autograph accompanies formulas devised to sync calendars with planetary movement",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-13T07:01:00.000Z"
+  },
+  {
+    "title": "Plan to turn major monkey research facility into sanctuary may be dead",
+    "link": "https://www.science.org/content/article/plan-turn-major-monkey-research-facility-sanctuary-may-be-dead",
+    "source": "Science Magazine",
+    "description": "Lack of federal funds may have forced Oregon university to drop idea of converting national primate center into science-free refuge",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-13T05:15:00.000Z"
+  },
+  {
+    "title": "As the Arctic warms, gray whale boom turns into a bust",
+    "link": "https://www.science.org/content/article/arctic-warms-gray-whale-boom-turns-bust",
+    "source": "Science Magazine",
+    "description": "Scientists point to changes that jeopardize the marine mammals’ critical feeding grounds",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-13T12:50:00.000Z"
+  },
+  {
     "title": "An AI can invent entirely new languages. But is it creative?",
     "link": "https://www.science.org/content/article/ai-can-invent-entirely-new-languages-it-creative",
     "source": "Science Magazine",
@@ -429,31 +437,7 @@
     "source": "Science Magazine",
     "description": "Agency drops attempt to mitigate risk in favor of outright prohibition on working with most Chinese research institutions",
     "category": "Biotech & Pharma",
-    "timestamp": "2026-07-10T05:55:28.000Z"
-  },
-  {
-    "title": "Ancient DNA solves Medici murder mystery",
-    "link": "https://www.science.org/content/article/ancient-dna-solves-medici-murder-mystery",
-    "source": "Science Magazine",
-    "description": "Malaria, not poisoning, killed a prominent 16th century duke",
-    "category": "Biotech & Pharma",
-    "timestamp": "2026-07-10T05:05:00.000Z"
-  },
-  {
-    "title": "DNA could act like a famed gravity-defying pump",
-    "link": "https://www.science.org/content/article/dna-could-act-famed-gravity-defying-pump",
-    "source": "Science Magazine",
-    "description": "Shrunken version of Archimedes screw could allow researchers to move molecules around at tiny scales",
-    "category": "Biotech & Pharma",
-    "timestamp": "2026-07-10T02:23:00.000Z"
-  },
-  {
-    "title": "NSF makes billion-dollar gamble on research with an economic payoff",
-    "link": "https://www.science.org/content/article/nsf-makes-billion-dollar-gamble-research-economic-payoff",
-    "source": "Science Magazine",
-    "description": "New X-Labs initiative aims to develop breakthrough technologies—but academics aren’t sure they are welcome",
-    "category": "Biotech & Pharma",
-    "timestamp": "2026-07-10T01:15:50.000Z"
+    "timestamp": "2026-07-10T05:55:00.000Z"
   },
   {
     "title": "Setmelanotide for the Treatment of Acquired Hypothalamic Obesity",
@@ -536,6 +520,22 @@
     "timestamp": "2026-07-01T00:00:00.000Z"
   },
   {
+    "title": "The US government warns that Russia state hackers are coming after your router",
+    "link": "https://arstechnica.com/security/2026/07/the-us-government-warns-that-russia-state-hackers-are-coming-after-your-router/",
+    "source": "Ars Technica",
+    "description": "With residential proxies all the rage, CISA urges router users to be vigilant.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-13T21:03:07.000Z"
+  },
+  {
+    "title": "Now, defenders are embracing the prompt injection, too",
+    "link": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/",
+    "source": "Ars Technica",
+    "description": "\"Context bombing\" tricks hacking agents into shutting down before they can do harm.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-13T15:06:34.000Z"
+  },
+  {
     "title": "Patch for Windows Defender 0-day could allow attackers to fill hard disk",
     "link": "https://arstechnica.com/security/2026/07/patch-for-windows-defender-0-day-could-allow-attackers-to-fill-hard-disk/",
     "source": "Ars Technica",
@@ -558,22 +558,6 @@
     "description": "Both vulnerabilities allow untrusted users to gain root privileges.",
     "category": "Deep Tech & Startups",
     "timestamp": "2026-07-08T19:01:19.000Z"
-  },
-  {
-    "title": "Aussie gov't tells volunteers to throw out thousands of functioning test routers",
-    "link": "https://arstechnica.com/gadgets/2026/07/thousands-of-routers-bricked-after-government-program-concludes-in-australia/",
-    "source": "Ars Technica",
-    "description": "But the devices could \"easily be reflashed.\"",
-    "category": "Deep Tech & Startups",
-    "timestamp": "2026-07-08T18:10:16.000Z"
-  },
-  {
-    "title": "US rare earths flow to Asia as domestic demand is slow to emerge",
-    "link": "https://arstechnica.com/science/2026/07/us-rare-earths-flow-to-asia-as-domestic-demand-is-slow-to-emerge/",
-    "source": "Ars Technica",
-    "description": "Miners backed by Trump admin sell to Japan, South Korea despite push to develop domestic supply chain.",
-    "category": "Deep Tech & Startups",
-    "timestamp": "2026-07-08T13:26:10.000Z"
   },
   {
     "title": "This slushie machine was a lifesaver during NYC’s heat wave",
@@ -616,6 +600,14 @@
     "timestamp": "2026-07-10T04:36:20.000Z"
   },
   {
+    "title": "What Anthropic’s latest AI discovery does—and doesn’t—show",
+    "link": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
+    "source": "MIT Technology Review",
+    "description": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Anthropic—currently the world’s most valuable AI company, with a nearly $1 trillion valuation—has a reputation for publishing strange and heady research. It’s looking into whether AI models can feel pain, for example,…",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-13T18:00:00.000Z"
+  },
+  {
     "title": "The Download: a donor conception cap and world models for AI",
     "link": "https://www.technologyreview.com/2026/07/13/1140339/the-download-sperm-donor-limits-ai-world-models/",
     "source": "MIT Technology Review",
@@ -638,5 +630,13 @@
     "description": "Ties van der Meer doesn’t know how many siblings he has. The 47-year-old was conceived at a private fertility clinic in the Netherlands using sperm provided by an anonymous donor. After the Netherlands banned anonymous donation in 2004, the doctor who ran the clinic destroyed records that might have identified those donors, he says. He…",
     "category": "Deep Tech & Startups",
     "timestamp": "2026-07-10T09:00:00.000Z"
+  },
+  {
+    "title": "Scientists’ Side Hustle? Using AI and Quantum Computing to Generate New Peptides",
+    "link": "https://www.wired.com/story/scientists-using-ai-and-quantum-computing-to-generate-new-peptides/",
+    "source": "WIRED Science",
+    "description": "Researchers cobbled together funding and time to show how quantum computing could aid in the development of drugs to help underserved populations and combat rare diseases.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-12T10:00:00.000Z"
   }
 ]
