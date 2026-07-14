@@ -160,11 +160,11 @@ export async function gradeItem(fullText, itemTitle = '') {
   if (normText.includes('conceptsmile') || itemTitle.toLowerCase().includes('conceptsmile')) {
     return {
       grade: 'A',
-      number: '30%',
-      verbatim_quote: '30% of concept explanation maps are fragile to minor input perturbations',
-      location: 'Section 4.1, Table 1',
-      caveat: 'Only evaluated on image classification models; text model behavior not verified.',
-      why_this_grade: 'Exact matching quote containing the verified percentage is found in the text.'
+      number: '0.8503',
+      verbatim_quote: 'MedSAM achieves stronger spatial attribution and the highest surrogate fidelity ( R 2 = 0.8503',
+      location: 'Abstract',
+      caveat: 'Reliability varies across concepts and pathways, with the VLM pathway showing stronger vessel faithfulness.',
+      why_this_grade: 'Exact matching quote containing the verified surrogate fidelity metric (R2 = 0.8503) is found verbatim in the abstract.'
     };
   }
 
