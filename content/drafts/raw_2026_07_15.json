@@ -1,0 +1,642 @@
+[
+  {
+    "title": "Jurassic Park computers in excruciating detail",
+    "link": "https://fabiensanglard.net/jurrasic_park_computers/index.html",
+    "source": "Hacker News",
+    "description": "Score: 366 by vinhnx with 86 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-15T02:57:47.000Z"
+  },
+  {
+    "title": "RISC-V Is Inevitable: State of the Union Keynote Argues",
+    "link": "https://www.eetimes.com/risc-v-is-inevitable-state-of-the-union-keynote-argues/",
+    "source": "Hacker News",
+    "description": "Score: 40 by signa11 with 13 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-15T06:02:17.000Z"
+  },
+  {
+    "title": "I tricked Claude into leaking your deepest, darkest secrets",
+    "link": "https://www.ayush.digital/blog/the-memory-heist",
+    "source": "Hacker News",
+    "description": "Score: 194 by macleginn with 74 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-15T06:28:00.000Z"
+  },
+  {
+    "title": "Vancouver PD website features Quick Escape button that wipes itself from history",
+    "link": "https://vpd.ca/",
+    "source": "Hacker News",
+    "description": "Score: 253 by LookAtThatBacon with 100 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-15T00:15:53.000Z"
+  },
+  {
+    "title": "TS-2026-009: Insecure argument handling in Tailscale SSH permitted root access",
+    "link": "https://tailscale.com/security-bulletins",
+    "source": "Hacker News",
+    "description": "Score: 142 by jervant with 62 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-15T01:08:26.000Z"
+  },
+  {
+    "title": "Bonsai 27B: A 27B-Class model that runs on a phone",
+    "link": "https://prismml.com/news/bonsai-27b",
+    "source": "Hacker News",
+    "description": "Score: 571 by xenova with 207 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T17:50:48.000Z"
+  },
+  {
+    "title": "Andon (manufacturing)",
+    "link": "https://en.wikipedia.org/wiki/Andon_(manufacturing)",
+    "source": "Hacker News",
+    "description": "Score: 44 by tony with 8 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-11T19:49:07.000Z"
+  },
+  {
+    "title": "The Tower Keeps Rising",
+    "link": "https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/",
+    "source": "Hacker News",
+    "description": "Score: 452 by cdrnsf with 215 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T16:57:54.000Z"
+  },
+  {
+    "title": "Dependabot version updates introduce default package cooldown",
+    "link": "https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown/",
+    "source": "Hacker News",
+    "description": "Score: 168 by woodruffw with 107 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T21:15:51.000Z"
+  },
+  {
+    "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
+    "link": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+    "source": "Hacker News",
+    "description": "Score: 348 by Synthetic7346 with 160 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T17:58:35.000Z"
+  },
+  {
+    "title": "How I use HTMX with Go",
+    "link": "https://www.alexedwards.net/blog/how-i-use-htmx-with-go",
+    "source": "Hacker News",
+    "description": "Score: 226 by gnabgib with 56 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T19:55:31.000Z"
+  },
+  {
+    "title": "Solving 20 Erdős Problems with 20 Codex Accounts Running in Parallel",
+    "link": "https://www.starfleetmath.com/",
+    "source": "Hacker News",
+    "description": "Score: 124 by colin7snyder with 56 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-15T00:15:56.000Z"
+  },
+  {
+    "title": "Microsoft has released software updates to plug at least 570 security holes",
+    "link": "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/",
+    "source": "Hacker News",
+    "description": "Score: 115 by robin_reala with 59 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T21:32:22.000Z"
+  },
+  {
+    "title": "Surprising lessons from my research scientist job search",
+    "link": "https://yongzx.github.io/blog/2026/06/24/job-search/",
+    "source": "Hacker News",
+    "description": "Score: 7 by gmays with 1 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-10T14:58:13.000Z"
+  },
+  {
+    "title": "How to stop Claude from saying load-bearing",
+    "link": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+    "source": "Hacker News",
+    "description": "Score: 519 by shintoist with 543 comments",
+    "category": "Tech News & Discussions",
+    "timestamp": "2026-07-14T11:46:02.000Z"
+  },
+  {
+    "title": "Discord Server Link",
+    "link": "https://www.reddit.com/r/singularity/comments/1tg1y16/discord_server_link/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/DnDNecromantic  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-05-17T21:10:00.000Z"
+  },
+  {
+    "title": "Keio University made these soft, helium-filled flying robots; they can follow you, wake you up, remind you of stuff, and even be your study buddy",
+    "link": "https://www.reddit.com/r/singularity/comments/1uwc0oi/keio_university_made_these_soft_heliumfilled/",
+    "source": "r/singularity",
+    "description": "from clankr\n    submitted by    /u/Distinct-Question-16  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T15:31:43.000Z"
+  },
+  {
+    "title": "Well it finally happened: we’re not using models because of cost",
+    "link": "https://www.reddit.com/r/singularity/comments/1uwa1mv/well_it_finally_happened_were_not_using_models/",
+    "source": "r/singularity",
+    "description": "Hey all! \n I’ve been working for a large company (Fortune 500) for 3 years now. We’re an “AI First” company. When I onboarded it was made explicit to me that it was absolutely imperative that I was not only allowed to use Artificial Intelligence in my work but the expectation was that all my work would involve AI.\n My org was quite serious about the process. For a full year we all had training. Developer, managers, sales people. Everyone was trained on the tooling. We were “full steam ahead”. Everyone was given Copilot and Claude. We had biweekly demos of people sharing use cases for AI in various projects around the company.\n We eventually had a very large project using AI. It was a pilot project to discover a workflow for AI and see what its capabilities were. Unfortunately, the project failed. The project was a rewrite of a legacy application. We asked the Agents to define the rules of the system “as written” by the code. However, the Agents constantly missed small details and had issues just writing a clear specification of the code written. The thinking was the rewrite would be first, essentially using the legacy code to define a specification document for the new system. We couldn’t even get there. The business rules were apparently too complex.\n Nonetheless, leadership’s position was still optimistic. They saw the project as the first step in a series of steps. Our lead architects were to take what they learned and apply that to future opportunities.\n In the meantime, we continued using AI to solve our problems from the day to day. Personally, I kept having mixed results. It was amazing for tiny refactors but for larger things it would just do insane stuff. The most egregious so far was SQL code that was dropping constraints on all the tables the code was doing inserts and deletes into. Which is, special. Of course we have proper dev practices so that code never saw production but it was not uncommon for generated code to sometimes just be weird. \n Finally, today I find out we’re pulling back on AI. We have lost access to Claude and we’re being told to limit usage because of costs. The company is still encouraging AI usage but we have stopped the training and demos. Our architects have told us to just use older models for tasks. \n The reason this hit my radar was because Ed Zitron, who has reported extensively on AI has been saying for a while that AI will be in trouble because the costs will be too high and now I’m seeing a lot more conversations about the costs of AI at work.\n If AI is to have any success long term they’re going to need to get the costs down.\n    submitted by    /u/BlueAndYellowTowels  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T14:19:10.000Z"
+  },
+  {
+    "title": "Opus 5 Could Be Out As Soon As This Week Per Reliable Leaker On Twitter",
+    "link": "https://www.reddit.com/r/singularity/comments/1uwftum/opus_5_could_be_out_as_soon_as_this_week_per/",
+    "source": "r/singularity",
+    "description": "https://x.com/i/status/2077085180175544375\n    submitted by    /u/141_1337  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T17:47:04.000Z"
+  },
+  {
+    "title": "Deepmind Internally Delays Gemini 3.5 Pro Again According To Renowned Leaker",
+    "link": "https://www.reddit.com/r/singularity/comments/1uwiq9q/deepmind_internally_delays_gemini_35_pro_again/",
+    "source": "r/singularity",
+    "description": "https://x.com/i/status/2077108367299117348\n Apparently delayed all the way until August: \n https://x.com/i/status/2077109051339469097\n    submitted by    /u/141_1337  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T19:29:36.000Z"
+  },
+  {
+    "title": "Differences Between GPT-5.5 Pro and GPT-5.6 Sol on MineBench",
+    "link": "https://www.reddit.com/r/singularity/comments/1uwhvws/differences_between_gpt55_pro_and_gpt56_sol_on/",
+    "source": "r/singularity",
+    "description": "Notes\n  \nAverage Inference Time: 25m 16s (1516.2s) \n GPT-5.5 Pro averaged 21m 23s (1283.3s) for context; so slightly longer inference times\n \n Total Cost (for 15 builds): $710.82 ($47.39 per build) \n Most expensive model benchmarked to-date; previous was GPT-5.5 Pro at $223.90\n Thanks to all supporters for helping fund the benchmark!\n \n  \nSubjectively speaking, GPT-5.6 Sol seems to create the most detailed builds MineBench has seen thus far, while for the most part doing so with great creative choices. I think, personally, there are only a handful of builds I would argue are not clear improvements over GPT-5.5 Pro (like the astronaut and worldtree). On average, GPT-5.6 Sol also creates the largest JSON files across all of its builds by a significant portion. \n That being said, this model was also the most expensive model MineBench has benchmarked to date; the previous most expensive model was GPT-5.5 Pro at $223.90 – so 5.6 Sol totaled to being over 3x as expensive. If you're lucky enough to ignore the cost, then yes, the model created the most detailed generations yet. For example, in its cottage build, it added a scarecrow in the garden, added clothes drying on a rack, etc. Its builds also seemed to have a better sense of scale and proportions overall, like the arcade.\n We might benchmark GPT-5.6 Terra if there's enough interest, as that would technically be a closer comparison to GPT-5.5 (as Sol is technically the successor to GPT-5.5 Pro, which would also explain the cost).\n TLDR: Model is amazing, doesn't tend to be conservative (good or bad depending on your use case), but it's extremely expensive.\n Full release-notes/thoughts on the GitHub release\n  \nIf you enjoy these posts please feel free to help fund the benchmark \n Sharing the benchmark and starring the Git repository also helps :)\n \n  \nBenchmark: https://minebench.ai/\n Git Repository: https://github.com/Ammaar-Alam/minebench\n Previous Posts:\n  \nComparing Opus 4.8 and Fable 5\n Comparing Opus 4.7 and Opus 4.8\n Comparing GPT 5.4 and GPT 5.5\n Comparing Kimi K2.5 and Kimi K2.6\n Comparing Opus 4.6 and Opus 4.7\n Comparing GPT 5.4 and GPT 5.4-Pro\n Comparing GPT 5.2 and GPT 5.4\n Comparing GPT 5.2 and GPT 5.3-Codex\n Comparing Opus 4.5 and 4.6, also answered some questions about the benchmark\n Comparing Opus 4.6 and GPT-5.2 Pro\n Comparing Gemini 3.0 and Gemini 3.1\n  \nExtra Information (if you're confused):\n Essentially it's a benchmark that tests how well a model can create a 3D Minecraft like structure.\n So the models are given a palette of blocks (think of them like legos) and a prompt of what to build, so like the first prompt you see in the post was a fighter jet. Then the models had to build a fighter jet by returning a JSON in which they gave the coordinate of each block/lego (x, y, z). It's interesting to see which model is able to create a better 3D representation of the given prompt.\n The smarter models tend to design much more detailed and intricate builds. The repository readme might provide might help give a better understanding.\n (Disclaimer: This is a public benchmark I created, so technically self-promotion : )\n    submitted by    /u/ENT_Alam  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T18:58:38.000Z"
+  },
+  {
+    "title": "Kimi k3 launching soon (probably more than 2 trillion para acc to leaks)",
+    "link": "https://www.reddit.com/r/singularity/comments/1uwctrz/kimi_k3_launching_soon_probably_more_than_2/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/Independent-Wind4462  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T16:00:53.000Z"
+  },
+  {
+    "title": "Demis Hassabis shared a rare essay on X: AGI is few years away, we're in the singularity foothills, proposes US-led Frontier AI Standards Body with eventual mandatory safety testing",
+    "link": "https://www.reddit.com/r/singularity/comments/1uw40fb/demis_hassabis_shared_a_rare_essay_on_x_agi_is/",
+    "source": "r/singularity",
+    "description": "read full essay here: https://x.com/demishassabis/status/2076957440109625718\n Key points (some of these things he had already said before)\n  \nAGI is likely only a few years away and describes this moment as the “foothills of the singularity”\n AGI should not be compared to normal technological breakthroughs like the internet or smartphones, but more like the discovery of electricity or fire\n He predicts the impact could be “10x the Industrial Revolution at 10x the speed”\n He warns that frontier AI systems could introduce serious risks in areas like cybersecurity, biology, and increasingly autonomous agents\n He proposes creating a Frontier AI Standards Body to evaluate the most advanced models, similar in spirit to financial self-regulatory organizations like FINRA\n He also proposes voluntary pre-release AGI testing that could later become mandatory for “Frontier Labs” in the US (with aim to make this global)\n The framework would apply to frontier models regardless of whether they are open or closed, with labs sharing models for evaluation before deployment.\n AGI development should be guided by scientific evaluation, international cooperation, and responsible deployment.\n  \n   submitted by    /u/TorturedPoet30  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T09:44:03.000Z"
+  },
+  {
+    "title": "I feel like some degrees are beginning to shine even more",
+    "link": "https://www.reddit.com/r/singularity/comments/1uwg6rf/i_feel_like_some_degrees_are_beginning_to_shine/",
+    "source": "r/singularity",
+    "description": "prompt engineering is a temporary adaptation, evaluation engineering imo is the future (for now). trends of companies like prism eval, rolific, telus, outlier AI, mechanize, other frontier AI labs (anthropic/open AI etc) be more leaning to people outside technical backgrounds is quite interesting. eval testing and human decision making is extremely difficult and requires good logic ofc, but it's funny to know the original meme is pretty much ironic now. This isn't to say my reasoning is brand new, but it was initially difficult to put a finger on the analytics; yet now with the stats and resources it's becoming more obvious to where things are shifting :)\n    submitted by    /u/balkanragebaiter  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T17:59:34.000Z"
+  },
+  {
+    "title": "Super Dario: One More Week",
+    "link": "https://www.reddit.com/r/singularity/comments/1uwbkxt/super_dario_one_more_week/",
+    "source": "r/singularity",
+    "description": "submitted by    /u/RecmacfonD  \n [link]   [comments]",
+    "category": "AI News & Future",
+    "timestamp": "2026-07-14T15:15:50.000Z"
+  },
+  {
+    "title": "V2Fun",
+    "link": "https://www.producthunt.com/products/v2fun",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-02T11:20:04.000Z"
+  },
+  {
+    "title": "EQK",
+    "link": "https://www.producthunt.com/products/eqk-eq-with-ai",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-11T15:26:52.000Z"
+  },
+  {
+    "title": "DeskMat 1.3",
+    "link": "https://www.producthunt.com/products/deskmat-for-mac",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-14T09:58:37.000Z"
+  },
+  {
+    "title": "Velo 3.0",
+    "link": "https://www.producthunt.com/products/velo-4",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-14T11:21:50.000Z"
+  },
+  {
+    "title": "Campus",
+    "link": "https://www.producthunt.com/products/flutterflow",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-08T16:46:51.000Z"
+  },
+  {
+    "title": "Jam-Pod",
+    "link": "https://www.producthunt.com/products/jam-pod",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-14T17:08:42.000Z"
+  },
+  {
+    "title": "Copresent",
+    "link": "https://www.producthunt.com/products/co-present",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-09T09:43:18.000Z"
+  },
+  {
+    "title": "YAGNI",
+    "link": "https://www.producthunt.com/products/yagni",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-10T03:45:28.000Z"
+  },
+  {
+    "title": "Review by Eddie AI",
+    "link": "https://www.producthunt.com/products/eddie-your-ai-video-editor",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-13T16:45:01.000Z"
+  },
+  {
+    "title": "Flodesk Studio",
+    "link": "https://www.producthunt.com/products/flodesk-studio",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-06T17:55:45.000Z"
+  },
+  {
+    "title": "QuickQuill",
+    "link": "https://www.producthunt.com/products/quickquill-2",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-14T14:30:55.000Z"
+  },
+  {
+    "title": "nudge2.0",
+    "link": "https://www.producthunt.com/products/nudge-26",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-15T04:42:28.000Z"
+  },
+  {
+    "title": "RecordMeeting",
+    "link": "https://www.producthunt.com/products/recordmeeting",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-06-19T12:30:12.000Z"
+  },
+  {
+    "title": "ccshare",
+    "link": "https://www.producthunt.com/products/ccshare",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-14T08:43:39.000Z"
+  },
+  {
+    "title": "CodeNearby 2.0",
+    "link": "https://www.producthunt.com/products/codenearby",
+    "source": "Product Hunt",
+    "description": "Discussion\n            |\n            Link",
+    "category": "Product Releases",
+    "timestamp": "2026-07-11T18:43:04.000Z"
+  },
+  {
+    "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
+    "link": "http://arxiv.org/abs/2607.13034v1",
+    "source": "arXiv CS.AI",
+    "description": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-context-first strategy--re-reading files and dependencies they have already seen--turning a one-line edi...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-14T17:59:31Z"
+  },
+  {
+    "title": "The Seriality Gap in Video Diffusion Models",
+    "link": "http://arxiv.org/abs/2607.13031v1",
+    "source": "arXiv CS.AI",
+    "description": "When one ball strikes another, then another, video models should predict the consequences of each bounce. In controlled experiments on multi-ball hard-sphere dynamics, we find that the performance of standard bidirectional video diffusion degrades as the causal chain lengthens, even when provided mo...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-14T17:59:22Z"
+  },
+  {
+    "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
+    "link": "http://arxiv.org/abs/2607.13028v1",
+    "source": "arXiv CS.AI",
+    "description": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse enough to cover the safety-critical long tail that logged data rarely contains. We present TerraZero, a...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-14T17:59:02Z"
+  },
+  {
+    "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
+    "link": "http://arxiv.org/abs/2607.13027v1",
+    "source": "arXiv CS.AI",
+    "description": "Large Language Model (LLM) agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing the results, and iteratively deciding the next action. Most agent systems run on desktops or servers, which support tool use and task automation. Mobile devices are also...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-14T17:58:57Z"
+  },
+  {
+    "title": "A Shortcut to Statistically Steady-State Turbulence with Flow Matching",
+    "link": "http://arxiv.org/abs/2607.13022v1",
+    "source": "arXiv CS.AI",
+    "description": "Many nonlinear physical systems exhibit an initial transient phase in which perturbations grow before nonlinear interactions lead to a statistically steady state. While this saturated regime is of primary interest, direct numerical simulations must resolve the full transient dynamics before reaching...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-14T17:58:13Z"
+  },
+  {
+    "title": "Audio-Native Speech Recognition with a Frozen Discrete-Diffusion Language Model",
+    "link": "http://arxiv.org/abs/2607.13013v1",
+    "source": "arXiv CS.AI",
+    "description": "Automatic speech recognition is dominated by autoregressive decoders that emit one token at a time. We ask whether a discrete diffusion language model can transcribe speech instead, refining a whole transcript in parallel over a small number of denoising steps. We train an audio-native interface for...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-14T17:53:22Z"
+  },
+  {
+    "title": "Inclusive Federated Learning Through Compliance-Weighted Noise Allocation in Healthcare AI",
+    "link": "http://arxiv.org/abs/2505.22108v4",
+    "source": "arXiv CS.AI",
+    "description": "Background: Federated learning (FL) enables collaborative training of clinical AI models without centralizing patient data, but adoption is limited by privacy concerns, heterogeneous institutional compliance, and resource disparities; standard differential privacy (DP) applies uniform noise to all c...",
+    "category": "Research Papers",
+    "timestamp": "2025-05-28T08:36:21Z"
+  },
+  {
+    "title": "Dynamic Resource Allocation for Ensemble Determinization MCTS",
+    "link": "http://arxiv.org/abs/2607.13007v1",
+    "source": "arXiv CS.AI",
+    "description": "Simulation-based algorithms are especially suited for high-uncertainty environments such as adversarial board games with significant elements of randomness and hidden information. In particular, several Monte Carlo Tree Search (MCTS) variants are commonly used in such domains. In this paper, we prop...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-14T17:51:15Z"
+  },
+  {
+    "title": "The Spectrum Is Not Enough: When Context Helps Time-Series Forecasting",
+    "link": "http://arxiv.org/abs/2607.13006v1",
+    "source": "arXiv CS.AI",
+    "description": "A growing family of indices scores how predictable a series is from its spectrum. Practitioners increasingly read these scores as answering a different question: whether \\emph{adding context}, a longer lookback, a retrieval plug-in, or a pretrained model, will help. These are not the same question. ...",
+    "category": "Research Papers",
+    "timestamp": "2026-07-14T17:50:28Z"
+  },
+  {
+    "title": "Propheticus: Machine Learning Framework for the Development of Predictive Models for Reliable and Secure Software",
+    "link": "http://arxiv.org/abs/1809.01898v2",
+    "source": "arXiv CS.AI",
+    "description": "The growing complexity of software calls for innovative solutions that support the deployment of reliable and secure software. Machine Learning (ML) has shown its applicability to various complex problems and is frequently used in the dependability domain, both for supporting systems design and veri...",
+    "category": "Research Papers",
+    "timestamp": "2018-09-06T09:26:03Z"
+  },
+  {
+    "title": "Bird flu H5N1 in Australia: protect Australian species from bird flu virus",
+    "link": "https://www.nature.com/articles/d41586-026-02188-y",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-14T00:00:00.000Z"
+  },
+  {
+    "title": "Academia should recognize community partnerships as having societal impact",
+    "link": "https://www.nature.com/articles/d41586-026-02190-4",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-14T00:00:00.000Z"
+  },
+  {
+    "title": "The Enhanced Games and the normalization of doping: a public health concern",
+    "link": "https://www.nature.com/articles/d41586-026-02189-x",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-14T00:00:00.000Z"
+  },
+  {
+    "title": "AI models: one country’s fears become everyone’s constraint",
+    "link": "https://www.nature.com/articles/d41586-026-02187-z",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-14T00:00:00.000Z"
+  },
+  {
+    "title": "How the calendar came to be",
+    "link": "https://www.nature.com/articles/d41586-026-02102-6",
+    "source": "Nature Journal",
+    "description": "",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-14T00:00:00.000Z"
+  },
+  {
+    "title": "Bungee-jumping mice may reveal why astronauts skip on the Moon",
+    "link": "https://www.science.org/content/article/bungee-jumping-mice-may-reveal-why-astronauts-skip-moon",
+    "source": "Science Magazine",
+    "description": "Low gravity puts a bounce in the step of humans and rodents alike",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-14T05:35:00.000Z"
+  },
+  {
+    "title": "U.S. researchers outraged at proposed changes to federal grants",
+    "link": "https://www.science.org/content/article/u-s-researchers-outraged-proposed-changes-federal-grants",
+    "source": "Science Magazine",
+    "description": "White House receives 340,000 comments on rules many fear would politicize science",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-14T05:30:00.000Z"
+  },
+  {
+    "title": "Astrónomo maya identificado por primera vez gracias a firma en un mural",
+    "link": "https://www.science.org/content/article/astronomo-maya-identificado-por-primera-vez-gracias-firma-en-un-mural",
+    "source": "Science Magazine",
+    "description": "La firma acompaña a una fórmula matemática que sincroniza calendarios con movimiento de planetas",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-14T04:50:00.000Z"
+  },
+  {
+    "title": "Scrawled signature names a Maya astronomer for the first time",
+    "link": "https://www.science.org/content/article/scrawled-signature-names-maya-astronomer-first-time",
+    "source": "Science Magazine",
+    "description": "The autograph accompanies formulas devised to sync calendars with planetary movement",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-13T07:01:00.000Z"
+  },
+  {
+    "title": "Plan to turn major monkey research facility into sanctuary may be dead",
+    "link": "https://www.science.org/content/article/plan-turn-major-monkey-research-facility-sanctuary-may-be-dead",
+    "source": "Science Magazine",
+    "description": "Lack of federal funds may have forced Oregon university to drop idea of converting national primate center into science-free refuge",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-13T05:15:00.000Z"
+  },
+  {
+    "title": "Setmelanotide for the Treatment of Acquired Hypothalamic Obesity",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2512275?af=R",
+    "source": "NEJM",
+    "description": "New England Journal of Medicine, Volume 395, Issue 2, Page 138-150, July 9, 2026.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-08T09:00:02.000Z"
+  },
+  {
+    "title": "Ensartinib in Resected ALK-Positive Non–Small-Cell Lung Cancer",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2518990?af=R",
+    "source": "NEJM",
+    "description": "New England Journal of Medicine, Volume 395, Issue 2, Page 151-161, July 9, 2026.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-08T09:00:02.000Z"
+  },
+  {
+    "title": "Phase 3 Trials of Inhaled Treprostinil for Idiopathic Pulmonary Fibrosis",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2501488?af=R",
+    "source": "NEJM",
+    "description": "New England Journal of Medicine, Volume 395, Issue 2, Page 115-126, July 9, 2026.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-05-18T04:27:00.000Z"
+  },
+  {
+    "title": "Inhaled Treprostinil for Idiopathic Pulmonary Fibrosis",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2512911?af=R",
+    "source": "NEJM",
+    "description": "New England Journal of Medicine, Volume 395, Issue 2, Page 127-137, July 9, 2026.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-03-11T09:00:00.000Z"
+  },
+  {
+    "title": "Nutrition Therapy in Critically Ill Adults",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMra2506111?af=R",
+    "source": "NEJM",
+    "description": "New England Journal of Medicine, Volume 395, Issue 2, Page 162-174, July 9, 2026.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-08T09:00:02.000Z"
+  },
+  {
+    "title": "Map of spiking activity underlying change detection in the mouse visual system",
+    "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00745-2?rss=yes",
+    "source": "Cell",
+    "description": "Large-scale Neuropixels recordings across the mouse visual system during an image-change detection task map how sensory, motor, and task engagement signals are distributed across the cortex, thalamus, and midbrain. Task and novelty signals differentially modulate activity along this hierarchy, and combined decoding and optogenetics suggest mice detect changes via an adaptation-based strategy within a critical time window.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-08T00:00:00.000Z"
+  },
+  {
+    "title": "A viral ORFeome library for systems-level genetic dissection of host-pathogen interactions",
+    "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00583-0?rss=yes",
+    "source": "Cell",
+    "description": "A scalable library of ∼13,000 barcoded viral open reading frames from >500 viral species enables functional genomic screens across the virome. Applying this platform identified viral regulators of cellular proliferation, antigen presentation, and interferon signaling. This platform enables systematic exploration of viral protein function.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-02T00:00:00.000Z"
+  },
+  {
+    "title": "Four-dimensional molecular mapping from a spatial snapshot reveals the dynamics of hair follicle organogenesis",
+    "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00702-6?rss=yes",
+    "source": "Cell",
+    "description": "A deep-tissue spatial transcriptomics method simultaneously captures hundreds of hair follicles spanning organogenesis in mouse skin. Ordering follicles by molecular age transforms this snapshot into a map of organogenesis in both space and time, revealing the choreography of organ assembly and how it goes awry in genetically hairless mice.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-01T00:00:00.000Z"
+  },
+  {
+    "title": "Co-option of lysosomal machinery shapes the evolution of the intracellular photosymbiosis supporting coral reefs",
+    "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00701-4?rss=yes",
+    "source": "Cell",
+    "description": "Corals harbor intracellular algal symbionts in specialized organelles that enable them to build diverse reef ecosystems. Corals and other cnidarians have repeatedly evolved this symbiosis through the co-option of lysosomal machinery to simultaneously support photosynthesis and extract photosynthetic products from the algae.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-01T00:00:00.000Z"
+  },
+  {
+    "title": "Recurrent patterns of TOP1-mediated neuronal genomic damage shared by major neurodegenerative disorders",
+    "link": "https://www.cell.com/cell/fulltext/S0092-8674(26)00700-2?rss=yes",
+    "source": "Cell",
+    "description": "Single-cell whole-genome sequencing reveals a shared pattern of excessive somatic mutations across C9ORF72 ALS, C9ORF72 FTD, and Alzheimer’s disease, dominated by 2-bp deletions. These mutations arise from aberrant topoisomerase 1 (TOP1)-mediated mutagenesis linked to oxidative DNA damage, identifying a unifying mechanism of neuronal genomic instability in neurodegeneration.",
+    "category": "Biotech & Pharma",
+    "timestamp": "2026-07-01T00:00:00.000Z"
+  },
+  {
+    "title": "Microsoft’s Secure Boot has been broken for a decade and no one noticed until now",
+    "link": "https://arstechnica.com/security/2026/07/microsoft-secure-boot-has-been-broken-for-most-of-its-existence/",
+    "source": "Ars Technica",
+    "description": "Old and forgotten \"shims\" Microsoft failed to revoke have made Secure Boot bypasses simple.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-14T22:20:48.000Z"
+  },
+  {
+    "title": "The US government warns that Russia state hackers are coming after your router",
+    "link": "https://arstechnica.com/security/2026/07/the-us-government-warns-that-russia-state-hackers-are-coming-after-your-router/",
+    "source": "Ars Technica",
+    "description": "With residential proxies all the rage, CISA urges router users to be vigilant.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-13T21:03:07.000Z"
+  },
+  {
+    "title": "Now, defenders are embracing the prompt injection, too",
+    "link": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/",
+    "source": "Ars Technica",
+    "description": "\"Context bombing\" tricks hacking agents into shutting down before they can do harm.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-13T15:06:34.000Z"
+  },
+  {
+    "title": "Patch for Windows Defender 0-day could allow attackers to fill hard disk",
+    "link": "https://arstechnica.com/security/2026/07/patch-for-windows-defender-0-day-could-allow-attackers-to-fill-hard-disk/",
+    "source": "Ars Technica",
+    "description": "The feud between NightmareEclipse and Microsoft shows no signs of resolving soon.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-09T20:52:55.000Z"
+  },
+  {
+    "title": "Allstate accuses Broadcom of auditing it because it quit VMware, CA",
+    "link": "https://arstechnica.com/information-technology/2026/07/allstate-accuses-broadcom-of-auditing-it-because-it-quit-vmware-ca/",
+    "source": "Ars Technica",
+    "description": "Broadcom accuses Allstate of dodging VMware audits.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-09T20:28:55.000Z"
+  },
+  {
+    "title": "I’m de-influencing you from buying the RingConn 3 (even though it’s pretty)",
+    "link": "https://techcrunch.com/2026/07/14/ringconn-3-review/",
+    "source": "TechCrunch Hardware",
+    "description": "The RingConn 3 actually looks like real jewelry, not a wearable -- but its fitness tracking and headache detection features are disappointing.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-14T14:45:11.000Z"
+  },
+  {
+    "title": "Pinwheel launches a retro-inspired landline phone for kids",
+    "link": "https://techcrunch.com/2026/07/14/pinwheel-launches-a-retro-inspired-landline-phone-for-kids/",
+    "source": "TechCrunch Hardware",
+    "description": "Kid-friendly tech company Pinwheel announced the launch of a new landline phone designed to let children stay connected without the distractions of a smartphone.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "title": "This slushie machine was a lifesaver during NYC’s heat wave",
+    "link": "https://techcrunch.com/2026/07/11/this-slushie-machine-was-a-lifesaver-during-nycs-heat-wave/",
+    "source": "TechCrunch Hardware",
+    "description": "Ninja's latest slushie machine builds on the popularity of the original Slushi, but with a big upgrade.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-11T22:00:00.000Z"
+  },
+  {
+    "title": "Smart glasses without a camera? Even Realities bets productivity beats recording everyone",
+    "link": "https://techcrunch.com/2026/07/11/smart-glasses-without-a-camera-even-realities-bets-productivity-beats-recording-everyone/",
+    "source": "TechCrunch Hardware",
+    "description": "The glasses are targeted at people who might be constantly in meetings, giving presentations, and traveling to countries where different languages are spoken.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-11T17:30:00.000Z"
+  },
+  {
+    "title": "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to build new US fabs",
+    "link": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
+    "source": "TechCrunch Hardware",
+    "description": "The AI chip boom just produced its biggest Wall Street moment yet. Now SK Hynix and Samsung are being asked to build U.S. factories.",
+    "category": "Deep Tech & Startups",
+    "timestamp": "2026-07-10T17:17:12.000Z"
+  }
+]

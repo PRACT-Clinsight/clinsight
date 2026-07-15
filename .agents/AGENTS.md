@@ -48,3 +48,7 @@ Analyze every briefing item using:
 
 ## 7. Metadata Security Firewall (EXIF Stripping)
 *   Recursively strip EXIF/metadata from all public assets (images, PDFs, datasets) before scheduling to protect brand anonymity.
+
+## 8. Rejected Content Separation (The Air Gap)
+*   Rejected items are never republished through any channel, manual or automated. A day with zero verified items publishes zero posts. Do not surface rejected drafts for manual posting.
+
