@@ -798,7 +798,10 @@ function renderTrialPage(trial, allTrials) {
         </div>
 
         <footer>
-            <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                <div>&copy; 2026 ClinSight · Primary study records from ClinicalTrials.gov</div>
+                <div><a href="https://pract.eu" target="_blank" style="color:var(--text-med); text-decoration:none;">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a></div>
+            </div>
         </footer>
     </div>
 
