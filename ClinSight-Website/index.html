@@ -502,13 +502,30 @@
             margin-bottom: 14px;
             margin-top: 20px;
         }
-        .section-header h3 {
+        .section-header h3, .section-header h2 {
             font-size: 15.5px;
             font-weight: 700;
             color: var(--text-high);
             display: flex;
             align-items: center;
             gap: 8px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 16px;
+            background: var(--cyan);
+            color: #000;
+            padding: 8px 14px;
+            font-weight: 700;
+            border-radius: 6px;
+            z-index: 9999;
+            text-decoration: none;
+            transition: top 0.15s;
+        }
+        .skip-link:focus {
+            top: 16px;
         }
 
         .modality-grid {
@@ -685,20 +702,20 @@
             padding: 3px 7px;
             border-radius: 4px;
         }
-        .badge.nct { background: rgba(56, 189, 248, 0.15); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.35); }
-        :root[data-theme="dark"] .badge.nct { color: #38bdf8; }
-        .badge.phase { background: rgba(168, 85, 247, 0.15); color: #9333ea; border: 1px solid rgba(168, 85, 247, 0.35); }
-        :root[data-theme="dark"] .badge.phase { color: #c084fc; }
+        .badge.nct { background: rgba(56, 189, 248, 0.12); color: #0369a1; border: 1px solid rgba(2, 132, 199, 0.35); }
+        :root[data-theme="dark"] .badge.nct { color: #38bdf8; background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.35); }
+        .badge.phase { background: rgba(168, 85, 247, 0.12); color: #6b21a8; border: 1px solid rgba(124, 58, 237, 0.35); }
+        :root[data-theme="dark"] .badge.phase { color: #c084fc; background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.35); }
         .badge.modality { background: var(--chip-bg); color: var(--text-high); border: 1px solid var(--border-subtle); }
-        .badge.completed { background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.35); }
-        :root[data-theme="dark"] .badge.completed { color: #34d399; }
-        .badge.recruiting { background: rgba(56, 189, 248, 0.15); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.35); }
-        :root[data-theme="dark"] .badge.recruiting { color: #38bdf8; }
-        .badge.active-not-recruiting { background: rgba(245, 158, 11, 0.15); color: #b45309; border: 1px solid rgba(245, 158, 11, 0.35); }
-        :root[data-theme="dark"] .badge.active-not-recruiting { color: #fbbf24; }
-        .badge.status { background: var(--chip-bg); color: var(--text-med); border: 1px solid var(--border-subtle); }
-        .badge.vacant { background: rgba(239, 68, 68, 0.15); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.35); }
-        :root[data-theme="dark"] .badge.vacant { color: #f87171; }
+        .badge.completed { background: rgba(16, 185, 129, 0.12); color: #047857; border: 1px solid rgba(5, 150, 105, 0.35); }
+        :root[data-theme="dark"] .badge.completed { color: #34d399; background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); }
+        .badge.recruiting { background: rgba(56, 189, 248, 0.12); color: #0369a1; border: 1px solid rgba(2, 132, 199, 0.35); }
+        :root[data-theme="dark"] .badge.recruiting { color: #38bdf8; background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.35); }
+        .badge.active-not-recruiting { background: rgba(245, 158, 11, 0.12); color: #92400e; border: 1px solid rgba(217, 119, 6, 0.35); }
+        :root[data-theme="dark"] .badge.active-not-recruiting { color: #fbbf24; background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.35); }
+        .badge.status { background: var(--chip-bg); color: var(--text-high); border: 1px solid var(--border-subtle); }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #b91c1c; border: 1px solid rgba(220, 38, 38, 0.35); }
+        :root[data-theme="dark"] .badge.vacant { color: #f87171; background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.35); }
 
         /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
         .doc-actions-row {
@@ -716,7 +733,7 @@
             border-radius: 6px;
             font-size: 11.5px;
             font-family: var(--font-mono);
-            font-weight: 500;
+            font-weight: 600;
             text-decoration: none;
             transition: all 0.15s ease;
             white-space: nowrap;
@@ -729,12 +746,14 @@
             transform: translateY(-1px);
         }
         .doc-btn-protocol {
-            background: rgba(56, 189, 248, 0.15);
-            color: #0284c7;
-            border: 1px solid rgba(56, 189, 248, 0.4);
+            background: rgba(56, 189, 248, 0.12);
+            color: #0369a1;
+            border: 1px solid rgba(2, 132, 199, 0.4);
         }
         :root[data-theme="dark"] .doc-btn-protocol {
             color: #38bdf8;
+            background: rgba(56, 189, 248, 0.15);
+            border-color: rgba(56, 189, 248, 0.4);
         }
         .doc-btn-protocol:hover {
             background: rgba(56, 189, 248, 0.25);
@@ -930,6 +949,7 @@
     </style>
 </head>
 <body>
+    <a href="#explorerSection" class="skip-link">Skip to registry explorer</a>
     <div class="app-layout">
         <!-- Left Sidebar Navigation -->
         <aside class="sidebar" id="sidebar">
@@ -1019,7 +1039,7 @@
                 <!-- Modalities -->
                 <div class="section-header">
                     <div>
-                        <h3>Browse by Therapeutic Class</h3>
+                        <h2>Browse by Therapeutic Class</h2>
                     </div>
                 </div>
 
@@ -1054,7 +1074,7 @@
             <div id="explorerSection">
                 <div class="section-header">
                     <div>
-                        <h3>Trial Registry Explorer</h3>
+                        <h2>Trial Registry Explorer</h2>
                     </div>
                 </div>
 
@@ -1308,7 +1328,6 @@
                             ${displayInterv ? `<span><i class="fa-solid fa-pills" style="color:var(--cyan);"></i> <b>Regimen:</b> <span class="meta-val">${displayInterv}</span></span>` : ''}
                             <span><i class="fa-regular fa-building" style="color:var(--text-low);"></i> <b>Sponsor:</b> <span class="meta-val">${displaySponsor || 'Not Disclosed'}</span></span>
                             ${t.enrollment ? `<span><i class="fa-solid fa-users" style="color:var(--emerald);"></i> <b>Participants:</b> <span class="meta-val">${t.enrollment.toLocaleString()} individuals</span></span>` : ''}
-                            ${t.primaryPmid ? `<span><i class="fa-solid fa-book-medical" style="color:var(--amber);"></i> <b>PubMed:</b> <span class="meta-val"><a href="https://pubmed.ncbi.nlm.nih.gov/${t.primaryPmid}/" target="_blank" rel="noopener noreferrer" class="pmid-link">${t.primaryPmid}</a></span></span>` : ''}
                         </div>
 
                         <!-- 1-Click Primary Document Links -->
@@ -1322,7 +1341,7 @@
                             <span class="study-year">${t.year || '—'}</span>
                             <span class="study-year-sub">Start Year</span>
                         </div>
-                        <a href="./trials/${t.id}/" class="view-protocol-btn">Protocol Profile <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./trials/${t.id}/" class="view-protocol-btn" aria-label="View protocol profile for ${t.id}">Protocol Profile <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 `;
