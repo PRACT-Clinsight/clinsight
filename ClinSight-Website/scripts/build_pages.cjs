@@ -42,16 +42,14 @@ function renderTrialPage(trial, allTrials) {
   const completionDate = escapeHtml(trial.completionDate || 'N/A');
   const conditions = (trial.conditions || []).map(escapeHtml).join(', ');
   const interventions = (trial.interventions || []).map(escapeHtml).join(', ');
+  const protocolUrl = trial.protocolUrl || null;
+  const sapUrl = trial.sapUrl || null;
+  const resultsUrl = trial.resultsUrl || null;
+  const registryUrl = trial.registryUrl || `https://clinicaltrials.gov/study/${trial.nctId}`;
+  const primaryPmid = trial.primaryPmid || null;
+  const isResultsVacant = !!trial.isResultsVacant;
 
-  // Compute primary drug for VigiSight FAERS safety cross-link
-  let vigisightDrug = null;
-  if (trial.interventions && trial.interventions.length > 0) {
-    const rawDrug = trial.interventions[0].replace(/^Drug:\s*/i, '').trim();
-    const cleaned = rawDrug.split(/[\s,\/]+/)[0];
-    if (cleaned && cleaned.length >= 3 && !['placebo', 'study', 'saline', 'standard', 'comparator'].includes(cleaned.toLowerCase())) {
-      vigisightDrug = cleaned;
-    }
-  }
+  // Safety signals / FAERS cross-linking completely removed per strict liability protocol
 
   // Related trials in the same domain
   const related = allTrials
@@ -548,6 +546,65 @@ function renderTrialPage(trial, allTrials) {
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -575,14 +632,7 @@ function renderTrialPage(trial, allTrials) {
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -667,23 +717,37 @@ function renderTrialPage(trial, allTrials) {
             <span class="badge phase">${phase}</span>
             <span class="badge status ${trial.isCompleted ? 'completed' : ''}">${status}</span>
             <span class="badge modality">${modality}</span>
+            ${isResultsVacant ? '<span class="badge vacant"><i class="fa-solid fa-triangle-exclamation"></i> Results-Vacant</span>' : ''}
         </div>
 
         <h1>${acronym !== nctId ? acronym + ': ' : ''}${title}</h1>
         <p class="lead">${officialTitle}</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            ${protocolUrl ? `
+            <a href="${protocolUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>` : ''}
+            ${(sapUrl && sapUrl !== protocolUrl) ? `
+            <a href="${sapUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>` : ''}
+            ${(trial.hasResults && resultsUrl) ? `
+            <a href="${resultsUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>` : ''}
+            ${primaryPmid ? `
+            <a href="https://pubmed.ncbi.nlm.nih.gov/${primaryPmid}/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: ${primaryPmid})">
+                <i class="fa-solid fa-book-medical"></i> PubMed: ${primaryPmid} ↗
+            </a>` : ''}
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            ${vigisightDrug ? `
-            <a href="https://vigisight.pract.eu/?search=${encodeURIComponent(vigisightDrug)}" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (${escapeHtml(vigisightDrug)}) ↗
-            </a>` : ''}
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -725,46 +789,54 @@ function renderTrialPage(trial, allTrials) {
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        ${(trial.inclusionCriteria && trial.inclusionCriteria.length > 0) ? `
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        ${(trial.eligibilityCriteria && trial.eligibilityCriteria.inclusion && trial.eligibilityCriteria.inclusion.length > 0)
-                          ? trial.eligibilityCriteria.inclusion.map(c => `<li>${escapeHtml(c)}</li>`).join('')
-                          : `<li>Histologically confirmed diagnosis for ${conditions || subtype}</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>`}
+                        ${trial.inclusionCriteria.map(c => `<li>${escapeHtml(c).replace(/\n/g, '<br>')}</li>`).join('')}
                     </ul>
                 </div>
+                ${(trial.exclusionCriteria && trial.exclusionCriteria.length > 0) ? `
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        ${(trial.eligibilityCriteria && trial.eligibilityCriteria.exclusion && trial.eligibilityCriteria.exclusion.length > 0)
-                          ? trial.eligibilityCriteria.exclusion.map(c => `<li>${escapeHtml(c)}</li>`).join('')
-                          : `<li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>`}
+                        ${trial.exclusionCriteria.map(c => `<li>${escapeHtml(c).replace(/\n/g, '<br>')}</li>`).join('')}
                     </ul>
-                </div>
+                </div>` : ''}
             </div>
-        </div>
+        </div>` : ''}
 
         <!-- Direct Primary Source Actions -->
         <div class="card">
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/${nctId}" target="_blank" class="btn btn-primary">
+                <a href="${registryUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                ${protocolUrl ? `
+                <a href="${protocolUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>` : ''}
+                ${(sapUrl && sapUrl !== protocolUrl) ? `
+                <a href="${sapUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>` : ''}
+                ${(trial.hasResults && resultsUrl) ? `
+                <a href="${resultsUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>` : ''}
+                ${primaryPmid ? `
+                <a href="https://pubmed.ncbi.nlm.nih.gov/${primaryPmid}/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: ${primaryPmid})
+                </a>` : `
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(nctId)}" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (${nctId})
-                </a>
+                </a>`}
                 <a href="https://scholar.google.com/scholar?q=${encodeURIComponent(nctId)}" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
                 </a>
@@ -873,18 +945,20 @@ function renderTrialPage(trial, allTrials) {
 
 function buildSitemap(trials) {
   const today = new Date().toISOString().slice(0, 10);
-  const urls = [
-    `  <url>\n    <loc>${BASE_URL}/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>`,
-    `  <url>\n    <loc>${BASE_URL}/trials/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>`
-  ];
+  const urls = [];
+  urls.push('  <url>\n    <loc>' + BASE_URL + '/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>');
+  urls.push('  <url>\n    <loc>' + BASE_URL + '/trials/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>');
 
-  for (const trial of trials) {
-    urls.push(
-      `  <url>\n    <loc>${BASE_URL}/trials/${trial.nctId}/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`
-    );
+  const extra = ['/compare/', '/compare/myeloma-car-t-bispecific-adc/'].filter((p) => fs.existsSync(path.join(ROOT_DIR, p.slice(1), 'index.html')));
+  for (const p of extra) {
+    urls.push('  <url>\n    <loc>' + BASE_URL + p + '</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>');
   }
 
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>`;
+  for (const trial of trials) {
+    urls.push('  <url>\n    <loc>' + BASE_URL + '/trials/' + trial.nctId + '/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>');
+  }
+
+  return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.join('\n') + '\n</urlset>';
 }
 
 // Static, crawlable directory of every trial (plain <a href> links, no JavaScript needed).

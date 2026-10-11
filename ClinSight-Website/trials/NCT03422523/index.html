@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03422523 ARGO — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2 · Modality: Immuno-Oncology (Checkpoint Inhibitor) · Sponsor: University Hospital Southampton NHS Foundation Trust">
+    <meta property="og:description" content="Phase: Phase 2 · Modality: Checkpoint · Sponsor: University Hospital Southampton NHS Foundation Trust">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03422523/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ARGO (NCT03422523): Atezolizumab, Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory DLBCL Not Suitable for High-dose Therapy","url":"https://clinsight.pract.eu/trials/NCT03422523/","studySubject":{"@type":"MedicalCondition","name":"Diffuse Large B Cell Lymphoma"},"sponsor":"University Hospital Southampton NHS Foundation Trust","status":"TERMINATED","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ARGO (NCT03422523)","item":"https://clinsight.pract.eu/trials/NCT03422523/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03422523 (ARGO)?","acceptedAnswer":{"@type":"Answer","text":"NCT03422523 is a Phase 2 study sponsored by University Hospital Southampton NHS Foundation Trust evaluating Immuno-Oncology (Checkpoint Inhibitor) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03422523?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03422523."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ARGO (NCT03422523): Atezolizumab, Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory DLBCL Not Suitable for High-dose Therapy","url":"https://clinsight.pract.eu/trials/NCT03422523/","studySubject":{"@type":"MedicalCondition","name":"Diffuse Large B Cell Lymphoma"},"sponsor":"University Hospital Southampton NHS Foundation Trust","status":"TERMINATED","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ARGO (NCT03422523)","item":"https://clinsight.pract.eu/trials/NCT03422523/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03422523 (ARGO)?","acceptedAnswer":{"@type":"Answer","text":"NCT03422523 is a Phase 2 study sponsored by University Hospital Southampton NHS Foundation Trust evaluating Checkpoint in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03422523?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03422523."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -542,25 +594,27 @@
         <div class="badge-row">
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03422523</span>
             <span class="badge phase">Phase 2</span>
-            <span class="badge status ">TERMINATED</span>
-            <span class="badge modality">Immuno-Oncology (Checkpoint Inhibitor)</span>
+            <span class="badge status completed">TERMINATED</span>
+            <span class="badge modality">Checkpoint</span>
+            <span class="badge vacant"><i class="fa-solid fa-triangle-exclamation"></i> Results-Vacant</span>
         </div>
 
         <h1>ARGO: Atezolizumab, Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory DLBCL Not Suitable for High-dose Therapy</h1>
         <p class="lead">A Phase II Study of Atezolizumab With Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory Diffuse Large B-Cell Lymphoma Who Are Not Candidates for High-dose Therapy</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Atezolizumab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Atezolizumab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Diffuse Large B Cell Lymphoma, Relapsed Diffuse Large B-Cell Lymphoma, Refractory Diffuse Large B-Cell Lymphoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Histologically proven CD20 +ve diffuse large B-cell lymphoma with sufficient diagnostic material, obtained either at diagnosis or relapse (the latter is preferable) that is available to forward to the Haematological Malignancies Diagnostic Service (HMDS) for gene expression profiling and central pathology review. (See screening procedure for details on biopsy requirements)</li><li>Refractory to, or relapsed following, first-line or second-line treatments with rituximab concurrently with anthracycline or anthracenedione-based chemotherapy (etoposide or gemcitabine allowed if comorbid).<br><br>Refractory disease must fulfil one of the following:</li><li>Continuing partial response (PR) from termination of first-line treatment. It is strongly recommended the lymphoma be reconfirmed by biopsy however, if these procedures are deemed to be inappropriate, the CI may determine eligibility following review of the imaging results and disease history.</li><li>Continuing stable disease (SD) from termination of first-line treatment. Reconfirmation of the lymphoma by biopsy (preferred) is recommended but not mandatory.</li><li>Progressive disease (PD). Biopsy or reconfirmation of the lymphoma is recommended but not mandatory.<br><br>  o Not eligible for high-dose therapy with peripheral blood progenitor cell rescue at Investigator discretion as a result of:</li><li>Co-morbidity</li><li>Previous HDT. Rationale to be clearly documented on eCRF and medical notes.<br><br>  * Baseline FDG-PET scans must demonstrate positive lesions compatible with CT defined anatomical tumour sites.<br>  * CT/PET scan showing at least:</li><li>2 or more clearly demarcated lesions/nodes with a long axis \&gt;1.5cm and short axis ≥1.0cm OR</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Received any of the following treatments within two weeks prior to start of study therapy (unless otherwise stated):<br><br>  * Anti-cancer cytotoxics (excluding corticosteroids)<br>  * Radiotherapy unless it is to a limited field to control life/organ-threatening symptoms.</li><li>DLBCL that is refractory to or relapsed within 3 months of a gemcitabine regimen for DLBCL</li><li>Major surgery within 4 weeks of registration.</li><li>Treatment with any known non-marketed drug substance or experimental therapy within 5 terminal half-lives or 4 weeks prior to registration.</li><li>History of stroke or intracranial haemorrhage within 6 months prior to registration.</li><li>Pre-existing peripheral neuropathy grade \&gt;2.</li><li>Clinically significant cardiac disease including unstable angina, acute myocardial infarction within six months prior to registration, congestive heart failure (NYHA III-IV), a current LVEF of \&lt;40%</li><li>Significant concurrent, uncontrolled medical condition that in the opinion of the investigator contraindicates participation in this study</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03422523" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03422523" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03422523" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03422523)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Immuno-Oncology (Checkpoint Inhibitor)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Checkpoint</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03422523","acronym":"ARGO","briefTitle":"Atezolizumab, Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory DLBCL Not Suitable for High-dose Therapy","officialTitle":"A Phase II Study of Atezolizumab With Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory Diffuse Large B-Cell Lymphoma Who Are Not Candidates for High-dose Therapy","sponsor":"University Hospital Southampton NHS Foundation Trust","phase":"Phase 2","status":"TERMINATED","modality":"Immuno-Oncology (Checkpoint Inhibitor)","conditions":["Diffuse Large B Cell Lymphoma","Relapsed Diffuse Large B-Cell Lymphoma","Refractory Diffuse Large B-Cell Lymphoma"],"interventions":["Atezolizumab","Rituximab","Gemcitabine 1000 mg","Oxaliplatin 100 MG"],"primaryOutcomes":[{"measure":"Progression free survival","description":"Progression free survival will be measured from patient notes, from the day of registration to the date of progression or death from any cause. Patients who do not die will be censored at their date of last follow up.","timeFrame":"From date of registration until the date of first documented progression or date of death from any cause, whichever came first, up to follow up at month 36."}],"completionDate":"2021-11-18","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03422523","acronym":"ARGO","briefTitle":"Atezolizumab, Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory DLBCL Not Suitable for High-dose Therapy","officialTitle":"A Phase II Study of Atezolizumab With Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory Diffuse Large B-Cell Lymphoma Who Are Not Candidates for High-dose Therapy","sponsor":"University Hospital Southampton NHS Foundation Trust","phase":"Phase 2","status":"TERMINATED","modality":"Checkpoint","conditions":["Diffuse Large B Cell Lymphoma","Relapsed Diffuse Large B-Cell Lymphoma","Refractory Diffuse Large B-Cell Lymphoma"],"interventions":["Atezolizumab","Rituximab","Gemcitabine 1000 mg","Oxaliplatin 100 MG"],"primaryOutcomes":[{"measure":"Progression free survival","description":"Progression free survival will be measured from patient notes, from the day of registration to the date of progression or death from any cause. Patients who do not die will be censored at their date of last follow up.","timeFrame":"From date of registration until the date of first documented progression or date of death from any cause, whichever came first, up to follow up at month 36."}],"completionDate":"2021-11-18","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "ARGO. Atezolizumab, Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory DLBCL Not Suitable for High-dose Therapy. ClinicalTrials.gov Identifier: NCT03422523. Primary Sponsor: University Hospital Southampton NHS Foundation Trust. Available at: https://clinsight.pract.eu/trials/NCT03422523/";

@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT06615479 NCT06615479 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Monoclonal Antibodies · Sponsor: Juno Therapeutics, Inc., a Bristol-Myers Squibb Company">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: Juno Therapeutics, Inc., a Bristol-Myers Squibb Company">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT06615479/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06615479 (NCT06615479): A Study to Compare the Efficacy and Safety of BMS-986393 Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma (QUINTESSENTIAL-2)","url":"https://clinsight.pract.eu/trials/NCT06615479/","studySubject":{"@type":"MedicalCondition","name":"Relapsed or Refractory Multiple Myeloma (RRMM)"},"sponsor":"Juno Therapeutics, Inc., a Bristol-Myers Squibb Company","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT06615479 (NCT06615479)","item":"https://clinsight.pract.eu/trials/NCT06615479/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06615479 (NCT06615479)?","acceptedAnswer":{"@type":"Answer","text":"NCT06615479 is a Phase 3 study sponsored by Juno Therapeutics, Inc., a Bristol-Myers Squibb Company evaluating Targeted Monoclonal Antibodies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06615479?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06615479."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06615479 (NCT06615479): A Study to Compare the Efficacy and Safety of BMS-986393 Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma (QUINTESSENTIAL-2)","url":"https://clinsight.pract.eu/trials/NCT06615479/","studySubject":{"@type":"MedicalCondition","name":"Relapsed or Refractory Multiple Myeloma (RRMM)"},"sponsor":"Juno Therapeutics, Inc., a Bristol-Myers Squibb Company","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT06615479 (NCT06615479)","item":"https://clinsight.pract.eu/trials/NCT06615479/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06615479 (NCT06615479)?","acceptedAnswer":{"@type":"Answer","text":"NCT06615479 is a Phase 3 study sponsored by Juno Therapeutics, Inc., a Bristol-Myers Squibb Company evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06615479?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06615479."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT06615479</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">RECRUITING</span>
-            <span class="badge modality">Targeted Monoclonal Antibodies</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>A Study to Compare the Efficacy and Safety of BMS-986393 Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma (QUINTESSENTIAL-2)</h1>
         <p class="lead">A Phase 3, Randomized, Open-Label, Multicenter Study to Compare the Efficacy and Safety of Arlocabtagene Autoleucel (BMS-986393), a GPRC5D-directed CAR-T Cell Therapy, Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=BMS-986393" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (BMS-986393) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,28 +656,18 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Relapsed or Refractory Multiple Myeloma (RRMM)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Inclusion Criteria</li><li>Participants must have relapsed or refractory multiple myeloma (RRMM).</li><li>Participants must have received at least 1 but no greater than 3 prior multiple myeloma (MM) regimens which may include a proteasome inhibitor (PI), an immunomodulatory drug (IMiD), and an anti-CD38 monoclonal antibody and have prior exposure to lenalidomide.</li><li>Participants must have a documented diagnosis of MM as per International Myeloma Working Group Criteria.</li><li>Participants must have measurable disease during screening.</li><li>Participants must have adequate organ function.</li><li>Participants must have an Eastern Cooperative Oncology group performance status 0 or 1.<br><br>Exclusion Criteria</li><li>Participants must not have known active or history of central nervous system (CNS) involvement of Multiple Myeloma (MM).</li>
                     </ul>
                 </div>
-                <div class="criteria-box">
-                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
-                    <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
 
@@ -632,9 +676,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT06615479" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT06615479" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT06615479" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT06615479)
                 </a>
@@ -647,7 +695,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Monoclonal Antibodies</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +745,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT06615479","acronym":null,"briefTitle":"A Study to Compare the Efficacy and Safety of BMS-986393 Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma (QUINTESSENTIAL-2)","officialTitle":"A Phase 3, Randomized, Open-Label, Multicenter Study to Compare the Efficacy and Safety of Arlocabtagene Autoleucel (BMS-986393), a GPRC5D-directed CAR-T Cell Therapy, Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma","sponsor":"Juno Therapeutics, Inc., a Bristol-Myers Squibb Company","phase":"Phase 3","status":"RECRUITING","modality":"Targeted Monoclonal Antibodies","conditions":["Relapsed or Refractory Multiple Myeloma (RRMM)"],"interventions":["BMS-986393","Cyclophosphamide","Fludarabine","Daratumumab","Pomalidomide","Dexamethasone","Carfilzomib"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"","timeFrame":"Up to 5 years after the last participant is randomized"},{"measure":"Minimal residual disease (MRD)-negativity in complete response (CR)","description":"","timeFrame":"Up to 1 year after the last participant is randomized"}],"completionDate":"2032-06-22","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT06615479","acronym":null,"briefTitle":"A Study to Compare the Efficacy and Safety of BMS-986393 Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma (QUINTESSENTIAL-2)","officialTitle":"A Phase 3, Randomized, Open-Label, Multicenter Study to Compare the Efficacy and Safety of Arlocabtagene Autoleucel (BMS-986393), a GPRC5D-directed CAR-T Cell Therapy, Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma","sponsor":"Juno Therapeutics, Inc., a Bristol-Myers Squibb Company","phase":"Phase 3","status":"RECRUITING","modality":"TKI / Small Molecule","conditions":["Relapsed or Refractory Multiple Myeloma (RRMM)"],"interventions":["BMS-986393","Cyclophosphamide","Fludarabine","Daratumumab","Pomalidomide","Dexamethasone","Carfilzomib"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"","timeFrame":"Up to 5 years after the last participant is randomized"},{"measure":"Minimal residual disease (MRD)-negativity in complete response (CR)","description":"","timeFrame":"Up to 1 year after the last participant is randomized"}],"completionDate":"2032-06-22","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "A Study to Compare the Efficacy and Safety of BMS-986393 Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma (QUINTESSENTIAL-2). ClinicalTrials.gov Identifier: NCT06615479. Primary Sponsor: Juno Therapeutics, Inc., a Bristol-Myers Squibb Company. Available at: https://clinsight.pract.eu/trials/NCT06615479/";

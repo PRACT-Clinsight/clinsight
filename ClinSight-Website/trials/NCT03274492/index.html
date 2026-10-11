@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03274492 POLARIX — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Antibody-Drug Conjugates (ADC) · Sponsor: Hoffmann-La Roche">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: ADC · Sponsor: Hoffmann-La Roche">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03274492/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"POLARIX (NCT03274492): A Study Comparing the Efficacy and Safety of Polatuzumab Vedotin With Rituximab-Cyclophosphamide, Doxorubicin, and Prednisone (R-CHP) Versus Rituximab-Cyclophosphamide, Doxorubicin, Vincristine, and Prednisone (R-CHOP) in Participants With Diffuse Large B-Cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03274492/","studySubject":{"@type":"MedicalCondition","name":"Diffuse Large B-Cell Lymphoma"},"sponsor":"Hoffmann-La Roche","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"POLARIX (NCT03274492)","item":"https://clinsight.pract.eu/trials/NCT03274492/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03274492 (POLARIX)?","acceptedAnswer":{"@type":"Answer","text":"NCT03274492 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating Antibody-Drug Conjugates (ADC) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03274492?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03274492."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"POLARIX (NCT03274492): A Study Comparing the Efficacy and Safety of Polatuzumab Vedotin With Rituximab-Cyclophosphamide, Doxorubicin, and Prednisone (R-CHP) Versus Rituximab-Cyclophosphamide, Doxorubicin, Vincristine, and Prednisone (R-CHOP) in Participants With Diffuse Large B-Cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03274492/","studySubject":{"@type":"MedicalCondition","name":"Diffuse Large B-Cell Lymphoma"},"sponsor":"Hoffmann-La Roche","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"POLARIX (NCT03274492)","item":"https://clinsight.pract.eu/trials/NCT03274492/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03274492 (POLARIX)?","acceptedAnswer":{"@type":"Answer","text":"NCT03274492 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating ADC in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03274492?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03274492."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03274492</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Antibody-Drug Conjugates (ADC)</span>
+            <span class="badge modality">ADC</span>
+            
         </div>
 
         <h1>POLARIX: A Study Comparing the Efficacy and Safety of Polatuzumab Vedotin With Rituximab-Cyclophosphamide, Doxorubicin, and Prednisone (R-CHP) Versus Rituximab-Cyclophosphamide, Doxorubicin, Vincristine, and Prednisone (R-CHOP) in Participants With Diffuse Large B-Cell Lymphoma</h1>
         <p class="lead">A Phase III, Multicenter, Randomized, Double-Blind, Placebo-Controlled Trial Comparing the Efficacy and Safety of Polatuzumab Vedotin in Combination With Rituximab and CHP (R-CHP) Versus Rituximab and CHOP (R-CHOP) in Previously Untreated Patients With Diffuse Large B-Cell Lymphoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42699559/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42699559)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 42699559 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Polatuzumab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Polatuzumab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Diffuse Large B-Cell Lymphoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Previously untreated participants with cluster of differentiation 20 (CD20)-positive DLBCL, including one of the following diagnoses by 2016 World Health Organization (WHO) classification of lymphoid neoplasms: DLBCL, not otherwise specified (NOS) including germinal center B-cell type, activated B-cell type; T-cell/histiocyte-rich large B-cell lymphoma; Epstein-Barr virus-positive DLBCL, NOS; anaplastic lymphoma kinase (ALK)-positive large B-cell lymphoma; human herpesvirus-8 (HHV8)-positive DLBCL, NOS; High-grade B-cell lymphoma with MYC and B-cell lymphoma 2 (BCL2) and/or B-cell lymphoma 6 (BCL6) rearrangements (double-hit or triple-hit lymphoma); High-grade B-cell lymphoma, NOS</li><li>Availability of archival or freshly collected tumor tissue before study enrolment</li><li>International Prognostic Index (IPI) score of 2-5</li><li>Eastern Cooperative Oncology Group (ECOG) Performance Status of 0, 1, or 2</li><li>Life expectancy greater than or equal to (\&gt;/=)12 months</li><li>Left ventricular ejection fraction (LVEF) \&gt;/= 50 percent (%) on cardiac multiple-gated acquisition (MUGA) scan or cardiac echocardiogram (ECHO)</li><li>Adequate hematologic function</li><li>Female participants: Agreement to remain abstinent (refrain from heterosexual intercourse) or use contraceptive methods and refrain from donating eggs.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>History of severe allergic or anaphylactic reactions to humanized or murine monoclonal antibodies or known sensitivity or allergy to murine products</li><li>Contraindication to any of the individual components of CHOP, including prior receipt of anthracyclines</li><li>Prior organ transplantation</li><li>Current Grade greater than (\&gt;) 1 peripheral neuropathy by clinical examination</li><li>Demyelinating form of Charcot-Marie-Tooth disease</li><li>History of indolent lymphoma</li><li>History of follicular lymphoma grade 3B</li><li>B-cell lymphoma, unclassifiable, with features intermediate between DLBCL and classical Hodgkin lymphoma (grey-zone lymphoma)</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03274492" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03274492" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03274492" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03274492)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/42699559/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 42699559)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03274492" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Antibody-Drug Conjugates (ADC)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in ADC</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03274492","acronym":"POLARIX","briefTitle":"A Study Comparing the Efficacy and Safety of Polatuzumab Vedotin With Rituximab-Cyclophosphamide, Doxorubicin, and Prednisone (R-CHP) Versus Rituximab-Cyclophosphamide, Doxorubicin, Vincristine, and Prednisone (R-CHOP) in Participants With Diffuse Large B-Cell Lymphoma","officialTitle":"A Phase III, Multicenter, Randomized, Double-Blind, Placebo-Controlled Trial Comparing the Efficacy and Safety of Polatuzumab Vedotin in Combination With Rituximab and CHP (R-CHP) Versus Rituximab and CHOP (R-CHOP) in Previously Untreated Patients With Diffuse Large B-Cell Lymphoma","sponsor":"Hoffmann-La Roche","phase":"Phase 3","status":"COMPLETED","modality":"Antibody-Drug Conjugates (ADC)","conditions":["Diffuse Large B-Cell Lymphoma"],"interventions":["Polatuzumab Vedotin","Rituximab","Cyclophosphamide","Doxorubicin","Vincristine","Vincristine Placebo","Prednisone","Polatuzumab vedotin Placebo"],"primaryOutcomes":[{"measure":"Progression-Free Survival (PFS) as Assessed by the Investigator, Using the Lugano Response Criteria for Malignant Lymphoma","description":"","timeFrame":"From randomization to the first occurrence of disease progression or relapse, or death from any cause, whichever occurs earlier (up to 38 months)"}],"completionDate":"2026-04-30","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03274492","acronym":"POLARIX","briefTitle":"A Study Comparing the Efficacy and Safety of Polatuzumab Vedotin With Rituximab-Cyclophosphamide, Doxorubicin, and Prednisone (R-CHP) Versus Rituximab-Cyclophosphamide, Doxorubicin, Vincristine, and Prednisone (R-CHOP) in Participants With Diffuse Large B-Cell Lymphoma","officialTitle":"A Phase III, Multicenter, Randomized, Double-Blind, Placebo-Controlled Trial Comparing the Efficacy and Safety of Polatuzumab Vedotin in Combination With Rituximab and CHP (R-CHP) Versus Rituximab and CHOP (R-CHOP) in Previously Untreated Patients With Diffuse Large B-Cell Lymphoma","sponsor":"Hoffmann-La Roche","phase":"Phase 3","status":"COMPLETED","modality":"ADC","conditions":["Diffuse Large B-Cell Lymphoma"],"interventions":["Polatuzumab Vedotin","Rituximab","Cyclophosphamide","Doxorubicin","Vincristine","Vincristine Placebo","Prednisone","Polatuzumab vedotin Placebo"],"primaryOutcomes":[{"measure":"Progression-Free Survival (PFS) as Assessed by the Investigator, Using the Lugano Response Criteria for Malignant Lymphoma","description":"","timeFrame":"From randomization to the first occurrence of disease progression or relapse, or death from any cause, whichever occurs earlier (up to 38 months)"}],"completionDate":"2026-04-30","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "POLARIX. A Study Comparing the Efficacy and Safety of Polatuzumab Vedotin With Rituximab-Cyclophosphamide, Doxorubicin, and Prednisone (R-CHP) Versus Rituximab-Cyclophosphamide, Doxorubicin, Vincristine, and Prednisone (R-CHOP) in Participants With Diffuse Large B-Cell Lymphoma. ClinicalTrials.gov Identifier: NCT03274492. Primary Sponsor: Hoffmann-La Roche. Available at: https://clinsight.pract.eu/trials/NCT03274492/";

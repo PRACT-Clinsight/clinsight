@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT07738172 PTR-2 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Therapy (Small Molecule / TKI) · Sponsor: National Taiwan University Hospital">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: National Taiwan University Hospital">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT07738172/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"PTR-2 (NCT07738172): Osimertinib With or Without Primary Lung Tumor Resection for EGFR-Mutant Oligometastatic Non-Small Cell Lung Cancer","url":"https://clinsight.pract.eu/trials/NCT07738172/","studySubject":{"@type":"MedicalCondition","name":"Lung Neoplasms, Non-Small Cell Lung Cancer"},"sponsor":"National Taiwan University Hospital","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"PTR-2 (NCT07738172)","item":"https://clinsight.pract.eu/trials/NCT07738172/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07738172 (PTR-2)?","acceptedAnswer":{"@type":"Answer","text":"NCT07738172 is a Phase 3 study sponsored by National Taiwan University Hospital evaluating Targeted Therapy (Small Molecule / TKI) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07738172?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07738172."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"PTR-2 (NCT07738172): Osimertinib With or Without Primary Lung Tumor Resection for EGFR-Mutant Oligometastatic Non-Small Cell Lung Cancer","url":"https://clinsight.pract.eu/trials/NCT07738172/","studySubject":{"@type":"MedicalCondition","name":"Lung Neoplasms, Non-Small Cell Lung Cancer"},"sponsor":"National Taiwan University Hospital","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"PTR-2 (NCT07738172)","item":"https://clinsight.pract.eu/trials/NCT07738172/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07738172 (PTR-2)?","acceptedAnswer":{"@type":"Answer","text":"NCT07738172 is a Phase 3 study sponsored by National Taiwan University Hospital evaluating TKI / Small Molecule in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07738172?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07738172."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT07738172</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">RECRUITING</span>
-            <span class="badge modality">Targeted Therapy (Small Molecule / TKI)</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>PTR-2: Osimertinib With or Without Primary Lung Tumor Resection for EGFR-Mutant Oligometastatic Non-Small Cell Lung Cancer</h1>
         <p class="lead">A Multicenter, Randomized Controlled Phase III Clinical Trial of Primary Tumor Resection in Patients With Oligometastatic EGFR-Mutant Non-Small Cell Lung Cancer After EGFR-Targeted Therapy</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Primary" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Primary) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,28 +656,18 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Lung Neoplasms, Non-Small Cell Lung Cancer</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>This study consists of 2 screening phases:<br><br>Part 1 screening (before osimertinib induction):<br><br>Patients must meet the baseline eligibility criteria, including stage IV NSCLC, EGFR sensitizing mutation (exon 19 deletion or L858R), resectable dominant primary lung lesion, and adequate performance status and organ function.<br><br>Part 2 screening (after 12 weeks of protocol-defined osimertinib induction and before randomization):<br><br>Patients must complete 12 weeks of osimertinib 80 mg once daily and undergo restaging evaluation. Only patients with partial response (PR) or stable disease (SD) by RECIST 1.1, and who remain suitable for thoracic surgery, will proceed to randomization.<br><br>Disease distribution must satisfy all of the following: no more than 3 involved organs, one dominant pulmonary primary lesion, the maximal diameter of the dominant primary lung lesion greater than any individual distant metastatic lesion, and a total number of distant metastatic lesions fewer or equal than 10. Pleural or peritoneal metastasis confined to a single cavity and amenable to treatment may be considered a single metastatic lesion.<br><br>Inclusion criteria for screening part 1</li><li>Histologically or cytologically confirmed NSCLC.</li><li>Age ≥18 years.</li><li>AJCC 8th edition stage IV NSCLC.</li><li>EGFR sensitizing mutation limited to exon 19 deletion or exon 21 L858R.</li><li>WHO performance status 0-1. Patients with brain metastases must be conscious; patients with bone metastases must not have irreversible severe events such as severe pathological fracture.</li><li>The primary lung tumor is considered resectable by the investigator and thoracic surgeon, with surgery intended for maximal regional control.</li><li>The patient is able to take oral medication and is expected to receive first-line osimertinib induction therapy.</li>
                     </ul>
                 </div>
-                <div class="criteria-box">
-                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
-                    <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
 
@@ -632,9 +676,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT07738172" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT07738172" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT07738172" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT07738172)
                 </a>
@@ -647,7 +695,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Therapy (Small Molecule / TKI)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +745,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT07738172","acronym":"PTR-2","briefTitle":"Osimertinib With or Without Primary Lung Tumor Resection for EGFR-Mutant Oligometastatic Non-Small Cell Lung Cancer","officialTitle":"A Multicenter, Randomized Controlled Phase III Clinical Trial of Primary Tumor Resection in Patients With Oligometastatic EGFR-Mutant Non-Small Cell Lung Cancer After EGFR-Targeted Therapy","sponsor":"National Taiwan University Hospital","phase":"Phase 3","status":"RECRUITING","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Lung Neoplasms, Non-Small Cell Lung Cancer"],"interventions":["Primary Tumor Resection","Osimertinib"],"primaryOutcomes":[{"measure":"Progression-Free Survival","description":"Progression-free survival is defined as the time from randomization to the first documented occurrence of disease progression according to RECIST version 1.1 or death from any cause, whichever occurs first. Participants without an event will be censored at the date of their last adequate disease assessment.","timeFrame":"From randomization to disease progression or death, assessed up to 24 months after randomization."}],"completionDate":"2031-08-01","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT07738172","acronym":"PTR-2","briefTitle":"Osimertinib With or Without Primary Lung Tumor Resection for EGFR-Mutant Oligometastatic Non-Small Cell Lung Cancer","officialTitle":"A Multicenter, Randomized Controlled Phase III Clinical Trial of Primary Tumor Resection in Patients With Oligometastatic EGFR-Mutant Non-Small Cell Lung Cancer After EGFR-Targeted Therapy","sponsor":"National Taiwan University Hospital","phase":"Phase 3","status":"RECRUITING","modality":"TKI / Small Molecule","conditions":["Lung Neoplasms, Non-Small Cell Lung Cancer"],"interventions":["Primary Tumor Resection","Osimertinib"],"primaryOutcomes":[{"measure":"Progression-Free Survival","description":"Progression-free survival is defined as the time from randomization to the first documented occurrence of disease progression according to RECIST version 1.1 or death from any cause, whichever occurs first. Participants without an event will be censored at the date of their last adequate disease assessment.","timeFrame":"From randomization to disease progression or death, assessed up to 24 months after randomization."}],"completionDate":"2031-08-01","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "PTR-2. Osimertinib With or Without Primary Lung Tumor Resection for EGFR-Mutant Oligometastatic Non-Small Cell Lung Cancer. ClinicalTrials.gov Identifier: NCT07738172. Primary Sponsor: National Taiwan University Hospital. Available at: https://clinsight.pract.eu/trials/NCT07738172/";

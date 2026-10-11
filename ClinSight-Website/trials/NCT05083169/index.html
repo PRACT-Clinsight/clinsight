@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT05083169 MajesTEC-3 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Bispecific Antibodies &amp; T-Cell Engagers · Sponsor: Janssen Research &amp; Development, LLC">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Bispecific · Sponsor: Janssen Research &amp; Development, LLC">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT05083169/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MajesTEC-3 (NCT05083169): A Study of Teclistamab in Combination With Daratumumab Subcutaneously (SC) (Tec-Dara) Versus Daratumumab SC, Pomalidomide, and Dexamethasone (DPd) or Daratumumab SC, Bortezomib, and Dexamethasone (DVd) in Participants With Relapsed or Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT05083169/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Janssen Research &amp; Development, LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MajesTEC-3 (NCT05083169)","item":"https://clinsight.pract.eu/trials/NCT05083169/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05083169 (MajesTEC-3)?","acceptedAnswer":{"@type":"Answer","text":"NCT05083169 is a Phase 3 study sponsored by Janssen Research &amp; Development, LLC evaluating Bispecific Antibodies &amp; T-Cell Engagers in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05083169?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05083169."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MajesTEC-3 (NCT05083169): A Study of Teclistamab in Combination With Daratumumab Subcutaneously (SC) (Tec-Dara) Versus Daratumumab SC, Pomalidomide, and Dexamethasone (DPd) or Daratumumab SC, Bortezomib, and Dexamethasone (DVd) in Participants With Relapsed or Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT05083169/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Janssen Research &amp; Development, LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MajesTEC-3 (NCT05083169)","item":"https://clinsight.pract.eu/trials/NCT05083169/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05083169 (MajesTEC-3)?","acceptedAnswer":{"@type":"Answer","text":"NCT05083169 is a Phase 3 study sponsored by Janssen Research &amp; Development, LLC evaluating Bispecific in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05083169?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05083169."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT05083169</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Bispecific Antibodies &amp; T-Cell Engagers</span>
+            <span class="badge modality">Bispecific</span>
+            
         </div>
 
         <h1>MajesTEC-3: A Study of Teclistamab in Combination With Daratumumab Subcutaneously (SC) (Tec-Dara) Versus Daratumumab SC, Pomalidomide, and Dexamethasone (DPd) or Daratumumab SC, Bortezomib, and Dexamethasone (DVd) in Participants With Relapsed or Refractory Multiple Myeloma</h1>
         <p class="lead">A Phase 3 Randomized Study Comparing Teclistamab in Combination With Daratumumab SC (Tec-Dara) Versus Daratumumab SC, Pomalidomide, and Dexamethasone (DPd) or Daratumumab SC, Bortezomib, and Dexamethasone (DVd) in Participants With Relapsed or Refractory Multiple Myeloma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41363801/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41363801)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41363801 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Daratumumab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Daratumumab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Multiple Myeloma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Documented multiple myeloma as defined by the criteria: a. multiple myeloma diagnosis according to the International Myeloma Working Group (IMWG) diagnostic criteria, b. measurable disease at screening as defined by any of the following: 1) serum M-protein level greater than or equal to (\&gt;=) 0.5 gram per deciliter (g/dL); or 2) urine M-protein level \&gt;=200 milligrams (mg)/24 hours; or 3) serum immunoglobulin free light chain \&gt;=10 mg/dL and abnormal serum immunoglobulin kappa lambda free light chain ratio</li><li>Received 1 to 3 prior line(s) of antimyeloma therapy including a proteasome inhibitor (PI) and lenalidomide; a. participants who have received only 1 line of prior line of antimyeloma therapy must be lenalidomide refractory. Stable disease or progression on or within 60 days of the last dose of lenalidomide given as maintenance will meet this criterion</li><li>Documented evidence of progressive disease based on investigator&#39;s determination of response by IMWG criteria on or after their last regimen</li><li>Have an eastern cooperative oncology group (ECOG) performance status score of 0, 1, or 2 at screening and prior to the start of administration of study treatment</li><li>Have clinical laboratory values within the specified range</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Contraindications or life-threatening allergies, hypersensitivity, or intolerance to any study drug or its excipients. Additional exclusion criteria pertaining to specific study drugs include:<br><br>  1. A participant is not eligible to receive daratumumab subcutaneous (SC) in combination with pomalidomide and dexamethasone (DPd) as control therapy if any of the following are present: 1) Contraindications or life-threatening allergies, hypersensitivity, or intolerance to pomalidomide, 2) Disease that is considered refractory to pomalidomide per IMWG,<br>  2. A participant is not eligible to receive daratumumab SC in combination with bortezomib and dexamethasone (DVd) as control therapy if any of the following are present: 1) Contraindications or life-threatening allergies, hypersensitivity, or intolerance to bortezomib, 2) Grade 1 peripheral neuropathy with pain or Grade \&gt;= 2 peripheral neuropathy as defined by National Cancer Institute Common Terminology Criteria for Adverse Events (NCI-CTCAE) Version 5.0, 3) Disease that is considered refractory to bortezomib per IMWG, 4) Received a strong cytochromes P450 (CYP3A4) inducer within 5 half-lives prior to randomization</li><li>Received any prior B cell maturation antigen (BCMA)-directed therapy</li><li>Has disease that is considered refractory to an anti-cluster of differentiation 38 (CD38) monoclonal antibody per IMWG</li><li>Received a cumulative dose of corticosteroids equivalent to \&gt;=140 mg of prednisone within 14 days before randomization</li><li>Received a live, attenuated vaccine within 4 weeks before randomization</li><li>Plasma cell leukemia at the time of screening, Waldenström&#39;s macroglobulinemia, POEMS syndrome (polyneuropathy, organomegaly, endocrinopathy, M-protein, and skin changes), or primary amyloid light chain amyloidosis</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT05083169" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT05083169" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT05083169" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT05083169)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41363801/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41363801)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT05083169" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific Antibodies &amp; T-Cell Engagers</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT05083169","acronym":"MajesTEC-3","briefTitle":"A Study of Teclistamab in Combination With Daratumumab Subcutaneously (SC) (Tec-Dara) Versus Daratumumab SC, Pomalidomide, and Dexamethasone (DPd) or Daratumumab SC, Bortezomib, and Dexamethasone (DVd) in Participants With Relapsed or Refractory Multiple Myeloma","officialTitle":"A Phase 3 Randomized Study Comparing Teclistamab in Combination With Daratumumab SC (Tec-Dara) Versus Daratumumab SC, Pomalidomide, and Dexamethasone (DPd) or Daratumumab SC, Bortezomib, and Dexamethasone (DVd) in Participants With Relapsed or Refractory Multiple Myeloma","sponsor":"Janssen Research & Development, LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific Antibodies & T-Cell Engagers","conditions":["Multiple Myeloma"],"interventions":["Daratumumab","Pomalidomide","Dexamethasone","Bortezomib","Teclistamab"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"PFS is defined as the time from the date of randomization to the date of first documented disease progression, as defined in the International Myeloma Working Group (IMWG) criteria, or death due to any cause, whichever occurs first.","timeFrame":"Up to 5 years"}],"completionDate":"2028-09-15","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT05083169","acronym":"MajesTEC-3","briefTitle":"A Study of Teclistamab in Combination With Daratumumab Subcutaneously (SC) (Tec-Dara) Versus Daratumumab SC, Pomalidomide, and Dexamethasone (DPd) or Daratumumab SC, Bortezomib, and Dexamethasone (DVd) in Participants With Relapsed or Refractory Multiple Myeloma","officialTitle":"A Phase 3 Randomized Study Comparing Teclistamab in Combination With Daratumumab SC (Tec-Dara) Versus Daratumumab SC, Pomalidomide, and Dexamethasone (DPd) or Daratumumab SC, Bortezomib, and Dexamethasone (DVd) in Participants With Relapsed or Refractory Multiple Myeloma","sponsor":"Janssen Research & Development, LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific","conditions":["Multiple Myeloma"],"interventions":["Daratumumab","Pomalidomide","Dexamethasone","Bortezomib","Teclistamab"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"PFS is defined as the time from the date of randomization to the date of first documented disease progression, as defined in the International Myeloma Working Group (IMWG) criteria, or death due to any cause, whichever occurs first.","timeFrame":"Up to 5 years"}],"completionDate":"2028-09-15","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "MajesTEC-3. A Study of Teclistamab in Combination With Daratumumab Subcutaneously (SC) (Tec-Dara) Versus Daratumumab SC, Pomalidomide, and Dexamethasone (DPd) or Daratumumab SC, Bortezomib, and Dexamethasone (DVd) in Participants With Relapsed or Refractory Multiple Myeloma. ClinicalTrials.gov Identifier: NCT05083169. Primary Sponsor: Janssen Research &amp;amp; Development, LLC. Available at: https://clinsight.pract.eu/trials/NCT05083169/";

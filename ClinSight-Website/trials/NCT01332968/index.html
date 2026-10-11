@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT01332968 NCT01332968 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Monoclonal Antibodies · Sponsor: Hoffmann-La Roche">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Monoclonal Antibody (mAb) · Sponsor: Hoffmann-La Roche">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT01332968/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT01332968 (NCT01332968): A Study of Obinutuzumab (RO5072759) Plus Chemotherapy in Comparison With Rituximab Plus Chemotherapy Followed by Obinutuzumab or Rituximab Maintenance in Patients With Untreated Advanced Indolent Non-Hodgkin&#39;s Lymphoma (GALLIUM)","url":"https://clinsight.pract.eu/trials/NCT01332968/","studySubject":{"@type":"MedicalCondition","name":"Non-Hodgkin's Lymphoma"},"sponsor":"Hoffmann-La Roche","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT01332968 (NCT01332968)","item":"https://clinsight.pract.eu/trials/NCT01332968/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01332968 (NCT01332968)?","acceptedAnswer":{"@type":"Answer","text":"NCT01332968 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating Targeted Monoclonal Antibodies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01332968?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01332968."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT01332968 (NCT01332968): A Study of Obinutuzumab (RO5072759) Plus Chemotherapy in Comparison With Rituximab Plus Chemotherapy Followed by Obinutuzumab or Rituximab Maintenance in Patients With Untreated Advanced Indolent Non-Hodgkin&#39;s Lymphoma (GALLIUM)","url":"https://clinsight.pract.eu/trials/NCT01332968/","studySubject":{"@type":"MedicalCondition","name":"Non-Hodgkin's Lymphoma"},"sponsor":"Hoffmann-La Roche","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT01332968 (NCT01332968)","item":"https://clinsight.pract.eu/trials/NCT01332968/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01332968 (NCT01332968)?","acceptedAnswer":{"@type":"Answer","text":"NCT01332968 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating Monoclonal Antibody (mAb) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01332968?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01332968."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT01332968</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Monoclonal Antibodies</span>
+            <span class="badge modality">Monoclonal Antibody (mAb)</span>
+            
         </div>
 
         <h1>A Study of Obinutuzumab (RO5072759) Plus Chemotherapy in Comparison With Rituximab Plus Chemotherapy Followed by Obinutuzumab or Rituximab Maintenance in Patients With Untreated Advanced Indolent Non-Hodgkin&#39;s Lymphoma (GALLIUM)</h1>
         <p class="lead">A Multicenter, Phase III, Open-Label, Randomized Study in Previously Untreated Patients With Advanced Indolent Non-Hodgkin&#39;s Lymphoma Evaluating the Benefit of GA101 (RO5072759) Plus Chemotherapy Compared With Rituximab Plus Chemotherapy Followed by GA101 or Rituximab Maintenance Therapy in Responders</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/68/NCT01332968/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/68/NCT01332968/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT01332968?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41879719/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41879719)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41879719 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Obinutuzumab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Obinutuzumab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Non-Hodgkin&#39;s Lymphoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Cluster of differentiation 20 (CD20)-positive indolent B-cell non-Hodgkin&#39;s lymphoma (follicular lymphoma or splenic, nodal or extranodal marginal zone lymphoma)</li><li>Stage III or IV disease, or Stage II bulky disease (defined as tumor diameter greater than or equal to \[\&gt;/=\] 7 centimeters \[cm\])</li><li>For participants with follicular lymphoma: requirement for treatment according to Groupe d&#39;Etude des Lymphomes Folliculaires (GELF) criteria</li><li>For participants with symptomatic splenic, nodal, or non-gastric extranodal marginal zone lymphoma: disease that is de novo or has relapsed following local therapy (i.e. surgery or radiotherapy) and requires therapy as assessed by the investigator</li><li>At least one bi-dimensionally measurable lesion (greater than \[\&gt;\] 2 cm in its largest dimension by computed tomography \[CT\] scan or magnetic resonance imaging \[MRI\])</li><li>Eastern Cooperative Oncology Group (ECOG) performance status of 0, 1 or 2</li><li>Adequate hematologic function</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Central nervous system lymphoma, leptomeningeal lymphoma, or histological evidence of transformation to a high-grade or diffuse large B-cell lymphoma</li><li>Grade 3b follicular lymphoma, small lymphocytic lymphoma or Waldenström&#39;s macroglobulinaemia</li><li>Ann Arbor Stage I disease</li><li>History of severe allergic or anaphylactic reactions to monoclonal antibody therapy</li><li>Known hypersensitivity to any of the study drugs or sensitivity to murine products, or history of sensitivity to mannitol</li><li>For participants with follicular lymphoma: prior treatment for non-Hodgkin&#39;s lymphoma with chemotherapy, immunotherapy, or radiotherapy</li><li>For participants with non-follicular lymphoma: prior treatment with chemotherapy or immunotherapy</li><li>Regular treatment with corticosteroids during the 4 weeks prior to the start of Cycle 1</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT01332968" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT01332968" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT01332968" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT01332968)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/68/NCT01332968/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/68/NCT01332968/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT01332968?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41879719/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41879719)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT01332968" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Monoclonal Antibodies</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Monoclonal Antibody (mAb)</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT01332968","acronym":null,"briefTitle":"A Study of Obinutuzumab (RO5072759) Plus Chemotherapy in Comparison With Rituximab Plus Chemotherapy Followed by Obinutuzumab or Rituximab Maintenance in Patients With Untreated Advanced Indolent Non-Hodgkin's Lymphoma (GALLIUM)","officialTitle":"A Multicenter, Phase III, Open-Label, Randomized Study in Previously Untreated Patients With Advanced Indolent Non-Hodgkin's Lymphoma Evaluating the Benefit of GA101 (RO5072759) Plus Chemotherapy Compared With Rituximab Plus Chemotherapy Followed by GA101 or Rituximab Maintenance Therapy in Responders","sponsor":"Hoffmann-La Roche","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Monoclonal Antibodies","conditions":["Non-Hodgkin's Lymphoma"],"interventions":["Obinutuzumab","Cyclophosphamide","Doxorubicin","Vincristine","Prednisone","Bendamustine","Rituximab"],"primaryOutcomes":[{"measure":"Progression-Free Survival in the Follicular Lymphoma Population, Investigator-Assessed","description":"Progression-free survival in participants with follicular lymphoma was defined as the time from randomization until the first documented day of disease progression or death from any cause, whichever occurred first, on the basis of investigator assessments according to the Revised Response Criteria for Malignant Lymphoma. Progression was defined as at least 50% increase in nodal lesions or \\>/=50% increase in any node \\> 1 centimeter (cm) or \\>/= 50% increase in other target measurable lesions (e.g., splenic or hepatic nodules) and/or appearance of any new bone marrow involvement and/or appearance of any new lesion \\> 1.5 cm or \\>/= 50% increase in any previously involved node with a diameter \\</= 1 cm such that it is now \\>1.5 cm. Tumor measurements were obtained by computed tomography (CT) or magnetic resonance imaging (MRI).","timeFrame":"Baseline up to data cut-off (up to approximately 4 years and 7 months)"}],"completionDate":"2021-07-30","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT01332968","acronym":null,"briefTitle":"A Study of Obinutuzumab (RO5072759) Plus Chemotherapy in Comparison With Rituximab Plus Chemotherapy Followed by Obinutuzumab or Rituximab Maintenance in Patients With Untreated Advanced Indolent Non-Hodgkin's Lymphoma (GALLIUM)","officialTitle":"A Multicenter, Phase III, Open-Label, Randomized Study in Previously Untreated Patients With Advanced Indolent Non-Hodgkin's Lymphoma Evaluating the Benefit of GA101 (RO5072759) Plus Chemotherapy Compared With Rituximab Plus Chemotherapy Followed by GA101 or Rituximab Maintenance Therapy in Responders","sponsor":"Hoffmann-La Roche","phase":"Phase 3","status":"COMPLETED","modality":"Monoclonal Antibody (mAb)","conditions":["Non-Hodgkin's Lymphoma"],"interventions":["Obinutuzumab","Cyclophosphamide","Doxorubicin","Vincristine","Prednisone","Bendamustine","Rituximab"],"primaryOutcomes":[{"measure":"Progression-Free Survival in the Follicular Lymphoma Population, Investigator-Assessed","description":"Progression-free survival in participants with follicular lymphoma was defined as the time from randomization until the first documented day of disease progression or death from any cause, whichever occurred first, on the basis of investigator assessments according to the Revised Response Criteria for Malignant Lymphoma. Progression was defined as at least 50% increase in nodal lesions or \\>/=50% increase in any node \\> 1 centimeter (cm) or \\>/= 50% increase in other target measurable lesions (e.g., splenic or hepatic nodules) and/or appearance of any new bone marrow involvement and/or appearance of any new lesion \\> 1.5 cm or \\>/= 50% increase in any previously involved node with a diameter \\</= 1 cm such that it is now \\>1.5 cm. Tumor measurements were obtained by computed tomography (CT) or magnetic resonance imaging (MRI).","timeFrame":"Baseline up to data cut-off (up to approximately 4 years and 7 months)"}],"completionDate":"2021-07-30","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "A Study of Obinutuzumab (RO5072759) Plus Chemotherapy in Comparison With Rituximab Plus Chemotherapy Followed by Obinutuzumab or Rituximab Maintenance in Patients With Untreated Advanced Indolent Non-Hodgkin&amp;#39;s Lymphoma (GALLIUM). ClinicalTrials.gov Identifier: NCT01332968. Primary Sponsor: Hoffmann-La Roche. Available at: https://clinsight.pract.eu/trials/NCT01332968/";

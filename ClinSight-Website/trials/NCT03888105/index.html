@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03888105 ELM-2 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2 · Modality: Bispecific Antibodies &amp; T-Cell Engagers · Sponsor: Regeneron Pharmaceuticals">
+    <meta property="og:description" content="Phase: Phase 2 · Modality: Bispecific · Sponsor: Regeneron Pharmaceuticals">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03888105/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ELM-2 (NCT03888105): A Study to Assess the Anti-Tumor Activity and Safety of Odronextamab in Adult Patients With B-cell Non-Hodgkin Lymphoma Who Have Been Previously Treated With Other Cancer Therapies","url":"https://clinsight.pract.eu/trials/NCT03888105/","studySubject":{"@type":"MedicalCondition","name":"B-cell Non-Hodgkin Lymphoma (B-NHL)"},"sponsor":"Regeneron Pharmaceuticals","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ELM-2 (NCT03888105)","item":"https://clinsight.pract.eu/trials/NCT03888105/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03888105 (ELM-2)?","acceptedAnswer":{"@type":"Answer","text":"NCT03888105 is a Phase 2 study sponsored by Regeneron Pharmaceuticals evaluating Bispecific Antibodies &amp; T-Cell Engagers in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03888105?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03888105."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ELM-2 (NCT03888105): A Study to Assess the Anti-Tumor Activity and Safety of Odronextamab in Adult Patients With B-cell Non-Hodgkin Lymphoma Who Have Been Previously Treated With Other Cancer Therapies","url":"https://clinsight.pract.eu/trials/NCT03888105/","studySubject":{"@type":"MedicalCondition","name":"B-cell Non-Hodgkin Lymphoma (B-NHL)"},"sponsor":"Regeneron Pharmaceuticals","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ELM-2 (NCT03888105)","item":"https://clinsight.pract.eu/trials/NCT03888105/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03888105 (ELM-2)?","acceptedAnswer":{"@type":"Answer","text":"NCT03888105 is a Phase 2 study sponsored by Regeneron Pharmaceuticals evaluating Bispecific in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03888105?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03888105."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03888105</span>
             <span class="badge phase">Phase 2</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Bispecific Antibodies &amp; T-Cell Engagers</span>
+            <span class="badge modality">Bispecific</span>
+            
         </div>
 
         <h1>ELM-2: A Study to Assess the Anti-Tumor Activity and Safety of Odronextamab in Adult Patients With B-cell Non-Hodgkin Lymphoma Who Have Been Previously Treated With Other Cancer Therapies</h1>
         <p class="lead">An Open-Label Study to Assess the Anti-Tumor Activity and Safety of REGN1979, an Anti-CD20 x Anti-CD3 Bispecific Antibody, in Patients With Relapsed or Refractory B-cell Non-Hodgkin Lymphoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41766170/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41766170)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41766170 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Odronextamab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Odronextamab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for B-cell Non-Hodgkin Lymphoma (B-NHL)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>For the FL grade 1-3a cohort only: Central histopathologic confirmation of the FL Grade 1 to 3a diagnosis must be obtained before study enrollment. Patients with FL grade 3b are ineligible for this cohort but may be included in the &quot;other B-NHL&quot; cohort. Follicular lymphoma subtyping is based on the World Health Organization (WHO) classification (Swerdlow, 2017)</li><li>Disease-specific cohorts:<br><br>   Patients should in the judgment of the investigator require systemic therapy for lymphoma at the time of study enrollment<br>   * FL grade 1-3a cohort: Patients with FL grade 1-3a that has relapsed after or is refractory to at least 2 prior lines of systemic therapy, as defined in the protocol<br>   * DLBCL cohort: Patients with DLBCL that has relapsed after or is refractory to at least 2 prior lines of systemic therapy as defined in the protocol<br>   * MCL after BTK inhibitor therapy cohort: Patients with MCL who have relapsed or refractory disease to at least one prior line of systemic therapy and had prior treatment with a Bruton&#39;s tyrosine kinase (BTK) inhibitor<br>   * MZL cohort: Patients with MZL that have relapsed or is refractory to at least 2 prior lines of systemic therapy<br>   * Other B-NHL cohort: Patients with B-NHL other than FL grade 1-3a, DLBCL, MCL, or MZL that has relapsed after or is refractory to at least 2 prior lines of systemic therapy as defined in the protocol. New enrollment stopped for patients with Burkitt lymphoma and Burkitt-like lymphoma.</li><li>Measurable disease on cross sectional imaging as defined in the protocol documented by diagnostic imaging (computed tomography (CT), or magnetic resonance imaging (MRI)</li><li>Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1</li><li>Adequate bone marrow, hepatic, and renal function as defined in the protocol<br><br>Key</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Primary central nervous system (CNS) lymphoma or known involvement by non-primary CNS Non-Hodgkin Lymphoma (NHL) (suspected CNS lymphoma should be evaluated by lumbar puncture, as appropriate, in addition to the mandatory head CT or MRI)</li><li>Treatment with any systemic anti-lymphoma therapy within 5 half-lives or within 28 days prior to first administration of study drug, whichever is shorter</li><li>History of allogeneic stem cell transplantation, up to 12 months prior to first administration of study drug. The presence of acute or chronic graft-versus host disease (GVHD) will also be an exclusion</li><li>Continuous systemic corticosteroid treatment with more than 10 mg per day of prednisone or anti-inflammatory equivalent within 72 hours of start of study drug</li><li>History of neurodegenerative condition or CNS movement disorder. Patients with a history of seizure within 12 months prior to study enrollment are excluded</li><li>Another malignancy except B-NHL in the past 5 years, with the exception of non-melanoma skin cancer that has undergone potentially curative therapy or in situ cervical carcinoma, or any other tumor that has been deemed to be effectively treated with definitive local control and with curative intent</li><li>Uncontrolled infection with human immunodeficiency virus (HIV), hepatitis B or hepatitis C infection; cytomegalovirus (CMV) infection as noted by detectable levels on a blood polymerase chain reaction (PCR) assay as defined in the protocol or other uncontrolled infections</li><li>Known hypersensitivity to both allopurinol and rasburicase</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03888105" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03888105" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03888105" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03888105)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41766170/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41766170)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03888105" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific Antibodies &amp; T-Cell Engagers</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03888105","acronym":"ELM-2","briefTitle":"A Study to Assess the Anti-Tumor Activity and Safety of Odronextamab in Adult Patients With B-cell Non-Hodgkin Lymphoma Who Have Been Previously Treated With Other Cancer Therapies","officialTitle":"An Open-Label Study to Assess the Anti-Tumor Activity and Safety of REGN1979, an Anti-CD20 x Anti-CD3 Bispecific Antibody, in Patients With Relapsed or Refractory B-cell Non-Hodgkin Lymphoma","sponsor":"Regeneron Pharmaceuticals","phase":"Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific Antibodies & T-Cell Engagers","conditions":["B-cell Non-Hodgkin Lymphoma (B-NHL)"],"interventions":["Odronextamab"],"primaryOutcomes":[{"measure":"Objective Response Rate (ORR), as assessed by independent central review","description":"FL grade 1-3a/MZL","timeFrame":"Up to 52 weeks of study treatment"},{"measure":"ORR, as assessed by independent central review","description":"DLBCL/MCL/Other B-NHL","timeFrame":"Up to 36 weeks of study treatment"}],"completionDate":"2028-12-15","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03888105","acronym":"ELM-2","briefTitle":"A Study to Assess the Anti-Tumor Activity and Safety of Odronextamab in Adult Patients With B-cell Non-Hodgkin Lymphoma Who Have Been Previously Treated With Other Cancer Therapies","officialTitle":"An Open-Label Study to Assess the Anti-Tumor Activity and Safety of REGN1979, an Anti-CD20 x Anti-CD3 Bispecific Antibody, in Patients With Relapsed or Refractory B-cell Non-Hodgkin Lymphoma","sponsor":"Regeneron Pharmaceuticals","phase":"Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific","conditions":["B-cell Non-Hodgkin Lymphoma (B-NHL)"],"interventions":["Odronextamab"],"primaryOutcomes":[{"measure":"Objective Response Rate (ORR), as assessed by independent central review","description":"FL grade 1-3a/MZL","timeFrame":"Up to 52 weeks of study treatment"},{"measure":"ORR, as assessed by independent central review","description":"DLBCL/MCL/Other B-NHL","timeFrame":"Up to 36 weeks of study treatment"}],"completionDate":"2028-12-15","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "ELM-2. A Study to Assess the Anti-Tumor Activity and Safety of Odronextamab in Adult Patients With B-cell Non-Hodgkin Lymphoma Who Have Been Previously Treated With Other Cancer Therapies. ClinicalTrials.gov Identifier: NCT03888105. Primary Sponsor: Regeneron Pharmaceuticals. Available at: https://clinsight.pract.eu/trials/NCT03888105/";

@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04222972 AcceleRET-Lung — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Immuno-Oncology (Checkpoint Inhibitor) · Sponsor: Hoffmann-La Roche">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Checkpoint · Sponsor: Hoffmann-La Roche">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04222972/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"AcceleRET-Lung (NCT04222972): A Study of Pralsetinib Versus Standard of Care for First-Line Treatment of Advanced Non-Small Cell Lung Cancer (NSCLC)","url":"https://clinsight.pract.eu/trials/NCT04222972/","studySubject":{"@type":"MedicalCondition","name":"RET-fusion Non Small Cell Lung Cancer"},"sponsor":"Hoffmann-La Roche","status":"TERMINATED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"AcceleRET-Lung (NCT04222972)","item":"https://clinsight.pract.eu/trials/NCT04222972/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04222972 (AcceleRET-Lung)?","acceptedAnswer":{"@type":"Answer","text":"NCT04222972 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating Immuno-Oncology (Checkpoint Inhibitor) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04222972?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04222972."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"AcceleRET-Lung (NCT04222972): A Study of Pralsetinib Versus Standard of Care for First-Line Treatment of Advanced Non-Small Cell Lung Cancer (NSCLC)","url":"https://clinsight.pract.eu/trials/NCT04222972/","studySubject":{"@type":"MedicalCondition","name":"RET-fusion Non Small Cell Lung Cancer"},"sponsor":"Hoffmann-La Roche","status":"TERMINATED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"AcceleRET-Lung (NCT04222972)","item":"https://clinsight.pract.eu/trials/NCT04222972/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04222972 (AcceleRET-Lung)?","acceptedAnswer":{"@type":"Answer","text":"NCT04222972 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating Checkpoint in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04222972?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04222972."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -542,25 +594,33 @@
         <div class="badge-row">
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04222972</span>
             <span class="badge phase">Phase 3</span>
-            <span class="badge status ">TERMINATED</span>
-            <span class="badge modality">Immuno-Oncology (Checkpoint Inhibitor)</span>
+            <span class="badge status completed">TERMINATED</span>
+            <span class="badge modality">Checkpoint</span>
+            
         </div>
 
         <h1>AcceleRET-Lung: A Study of Pralsetinib Versus Standard of Care for First-Line Treatment of Advanced Non-Small Cell Lung Cancer (NSCLC)</h1>
         <p class="lead">A Phase III, Randomized, Open-Label Study of Pralsetinib Versus Standard of Care for First-Line Treatment of RET Fusion-Positive, Metastatic Non-Small Cell Lung Cancer</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/72/NCT04222972/Prot_SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            
+            <a href="https://clinicaltrials.gov/study/NCT04222972?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Pralsetinib" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Pralsetinib) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +662,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for RET-fusion Non Small Cell Lung Cancer, Lung Neoplasm, Carcinoma, Non-Small-Cell Lung, Respiratory Tract Neoplasms, Thoracic Neoplasms, Neoplasms by Site, Neoplasms, Lung Diseases, Respiratory Tract Disease, Carcinoma, Bronchogenic, Bronchial Diseases, Head and Neck Neoplasms, Adenocarcinoma, Carcinoma, Neoplasms by Histologic Type, Neoplasms, Germ Cell and Embryonal, Neoplasms, Nerve Tissue</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Participant has pathologically confirmed, definitively diagnosed, locally advanced (not able to be treated with surgery or radiotherapy) or metastatic NSCLC and has not been treated with systemic anticancer therapy for metastatic disease.</li><li>Participant must have a documented RET-fusion</li><li>Participant has measurable disease based on RECIST 1.1 as determined by the local site Investigator/radiology assessment.</li><li>Participant has an ECOG Performance Status of 0 or 1.</li><li>Participant should not have received any prior anticancer therapy for metastatic disease.<br><br>  * Participants can have received previous anticancer therapy (except a selective RET inhibitor) in the neoadjuvant or adjuvant setting but must have experienced an interval of at least ≥ 6 months from completion of therapy to recurrence.<br>  * Participants that received previous immune checkpoint inhibitors in the adjuvant or consolidation following chemoradiation are not allowed to receive pembrolizumab if randomized in Arm B</li><li>Participant is an appropriate candidate for and agrees to receive 1 of the Investigator choice platinum-based chemotherapy regimens if randomized to Arm B.</li><li>For women of childbearing potential: participants who agree to remain abstinent (refrain from heterosexual intercourse) or use contraception.</li><li>For men: participants who agree to remain abstinent (refrain from heterosexual intercourse) or use a condom and agree to refrain from donating sperm.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Participant&#39;s tumor has any additional known primary driver alterations other than RET, such as targetable mutations of EGFR, ALK, ROS1, MET, and BRAF. Investigators should discuss enrollment with Sponsor designee regarding co-mutations.</li><li>Participant previously received treatment with a selective RET inhibitor.</li><li>Participant received radiotherapy or radiosurgery to any site within 14 days before randomization or more than 30 Gy of radiotherapy to the lung in the 6 months before randomization.</li><li>Participant with a history of pneumonitis within the last 12 months.</li><li>Participant has CNS metastases or a primary CNS tumor that is associated with progressive neurological symptoms or requires increasing doses of corticosteroids to control the CNS disease. If a participant requires corticosteroids for management of CNS disease, the dose must have been stable for the 2 weeks before Cycle 1 Day 1.</li><li>Participant has had a history of another primary malignancy that has been diagnosed or required therapy within the past 3 years prior to randomization.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +688,19 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04222972" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04222972" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/72/NCT04222972/Prot_SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                
+                <a href="https://clinicaltrials.gov/study/NCT04222972?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04222972" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04222972)
                 </a>
@@ -647,7 +713,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Immuno-Oncology (Checkpoint Inhibitor)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Checkpoint</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +763,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04222972","acronym":"AcceleRET-Lung","briefTitle":"A Study of Pralsetinib Versus Standard of Care for First-Line Treatment of Advanced Non-Small Cell Lung Cancer (NSCLC)","officialTitle":"A Phase III, Randomized, Open-Label Study of Pralsetinib Versus Standard of Care for First-Line Treatment of RET Fusion-Positive, Metastatic Non-Small Cell Lung Cancer","sponsor":"Hoffmann-La Roche","phase":"Phase 3","status":"TERMINATED","modality":"Immuno-Oncology (Checkpoint Inhibitor)","conditions":["RET-fusion Non Small Cell Lung Cancer","Lung Neoplasm","Carcinoma, Non-Small-Cell Lung","Respiratory Tract Neoplasms","Thoracic Neoplasms","Neoplasms by Site","Neoplasms","Lung Diseases","Respiratory Tract Disease","Carcinoma, Bronchogenic","Bronchial Diseases","Head and Neck Neoplasms","Adenocarcinoma","Carcinoma","Neoplasms by Histologic Type","Neoplasms, Germ Cell and Embryonal","Neoplasms, Nerve Tissue"],"interventions":["Pralsetinib","Carboplatin","Cisplatin","Pemetrexed","Pembrolizumab","Gemcitabine","Paclitaxel","Nab-Paclitaxel"],"primaryOutcomes":[{"measure":"Arm A vs Arm B: Treatment Period: Progression-free Survival (PFS)","description":"PFS was defined as the time from randomization to the date of first documented PD as determined by the investigator with the use of Response Evaluation Criteria in Solid Tumors, Version 1.1 (RECIST v1.1) or death from any cause, whichever occurred first. PD was defined as at least a 20% increase in the sum of diameters (SOD) of target lesions, taking as reference the smallest SOD at prior timepoints, including baseline. In addition to the relative increase of 20%, the SOD must also demonstrate an absolute increase of at least 5 millimeters (mm). Kaplan-Meier (K-M) method was used to estimate median PFS. 95% CI for median was computed using the method of Brookmeyer and Crowley.","timeFrame":"Up to approximately 50 months"}],"completionDate":"2025-01-27","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04222972","acronym":"AcceleRET-Lung","briefTitle":"A Study of Pralsetinib Versus Standard of Care for First-Line Treatment of Advanced Non-Small Cell Lung Cancer (NSCLC)","officialTitle":"A Phase III, Randomized, Open-Label Study of Pralsetinib Versus Standard of Care for First-Line Treatment of RET Fusion-Positive, Metastatic Non-Small Cell Lung Cancer","sponsor":"Hoffmann-La Roche","phase":"Phase 3","status":"TERMINATED","modality":"Checkpoint","conditions":["RET-fusion Non Small Cell Lung Cancer","Lung Neoplasm","Carcinoma, Non-Small-Cell Lung","Respiratory Tract Neoplasms","Thoracic Neoplasms","Neoplasms by Site","Neoplasms","Lung Diseases","Respiratory Tract Disease","Carcinoma, Bronchogenic","Bronchial Diseases","Head and Neck Neoplasms","Adenocarcinoma","Carcinoma","Neoplasms by Histologic Type","Neoplasms, Germ Cell and Embryonal","Neoplasms, Nerve Tissue"],"interventions":["Pralsetinib","Carboplatin","Cisplatin","Pemetrexed","Pembrolizumab","Gemcitabine","Paclitaxel","Nab-Paclitaxel"],"primaryOutcomes":[{"measure":"Arm A vs Arm B: Treatment Period: Progression-free Survival (PFS)","description":"PFS was defined as the time from randomization to the date of first documented PD as determined by the investigator with the use of Response Evaluation Criteria in Solid Tumors, Version 1.1 (RECIST v1.1) or death from any cause, whichever occurred first. PD was defined as at least a 20% increase in the sum of diameters (SOD) of target lesions, taking as reference the smallest SOD at prior timepoints, including baseline. In addition to the relative increase of 20%, the SOD must also demonstrate an absolute increase of at least 5 millimeters (mm). Kaplan-Meier (K-M) method was used to estimate median PFS. 95% CI for median was computed using the method of Brookmeyer and Crowley.","timeFrame":"Up to approximately 50 months"}],"completionDate":"2025-01-27","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "AcceleRET-Lung. A Study of Pralsetinib Versus Standard of Care for First-Line Treatment of Advanced Non-Small Cell Lung Cancer (NSCLC). ClinicalTrials.gov Identifier: NCT04222972. Primary Sponsor: Hoffmann-La Roche. Available at: https://clinsight.pract.eu/trials/NCT04222972/";

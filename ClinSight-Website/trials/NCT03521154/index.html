@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03521154 LAURA — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Therapy (Small Molecule / TKI) · Sponsor: AstraZeneca">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: AstraZeneca">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03521154/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"LAURA (NCT03521154): A Global Study to Assess the Effects of Osimertinib Following Chemoradiation in Patients With Stage III Unresectable Non-small Cell Lung Cancer (LAURA)","url":"https://clinsight.pract.eu/trials/NCT03521154/","studySubject":{"@type":"MedicalCondition","name":"Non Small Cell Lung Cancer (Stage III)"},"sponsor":"AstraZeneca","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"LAURA (NCT03521154)","item":"https://clinsight.pract.eu/trials/NCT03521154/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03521154 (LAURA)?","acceptedAnswer":{"@type":"Answer","text":"NCT03521154 is a Phase 3 study sponsored by AstraZeneca evaluating Targeted Therapy (Small Molecule / TKI) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03521154?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03521154."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"LAURA (NCT03521154): A Global Study to Assess the Effects of Osimertinib Following Chemoradiation in Patients With Stage III Unresectable Non-small Cell Lung Cancer (LAURA)","url":"https://clinsight.pract.eu/trials/NCT03521154/","studySubject":{"@type":"MedicalCondition","name":"Non Small Cell Lung Cancer (Stage III)"},"sponsor":"AstraZeneca","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"LAURA (NCT03521154)","item":"https://clinsight.pract.eu/trials/NCT03521154/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03521154 (LAURA)?","acceptedAnswer":{"@type":"Answer","text":"NCT03521154 is a Phase 3 study sponsored by AstraZeneca evaluating TKI / Small Molecule in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03521154?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03521154."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03521154</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Targeted Therapy (Small Molecule / TKI)</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>LAURA: A Global Study to Assess the Effects of Osimertinib Following Chemoradiation in Patients With Stage III Unresectable Non-small Cell Lung Cancer (LAURA)</h1>
         <p class="lead">A Phase III, Randomized, Double-blind, Placebo-controlled, Multicenter, International Study of Osimertinib as Maintenance Therapy in Patients With Locally Advanced, Unresectable EGFR Mutation-positive Non-Small Cell Lung Cancer (Stage III) Whose Disease Has Not Progressed Following Definitive Platinum-based Chemoradiation Therapy (LAURA).</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/54/NCT03521154/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/54/NCT03521154/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT03521154?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42296617/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42296617)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 42296617 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Osimertinib" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Osimertinib) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,28 +668,18 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Non Small Cell Lung Cancer (Stage III)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Inclusion Criteria</li><li>Male or female aged at least 18 years.</li><li>Patients with histologically documented NSCLC of predominantly non-squamous Pathology who present with locally advanced, unresectable (Stage III) disease (according to Version 8 of the International Association for the Study of Lung Cancer \[IASLC\] Staging Manual in Thoracic Oncology).</li><li>The tumor harbours one of the two common EGFR mutations known to be associated with EGFR-TKI sensitivity (Ex19del, L858R), either alone or in combination with other EGFR mutations, assessed by cobas® EGFR Mutation Test v2 (Roche Diagnostics) or FoundationOne® test in a CLIA certified (USA sites) or an accredited local laboratory (sites outside of the USA) or by central testing (cobas® v2 only).</li><li>Patients must have received either concurrent chemoradiation or sequential chemoradiation including at least 2 cycles of platinum based chemotherapy and a total dose of radiation of 60 Gy ±10% (54 to 66 Gy).</li><li>Chemoradiation must be completed ≤6 weeks prior to randomization.</li><li>Patients must not have had disease progression during or following definitive platinum-based, chemoradiation therapy.</li><li>World Health Organization (WHO) performance status of 0 or 1.</li>
                     </ul>
                 </div>
-                <div class="criteria-box">
-                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
-                    <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
 
@@ -632,11 +688,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03521154" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03521154" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03521154" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03521154)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/54/NCT03521154/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/54/NCT03521154/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT03521154?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/42296617/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 42296617)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03521154" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +716,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Therapy (Small Molecule / TKI)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +766,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03521154","acronym":"LAURA","briefTitle":"A Global Study to Assess the Effects of Osimertinib Following Chemoradiation in Patients With Stage III Unresectable Non-small Cell Lung Cancer (LAURA)","officialTitle":"A Phase III, Randomized, Double-blind, Placebo-controlled, Multicenter, International Study of Osimertinib as Maintenance Therapy in Patients With Locally Advanced, Unresectable EGFR Mutation-positive Non-Small Cell Lung Cancer (Stage III) Whose Disease Has Not Progressed Following Definitive Platinum-based Chemoradiation Therapy (LAURA).","sponsor":"AstraZeneca","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Non Small Cell Lung Cancer (Stage III)"],"interventions":["Osimertinib 80mg/40mg","Placebo Osimertinib 80mg/40mg"],"primaryOutcomes":[{"measure":"Progression-free Survival (PFS) by Blinded Independent Central Review (BICR)","description":"Time from randomisation until the date of objective disease progression or death (by any cause in the absence of progression) regardless of whether the patient withdraws from randomised therapy or receives another anti-cancer therapy prior to progression, based on BICR assessment according to RECIST v1.1","timeFrame":"Every 8 weeks for first 48 weeks, then every 12 weeks until BICR-confirmed radiological disease progression. Assessed up to date of DCO (05Jan24) to a maximum of approximately 63 months"}],"completionDate":"2027-10-29","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03521154","acronym":"LAURA","briefTitle":"A Global Study to Assess the Effects of Osimertinib Following Chemoradiation in Patients With Stage III Unresectable Non-small Cell Lung Cancer (LAURA)","officialTitle":"A Phase III, Randomized, Double-blind, Placebo-controlled, Multicenter, International Study of Osimertinib as Maintenance Therapy in Patients With Locally Advanced, Unresectable EGFR Mutation-positive Non-Small Cell Lung Cancer (Stage III) Whose Disease Has Not Progressed Following Definitive Platinum-based Chemoradiation Therapy (LAURA).","sponsor":"AstraZeneca","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"TKI / Small Molecule","conditions":["Non Small Cell Lung Cancer (Stage III)"],"interventions":["Osimertinib 80mg/40mg","Placebo Osimertinib 80mg/40mg"],"primaryOutcomes":[{"measure":"Progression-free Survival (PFS) by Blinded Independent Central Review (BICR)","description":"Time from randomisation until the date of objective disease progression or death (by any cause in the absence of progression) regardless of whether the patient withdraws from randomised therapy or receives another anti-cancer therapy prior to progression, based on BICR assessment according to RECIST v1.1","timeFrame":"Every 8 weeks for first 48 weeks, then every 12 weeks until BICR-confirmed radiological disease progression. Assessed up to date of DCO (05Jan24) to a maximum of approximately 63 months"}],"completionDate":"2027-10-29","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "LAURA. A Global Study to Assess the Effects of Osimertinib Following Chemoradiation in Patients With Stage III Unresectable Non-small Cell Lung Cancer (LAURA). ClinicalTrials.gov Identifier: NCT03521154. Primary Sponsor: AstraZeneca. Available at: https://clinsight.pract.eu/trials/NCT03521154/";

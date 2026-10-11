@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04885634 SOCRATES-AF — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Incretin Mimetics (GLP-1 / GIP) · Sponsor: Axel Brandes">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: GLP-1 · Sponsor: Axel Brandes">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04885634/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"SOCRATES-AF (NCT04885634): Semaglutide for the Reduction of Arrhythmia Burden in Overweight AF Patients","url":"https://clinsight.pract.eu/trials/NCT04885634/","studySubject":{"@type":"MedicalCondition","name":"Atrial Fibrillation"},"sponsor":"Axel Brandes","status":"WITHDRAWN","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"SOCRATES-AF (NCT04885634)","item":"https://clinsight.pract.eu/trials/NCT04885634/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04885634 (SOCRATES-AF)?","acceptedAnswer":{"@type":"Answer","text":"NCT04885634 is a Phase 3 study sponsored by Axel Brandes evaluating Incretin Mimetics (GLP-1 / GIP) in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04885634?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04885634."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"SOCRATES-AF (NCT04885634): Semaglutide for the Reduction of Arrhythmia Burden in Overweight AF Patients","url":"https://clinsight.pract.eu/trials/NCT04885634/","studySubject":{"@type":"MedicalCondition","name":"Atrial Fibrillation"},"sponsor":"Axel Brandes","status":"WITHDRAWN","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"SOCRATES-AF (NCT04885634)","item":"https://clinsight.pract.eu/trials/NCT04885634/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04885634 (SOCRATES-AF)?","acceptedAnswer":{"@type":"Answer","text":"NCT04885634 is a Phase 3 study sponsored by Axel Brandes evaluating GLP-1 in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04885634?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04885634."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04885634</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">WITHDRAWN</span>
-            <span class="badge modality">Incretin Mimetics (GLP-1 / GIP)</span>
+            <span class="badge modality">GLP-1</span>
+            
         </div>
 
         <h1>SOCRATES-AF: Semaglutide for the Reduction of Arrhythmia Burden in Overweight AF Patients</h1>
         <p class="lead">Semaglutide for the Reduction of Arrhythmia Burden in Overweight and Obese Patients With Atrial Fibrillation (Pilot Study)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Semaglutide" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Semaglutide) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Atrial Fibrillation, Overweight and Obesity</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Signed informed consent before any study-related activity</li><li>≥ 18 years of age at the time of signing informed consent</li><li>Body mass index (BMI) ≥ 30 kg/m2</li><li>Body mass index (BMI) ≥ 27 kg/m2 and at least 1 concomitant cardiometabolic risk factor (hypertension, dyslipidemia, or obstructive sleep apnea)</li><li>Symptomatic paroxysmal or early persistent atrial fibrillation (Paroxysmal AF: Self- terminating, in most cases within 48 hours up to 7 days. AF episodes that are cardioverted within 7 days with a documented 12 lead ECG showing sinus rhythm within the last 12 months; early persistent AF: AF episodes lasting longer than 7 days, including episodes that are terminated by cardioversion, either with drugs or by direct current cardioversion, after 7 days or more. Early persistent AF in this trial is defined as persistent AF with first-time electrical cardioversion (ECV) or a maximum of 1 previous ECVs.)</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>General exclusion criteria<br><br>  * Age ≥75 years<br>  * History of type 1 or 2 diabetes (history of gestational diabetes is allowed)<br>  * Known or suspected hypersensitivity to study medication or related products<br>  * Treatment with GLP-1 receptor agonists within the last 3 months before randomisation<br>  * Treatment with dipeptidyl peptidase-4 (DPP-4) inhibitors<br>  * Alcohol/drug abuse<br>  * Pregnant or breastfeeding women<br>  * Fertile women not using chemical (tablet/pill, depot injection of progesterone, sub- dermal gestagen implantation, hormonal vaginal ring or transdermal hormonal patch) or mechanical (spirals) contraceptives<br>  * Active malignancy, unless in complete remission for ≥5 years<br>  * Family or personal history of multiple endocrine neoplasia type 2 (MEN2) or familial medullary thyroid carcinoma (FMTC)<br>  * Personal history of non-familial medullary thyroid carcinoma<br>  * Inflammatory bowel diseases<br>  * Acute or chronic pancreatitis<br>  * Obesity induced by other endocrinologic disorders (e.g. Cushing&#39;s Syndrome)<br>  * Current history of treatment with medications that may cause significant weight gain, within the last 3 months before screening, including systemic corticosteroids (except for a short course of treatment, i.e. 7-10 days), tri-cyclic antidepressants, atypical antipsychotic and mood stabilizers (e.g. imipramine, amitriptyline, mirtazapine, paroxetine, phenelzine, chlorpromazine, thioridazine, clozapine, olanzapine, valproic acid and its derivatives, and lithium)<br>  * Diet attempts using herbal supplements or over-the-counter medications within 3 months before screening<br>  * Current participation (or within the last 3 months) in an organised weight reduction programme or currently using or used within 3 months before screening: pramlintide, sibutramine, orlistat, zonisamide, topiramate, phentermine (either by prescription or as part of a clinical trial)<br>  * Severe chronic obstructive pulmonary disease<br>  * Uncontrolled treated/untreated hypertension (systolic \&gt;180 mmHg and/or diastolic \&gt;105 mmHg)<br>  * Previous or planned surgical treatment for obesity<br>  * Life expectancy \&lt;2.5 years<br>  * Other concomitant disease or treatment that according to the investigator&#39;s assessment makes the subject unsuitable for study participation<br>  * Participation in any other clinical intervention trial<br>  * Previous participation in the SOCRATES-AF pilot study<br>  * Inability to sign informed consent</li><li>Exclusion criteria related to a cardiac condition<br><br>  * Previous or planned AF ablation<br>  * Previous use of continuous prophylactic class I or III antiarrhythmic drugs<br>  * Long-standing persistent or permanent AF<br>  * Overall clinical history of persistent AF ≥5 years<br>  * ECG suggestive of malignant ventricular arrhythmia<br>  * Prolonged corrected QT-interval (\&gt;500 ms), unless caused by bundle branch block<br>  * Myocardial infarction (MI) within the last 3 months before screening<br>  * Coronary revascularization within the last 3 months before screening<br>  * Planned coronary revascularisation<br>  * Cardiac surgery within the last 12 months before screening<br>  * Obstructive hypertrophic cardiomyopathy<br>  * Clinically significant valvular heart disease<br>  * Left ventricular (LV) dysfunction (HFrEF with left ventricular ejection fraction (LVEF) \&lt;45%) unless elicited by AF<br>  * Hospitalization due to decompensated heart disease within 30 days prior to randomization<br>  * Congestive heart failure (NYHA class IV)<br>  * Current myocardial or pericardial infection<br>  * Permanent pacemaker (PM) in use or implantable cardioverter defibrillator (ICD)<br>  * Patient cannot be prescribed non-vitamin K oral anticoagulant (NOAC)<br>  * perform physical exercise for medical or personal reasons</li><li>Exclusion criteria based on laboratory abnormalities<br><br>  * Liver disease with increased plasma alanine aminotransferase (ALAT) levels of more than three times the upper limit of normal<br>  * Renal dysfunction (eGFR \&lt;30 ml/min), dialysis or kidney transplant<br>  * Clinically manifest thyroid dysfunction requiring therapy. After successful treatment of thyroid dysfunction, subjects may be enrolled, when thyroid function is controlled.<br>  * HbA1c \&gt;6.5% measured at screening</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04885634" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04885634" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04885634" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04885634)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Incretin Mimetics (GLP-1 / GIP)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in GLP-1</div>
             <div class="related-grid">
                 
                 <a href="../NCT03574597/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04885634","acronym":"SOCRATES-AF","briefTitle":"Semaglutide for the Reduction of Arrhythmia Burden in Overweight AF Patients","officialTitle":"Semaglutide for the Reduction of Arrhythmia Burden in Overweight and Obese Patients With Atrial Fibrillation (Pilot Study)","sponsor":"Axel Brandes","phase":"Phase 3","status":"WITHDRAWN","modality":"Incretin Mimetics (GLP-1 / GIP)","conditions":["Atrial Fibrillation","Overweight and Obesity"],"interventions":["Semaglutide Injectable Product","Placebo"],"primaryOutcomes":[{"measure":"Number of Participants to Complete Recruitment","description":"Recruit 100 patients at an average recruitment rate of 2 patients per centre per month","timeFrame":"Up to 68 weeks, until end of treatment"},{"measure":"Number of Participants to Complete Follow-up","description":"Achieve complete follow-up on 90% or more of patients","timeFrame":"Up to 75 weeks, until final follow-up"},{"measure":"Total Resource Requirement","description":"Determine the resource requirements, i.e. primarily time spent per included patient, to achieve the recruitment and follow-up goals","timeFrame":"Up to 75 weeks, until final follow-up"}],"completionDate":"2024-11","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04885634","acronym":"SOCRATES-AF","briefTitle":"Semaglutide for the Reduction of Arrhythmia Burden in Overweight AF Patients","officialTitle":"Semaglutide for the Reduction of Arrhythmia Burden in Overweight and Obese Patients With Atrial Fibrillation (Pilot Study)","sponsor":"Axel Brandes","phase":"Phase 3","status":"WITHDRAWN","modality":"GLP-1","conditions":["Atrial Fibrillation","Overweight and Obesity"],"interventions":["Semaglutide Injectable Product","Placebo"],"primaryOutcomes":[{"measure":"Number of Participants to Complete Recruitment","description":"Recruit 100 patients at an average recruitment rate of 2 patients per centre per month","timeFrame":"Up to 68 weeks, until end of treatment"},{"measure":"Number of Participants to Complete Follow-up","description":"Achieve complete follow-up on 90% or more of patients","timeFrame":"Up to 75 weeks, until final follow-up"},{"measure":"Total Resource Requirement","description":"Determine the resource requirements, i.e. primarily time spent per included patient, to achieve the recruitment and follow-up goals","timeFrame":"Up to 75 weeks, until final follow-up"}],"completionDate":"2024-11","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "SOCRATES-AF. Semaglutide for the Reduction of Arrhythmia Burden in Overweight AF Patients. ClinicalTrials.gov Identifier: NCT04885634. Primary Sponsor: Axel Brandes. Available at: https://clinsight.pract.eu/trials/NCT04885634/";

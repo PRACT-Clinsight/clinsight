@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03275285 IKEMA — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Monoclonal Antibodies · Sponsor: Sanofi">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: Sanofi">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03275285/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"IKEMA (NCT03275285): Multinational Clinical Study Comparing Isatuximab, Carfilzomib And Dexamethasone To Carfilzomib And Dexamethasone In Relapse And/Or Refractory Multiple Myeloma Patients","url":"https://clinsight.pract.eu/trials/NCT03275285/","studySubject":{"@type":"MedicalCondition","name":"Plasma Cell Myeloma"},"sponsor":"Sanofi","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"IKEMA (NCT03275285)","item":"https://clinsight.pract.eu/trials/NCT03275285/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03275285 (IKEMA)?","acceptedAnswer":{"@type":"Answer","text":"NCT03275285 is a Phase 3 study sponsored by Sanofi evaluating Targeted Monoclonal Antibodies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03275285?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03275285."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"IKEMA (NCT03275285): Multinational Clinical Study Comparing Isatuximab, Carfilzomib And Dexamethasone To Carfilzomib And Dexamethasone In Relapse And/Or Refractory Multiple Myeloma Patients","url":"https://clinsight.pract.eu/trials/NCT03275285/","studySubject":{"@type":"MedicalCondition","name":"Plasma Cell Myeloma"},"sponsor":"Sanofi","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"IKEMA (NCT03275285)","item":"https://clinsight.pract.eu/trials/NCT03275285/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03275285 (IKEMA)?","acceptedAnswer":{"@type":"Answer","text":"NCT03275285 is a Phase 3 study sponsored by Sanofi evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03275285?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03275285."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03275285</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Monoclonal Antibodies</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>IKEMA: Multinational Clinical Study Comparing Isatuximab, Carfilzomib And Dexamethasone To Carfilzomib And Dexamethasone In Relapse And/Or Refractory Multiple Myeloma Patients</h1>
         <p class="lead">Randomized, Open Label, Multicenter Study Assessing The Clinical Benefit Of Isatuximab Combined With Carfilzomib (Kyprolis®) And Dexamethasone Versus Carfilzomib With Dexamethasone In Patients With Relapse And/Or Refractory Multiple Myeloma Previously Treated With 1 to 3 Prior Lines</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/85/NCT03275285/Prot_004.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/85/NCT03275285/SAP_005.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT03275285?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/34097854/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 34097854)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 34097854 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=isatuximab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (isatuximab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Plasma Cell Myeloma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Participants with MM previously treated with prior 1 to 3 lines and with measurable serum M-protein (\&gt;= 0.5 gram/deciliter) and/or urine M-protein (\&gt;= 200 milligram/24 hours).</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Participants previously pretreated with carfilzomib, who never achieved at least one minor response during previous therapies and/or last previous therapy completed within 14 last days.</li><li>Participants with serum free light chain (FLC) measurable disease only.</li><li>Participants less than 18 years old, participants with Eastern Cooperative Oncology Group performance status more than 2.</li><li>Participants with inadequate biological tests.</li><li>Participants with myocardial infarction, severe/unstable angina pectoris, coronary/peripheral artery bypass graft, New York Heart Association class III or IV congestive heart failure, superior or equal to grade 3 arrhythmias, stroke or transient ischemic attack within last 6 months, and/or left ventricular ejection fraction lower than 40%.</li><li>Participants with previous cancer unless disease free for more than 5 years or in situ cancer curatively treated.</li><li>Participants with known acquired immunodeficiency syndrome related illness or human immunodeficiency virus requiring antiretroviral treatment, or hepatitis A, B, or C active infection.</li><li>Women of childbearing potential or male participant with women of childbearing potential who do not agree to use highly effective method of birth control.<br><br>The above information is not intended to contain all considerations relevant to a participant&#39;s potential participation in a clinical trial.</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03275285" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03275285" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03275285" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03275285)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/85/NCT03275285/Prot_004.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/85/NCT03275285/SAP_005.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT03275285?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/34097854/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 34097854)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03275285" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Monoclonal Antibodies</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03275285","acronym":"IKEMA","briefTitle":"Multinational Clinical Study Comparing Isatuximab, Carfilzomib And Dexamethasone To Carfilzomib And Dexamethasone In Relapse And/Or Refractory Multiple Myeloma Patients","officialTitle":"Randomized, Open Label, Multicenter Study Assessing The Clinical Benefit Of Isatuximab Combined With Carfilzomib (Kyprolis®) And Dexamethasone Versus Carfilzomib With Dexamethasone In Patients With Relapse And/Or Refractory Multiple Myeloma Previously Treated With 1 to 3 Prior Lines","sponsor":"Sanofi","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Monoclonal Antibodies","conditions":["Plasma Cell Myeloma"],"interventions":["isatuximab SAR650984","carfilzomib","dexamethasone"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS) As Determined by Independent Response Committee (IRC): Primary Analysis","description":"Time (in months) from randomization to date of 1st documentation of progressive disease (PD)/date of death from any cause, whichever comes 1st. If PD \\& death are not observed before cut-off date/date of initiation of further anti-myeloma treatment, PFS was censored at date of last valid disease assessment not showing PD performed prior to initiation of further anti-myeloma treatment/cut-off date, whichever comes 1st. PD(IMWG criteria):any 1 of following:Increase(inc) of \\>=25% in serum M-component from nadir; serum M component inc \\>=1 g/dL in 2 consecutive assessment, if starting M component \\>=5 g/dL; and/or inc of \\>=25% in urine M-component from nadir and/or development of new bone lesion/soft tissue extramedullary disease/inc \\>=50% from nadir in sum of perpendicular diameters of existing soft tissue extramedullary disease lesion if \\>1 lesion/ \\>=50% increase in longest diameter of previous soft tissue extramedullary disease lesion \\>1 cm in short axis. Estimated by Kaplan-Meier method.","timeFrame":"From randomization until the primary analysis data cut-off date of 7 Feb 2020 (median duration of follow-up was 20.73 months)"},{"measure":"Progression Free Survival as Determined by Independent Response Committee: [Event Censored if Occurred >8 Weeks From Last Disease Assessment]: Primary Analysis","description":"Time (in months) from randomization to date of 1st PD documentation/death date, whichever is 1st. If PD \\& death not observed before cut-off date/date of further anti-myeloma treatment initiation, PFS censored at date of last valid disease assessment not showing PD performed prior to initiation of further anti-myeloma treatment/cut-off date, whichever was 1st. Progression/deaths occurring \\>8 weeks after last disease assessment censored at earliest date of last disease assessment without evidence of progression before initiation of new anti-myeloma treatment \\& cut-off date. PD (IMWG criteria): meeting any 1: Inc \\>=25% in Serum M-component from nadir; serum M component inc \\>=1 g/dL in 2 consecutive assessment, if starting M component \\>=5 g/dL; and/or inc \\>=25% in Urine M-component from nadir and/or development of new bone lesion/soft tissue extramedullary disease/inc \\>=50% from nadir in sum of perpendicular diameters of existing soft tissue extramedullary disease lesion \\>1 cm short axis.","timeFrame":"From randomization until the primary analysis data cut-off date of 7 Feb 2020 (the median duration of follow-up was 20.73 months)"},{"measure":"Progression Free Survival as Determined by Independent Response Committee: Final Analysis","description":"PFS: time (in months) from randomization to date of first documentation of PD or date of death from any cause, whichever comes first. If PD and death are not observed before analysis cut-off date or date of initiation of further anti-myeloma treatment, PFS was censored at date of last valid disease assessment or analysis cut-off date, whichever comes first. PD as per IMWG criteria: any 1 of following: Inc of \\>=25% in Serum M-component from nadir; serum M component increase \\>=1 g/dL in 2 consecutive assessment, if starting M component was \\>=5 g/dL; and/or inc of \\>=25% in Urine M-component from nadir and/or development of new bone lesion/soft tissue extramedullary disease/inc \\>=50% from nadir in sum of perpendicular diameters of existing soft tissue extramedullary disease lesion if \\>1 lesion/ \\>=50% inc in longest diameter of previous soft tissue extramedullary disease lesion \\>1 cm in short axis. PFS estimated by Kaplan-Meier method.","timeFrame":"From randomization until the final analysis data cut-off date of 14 January 2022 (the median duration of follow-up was 43.96 months)"},{"measure":"Progression Free Survival as Determined by Independent Response Committee [Event Censored if Occurred >8 Weeks From Last Disease Assessment]: Final Analysis","description":"Time (in months) from randomization to date of 1st documentation of PD/date of death from any cause, whichever comes 1st. If PD \\& death are not observed before cut-off date/date of initiation of further anti-myeloma treatment, PFS was censored at date of last valid disease assessment not showing PD/cut-off date, whichever comes 1st. Progressions/deaths occurring \\>8 weeks after last disease assessment were censored at earliest date of last valid disease assessment not showing PD before initiation of further anti-myeloma treatment \\& cut-off date. PD (per IMWG criteria): meeting any 1 criteria: Inc of \\>=25% in serum M-component from nadir; serum M component inc \\>=1 g/dL in 2 consecutive assessment, if starting M component was \\>=5 g/dL; and/or inc of \\>=25% in urine M-component from nadir and/or development of new bone lesion/soft tissue extramedullary disease/inc \\>=50% from nadir in sum of perpendicular diameters of existing soft tissue extramedullary disease lesion \\>1 cm in short axis.","timeFrame":"From randomization until the final analysis data cut-off date of 14 Jan 2022 (the median duration of follow-up was 43.96 months)"}],"completionDate":"2025-01-03","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03275285","acronym":"IKEMA","briefTitle":"Multinational Clinical Study Comparing Isatuximab, Carfilzomib And Dexamethasone To Carfilzomib And Dexamethasone In Relapse And/Or Refractory Multiple Myeloma Patients","officialTitle":"Randomized, Open Label, Multicenter Study Assessing The Clinical Benefit Of Isatuximab Combined With Carfilzomib (Kyprolis®) And Dexamethasone Versus Carfilzomib With Dexamethasone In Patients With Relapse And/Or Refractory Multiple Myeloma Previously Treated With 1 to 3 Prior Lines","sponsor":"Sanofi","phase":"Phase 3","status":"COMPLETED","modality":"TKI / Small Molecule","conditions":["Plasma Cell Myeloma"],"interventions":["isatuximab SAR650984","carfilzomib","dexamethasone"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS) As Determined by Independent Response Committee (IRC): Primary Analysis","description":"Time (in months) from randomization to date of 1st documentation of progressive disease (PD)/date of death from any cause, whichever comes 1st. If PD \\& death are not observed before cut-off date/date of initiation of further anti-myeloma treatment, PFS was censored at date of last valid disease assessment not showing PD performed prior to initiation of further anti-myeloma treatment/cut-off date, whichever comes 1st. PD(IMWG criteria):any 1 of following:Increase(inc) of \\>=25% in serum M-component from nadir; serum M component inc \\>=1 g/dL in 2 consecutive assessment, if starting M component \\>=5 g/dL; and/or inc of \\>=25% in urine M-component from nadir and/or development of new bone lesion/soft tissue extramedullary disease/inc \\>=50% from nadir in sum of perpendicular diameters of existing soft tissue extramedullary disease lesion if \\>1 lesion/ \\>=50% increase in longest diameter of previous soft tissue extramedullary disease lesion \\>1 cm in short axis. Estimated by Kaplan-Meier method.","timeFrame":"From randomization until the primary analysis data cut-off date of 7 Feb 2020 (median duration of follow-up was 20.73 months)"},{"measure":"Progression Free Survival as Determined by Independent Response Committee: [Event Censored if Occurred >8 Weeks From Last Disease Assessment]: Primary Analysis","description":"Time (in months) from randomization to date of 1st PD documentation/death date, whichever is 1st. If PD \\& death not observed before cut-off date/date of further anti-myeloma treatment initiation, PFS censored at date of last valid disease assessment not showing PD performed prior to initiation of further anti-myeloma treatment/cut-off date, whichever was 1st. Progression/deaths occurring \\>8 weeks after last disease assessment censored at earliest date of last disease assessment without evidence of progression before initiation of new anti-myeloma treatment \\& cut-off date. PD (IMWG criteria): meeting any 1: Inc \\>=25% in Serum M-component from nadir; serum M component inc \\>=1 g/dL in 2 consecutive assessment, if starting M component \\>=5 g/dL; and/or inc \\>=25% in Urine M-component from nadir and/or development of new bone lesion/soft tissue extramedullary disease/inc \\>=50% from nadir in sum of perpendicular diameters of existing soft tissue extramedullary disease lesion \\>1 cm short axis.","timeFrame":"From randomization until the primary analysis data cut-off date of 7 Feb 2020 (the median duration of follow-up was 20.73 months)"},{"measure":"Progression Free Survival as Determined by Independent Response Committee: Final Analysis","description":"PFS: time (in months) from randomization to date of first documentation of PD or date of death from any cause, whichever comes first. If PD and death are not observed before analysis cut-off date or date of initiation of further anti-myeloma treatment, PFS was censored at date of last valid disease assessment or analysis cut-off date, whichever comes first. PD as per IMWG criteria: any 1 of following: Inc of \\>=25% in Serum M-component from nadir; serum M component increase \\>=1 g/dL in 2 consecutive assessment, if starting M component was \\>=5 g/dL; and/or inc of \\>=25% in Urine M-component from nadir and/or development of new bone lesion/soft tissue extramedullary disease/inc \\>=50% from nadir in sum of perpendicular diameters of existing soft tissue extramedullary disease lesion if \\>1 lesion/ \\>=50% inc in longest diameter of previous soft tissue extramedullary disease lesion \\>1 cm in short axis. PFS estimated by Kaplan-Meier method.","timeFrame":"From randomization until the final analysis data cut-off date of 14 January 2022 (the median duration of follow-up was 43.96 months)"},{"measure":"Progression Free Survival as Determined by Independent Response Committee [Event Censored if Occurred >8 Weeks From Last Disease Assessment]: Final Analysis","description":"Time (in months) from randomization to date of 1st documentation of PD/date of death from any cause, whichever comes 1st. If PD \\& death are not observed before cut-off date/date of initiation of further anti-myeloma treatment, PFS was censored at date of last valid disease assessment not showing PD/cut-off date, whichever comes 1st. Progressions/deaths occurring \\>8 weeks after last disease assessment were censored at earliest date of last valid disease assessment not showing PD before initiation of further anti-myeloma treatment \\& cut-off date. PD (per IMWG criteria): meeting any 1 criteria: Inc of \\>=25% in serum M-component from nadir; serum M component inc \\>=1 g/dL in 2 consecutive assessment, if starting M component was \\>=5 g/dL; and/or inc of \\>=25% in urine M-component from nadir and/or development of new bone lesion/soft tissue extramedullary disease/inc \\>=50% from nadir in sum of perpendicular diameters of existing soft tissue extramedullary disease lesion \\>1 cm in short axis.","timeFrame":"From randomization until the final analysis data cut-off date of 14 Jan 2022 (the median duration of follow-up was 43.96 months)"}],"completionDate":"2025-01-03","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "IKEMA. Multinational Clinical Study Comparing Isatuximab, Carfilzomib And Dexamethasone To Carfilzomib And Dexamethasone In Relapse And/Or Refractory Multiple Myeloma Patients. ClinicalTrials.gov Identifier: NCT03275285. Primary Sponsor: Sanofi. Available at: https://clinsight.pract.eu/trials/NCT03275285/";

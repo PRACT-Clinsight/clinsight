@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04649359 NCT04649359 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2 · Modality: Bispecific Antibodies &amp; T-Cell Engagers · Sponsor: Pfizer">
+    <meta property="og:description" content="Phase: Phase 2 · Modality: Bispecific · Sponsor: Pfizer">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04649359/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04649359 (NCT04649359): MagnetisMM-3: Study Of Elranatamab (PF-06863135) Monotherapy in Participants With Multiple Myeloma Who Are Refractory to at Least One PI, One IMiD and One Anti-CD38 mAb","url":"https://clinsight.pract.eu/trials/NCT04649359/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Pfizer","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04649359 (NCT04649359)","item":"https://clinsight.pract.eu/trials/NCT04649359/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04649359 (NCT04649359)?","acceptedAnswer":{"@type":"Answer","text":"NCT04649359 is a Phase 2 study sponsored by Pfizer evaluating Bispecific Antibodies &amp; T-Cell Engagers in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04649359?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04649359."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04649359 (NCT04649359): MagnetisMM-3: Study Of Elranatamab (PF-06863135) Monotherapy in Participants With Multiple Myeloma Who Are Refractory to at Least One PI, One IMiD and One Anti-CD38 mAb","url":"https://clinsight.pract.eu/trials/NCT04649359/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Pfizer","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04649359 (NCT04649359)","item":"https://clinsight.pract.eu/trials/NCT04649359/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04649359 (NCT04649359)?","acceptedAnswer":{"@type":"Answer","text":"NCT04649359 is a Phase 2 study sponsored by Pfizer evaluating Bispecific in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04649359?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04649359."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04649359</span>
             <span class="badge phase">Phase 2</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Bispecific Antibodies &amp; T-Cell Engagers</span>
+            <span class="badge modality">Bispecific</span>
+            
         </div>
 
         <h1>MagnetisMM-3: Study Of Elranatamab (PF-06863135) Monotherapy in Participants With Multiple Myeloma Who Are Refractory to at Least One PI, One IMiD and One Anti-CD38 mAb</h1>
         <p class="lead">MAGNETISMM-3 AN OPEN-LABEL, MULTICENTER, NON-RANDOMIZED PHASE 2 STUDY OF ELRANATAMAB (PF-06863135) MONOTHERAPY IN PARTICIPANTS WITH MULTIPLE MYELOMA WHO ARE REFRACTORY TO AT LEAST ONE PROTEASOME INHIBITOR, ONE IMMUNOMODULATORY DRUG AND ONE ANTI-CD38 ANTIBODY</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/59/NCT04649359/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/59/NCT04649359/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT04649359?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42287565/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42287565)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 42287565 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Elranatamab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Elranatamab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Multiple Myeloma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Diagnosis of multiple myeloma (IMWG criteria, Rajkumar et al, 2014)</li><li>Measurable disease, as defined by at least 1 of the following:<br><br>  1. Serum M-protein \&gt;0.5 g/dL by SPEP<br>  2. Urinary M-protein excretion \&gt;200 mg/24 hours by UPEP<br>  3. Serum immunoglobulin FLC≥10 mg/dL (≥100 mg/L) AND abnormal serum immunoglobulin kappa to lambda FLC ratio</li><li>Refractory to at least one IMiD</li><li>Refractory to at least one PI</li><li>Refractory to at least one anti-CD38 antibody</li><li>Relapsed/refractory to last anti-myeloma regimen</li><li>Cohort A: has not received prior BCMA-directed therapy</li><li>Cohort B: has received prior BCMA-directed therapy (ADC or CAR T cells)</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Smoldering multiple myeloma</li><li>Active Plasma cell leukemia</li><li>Amyloidosis</li><li>POEMS syndrome</li><li>Stem cell transplant within 12 weeks prior to enrollment</li><li>Active HBV, HCV, SARS-CoV2, HIV, or any active, uncontrolled bacterial, fungal, or viral infection</li><li>Any other active malignancy within 3 years prior to enrollment, except for adequately treated basal cell or squamous cell skin cancer, or carcinoma in situ.</li><li>Previous administration with an investigational drug within 30 days or 5 half-lives preceding the first dose of study intervention used in this study (whichever is longer)</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04649359" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04649359" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04649359" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04649359)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/59/NCT04649359/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/59/NCT04649359/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT04649359?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/42287565/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 42287565)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT04649359" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific Antibodies &amp; T-Cell Engagers</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04649359","acronym":null,"briefTitle":"MagnetisMM-3: Study Of Elranatamab (PF-06863135) Monotherapy in Participants With Multiple Myeloma Who Are Refractory to at Least One PI, One IMiD and One Anti-CD38 mAb","officialTitle":"MAGNETISMM-3 AN OPEN-LABEL, MULTICENTER, NON-RANDOMIZED PHASE 2 STUDY OF ELRANATAMAB (PF-06863135) MONOTHERAPY IN PARTICIPANTS WITH MULTIPLE MYELOMA WHO ARE REFRACTORY TO AT LEAST ONE PROTEASOME INHIBITOR, ONE IMMUNOMODULATORY DRUG AND ONE ANTI-CD38 ANTIBODY","sponsor":"Pfizer","phase":"Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific Antibodies & T-Cell Engagers","conditions":["Multiple Myeloma"],"interventions":["Elranatamab (PF-06863135)"],"primaryOutcomes":[{"measure":"Objective Response Rate (ORR) by Blinded Independent Central Review (BICR) as Per International Myeloma Working Group (IMWG) Criteria","description":"ORR: % of participants with best overall response of confirmed stringent complete response (sCR), CR, very good partial response (VGPR) or PR per IMWG criteria. sCR: CR \\& normal serum free light chain (sFLC) ratio \\& absence of clonal cells in BMB/BMA by IH, IF, or flow cytometry. CR: negative immunofixation on serum \\& urine, disappearance of any soft tissue plasmacytoma \\& \\<5% plasma cells in BMA, if disease measurable by sFLC only, preceding criteria plus normal sFLC ratio. VGPR: Serum \\& urine M-protein detectable by immunofixation but not on electrophoresis; or \\>=90% reduction in serum M-protein \\& urine M-protein level \\<100mg/24h. PR: \\>=50% reduction in serum M-protein \\& reduction in 24h urinary M-protein by \\>=90% or \\<200 mg/24h. If serum \\& urine M-protein were unmeasurable, VGPR \\& PR: \\>=90% \\& \\>=50% decrease in difference respectively between involved \\& uninvolved sFLC levels \\& if present at baseline, \\>=90% \\& \\>=50% reduction in soft tissue plasmacytomas' size.","timeFrame":"From date of first dose until confirmed disease progression, death, start of new anticancer therapy, whichever occurred first (up to approximately 16 months)"}],"completionDate":"2026-12-31","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04649359","acronym":null,"briefTitle":"MagnetisMM-3: Study Of Elranatamab (PF-06863135) Monotherapy in Participants With Multiple Myeloma Who Are Refractory to at Least One PI, One IMiD and One Anti-CD38 mAb","officialTitle":"MAGNETISMM-3 AN OPEN-LABEL, MULTICENTER, NON-RANDOMIZED PHASE 2 STUDY OF ELRANATAMAB (PF-06863135) MONOTHERAPY IN PARTICIPANTS WITH MULTIPLE MYELOMA WHO ARE REFRACTORY TO AT LEAST ONE PROTEASOME INHIBITOR, ONE IMMUNOMODULATORY DRUG AND ONE ANTI-CD38 ANTIBODY","sponsor":"Pfizer","phase":"Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific","conditions":["Multiple Myeloma"],"interventions":["Elranatamab (PF-06863135)"],"primaryOutcomes":[{"measure":"Objective Response Rate (ORR) by Blinded Independent Central Review (BICR) as Per International Myeloma Working Group (IMWG) Criteria","description":"ORR: % of participants with best overall response of confirmed stringent complete response (sCR), CR, very good partial response (VGPR) or PR per IMWG criteria. sCR: CR \\& normal serum free light chain (sFLC) ratio \\& absence of clonal cells in BMB/BMA by IH, IF, or flow cytometry. CR: negative immunofixation on serum \\& urine, disappearance of any soft tissue plasmacytoma \\& \\<5% plasma cells in BMA, if disease measurable by sFLC only, preceding criteria plus normal sFLC ratio. VGPR: Serum \\& urine M-protein detectable by immunofixation but not on electrophoresis; or \\>=90% reduction in serum M-protein \\& urine M-protein level \\<100mg/24h. PR: \\>=50% reduction in serum M-protein \\& reduction in 24h urinary M-protein by \\>=90% or \\<200 mg/24h. If serum \\& urine M-protein were unmeasurable, VGPR \\& PR: \\>=90% \\& \\>=50% decrease in difference respectively between involved \\& uninvolved sFLC levels \\& if present at baseline, \\>=90% \\& \\>=50% reduction in soft tissue plasmacytomas' size.","timeFrame":"From date of first dose until confirmed disease progression, death, start of new anticancer therapy, whichever occurred first (up to approximately 16 months)"}],"completionDate":"2026-12-31","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "MagnetisMM-3: Study Of Elranatamab (PF-06863135) Monotherapy in Participants With Multiple Myeloma Who Are Refractory to at Least One PI, One IMiD and One Anti-CD38 mAb. ClinicalTrials.gov Identifier: NCT04649359. Primary Sponsor: Pfizer. Available at: https://clinsight.pract.eu/trials/NCT04649359/";

@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04209855 MIRASOL — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Antibody-Drug Conjugates (ADC) · Sponsor: AbbVie">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: ADC · Sponsor: AbbVie">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04209855/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MIRASOL (NCT04209855): A Study of Mirvetuximab Soravtansine vs. Investigator&#39;s Choice (IC) of Chemotherapy in Platinum-Resistant, Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High Folate Receptor-Alpha (FRα) Expression","url":"https://clinsight.pract.eu/trials/NCT04209855/","studySubject":{"@type":"MedicalCondition","name":"Epithelial Ovarian Cancer"},"sponsor":"AbbVie","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MIRASOL (NCT04209855)","item":"https://clinsight.pract.eu/trials/NCT04209855/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04209855 (MIRASOL)?","acceptedAnswer":{"@type":"Answer","text":"NCT04209855 is a Phase 3 study sponsored by AbbVie evaluating Antibody-Drug Conjugates (ADC) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04209855?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04209855."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MIRASOL (NCT04209855): A Study of Mirvetuximab Soravtansine vs. Investigator&#39;s Choice (IC) of Chemotherapy in Platinum-Resistant, Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High Folate Receptor-Alpha (FRα) Expression","url":"https://clinsight.pract.eu/trials/NCT04209855/","studySubject":{"@type":"MedicalCondition","name":"Epithelial Ovarian Cancer"},"sponsor":"AbbVie","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MIRASOL (NCT04209855)","item":"https://clinsight.pract.eu/trials/NCT04209855/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04209855 (MIRASOL)?","acceptedAnswer":{"@type":"Answer","text":"NCT04209855 is a Phase 3 study sponsored by AbbVie evaluating ADC in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04209855?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04209855."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04209855</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Antibody-Drug Conjugates (ADC)</span>
+            <span class="badge modality">ADC</span>
+            
         </div>
 
         <h1>MIRASOL: A Study of Mirvetuximab Soravtansine vs. Investigator&#39;s Choice (IC) of Chemotherapy in Platinum-Resistant, Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High Folate Receptor-Alpha (FRα) Expression</h1>
         <p class="lead">MIRASOL: A Randomized, Open-label, Phase 3 Study of Mirvetuximab Soravtansine vs. Investigator&#39;s Choice of Chemotherapy in Platinum-Resistant, Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High Folate Receptor-Alpha Expression</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/55/NCT04209855/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/55/NCT04209855/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT04209855?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/40179908/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 40179908)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 40179908 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Mirvetuximab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Mirvetuximab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Epithelial Ovarian Cancer, Peritoneal Cancer, Fallopian Tube Cancer</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Female participants ≥ 18 years of age</li><li>Participants must have a confirmed diagnosis of high-grade serious epithelial ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</li><li>Participants must have platinum-resistant disease:<br><br>   1. Participants who have only had 1 line of platinum based therapy must have received at least 4 cycles of platinum, must have had a response (CR or PR) and then progressed between \&gt;3 months and ≤ 6 months after the date of the last dose of platinum<br>   2. Participants who have received 2 or 3 lines of platinum therapy must have progressed on or within 6 months after the date of the last dose of platinum Note: Progression should be calculated from the date of the last administered dose of platinum therapy to the date of the radiographic imaging showing progression. Note: Participants who are platinum-refractory during front-line treatment are excluded</li><li>Participants must have progressed radiographically on or after their most recent line of therapy</li><li>Participants must be willing to provide an archival tumor tissue block or slides, or undergo procedure to obtain a new biopsy using a low risk, medically routine procedure for immunohistochemistry (IHC) confirmation of FRα positivity</li><li>Participant&#39;s tumor must be positive for FRα expression as defined by the Ventana FOLR1 (FOLR-2.1) CDx assay</li><li>Participants must have at least one lesion that meets the definition of measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) Version 1.1 (radiologically measured by the Investigator)</li><li>Participants must have received at least 1 but no more than 3 prior systemic lines of anticancer therapy, and for whom single-agent therapy is appropriate as the next line of treatment:<br><br>   1. Adjuvant ± neoadjuvant considered one line of therapy<br>   2. Maintenance therapy (for example, bevacizumab, poly (ADP-ribose) polymerase \[PARP\] inhibitors) will be considered as part of the preceding line of therapy (that is, not counted independently)<br>   3. Therapy changed due to toxicity in the absence of progression will be considered as part of the same line (that is, not counted independently)<br>   4. Hormonal therapy will be counted as a separate line of therapy unless it was given as maintenance</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Participants with endometrioid, clear cell, mucinous, or sarcomatous histology, mixed tumors containing any of the above histologies, or low-grade or borderline ovarian tumor</li><li>Participants with primary platinum-refractory disease, defined as disease that did not respond to (CR or PR) or has progressed within 3 months of the last dose of first line platinum-containing chemotherapy</li><li>Participants with prior wide-field radiotherapy (RT) affecting at least 20% of the bone marrow</li><li>Participants with \&gt; Grade 1 peripheral neuropathy per Common Terminology Criteria for Adverse Events (CTCAE) v5.0</li><li>Participants with active or chronic corneal disorders, history of corneal transplantation, or active ocular conditions requiring ongoing treatment/monitoring such as uncontrolled glaucoma, wet age-related macular degeneration requiring intravitreal injections, active diabetic retinopathy with macular edema, macular degeneration, presence of papilledema, and /or monocular vision</li><li>Participants with serious concurrent illness or clinically relevant active infection, including, but not limited to the following:<br><br>   1. Active hepatitis B or C infection (whether or not on active antiviral therapy)<br>   2. Human immunodeficiency virus (HIV) infection<br>   3. Active cytomegalovirus infection<br>   4. Any other concurrent infectious disease requiring IV antibiotics within 2 weeks before starting study drug Note: Testing at screening is not required for the above infections unless clinically indicated</li><li>Participants with history of multiple sclerosis or other demyelinating disease and/or Lambert-Eaton syndrome (paraneoplastic syndrome)</li><li>Participants with clinically significant cardiac disease including, but not limited to, any one of the following:<br><br>   1. Myocardial infarction ≤ 6 months prior to first dose<br>   2. Unstable angina pectoris<br>   3. Uncontrolled congestive heart failure (New York Heart Association \&gt; class II)<br>   4. Uncontrolled ≥ Grade 3 hypertension (per CTCAE)<br>   5. Uncontrolled cardiac arrhythmias</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04209855" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04209855" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04209855" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04209855)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/55/NCT04209855/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/55/NCT04209855/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT04209855?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/40179908/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 40179908)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT04209855" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Antibody-Drug Conjugates (ADC)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in ADC</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04209855","acronym":"MIRASOL","briefTitle":"A Study of Mirvetuximab Soravtansine vs. Investigator's Choice (IC) of Chemotherapy in Platinum-Resistant, Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High Folate Receptor-Alpha (FRα) Expression","officialTitle":"MIRASOL: A Randomized, Open-label, Phase 3 Study of Mirvetuximab Soravtansine vs. Investigator's Choice of Chemotherapy in Platinum-Resistant, Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High Folate Receptor-Alpha Expression","sponsor":"AbbVie","phase":"Phase 3","status":"COMPLETED","modality":"Antibody-Drug Conjugates (ADC)","conditions":["Epithelial Ovarian Cancer","Peritoneal Cancer","Fallopian Tube Cancer"],"interventions":["Mirvetuximab Soravtansine","Paclitaxel","Topotecan","Pegylated liposomal doxorubicin"],"primaryOutcomes":[{"measure":"Progression-free Survival (PFS) as Assessed by Response Evaluation Criteria in Solid Tumors (RECIST) Version 1.1","description":"PFS was defined as the time from randomization until progressive disease (PD) or death whichever occurred first. PD: At least a 20% increase in the sum of the longest diameters (SoD) of target lesion, taken as reference the smallest (nadir) SoD since and including baseline. In addition to the relative increase of 20%, the SoD must also demonstrate an absolute increase of at least 5 millimeters (mm). Unequivocal progression of non-target lesions and appearance of new lesions. Unequivocal progression should not normally trump target lesion status. It must be representative of overall disease status change, not a single lesion increase.","timeFrame":"From randomization until PD or death, whichever occurred first (up to approximately 36 months)"}],"completionDate":"2024-10-29","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04209855","acronym":"MIRASOL","briefTitle":"A Study of Mirvetuximab Soravtansine vs. Investigator's Choice (IC) of Chemotherapy in Platinum-Resistant, Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High Folate Receptor-Alpha (FRα) Expression","officialTitle":"MIRASOL: A Randomized, Open-label, Phase 3 Study of Mirvetuximab Soravtansine vs. Investigator's Choice of Chemotherapy in Platinum-Resistant, Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High Folate Receptor-Alpha Expression","sponsor":"AbbVie","phase":"Phase 3","status":"COMPLETED","modality":"ADC","conditions":["Epithelial Ovarian Cancer","Peritoneal Cancer","Fallopian Tube Cancer"],"interventions":["Mirvetuximab Soravtansine","Paclitaxel","Topotecan","Pegylated liposomal doxorubicin"],"primaryOutcomes":[{"measure":"Progression-free Survival (PFS) as Assessed by Response Evaluation Criteria in Solid Tumors (RECIST) Version 1.1","description":"PFS was defined as the time from randomization until progressive disease (PD) or death whichever occurred first. PD: At least a 20% increase in the sum of the longest diameters (SoD) of target lesion, taken as reference the smallest (nadir) SoD since and including baseline. In addition to the relative increase of 20%, the SoD must also demonstrate an absolute increase of at least 5 millimeters (mm). Unequivocal progression of non-target lesions and appearance of new lesions. Unequivocal progression should not normally trump target lesion status. It must be representative of overall disease status change, not a single lesion increase.","timeFrame":"From randomization until PD or death, whichever occurred first (up to approximately 36 months)"}],"completionDate":"2024-10-29","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "MIRASOL. A Study of Mirvetuximab Soravtansine vs. Investigator&amp;#39;s Choice (IC) of Chemotherapy in Platinum-Resistant, Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High Folate Receptor-Alpha (FRα) Expression. ClinicalTrials.gov Identifier: NCT04209855. Primary Sponsor: AbbVie. Available at: https://clinsight.pract.eu/trials/NCT04209855/";

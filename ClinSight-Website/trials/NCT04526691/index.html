@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04526691 NCT04526691 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 1 · Modality: Antibody-Drug Conjugates (ADC) · Sponsor: Daiichi Sankyo">
+    <meta property="og:description" content="Phase: Phase 1 · Modality: ADC · Sponsor: Daiichi Sankyo">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04526691/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04526691 (NCT04526691): Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)","url":"https://clinsight.pract.eu/trials/NCT04526691/","studySubject":{"@type":"MedicalCondition","name":"Advanced or Metastatic NSCLC"},"sponsor":"Daiichi Sankyo","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 1"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT04526691 (NCT04526691)","item":"https://clinsight.pract.eu/trials/NCT04526691/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04526691 (NCT04526691)?","acceptedAnswer":{"@type":"Answer","text":"NCT04526691 is a Phase 1 study sponsored by Daiichi Sankyo evaluating Antibody-Drug Conjugates (ADC) in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04526691?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04526691."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04526691 (NCT04526691): Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)","url":"https://clinsight.pract.eu/trials/NCT04526691/","studySubject":{"@type":"MedicalCondition","name":"Advanced or Metastatic NSCLC"},"sponsor":"Daiichi Sankyo","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 1"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT04526691 (NCT04526691)","item":"https://clinsight.pract.eu/trials/NCT04526691/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04526691 (NCT04526691)?","acceptedAnswer":{"@type":"Answer","text":"NCT04526691 is a Phase 1 study sponsored by Daiichi Sankyo evaluating ADC in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04526691?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04526691."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04526691</span>
             <span class="badge phase">Phase 1</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Antibody-Drug Conjugates (ADC)</span>
+            <span class="badge modality">ADC</span>
+            
         </div>
 
         <h1>Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)</h1>
         <p class="lead">Phase 1b, Multicenter, Open-label Study of Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41871716/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41871716)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41871716 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Datopotamab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Datopotamab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Advanced or Metastatic NSCLC</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Histologically confirmed at diagnosis of NSCLC that:<br><br>  * Is advanced or metastatic.<br>  * Participants with non-squamous histology must have documented negative test results for actionable EGFR and ALK genomic alterations. Participants with squamous histology are required to undergo testing for EGFR and ALK genomic alterations if they are nonsmokers or under the age of 40 years.<br>  * Has either documented negative or unknown test results for actionable genomic alterations in ROS1, NTRK, BRAF, RET, MET, or other actionable oncogenic driver kinases.<br>  * Participants with tumors that harbor KRAS mutations are eligible for this study.<br>  * Participants with non-actionable genomic alterations in EGFR, ALK, ROS1, NTRK, BRAF, RET, MET, or other kinases are eligible for the study.</li><li>Documentation of radiological disease progression while on or after receiving the most recent treatment regimen, if any, for advanced or metastatic NSCLC.</li><li>Must meet the following prior therapy requirements for advanced or metastatic NSCLC:<br><br>  * Dose escalation (all cohorts): Has received ≤2 lines of prior anticancer therapy for locally advanced or metastatic NSCLC.<br>  * Dose expansion (cohorts with 4.0 mg/kg or 6.0 mg/kg Dato-DXd in combination with 200 mg fixed dose of pembrolizumab): Has not received PD-1/PD-L1, PD-L2, CTLA-4 directed immunotherapy and may or may not have been treated with systemic chemotherapy for advanced or metastatic NSCLC.<br>  * Dose expansion (cohorts with 4.0 mg/kg or 6.0 mg/kg Dato-DXd in combination with 200 mg fixed dose of pembrolizumab and 4 cycles of AUC 5 carboplatin or cisplatin 75 mg/m\^2): Has not been treated with systemic anticancer therapy for advanced or metastatic NSCLC.</li><li>Willing and able to undergo a mandatory tumor biopsy.</li><li>Archival tumor tissue from initial diagnosis, to the extent that archival tumor tissue is available, for measurement of TROP2 expression levels or other biomarkers.</li><li>Has adequate bone marrow reserve and organ function at baseline within 7 days prior to Cycle 1 Day 1.</li><li>Is not a candidate for surgical resection or chemoradiation with curative intent.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Experienced grade 3 or higher immune-related adverse events (AEs) with prior treatment of anti-programmed cell death 1 (anti-PD-1), anti-programmed cell death ligand 1 (anti-PD-L1), or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor (eg, CTLA-4, OX 40, CD137).</li><li>Received a live vaccine within 30 days prior to the first dose of study treatment.</li><li>Active, known, or suspected autoimmune disease.</li><li>Concomitant use of chronic systemic (IV or oral) corticosteroids or other immunosuppressive medications, except for managing AEs.</li><li>Prior organ transplantation, including allogeneic tissue or solid organ transplantation.</li><li>Has spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms.</li><li>History of (non-infectious) interstitial lung disease (ILD)/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at screening.</li><li>Clinically severe pulmonary compromise resulting from intercurrent pulmonary illnesses.</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04526691" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04526691" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04526691" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04526691)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41871716/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41871716)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT04526691" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Antibody-Drug Conjugates (ADC)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in ADC</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04526691","acronym":null,"briefTitle":"Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)","officialTitle":"Phase 1b, Multicenter, Open-label Study of Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)","sponsor":"Daiichi Sankyo","phase":"Phase 1","status":"ACTIVE_NOT_RECRUITING","modality":"Antibody-Drug Conjugates (ADC)","conditions":["Advanced or Metastatic NSCLC"],"interventions":["Datopotamab deruxtecan","KEYTRUDA®","Carboplatin","Cisplatin"],"primaryOutcomes":[{"measure":"Number of Participants with Dose-limiting Toxicities (DLTs) and Treatment-emergent Adverse Events (TEAEs)","description":"","timeFrame":"Baseline up to Cycle 1 (Days 1 to 21) for DLTs and up to 28 days after last dose for TEAEs, up to approximately 30 months post-dose"}],"completionDate":"2026-12-31","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04526691","acronym":null,"briefTitle":"Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)","officialTitle":"Phase 1b, Multicenter, Open-label Study of Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)","sponsor":"Daiichi Sankyo","phase":"Phase 1","status":"ACTIVE_NOT_RECRUITING","modality":"ADC","conditions":["Advanced or Metastatic NSCLC"],"interventions":["Datopotamab deruxtecan","KEYTRUDA®","Carboplatin","Cisplatin"],"primaryOutcomes":[{"measure":"Number of Participants with Dose-limiting Toxicities (DLTs) and Treatment-emergent Adverse Events (TEAEs)","description":"","timeFrame":"Baseline up to Cycle 1 (Days 1 to 21) for DLTs and up to 28 days after last dose for TEAEs, up to approximately 30 months post-dose"}],"completionDate":"2026-12-31","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02). ClinicalTrials.gov Identifier: NCT04526691. Primary Sponsor: Daiichi Sankyo. Available at: https://clinsight.pract.eu/trials/NCT04526691/";

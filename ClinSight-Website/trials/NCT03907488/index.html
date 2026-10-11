@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03907488 NCT03907488 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Antibody-Drug Conjugates (ADC) · Sponsor: National Cancer Institute (NCI)">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: ADC · Sponsor: National Cancer Institute (NCI)">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03907488/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03907488 (NCT03907488): Immunotherapy (Nivolumab or Brentuximab Vedotin) Plus Combination Chemotherapy in Treating Patients With Newly Diagnosed Stage III-IV Classic Hodgkin Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03907488/","studySubject":{"@type":"MedicalCondition","name":"Ann Arbor Stage III Hodgkin Lymphoma"},"sponsor":"National Cancer Institute (NCI)","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03907488 (NCT03907488)","item":"https://clinsight.pract.eu/trials/NCT03907488/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03907488 (NCT03907488)?","acceptedAnswer":{"@type":"Answer","text":"NCT03907488 is a Phase 3 study sponsored by National Cancer Institute (NCI) evaluating Antibody-Drug Conjugates (ADC) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03907488?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03907488."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03907488 (NCT03907488): Immunotherapy (Nivolumab or Brentuximab Vedotin) Plus Combination Chemotherapy in Treating Patients With Newly Diagnosed Stage III-IV Classic Hodgkin Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03907488/","studySubject":{"@type":"MedicalCondition","name":"Ann Arbor Stage III Hodgkin Lymphoma"},"sponsor":"National Cancer Institute (NCI)","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03907488 (NCT03907488)","item":"https://clinsight.pract.eu/trials/NCT03907488/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03907488 (NCT03907488)?","acceptedAnswer":{"@type":"Answer","text":"NCT03907488 is a Phase 3 study sponsored by National Cancer Institute (NCI) evaluating ADC in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03907488?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03907488."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,35 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03907488</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Antibody-Drug Conjugates (ADC)</span>
+            <span class="badge modality">ADC</span>
+            
         </div>
 
         <h1>Immunotherapy (Nivolumab or Brentuximab Vedotin) Plus Combination Chemotherapy in Treating Patients With Newly Diagnosed Stage III-IV Classic Hodgkin Lymphoma</h1>
         <p class="lead">A Phase III, Randomized Study of Nivolumab (Opdivo) Plus AVD or Brentuximab Vedotin (Adcetris) Plus AVD in Patients (Age &amp;gt;/= 12 Years) With Newly Diagnosed Advanced Stage Classical Hodgkin Lymphoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/88/NCT03907488/Prot_SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            
+            <a href="https://clinicaltrials.gov/study/NCT03907488?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42577949/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42577949)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 42577949 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Biospecimen" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Biospecimen) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,28 +665,18 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Ann Arbor Stage III Hodgkin Lymphoma, Ann Arbor Stage III Lymphocyte-Depleted Classic Hodgkin Lymphoma, Ann Arbor Stage III Mixed Cellularity Classic Hodgkin Lymphoma, Ann Arbor Stage III Nodular Sclerosis Classic Hodgkin Lymphoma, Ann Arbor Stage IV Hodgkin Lymphoma, Ann Arbor Stage IV Lymphocyte-Depleted Classic Hodgkin Lymphoma, Ann Arbor Stage IV Mixed Cellularity Classic Hodgkin Lymphoma, Ann Arbor Stage IV Nodular Sclerosis Classic Hodgkin Lymphoma, Classic Hodgkin Lymphoma, Lymphocyte-Rich Classic Hodgkin Lymphoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>All patients must have histologically confirmed newly diagnosed, previously untreated stage III or IV classical Hodgkin lymphoma (nodular sclerosing, mixed cellularity, lymphocyte-rich, or lymphocyte-depleted, or not otherwise specified \[NOS\]). Nodular lymphocyte predominant Hodgkin lymphoma is not eligible.</li><li>Patients must have bidimensionally measurable disease (at least one lesion with longest diameter \&gt;= 1.5 cm) documented on the Lymphoma Baseline Tumor Assessment Form in Rave.</li><li>Patients must have a whole body or limited whole body PET-CT scan performed within 42 days prior to registration. (A contrast-enhanced \[diagnostic\] CT, MRI or MR-PET is acceptable in event that PET-CT is contra-indicated, however if it is later possible to administer a PET-CT, then PET-CT is strongly preferred for the interim scan (after cycle 2) (if performed) and the EOT assessment. Otherwise, if PET-CT is not subsequently possible, then the same modality as baseline must be used throughout the trial.) NOTE: All images from PET-CT, CT, MRI or MR-PET scans performed as standard of care to assess disease (within 42 days prior to registration) must be submitted and associated radiology reports must be submitted.</li><li>Patients must be \&gt;= 12 years of age.</li><li>Patients must not have received any prior chemotherapy, radiation, or antibody-based treatment for classical Hodgkin lymphoma. Steroid pre-treatment is permitted.</li><li>Patients must not have had prior solid organ transplant.</li><li>Patients must not have had prior allogeneic stem cell transplantation.</li><li>Patients must not have received a live vaccine within 30 days prior to planned day 1 of protocol therapy (e.g. measles, mumps, rubella, varicella, yellow fever, rabies, Bacillus Calmette-Guerin \[BCG\], oral polio vaccine, and oral typhoid).</li>
                     </ul>
                 </div>
-                <div class="criteria-box">
-                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
-                    <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
 
@@ -632,11 +685,21 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03907488" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03907488" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03907488" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03907488)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/88/NCT03907488/Prot_SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                
+                <a href="https://clinicaltrials.gov/study/NCT03907488?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/42577949/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 42577949)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03907488" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +710,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Antibody-Drug Conjugates (ADC)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in ADC</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +760,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03907488","acronym":null,"briefTitle":"Immunotherapy (Nivolumab or Brentuximab Vedotin) Plus Combination Chemotherapy in Treating Patients With Newly Diagnosed Stage III-IV Classic Hodgkin Lymphoma","officialTitle":"A Phase III, Randomized Study of Nivolumab (Opdivo) Plus AVD or Brentuximab Vedotin (Adcetris) Plus AVD in Patients (Age &gt;/= 12 Years) With Newly Diagnosed Advanced Stage Classical Hodgkin Lymphoma","sponsor":"National Cancer Institute (NCI)","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Antibody-Drug Conjugates (ADC)","conditions":["Ann Arbor Stage III Hodgkin Lymphoma","Ann Arbor Stage III Lymphocyte-Depleted Classic Hodgkin Lymphoma","Ann Arbor Stage III Mixed Cellularity Classic Hodgkin Lymphoma","Ann Arbor Stage III Nodular Sclerosis Classic Hodgkin Lymphoma","Ann Arbor Stage IV Hodgkin Lymphoma","Ann Arbor Stage IV Lymphocyte-Depleted Classic Hodgkin Lymphoma","Ann Arbor Stage IV Mixed Cellularity Classic Hodgkin Lymphoma","Ann Arbor Stage IV Nodular Sclerosis Classic Hodgkin Lymphoma","Classic Hodgkin Lymphoma","Lymphocyte-Rich Classic Hodgkin Lymphoma"],"interventions":["Biospecimen Collection","Brentuximab Vedotin","Computed Tomography","Dacarbazine","Doxorubicin Hydrochloride","Filgrastim","Magnetic Resonance Imaging","Nivolumab","Pegfilgrastim","Positron Emission Tomography","Quality-of-Life Assessment","Questionnaire Administration","Radiation Therapy","Vinblastine Sulfate"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"Will be reported as the number of participants who have experienced death or progression, measured at two years. Progression will be measured according to the 2014 Lugano classification. Will test the null hypothesis (HR=1) for PFS using stratified log-rank test with a one-sided alpha of 0.021. The analysis will be based on modified intent-to-treat and will include all eligible patients as randomized regardless of treatment received. The one-sided alpha of .021 will control of the overall type-one error of the study (including the 2 interim superiority analyses) to be less than .025.","timeFrame":"From date of registration to date of first observation of progressive disease, or death due to any cause, assessed at 2 years"}],"completionDate":"2027-03-28","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03907488","acronym":null,"briefTitle":"Immunotherapy (Nivolumab or Brentuximab Vedotin) Plus Combination Chemotherapy in Treating Patients With Newly Diagnosed Stage III-IV Classic Hodgkin Lymphoma","officialTitle":"A Phase III, Randomized Study of Nivolumab (Opdivo) Plus AVD or Brentuximab Vedotin (Adcetris) Plus AVD in Patients (Age &gt;/= 12 Years) With Newly Diagnosed Advanced Stage Classical Hodgkin Lymphoma","sponsor":"National Cancer Institute (NCI)","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"ADC","conditions":["Ann Arbor Stage III Hodgkin Lymphoma","Ann Arbor Stage III Lymphocyte-Depleted Classic Hodgkin Lymphoma","Ann Arbor Stage III Mixed Cellularity Classic Hodgkin Lymphoma","Ann Arbor Stage III Nodular Sclerosis Classic Hodgkin Lymphoma","Ann Arbor Stage IV Hodgkin Lymphoma","Ann Arbor Stage IV Lymphocyte-Depleted Classic Hodgkin Lymphoma","Ann Arbor Stage IV Mixed Cellularity Classic Hodgkin Lymphoma","Ann Arbor Stage IV Nodular Sclerosis Classic Hodgkin Lymphoma","Classic Hodgkin Lymphoma","Lymphocyte-Rich Classic Hodgkin Lymphoma"],"interventions":["Biospecimen Collection","Brentuximab Vedotin","Computed Tomography","Dacarbazine","Doxorubicin Hydrochloride","Filgrastim","Magnetic Resonance Imaging","Nivolumab","Pegfilgrastim","Positron Emission Tomography","Quality-of-Life Assessment","Questionnaire Administration","Radiation Therapy","Vinblastine Sulfate"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"Will be reported as the number of participants who have experienced death or progression, measured at two years. Progression will be measured according to the 2014 Lugano classification. Will test the null hypothesis (HR=1) for PFS using stratified log-rank test with a one-sided alpha of 0.021. The analysis will be based on modified intent-to-treat and will include all eligible patients as randomized regardless of treatment received. The one-sided alpha of .021 will control of the overall type-one error of the study (including the 2 interim superiority analyses) to be less than .025.","timeFrame":"From date of registration to date of first observation of progressive disease, or death due to any cause, assessed at 2 years"}],"completionDate":"2027-03-28","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Immunotherapy (Nivolumab or Brentuximab Vedotin) Plus Combination Chemotherapy in Treating Patients With Newly Diagnosed Stage III-IV Classic Hodgkin Lymphoma. ClinicalTrials.gov Identifier: NCT03907488. Primary Sponsor: National Cancer Institute (NCI). Available at: https://clinsight.pract.eu/trials/NCT03907488/";

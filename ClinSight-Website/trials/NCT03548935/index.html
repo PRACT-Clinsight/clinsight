@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03548935 STEP 1 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Incretin Mimetics (GLP-1 / GIP) · Sponsor: Novo Nordisk A/S">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: GLP-1 · Sponsor: Novo Nordisk A/S">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03548935/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"STEP 1 (NCT03548935): STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffering From Overweight or Obesity","url":"https://clinsight.pract.eu/trials/NCT03548935/","studySubject":{"@type":"MedicalCondition","name":"Metabolism and Nutrition Disorder"},"sponsor":"Novo Nordisk A/S","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"STEP 1 (NCT03548935)","item":"https://clinsight.pract.eu/trials/NCT03548935/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03548935 (STEP 1)?","acceptedAnswer":{"@type":"Answer","text":"NCT03548935 is a Phase 3 study sponsored by Novo Nordisk A/S evaluating Incretin Mimetics (GLP-1 / GIP) in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03548935?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03548935."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"STEP 1 (NCT03548935): STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffering From Overweight or Obesity","url":"https://clinsight.pract.eu/trials/NCT03548935/","studySubject":{"@type":"MedicalCondition","name":"Metabolism and Nutrition Disorder"},"sponsor":"Novo Nordisk A/S","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"STEP 1 (NCT03548935)","item":"https://clinsight.pract.eu/trials/NCT03548935/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03548935 (STEP 1)?","acceptedAnswer":{"@type":"Answer","text":"NCT03548935 is a Phase 3 study sponsored by Novo Nordisk A/S evaluating GLP-1 in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03548935?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03548935."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03548935</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Incretin Mimetics (GLP-1 / GIP)</span>
+            <span class="badge modality">GLP-1</span>
+            
         </div>
 
         <h1>STEP 1: STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffering From Overweight or Obesity</h1>
         <p class="lead">Effect and Safety of Semaglutide 2.4 mg Once-weekly in Subjects With Overweight or Obesity</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/35/NCT03548935/Prot_002.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/35/NCT03548935/SAP_003.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT03548935?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 33567185)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 33567185 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Semaglutide" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Semaglutide) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Metabolism and Nutrition Disorder, Overweight or Obesity</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Main phase:</li><li>Male or female, age greater than or equal to 18 years at the time of signing informed consent</li><li>Body mass index (BMI) greater than or equal to 30.0 kg/sqm or greater than or equal to 27.0 kg/sqm with the presence of at least one of the following weight-related comorbidities (treated or untreated): hypertension, dyslipidaemia, obstructive sleep apnoea or cardiovascular disease</li><li>History of at least one self-reported unsuccessful dietary effort to lose body weight<br><br>Extension phase:</li><li>Informed consent for the extension phase obtained before any trial related activities for the extension phase</li><li>On randomised treatment on the target dose at week 68, i.e. treated with 2.4 mg semaglutide once-weekly or semaglutide placebo</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Main phase:</li><li>Glycated haemoglobin (HbA1C) greater than or equal to 48 mmol/mol (6.5%) as measured by the central laboratory at screening</li><li>A self-reported change in body weight greater than 5 kg (11 lbs) within 90 days before screening irrespective of medical records<br><br>Extension phase:</li><li>Female who is pregnant or intends to become pregnant during the extension phase</li><li>Any disorder, unwillingness or inability, not covered by any of the other exclusion criteria, which in the investigator&#39;s opinion, might jeopardise the subject&#39;s compliance with the extension of the trial</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03548935" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03548935" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03548935" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03548935)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/35/NCT03548935/Prot_002.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/35/NCT03548935/SAP_003.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT03548935?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 33567185)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03548935" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Incretin Mimetics (GLP-1 / GIP)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in GLP-1</div>
             <div class="related-grid">
                 
                 <a href="../NCT03574597/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03548935","acronym":"STEP 1","briefTitle":"STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffering From Overweight or Obesity","officialTitle":"Effect and Safety of Semaglutide 2.4 mg Once-weekly in Subjects With Overweight or Obesity","sponsor":"Novo Nordisk A/S","phase":"Phase 3","status":"COMPLETED","modality":"Incretin Mimetics (GLP-1 / GIP)","conditions":["Metabolism and Nutrition Disorder","Overweight or Obesity"],"interventions":["Semaglutide","Placebo (semaglutide)"],"primaryOutcomes":[{"measure":"Change in Body Weight (%)","description":"Change in body weight from baseline (week 0) to week 68 is presented. The endpoint was evaluated based on the data from both in-trial and on-treatment observation periods. In-trial observation period: the uninterrupted time interval from date of randomization (week 0) to date of last contact with trial site (week 75). On-treatment observation period: includes all time intervals in which participants are considered to be on treatment from the first (week 0) to last trial product administration (week 68), including 2 weeks of follow-up. It excludes any period of temporary treatment interruption. Temporary treatment interruption is defined as more than 2 consecutive missed doses (off-treatment period).","timeFrame":"Baseline (week 0) to week 68"},{"measure":"Participants Who Achieve 5 or More Percent Body Weight Reduction (Yes/no)","description":"Number of participants who achieved weight loss more than or equal to 5% (yes/no) at week 68 are presented. The endpoint was evaluated based on the data from both in-trial and on-treatment observation periods. In-trial observation period: the uninterrupted time interval from start of randomization (week 0) to last trial-related subject-site contact (week 75). On-treatment observation period: includes all time intervals in which participants are considered to be on treatment from the first (week 0) to last trial product administration (week 68), including 2 weeks of follow-up. It excludes any period of temporary treatment interruption.","timeFrame":"After week 68"}],"completionDate":"2021-03-05","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03548935","acronym":"STEP 1","briefTitle":"STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffering From Overweight or Obesity","officialTitle":"Effect and Safety of Semaglutide 2.4 mg Once-weekly in Subjects With Overweight or Obesity","sponsor":"Novo Nordisk A/S","phase":"Phase 3","status":"COMPLETED","modality":"GLP-1","conditions":["Metabolism and Nutrition Disorder","Overweight or Obesity"],"interventions":["Semaglutide","Placebo (semaglutide)"],"primaryOutcomes":[{"measure":"Change in Body Weight (%)","description":"Change in body weight from baseline (week 0) to week 68 is presented. The endpoint was evaluated based on the data from both in-trial and on-treatment observation periods. In-trial observation period: the uninterrupted time interval from date of randomization (week 0) to date of last contact with trial site (week 75). On-treatment observation period: includes all time intervals in which participants are considered to be on treatment from the first (week 0) to last trial product administration (week 68), including 2 weeks of follow-up. It excludes any period of temporary treatment interruption. Temporary treatment interruption is defined as more than 2 consecutive missed doses (off-treatment period).","timeFrame":"Baseline (week 0) to week 68"},{"measure":"Participants Who Achieve 5 or More Percent Body Weight Reduction (Yes/no)","description":"Number of participants who achieved weight loss more than or equal to 5% (yes/no) at week 68 are presented. The endpoint was evaluated based on the data from both in-trial and on-treatment observation periods. In-trial observation period: the uninterrupted time interval from start of randomization (week 0) to last trial-related subject-site contact (week 75). On-treatment observation period: includes all time intervals in which participants are considered to be on treatment from the first (week 0) to last trial product administration (week 68), including 2 weeks of follow-up. It excludes any period of temporary treatment interruption.","timeFrame":"After week 68"}],"completionDate":"2021-03-05","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "STEP 1. STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffering From Overweight or Obesity. ClinicalTrials.gov Identifier: NCT03548935. Primary Sponsor: Novo Nordisk A/S. Available at: https://clinsight.pract.eu/trials/NCT03548935/";

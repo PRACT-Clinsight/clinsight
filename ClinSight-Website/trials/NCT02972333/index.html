@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT02972333 NCT02972333 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Shandong Cancer Hospital and Institute">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Unclassified · Sponsor: Shandong Cancer Hospital and Institute">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT02972333/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT02972333 (NCT02972333): Open Label, Prospective Study to Investigate Efficacy and Safety of AZD9291 in BM From NSCLC Patients With EGFR T790M","url":"https://clinsight.pract.eu/trials/NCT02972333/","studySubject":{"@type":"MedicalCondition","name":"EGFR-TKI Resistant Mutation"},"sponsor":"Shandong Cancer Hospital and Institute","status":"UNKNOWN","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT02972333 (NCT02972333)","item":"https://clinsight.pract.eu/trials/NCT02972333/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02972333 (NCT02972333)?","acceptedAnswer":{"@type":"Answer","text":"NCT02972333 is a Phase 3 study sponsored by Shandong Cancer Hospital and Institute evaluating Targeted Oncology &amp; Systemic Therapy in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02972333?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02972333."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT02972333 (NCT02972333): Open Label, Prospective Study to Investigate Efficacy and Safety of AZD9291 in BM From NSCLC Patients With EGFR T790M","url":"https://clinsight.pract.eu/trials/NCT02972333/","studySubject":{"@type":"MedicalCondition","name":"EGFR-TKI Resistant Mutation"},"sponsor":"Shandong Cancer Hospital and Institute","status":"UNKNOWN","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT02972333 (NCT02972333)","item":"https://clinsight.pract.eu/trials/NCT02972333/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02972333 (NCT02972333)?","acceptedAnswer":{"@type":"Answer","text":"NCT02972333 is a Phase 3 study sponsored by Shandong Cancer Hospital and Institute evaluating Unclassified in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02972333?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02972333."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT02972333</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">UNKNOWN</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>Open Label, Prospective Study to Investigate Efficacy and Safety of AZD9291 in BM From NSCLC Patients With EGFR T790M</h1>
         <p class="lead">Open Label, Multi-center, Prospective Study to Investigate the Efficacy and Safety of AZD9291 in Brain Metastases From Patients With EGFR T790M Positive NSCLC Who Have Received Prior Therapy With an EGFR-TKI</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32817079/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 32817079)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 32817079 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=AZD9291" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (AZD9291) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for EGFR-TKI Resistant Mutation, Nonsmall Cell Lung Cancer, AZD9291, Brain Metastases</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Provision of signed and dated written informed consent by the patient or legally acceptable representative prior to any study-specific procedures</li><li>Metastatic (stage IV) EGFRm NSCLC, not amenable to curative surgery or radiotherapy, with confirmation of the presence of the T790M mutation.</li><li>For patients with LM: Confirmed diagnosis of LM by positive CSF cytology. Diagnosis by MRI only is not eligible for study entry. At least one site of CNS leptomeningeal disease that can be assessed by magnetic resonance imaging (MRI) and which is suitable for repeat assessments. Measurable CNS or extracranial disease is not required.</li><li>For patients with measurable BM but without LM: At least one measurable intracranial lesion that, if previously irradiated, has progressed or not responded to radiation therapy, that can be accurately measured at baseline as ≥ 10 mm in the longest diameter by magnetic resonance imaging (MRI) and which is suitable for accurate repeated measurements. Measurable extracranial disease is not required.</li><li>Prior therapy with an EGFR-TKI. Patients may have also received additional lines of treatment.</li><li>World Health Organization (WHO) performance status 0-2 with no deterioration over the previous 2 weeks and a minimum life expectancy of 3 months.</li><li>Adequate bone marrow reserve and organ function as demonstrated by complete blood count, biochemistry in blood and urine at baseline.</li><li>ECG recording at baseline showing absence of any cardiac abnormality as per exclusion criterion #10.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Subjects should not enter the study if any of the following exclusion criteria are fulfilled:</li><li>Previous (within 6 months) or current treatment with AZD9291</li><li>Patients currently receiving (or unable to stop use at least 1 week prior to receiving the first dose of AZD9291) any treatment known to be potent inhibitors or inducers of cytochrome P450 (CYP) 3A4 (Appendix B)</li><li>Any evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension, active bleeding diatheses, active infection\* including hepatitis B, hepatitis C and human immunodeficiency virus, or significantly impaired bone marrow reserve or organ function, including hepatic and renal impairment, which in the investigator&#39;s opinion would significantly alter the risk/benefit balance.<br><br>   \* active infection will include any patients receiving intravenous treatment for any infection and patients with hepatitis B or C surface antigen (+) - Patients receiving oral antiviral suppressive therapy for hepatitis B or C will be permitted to enrol in the study.</li><li>Patient with symptomatic central nervous system (CNS) metastases who is neurologically unstable or has required increasing doses of steroids to manage CNS symptoms within the 2 weeks prior to start AZD9291 administration.</li><li>Prior whole brain radiation therapy.</li><li>Known intracranial hemorrhage which is unrelated to tumor.</li><li>For patients with LM and/or BM, CNS complications that require urgent neurosurgical intervention (e.g. resection or shunt placement).</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT02972333" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT02972333" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT02972333" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT02972333)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/32817079/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 32817079)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT02972333" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT02972333","acronym":null,"briefTitle":"Open Label, Prospective Study to Investigate Efficacy and Safety of AZD9291 in BM From NSCLC Patients With EGFR T790M","officialTitle":"Open Label, Multi-center, Prospective Study to Investigate the Efficacy and Safety of AZD9291 in Brain Metastases From Patients With EGFR T790M Positive NSCLC Who Have Received Prior Therapy With an EGFR-TKI","sponsor":"Shandong Cancer Hospital and Institute","phase":"Phase 3","status":"UNKNOWN","modality":"Targeted Oncology & Systemic Therapy","conditions":["EGFR-TKI Resistant Mutation","Nonsmall Cell Lung Cancer","AZD9291","Brain Metastases"],"interventions":["AZD9291 80mg oral each day","Radiation therapy"],"primaryOutcomes":[{"measure":"PFSo (overall progression free survival)","description":"To assess the efficacy of AZD9291 in brain metastases from patients with EGFR T790M positive NSCLC who have received prior therapy with an EGFR-TKI by PFSo","timeFrame":"2 years"}],"completionDate":"2019-12","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT02972333","acronym":null,"briefTitle":"Open Label, Prospective Study to Investigate Efficacy and Safety of AZD9291 in BM From NSCLC Patients With EGFR T790M","officialTitle":"Open Label, Multi-center, Prospective Study to Investigate the Efficacy and Safety of AZD9291 in Brain Metastases From Patients With EGFR T790M Positive NSCLC Who Have Received Prior Therapy With an EGFR-TKI","sponsor":"Shandong Cancer Hospital and Institute","phase":"Phase 3","status":"UNKNOWN","modality":"Unclassified","conditions":["EGFR-TKI Resistant Mutation","Nonsmall Cell Lung Cancer","AZD9291","Brain Metastases"],"interventions":["AZD9291 80mg oral each day","Radiation therapy"],"primaryOutcomes":[{"measure":"PFSo (overall progression free survival)","description":"To assess the efficacy of AZD9291 in brain metastases from patients with EGFR T790M positive NSCLC who have received prior therapy with an EGFR-TKI by PFSo","timeFrame":"2 years"}],"completionDate":"2019-12","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Open Label, Prospective Study to Investigate Efficacy and Safety of AZD9291 in BM From NSCLC Patients With EGFR T790M. ClinicalTrials.gov Identifier: NCT02972333. Primary Sponsor: Shandong Cancer Hospital and Institute. Available at: https://clinsight.pract.eu/trials/NCT02972333/";

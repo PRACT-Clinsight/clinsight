@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT01757535 QUAZAR AML-001 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Celgene">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Unclassified · Sponsor: Celgene">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT01757535/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"QUAZAR AML-001 (NCT01757535): Efficacy of Oral Azacitidine Plus Best Supportive Care as Maintenance Therapy in Subjects With Acute Myeloid Leukemia (AML) in Complete Remission","url":"https://clinsight.pract.eu/trials/NCT01757535/","studySubject":{"@type":"MedicalCondition","name":"Leukemia, Myeloid, Acute"},"sponsor":"Celgene","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"QUAZAR AML-001 (NCT01757535)","item":"https://clinsight.pract.eu/trials/NCT01757535/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01757535 (QUAZAR AML-001)?","acceptedAnswer":{"@type":"Answer","text":"NCT01757535 is a Phase 3 study sponsored by Celgene evaluating Targeted Oncology &amp; Systemic Therapy in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01757535?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01757535."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"QUAZAR AML-001 (NCT01757535): Efficacy of Oral Azacitidine Plus Best Supportive Care as Maintenance Therapy in Subjects With Acute Myeloid Leukemia (AML) in Complete Remission","url":"https://clinsight.pract.eu/trials/NCT01757535/","studySubject":{"@type":"MedicalCondition","name":"Leukemia, Myeloid, Acute"},"sponsor":"Celgene","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"QUAZAR AML-001 (NCT01757535)","item":"https://clinsight.pract.eu/trials/NCT01757535/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01757535 (QUAZAR AML-001)?","acceptedAnswer":{"@type":"Answer","text":"NCT01757535 is a Phase 3 study sponsored by Celgene evaluating Unclassified in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01757535?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01757535."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT01757535</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>QUAZAR AML-001: Efficacy of Oral Azacitidine Plus Best Supportive Care as Maintenance Therapy in Subjects With Acute Myeloid Leukemia (AML) in Complete Remission</h1>
         <p class="lead">A Phase 3, Randomized, Double-Blind, Placebo-Controlled Study to Compare Efficacy and Safety of Oral Azacitidine Plus Best Supportive Care Versus Best Supportive Care as Maintenance Therapy in Subjects With Acute Myeloid Leukemia in Complete Remission</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/35/NCT01757535/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/35/NCT01757535/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT01757535?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/37952982/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 37952982)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 37952982 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Oral" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Oral) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Leukemia, Myeloid, Acute</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Male or female participants ≥ 55 years of age</li><li>Newly diagnosed, histologically confirmed de novo acute myeloid leukemia (AML) or AML secondary to prior myelodysplastic disease or CMML (Chronic myelomonocytic leukemia)</li><li>First complete remission (CR)/ complete remission with incomplete blood count recovery (CRi) with induction therapy with intensive chemotherapy with or without consolidation therapy within 4 months (+/- 7 days of achieving CR or CRi)</li><li>Eastern Cooperative Oncology Group (ECOG) performance status - 0, 1, 2, 3<br><br>Key Inclusion Criteria in the Extended Phase of the study:<br><br>At the Investigator&#39;s discretion and with approval of the sponsor, participants meeting all of the following eligibility criteria are eligible to enter the extension phase:</li><li>All participants randomized into the oral azacitidine or placebo arm and are continuing in either the treatment phase or follow-up phase of the CC-486-AML-001 study;<br><br>   * Participants randomized to oral azacitidine treatment arm and continuing in the treatment phase demonstrating clinical benefit as assessed by the investigator are eligible to receive oral azacitidine in the extension phase (EP);<br>   * Participants randomized into placebo arm of the study will not receive oral azacitidine in the EP, but will be followed for survival in the EP;<br>   * Participants currently in the follow-up phase will continue to be followed for survival in the EP;</li><li>Participants who have signed the informed consent for the EP of the study;</li><li>Participants who do not meet any of the criteria for study discontinuation<br><br>Key</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>AML with inversion (inv)(16), translocation = t(8;21), t(16;16), t(15;17), or t(9;22) or molecular evidence of such translocations</li><li>Prior bone marrow or stem cell transplantation</li><li>Have achieved CR/CRi following therapy with hypomethylating agents</li><li>Diagnosis of malignant disease within the previous 12 months</li><li>Proven central nervous system (CNS) leukemia</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT01757535" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT01757535" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT01757535" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT01757535)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/35/NCT01757535/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/35/NCT01757535/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT01757535?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/37952982/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 37952982)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT01757535" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT01757535","acronym":"QUAZAR AML-001","briefTitle":"Efficacy of Oral Azacitidine Plus Best Supportive Care as Maintenance Therapy in Subjects With Acute Myeloid Leukemia (AML) in Complete Remission","officialTitle":"A Phase 3, Randomized, Double-Blind, Placebo-Controlled Study to Compare Efficacy and Safety of Oral Azacitidine Plus Best Supportive Care Versus Best Supportive Care as Maintenance Therapy in Subjects With Acute Myeloid Leukemia in Complete Remission","sponsor":"Celgene","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Oncology & Systemic Therapy","conditions":["Leukemia, Myeloid, Acute"],"interventions":["Oral Azacitidine","Placebo"],"primaryOutcomes":[{"measure":"Kaplan-Meier (K-M) Estimate for Overall Survival (OS)","description":"Overall survival was defined as time from randomization to death from any cause; participants surviving at the end of the follow-up period, or who withdraw consent, or who were lost to follow up were censored at the date last known alive.","timeFrame":"Day 1 (randomization) up to data cut off date of 15 July 2019; median follow-up for OS estimated by the reverse K-M method was 41.2 months for all participants."}],"completionDate":"2024-06-18","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT01757535","acronym":"QUAZAR AML-001","briefTitle":"Efficacy of Oral Azacitidine Plus Best Supportive Care as Maintenance Therapy in Subjects With Acute Myeloid Leukemia (AML) in Complete Remission","officialTitle":"A Phase 3, Randomized, Double-Blind, Placebo-Controlled Study to Compare Efficacy and Safety of Oral Azacitidine Plus Best Supportive Care Versus Best Supportive Care as Maintenance Therapy in Subjects With Acute Myeloid Leukemia in Complete Remission","sponsor":"Celgene","phase":"Phase 3","status":"COMPLETED","modality":"Unclassified","conditions":["Leukemia, Myeloid, Acute"],"interventions":["Oral Azacitidine","Placebo"],"primaryOutcomes":[{"measure":"Kaplan-Meier (K-M) Estimate for Overall Survival (OS)","description":"Overall survival was defined as time from randomization to death from any cause; participants surviving at the end of the follow-up period, or who withdraw consent, or who were lost to follow up were censored at the date last known alive.","timeFrame":"Day 1 (randomization) up to data cut off date of 15 July 2019; median follow-up for OS estimated by the reverse K-M method was 41.2 months for all participants."}],"completionDate":"2024-06-18","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "QUAZAR AML-001. Efficacy of Oral Azacitidine Plus Best Supportive Care as Maintenance Therapy in Subjects With Acute Myeloid Leukemia (AML) in Complete Remission. ClinicalTrials.gov Identifier: NCT01757535. Primary Sponsor: Celgene. Available at: https://clinsight.pract.eu/trials/NCT01757535/";

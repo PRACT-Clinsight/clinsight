@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT06413498 iMMagine-3 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Cell &amp; Gene Therapy (CAR-T) · Sponsor: Kite, A Gilead Company">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: CAR-T · Sponsor: Kite, A Gilead Company">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT06413498/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"iMMagine-3 (NCT06413498): A Study Comparing Anitocabtagene Autoleucel to Standard of Care Therapy in Participants With Relapsed/ Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT06413498/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Kite, A Gilead Company","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"iMMagine-3 (NCT06413498)","item":"https://clinsight.pract.eu/trials/NCT06413498/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06413498 (iMMagine-3)?","acceptedAnswer":{"@type":"Answer","text":"NCT06413498 is a Phase 3 study sponsored by Kite, A Gilead Company evaluating Cell &amp; Gene Therapy (CAR-T) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06413498?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06413498."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"iMMagine-3 (NCT06413498): A Study Comparing Anitocabtagene Autoleucel to Standard of Care Therapy in Participants With Relapsed/ Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT06413498/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Kite, A Gilead Company","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"iMMagine-3 (NCT06413498)","item":"https://clinsight.pract.eu/trials/NCT06413498/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06413498 (iMMagine-3)?","acceptedAnswer":{"@type":"Answer","text":"NCT06413498 is a Phase 3 study sponsored by Kite, A Gilead Company evaluating CAR-T in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06413498?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06413498."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT06413498</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Cell &amp; Gene Therapy (CAR-T)</span>
+            <span class="badge modality">CAR-T</span>
+            
         </div>
 
         <h1>iMMagine-3: A Study Comparing Anitocabtagene Autoleucel to Standard of Care Therapy in Participants With Relapsed/ Refractory Multiple Myeloma</h1>
         <p class="lead">A Phase 3, Randomized, Open-Label Study to Compare the Efficacy and Safety of Anitocabtagene Autoleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Multiple Myeloma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Anitocabtagene" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Anitocabtagene) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Multiple Myeloma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Documented historical diagnosis of multiple myeloma (MM)</li><li>Received 1 to 3 prior lines of antimyeloma therapy, including an immunomodulatory drug (IMiD) and an anti-cluster of differentiation 38 (CD38) monoclonal antibody (mAb). A minimum of 2 consecutive cycles of an IMiD and an anti-CD38 mAb in any prior line of therapy is required. The IMiD and anti-CD38 mAb do not need to be from the same regimen in the prior line(s) of therapy.</li><li>Documented evidence of progressive disease by IMWG criteria based on the investigator&#39;s determination on or within 12 months of the last dose of the last regimen</li><li>Measurable disease at screening per IMWG, defined as any of the following:<br><br>  * Serum M-protein level ≥ 0.5 g/dL or urine M-protein level ≥ 200 mg/24 hours; or<br>  * Light chain MM without measurable disease in the serum or urine: serum free light chain ≥ 10 mg/dL and abnormal serum free light chain ratio</li><li>Only individuals who are candidates to receive at least 1 of the 4 SOCT regimens (PVd, DPd, KDd, or Kd), as determined by the investigator, should be considered for this study</li><li>Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1</li><li>Females of childbearing potential must have a negative serum or urine pregnancy test with a sensitivity of at least 25 mIU/mL (females who have undergone surgical sterilization or who have been postmenopausal for at least 2 years are not considered to be of childbearing potential)<br><br>Key</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Prior B-cell maturation antigen (BCMA)-targeted therapy</li><li>Prior T-cell engager therapy</li><li>Prior CAR therapy or other genetically modified T-cell therapy</li><li>Active or prior history of central nervous system (CNS) or meningeal involvement of MM</li><li>Cardiac atrial or cardiac ventricular MM involvement</li><li>History of or active plasma cell leukemia, Waldenstrom&#39;s macroglobulinemia, POEMS syndrome (polyneuropathy, organomegaly, endocrinopathy, monoclonal protein, and skin changes), or amyloidosis</li><li>Active malignancy (other than MM) requiring ongoing treatment for disease control within the last 24 months. Myelodysplastic syndrome (even without ongoing treatment) is not permitted.</li><li>Prior auto-SCT within 12 weeks before randomization</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT06413498" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT06413498" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT06413498" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT06413498)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Cell &amp; Gene Therapy (CAR-T)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in CAR-T</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT06413498","acronym":"iMMagine-3","briefTitle":"A Study Comparing Anitocabtagene Autoleucel to Standard of Care Therapy in Participants With Relapsed/ Refractory Multiple Myeloma","officialTitle":"A Phase 3, Randomized, Open-Label Study to Compare the Efficacy and Safety of Anitocabtagene Autoleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Multiple Myeloma","sponsor":"Kite, A Gilead Company","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Cell & Gene Therapy (CAR-T)","conditions":["Multiple Myeloma"],"interventions":["Anitocabtagene Autoleucel","Cyclophosphamide","Fludarabine","Pomalidomide","Bortezomib","Dexamethasone","Daratumumab","Carfilzomib"],"primaryOutcomes":[{"measure":"Progression-Free Survival (PFS)","description":"PFS is defined as the time from randomization to disease progression per International Myeloma Working Group (IMWG) criteria as determined by independent review committee (IRC), or death due to any cause, whichever occurs first.","timeFrame":"Up to 4 years"},{"measure":"Minimal Residual Disease (MRD) Complete Response (CR) Rate at 9 Months","description":"Minimal MRD is defined as the proportion of participants achieving CR/stringent CR (sCR) and MRD-negative status at 9 months. MRD negativity at 9 months is defined as negative MRD value at 9 months (± 3 months) in bone marrow assessment (\\< 1 in 105 nucleated cells per IMWG criteria using NGS) (Kumar 2016). CR/sCR per IMWG criteria is determined by IRC.","timeFrame":"Up to 9 months"}],"completionDate":"2031-07","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT06413498","acronym":"iMMagine-3","briefTitle":"A Study Comparing Anitocabtagene Autoleucel to Standard of Care Therapy in Participants With Relapsed/ Refractory Multiple Myeloma","officialTitle":"A Phase 3, Randomized, Open-Label Study to Compare the Efficacy and Safety of Anitocabtagene Autoleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Multiple Myeloma","sponsor":"Kite, A Gilead Company","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"CAR-T","conditions":["Multiple Myeloma"],"interventions":["Anitocabtagene Autoleucel","Cyclophosphamide","Fludarabine","Pomalidomide","Bortezomib","Dexamethasone","Daratumumab","Carfilzomib"],"primaryOutcomes":[{"measure":"Progression-Free Survival (PFS)","description":"PFS is defined as the time from randomization to disease progression per International Myeloma Working Group (IMWG) criteria as determined by independent review committee (IRC), or death due to any cause, whichever occurs first.","timeFrame":"Up to 4 years"},{"measure":"Minimal Residual Disease (MRD) Complete Response (CR) Rate at 9 Months","description":"Minimal MRD is defined as the proportion of participants achieving CR/stringent CR (sCR) and MRD-negative status at 9 months. MRD negativity at 9 months is defined as negative MRD value at 9 months (± 3 months) in bone marrow assessment (\\< 1 in 105 nucleated cells per IMWG criteria using NGS) (Kumar 2016). CR/sCR per IMWG criteria is determined by IRC.","timeFrame":"Up to 9 months"}],"completionDate":"2031-07","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "iMMagine-3. A Study Comparing Anitocabtagene Autoleucel to Standard of Care Therapy in Participants With Relapsed/ Refractory Multiple Myeloma. ClinicalTrials.gov Identifier: NCT06413498. Primary Sponsor: Kite, A Gilead Company. Available at: https://clinsight.pract.eu/trials/NCT06413498/";

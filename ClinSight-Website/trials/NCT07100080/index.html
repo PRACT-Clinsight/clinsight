@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT07100080 NCT07100080 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2, Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Bristol-Myers Squibb">
+    <meta property="og:description" content="Phase: Phase 2, Phase 3 · Modality: Unclassified · Sponsor: Bristol-Myers Squibb">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT07100080/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07100080 (NCT07100080): Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-Pemetrexed for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01)","url":"https://clinsight.pract.eu/trials/NCT07100080/","studySubject":{"@type":"MedicalCondition","name":"Non-Small Cell Lung Cancer"},"sponsor":"Bristol-Myers Squibb","status":"RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT07100080 (NCT07100080)","item":"https://clinsight.pract.eu/trials/NCT07100080/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07100080 (NCT07100080)?","acceptedAnswer":{"@type":"Answer","text":"NCT07100080 is a Phase 2, Phase 3 study sponsored by Bristol-Myers Squibb evaluating Targeted Oncology &amp; Systemic Therapy in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07100080?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07100080."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07100080 (NCT07100080): Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-Pemetrexed for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01)","url":"https://clinsight.pract.eu/trials/NCT07100080/","studySubject":{"@type":"MedicalCondition","name":"Non-Small Cell Lung Cancer"},"sponsor":"Bristol-Myers Squibb","status":"RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT07100080 (NCT07100080)","item":"https://clinsight.pract.eu/trials/NCT07100080/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07100080 (NCT07100080)?","acceptedAnswer":{"@type":"Answer","text":"NCT07100080 is a Phase 2, Phase 3 study sponsored by Bristol-Myers Squibb evaluating Unclassified in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07100080?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07100080."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT07100080</span>
             <span class="badge phase">Phase 2, Phase 3</span>
             <span class="badge status ">RECRUITING</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-Pemetrexed for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01)</h1>
         <p class="lead">IZABRIGHT-Lung01: A Randomized, Open-label, Phase 2/3 Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-based Chemotherapy in Patients With EGFR-mutated Non-small Cell Lung Cancer and Disease Progression on EGFR Tyrosine Kinase Inhibitor Therapy</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Iza-bren" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Iza-bren) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Non-Small Cell Lung Cancer</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Non-squamous NSCLC, not amenable to treatment in curative intent.</li><li>Documented evidence of EGFR mutation (exon 19 deletion, L858R mutation).</li><li>Progressive disease on a 3rd-generation (such as osimertinib, furmonertinib, lazertinib,...) EGFR-TKI-based mono- or combination therapy regimen as the most recent line of therapy in an adjuvant, locally advanced, or metastatic treatment setting.</li><li>Eligible to receive a platinum-based doublet chemotherapy regimen (either cisplatin or carboplatin in combination with pemetrexed).</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Inadequate organ function and/or bone marrow reserve.</li><li>Leptomeningeal metastases or spinal cord compression.</li><li>Poorly controlled systemic medical conditions.</li><li>Other protocol-defined inclusion/exclusion criteria apply.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT07100080" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT07100080" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT07100080" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT07100080)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT07100080","acronym":null,"briefTitle":"Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-Pemetrexed for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01)","officialTitle":"IZABRIGHT-Lung01: A Randomized, Open-label, Phase 2/3 Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-based Chemotherapy in Patients With EGFR-mutated Non-small Cell Lung Cancer and Disease Progression on EGFR Tyrosine Kinase Inhibitor Therapy","sponsor":"Bristol-Myers Squibb","phase":"Phase 2, Phase 3","status":"RECRUITING","modality":"Targeted Oncology & Systemic Therapy","conditions":["Non-Small Cell Lung Cancer"],"interventions":["Iza-bren","Carboplatin","Cisplatin","Pemetrexed"],"primaryOutcomes":[{"measure":"Recommended Phase 3 Dose (RP3D) of BMS-986507","description":"Phase 2","timeFrame":"Approximately 3 months after the first dose"},{"measure":"Progression-Free Survival (PFS) Assessed by Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v1.1) per blinded independent central review (BICR)","description":"Phase 3","timeFrame":"Up to 3 years"}],"completionDate":"2030-11-15","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT07100080","acronym":null,"briefTitle":"Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-Pemetrexed for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01)","officialTitle":"IZABRIGHT-Lung01: A Randomized, Open-label, Phase 2/3 Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-based Chemotherapy in Patients With EGFR-mutated Non-small Cell Lung Cancer and Disease Progression on EGFR Tyrosine Kinase Inhibitor Therapy","sponsor":"Bristol-Myers Squibb","phase":"Phase 2, Phase 3","status":"RECRUITING","modality":"Unclassified","conditions":["Non-Small Cell Lung Cancer"],"interventions":["Iza-bren","Carboplatin","Cisplatin","Pemetrexed"],"primaryOutcomes":[{"measure":"Recommended Phase 3 Dose (RP3D) of BMS-986507","description":"Phase 2","timeFrame":"Approximately 3 months after the first dose"},{"measure":"Progression-Free Survival (PFS) Assessed by Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v1.1) per blinded independent central review (BICR)","description":"Phase 3","timeFrame":"Up to 3 years"}],"completionDate":"2030-11-15","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-Pemetrexed for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01). ClinicalTrials.gov Identifier: NCT07100080. Primary Sponsor: Bristol-Myers Squibb. Available at: https://clinsight.pract.eu/trials/NCT07100080/";

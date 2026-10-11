@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT07566156 NCT07566156 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Antibody-Drug Conjugates (ADC) · Sponsor: Astellas Pharma Global Development, Inc.">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: ADC · Sponsor: Astellas Pharma Global Development, Inc.">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT07566156/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07566156 (NCT07566156): Enfortumab Vedotin in Combination With Pembrolizumab vs. Concurrent Chemoradiotherapy (cCRT) in People With Muscle Invasive Bladder Cancer (EV-309)","url":"https://clinsight.pract.eu/trials/NCT07566156/","studySubject":{"@type":"MedicalCondition","name":"Urothelial Cancer"},"sponsor":"Astellas Pharma Global Development, Inc.","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT07566156 (NCT07566156)","item":"https://clinsight.pract.eu/trials/NCT07566156/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07566156 (NCT07566156)?","acceptedAnswer":{"@type":"Answer","text":"NCT07566156 is a Phase 3 study sponsored by Astellas Pharma Global Development, Inc. evaluating Antibody-Drug Conjugates (ADC) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07566156?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07566156."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07566156 (NCT07566156): Enfortumab Vedotin in Combination With Pembrolizumab vs. Concurrent Chemoradiotherapy (cCRT) in People With Muscle Invasive Bladder Cancer (EV-309)","url":"https://clinsight.pract.eu/trials/NCT07566156/","studySubject":{"@type":"MedicalCondition","name":"Urothelial Cancer"},"sponsor":"Astellas Pharma Global Development, Inc.","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT07566156 (NCT07566156)","item":"https://clinsight.pract.eu/trials/NCT07566156/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07566156 (NCT07566156)?","acceptedAnswer":{"@type":"Answer","text":"NCT07566156 is a Phase 3 study sponsored by Astellas Pharma Global Development, Inc. evaluating ADC in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07566156?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07566156."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT07566156</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">RECRUITING</span>
-            <span class="badge modality">Antibody-Drug Conjugates (ADC)</span>
+            <span class="badge modality">ADC</span>
+            
         </div>
 
         <h1>Enfortumab Vedotin in Combination With Pembrolizumab vs. Concurrent Chemoradiotherapy (cCRT) in People With Muscle Invasive Bladder Cancer (EV-309)</h1>
         <p class="lead">A PHASE 3, OPEN-LABEL, RANDOMIZED STUDY TO EVALUATE ENFORTUMAB VEDOTIN IN COMBINATION WITH PEMBROLIZUMAB IN ADULT PARTICIPANTS WITH MUSCLE-INVASIVE BLADDER CANCER WHO ARE INELIGIBLE FOR OR HAVE ELECTED NOT TO UNDERGO CYSTECTOMY</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Enfortumab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Enfortumab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Urothelial Cancer, Urinary Bladder Neoplasms</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Has histologically confirmed initial diagnosis of muscle-invasive bladder cancer (MIBC) with predominant urothelial histology staged cT2-T4aN0M0</li><li>Tissue comprising muscle-invasive urothelial cancer must be submitted for clinical staging at baseline</li><li>Eligible for and agree to receive chemoradiotherapy and one of the protocol-specified radiosensitizing chemotherapy regimens</li><li>Fit for systemic therapy and elect bladder preservation, including participants who are ineligible for or have elected not to undergo cystectomy</li><li>Has Eastern Cooperative Oncology Group (ECOG) performance status of 0, 1, or 2</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Advanced or metastatic disease (N+, M1), non-urothelial carcinoma, diffuse or multifocal CIS, urothelial carcinoma or histological variant at any site outside the urinary bladder within previous 24 months prior to randomization except Ta/T1/CIS of the upper urinary tract including renal pelvis and ureter if the participant had undergone complete nephrectomy</li><li>Has received any prior systemic treatment, chemoradiation, and/or radiation for MIBC or NMIBC</li><li>Prior pelvic radiation for any reason</li><li>Inadequate bladder function</li><li>Other active malignancies within 3 years prior to randomization</li><li>Previously treated with enfortumab vedotin or other MMAE-based antibody-drug conjugates (ADCs)</li><li>Previously treated with a PD(L)-1 inhibitor, defined as a PD-1 inhibitor or PD-L1 inhibitor</li><li>Uncontrolled diabetes</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT07566156" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT07566156" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT07566156" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT07566156)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Antibody-Drug Conjugates (ADC)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in ADC</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT07566156","acronym":null,"briefTitle":"Enfortumab Vedotin in Combination With Pembrolizumab vs. Concurrent Chemoradiotherapy (cCRT) in People With Muscle Invasive Bladder Cancer (EV-309)","officialTitle":"A PHASE 3, OPEN-LABEL, RANDOMIZED STUDY TO EVALUATE ENFORTUMAB VEDOTIN IN COMBINATION WITH PEMBROLIZUMAB IN ADULT PARTICIPANTS WITH MUSCLE-INVASIVE BLADDER CANCER WHO ARE INELIGIBLE FOR OR HAVE ELECTED NOT TO UNDERGO CYSTECTOMY","sponsor":"Astellas Pharma Global Development, Inc.","phase":"Phase 3","status":"RECRUITING","modality":"Antibody-Drug Conjugates (ADC)","conditions":["Urothelial Cancer","Urinary Bladder Neoplasms"],"interventions":["Enfortumab vedotin","Conventional Radiotherapy","Hypofractionated Radiotherapy","Cisplatin","Fluorouracil","Mitomycin C","Gemcitabine","Pembrolizumab"],"primaryOutcomes":[{"measure":"Bladder-intact Event Free Survival (BI-EFS) by Blinded Independent Central Review (BICR)","description":"BI-EFS is defined as the time from randomization to any of the following events: histologically confirmed persistent or residual MIBC post-treatment confirmed by BICR, histologically confirmed recurrent MIBC by BICR, disease progression by BICR, cystectomy, or death from any cause.","timeFrame":"Up to approximately 45.5 months"},{"measure":"Overall Survival (OS)","description":"Time from randomization to death due to any cause.","timeFrame":"Up to approximately 60 months"}],"completionDate":"2032-02-29","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT07566156","acronym":null,"briefTitle":"Enfortumab Vedotin in Combination With Pembrolizumab vs. Concurrent Chemoradiotherapy (cCRT) in People With Muscle Invasive Bladder Cancer (EV-309)","officialTitle":"A PHASE 3, OPEN-LABEL, RANDOMIZED STUDY TO EVALUATE ENFORTUMAB VEDOTIN IN COMBINATION WITH PEMBROLIZUMAB IN ADULT PARTICIPANTS WITH MUSCLE-INVASIVE BLADDER CANCER WHO ARE INELIGIBLE FOR OR HAVE ELECTED NOT TO UNDERGO CYSTECTOMY","sponsor":"Astellas Pharma Global Development, Inc.","phase":"Phase 3","status":"RECRUITING","modality":"ADC","conditions":["Urothelial Cancer","Urinary Bladder Neoplasms"],"interventions":["Enfortumab vedotin","Conventional Radiotherapy","Hypofractionated Radiotherapy","Cisplatin","Fluorouracil","Mitomycin C","Gemcitabine","Pembrolizumab"],"primaryOutcomes":[{"measure":"Bladder-intact Event Free Survival (BI-EFS) by Blinded Independent Central Review (BICR)","description":"BI-EFS is defined as the time from randomization to any of the following events: histologically confirmed persistent or residual MIBC post-treatment confirmed by BICR, histologically confirmed recurrent MIBC by BICR, disease progression by BICR, cystectomy, or death from any cause.","timeFrame":"Up to approximately 45.5 months"},{"measure":"Overall Survival (OS)","description":"Time from randomization to death due to any cause.","timeFrame":"Up to approximately 60 months"}],"completionDate":"2032-02-29","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Enfortumab Vedotin in Combination With Pembrolizumab vs. Concurrent Chemoradiotherapy (cCRT) in People With Muscle Invasive Bladder Cancer (EV-309). ClinicalTrials.gov Identifier: NCT07566156. Primary Sponsor: Astellas Pharma Global Development, Inc.. Available at: https://clinsight.pract.eu/trials/NCT07566156/";

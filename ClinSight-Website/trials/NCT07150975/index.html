@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT07150975 NCT07150975 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Incretin Mimetics (GLP-1 / GIP) · Sponsor: Gan &amp; Lee Pharmaceuticals.">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: GLP-1 · Sponsor: Gan &amp; Lee Pharmaceuticals.">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT07150975/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07150975 (NCT07150975): Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide (Wegovy®) in Adult Obese or Overweight Subjects","url":"https://clinsight.pract.eu/trials/NCT07150975/","studySubject":{"@type":"MedicalCondition","name":"Obesity/Overweight in Adult"},"sponsor":"Gan &amp; Lee Pharmaceuticals.","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"NCT07150975 (NCT07150975)","item":"https://clinsight.pract.eu/trials/NCT07150975/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07150975 (NCT07150975)?","acceptedAnswer":{"@type":"Answer","text":"NCT07150975 is a Phase 3 study sponsored by Gan &amp; Lee Pharmaceuticals. evaluating Incretin Mimetics (GLP-1 / GIP) in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07150975?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07150975."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07150975 (NCT07150975): Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide (Wegovy®) in Adult Obese or Overweight Subjects","url":"https://clinsight.pract.eu/trials/NCT07150975/","studySubject":{"@type":"MedicalCondition","name":"Obesity/Overweight in Adult"},"sponsor":"Gan &amp; Lee Pharmaceuticals.","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"NCT07150975 (NCT07150975)","item":"https://clinsight.pract.eu/trials/NCT07150975/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07150975 (NCT07150975)?","acceptedAnswer":{"@type":"Answer","text":"NCT07150975 is a Phase 3 study sponsored by Gan &amp; Lee Pharmaceuticals. evaluating GLP-1 in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07150975?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07150975."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT07150975</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">RECRUITING</span>
-            <span class="badge modality">Incretin Mimetics (GLP-1 / GIP)</span>
+            <span class="badge modality">GLP-1</span>
+            
         </div>
 
         <h1>Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide (Wegovy®) in Adult Obese or Overweight Subjects</h1>
         <p class="lead">A Multicenter, Randomized, Open-Label, Parallel-Group Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide(Wegovy®) in Adult Obese or Overweight Subjects</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=GZR18" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (GZR18) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Obesity/Overweight in Adult</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Aged ≥ 18 years old (based on the date of signing the informed consent form), male or female.</li><li>For subjects not diagnosed with type 2 diabetes at screening, the following criteria must be met:<br><br>   At screening and Visit 2 (before randomization), the subject must be either obese (BMI ≥ 28 kg/m²) or overweight (24 kg/m² ≤ BMI \&lt; 28 kg/m²), and concurrently present with at least one of the following conditions:<br>   * Comorbidity of one or more of the following: hyperglycemia (see Appendix 1 for definition), hypertension, dyslipidemia (see Appendix 2 for definition), or fatty liver; ②Weight-bearing joint pain;<br><br>     * Weight-related obstructive sleep apnea syndrome.</li><li>For subjects with type 2 diabetes at screening, the following criteria must be met simultaneously:<br><br>   Body mass index (BMI) ≥ 24 kg/m² at both screening and Visit 2 (before randomization); A confirmed diagnosis of type 2 diabetes for at least 90 days at screening, in accordance with the World Health Organization (WHO) 1999 diabetes diagnostic criteria and the 2011 supplementary diagnostic criteria (HbA1c-based diagnosis is recommended); Within 90 days prior to screening: ① Management through diet and exercise alone, with no use of any antidiabetic medications; or ② Treatment of type 2 diabetes with a stable dose of metformin monotherapy, where the metformin dose is ≥ 1500 mg/day or the maximum tolerated dose (\&lt; 1500 mg/day but ≥ 1000 mg/day); or ③ Treatment of type 2 diabetes with a stable dose of metformin (≥ 1500 mg/day or the maximum tolerated dose (\&lt; 1500 mg/day but ≥ 1000 mg/day)) combined with a stable dose of sodium-glucose cotransporter 2 inhibitor (SGLT2i); Glycated hemoglobin (HbA1c) measured by the central laboratory at screening is 7.0-10.5% (inclusive of both endpoints); Fasting plasma glucose measured by the central laboratory at screening is \&lt; 15 mmol/L.</li><li>Prior to screening, the subject has been managed by diet and exercise alone for at least 12 weeks, and the body weight change has been \&lt; 5% within the past 12 weeks (based on self-report).</li><li>Subjects of childbearing potential must have no childbearing plans from the time of signing the informed consent form to 8 weeks after the last dose, and voluntarily adopt effective contraceptive measures, with no plans for sperm/egg donation. Females of childbearing potential must not be breastfeeding, and the pregnancy test results must be negative at both screening and Visit 2 (before randomization).</li><li>The subject must be able to understand the procedures and methods of this study, be willing and able to maintain a regular diet and exercise lifestyle during the study period, be willing and able to receive subcutaneous injection of the investigational product, and voluntarily sign the informed consent form.<br><br>   \-</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>For subjects without type 2 diabetes at screening, the following situations are excluded:<br><br>   * Fasting plasma glucose ≥ 7.0 mmol/L or glycated hemoglobin (HbA1c) ≥ 6.5% as measured by the central laboratory at screening.<br><br>     * Diagnosis of any type of diabetes (excluding gestational diabetes) prior to screening.<br><br>       * Use of glucagon-like peptide-1 receptor (GLP-1R) agonists or drugs with a GLP-1R agonist mechanism of action (e.g., GLP-1R/glucagon receptor (GCGR) agonists, glucose-dependent insulinotropic polypeptide receptor (GIPR)/GLP-1R agonists, or GIPR/GLP-1R/GCGR agonists, etc.) prior to screening.</li><li>For subjects with type 2 diabetes at screening, the following situations are excluded:<br><br>   * Use of glucagon-like peptide-1 receptor (GLP-1R) agonists or drugs with a GLP-1R agonist mechanism of action (e.g., GLP-1R/glucagon receptor (GCGR) agonists, glucose-dependent insulinotropic polypeptide receptor (GIPR)/GLP-1R agonists, or GIPR/GLP-1R/GCGR agonists, etc.) within 180 days prior to screening; or a history of poor blood glucose control efficacy or intolerance to the above-mentioned drugs (as assessed by the investigator).<br><br>     * A history of diabetic ketoacidosis, lactic acidosis, or hyperosmolar hyperglycemic state within 180 days prior to screening.<br><br>       * Presence of severe chronic diabetic complications at screening (e.g., proliferative retinopathy or macular edema, painful diabetic neuropathy, intermittent claudication, or diabetic foot).<br><br>         * A history of refractory or complicated urinary tract infections/genital infections within 6 months prior to screening.</li><li>Subjects with known or suspected allergies to glucagon-like peptide-1 (GLP-1) receptor agonists or their excipients.</li><li>A history of substance abuse prior to screening.</li><li>A history of alcohol abuse within 180 days prior to screening, defined as an average weekly alcohol intake exceeding 14 units (for males)/7 units (for females) (1 standard unit is equivalent to 360 mL of beer, 150 mL of wine with 12% alcohol content, or 45 mL of spirits with 40% alcohol content).</li><li>Presence of limb deformities or disabilities that affect height measurement.</li><li>Previous receipt of bariatric surgery prior to screening, or planned receipt of bariatric surgery during the study period (exceptions include acupuncture for weight loss, liposuction, or abdominal liposuction performed more than 1 year prior to screening; and removal (or expulsion) of intragastric balloons more than 1 year prior to screening).</li><li>Obesity caused by secondary diseases or medications, including: elevated cortisol (e.g., Cushing&#39;s syndrome), obesity due to pituitary or hypothalamic damage, etc.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT07150975" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT07150975" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT07150975" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT07150975)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Incretin Mimetics (GLP-1 / GIP)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in GLP-1</div>
             <div class="related-grid">
                 
                 <a href="../NCT03574597/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT07150975","acronym":null,"briefTitle":"Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide (Wegovy®) in Adult Obese or Overweight Subjects","officialTitle":"A Multicenter, Randomized, Open-Label, Parallel-Group Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide(Wegovy®) in Adult Obese or Overweight Subjects","sponsor":"Gan & Lee Pharmaceuticals.","phase":"Phase 3","status":"RECRUITING","modality":"Incretin Mimetics (GLP-1 / GIP)","conditions":["Obesity/Overweight in Adult"],"interventions":["GZR18","Semaglutide(Wegovy® )"],"primaryOutcomes":[{"measure":"Percentage change in body weight from baseline after 52 weeks (W) of treatment.","description":"","timeFrame":"From Week 0 to Week 52"}],"completionDate":"2027-06-30","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT07150975","acronym":null,"briefTitle":"Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide (Wegovy®) in Adult Obese or Overweight Subjects","officialTitle":"A Multicenter, Randomized, Open-Label, Parallel-Group Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide(Wegovy®) in Adult Obese or Overweight Subjects","sponsor":"Gan & Lee Pharmaceuticals.","phase":"Phase 3","status":"RECRUITING","modality":"GLP-1","conditions":["Obesity/Overweight in Adult"],"interventions":["GZR18","Semaglutide(Wegovy® )"],"primaryOutcomes":[{"measure":"Percentage change in body weight from baseline after 52 weeks (W) of treatment.","description":"","timeFrame":"From Week 0 to Week 52"}],"completionDate":"2027-06-30","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide (Wegovy®) in Adult Obese or Overweight Subjects. ClinicalTrials.gov Identifier: NCT07150975. Primary Sponsor: Gan &amp;amp; Lee Pharmaceuticals.. Available at: https://clinsight.pract.eu/trials/NCT07150975/";

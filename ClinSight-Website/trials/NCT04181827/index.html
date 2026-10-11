@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04181827 CARTITUDE-4 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Monoclonal Antibodies · Sponsor: Janssen Research &amp; Development, LLC">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: Janssen Research &amp; Development, LLC">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04181827/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"CARTITUDE-4 (NCT04181827): A Study Comparing JNJ-68284528, a CAR-T Therapy Directed Against B-cell Maturation Antigen (BCMA), Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Participants With Relapsed and Lenalidomide-Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT04181827/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Janssen Research &amp; Development, LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"CARTITUDE-4 (NCT04181827)","item":"https://clinsight.pract.eu/trials/NCT04181827/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04181827 (CARTITUDE-4)?","acceptedAnswer":{"@type":"Answer","text":"NCT04181827 is a Phase 3 study sponsored by Janssen Research &amp; Development, LLC evaluating Targeted Monoclonal Antibodies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04181827?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04181827."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"CARTITUDE-4 (NCT04181827): A Study Comparing JNJ-68284528, a CAR-T Therapy Directed Against B-cell Maturation Antigen (BCMA), Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Participants With Relapsed and Lenalidomide-Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT04181827/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Janssen Research &amp; Development, LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"CARTITUDE-4 (NCT04181827)","item":"https://clinsight.pract.eu/trials/NCT04181827/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04181827 (CARTITUDE-4)?","acceptedAnswer":{"@type":"Answer","text":"NCT04181827 is a Phase 3 study sponsored by Janssen Research &amp; Development, LLC evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04181827?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04181827."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04181827</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Targeted Monoclonal Antibodies</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>CARTITUDE-4: A Study Comparing JNJ-68284528, a CAR-T Therapy Directed Against B-cell Maturation Antigen (BCMA), Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Participants With Relapsed and Lenalidomide-Refractory Multiple Myeloma</h1>
         <p class="lead">A Phase 3 Randomized Study Comparing JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against BCMA, Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Subjects With Relapsed and Lenalidomide-Refractory Multiple Myeloma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/27/NCT04181827/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/27/NCT04181827/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT04181827?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41824255/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41824255)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41824255 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Cilta-cel" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Cilta-cel) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Multiple Myeloma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Measurable disease at screening as defined by any of the following: (a) Serum monoclonal paraprotein (M-protein) level greater than or equal to (\&gt;=) 0.5 gram per deciliter (g/dL) or urine M-protein level \&gt;=200 milligram (mg)/24 hours; or (b) Light chain multiple myeloma without measurable M-protein in the serum or the urine: Serum free light chain \&gt;=10 mg/dL and abnormal serum free light chain ratio</li><li>Have received 1 to 3 prior lines of therapy including a proteasome inhibitor (PI) and an immunomodulatory drug (IMiD)</li><li>Have documented evidence of PD by International Myeloma Working Group (IMWG) criteria based on investigator&#39;s determination on or within 6 months of their last regimen</li><li>Be refractory to lenalidomide per IMWG consensus guidelines (failure to achieve minimal response or progression on or within 60 days of completing lenalidomide therapy). Progression on or within 60 days of the last dose of lenalidomide given as maintenance will meet this criterion. For participants with more than 1 prior line of therapy, there is no requirement to be lenalidomide refractory to the most recent line of prior therapy. However, participants must be refractory to lenalidomide in at least one prior line</li><li>Have clinical laboratory values meeting the following criteria during the Screening Phase (re testing is allowed but the below criteria must be met in the latest test prior to randomization):<br><br>  1. Hemoglobin \&gt;=8 gram per deciliter (g/dL) (without prior RBC transfusion within 7 days before the laboratory test; recombinant human erythropoietin use is permitted);<br>  2. Absolute neutrophil count (ANC) \&gt;=1 \* 10\^9 per liter (L) (without recombinant human granulocyte colony-stimulating factor \[G-CSF\] within 7 days and without pegylated G-CSF within 14 days of the laboratory test);<br>  3. Platelet count \&gt;=75 \* 10\^9/L (without prior platelet transfusion within 7 days before the laboratory test) in participants in whom less than (\&lt;) 50 percent (%) of bone marrow nucleated cells are plasma cells; platelet count \&gt;=50 \* 10\^9/L (without prior platelet transfusion within 7 days before the laboratory test) in participants in whom \&gt;=50% of bone marrow nucleated cells are plasma cells;<br>  4. Lymphocyte count \&gt;=0.3 \* 10\^9/L;<br>  5. Aspartate aminotransferase (AST) less than or equal to (\&lt;=)3 \* upper limit of normal (ULN);<br>  6. Alanine aminotransferase (ALT) \&lt;=3 \* ULN;<br>  7. Total bilirubin \&lt;=2.0 \* ULN; except in participants with congenital bilirubinemia, such as Gilbert syndrome (in which case direct bilirubin \&lt;=1.5 \* ULN is required);<br>  8. Estimated glomerular filtration rate \&gt;=40 milliliter per minute (mL/min) per 1.73 meter square (m\^2) (to be calculated using the Modification of Diet in Renal Disease \[MDRD\] formula)</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Prior treatment with chimeric antigen receptor T-cell (CAR-T) therapy directed at any target</li><li>Any previous therapy that is targeted to B-cell maturation antigen (BCMA)</li><li>Ongoing toxicity from previous anticancer therapy that has not resolved to baseline levels or to Grade 1 or less; except for alopecia</li><li>Participants with Grade 1 peripheral neuropathy with pain or Grade 2 or higher peripheral neuropathy will not be permitted to receive pomalidomide, bortezomib, and dexamethasone (PVd) as standard therapy or bridging therapy; however, participants may receive daratumumab, pomalidomide, and dexamethasone (DPd) as standard therapy or bridging therapy</li><li>Received a cumulative dose of corticosteroids equivalent to \&gt;=70 mg of prednisone within the 7 days prior to randomization</li><li>Monoclonal antibody treatment within 21 days</li><li>Cytotoxic therapy within 14 days</li><li>Proteasome inhibitor therapy within 14 days</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04181827" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04181827" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04181827" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04181827)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/27/NCT04181827/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/27/NCT04181827/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT04181827?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41824255/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41824255)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT04181827" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Monoclonal Antibodies</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04181827","acronym":"CARTITUDE-4","briefTitle":"A Study Comparing JNJ-68284528, a CAR-T Therapy Directed Against B-cell Maturation Antigen (BCMA), Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Participants With Relapsed and Lenalidomide-Refractory Multiple Myeloma","officialTitle":"A Phase 3 Randomized Study Comparing JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against BCMA, Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Subjects With Relapsed and Lenalidomide-Refractory Multiple Myeloma","sponsor":"Janssen Research & Development, LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Targeted Monoclonal Antibodies","conditions":["Multiple Myeloma"],"interventions":["Cilta-cel","Pomalidomide","Bortezomib","Dexamethasone","Daratumumab"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"PFS: defined as time from date of randomization to date of first documented progressed disease (PD) as per International Myeloma Working Group (IMWG) criteria, or death due to any cause, whichever occurred first. PD: increase of 25% from lowest response value: serum and urine M-component (absolute increase must be \\>=0.5 grams per deciliter \\[g/dL\\] and \\>=200 milligrams \\[mg\\] per 24 hours, respectively); only in participants without measurable serum and urine M-protein levels, difference between involved and uninvolved free light chain (FLC) levels (absolute increase of \\>10 mg/dL); only in participants without measurable serum and urine M-protein levels and without measurable disease by FLC levels, bone marrow plasma cell (PC)% (absolute increase of \\>=10%), appearance of new lesion; definite development of new bone lesions or definite increase in size of existing bone lesions, \\>=50% increase in circulating PCs (minimum of 200 cells per microliter \\[uL\\]) if this was only measure of disease.","timeFrame":"From randomization (Day 1) to either progressive disease or death, whichever occurred first (up to 3.9 years)"}],"completionDate":"2027-03-31","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04181827","acronym":"CARTITUDE-4","briefTitle":"A Study Comparing JNJ-68284528, a CAR-T Therapy Directed Against B-cell Maturation Antigen (BCMA), Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Participants With Relapsed and Lenalidomide-Refractory Multiple Myeloma","officialTitle":"A Phase 3 Randomized Study Comparing JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against BCMA, Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Subjects With Relapsed and Lenalidomide-Refractory Multiple Myeloma","sponsor":"Janssen Research & Development, LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"TKI / Small Molecule","conditions":["Multiple Myeloma"],"interventions":["Cilta-cel","Pomalidomide","Bortezomib","Dexamethasone","Daratumumab"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"PFS: defined as time from date of randomization to date of first documented progressed disease (PD) as per International Myeloma Working Group (IMWG) criteria, or death due to any cause, whichever occurred first. PD: increase of 25% from lowest response value: serum and urine M-component (absolute increase must be \\>=0.5 grams per deciliter \\[g/dL\\] and \\>=200 milligrams \\[mg\\] per 24 hours, respectively); only in participants without measurable serum and urine M-protein levels, difference between involved and uninvolved free light chain (FLC) levels (absolute increase of \\>10 mg/dL); only in participants without measurable serum and urine M-protein levels and without measurable disease by FLC levels, bone marrow plasma cell (PC)% (absolute increase of \\>=10%), appearance of new lesion; definite development of new bone lesions or definite increase in size of existing bone lesions, \\>=50% increase in circulating PCs (minimum of 200 cells per microliter \\[uL\\]) if this was only measure of disease.","timeFrame":"From randomization (Day 1) to either progressive disease or death, whichever occurred first (up to 3.9 years)"}],"completionDate":"2027-03-31","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "CARTITUDE-4. A Study Comparing JNJ-68284528, a CAR-T Therapy Directed Against B-cell Maturation Antigen (BCMA), Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Participants With Relapsed and Lenalidomide-Refractory Multiple Myeloma. ClinicalTrials.gov Identifier: NCT04181827. Primary Sponsor: Janssen Research &amp;amp; Development, LLC. Available at: https://clinsight.pract.eu/trials/NCT04181827/";

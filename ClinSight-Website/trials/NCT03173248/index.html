@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03173248 AGILE — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Institut de Recherches Internationales Servier">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Unclassified · Sponsor: Institut de Recherches Internationales Servier">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03173248/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"AGILE (NCT03173248): Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation","url":"https://clinsight.pract.eu/trials/NCT03173248/","studySubject":{"@type":"MedicalCondition","name":"Newly Diagnosed Acute Myeloid Leukemia (AML)"},"sponsor":"Institut de Recherches Internationales Servier","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"AGILE (NCT03173248)","item":"https://clinsight.pract.eu/trials/NCT03173248/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03173248 (AGILE)?","acceptedAnswer":{"@type":"Answer","text":"NCT03173248 is a Phase 3 study sponsored by Institut de Recherches Internationales Servier evaluating Targeted Oncology &amp; Systemic Therapy in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03173248?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03173248."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"AGILE (NCT03173248): Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation","url":"https://clinsight.pract.eu/trials/NCT03173248/","studySubject":{"@type":"MedicalCondition","name":"Newly Diagnosed Acute Myeloid Leukemia (AML)"},"sponsor":"Institut de Recherches Internationales Servier","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"AGILE (NCT03173248)","item":"https://clinsight.pract.eu/trials/NCT03173248/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03173248 (AGILE)?","acceptedAnswer":{"@type":"Answer","text":"NCT03173248 is a Phase 3 study sponsored by Institut de Recherches Internationales Servier evaluating Unclassified in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03173248?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03173248."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03173248</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>AGILE: Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation</h1>
         <p class="lead">A Phase 3, Multicenter, Double-Blind, Randomized, Placebo-Controlled Study of AG-120 in Combination With Azacitidine in Subjects ≥ 18 Years of Age With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/48/NCT03173248/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/48/NCT03173248/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT03173248?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/40706052/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 40706052)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 40706052 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=AG-120" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (AG-120) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Newly Diagnosed Acute Myeloid Leukemia (AML), Untreated AML, AML Arising From Myelodysplastic Syndrome (MDS), Leukemia, Myeloid, Acute</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Be ≥ 18 years of age and meet at least 1 of the following criteria defining ineligibility for intensive induction chemotherapy (IC): ≥ 75 years old, Eastern Cooperative Oncology Group Performance Status (ECOG PS) score of 2, severe cardiac disorder (e.g., congestive heart failure requiring treatment, left ventricular ejection fraction (LVEF), ≤50%, or chronic stable angina), severe pulmonary disorder (e.g., diffusing capacity of the lungs for carbon monoxide ≤65% or forced expiratory volume in 1 second ≤65%), creatinine clearance \&lt;45 mL/minute, bilirubin \&gt;1.5 times the upper limit of normal (ULN) and/or have any other comorbidity that the Investigator judges to be incompatible with intensive IC and must be reviewed and approved by the Medical Monitor before study enrollment.</li><li>Have previously untreated AML, defined according to World Health Organization (WHO) criteria, with ≥ 20% leukemic blasts in the bone marrow. Participants with extramedullary disease alone (i.e., no detectable bone marrow and no detectable peripheral blood AML) are not eligible for the study.</li><li>Have an isocitrate dehydrogenase 1 (IDH1) mutation.</li><li>Have an ECOG PS score of 0 to 2.</li><li>Have adequate hepatic function.</li><li>Have adequate renal function.</li><li>Have agreed to undergo serial blood and bone marrow sampling.</li><li>Be able to understand and willing to sign an informed consent form (ICF).</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Are candidates for and willing to receive intensive induction chemotherapy (IC) for their AML.</li><li>Have received any prior treatment for AML with the exception of hydroxyurea.</li><li>Have received a hypomethylating agent for myelodysplastic syndrome (MDS).</li><li>Participants who had previously received an experimental agent for MDS may not be randomized until a washout period has elapsed since the last dose of that agent.</li><li>Have received prior treatment with an IDH1 inhibitor.</li><li>Have a known hypersensitivity to any of the components of AG-120, matched placebo, or azacitidine.</li><li>Are female and pregnant or breastfeeding.</li><li>Have an active, uncontrolled, systemic fungal, bacterial, or viral infection without improvement despite appropriate antibiotics, antiviral therapy, and/or other treatment.</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03173248" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03173248" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03173248" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03173248)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/48/NCT03173248/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/48/NCT03173248/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT03173248?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/40706052/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 40706052)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03173248" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03173248","acronym":"AGILE","briefTitle":"Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation","officialTitle":"A Phase 3, Multicenter, Double-Blind, Randomized, Placebo-Controlled Study of AG-120 in Combination With Azacitidine in Subjects ≥ 18 Years of Age With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation","sponsor":"Institut de Recherches Internationales Servier","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Targeted Oncology & Systemic Therapy","conditions":["Newly Diagnosed Acute Myeloid Leukemia (AML)","Untreated AML","AML Arising From Myelodysplastic Syndrome (MDS)","Leukemia, Myeloid, Acute"],"interventions":["AG-120","Placebo","Azacitidine"],"primaryOutcomes":[{"measure":"Event-Free Survival (EFS)","description":"EFS was defined as the time from randomization until treatment failure, relapse from remission, or death from any cause, whichever occurs first. Treatment failure was defined as failure to achieve complete remission (CR) by Week 24. CR: Bone marrow blasts \\<5% and no Auer rods; absence of extramedullary disease; Absolute neutrophil count (ANC) ≥1.0 × 10\\^9 per litre (10\\^9/L) (1000 per microlitre \\[1000/μL\\]); platelet count ≥100 × 10\\^9/L (100,000/μL); independence of red blood cell transfusions. Participants who had an EFS event (relapse or death) after, 2 or more missing disease assessments were censored at the last adequate disease assessment documenting no relapse before the missing assessments. The reported data represents the Kaplan-Meier median value.","timeFrame":"Up to Week 24"}],"completionDate":"2026-06-30","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03173248","acronym":"AGILE","briefTitle":"Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation","officialTitle":"A Phase 3, Multicenter, Double-Blind, Randomized, Placebo-Controlled Study of AG-120 in Combination With Azacitidine in Subjects ≥ 18 Years of Age With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation","sponsor":"Institut de Recherches Internationales Servier","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Unclassified","conditions":["Newly Diagnosed Acute Myeloid Leukemia (AML)","Untreated AML","AML Arising From Myelodysplastic Syndrome (MDS)","Leukemia, Myeloid, Acute"],"interventions":["AG-120","Placebo","Azacitidine"],"primaryOutcomes":[{"measure":"Event-Free Survival (EFS)","description":"EFS was defined as the time from randomization until treatment failure, relapse from remission, or death from any cause, whichever occurs first. Treatment failure was defined as failure to achieve complete remission (CR) by Week 24. CR: Bone marrow blasts \\<5% and no Auer rods; absence of extramedullary disease; Absolute neutrophil count (ANC) ≥1.0 × 10\\^9 per litre (10\\^9/L) (1000 per microlitre \\[1000/μL\\]); platelet count ≥100 × 10\\^9/L (100,000/μL); independence of red blood cell transfusions. Participants who had an EFS event (relapse or death) after, 2 or more missing disease assessments were censored at the last adequate disease assessment documenting no relapse before the missing assessments. The reported data represents the Kaplan-Meier median value.","timeFrame":"Up to Week 24"}],"completionDate":"2026-06-30","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "AGILE. Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation. ClinicalTrials.gov Identifier: NCT03173248. Primary Sponsor: Institut de Recherches Internationales Servier. Available at: https://clinsight.pract.eu/trials/NCT03173248/";

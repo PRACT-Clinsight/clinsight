@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT02545868 NCT02545868 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Hoffmann-La Roche">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Unclassified · Sponsor: Hoffmann-La Roche">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT02545868/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT02545868 (NCT02545868): A Study to Evaluate the Effects of Ocrelizumab on Immune Responses In Participants With Relapsing Forms of Multiple Sclerosis","url":"https://clinsight.pract.eu/trials/NCT02545868/","studySubject":{"@type":"MedicalCondition","name":"Multiple Sclerosis, Relapsing-Remitting"},"sponsor":"Hoffmann-La Roche","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT02545868 (NCT02545868)","item":"https://clinsight.pract.eu/trials/NCT02545868/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02545868 (NCT02545868)?","acceptedAnswer":{"@type":"Answer","text":"NCT02545868 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating Targeted Oncology &amp; Systemic Therapy in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02545868?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02545868."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT02545868 (NCT02545868): A Study to Evaluate the Effects of Ocrelizumab on Immune Responses In Participants With Relapsing Forms of Multiple Sclerosis","url":"https://clinsight.pract.eu/trials/NCT02545868/","studySubject":{"@type":"MedicalCondition","name":"Multiple Sclerosis, Relapsing-Remitting"},"sponsor":"Hoffmann-La Roche","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT02545868 (NCT02545868)","item":"https://clinsight.pract.eu/trials/NCT02545868/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02545868 (NCT02545868)?","acceptedAnswer":{"@type":"Answer","text":"NCT02545868 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating Unclassified in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02545868?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02545868."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT02545868</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>A Study to Evaluate the Effects of Ocrelizumab on Immune Responses In Participants With Relapsing Forms of Multiple Sclerosis</h1>
         <p class="lead">A Phase IIIB, Multicenter, Randomized, Parallel-Group, Open-Label Study to Evaluate the Effects of Ocrelizumab on Immune Responses in Patients With Relapsing Forms of Multiple Sclerosis</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/68/NCT02545868/Prot_002.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/68/NCT02545868/SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT02545868?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32727835/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 32727835)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 32727835 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=23-PPV" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (23-PPV) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Multiple Sclerosis, Relapsing-Remitting</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Diagnosis of RMS in accordance with the revised McDonald criteria</li><li>Received at least one previous immunization against TT or tetanus and diphtheria (DT/Td) or tetanus, diphtheria, and acellular pertussis (DTaP/Tdap)</li><li>Expanded Disability Status Scale (EDSS) at Screening from 0 to 5.5 points, inclusive</li><li>For sexually active female participants of reproductive potential, use of reliable means of contraception</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Contraindications for or intolerance to oral or IV corticosteroids, including IV methylprednisolone, according to the country label</li><li>Known presence of other neurologic disorders</li><li>Treatment with any investigational agent within 24 weeks of screening or 5 half-lives of the investigational drug, whichever is longer, or treatment with any experimental procedure for multiple sclerosis</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT02545868" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT02545868" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT02545868" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT02545868)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/68/NCT02545868/Prot_002.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/68/NCT02545868/SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT02545868?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/32727835/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 32727835)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT02545868" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT04526691/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT02545868","acronym":null,"briefTitle":"A Study to Evaluate the Effects of Ocrelizumab on Immune Responses In Participants With Relapsing Forms of Multiple Sclerosis","officialTitle":"A Phase IIIB, Multicenter, Randomized, Parallel-Group, Open-Label Study to Evaluate the Effects of Ocrelizumab on Immune Responses in Patients With Relapsing Forms of Multiple Sclerosis","sponsor":"Hoffmann-La Roche","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Oncology & Systemic Therapy","conditions":["Multiple Sclerosis, Relapsing-Remitting"],"interventions":["23-PPV","13-PCV Booster","Influenza Vaccine","KLH","OCR","TT Vaccine"],"primaryOutcomes":[{"measure":"Percentage of Participants With Positive Response to TT Vaccine Measured 8 Weeks After TT Vaccine","description":"For participants with pre-vaccination tetanus antibody titers \\< 0.1 IU/mL, a positive response was defined as an antibody titer \\>/= 0.2 IU/mL measured 8 weeks after vaccination. For participants with pre-vaccination tetanus antibody titers \\>/= 0.1 IU/mL, a positive response was defined as at least a 4-fold increase in antibody titers measured 8 weeks after vaccination compared with pre-vaccination levels.","timeFrame":"8 weeks after TT vaccine"}],"completionDate":"2021-09-21","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT02545868","acronym":null,"briefTitle":"A Study to Evaluate the Effects of Ocrelizumab on Immune Responses In Participants With Relapsing Forms of Multiple Sclerosis","officialTitle":"A Phase IIIB, Multicenter, Randomized, Parallel-Group, Open-Label Study to Evaluate the Effects of Ocrelizumab on Immune Responses in Patients With Relapsing Forms of Multiple Sclerosis","sponsor":"Hoffmann-La Roche","phase":"Phase 3","status":"COMPLETED","modality":"Unclassified","conditions":["Multiple Sclerosis, Relapsing-Remitting"],"interventions":["23-PPV","13-PCV Booster","Influenza Vaccine","KLH","OCR","TT Vaccine"],"primaryOutcomes":[{"measure":"Percentage of Participants With Positive Response to TT Vaccine Measured 8 Weeks After TT Vaccine","description":"For participants with pre-vaccination tetanus antibody titers \\< 0.1 IU/mL, a positive response was defined as an antibody titer \\>/= 0.2 IU/mL measured 8 weeks after vaccination. For participants with pre-vaccination tetanus antibody titers \\>/= 0.1 IU/mL, a positive response was defined as at least a 4-fold increase in antibody titers measured 8 weeks after vaccination compared with pre-vaccination levels.","timeFrame":"8 weeks after TT vaccine"}],"completionDate":"2021-09-21","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "A Study to Evaluate the Effects of Ocrelizumab on Immune Responses In Participants With Relapsing Forms of Multiple Sclerosis. ClinicalTrials.gov Identifier: NCT02545868. Primary Sponsor: Hoffmann-La Roche. Available at: https://clinsight.pract.eu/trials/NCT02545868/";

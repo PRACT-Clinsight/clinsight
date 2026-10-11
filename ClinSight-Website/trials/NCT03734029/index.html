@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03734029 NCT03734029 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Antibody-Drug Conjugates (ADC) · Sponsor: Daiichi Sankyo">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: ADC · Sponsor: Daiichi Sankyo">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03734029/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03734029 (NCT03734029): Trastuzumab Deruxtecan (DS-8201a) Versus Investigator&#39;s Choice for HER2-low Breast Cancer That Has Spread or Cannot be Surgically Removed [DESTINY-Breast04]","url":"https://clinsight.pract.eu/trials/NCT03734029/","studySubject":{"@type":"MedicalCondition","name":"Breast Cancer"},"sponsor":"Daiichi Sankyo","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03734029 (NCT03734029)","item":"https://clinsight.pract.eu/trials/NCT03734029/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03734029 (NCT03734029)?","acceptedAnswer":{"@type":"Answer","text":"NCT03734029 is a Phase 3 study sponsored by Daiichi Sankyo evaluating Antibody-Drug Conjugates (ADC) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03734029?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03734029."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03734029 (NCT03734029): Trastuzumab Deruxtecan (DS-8201a) Versus Investigator&#39;s Choice for HER2-low Breast Cancer That Has Spread or Cannot be Surgically Removed [DESTINY-Breast04]","url":"https://clinsight.pract.eu/trials/NCT03734029/","studySubject":{"@type":"MedicalCondition","name":"Breast Cancer"},"sponsor":"Daiichi Sankyo","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03734029 (NCT03734029)","item":"https://clinsight.pract.eu/trials/NCT03734029/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03734029 (NCT03734029)?","acceptedAnswer":{"@type":"Answer","text":"NCT03734029 is a Phase 3 study sponsored by Daiichi Sankyo evaluating ADC in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03734029?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03734029."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,35 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03734029</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Antibody-Drug Conjugates (ADC)</span>
+            <span class="badge modality">ADC</span>
+            
         </div>
 
         <h1>Trastuzumab Deruxtecan (DS-8201a) Versus Investigator&#39;s Choice for HER2-low Breast Cancer That Has Spread or Cannot be Surgically Removed [DESTINY-Breast04]</h1>
         <p class="lead">A Phase 3, Multicenter, Randomized, Open-label, Active Controlled Trial of DS-8201a, an Anti-HER2-antibody Drug Conjugate (ADC), Versus Treatment of Physician&#39;s Choice for HER2-low, Unresectable and/or Metastatic Breast Cancer Subjects</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/29/NCT03734029/Prot_SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            
+            <a href="https://clinicaltrials.gov/study/NCT03734029?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/35665782/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 35665782)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 35665782 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Trastuzumab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Trastuzumab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +665,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Breast Cancer</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Is the age of majority in their country</li><li>Has pathologically documented breast cancer that:<br><br>  1. Is unresectable or metastatic<br>  2. Has low-HER2 expression defined as IHC 2+/ISH- or IHC 1+ (ISH- or untested)<br>  3. Is HR-positive or HR-negative<br>  4. Has progressed on, and would no longer benefit from, endocrine therapy<br>  5. Has been treated with 1 to 2 prior lines of chemotherapy/adjuvant in the recurrent or metastatic setting<br>  6. Was never previously HER2-positive (ICH 3+ or ISH+) on prior pathology testing (per American Society of Clinical Oncology-College of American Pathologists \[ASCO-CAP\] guidelines)</li><li>Has documented radiologic progression (during or after most recent treatment)</li><li>Has adequate archival tumor samples available or is wiling to provide fresh biopsies prior to randomization for:<br><br>  1. assessment of HER2 status<br>  2. assessment of post-treatment status</li><li>Has at least 1 measurable lesion per Response Evaluation Criteria In Solid Tumors 1.1</li><li>Has protocol-defined adequate cardiac, bone marrow, renal, hepatic and blood clotting functions</li><li>Male and female participants of reproductive/childbearing potential, agrees to follow instructions for method(s) of contraception and agrees to avoid preserving ova or sperm for at least 4.5 months after treatment (or longer, per locally approved labels)</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Is ineligible for all options in the physician&#39;s choice arm</li><li>Has breast cancer ever assessed with high-HER2 expression</li><li>Has previously been treated with any anti-HER2 therapy, including an antibody drug conjugate</li><li>Has uncontrolled or significant cardiovascular disease</li><li>Has spinal cord compression or clinically active central nervous system metastases</li><li>Has history of (noninfectious) interstitial lung disease (ILD)/pneumonitis that required steroids, has current ILD/pneumonitis, or suspected ILD/pneumonitis that cannot be ruled out by imaging at screening</li><li>Has any medical history or condition that per protocol or in the opinion of the investigator is inappropriate for the study</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +691,21 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03734029" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03734029" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03734029" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03734029)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/29/NCT03734029/Prot_SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                
+                <a href="https://clinicaltrials.gov/study/NCT03734029?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/35665782/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 35665782)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03734029" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +716,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Antibody-Drug Conjugates (ADC)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in ADC</div>
             <div class="related-grid">
                 
                 <a href="../NCT03529110/" class="related-card">
@@ -697,7 +766,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03734029","acronym":null,"briefTitle":"Trastuzumab Deruxtecan (DS-8201a) Versus Investigator's Choice for HER2-low Breast Cancer That Has Spread or Cannot be Surgically Removed [DESTINY-Breast04]","officialTitle":"A Phase 3, Multicenter, Randomized, Open-label, Active Controlled Trial of DS-8201a, an Anti-HER2-antibody Drug Conjugate (ADC), Versus Treatment of Physician's Choice for HER2-low, Unresectable and/or Metastatic Breast Cancer Subjects","sponsor":"Daiichi Sankyo","phase":"Phase 3","status":"COMPLETED","modality":"Antibody-Drug Conjugates (ADC)","conditions":["Breast Cancer"],"interventions":["Trastuzumab deruxtecan (DS-8201a)","Capecitabine","Eribulin","Gemcitabine","Paclitaxel","Nab-paclitaxel"],"primaryOutcomes":[{"measure":"Progression-free Survival (PFS) Based on Blinded Independent Central Review (BICR) in the Hormone Receptor-Positive Cohort in Participants With HER2-low Breast Cancer","description":"Progression-free survival (PFS), defined as at least a 20% increase in the sum of diameters of target lesions, was assessed from the date of randomization to the date of the first radiographic disease progression or death due to any cause, whichever came first. PFS was based on blinded independent central review (BICR) in the hormone receptor-positive cohort according to modified Response Evaluation Criteria in Solid Tumors (mRECIST) version 1.1. Median PFS was from Kaplan-Meier analysis. Confidence interval for median was computed using the Brookmeyer-Crowley method.","timeFrame":"From the date of randomization to the earliest date of the first objective documentation of radiographic disease progression or death due to any cause, up to approximately 3 years"}],"completionDate":"2026-05-19","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03734029","acronym":null,"briefTitle":"Trastuzumab Deruxtecan (DS-8201a) Versus Investigator's Choice for HER2-low Breast Cancer That Has Spread or Cannot be Surgically Removed [DESTINY-Breast04]","officialTitle":"A Phase 3, Multicenter, Randomized, Open-label, Active Controlled Trial of DS-8201a, an Anti-HER2-antibody Drug Conjugate (ADC), Versus Treatment of Physician's Choice for HER2-low, Unresectable and/or Metastatic Breast Cancer Subjects","sponsor":"Daiichi Sankyo","phase":"Phase 3","status":"COMPLETED","modality":"ADC","conditions":["Breast Cancer"],"interventions":["Trastuzumab deruxtecan (DS-8201a)","Capecitabine","Eribulin","Gemcitabine","Paclitaxel","Nab-paclitaxel"],"primaryOutcomes":[{"measure":"Progression-free Survival (PFS) Based on Blinded Independent Central Review (BICR) in the Hormone Receptor-Positive Cohort in Participants With HER2-low Breast Cancer","description":"Progression-free survival (PFS), defined as at least a 20% increase in the sum of diameters of target lesions, was assessed from the date of randomization to the date of the first radiographic disease progression or death due to any cause, whichever came first. PFS was based on blinded independent central review (BICR) in the hormone receptor-positive cohort according to modified Response Evaluation Criteria in Solid Tumors (mRECIST) version 1.1. Median PFS was from Kaplan-Meier analysis. Confidence interval for median was computed using the Brookmeyer-Crowley method.","timeFrame":"From the date of randomization to the earliest date of the first objective documentation of radiographic disease progression or death due to any cause, up to approximately 3 years"}],"completionDate":"2026-05-19","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Trastuzumab Deruxtecan (DS-8201a) Versus Investigator&amp;#39;s Choice for HER2-low Breast Cancer That Has Spread or Cannot be Surgically Removed [DESTINY-Breast04]. ClinicalTrials.gov Identifier: NCT03734029. Primary Sponsor: Daiichi Sankyo. Available at: https://clinsight.pract.eu/trials/NCT03734029/";

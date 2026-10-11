@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT05455320 MonumenTAL-3 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Bispecific Antibodies &amp; T-Cell Engagers · Sponsor: Janssen Research &amp; Development, LLC">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Bispecific · Sponsor: Janssen Research &amp; Development, LLC">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT05455320/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MonumenTAL-3 (NCT05455320): A Study Comparing Talquetamab in Combination With Daratumumab or in Combination With Daratumumab and Pomalidomide Versus Daratumumab in Combination With Pomalidomide and Dexamethasone in Participants With Multiple Myeloma That Returns After Treatment or is Resistant to Treatment","url":"https://clinsight.pract.eu/trials/NCT05455320/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Janssen Research &amp; Development, LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MonumenTAL-3 (NCT05455320)","item":"https://clinsight.pract.eu/trials/NCT05455320/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05455320 (MonumenTAL-3)?","acceptedAnswer":{"@type":"Answer","text":"NCT05455320 is a Phase 3 study sponsored by Janssen Research &amp; Development, LLC evaluating Bispecific Antibodies &amp; T-Cell Engagers in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05455320?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05455320."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MonumenTAL-3 (NCT05455320): A Study Comparing Talquetamab in Combination With Daratumumab or in Combination With Daratumumab and Pomalidomide Versus Daratumumab in Combination With Pomalidomide and Dexamethasone in Participants With Multiple Myeloma That Returns After Treatment or is Resistant to Treatment","url":"https://clinsight.pract.eu/trials/NCT05455320/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Janssen Research &amp; Development, LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MonumenTAL-3 (NCT05455320)","item":"https://clinsight.pract.eu/trials/NCT05455320/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05455320 (MonumenTAL-3)?","acceptedAnswer":{"@type":"Answer","text":"NCT05455320 is a Phase 3 study sponsored by Janssen Research &amp; Development, LLC evaluating Bispecific in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05455320?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05455320."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT05455320</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Bispecific Antibodies &amp; T-Cell Engagers</span>
+            <span class="badge modality">Bispecific</span>
+            
         </div>
 
         <h1>MonumenTAL-3: A Study Comparing Talquetamab in Combination With Daratumumab or in Combination With Daratumumab and Pomalidomide Versus Daratumumab in Combination With Pomalidomide and Dexamethasone in Participants With Multiple Myeloma That Returns After Treatment or is Resistant to Treatment</h1>
         <p class="lead">A Phase 3 Randomized Study Comparing Talquetamab SC in Combination With Daratumumab SC and Pomalidomide (Tal-DP) or Talquetamab SC in Combination With Daratumumab SC (Tal-D) Versus Daratumumab SC, Pomalidomide and Dexamethasone (DPd), in Participants With Relapsed or Refractory Multiple Myeloma Who Have Received at Least 1 Prior Line of Therapy</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42294841/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42294841)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 42294841 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Talquetamab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Talquetamab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Multiple Myeloma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Documented multiple myeloma as defined: a) Multiple myeloma diagnosis according to the International Myeloma Working Group (IMWG) diagnostic criteria and b) Measurable disease at screening as defined by any of the following: i) Serum M-protein level greater than or equal to (\&gt;=) 0.5 grams per deciliter (g/dL) (central laboratory); ii) Urine M-protein level \&gt;= 200 milligram (mg) per 24 hours (central laboratory); iii) Light chain multiple myeloma without measurable M-protein in the serum or the urine: serum immunoglobulin free light chain \&gt;= 10 milligram per deciliter (mg/dL) (central laboratory), and abnormal serum immunoglobulin kappa lambda free light chain ratio</li><li>Relapsed or refractory disease as defined by: i) Relapsed disease is defined as an initial response to prior treatment, followed by confirmed progressive disease by IMWG criteria greater than (\&gt;) 60 days after cessation of treatment; ii) Refractory disease is defined as less than (\&lt;) 25 percent (%) reduction in monoclonal paraprotein (M-protein) or confirmed progressive disease by IMWG criteria during previous treatment or less than or equal to (\&lt;=) 60 days after cessation of treatment</li><li>Received at least 1 prior line of antimyeloma therapy including a proteasome inhibitor (PI) and lenalidomide. Participants who have received only 1 prior line of antimyeloma therapy must be considered lenalidomide-refractory (that is, have demonstrated progressive disease by IMWG criteria on or within 60 days of completion of lenalidomide-containing regimen). Participants who have received \&gt;=2 prior lines of antimyeloma therapy must be considered lenalidomide exposed</li><li>Documented evidence of progressive disease based on investigator&#39;s determination of response by the IMWG criteria on or after their last regimen</li><li>Have an Eastern Cooperative Oncology Group (ECOG) performance status score of 0, 1, or 2 at screening and immediately prior to the start of administration of study treatment</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Contraindications or life-threatening allergies, hypersensitivity, or intolerance to study drug excipients</li><li>Disease is considered refractory to an anti-cluster of differentiation 38 (CD38) monoclonal antibody as defined per IMWG consensus guidelines (progression during treatment or within 60 days of completing therapy with an anti-CD38 monoclonal antibody)</li><li>Received prior pomalidomide therapy</li><li>A maximum cumulative dose of corticosteroids to \&gt;=140 milligrams (mg) of prednisone or equivalent within 14-day period before the first dose of study drug</li><li>Known active central nervous system (CNS) involvement or exhibits clinical signs of meningeal involvement of multiple myeloma. If either is suspected, negative whole brain magnetic resonance imaging (MRI) and lumbar cytology are required</li><li>Plasma cell leukemia (per IMWG criteria) at the time of screening, Waldenström&#39;s macroglobulinemia, polyneuropathy, organomegaly, endocrinopathy, M-protein, and skin changes (POEMS syndrome), or primary amyloid light chain amyloidosis</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT05455320" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT05455320" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT05455320" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT05455320)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/42294841/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 42294841)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT05455320" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific Antibodies &amp; T-Cell Engagers</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT05455320","acronym":"MonumenTAL-3","briefTitle":"A Study Comparing Talquetamab in Combination With Daratumumab or in Combination With Daratumumab and Pomalidomide Versus Daratumumab in Combination With Pomalidomide and Dexamethasone in Participants With Multiple Myeloma That Returns After Treatment or is Resistant to Treatment","officialTitle":"A Phase 3 Randomized Study Comparing Talquetamab SC in Combination With Daratumumab SC and Pomalidomide (Tal-DP) or Talquetamab SC in Combination With Daratumumab SC (Tal-D) Versus Daratumumab SC, Pomalidomide and Dexamethasone (DPd), in Participants With Relapsed or Refractory Multiple Myeloma Who Have Received at Least 1 Prior Line of Therapy","sponsor":"Janssen Research & Development, LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific Antibodies & T-Cell Engagers","conditions":["Multiple Myeloma"],"interventions":["Talquetamab","Daratumumab","Pomalidomide","Dexamethasone"],"primaryOutcomes":[{"measure":"Progression-Free Survival (PFS)","description":"PFS is defined as time from the date of randomization to the first documentation of disease progression, or death due to any cause, whichever is reported first.","timeFrame":"Up to 6 years 6 months"}],"completionDate":"2028-05-25","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT05455320","acronym":"MonumenTAL-3","briefTitle":"A Study Comparing Talquetamab in Combination With Daratumumab or in Combination With Daratumumab and Pomalidomide Versus Daratumumab in Combination With Pomalidomide and Dexamethasone in Participants With Multiple Myeloma That Returns After Treatment or is Resistant to Treatment","officialTitle":"A Phase 3 Randomized Study Comparing Talquetamab SC in Combination With Daratumumab SC and Pomalidomide (Tal-DP) or Talquetamab SC in Combination With Daratumumab SC (Tal-D) Versus Daratumumab SC, Pomalidomide and Dexamethasone (DPd), in Participants With Relapsed or Refractory Multiple Myeloma Who Have Received at Least 1 Prior Line of Therapy","sponsor":"Janssen Research & Development, LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific","conditions":["Multiple Myeloma"],"interventions":["Talquetamab","Daratumumab","Pomalidomide","Dexamethasone"],"primaryOutcomes":[{"measure":"Progression-Free Survival (PFS)","description":"PFS is defined as time from the date of randomization to the first documentation of disease progression, or death due to any cause, whichever is reported first.","timeFrame":"Up to 6 years 6 months"}],"completionDate":"2028-05-25","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "MonumenTAL-3. A Study Comparing Talquetamab in Combination With Daratumumab or in Combination With Daratumumab and Pomalidomide Versus Daratumumab in Combination With Pomalidomide and Dexamethasone in Participants With Multiple Myeloma That Returns After Treatment or is Resistant to Treatment. ClinicalTrials.gov Identifier: NCT05455320. Primary Sponsor: Janssen Research &amp;amp; Development, LLC. Available at: https://clinsight.pract.eu/trials/NCT05455320/";

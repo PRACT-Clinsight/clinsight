@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT01938001 AUGMENT — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Monoclonal Antibodies · Sponsor: Celgene">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: Celgene">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT01938001/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"AUGMENT (NCT01938001): Rituximab Plus Lenalidomide for Patients With Relapsed / Refractory Indolent Non-Hodgkin&#39;s Lymphoma (Follicular Lymphoma and Marginal Zone Lymphoma)","url":"https://clinsight.pract.eu/trials/NCT01938001/","studySubject":{"@type":"MedicalCondition","name":"Lymphoma, Non-Hodgkin"},"sponsor":"Celgene","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"AUGMENT (NCT01938001)","item":"https://clinsight.pract.eu/trials/NCT01938001/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01938001 (AUGMENT)?","acceptedAnswer":{"@type":"Answer","text":"NCT01938001 is a Phase 3 study sponsored by Celgene evaluating Targeted Monoclonal Antibodies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01938001?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01938001."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"AUGMENT (NCT01938001): Rituximab Plus Lenalidomide for Patients With Relapsed / Refractory Indolent Non-Hodgkin&#39;s Lymphoma (Follicular Lymphoma and Marginal Zone Lymphoma)","url":"https://clinsight.pract.eu/trials/NCT01938001/","studySubject":{"@type":"MedicalCondition","name":"Lymphoma, Non-Hodgkin"},"sponsor":"Celgene","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"AUGMENT (NCT01938001)","item":"https://clinsight.pract.eu/trials/NCT01938001/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01938001 (AUGMENT)?","acceptedAnswer":{"@type":"Answer","text":"NCT01938001 is a Phase 3 study sponsored by Celgene evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01938001?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01938001."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT01938001</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Monoclonal Antibodies</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>AUGMENT: Rituximab Plus Lenalidomide for Patients With Relapsed / Refractory Indolent Non-Hodgkin&#39;s Lymphoma (Follicular Lymphoma and Marginal Zone Lymphoma)</h1>
         <p class="lead">A Phase 3, Double-blind, Randomized Study to Compare the Efficacy and Safety of Rituximab Plus Lenalidomide (CC-5013) Versus Rituximab Plus Placebo in Subjects With Relapsed/Refractory Indolent Lymphoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT01938001/Prot_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT01938001/SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT01938001?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30897038/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 30897038)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 30897038 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Rituximab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Rituximab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Lymphoma, Non-Hodgkin</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Age ≥18 years at the time of signing the informed consent document.</li><li>Understand and voluntarily sign an informed consent document prior to any study related assessments/procedures are conducted.</li><li>Histologically confirmed marginal zone lymphoma or follicular lymphoma (grade 1, 2 or 3a; CD20+ by flow cytometry or histochemistry).</li><li>Previously treated with at least one prior systemic chemotherapy, immunotherapy or chemoimmunotherapy and have received at least 2 previous doses of rituximab.</li><li>Documented relapsed, refractory or progressive disease after treatment with systemic therapy and must not be rituximab-refractory.</li><li>Investigator considers rituximab monotherapy appropriate.</li><li>Bi-dimensionally measurable disease on cross sectional imaging by X-ray computed tomography (CT) or magnetic resonance imaging (MRI).</li><li>Need of treatment for relapsed, progressed or refractory disease as assessed by the investigator.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Histology other than follicular or marginal zone lymphoma or clinical evidence of transformation or Grade 3b follicular lymphoma.</li><li>Subjects taking corticosteroids during the last week prior to study treatment, unless administered at a dose equivalent to \&lt; 20 mg/day prednisone or prednisolone.</li><li>Systemic anti-lymphoma therapy within 28 days or use of antibody agents within 8 weeks use of radioimmunotherapy within 6 months.</li><li>Known seropositive for or active viral infection with hepatitis B virus (HBV) or/and human immunodeficiency virus (HIV).</li><li>Known hepatitis C virus (HCV) positive with chronic HCV or active viral infection with HCV hepatitis requiring anti-viral medication (at time of randomization).</li><li>Life expectancy \&lt; 6 months.</li><li>Known sensitivity or allergy to murine products.</li><li>Prior history of malignancies, other than follicular or marginal zone lymphoma, unless the subject has been free of the disease for ≥ 5 years.</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT01938001" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT01938001" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT01938001" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT01938001)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT01938001/Prot_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT01938001/SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT01938001?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30897038/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 30897038)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT01938001" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Monoclonal Antibodies</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT01938001","acronym":"AUGMENT","briefTitle":"Rituximab Plus Lenalidomide for Patients With Relapsed / Refractory Indolent Non-Hodgkin's Lymphoma (Follicular Lymphoma and Marginal Zone Lymphoma)","officialTitle":"A Phase 3, Double-blind, Randomized Study to Compare the Efficacy and Safety of Rituximab Plus Lenalidomide (CC-5013) Versus Rituximab Plus Placebo in Subjects With Relapsed/Refractory Indolent Lymphoma","sponsor":"Celgene","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Monoclonal Antibodies","conditions":["Lymphoma, Non-Hodgkin"],"interventions":["Rituximab","Lenalidomide","Placebo"],"primaryOutcomes":[{"measure":"Kaplan Meier Estimate of Progression Free Survival Assessed by the Independent Review Committee (IRC) According to the 2007 International Working Group Response Criteria (IWGRC)","description":"Progression-free survival (PFS) was defined as the time from date of randomization into the study to the first observation of documented disease progression or death due to any cause, whichever occurred first. PFS was based on the data from the IRC review using the modified 2007 International Working Group Response Criteria (IWGRC) using FDA censoring rules.","timeFrame":"From randomization of study drug up to disease progression or death, which occurred first; up to the data cut-off date of 22 June 2018; overall median follow-up time for all participants was 28.30 months (range: 0.1 to 51.3 months)."}],"completionDate":"2022-01-26","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT01938001","acronym":"AUGMENT","briefTitle":"Rituximab Plus Lenalidomide for Patients With Relapsed / Refractory Indolent Non-Hodgkin's Lymphoma (Follicular Lymphoma and Marginal Zone Lymphoma)","officialTitle":"A Phase 3, Double-blind, Randomized Study to Compare the Efficacy and Safety of Rituximab Plus Lenalidomide (CC-5013) Versus Rituximab Plus Placebo in Subjects With Relapsed/Refractory Indolent Lymphoma","sponsor":"Celgene","phase":"Phase 3","status":"COMPLETED","modality":"TKI / Small Molecule","conditions":["Lymphoma, Non-Hodgkin"],"interventions":["Rituximab","Lenalidomide","Placebo"],"primaryOutcomes":[{"measure":"Kaplan Meier Estimate of Progression Free Survival Assessed by the Independent Review Committee (IRC) According to the 2007 International Working Group Response Criteria (IWGRC)","description":"Progression-free survival (PFS) was defined as the time from date of randomization into the study to the first observation of documented disease progression or death due to any cause, whichever occurred first. PFS was based on the data from the IRC review using the modified 2007 International Working Group Response Criteria (IWGRC) using FDA censoring rules.","timeFrame":"From randomization of study drug up to disease progression or death, which occurred first; up to the data cut-off date of 22 June 2018; overall median follow-up time for all participants was 28.30 months (range: 0.1 to 51.3 months)."}],"completionDate":"2022-01-26","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "AUGMENT. Rituximab Plus Lenalidomide for Patients With Relapsed / Refractory Indolent Non-Hodgkin&amp;#39;s Lymphoma (Follicular Lymphoma and Marginal Zone Lymphoma). ClinicalTrials.gov Identifier: NCT01938001. Primary Sponsor: Celgene. Available at: https://clinsight.pract.eu/trials/NCT01938001/";

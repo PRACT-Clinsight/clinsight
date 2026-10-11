@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03155620 NCT03155620 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2 · Modality: Targeted Therapy (Small Molecule / TKI) · Sponsor: National Cancer Institute (NCI)">
+    <meta property="og:description" content="Phase: Phase 2 · Modality: TKI / Small Molecule · Sponsor: National Cancer Institute (NCI)">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03155620/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03155620 (NCT03155620): Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)","url":"https://clinsight.pract.eu/trials/NCT03155620/","studySubject":{"@type":"MedicalCondition","name":"Advanced Malignant Solid Neoplasm"},"sponsor":"National Cancer Institute (NCI)","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03155620 (NCT03155620)","item":"https://clinsight.pract.eu/trials/NCT03155620/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03155620 (NCT03155620)?","acceptedAnswer":{"@type":"Answer","text":"NCT03155620 is a Phase 2 study sponsored by National Cancer Institute (NCI) evaluating Targeted Therapy (Small Molecule / TKI) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03155620?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03155620."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03155620 (NCT03155620): Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)","url":"https://clinsight.pract.eu/trials/NCT03155620/","studySubject":{"@type":"MedicalCondition","name":"Advanced Malignant Solid Neoplasm"},"sponsor":"National Cancer Institute (NCI)","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03155620 (NCT03155620)","item":"https://clinsight.pract.eu/trials/NCT03155620/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03155620 (NCT03155620)?","acceptedAnswer":{"@type":"Answer","text":"NCT03155620 is a Phase 2 study sponsored by National Cancer Institute (NCI) evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03155620?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03155620."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,35 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03155620</span>
             <span class="badge phase">Phase 2</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Targeted Therapy (Small Molecule / TKI)</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)</h1>
         <p class="lead">NCI-COG Pediatric MATCH (Molecular Analysis for Therapy Choice) Screening Protocol</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/20/NCT03155620/Prot_SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            
+            <a href="https://clinicaltrials.gov/study/NCT03155620?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42686334/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42686334)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 42686334 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Biopsy" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Biopsy) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +665,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Advanced Malignant Solid Neoplasm, Ann Arbor Stage III Non-Hodgkin Lymphoma, Ann Arbor Stage IV Non-Hodgkin Lymphoma, Histiocytic Sarcoma, Juvenile Xanthogranuloma, Langerhans Cell Histiocytosis, Malignant Glioma, Recurrent Childhood Rhabdomyosarcoma, Recurrent Ependymoma, Recurrent Ewing Sarcoma, Recurrent Glioma, Recurrent Hepatoblastoma, Recurrent Langerhans Cell Histiocytosis, Recurrent Malignant Germ Cell Tumor, Recurrent Malignant Solid Neoplasm, Recurrent Medulloblastoma, Recurrent Neuroblastoma, Recurrent Non-Hodgkin Lymphoma, Recurrent Osteosarcoma, Recurrent Peripheral Primitive Neuroectodermal Tumor, Recurrent Primary Central Nervous System Neoplasm, Recurrent Rhabdoid Tumor, Recurrent Soft Tissue Sarcoma, Refractory Ewing Sarcoma, Refractory Glioma, Refractory Hepatoblastoma, Refractory Langerhans Cell Histiocytosis, Refractory Malignant Germ Cell Tumor, Refractory Malignant Solid Neoplasm, Refractory Medulloblastoma, Refractory Neuroblastoma, Refractory Non-Hodgkin Lymphoma, Refractory Osteosarcoma, Refractory Peripheral Primitive Neuroectodermal Tumor, Refractory Primary Central Nervous System Neoplasm, Refractory Rhabdoid Tumor, Refractory Rhabdomyosarcoma, Rhabdoid Tumor, Stage III Osteosarcoma AJCC v7, Stage III Soft Tissue Sarcoma AJCC v7, Stage IV Osteosarcoma AJCC v7, Stage IV Soft Tissue Sarcoma AJCC v7, Stage IVA Osteosarcoma AJCC v7, Stage IVB Osteosarcoma AJCC v7, Wilms Tumor</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>ELIGIBILITY CRITERIA FOR ENROLLMENT ONTO APEC1621SC: Patients must be \&gt;= 12 months and =\&lt; 21 years of age at the time of study enrollment</li><li>ELIGIBILITY CRITERIA FOR ENROLLMENT ONTO APEC1621SC: Patients with recurrent or refractory solid tumors, including non-Hodgkin lymphomas, histiocytoses (e.g. langerhans cell histiocytosis \[LCH\], juvenile xanthogranuloma \[JXG\], histiocytic sarcoma), and central nervous system (CNS) tumors are eligible; patients must have had histologic verification of malignancy at original diagnosis or relapse except in patients with intrinsic brain stem tumors, optic pathway gliomas, or patients with pineal tumors and elevations of cerebrospinal fluid (CSF) or serum tumor markers including alpha-fetoprotein or beta-human chorionic gonadotropin (HCG); in cases where patient enrolls prior to histologic confirmation of recurrent disease, patient is ineligible and should be withdrawn from study if histology fails to confirm recurrence; please note: Patients with Hodgkin lymphoma and plexiform neurofibroma are not eligible</li><li>ELIGIBILITY CRITERIA FOR ENROLLMENT ONTO APEC1621SC: Tumor Testing Requirement: Tumor sample availability requirement for stage 1 of Pediatric MATCH (patients enrolled from start of study in July 2017 through 12/31/21); Patients must have an formalin-fixed paraffin-embedded (FFPE) tumor sample available for MATCH study testing from a biopsy or surgery that was performed at any point after initial tumor recurrence/progression, or be planned to have a procedure to obtain such a sample that is considered to be of potential benefit by the treating clinicians; a tumor sample from a clinically performed diagnostic (pre-treatment) biopsy will be acceptable for enrollment onto Pediatric MATCH only for children with high-grade gliomas of the brainstem (diffuse intrinsic pontine gliomas) or thalamus<br><br>  * Please note: Samples that have been decalcified using standardly utilized acid-based decalcification methods are not generally suitable for MATCH study testing; the nucleic acids will have been degraded in the decalcification process</li><li>ELIGIBILITY CRITERIA FOR ENROLLMENT ONTO APEC1621SC: Tumor molecular profiling report availability requirement for Stage 2 of Pediatric MATCH (patients enrolled starting 2022): In stage 2 of the study, no tumor samples will be submitted for centralized clinical tumor profiling; instead, a tumor molecular profiling report from a College of American Pathologists (CAP)/ Clinical Laboratory Improvements Amendments (CLIA)-approved testing laboratory must be submitted for review by the Molecular Review Committee (MRC)<br><br>  * This molecular profiling must have been performed on a tumor sample that was obtained at any point after initial tumor recurrence/progression and must be accompanied by a pathology report for the same tumor specimen; a molecular profiling report for a diagnostic (pre-treatment) tumor sample will be acceptable for enrollment onto Pediatric MATCH only for children with high-grade gliomas of the brainstem (diffuse intrinsic pontine gliomas) or thalamus. In the event that molecular profiling reports are available from multiple timepoints, the most recent report should be prioritized for study submission</li><li>ELIGIBILITY CRITERIA FOR ENROLLMENT ONTO APEC1621SC: Karnofsky \&gt;= 50% for patients \&gt; 16 years of age and Lansky \&gt;= 50 for patients =\&lt; 16 years of age); note: neurologic deficits in patients with CNS tumors must have been stable for at least 7 days prior to study enrollment; patients who are unable to walk because of paralysis, but who are up in a wheelchair, will be considered ambulatory for the purpose of assessing the performance score</li><li>ELIGIBILITY CRITERIA FOR ENROLLMENT ONTO APEC1621SC: Patients must have radiographically measurable disease; measurable disease based on imaging obtained less than or equal to 56 days prior to enrollment; patients with neuroblastoma who do not have measurable disease but have metaiodobenzylguanidine (MIBG) positive (+) evaluable disease are eligible; measurable disease in patients with CNS involvement is defined as any lesion that is at minimum 10 mm in one dimension on standard magnetic resonance imaging (MRI) or computed tomography (CT)<br><br>  * Note: The following do not qualify as measurable disease:<br><br>    * Malignant fluid collections (e.g., ascites, pleural effusions)<br>    * Bone marrow infiltration except that detected by MIBG scan for neuroblastoma<br>    * Lesions only detected by nuclear medicine studies (e.g., bone, gallium or positron emission tomography \[PET\] scans) except as noted for neuroblastoma<br>    * Elevated tumor markers in plasma or CSF<br>    * Previously radiated lesions that have not demonstrated clear progression post radiation<br>    * Leptomeningeal lesions that do not meet the measurement requirements for Response Evaluation Criteria in Solid Tumors (RECIST) 1.1</li><li>GENERAL INCLUSION CRITERIA FOR SUBPROTOCOLS: NOTE: patient does not need to meet all subprotocol criteria at time of enrollment onto the APEC1621SC screening protocol, but will need to meet all criteria prior to enrollment on any assigned treatment subprotocol. Patients must be enrolled onto a subprotocol within 2 weeks (14 days) of treatment assignment</li><li>GENERAL INCLUSION CRITERIA FOR SUBPROTOCOLS: Karnofsky \&gt;= 50% for patients \&gt; 16 years of age and Lansky \&gt;= 50 for patients =\&lt; 16 years of age); Note: neurologic deficits in patients with CNS tumors must have been stable for at least 7 days prior to study enrollment; patients who are unable to walk because of paralysis, but who are up in a wheelchair, will be considered ambulatory for the purpose of assessing the performance score</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>GENERAL EXCLUSION CRITERIA FOR SUBPROTOCOLS: Pregnant or breast-feeding women will not be entered on this study due to risks of fetal and teratogenic adverse events as seen in animal/human studies, or because there is currently no available information regarding human fetal or teratogenic toxicities; pregnancy tests must be obtained in females who are post-menarchal; males or females of reproductive potential may not participate unless they have agreed to use an effective contraceptive method</li><li>GENERAL EXCLUSION CRITERIA FOR SUBPROTOCOLS: Concomitant medications<br><br>  * Corticosteroids: at the time of consent and enrollment to regimen specific subprotocols, patients receiving corticosteroids who have not been on a stable or decreasing dose of corticosteroid for at least 7 days prior to enrollment to the subprotocol will not be eligible; if used to modify immune adverse events related to prior therapy, \&gt;= 14 days must have elapsed since last dose of corticosteroid<br>  * Investigational drugs: patients must meet criteria for prior therapy at the time of consent and enrollment to a subprotocol; other investigational agents may not be administered to patients while they are receiving study drug as part of a subprotocol<br>  * Anticancer agents: patients must meet criteria for prior therapy at the time of consent and enrollment to a subprotocol; other investigational agents may not be administered to patients while they are receiving study drug as part of a subprotocol<br>  * Anti-GVHD agents post-transplant: patients who are receiving cyclosporine, tacrolimus or other agents to prevent graft-versus-host disease post bone marrow transplant are not eligible</li><li>GENERAL EXCLUSION CRITERIA FOR SUBPROTOCOLS: Patients who have an uncontrolled infection are not eligible</li><li>GENERAL EXCLUSION CRITERIA FOR SUBPROTOCOLS: Patients who have had a prior solid organ transplant are not eligible</li><li>GENERAL EXCLUSION CRITERIA FOR SUBPROTOCOLS: Additional agent specific criteria will be included with specific treatment subprotocols</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +691,21 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03155620" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03155620" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03155620" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03155620)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/20/NCT03155620/Prot_SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                
+                <a href="https://clinicaltrials.gov/study/NCT03155620?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/42686334/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 42686334)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03155620" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +716,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Therapy (Small Molecule / TKI)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +766,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03155620","acronym":null,"briefTitle":"Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)","officialTitle":"NCI-COG Pediatric MATCH (Molecular Analysis for Therapy Choice) Screening Protocol","sponsor":"National Cancer Institute (NCI)","phase":"Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Advanced Malignant Solid Neoplasm","Ann Arbor Stage III Non-Hodgkin Lymphoma","Ann Arbor Stage IV Non-Hodgkin Lymphoma","Histiocytic Sarcoma","Juvenile Xanthogranuloma","Langerhans Cell Histiocytosis","Malignant Glioma","Recurrent Childhood Rhabdomyosarcoma","Recurrent Ependymoma","Recurrent Ewing Sarcoma","Recurrent Glioma","Recurrent Hepatoblastoma","Recurrent Langerhans Cell Histiocytosis","Recurrent Malignant Germ Cell Tumor","Recurrent Malignant Solid Neoplasm","Recurrent Medulloblastoma","Recurrent Neuroblastoma","Recurrent Non-Hodgkin Lymphoma","Recurrent Osteosarcoma","Recurrent Peripheral Primitive Neuroectodermal Tumor","Recurrent Primary Central Nervous System Neoplasm","Recurrent Rhabdoid Tumor","Recurrent Soft Tissue Sarcoma","Refractory Ewing Sarcoma","Refractory Glioma","Refractory Hepatoblastoma","Refractory Langerhans Cell Histiocytosis","Refractory Malignant Germ Cell Tumor","Refractory Malignant Solid Neoplasm","Refractory Medulloblastoma","Refractory Neuroblastoma","Refractory Non-Hodgkin Lymphoma","Refractory Osteosarcoma","Refractory Peripheral Primitive Neuroectodermal Tumor","Refractory Primary Central Nervous System Neoplasm","Refractory Rhabdoid Tumor","Refractory Rhabdomyosarcoma","Rhabdoid Tumor","Stage III Osteosarcoma AJCC v7","Stage III Soft Tissue Sarcoma AJCC v7","Stage IV Osteosarcoma AJCC v7","Stage IV Soft Tissue Sarcoma AJCC v7","Stage IVA Osteosarcoma AJCC v7","Stage IVB Osteosarcoma AJCC v7","Wilms Tumor"],"interventions":["Biopsy Procedure","Biospecimen Collection","Bone Marrow Aspiration and Biopsy","Bone Scan","Computed Tomography","Ensartinib","Erdafitinib","Ivosidenib","Laboratory Biomarker Analysis","Larotrectinib Sulfate","Magnetic Resonance Imaging","Mutation Carrier Screening","Olaparib","Palbociclib","Pharmacological Study","Positron Emission Tomography","Radionuclide Imaging","Samotolisib","Selpercatinib","Selumetinib Sulfate","Tazemetostat","Tipifarnib","Ulixertinib","Vemurafenib","X-Ray Imaging"],"primaryOutcomes":[{"measure":"Proportion of Pediatric Patients Whose Advanced Tumors Have Pathway Alterations That Can be Targeted by Select Anti-cancer Drugs","description":"Match rate will be calculated as the percent of eligible patients who have an actionable mutation of interest and are matched to at least one of the subprotocols, and confidence intervals will be constructed using the Wilson score interval method. Patients enrolled on or after Amendment 4 will not be included in this analysis as screening of unselected patients will no longer be conducted.","timeFrame":"Up to 2 years from study entry"}],"completionDate":"2027-01-06","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03155620","acronym":null,"briefTitle":"Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)","officialTitle":"NCI-COG Pediatric MATCH (Molecular Analysis for Therapy Choice) Screening Protocol","sponsor":"National Cancer Institute (NCI)","phase":"Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"TKI / Small Molecule","conditions":["Advanced Malignant Solid Neoplasm","Ann Arbor Stage III Non-Hodgkin Lymphoma","Ann Arbor Stage IV Non-Hodgkin Lymphoma","Histiocytic Sarcoma","Juvenile Xanthogranuloma","Langerhans Cell Histiocytosis","Malignant Glioma","Recurrent Childhood Rhabdomyosarcoma","Recurrent Ependymoma","Recurrent Ewing Sarcoma","Recurrent Glioma","Recurrent Hepatoblastoma","Recurrent Langerhans Cell Histiocytosis","Recurrent Malignant Germ Cell Tumor","Recurrent Malignant Solid Neoplasm","Recurrent Medulloblastoma","Recurrent Neuroblastoma","Recurrent Non-Hodgkin Lymphoma","Recurrent Osteosarcoma","Recurrent Peripheral Primitive Neuroectodermal Tumor","Recurrent Primary Central Nervous System Neoplasm","Recurrent Rhabdoid Tumor","Recurrent Soft Tissue Sarcoma","Refractory Ewing Sarcoma","Refractory Glioma","Refractory Hepatoblastoma","Refractory Langerhans Cell Histiocytosis","Refractory Malignant Germ Cell Tumor","Refractory Malignant Solid Neoplasm","Refractory Medulloblastoma","Refractory Neuroblastoma","Refractory Non-Hodgkin Lymphoma","Refractory Osteosarcoma","Refractory Peripheral Primitive Neuroectodermal Tumor","Refractory Primary Central Nervous System Neoplasm","Refractory Rhabdoid Tumor","Refractory Rhabdomyosarcoma","Rhabdoid Tumor","Stage III Osteosarcoma AJCC v7","Stage III Soft Tissue Sarcoma AJCC v7","Stage IV Osteosarcoma AJCC v7","Stage IV Soft Tissue Sarcoma AJCC v7","Stage IVA Osteosarcoma AJCC v7","Stage IVB Osteosarcoma AJCC v7","Wilms Tumor"],"interventions":["Biopsy Procedure","Biospecimen Collection","Bone Marrow Aspiration and Biopsy","Bone Scan","Computed Tomography","Ensartinib","Erdafitinib","Ivosidenib","Laboratory Biomarker Analysis","Larotrectinib Sulfate","Magnetic Resonance Imaging","Mutation Carrier Screening","Olaparib","Palbociclib","Pharmacological Study","Positron Emission Tomography","Radionuclide Imaging","Samotolisib","Selpercatinib","Selumetinib Sulfate","Tazemetostat","Tipifarnib","Ulixertinib","Vemurafenib","X-Ray Imaging"],"primaryOutcomes":[{"measure":"Proportion of Pediatric Patients Whose Advanced Tumors Have Pathway Alterations That Can be Targeted by Select Anti-cancer Drugs","description":"Match rate will be calculated as the percent of eligible patients who have an actionable mutation of interest and are matched to at least one of the subprotocols, and confidence intervals will be constructed using the Wilson score interval method. Patients enrolled on or after Amendment 4 will not be included in this analysis as screening of unselected patients will no longer be conducted.","timeFrame":"Up to 2 years from study entry"}],"completionDate":"2027-01-06","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial). ClinicalTrials.gov Identifier: NCT03155620. Primary Sponsor: National Cancer Institute (NCI). Available at: https://clinsight.pract.eu/trials/NCT03155620/";

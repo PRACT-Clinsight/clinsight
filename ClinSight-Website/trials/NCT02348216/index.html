@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT02348216 ZUMA-1 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Cell &amp; Gene Therapy (CAR-T) · Sponsor: Kite, A Gilead Company">
+    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: CAR-T · Sponsor: Kite, A Gilead Company">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT02348216/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ZUMA-1 (NCT02348216): Study Evaluating the Safety and Efficacy of KTE-C19 in Adult Participants With Refractory Aggressive Non-Hodgkin Lymphoma","url":"https://clinsight.pract.eu/trials/NCT02348216/","studySubject":{"@type":"MedicalCondition","name":"Refractory Diffuse Large B Cell Lymphoma (DLBCL)"},"sponsor":"Kite, A Gilead Company","status":"COMPLETED","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ZUMA-1 (NCT02348216)","item":"https://clinsight.pract.eu/trials/NCT02348216/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02348216 (ZUMA-1)?","acceptedAnswer":{"@type":"Answer","text":"NCT02348216 is a Phase 1, Phase 2 study sponsored by Kite, A Gilead Company evaluating Cell &amp; Gene Therapy (CAR-T) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02348216?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02348216."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ZUMA-1 (NCT02348216): Study Evaluating the Safety and Efficacy of KTE-C19 in Adult Participants With Refractory Aggressive Non-Hodgkin Lymphoma","url":"https://clinsight.pract.eu/trials/NCT02348216/","studySubject":{"@type":"MedicalCondition","name":"Refractory Diffuse Large B Cell Lymphoma (DLBCL)"},"sponsor":"Kite, A Gilead Company","status":"COMPLETED","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ZUMA-1 (NCT02348216)","item":"https://clinsight.pract.eu/trials/NCT02348216/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02348216 (ZUMA-1)?","acceptedAnswer":{"@type":"Answer","text":"NCT02348216 is a Phase 1, Phase 2 study sponsored by Kite, A Gilead Company evaluating CAR-T in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02348216?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02348216."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT02348216</span>
             <span class="badge phase">Phase 1, Phase 2</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Cell &amp; Gene Therapy (CAR-T)</span>
+            <span class="badge modality">CAR-T</span>
+            
         </div>
 
         <h1>ZUMA-1: Study Evaluating the Safety and Efficacy of KTE-C19 in Adult Participants With Refractory Aggressive Non-Hodgkin Lymphoma</h1>
         <p class="lead">A Phase 1/2 Multicenter Study Evaluating the Safety and Efficacy of KTE-C19 in Adults With Refractory Aggressive Non-Hodgkin Lymphoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/16/NCT02348216/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/16/NCT02348216/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT02348216?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/34296427/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 34296427)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 34296427 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Axicabtagene" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Axicabtagene) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,28 +668,18 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Refractory Diffuse Large B Cell Lymphoma (DLBCL), Relapsed Diffuse Large B-Cell Lymphoma, Transformed Follicular Lymphoma (TFL), Primary Mediastinal B-cell Lymphoma (PMBCL), High Grade B-cell Lymphoma (HGBCL)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Key Inclusion Criteria</li><li>Histologically confirmed:<br><br>   * Diffuse Large B Cell Lymphoma (DLBCL)<br>   * Primary Mediastinal Large B Cell Lymphoma (PMBCL)<br>   * Transformation Follicular Lymphoma (TFL)<br>   * High grade B-cell lymphoma (HGBCL)</li><li>Chemotherapy-refractory disease, defined as one of more of the following:<br><br>   * No response to last line of therapy i. Progressive disease (PD) as best response to most recent therapy regimen ii. Stable disease (SD) as best response to most recent therapy with duration no longer than 6 month from last dose of therapy OR<br>   * Refractory post-autologous stem cell transplant (ASCT) i. Disease progression or relapsed less than or equal to 12 months of ASCT (must have biopsy proven recurrence in relapsed individuals) ii. If salvage therapy is given post-ASCT, the individual must have had no response to or relapsed after the last line of therapy</li><li>Individuals must have received adequate prior therapy including at a minimum:<br><br>   * Anti-cluster of differentiate 20 (CD20) monoclonal antibody unless investigator determines that tumor is CD20-negative and<br>   * an anthracycline containing chemotherapy regimen<br>   * for individual with transformed FL must have chemorefractory disease after transformation to DLBCL.</li><li>At least one measurable lesion per revised international working group (IWG Response Criteria</li><li>Eastern cooperative oncology group (ECOG) performance status of 0 or 1</li><li>Absolute neutrophil count (ANC) ≥ 1000/microliters (uL)</li><li>Absolute lymphocyte count ≥ 100/uL</li>
                     </ul>
                 </div>
-                <div class="criteria-box">
-                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
-                    <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
 
@@ -632,11 +688,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT02348216" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT02348216" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT02348216" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT02348216)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/16/NCT02348216/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/16/NCT02348216/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT02348216?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/34296427/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 34296427)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT02348216" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +716,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Cell &amp; Gene Therapy (CAR-T)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in CAR-T</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +766,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT02348216","acronym":"ZUMA-1","briefTitle":"Study Evaluating the Safety and Efficacy of KTE-C19 in Adult Participants With Refractory Aggressive Non-Hodgkin Lymphoma","officialTitle":"A Phase 1/2 Multicenter Study Evaluating the Safety and Efficacy of KTE-C19 in Adults With Refractory Aggressive Non-Hodgkin Lymphoma","sponsor":"Kite, A Gilead Company","phase":"Phase 1, Phase 2","status":"COMPLETED","modality":"Cell & Gene Therapy (CAR-T)","conditions":["Refractory Diffuse Large B Cell Lymphoma (DLBCL)","Relapsed Diffuse Large B-Cell Lymphoma","Transformed Follicular Lymphoma (TFL)","Primary Mediastinal B-cell Lymphoma (PMBCL)","High Grade B-cell Lymphoma (HGBCL)"],"interventions":["Axicabtagene Ciloleucel","Fludarabine","Cyclophosphamide","Levetiracetam","Tocilizumab","Dexamethasone","High-dose methylprednisolone","Bendamustine","Rituximab","Doxorubicin","Prednisone","Vincristine","Ifosfamide","Carboplatin","Etoposide","Gemcitabine","Oxaliplatin","Cisplatin","Methylprednisolone"],"primaryOutcomes":[{"measure":"Phase 1 Study: Number of Participants Experiencing Adverse Events (AEs) Defined as Dose Limiting Toxicities (DLTs)","description":"DLT was defined as axicabtagene ciloleucel-related events with onset within first 30 days following infusion:\n\n* Grade (GR) 4 neutropenia lasting \\> 21 days and GR 4 thrombocytopenia lasting \\> 35 days from day of cell transfer;\n* Any axicabtagene ciloleucel-related AE requiring intubation;\n* All other GR 3 toxicities lasting \\> 3 days and all GR 4 toxicities, with exception of following conditions which were not considered DLTs: aphasia/dysphasia or confusion/cognitive disturbance which resolved to GR ≤ 1 within 2 weeks and to baseline within 4 weeks; fever GR 3; myelosuppression defined as lymphopenia, decreased hemoglobin, neutropenia and thrombocytopenia unless neutropenia and thrombocytopenia met DLT definition described above; immediate hypersensitivity reactions occurring within 2 hours of cell infusion that were reversible to a ≤ GR 2 within 24 hours of cell administration with standard therapy; hypogammaglobulinemia GR 3 or 4.","timeFrame":"First infusion date of axicabtagene ciloleucel up to 30 days"},{"measure":"Phase 2 Pivotal Study (Cohorts 1 and 2): Overall Response Rate (ORR) as Assessed by Investigator Per Revised International Working Group (IWG) Response Criteria for Malignant Lymphoma","description":"ORR was defined as the percentage of participants achieving either a complete response (CR) or a partial response (PR), as assessed by the study investigators using revised IWG Response Criteria for Malignant Lymphoma (Cheson et al, 2007). CR: complete disappearance of all detectable clinical evidence of disease and disease-related symptoms; all lymph nodes and nodal masses must have regressed to normal size; spleen and/or liver must be normal size, not be palpable, and no nodules; bone marrow aspirate and biopsy must show no evidence of disease. PR: a ≥ 50% decrease in sum of the product of the diameters (SPD) of up to 6 of the largest dominant nodes or nodal masses; no increase in size of nodes, liver or spleen and no new sites of disease; multiple splenic and hepatic nodules (if present) must regress by ≥ 50% in the SPD; \\> 50% decrease in the greatest transverse diameter for single nodules. 95% confidence interval (CI) was calculated by Clopper-Pearson method.","timeFrame":"First infusion date of axicabtagene ciloleucel up to last follow-up visit (maximum duration: 7.7 years)"},{"measure":"Phase 2 Safety Management Study (Cohort 3): Percentage of Participants With Treatment-Emergent Cytokine Release Syndrome (CRS) and Neurologic Toxicities by Severity Grades","description":"TEAE was defined as any AE with onset on or after the start of treatment. CRS events were graded by Lee et al 2014. Grade 1 : No life threatening symptoms and require symptomatic treatment only; Grade 2: Symptoms require and respond to moderate intervention; Grade 3: Symptoms require and respond to aggressive intervention; Grade 4: Life-threatening symptoms and requirements for ventilator support or continuous venovenous hemodialysis (CVVHD), and Grade 5: Death. Neurologic toxicities were graded by Common Terminology Criteria for Adverse Events (CTCAE) version 4.03. Grade 1: Mild, asymptomatic or mild symptoms and intervention not indicated; Grade 2: Moderate and minimal, local or noninvasive intervention indicated; Grade 3: Severe or medically significant but not immediately life-threatening, hospitalization or prolongation of hospitalization indicated; Grade 4: Life-threatening and urgent intervention indicated; Grade 5: Death related to AE.","timeFrame":"First infusion date of axicabtagene ciloleucel up to last follow-up visit (maximum duration: 6.8 years)"},{"measure":"Phase 2 Safety Management Study (Cohort 4): Percentage of Participants With Treatment-Emergent CRS and Neurologic Toxicities by Severity Grades","description":"TEAE was defined as any AE with onset on or after the start of treatment. CRS events were graded by Lee et al 2014. Grade 1 : No life threatening symptoms and require symptomatic treatment only; Grade 2: Symptoms require and respond to moderate intervention; Grade 3: Symptoms require and respond to aggressive intervention; Grade 4: Life-threatening symptoms and requirements for ventilator support or CVVHD, and Grade 5: Death. Neurologic toxicities were graded by CTCAE version 4.03. Grade 1: Mild, asymptomatic or mild symptoms and intervention not indicated; Grade 2: Moderate and minimal, local or noninvasive intervention indicated; Grade 3: Severe or medically significant but not immediately life-threatening, hospitalization or prolongation of hospitalization indicated; Grade 4: Life-threatening and urgent intervention indicated; Grade 5: Death related to AE.","timeFrame":"First infusion date of axicabtagene ciloleucel up to last follow-up visit (maximum duration: 5.4 years)"},{"measure":"Phase 2 Safety Management Study (Cohort 5): Percentage of Participants With Treatment-Emergent CRS and Neurologic Toxicities by Severity Grades","description":"TEAE was defined as any AE with onset on or after the start of treatment. CRS events were graded by Lee et al 2014. Grade 1 : No life threatening symptoms and require symptomatic treatment only; Grade 2: Symptoms require and respond to moderate intervention; Grade 3: Symptoms require and respond to aggressive intervention; Grade 4: Life-threatening symptoms and requirements for ventilator support or CVVHD, and Grade 5: Death. Neurologic toxicities were graded by CTCAE version 4.03. Grade 1: Mild, asymptomatic or mild symptoms and intervention not indicated; Grade 2: Moderate and minimal, local or noninvasive intervention indicated; Grade 3: Severe or medically significant but not immediately life-threatening, hospitalization or prolongation of hospitalization indicated; Grade 4: Life-threatening and urgent intervention indicated; Grade 5: Death related to AE.","timeFrame":"First infusion date of axicabtagene ciloleucel up to last follow-up visit (maximum duration: 4.4 years)"},{"measure":"Phase 2 Safety Management Study (Cohort 6): Percentage of Participants With Treatment-Emergent CRS and Neurologic Toxicities by Severity Grades","description":"TEAE was defined as any AE with onset on or after the start of treatment. CRS events were graded by Lee et al 2014. Grade 1 : No life threatening symptoms and require symptomatic treatment only; Grade 2: Symptoms require and respond to moderate intervention; Grade 3: Symptoms require and respond to aggressive intervention; Grade 4: Life-threatening symptoms and requirements for ventilator support or CVVHD, and Grade 5: Death. Neurologic toxicities were graded by CTCAE version 4.03. Grade 1: Mild, asymptomatic or mild symptoms and intervention not indicated; Grade 2: Moderate and minimal, local or noninvasive intervention indicated; Grade 3: Severe or medically significant but not immediately life-threatening, hospitalization or prolongation of hospitalization indicated; Grade 4: Life-threatening and urgent intervention indicated; Grade 5: Death related to AE.","timeFrame":"First infusion date of axicabtagene ciloleucel up to last follow-up visit (maximum duration: 4.1 years)"}],"completionDate":"2023-07-27","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT02348216","acronym":"ZUMA-1","briefTitle":"Study Evaluating the Safety and Efficacy of KTE-C19 in Adult Participants With Refractory Aggressive Non-Hodgkin Lymphoma","officialTitle":"A Phase 1/2 Multicenter Study Evaluating the Safety and Efficacy of KTE-C19 in Adults With Refractory Aggressive Non-Hodgkin Lymphoma","sponsor":"Kite, A Gilead Company","phase":"Phase 1, Phase 2","status":"COMPLETED","modality":"CAR-T","conditions":["Refractory Diffuse Large B Cell Lymphoma (DLBCL)","Relapsed Diffuse Large B-Cell Lymphoma","Transformed Follicular Lymphoma (TFL)","Primary Mediastinal B-cell Lymphoma (PMBCL)","High Grade B-cell Lymphoma (HGBCL)"],"interventions":["Axicabtagene Ciloleucel","Fludarabine","Cyclophosphamide","Levetiracetam","Tocilizumab","Dexamethasone","High-dose methylprednisolone","Bendamustine","Rituximab","Doxorubicin","Prednisone","Vincristine","Ifosfamide","Carboplatin","Etoposide","Gemcitabine","Oxaliplatin","Cisplatin","Methylprednisolone"],"primaryOutcomes":[{"measure":"Phase 1 Study: Number of Participants Experiencing Adverse Events (AEs) Defined as Dose Limiting Toxicities (DLTs)","description":"DLT was defined as axicabtagene ciloleucel-related events with onset within first 30 days following infusion:\n\n* Grade (GR) 4 neutropenia lasting \\> 21 days and GR 4 thrombocytopenia lasting \\> 35 days from day of cell transfer;\n* Any axicabtagene ciloleucel-related AE requiring intubation;\n* All other GR 3 toxicities lasting \\> 3 days and all GR 4 toxicities, with exception of following conditions which were not considered DLTs: aphasia/dysphasia or confusion/cognitive disturbance which resolved to GR ≤ 1 within 2 weeks and to baseline within 4 weeks; fever GR 3; myelosuppression defined as lymphopenia, decreased hemoglobin, neutropenia and thrombocytopenia unless neutropenia and thrombocytopenia met DLT definition described above; immediate hypersensitivity reactions occurring within 2 hours of cell infusion that were reversible to a ≤ GR 2 within 24 hours of cell administration with standard therapy; hypogammaglobulinemia GR 3 or 4.","timeFrame":"First infusion date of axicabtagene ciloleucel up to 30 days"},{"measure":"Phase 2 Pivotal Study (Cohorts 1 and 2): Overall Response Rate (ORR) as Assessed by Investigator Per Revised International Working Group (IWG) Response Criteria for Malignant Lymphoma","description":"ORR was defined as the percentage of participants achieving either a complete response (CR) or a partial response (PR), as assessed by the study investigators using revised IWG Response Criteria for Malignant Lymphoma (Cheson et al, 2007). CR: complete disappearance of all detectable clinical evidence of disease and disease-related symptoms; all lymph nodes and nodal masses must have regressed to normal size; spleen and/or liver must be normal size, not be palpable, and no nodules; bone marrow aspirate and biopsy must show no evidence of disease. PR: a ≥ 50% decrease in sum of the product of the diameters (SPD) of up to 6 of the largest dominant nodes or nodal masses; no increase in size of nodes, liver or spleen and no new sites of disease; multiple splenic and hepatic nodules (if present) must regress by ≥ 50% in the SPD; \\> 50% decrease in the greatest transverse diameter for single nodules. 95% confidence interval (CI) was calculated by Clopper-Pearson method.","timeFrame":"First infusion date of axicabtagene ciloleucel up to last follow-up visit (maximum duration: 7.7 years)"},{"measure":"Phase 2 Safety Management Study (Cohort 3): Percentage of Participants With Treatment-Emergent Cytokine Release Syndrome (CRS) and Neurologic Toxicities by Severity Grades","description":"TEAE was defined as any AE with onset on or after the start of treatment. CRS events were graded by Lee et al 2014. Grade 1 : No life threatening symptoms and require symptomatic treatment only; Grade 2: Symptoms require and respond to moderate intervention; Grade 3: Symptoms require and respond to aggressive intervention; Grade 4: Life-threatening symptoms and requirements for ventilator support or continuous venovenous hemodialysis (CVVHD), and Grade 5: Death. Neurologic toxicities were graded by Common Terminology Criteria for Adverse Events (CTCAE) version 4.03. Grade 1: Mild, asymptomatic or mild symptoms and intervention not indicated; Grade 2: Moderate and minimal, local or noninvasive intervention indicated; Grade 3: Severe or medically significant but not immediately life-threatening, hospitalization or prolongation of hospitalization indicated; Grade 4: Life-threatening and urgent intervention indicated; Grade 5: Death related to AE.","timeFrame":"First infusion date of axicabtagene ciloleucel up to last follow-up visit (maximum duration: 6.8 years)"},{"measure":"Phase 2 Safety Management Study (Cohort 4): Percentage of Participants With Treatment-Emergent CRS and Neurologic Toxicities by Severity Grades","description":"TEAE was defined as any AE with onset on or after the start of treatment. CRS events were graded by Lee et al 2014. Grade 1 : No life threatening symptoms and require symptomatic treatment only; Grade 2: Symptoms require and respond to moderate intervention; Grade 3: Symptoms require and respond to aggressive intervention; Grade 4: Life-threatening symptoms and requirements for ventilator support or CVVHD, and Grade 5: Death. Neurologic toxicities were graded by CTCAE version 4.03. Grade 1: Mild, asymptomatic or mild symptoms and intervention not indicated; Grade 2: Moderate and minimal, local or noninvasive intervention indicated; Grade 3: Severe or medically significant but not immediately life-threatening, hospitalization or prolongation of hospitalization indicated; Grade 4: Life-threatening and urgent intervention indicated; Grade 5: Death related to AE.","timeFrame":"First infusion date of axicabtagene ciloleucel up to last follow-up visit (maximum duration: 5.4 years)"},{"measure":"Phase 2 Safety Management Study (Cohort 5): Percentage of Participants With Treatment-Emergent CRS and Neurologic Toxicities by Severity Grades","description":"TEAE was defined as any AE with onset on or after the start of treatment. CRS events were graded by Lee et al 2014. Grade 1 : No life threatening symptoms and require symptomatic treatment only; Grade 2: Symptoms require and respond to moderate intervention; Grade 3: Symptoms require and respond to aggressive intervention; Grade 4: Life-threatening symptoms and requirements for ventilator support or CVVHD, and Grade 5: Death. Neurologic toxicities were graded by CTCAE version 4.03. Grade 1: Mild, asymptomatic or mild symptoms and intervention not indicated; Grade 2: Moderate and minimal, local or noninvasive intervention indicated; Grade 3: Severe or medically significant but not immediately life-threatening, hospitalization or prolongation of hospitalization indicated; Grade 4: Life-threatening and urgent intervention indicated; Grade 5: Death related to AE.","timeFrame":"First infusion date of axicabtagene ciloleucel up to last follow-up visit (maximum duration: 4.4 years)"},{"measure":"Phase 2 Safety Management Study (Cohort 6): Percentage of Participants With Treatment-Emergent CRS and Neurologic Toxicities by Severity Grades","description":"TEAE was defined as any AE with onset on or after the start of treatment. CRS events were graded by Lee et al 2014. Grade 1 : No life threatening symptoms and require symptomatic treatment only; Grade 2: Symptoms require and respond to moderate intervention; Grade 3: Symptoms require and respond to aggressive intervention; Grade 4: Life-threatening symptoms and requirements for ventilator support or CVVHD, and Grade 5: Death. Neurologic toxicities were graded by CTCAE version 4.03. Grade 1: Mild, asymptomatic or mild symptoms and intervention not indicated; Grade 2: Moderate and minimal, local or noninvasive intervention indicated; Grade 3: Severe or medically significant but not immediately life-threatening, hospitalization or prolongation of hospitalization indicated; Grade 4: Life-threatening and urgent intervention indicated; Grade 5: Death related to AE.","timeFrame":"First infusion date of axicabtagene ciloleucel up to last follow-up visit (maximum duration: 4.1 years)"}],"completionDate":"2023-07-27","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "ZUMA-1. Study Evaluating the Safety and Efficacy of KTE-C19 in Adult Participants With Refractory Aggressive Non-Hodgkin Lymphoma. ClinicalTrials.gov Identifier: NCT02348216. Primary Sponsor: Kite, A Gilead Company. Available at: https://clinsight.pract.eu/trials/NCT02348216/";

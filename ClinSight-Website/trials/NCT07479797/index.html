@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT07479797 NCT07479797 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Cell &amp; Gene Therapy (CAR-T) · Sponsor: Kite, A Gilead Company">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: CAR-T · Sponsor: Kite, A Gilead Company">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT07479797/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07479797 (NCT07479797): Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy","url":"https://clinsight.pract.eu/trials/NCT07479797/","studySubject":{"@type":"MedicalCondition","name":"Relapsed or Refractory Large B-cell Lymphoma"},"sponsor":"Kite, A Gilead Company","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT07479797 (NCT07479797)","item":"https://clinsight.pract.eu/trials/NCT07479797/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07479797 (NCT07479797)?","acceptedAnswer":{"@type":"Answer","text":"NCT07479797 is a Phase 3 study sponsored by Kite, A Gilead Company evaluating Cell &amp; Gene Therapy (CAR-T) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07479797?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07479797."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07479797 (NCT07479797): Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy","url":"https://clinsight.pract.eu/trials/NCT07479797/","studySubject":{"@type":"MedicalCondition","name":"Relapsed or Refractory Large B-cell Lymphoma"},"sponsor":"Kite, A Gilead Company","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT07479797 (NCT07479797)","item":"https://clinsight.pract.eu/trials/NCT07479797/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07479797 (NCT07479797)?","acceptedAnswer":{"@type":"Answer","text":"NCT07479797 is a Phase 3 study sponsored by Kite, A Gilead Company evaluating CAR-T in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07479797?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07479797."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT07479797</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">RECRUITING</span>
-            <span class="badge modality">Cell &amp; Gene Therapy (CAR-T)</span>
+            <span class="badge modality">CAR-T</span>
+            
         </div>
 
         <h1>Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy</h1>
         <p class="lead">A Phase 3, Randomized, Open-Label, Multicenter Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=KITE-753" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (KITE-753) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Relapsed or Refractory Large B-cell Lymphoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Individuals with any of the following large B-cell lymphomas, as determined by the investigator, are eligible for the study as defined below:<br><br>  * World Health Organization (WHO):<br><br>    * Individuals with chemorefractory disease to first-line therapy (primary refractory disease) that satisfies any of the following criteria:<br><br>      * Progressive disease (PD) and/or Deauville score of 5 (irrespective of the response designation) as the best response during the first-line treatment or as the end of treatment response following first-line therapy.<br>      * Stable disease (SD) after at least 4 cycles of first-line therapy (eg, 4 cycles of rituximab plus cyclophosphamide, doxorubicin, vincristine, and prednisone (R-CHOP)).<br>      * PR as best response after at least 6 cycles of first-line therapy (eg, 6 cycles of R-CHOP).<br>      * Note: A biopsy is recommended to confirm residual disease.<br>    * Individuals with relapsed disease defined as complete remission to first-line therapy followed by biopsy-proven disease relapsed ≤ 12 months of completion of first-line therapy.<br>    * Note: If the relapse is confirmed by imaging per International Working Group (IWG) Lugano Response Criteria for Malignant Lymphoma within 12 months, the confirmatory biopsy must be performed within 90 days of the 12-month cutoff.<br>    * Prior therapy must have included an anti-CD20 antibody (including CD20-targeting T-cell engager antibodies) and an anthracycline-containing chemotherapy regimen.<br>    * For individuals with transformed indolent NHL, therapies given for non-transformed disease do not count as a line of therapy for the transformed disease.<br>    * Individuals who have had no additional systemic therapy or holding therapy (except for steroids and/or local radiation) following first-line therapy and prior to leukapheresis are eligible.</li><li>At least 1 measurable lesion according to the IWG Lugano Response Criteria. Lesions that have been previously irradiated will be considered measurable only if progression has been documented following completion of radiation therapy. A measurable lesion is defined as \&gt;1.5 cm longest transverse diameter (LDi) for lymph node and \&gt; 1.0 cm LDi for extranodal lesion. Splenomegaly or hepatomegaly alone in the absence of a measurable lesion is not considered to be measurable disease.</li><li>The following washout period must be satisfied:<br><br>  * At least 2 weeks or 5 half-lives, whichever is shorter, must have elapsed since any prior systemic therapy at the time the individual is randomized.</li><li>Toxicities due to immediate prior therapy must have recovered to Grade 1 or lower (except for clinically nonsignificant toxicities such as alopecia, unless otherwise specified in the protocol)</li><li>Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 2.</li><li>Adequate bone marrow function as evidenced by:<br><br>  * Absolute neutrophil count ≥ 1,000/μL or ≥ 500/μL if documented bone marrow involvement of lymphoma. Bone marrow involvement by lymphoma is demonstrated by positron emission tomography (PET) scan or bone marrow aspiration or bone marrow biopsy.<br>  * Platelet count ≥ 75,000/μL (unless secondary to bone marrow or spleen involvement by lymphoma, in which platelet count ≥ 50,000 μL is permitted). Bone marrow involvement by lymphoma is demonstrated by PET scan or bone marrow aspiration or bone marrow biopsy. Spleen involvement by lymphoma is demonstrated by PET-diagnostic computed tomography (CT) involvement, splenomegaly, or biopsy.</li><li>Adequate renal, hepatic, cardiac, and pulmonary function as evidenced by:<br><br>  * Creatine clearance (as estimated by Cockcroft-Gault formula) ≥ 30 mL/minute. Note: 24-hour urine estimate is also acceptable.<br>  * Serum alanine aminotransferase/aspartate aminotransferase ≤ 3.0 times the upper limits of normal, except in individuals with documented liver involvement by lymphoma via PET-diagnostic CT scan or biopsy<br>  * Total bilirubin ≤ 1.5 mg/dL, except in individuals with Gilbert&#39;s Syndrome or documented liver or pancreatic involvement where ≤ 3.0 times the upper limit of normal is permitted<br>  * Cardiac ejection fraction ≥ 40% and no pericardial effusion Grade 3 or higher (per Common Terminology Criteria for Adverse Events (CTCAE) version (v)5.0) as determined by an echocardiogram (ECHO) or multiple-gated acquisition scan (MUGA) (if ECHO not available at the site). Note: If there is any concern for pericardial effusion, an ECHO must be performed since MUGA alone is not an adequate modality to assess for pericardial effusion.<br>  * No evidence of Grade 2 (per CTCAE v5.0) or greater pleural effusion or ascites (individuals with Grade 1 ascites or pleural effusion are eligible)<br>  * Baseline oxygen saturation \&gt; 92% on room air</li><li>Females of childbearing potential must have a medically supervised negative serum or urine pregnancy test (females who have undergone surgical sterilization or have been postmenopausal for at least 2 years before randomization are not considered to be of childbearing potential.<br><br>Key</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Prior CAR T-cell therapy or other cell-based therapy.</li><li>History of malignancy other than nonmelanoma skin cancer or carcinoma in situ (eg, cervix, bladder, or breast) unless disease-free and without anti-cancer therapy (with the exception of hormonal therapy in the case of breast cancer) for at least 3 years. Individuals with asymptomatic localized low-grade prostate cancer for which a watch-and-wait approach is standard of care are eligible.</li><li>Individuals with the following LBCL fifth edition of WHO criteria subtypes: Richter&#39;s transformation of chronic leukemic lymphoma, small lymphocytic lymphoma, Burkitt lymphoma, lymphoplasmacytic lymphoma, T-cell/histiocyte-rich LBCL, mediastinal gray zone lymphoma, plasmablastic lymphoma, intravascular LBCL, primary central nervous system (CNS) lymphoma, primary vitreoretinal LBCL, fibrin-associated LBCL, fluid overload-associated LBCL lymphomatoid granulomatosis, high-grade B-cell lymphoma (HGBCL) with 11q aberrations, anaplastic lymphoma kinase-positive LBCL, LBCL with Interferon Regulatory Factor 4 (IRF4) rearrangement, and transformed from Hodgkin&#39;s lymphoma (HL). Note: Individuals with primary testicular LBCL are eligible.</li><li>History of a severe, immediate hypersensitivity reaction attributed to aminoglycosides</li><li>Presence or suspicion of fungal, bacterial, viral, or other infection that is uncontrolled or requires intravenous (IV) antimicrobials for management. Note: Simple urinary tract infections and uncomplicated bacterial or viral upper respiratory tract infections are permitted if the individual is responding to active treatment and satisfies the criteria of being afebrile for 48 hours (ie, temperature \&lt; 38°C).</li><li>Known history of hepatitis B virus (HBV) (hepatitis B surface (HBs) antigen (HBsAg) positive) infection, or hepatitis C (anti-hepatitis C virus (HCV)) positive) infection. History of a hepatitis B or C infection is permitted if the viral load is undetectable per quantitative polymerase chain reaction (qPCR) or nucleic acid testing. Note: Individuals who are seropositive for HBV (ie, HBs and/or hepatitis B core antibody positive) are eligible if they are HBsAg-negative and negative for viral DNA. Individuals who are seropositive because of HBV vaccination are eligible (ie, HBs antibody positive, hepatitis core antibody-negative, and HBsAg-negative). Individuals on prophylactic and suppressive antiviral medications against HBV and/or HCV administered per institutional or clinical practice guidelines are eligible.</li><li>HIV-positive, unless taking appropriate anti-HIV medications, with an undetectable viral load by qPCR and a CD4 count ≥ 200 cells/μL. Note: HIV-positive individuals in Australia are not permitted regardless of active antiretroviral therapy or undetectable blood viral load.</li><li>History or presence of the following CNS disorders: hemorrhage, dementia (per CTCAE v5.0 Grade 2 or higher memory impairment), cerebellar disease, any autoimmune disease with CNS involvement, posterior reversible encephalopathy syndrome, or cerebral edema with confirmed structural defects by appropriate imaging.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT07479797" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT07479797" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT07479797" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT07479797)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Cell &amp; Gene Therapy (CAR-T)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in CAR-T</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT07479797","acronym":null,"briefTitle":"Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy","officialTitle":"A Phase 3, Randomized, Open-Label, Multicenter Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy","sponsor":"Kite, A Gilead Company","phase":"Phase 3","status":"RECRUITING","modality":"Cell & Gene Therapy (CAR-T)","conditions":["Relapsed or Refractory Large B-cell Lymphoma"],"interventions":["KITE-753","Axicabtagene Ciloleucel","Fludarabine","Cyclophosphamide"],"primaryOutcomes":[{"measure":"Proportion of Participants in Complete Response (CR) at Month 6","description":"Participants who would be in CR at Month 6 postinfusion of KITE-753 or axi-cel and prior to subsequent anti-lymphoma therapy. This will be assessed by the Lugano Classification by the blinded central assessment.","timeFrame":"Month 6"},{"measure":"Event-free survival (EFS)","description":"EFS is defined as the time from randomization to the earliest occurrence of the following EFS events: a) Death due to any cause, b) Disease progression/relapse per blinded central assessment, and c) Initiation of any non-protocol specified subsequent anti-lymphoma therapy for the treatment of residual disease (including stable disease and partial response as per International Working Group (IWG) Lugano Response Criteria for Malignant Lymphoma).","timeFrame":"Up to 36 months"}],"completionDate":"2031-05","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT07479797","acronym":null,"briefTitle":"Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy","officialTitle":"A Phase 3, Randomized, Open-Label, Multicenter Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy","sponsor":"Kite, A Gilead Company","phase":"Phase 3","status":"RECRUITING","modality":"CAR-T","conditions":["Relapsed or Refractory Large B-cell Lymphoma"],"interventions":["KITE-753","Axicabtagene Ciloleucel","Fludarabine","Cyclophosphamide"],"primaryOutcomes":[{"measure":"Proportion of Participants in Complete Response (CR) at Month 6","description":"Participants who would be in CR at Month 6 postinfusion of KITE-753 or axi-cel and prior to subsequent anti-lymphoma therapy. This will be assessed by the Lugano Classification by the blinded central assessment.","timeFrame":"Month 6"},{"measure":"Event-free survival (EFS)","description":"EFS is defined as the time from randomization to the earliest occurrence of the following EFS events: a) Death due to any cause, b) Disease progression/relapse per blinded central assessment, and c) Initiation of any non-protocol specified subsequent anti-lymphoma therapy for the treatment of residual disease (including stable disease and partial response as per International Working Group (IWG) Lugano Response Criteria for Malignant Lymphoma).","timeFrame":"Up to 36 months"}],"completionDate":"2031-05","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy. ClinicalTrials.gov Identifier: NCT07479797. Primary Sponsor: Kite, A Gilead Company. Available at: https://clinsight.pract.eu/trials/NCT07479797/";

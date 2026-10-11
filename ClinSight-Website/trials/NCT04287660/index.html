@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04287660 NCT04287660 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Therapy (Small Molecule / TKI) · Sponsor: The First Affiliated Hospital of Soochow University">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: The First Affiliated Hospital of Soochow University">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04287660/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04287660 (NCT04287660): Study of BiRd Regimen Combined With BCMA CAR T-cell Therapy in Newly Diagnosed Multiple Myeloma (MM) Patients","url":"https://clinsight.pract.eu/trials/NCT04287660/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"The First Affiliated Hospital of Soochow University","status":"UNKNOWN","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04287660 (NCT04287660)","item":"https://clinsight.pract.eu/trials/NCT04287660/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04287660 (NCT04287660)?","acceptedAnswer":{"@type":"Answer","text":"NCT04287660 is a Phase 3 study sponsored by The First Affiliated Hospital of Soochow University evaluating Targeted Therapy (Small Molecule / TKI) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04287660?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04287660."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04287660 (NCT04287660): Study of BiRd Regimen Combined With BCMA CAR T-cell Therapy in Newly Diagnosed Multiple Myeloma (MM) Patients","url":"https://clinsight.pract.eu/trials/NCT04287660/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"The First Affiliated Hospital of Soochow University","status":"UNKNOWN","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04287660 (NCT04287660)","item":"https://clinsight.pract.eu/trials/NCT04287660/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04287660 (NCT04287660)?","acceptedAnswer":{"@type":"Answer","text":"NCT04287660 is a Phase 3 study sponsored by The First Affiliated Hospital of Soochow University evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04287660?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04287660."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04287660</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">UNKNOWN</span>
-            <span class="badge modality">Targeted Therapy (Small Molecule / TKI)</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>Study of BiRd Regimen Combined With BCMA CAR T-cell Therapy in Newly Diagnosed Multiple Myeloma (MM) Patients</h1>
         <p class="lead">A Phase 3, Single Arm, Multi-Center Study to Assess the Efficacy and Safety of Clarithromycin(Biaxin)-Lenalidomide-Low-Dose-Dexamethasone (BiRd) Combined With B-cell Maturation Antigen (BCMA)-Directed Chimeric Antigen Receptor (CAR) T-cell Therapy in Patients With Newly Diagnosed Multiple Myeloma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=clarithromycin" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (clarithromycin) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Multiple Myeloma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Newly diagnosed MM according to the criteria by International Myeloma Working Group (IMWG)</li><li>Age 18-75</li><li>Eastern Cooperative Oncology Group (ECOG) score 0-2</li><li>BCMA positive as detected with flowcytometry or ELISA.</li><li>Patients with left ventricular ejection fraction ≥ 0.5 by echocardiography or grade I/II cardiovascular dysfunction according to the New York Heart Association Classification.</li><li>Patients with aspartate aminotransferase or glutamic-pyruvic transaminase \&gt; 3x upper limit of normal or bilirubin \&gt; 2.0 mg/dL</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Patients are pregnant or lactating.</li><li>Nonsecretory MM.</li><li>History of previous treatment of MM.</li><li>Patients with uncontrolled active infection.</li><li>Patients with active hepatitis B or hepatitis C infection.</li><li>Patients with HIV infection.</li><li>Patients with atrial or venous thrombosis or embolism.</li><li>Patients with myo-infarction or severe arrythmia in the recent 6 months.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04287660" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04287660" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04287660" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04287660)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Therapy (Small Molecule / TKI)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04287660","acronym":null,"briefTitle":"Study of BiRd Regimen Combined With BCMA CAR T-cell Therapy in Newly Diagnosed Multiple Myeloma (MM) Patients","officialTitle":"A Phase 3, Single Arm, Multi-Center Study to Assess the Efficacy and Safety of Clarithromycin(Biaxin)-Lenalidomide-Low-Dose-Dexamethasone (BiRd) Combined With B-cell Maturation Antigen (BCMA)-Directed Chimeric Antigen Receptor (CAR) T-cell Therapy in Patients With Newly Diagnosed Multiple Myeloma","sponsor":"The First Affiliated Hospital of Soochow University","phase":"Phase 3","status":"UNKNOWN","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Multiple Myeloma"],"interventions":["clarithromycin, lenalidomide, dexamethasone and autologous BCMA-directed CAR T-cells"],"primaryOutcomes":[{"measure":"Overall response rate (ORR)","description":"ORR includes stringent complete response (sCR), complete remission (CR), very good partial remission (VGPR) and partial remission (PR). Stringent complete response (sCR): complete response as defined below plus normal free light chain (FLC) and absence of clonal cells in bone marrow biopsy by immunohistochemistry (κ/λ ratio ≤4:1 or ≥1:2 for κ and λ patients, respectively, after counting ≥100 plasma cells). Complete Response (CR)：negative immunofixation on the serum and urine and disappearance of any soft tissue plasmacytomas and \\<5% plasma cells in bone marrow aspirates. Very good partial response (VGPR)：serum and urine M-protein detectable by immunofixation but not on electrophoresis or ≥90% reduction in serum M-protein plus urine M-protein level \\<100 mg per 24 h. Partial response (PR): ≥50% reduction of serum M-protein plus reduction in 24 h urine M-protein by ≥90% or to \\<200 mg per 24 h.","timeFrame":"4 weeks after CAR T-cells infusion (up to 14 weeks)"}],"completionDate":"2025-01-31","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04287660","acronym":null,"briefTitle":"Study of BiRd Regimen Combined With BCMA CAR T-cell Therapy in Newly Diagnosed Multiple Myeloma (MM) Patients","officialTitle":"A Phase 3, Single Arm, Multi-Center Study to Assess the Efficacy and Safety of Clarithromycin(Biaxin)-Lenalidomide-Low-Dose-Dexamethasone (BiRd) Combined With B-cell Maturation Antigen (BCMA)-Directed Chimeric Antigen Receptor (CAR) T-cell Therapy in Patients With Newly Diagnosed Multiple Myeloma","sponsor":"The First Affiliated Hospital of Soochow University","phase":"Phase 3","status":"UNKNOWN","modality":"TKI / Small Molecule","conditions":["Multiple Myeloma"],"interventions":["clarithromycin, lenalidomide, dexamethasone and autologous BCMA-directed CAR T-cells"],"primaryOutcomes":[{"measure":"Overall response rate (ORR)","description":"ORR includes stringent complete response (sCR), complete remission (CR), very good partial remission (VGPR) and partial remission (PR). Stringent complete response (sCR): complete response as defined below plus normal free light chain (FLC) and absence of clonal cells in bone marrow biopsy by immunohistochemistry (κ/λ ratio ≤4:1 or ≥1:2 for κ and λ patients, respectively, after counting ≥100 plasma cells). Complete Response (CR)：negative immunofixation on the serum and urine and disappearance of any soft tissue plasmacytomas and \\<5% plasma cells in bone marrow aspirates. Very good partial response (VGPR)：serum and urine M-protein detectable by immunofixation but not on electrophoresis or ≥90% reduction in serum M-protein plus urine M-protein level \\<100 mg per 24 h. Partial response (PR): ≥50% reduction of serum M-protein plus reduction in 24 h urine M-protein by ≥90% or to \\<200 mg per 24 h.","timeFrame":"4 weeks after CAR T-cells infusion (up to 14 weeks)"}],"completionDate":"2025-01-31","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Study of BiRd Regimen Combined With BCMA CAR T-cell Therapy in Newly Diagnosed Multiple Myeloma (MM) Patients. ClinicalTrials.gov Identifier: NCT04287660. Primary Sponsor: The First Affiliated Hospital of Soochow University. Available at: https://clinsight.pract.eu/trials/NCT04287660/";

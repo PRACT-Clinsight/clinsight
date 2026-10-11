@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03710603 Perseus — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Monoclonal Antibodies · Sponsor: Stichting European Myeloma Network">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: Stichting European Myeloma Network">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03710603/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"Perseus (NCT03710603): Daratumumab, VELCADE (Bortezomib), Lenalidomide and Dexamethasone Compared to VELCADE, Lenalidomide and Dexamethasone in Subjects With Previously Untreated Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT03710603/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Stichting European Myeloma Network","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"Perseus (NCT03710603)","item":"https://clinsight.pract.eu/trials/NCT03710603/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03710603 (Perseus)?","acceptedAnswer":{"@type":"Answer","text":"NCT03710603 is a Phase 3 study sponsored by Stichting European Myeloma Network evaluating Targeted Monoclonal Antibodies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03710603?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03710603."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"Perseus (NCT03710603): Daratumumab, VELCADE (Bortezomib), Lenalidomide and Dexamethasone Compared to VELCADE, Lenalidomide and Dexamethasone in Subjects With Previously Untreated Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT03710603/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Stichting European Myeloma Network","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"Perseus (NCT03710603)","item":"https://clinsight.pract.eu/trials/NCT03710603/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03710603 (Perseus)?","acceptedAnswer":{"@type":"Answer","text":"NCT03710603 is a Phase 3 study sponsored by Stichting European Myeloma Network evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03710603?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03710603."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03710603</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Targeted Monoclonal Antibodies</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>Perseus: Daratumumab, VELCADE (Bortezomib), Lenalidomide and Dexamethasone Compared to VELCADE, Lenalidomide and Dexamethasone in Subjects With Previously Untreated Multiple Myeloma</h1>
         <p class="lead">A Phase 3 Study Comparing Daratumumab, VELCADE (Bortezomib), Lenalidomide, and Dexamethasone (D-VRd) vs VELCADE, Lenalidomide, and Dexamethasone (VRd) in Subjects With Previously Untreated Multiple Myeloma Who Are Eligible for High-dose Therapy</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/03/NCT03710603/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/03/NCT03710603/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT03710603?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41060326/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41060326)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41060326 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Daratumumab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Daratumumab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Multiple Myeloma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>18 to 70 years of age, inclusive.</li><li>Monoclonal plasma cells in the bone marrow ≥10% or presence of a biopsy proven plasmacytoma and documented multiple myeloma satisfying at least one of the calcium, renal, anemia, bone (CRAB) criteria or biomarkers of malignancy criteria:<br><br>CRAB criteria:</li><li>Hypercalcemia: serum calcium \&gt;0.25 mmol/L (\&gt;1 mg/dL) higher than upper limit of normal (ULN) or \&gt;2.75 mmol/L (\&gt;11 mg/dL)</li><li>Renal insufficiency: creatinine clearance \&lt;40 mL/min or serum creatinine \&gt;177 μmol/L (\&gt;2 mg/dL)</li><li>Anemia: hemoglobin \&gt;2 g/dL below the lower limit of normal or hemoglobin \&lt;10 g/dL</li><li>Bone lesions: one or more osteolytic lesions on skeletal radiography, CT, or Positron-emission tomography (PET)-CT<br><br>Biomarkers of Malignancy:<br><br>a. Clonal bone marrow plasma cell percentage ≥60% b. Involved: uninvolved serum free light chain (FLC) ratio ≥100 c. \&gt;1 focal lesion on magnetic resonance imaging (MRI) studies</li><li>Measurable disease as defined by any of the following:</li><li>Serum monoclonal paraprotein (M-protein) level ≥1.0 g/dL or urine M-protein level ≥200 mg/24 hours; or</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Prior or current systemic therapy or stem cell transplant (SCT) for any plasma cell dyscrasia, with the exception of emergency use of a short course (equivalent of dexamethasone 40 mg/day for a maximum 4 days) of corticosteroids before treatment.</li><li>Peripheral neuropathy or neuropathic pain Grade 2 or higher, as defined by the National Cancer Institute-Common Terminology Criteria for Adverse Events (NCI-CTCAE) Version 5.</li><li>Prior or concurrent invasive malignancy (other than multiple myeloma) within 5 years of date of randomization (exceptions are adequately treated basal cell or squamous cell carcinoma of the skin, carcinoma in situ of the cervix or breast, or other non-invasive lesion that in the opinion of the investigator, with concurrence with the sponsor&#39;s medical monitor, is considered cured with minimal risk of recurrence within 3 years).</li><li>Radiation therapy within 14 days of randomization.</li><li>Plasmapheresis within 28 days of randomization.</li><li>Clinical signs of meningeal involvement of multiple myeloma.</li><li>Chronic obstructive pulmonary disease (COPD) with a Forced Expiratory Volume in 1 second (FEV1) \&lt;50% of predicted normal (for subjects ≥65 years old FEV1 \&lt;50% or diffusing capacity of the lungs for carbon monoxide \[DLCO\] \&lt;50%)</li><li>Moderate or severe persistent asthma within the past 2 years, or currently has uncontrolled asthma of any classification. (Note that subjects who currently have controlled intermittent asthma or controlled mild persistent asthma are allowed in the study).</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03710603" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03710603" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03710603" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03710603)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/03/NCT03710603/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/03/NCT03710603/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT03710603?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41060326/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41060326)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03710603" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Monoclonal Antibodies</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03710603","acronym":"Perseus","briefTitle":"Daratumumab, VELCADE (Bortezomib), Lenalidomide and Dexamethasone Compared to VELCADE, Lenalidomide and Dexamethasone in Subjects With Previously Untreated Multiple Myeloma","officialTitle":"A Phase 3 Study Comparing Daratumumab, VELCADE (Bortezomib), Lenalidomide, and Dexamethasone (D-VRd) vs VELCADE, Lenalidomide, and Dexamethasone (VRd) in Subjects With Previously Untreated Multiple Myeloma Who Are Eligible for High-dose Therapy","sponsor":"Stichting European Myeloma Network","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Targeted Monoclonal Antibodies","conditions":["Multiple Myeloma"],"interventions":["Daratumumab","Velcade","Lenalidomide","dexamethasone"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"PFS was defined as duration from date of randomization to either progressive disease (PD)/death whichever occurred first. PD was defined as meeting any one of the following criteria: Increase of \\>= 25 % in level of serum M-protein form lowest response value and absolute increase must be \\>= 0.5 g/dL; Increase of \\>=25% in 24-hour urinary light chain excretion (urine M-protein) from lowest response value and absolute increase must be \\>=200 mg/24 hours; Only in participants without measurable serum and urine M-protein levels; increase of \\>=25% in difference between involved and uninvolved FLC levels from lowest response value and absolute increase must be \\> 10 mg/dL; Definite increase in size of existing bone lesions or soft tissue plasmacytomas; Definite development of new bone lesions or soft tissue plasmacytomas; Development of hypercalcemia (corrected serum calcium \\>11.5 mg/dL) that can be attributed solely to PC proliferative disorder.","timeFrame":"From the date of randomization to either progressive disease or death whichever occurred first, up to a maximum follow-up time of 54.41 months."}],"completionDate":"2029-11","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03710603","acronym":"Perseus","briefTitle":"Daratumumab, VELCADE (Bortezomib), Lenalidomide and Dexamethasone Compared to VELCADE, Lenalidomide and Dexamethasone in Subjects With Previously Untreated Multiple Myeloma","officialTitle":"A Phase 3 Study Comparing Daratumumab, VELCADE (Bortezomib), Lenalidomide, and Dexamethasone (D-VRd) vs VELCADE, Lenalidomide, and Dexamethasone (VRd) in Subjects With Previously Untreated Multiple Myeloma Who Are Eligible for High-dose Therapy","sponsor":"Stichting European Myeloma Network","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"TKI / Small Molecule","conditions":["Multiple Myeloma"],"interventions":["Daratumumab","Velcade","Lenalidomide","dexamethasone"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"PFS was defined as duration from date of randomization to either progressive disease (PD)/death whichever occurred first. PD was defined as meeting any one of the following criteria: Increase of \\>= 25 % in level of serum M-protein form lowest response value and absolute increase must be \\>= 0.5 g/dL; Increase of \\>=25% in 24-hour urinary light chain excretion (urine M-protein) from lowest response value and absolute increase must be \\>=200 mg/24 hours; Only in participants without measurable serum and urine M-protein levels; increase of \\>=25% in difference between involved and uninvolved FLC levels from lowest response value and absolute increase must be \\> 10 mg/dL; Definite increase in size of existing bone lesions or soft tissue plasmacytomas; Definite development of new bone lesions or soft tissue plasmacytomas; Development of hypercalcemia (corrected serum calcium \\>11.5 mg/dL) that can be attributed solely to PC proliferative disorder.","timeFrame":"From the date of randomization to either progressive disease or death whichever occurred first, up to a maximum follow-up time of 54.41 months."}],"completionDate":"2029-11","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Perseus. Daratumumab, VELCADE (Bortezomib), Lenalidomide and Dexamethasone Compared to VELCADE, Lenalidomide and Dexamethasone in Subjects With Previously Untreated Multiple Myeloma. ClinicalTrials.gov Identifier: NCT03710603. Primary Sponsor: Stichting European Myeloma Network. Available at: https://clinsight.pract.eu/trials/NCT03710603/";

@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT01476787 RELEVANCE — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Monoclonal Antibodies · Sponsor: Celgene">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: Celgene">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT01476787/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"RELEVANCE (NCT01476787): Combined Rituximab and Lenalidomide Treatment for Untreated Patients With Follicular Lymphoma","url":"https://clinsight.pract.eu/trials/NCT01476787/","studySubject":{"@type":"MedicalCondition","name":"Follicular Lymphoma"},"sponsor":"Celgene","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"RELEVANCE (NCT01476787)","item":"https://clinsight.pract.eu/trials/NCT01476787/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01476787 (RELEVANCE)?","acceptedAnswer":{"@type":"Answer","text":"NCT01476787 is a Phase 3 study sponsored by Celgene evaluating Targeted Monoclonal Antibodies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01476787?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01476787."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"RELEVANCE (NCT01476787): Combined Rituximab and Lenalidomide Treatment for Untreated Patients With Follicular Lymphoma","url":"https://clinsight.pract.eu/trials/NCT01476787/","studySubject":{"@type":"MedicalCondition","name":"Follicular Lymphoma"},"sponsor":"Celgene","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"RELEVANCE (NCT01476787)","item":"https://clinsight.pract.eu/trials/NCT01476787/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01476787 (RELEVANCE)?","acceptedAnswer":{"@type":"Answer","text":"NCT01476787 is a Phase 3 study sponsored by Celgene evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01476787?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01476787."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,35 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT01476787</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Monoclonal Antibodies</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>RELEVANCE: Combined Rituximab and Lenalidomide Treatment for Untreated Patients With Follicular Lymphoma</h1>
         <p class="lead">A Phase 3 Open-Label Randomized Study to Compare the Efficacy and Safety of Rituximab Plus Lenalidomide (CC-5013) Versus Rituximab Plus Chemotherapy in Subjects With Previously Untreated Follicular Lymphoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/87/NCT01476787/Prot_SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            
+            <a href="https://clinicaltrials.gov/study/NCT01476787?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41915772/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41915772)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41915772 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Rituximab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Rituximab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +665,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Follicular Lymphoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Histologically confirmed follicular lymphoma grade 1, 2 or 3a, Stage II-IV</li><li>Have no prior systemic treatment for lymphoma</li><li>Symptomatic follicular lymphoma requiring treatment.</li><li>Age ≥18 years</li><li>Eastern Cooperative oncology group performance status 0-2</li><li>Willing to follow pregnancy precautions</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Clinical evidence of transformed lymphoma or Grade 3b follicular lymphoma.</li><li>Major surgery (excluding lymph node biopsy) within 28 days prior to signing informed consent.</li><li>Known seropositive for or active viral infection with hepatitis B virus (HBV), hepatitis C virus (HCV), human immunodeficiency virus (HIV)</li><li>Known sensitivity or allergy to murine products.</li><li>Presence or history of central nervous system involvement by lymphoma</li><li>At high risk for a venous thromboembolic event (VTE) and not willing to take VTE prophylaxis</li><li>Any of the following laboratory abnormalities:</li><li>serum aspartate transaminase or alanine transaminase \&gt; 3x upper limit of normal (ULN), except in patients with documented liver involvement by lymphoma</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +691,21 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT01476787" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT01476787" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT01476787" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT01476787)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/87/NCT01476787/Prot_SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                
+                <a href="https://clinicaltrials.gov/study/NCT01476787?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41915772/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41915772)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT01476787" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +716,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Monoclonal Antibodies</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +766,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT01476787","acronym":"RELEVANCE","briefTitle":"Combined Rituximab and Lenalidomide Treatment for Untreated Patients With Follicular Lymphoma","officialTitle":"A Phase 3 Open-Label Randomized Study to Compare the Efficacy and Safety of Rituximab Plus Lenalidomide (CC-5013) Versus Rituximab Plus Chemotherapy in Subjects With Previously Untreated Follicular Lymphoma","sponsor":"Celgene","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Monoclonal Antibodies","conditions":["Follicular Lymphoma"],"interventions":["Rituximab","Lenalidomide","Rituximab-CHOP","Rituximab-CVP","Rituximab-Bendamustine"],"primaryOutcomes":[{"measure":"Complete Response Rate (CR/CRu) at 120 Weeks by Independent Central Review","description":"The Complete Response Rate (CR/CRu) is the percentage of participants who achieve complete response (CR/CRu) at 120 weeks as assessed per Independent Central Review.\n\n* Complete Response (CR): Disappearance of all evidence of disease.\n* Complete Response Unconfirmed (CRu): Disappearance of all disease with the exception of residual lymph nodes that are 1.5 cm or less in greatest transverse diameter and/or indeterminate bone marrow findings.","timeFrame":"At 120 weeks"},{"measure":"Progression-free Survival (PFS)","description":"Progression-free survival (PFS) is defined as the time from randomization into the study to the first observation of documented disease progression or death due to any cause.\n\nProgressive Disease (PD) is characterized by any of the following:\n\n* An increase of at least 50% in the sum of the products of the greatest diameters (SPD) of any previously identified abnormal lymph node(s) or other disease sites.\n* The appearance of any new lesion during or after treatment.\n* An increase of at least 50% in the longest diameter of a previously identified node that was 1 cm or more in its short axis.\n* An increase of at least 50% in the size of other lesions (e.g., splenomegaly, hepatomegaly).\n\nBased on Kaplan-Meier estimates.","timeFrame":"From randomization into the study to the first observation of documented disease progression or death due to any cause (up to approximately 140 months)."}],"completionDate":"2024-04-30","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT01476787","acronym":"RELEVANCE","briefTitle":"Combined Rituximab and Lenalidomide Treatment for Untreated Patients With Follicular Lymphoma","officialTitle":"A Phase 3 Open-Label Randomized Study to Compare the Efficacy and Safety of Rituximab Plus Lenalidomide (CC-5013) Versus Rituximab Plus Chemotherapy in Subjects With Previously Untreated Follicular Lymphoma","sponsor":"Celgene","phase":"Phase 3","status":"COMPLETED","modality":"TKI / Small Molecule","conditions":["Follicular Lymphoma"],"interventions":["Rituximab","Lenalidomide","Rituximab-CHOP","Rituximab-CVP","Rituximab-Bendamustine"],"primaryOutcomes":[{"measure":"Complete Response Rate (CR/CRu) at 120 Weeks by Independent Central Review","description":"The Complete Response Rate (CR/CRu) is the percentage of participants who achieve complete response (CR/CRu) at 120 weeks as assessed per Independent Central Review.\n\n* Complete Response (CR): Disappearance of all evidence of disease.\n* Complete Response Unconfirmed (CRu): Disappearance of all disease with the exception of residual lymph nodes that are 1.5 cm or less in greatest transverse diameter and/or indeterminate bone marrow findings.","timeFrame":"At 120 weeks"},{"measure":"Progression-free Survival (PFS)","description":"Progression-free survival (PFS) is defined as the time from randomization into the study to the first observation of documented disease progression or death due to any cause.\n\nProgressive Disease (PD) is characterized by any of the following:\n\n* An increase of at least 50% in the sum of the products of the greatest diameters (SPD) of any previously identified abnormal lymph node(s) or other disease sites.\n* The appearance of any new lesion during or after treatment.\n* An increase of at least 50% in the longest diameter of a previously identified node that was 1 cm or more in its short axis.\n* An increase of at least 50% in the size of other lesions (e.g., splenomegaly, hepatomegaly).\n\nBased on Kaplan-Meier estimates.","timeFrame":"From randomization into the study to the first observation of documented disease progression or death due to any cause (up to approximately 140 months)."}],"completionDate":"2024-04-30","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "RELEVANCE. Combined Rituximab and Lenalidomide Treatment for Untreated Patients With Follicular Lymphoma. ClinicalTrials.gov Identifier: NCT01476787. Primary Sponsor: Celgene. Available at: https://clinsight.pract.eu/trials/NCT01476787/";

@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT06624644 NCT06624644 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2, Phase 3 · Modality: Immuno-Oncology (Checkpoint Inhibitor) · Sponsor: Linnaeus Therapeutics, Inc.">
+    <meta property="og:description" content="Phase: Phase 2, Phase 3 · Modality: Checkpoint · Sponsor: Linnaeus Therapeutics, Inc.">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT06624644/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06624644 (NCT06624644): A Trial of LNS8801 With or Without Pembrolizumab in Patients With Refractory Melanoma","url":"https://clinsight.pract.eu/trials/NCT06624644/","studySubject":{"@type":"MedicalCondition","name":"Melanoma (Skin Cancer)"},"sponsor":"Linnaeus Therapeutics, Inc.","status":"RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT06624644 (NCT06624644)","item":"https://clinsight.pract.eu/trials/NCT06624644/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06624644 (NCT06624644)?","acceptedAnswer":{"@type":"Answer","text":"NCT06624644 is a Phase 2, Phase 3 study sponsored by Linnaeus Therapeutics, Inc. evaluating Immuno-Oncology (Checkpoint Inhibitor) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06624644?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06624644."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06624644 (NCT06624644): A Trial of LNS8801 With or Without Pembrolizumab in Patients With Refractory Melanoma","url":"https://clinsight.pract.eu/trials/NCT06624644/","studySubject":{"@type":"MedicalCondition","name":"Melanoma (Skin Cancer)"},"sponsor":"Linnaeus Therapeutics, Inc.","status":"RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT06624644 (NCT06624644)","item":"https://clinsight.pract.eu/trials/NCT06624644/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06624644 (NCT06624644)?","acceptedAnswer":{"@type":"Answer","text":"NCT06624644 is a Phase 2, Phase 3 study sponsored by Linnaeus Therapeutics, Inc. evaluating Checkpoint in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06624644?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06624644."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT06624644</span>
             <span class="badge phase">Phase 2, Phase 3</span>
             <span class="badge status ">RECRUITING</span>
-            <span class="badge modality">Immuno-Oncology (Checkpoint Inhibitor)</span>
+            <span class="badge modality">Checkpoint</span>
+            
         </div>
 
         <h1>A Trial of LNS8801 With or Without Pembrolizumab in Patients With Refractory Melanoma</h1>
         <p class="lead">A Multicenter, Open-Label, Randomized, Controlled Study to Assess the Antitumor Activity of LNS8801 With and Without Pembrolizumab in Patients With Treatment-Refractory, Unresectable Melanoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=LNS8801" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (LNS8801) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Melanoma (Skin Cancer), Melanoma Stage IIIB-IV, Cutaneous Melanoma, Unresectable Melanoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Confirmed unresectable and/or metastatic cutaneous melanoma.</li><li>2 copies of the fully functional form of GPER protein-coding sequence.</li><li>Eligible for and willing to receive 1 or more of the physician&#39;s choice (PC) therapies.</li><li>Able to swallow tablets.</li><li>Progressed on treatment with an anti-PD-1 monoclonal antibody (mAb) administered either as monotherapy or in combination with other therapies.</li><li>Received an anti-CTLA-4 and/or BRAF containing regimen or is not eligible for or has declined anti-CTLA-4 and/or BRAF therapy prior to and for this study.</li><li>Measurable disease.</li><li>Eastern Cooperative Oncology Group Performance Status of 0 to 1.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Blue nevus subtype, mucosal, acral lentiginous, or uveal/ocular/choroidal Melanoma.</li><li>Previous anti-cancer or investigational drug/device treatment within 4 weeks of the first dose of study drug.</li><li>Radiotherapy within 2 weeks of starting study drug.</li><li>Allogeneic tissue/solid organ transplant.</li><li>Unstable autoimmune or immunodeficiency disease.</li><li>Other concurrent health issues that would make participation or completion of the study difficult.</li><li>Prior reaction to anti PD-1 therapy that would make treatment with pembrolizumab unadvisable.</li><li>Other protocol-defined inclusion/exclusion criteria may apply.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT06624644" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT06624644" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT06624644" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT06624644)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Immuno-Oncology (Checkpoint Inhibitor)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Checkpoint</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT06624644","acronym":null,"briefTitle":"A Trial of LNS8801 With or Without Pembrolizumab in Patients With Refractory Melanoma","officialTitle":"A Multicenter, Open-Label, Randomized, Controlled Study to Assess the Antitumor Activity of LNS8801 With and Without Pembrolizumab in Patients With Treatment-Refractory, Unresectable Melanoma","sponsor":"Linnaeus Therapeutics, Inc.","phase":"Phase 2, Phase 3","status":"RECRUITING","modality":"Immuno-Oncology (Checkpoint Inhibitor)","conditions":["Melanoma (Skin Cancer)","Melanoma Stage IIIB-IV","Cutaneous Melanoma","Unresectable Melanoma"],"interventions":["LNS8801","Pembrolizumab","Chemotherapy (dacarbazine or temozolomide)","Immunotherapy (Pembrolizumab)","Immunotherapy (nivolumab and relatlimab)","Immunotherapy (ipilimumab and nivolumab)"],"primaryOutcomes":[{"measure":"Compare progression-free survival (PFS) of LNS8801 + pembrolizumab vs PC arms as assessed by RECIST v1.1.","description":"Compare PFS between each of the 3 arms","timeFrame":"up to 2 years."}],"completionDate":"2031-02","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT06624644","acronym":null,"briefTitle":"A Trial of LNS8801 With or Without Pembrolizumab in Patients With Refractory Melanoma","officialTitle":"A Multicenter, Open-Label, Randomized, Controlled Study to Assess the Antitumor Activity of LNS8801 With and Without Pembrolizumab in Patients With Treatment-Refractory, Unresectable Melanoma","sponsor":"Linnaeus Therapeutics, Inc.","phase":"Phase 2, Phase 3","status":"RECRUITING","modality":"Checkpoint","conditions":["Melanoma (Skin Cancer)","Melanoma Stage IIIB-IV","Cutaneous Melanoma","Unresectable Melanoma"],"interventions":["LNS8801","Pembrolizumab","Chemotherapy (dacarbazine or temozolomide)","Immunotherapy (Pembrolizumab)","Immunotherapy (nivolumab and relatlimab)","Immunotherapy (ipilimumab and nivolumab)"],"primaryOutcomes":[{"measure":"Compare progression-free survival (PFS) of LNS8801 + pembrolizumab vs PC arms as assessed by RECIST v1.1.","description":"Compare PFS between each of the 3 arms","timeFrame":"up to 2 years."}],"completionDate":"2031-02","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "A Trial of LNS8801 With or Without Pembrolizumab in Patients With Refractory Melanoma. ClinicalTrials.gov Identifier: NCT06624644. Primary Sponsor: Linnaeus Therapeutics, Inc.. Available at: https://clinsight.pract.eu/trials/NCT06624644/";

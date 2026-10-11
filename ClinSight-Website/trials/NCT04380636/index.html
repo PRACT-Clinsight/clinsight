@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04380636 NCT04380636 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Immuno-Oncology (Checkpoint Inhibitor) · Sponsor: Merck Sharp &amp; Dohme LLC">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Checkpoint · Sponsor: Merck Sharp &amp; Dohme LLC">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04380636/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04380636 (NCT04380636): Study of Pembrolizumab With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib in Stage III Non-Small Cell Lung Cancer (NSCLC) (MK-7339-012/KEYLYNK-012)","url":"https://clinsight.pract.eu/trials/NCT04380636/","studySubject":{"@type":"MedicalCondition","name":"Lung Neoplasms"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04380636 (NCT04380636)","item":"https://clinsight.pract.eu/trials/NCT04380636/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04380636 (NCT04380636)?","acceptedAnswer":{"@type":"Answer","text":"NCT04380636 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Immuno-Oncology (Checkpoint Inhibitor) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04380636?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04380636."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04380636 (NCT04380636): Study of Pembrolizumab With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib in Stage III Non-Small Cell Lung Cancer (NSCLC) (MK-7339-012/KEYLYNK-012)","url":"https://clinsight.pract.eu/trials/NCT04380636/","studySubject":{"@type":"MedicalCondition","name":"Lung Neoplasms"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04380636 (NCT04380636)","item":"https://clinsight.pract.eu/trials/NCT04380636/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04380636 (NCT04380636)?","acceptedAnswer":{"@type":"Answer","text":"NCT04380636 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Checkpoint in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04380636?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04380636."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04380636</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Immuno-Oncology (Checkpoint Inhibitor)</span>
+            <span class="badge modality">Checkpoint</span>
+            
         </div>
 
         <h1>Study of Pembrolizumab With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib in Stage III Non-Small Cell Lung Cancer (NSCLC) (MK-7339-012/KEYLYNK-012)</h1>
         <p class="lead">A Phase 3 Study of Pembrolizumab (MK-3475) in Combination With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib vs Concurrent Chemoradiation Therapy Followed by Durvalumab in Participants With Unresectable, Locally Advanced, Stage III Non-Small Cell Lung Cancer (NSCLC)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/35618629/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 35618629)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 35618629 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Pembrolizumab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Pembrolizumab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Lung Neoplasms, Carcinoma, Non-Small-Cell Lung</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Has pathologically (histologically or cytologically) confirmed diagnosis of NSCLC</li><li>Has Stage IIIA, IIIB, or IIIC NSCLC by American Joint Committee on Cancer Version 8</li><li>Is unable to undergo surgery with curative intent for Stage III NSCLC</li><li>Has no evidence of metastatic disease indicating Stage IV NSCLC</li><li>Has measurable disease as defined by RECIST 1.1</li><li>Has not received prior treatment (chemotherapy, targeted therapy or radiotherapy) for Stage III NSCLC; participants who have received neoadjuvant and/or adjuvant therapy for early stage disease are not eligible</li><li>Has provided a tumor tissue sample (tissue biopsy \[core, incisional, or excisional\])</li><li>Has an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1 assessed within 7 days prior to the first administration of study intervention</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Has small cell lung cancer or a mixed tumor with presence of small cell elements</li><li>Has myelodysplastic syndrome (MDS)/acute myeloid leukemia (AML) or has features suggestive of MDS/AML</li><li>Has had documented weight loss \&gt;10% (from baseline) in the preceding 3 months</li><li>Has received prior radiotherapy to the thorax, including radiotherapy to the esophagus, mediastinum, or for breast cancer</li><li>Has received prior therapy with an anti-programmed cell death 1 (ant-PD-1), anti-programmed cell death ligand 1 (anti-PD-L1), or anti- programmed cell death ligand 2 (anti-PD-L2) agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor</li><li>Has received prior therapy with olaparib or with any other polyadenosine 5&#39;diphosphoribose (polyADP ribose) polymerization (PARP) inhibitor</li><li>Has had major surgery \&lt;4 weeks prior to the first dose of study treatment (except for placement of vascular access)</li><li>Is expected to require any other form of antineoplastic therapy, while on study</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04380636" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04380636" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04380636" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04380636)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/35618629/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 35618629)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT04380636" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Immuno-Oncology (Checkpoint Inhibitor)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Checkpoint</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04380636","acronym":null,"briefTitle":"Study of Pembrolizumab With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib in Stage III Non-Small Cell Lung Cancer (NSCLC) (MK-7339-012/KEYLYNK-012)","officialTitle":"A Phase 3 Study of Pembrolizumab (MK-3475) in Combination With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib vs Concurrent Chemoradiation Therapy Followed by Durvalumab in Participants With Unresectable, Locally Advanced, Stage III Non-Small Cell Lung Cancer (NSCLC)","sponsor":"Merck Sharp & Dohme LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Immuno-Oncology (Checkpoint Inhibitor)","conditions":["Lung Neoplasms","Carcinoma, Non-Small-Cell Lung"],"interventions":["Pembrolizumab","Olaparib","Placebo for olaparib","Etoposide","Carboplatin","Cisplatin","Paclitaxel","Pemetrexed","Thoracic Radiotherapy","Durvalumab"],"primaryOutcomes":[{"measure":"Progression-Free Survival (PFS) According to Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Review (BICR)","description":"PFS is defined as the time from randomization to the first documented disease progression or death due to any cause, whichever occurs first.","timeFrame":"Up to approximately 48 months"},{"measure":"Overall Survival (OS)","description":"OS is the time from randomization to death due to any cause.","timeFrame":"Up to approximately 72 months"}],"completionDate":"2029-07-06","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04380636","acronym":null,"briefTitle":"Study of Pembrolizumab With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib in Stage III Non-Small Cell Lung Cancer (NSCLC) (MK-7339-012/KEYLYNK-012)","officialTitle":"A Phase 3 Study of Pembrolizumab (MK-3475) in Combination With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib vs Concurrent Chemoradiation Therapy Followed by Durvalumab in Participants With Unresectable, Locally Advanced, Stage III Non-Small Cell Lung Cancer (NSCLC)","sponsor":"Merck Sharp & Dohme LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Checkpoint","conditions":["Lung Neoplasms","Carcinoma, Non-Small-Cell Lung"],"interventions":["Pembrolizumab","Olaparib","Placebo for olaparib","Etoposide","Carboplatin","Cisplatin","Paclitaxel","Pemetrexed","Thoracic Radiotherapy","Durvalumab"],"primaryOutcomes":[{"measure":"Progression-Free Survival (PFS) According to Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Review (BICR)","description":"PFS is defined as the time from randomization to the first documented disease progression or death due to any cause, whichever occurs first.","timeFrame":"Up to approximately 48 months"},{"measure":"Overall Survival (OS)","description":"OS is the time from randomization to death due to any cause.","timeFrame":"Up to approximately 72 months"}],"completionDate":"2029-07-06","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Study of Pembrolizumab With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib in Stage III Non-Small Cell Lung Cancer (NSCLC) (MK-7339-012/KEYLYNK-012). ClinicalTrials.gov Identifier: NCT04380636. Primary Sponsor: Merck Sharp &amp;amp; Dohme LLC. Available at: https://clinsight.pract.eu/trials/NCT04380636/";

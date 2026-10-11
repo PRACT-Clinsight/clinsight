@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT02445248 JULIET — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2 · Modality: Cell &amp; Gene Therapy (CAR-T) · Sponsor: Novartis Pharmaceuticals">
+    <meta property="og:description" content="Phase: Phase 2 · Modality: CAR-T · Sponsor: Novartis Pharmaceuticals">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT02445248/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"JULIET (NCT02445248): Study of Efficacy and Safety of CTL019 in Adult DLBCL Patients","url":"https://clinsight.pract.eu/trials/NCT02445248/","studySubject":{"@type":"MedicalCondition","name":"Diffuse Large B-cell Lymphoma (DLBCL)"},"sponsor":"Novartis Pharmaceuticals","status":"COMPLETED","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"JULIET (NCT02445248)","item":"https://clinsight.pract.eu/trials/NCT02445248/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02445248 (JULIET)?","acceptedAnswer":{"@type":"Answer","text":"NCT02445248 is a Phase 2 study sponsored by Novartis Pharmaceuticals evaluating Cell &amp; Gene Therapy (CAR-T) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02445248?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02445248."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"JULIET (NCT02445248): Study of Efficacy and Safety of CTL019 in Adult DLBCL Patients","url":"https://clinsight.pract.eu/trials/NCT02445248/","studySubject":{"@type":"MedicalCondition","name":"Diffuse Large B-cell Lymphoma (DLBCL)"},"sponsor":"Novartis Pharmaceuticals","status":"COMPLETED","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"JULIET (NCT02445248)","item":"https://clinsight.pract.eu/trials/NCT02445248/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02445248 (JULIET)?","acceptedAnswer":{"@type":"Answer","text":"NCT02445248 is a Phase 2 study sponsored by Novartis Pharmaceuticals evaluating CAR-T in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02445248?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02445248."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT02445248</span>
             <span class="badge phase">Phase 2</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Cell &amp; Gene Therapy (CAR-T)</span>
+            <span class="badge modality">CAR-T</span>
+            
         </div>
 
         <h1>JULIET: Study of Efficacy and Safety of CTL019 in Adult DLBCL Patients</h1>
         <p class="lead">A Phase II, Single Arm, Multicenter Trial to Determine the Efficacy and Safety of CTL019 in Adult Patients With Relapsed or Refractory Diffuse Large B-cell Lymphoma (DLBCL)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/48/NCT02445248/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/48/NCT02445248/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT02445248?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41252666/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41252666)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41252666 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Tisagenlecleucel" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Tisagenlecleucel) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Diffuse Large B-cell Lymphoma (DLBCL)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Written informed consent must be obtained prior to any screening procedures</li><li>Histologically confirmed DLBCL at last relapse(by central pathology review before enrolment.<br><br>  .- Relapsed or refractory disease after ≥2 lines of chemotherapy including rituximab and anthracycline and either having failed autologous Hematopoietic stem cell transplantation (ASCT), or being ineligible for or not consenting to ASCT</li><li>Measurable disease at time of enrollment</li><li>Life expectancy ≥12 weeks</li><li>Eastern Cooperative Oncology Group (ECOG) performance status that is either 0 or 1 at screening</li><li>Adequate organ function:<br><br>  * Renal function defined as:<br><br>    * A serum creatinine of ≤1.5 x Upper Limit of Normal ULN OR<br>    * Estimated Glomerular Filtration Rate (eGFR) ≥ 60 mL/min/1.73 m\^2<br>  * Liver function defined as:<br><br>    * Alanine Aminotransferase (ALT) ≤ 5 times the Upper Limit of Normal (ULN) for age<br>    * Bilirubin ≤ 2.0 mg/dl with the exception of patients with Gilbert-Meulengracht syndrome; patients with Gilbert-Meulengracht syndrome may be included if their total bilirubin is ≤ 3.0 x ULN and direct bilirubin ≤ 1.5 x ULN<br>  * Must have a minimum level of pulmonary reserve defined as ≤ Grade 1 dyspnea and pulse oxygenation \&gt; 91% on room air<br>  * Hemodynamically stable and Left Ventricle Ejection Fraction (LVEF) ≥ 45% confirmed by echocardiogram or Multigated Radionuclide Angiography (MUGA)<br>  * Adequate bone marrow reserve without transfusions defined as:<br><br>    * Absolute neutrophil count (ANC) \&gt; 1.000/mm\^3<br>    * Absolute lymphocyte count (ALC) ≥ 300/mm\^3 and absolute number of CD3+ T cells \&gt; 150/mm\^3<br>    * Platelets ≥ 50.000//mm\^3<br>    * Hemoglobin \&gt; 8.0 g/dl<br>  * Must have an apheresis product of non-mobilized cells accepted for manufacturing<br>  * Women of child-bearing potential (defined as all women physiologically capable of becoming pregnant) and all male participants must agree to use highly effective methods of contraception for at least 12 months following CTL019 infusion and until CAR T cells are no longer present by PCR on two consecutive tests</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Prior treatment with any prior anti-CD19/anti-CD3 therapy, or any other anti-CD19 therapy</li><li>Treatment with any prior gene therapy product</li><li>Active Central Nervous System (CNS) involvement by malignancy</li><li>Prior allogeneic HSCT</li><li>Eligible for and consenting to HSCT</li><li>Chemotherapy other than lymphodepleting chemotherapy within 2 weeks of infusion</li><li>Investigational medicinal product within the last 30 days prior to screening</li><li>The following medications are excluded:<br><br>  * Steroids: Therapeutic doses of steroids must be stopped \&gt;72 hours prior to leukapheresis and \&gt;72 hours prior to CTL019 infusion. However, the following physiological replacement doses of steroids are allowed: \&lt; 12 mg/m\^2/day hydrocortisone or equivalent<br>  * Immunosuppression: Any other immunosuppressive medication must be stopped ≥2 weeks prior to leukapheresis and ≥ 2 weeks prior to CTL019 infusion. This could include check point inhibitors (monoclonal antibodies and small molecule modulators)<br>  * Antiproliferative therapies other than lymphodepleting chemotherapy within two weeks of leukapheresis and 2 weeks prior to infusion</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT02445248" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT02445248" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT02445248" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT02445248)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/48/NCT02445248/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/48/NCT02445248/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT02445248?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41252666/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41252666)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT02445248" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Cell &amp; Gene Therapy (CAR-T)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in CAR-T</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT02445248","acronym":"JULIET","briefTitle":"Study of Efficacy and Safety of CTL019 in Adult DLBCL Patients","officialTitle":"A Phase II, Single Arm, Multicenter Trial to Determine the Efficacy and Safety of CTL019 in Adult Patients With Relapsed or Refractory Diffuse Large B-cell Lymphoma (DLBCL)","sponsor":"Novartis Pharmaceuticals","phase":"Phase 2","status":"COMPLETED","modality":"Cell & Gene Therapy (CAR-T)","conditions":["Diffuse Large B-cell Lymphoma (DLBCL)"],"interventions":["Tisagenlecleucel","Lymphodepleting chemotherapy"],"primaryOutcomes":[{"measure":"Overall Response Rate (ORR) Per Independent Review Committee (IRC) in Main Cohort","description":"ORR, which includes complete response (CR) and partial response (PR) in the Main cohort as determined by IRC assessment. ORR is the percentage of participants with a best overall disease response of CR or PR, where the best overall disease response is defined as the best disease response recorded from CTL019 infusion until progressive disease or start of new anticancer therapy (including ASCT), whichever comes first.\n\nResponse was assessed according to Evaluation Criteria in diffuse large B cell lymphoma studies (based on Cheson Response criteria and the Lugano Classification (2014))","timeFrame":"60 months"}],"completionDate":"2022-12-22","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT02445248","acronym":"JULIET","briefTitle":"Study of Efficacy and Safety of CTL019 in Adult DLBCL Patients","officialTitle":"A Phase II, Single Arm, Multicenter Trial to Determine the Efficacy and Safety of CTL019 in Adult Patients With Relapsed or Refractory Diffuse Large B-cell Lymphoma (DLBCL)","sponsor":"Novartis Pharmaceuticals","phase":"Phase 2","status":"COMPLETED","modality":"CAR-T","conditions":["Diffuse Large B-cell Lymphoma (DLBCL)"],"interventions":["Tisagenlecleucel","Lymphodepleting chemotherapy"],"primaryOutcomes":[{"measure":"Overall Response Rate (ORR) Per Independent Review Committee (IRC) in Main Cohort","description":"ORR, which includes complete response (CR) and partial response (PR) in the Main cohort as determined by IRC assessment. ORR is the percentage of participants with a best overall disease response of CR or PR, where the best overall disease response is defined as the best disease response recorded from CTL019 infusion until progressive disease or start of new anticancer therapy (including ASCT), whichever comes first.\n\nResponse was assessed according to Evaluation Criteria in diffuse large B cell lymphoma studies (based on Cheson Response criteria and the Lugano Classification (2014))","timeFrame":"60 months"}],"completionDate":"2022-12-22","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "JULIET. Study of Efficacy and Safety of CTL019 in Adult DLBCL Patients. ClinicalTrials.gov Identifier: NCT02445248. Primary Sponsor: Novartis Pharmaceuticals. Available at: https://clinsight.pract.eu/trials/NCT02445248/";

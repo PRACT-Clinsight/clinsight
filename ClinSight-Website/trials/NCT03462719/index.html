@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03462719 GLOW — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Monoclonal Antibodies · Sponsor: Janssen Research &amp; Development, LLC">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: Janssen Research &amp; Development, LLC">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03462719/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"GLOW (NCT03462719): A Study of the Combination of Ibrutinib Plus Venetoclax Versus Chlorambucil Plus Obinutuzumab for the First-line Treatment of Participants With Chronic Lymphocytic Leukemia (CLL)/Small Lymphocytic Lymphoma (SLL)","url":"https://clinsight.pract.eu/trials/NCT03462719/","studySubject":{"@type":"MedicalCondition","name":"Leukemia, Lymphocytic, Chronic, B-Cell"},"sponsor":"Janssen Research &amp; Development, LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"GLOW (NCT03462719)","item":"https://clinsight.pract.eu/trials/NCT03462719/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03462719 (GLOW)?","acceptedAnswer":{"@type":"Answer","text":"NCT03462719 is a Phase 3 study sponsored by Janssen Research &amp; Development, LLC evaluating Targeted Monoclonal Antibodies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03462719?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03462719."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"GLOW (NCT03462719): A Study of the Combination of Ibrutinib Plus Venetoclax Versus Chlorambucil Plus Obinutuzumab for the First-line Treatment of Participants With Chronic Lymphocytic Leukemia (CLL)/Small Lymphocytic Lymphoma (SLL)","url":"https://clinsight.pract.eu/trials/NCT03462719/","studySubject":{"@type":"MedicalCondition","name":"Leukemia, Lymphocytic, Chronic, B-Cell"},"sponsor":"Janssen Research &amp; Development, LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"GLOW (NCT03462719)","item":"https://clinsight.pract.eu/trials/NCT03462719/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03462719 (GLOW)?","acceptedAnswer":{"@type":"Answer","text":"NCT03462719 is a Phase 3 study sponsored by Janssen Research &amp; Development, LLC evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03462719?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03462719."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03462719</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Targeted Monoclonal Antibodies</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>GLOW: A Study of the Combination of Ibrutinib Plus Venetoclax Versus Chlorambucil Plus Obinutuzumab for the First-line Treatment of Participants With Chronic Lymphocytic Leukemia (CLL)/Small Lymphocytic Lymphoma (SLL)</h1>
         <p class="lead">A Randomized, Open-label, Phase 3 Study of the Combination of Ibrutinib Plus Venetoclax Versus Chlorambucil Plus Obinutuzumab for the First-line Treatment of Subjects With Chronic Lymphocytic Leukemia (CLL)/Small Lymphocytic Lymphoma (SLL).</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/19/NCT03462719/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/19/NCT03462719/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT03462719?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/38319255/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 38319255)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 38319255 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Ibrutinib" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Ibrutinib) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Leukemia, Lymphocytic, Chronic, B-Cell</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Adult participants who are: (a) greater than or equal to (\&gt;=) 65 years old or, (b) 18 to 64 years old and have at least 1 of the following:<br><br>  1. Cumulative Illness Rating Scale (CIRS) score \&gt; 6<br>  2. Creatinine clearance (CrCl) estimated less than (\&lt;) 70 milliliter per minute (mL/min) using Cockcroft-Gault equation</li><li>Diagnosis of chronic lymphocytic leukemia (CLL) or small lymphocytic lymphoma (SLL) that meets International Workshop on Chronic Lymphocytic Leukemia (iwCLL) criteria</li><li>Measurable nodal disease (by computed tomography \[CT\]), defined as at least one lymph node \&gt; 1.5 centimeter (cm) in longest diameter</li><li>Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) Grade less than or equal to (\&lt;=) 2</li><li>Active CLL/SLL requiring treatment per the iwCLL criteria</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Prior anti-leukemic therapy for CLL or SLL</li><li>Presence of deletion of the short arm of chromosome 17 (del17p) or known TP53 mutation detected at a threshold of \&gt;10 percent (%) variable allele frequency (VAF)</li><li>Major surgery within 4 weeks of first dose of study treatment</li><li>Known bleeding disorders (example, von Willebrand&#39;s disease or hemophilia)</li><li>Central nervous system (CNS) involvement or suspected Richter&#39;s syndrome</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03462719" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03462719" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03462719" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03462719)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/19/NCT03462719/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/19/NCT03462719/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT03462719?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/38319255/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 38319255)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03462719" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Monoclonal Antibodies</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03462719","acronym":"GLOW","briefTitle":"A Study of the Combination of Ibrutinib Plus Venetoclax Versus Chlorambucil Plus Obinutuzumab for the First-line Treatment of Participants With Chronic Lymphocytic Leukemia (CLL)/Small Lymphocytic Lymphoma (SLL)","officialTitle":"A Randomized, Open-label, Phase 3 Study of the Combination of Ibrutinib Plus Venetoclax Versus Chlorambucil Plus Obinutuzumab for the First-line Treatment of Subjects With Chronic Lymphocytic Leukemia (CLL)/Small Lymphocytic Lymphoma (SLL).","sponsor":"Janssen Research & Development, LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Targeted Monoclonal Antibodies","conditions":["Leukemia, Lymphocytic, Chronic, B-Cell"],"interventions":["Ibrutinib","Venetoclax","Chlorambucil","Obinutuzumab","Ibrutinib (as Subsequent Therapy)"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"PFS: time between date of randomization and date of disease progression, as assessed by IRC, or date of death due to any cause, whichever occurs first, regardless of use of subsequent anti-cancer therapy prior to PD or death using iWCLL2008 criteria : New enlarged lymph nodes \\>15 mm, new hepatomegaly or splenomegaly, or other organ infiltrates, bone lesion, ascites or pleural effusion due to CLL; \\>=50% increase in longest diameter (LDi) from nadir in existing lymph node (LDi \\>15 mm) or \\>=50% increase from nadir in sum of diameters of multiple nodes (and at least 1 node with LDi \\>15 mm); \\>=50% increase from nadir in enlargement of liver/spleen; \\>=50% increase from baseline in lymphocyte count (ALC; to \\>=5\\*10\\^9/L); or \\>=50% increase from nadir in ALC in \\>=2 serial assessments if ALC is \\>=30000\\*10\\^9/L and lymphocyte doubling time is rapid unless considered treatment-related lymphocytosis; new cytopenia attributable to CLL; transformation to more aggressive histology.","timeFrame":"Up to 2 years 10 months"}],"completionDate":"2029-04-05","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03462719","acronym":"GLOW","briefTitle":"A Study of the Combination of Ibrutinib Plus Venetoclax Versus Chlorambucil Plus Obinutuzumab for the First-line Treatment of Participants With Chronic Lymphocytic Leukemia (CLL)/Small Lymphocytic Lymphoma (SLL)","officialTitle":"A Randomized, Open-label, Phase 3 Study of the Combination of Ibrutinib Plus Venetoclax Versus Chlorambucil Plus Obinutuzumab for the First-line Treatment of Subjects With Chronic Lymphocytic Leukemia (CLL)/Small Lymphocytic Lymphoma (SLL).","sponsor":"Janssen Research & Development, LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"TKI / Small Molecule","conditions":["Leukemia, Lymphocytic, Chronic, B-Cell"],"interventions":["Ibrutinib","Venetoclax","Chlorambucil","Obinutuzumab","Ibrutinib (as Subsequent Therapy)"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"PFS: time between date of randomization and date of disease progression, as assessed by IRC, or date of death due to any cause, whichever occurs first, regardless of use of subsequent anti-cancer therapy prior to PD or death using iWCLL2008 criteria : New enlarged lymph nodes \\>15 mm, new hepatomegaly or splenomegaly, or other organ infiltrates, bone lesion, ascites or pleural effusion due to CLL; \\>=50% increase in longest diameter (LDi) from nadir in existing lymph node (LDi \\>15 mm) or \\>=50% increase from nadir in sum of diameters of multiple nodes (and at least 1 node with LDi \\>15 mm); \\>=50% increase from nadir in enlargement of liver/spleen; \\>=50% increase from baseline in lymphocyte count (ALC; to \\>=5\\*10\\^9/L); or \\>=50% increase from nadir in ALC in \\>=2 serial assessments if ALC is \\>=30000\\*10\\^9/L and lymphocyte doubling time is rapid unless considered treatment-related lymphocytosis; new cytopenia attributable to CLL; transformation to more aggressive histology.","timeFrame":"Up to 2 years 10 months"}],"completionDate":"2029-04-05","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "GLOW. A Study of the Combination of Ibrutinib Plus Venetoclax Versus Chlorambucil Plus Obinutuzumab for the First-line Treatment of Participants With Chronic Lymphocytic Leukemia (CLL)/Small Lymphocytic Lymphoma (SLL). ClinicalTrials.gov Identifier: NCT03462719. Primary Sponsor: Janssen Research &amp;amp; Development, LLC. Available at: https://clinsight.pract.eu/trials/NCT03462719/";

@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT05371093 ZUMA-22 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Cell &amp; Gene Therapy (CAR-T) · Sponsor: Kite, A Gilead Company">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: CAR-T · Sponsor: Kite, A Gilead Company">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT05371093/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ZUMA-22 (NCT05371093): Study of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Follicular Lymphoma","url":"https://clinsight.pract.eu/trials/NCT05371093/","studySubject":{"@type":"MedicalCondition","name":"Relapsed/Refractory Follicular Lymphoma"},"sponsor":"Kite, A Gilead Company","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ZUMA-22 (NCT05371093)","item":"https://clinsight.pract.eu/trials/NCT05371093/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05371093 (ZUMA-22)?","acceptedAnswer":{"@type":"Answer","text":"NCT05371093 is a Phase 3 study sponsored by Kite, A Gilead Company evaluating Cell &amp; Gene Therapy (CAR-T) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05371093?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05371093."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ZUMA-22 (NCT05371093): Study of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Follicular Lymphoma","url":"https://clinsight.pract.eu/trials/NCT05371093/","studySubject":{"@type":"MedicalCondition","name":"Relapsed/Refractory Follicular Lymphoma"},"sponsor":"Kite, A Gilead Company","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ZUMA-22 (NCT05371093)","item":"https://clinsight.pract.eu/trials/NCT05371093/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05371093 (ZUMA-22)?","acceptedAnswer":{"@type":"Answer","text":"NCT05371093 is a Phase 3 study sponsored by Kite, A Gilead Company evaluating CAR-T in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05371093?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05371093."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT05371093</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Cell &amp; Gene Therapy (CAR-T)</span>
+            <span class="badge modality">CAR-T</span>
+            
         </div>
 
         <h1>ZUMA-22: Study of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Follicular Lymphoma</h1>
         <p class="lead">A Phase 3 Randomized, Open-Label, Multicenter Study Evaluating the Efficacy of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Subjects With Relapsed/Refractory Follicular Lymphoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Axicabtagene" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Axicabtagene) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Relapsed/Refractory Follicular Lymphoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Histologically-confirmed follicular lymphoma (FL) (Grade 1, 2, or 3a)</li><li>Relapsed/refractory (R/r) disease after first-line chemoimmunotherapy and high-risk disease with relapse or progression within 24 months of the initial course of chemoimmunotherapy (ie, POD24), Or r/r disease after ≥ 2 prior systemic lines of therapy</li><li>Clinical indication for treatment.</li><li>At least 1 measurable lesion per the Lugano Classification {Cheson 2014}</li><li>Adequate renal, hepatic, pulmonary, and cardiac function<br><br>Key</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Presence of large B cell lymphoma or transformed FL</li><li>Small lymphocytic lymphoma</li><li>Lymphoplasmacytic lymphoma</li><li>Full-thickness involvement of the gastric wall by lymphoma</li><li>FL Grade 3b</li><li>Prior CD19-targeted therapy</li><li>Prior CAR therapy or other genetically modified T-cell therapy</li><li>Uncontrolled fungal, bacterial, viral, or other infection</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT05371093" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT05371093" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT05371093" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT05371093)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Cell &amp; Gene Therapy (CAR-T)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in CAR-T</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT05371093","acronym":"ZUMA-22","briefTitle":"Study of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Follicular Lymphoma","officialTitle":"A Phase 3 Randomized, Open-Label, Multicenter Study Evaluating the Efficacy of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Subjects With Relapsed/Refractory Follicular Lymphoma","sponsor":"Kite, A Gilead Company","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Cell & Gene Therapy (CAR-T)","conditions":["Relapsed/Refractory Follicular Lymphoma"],"interventions":["Axicabtagene Ciloleucel","Cyclophosphamide","Fludarabine","Lenalidomide","Rituximab","Doxorubicin","Vincristine","Prednisone","Bendamustine"],"primaryOutcomes":[{"measure":"Progression-free Survival (PFS) as Assessed by Blinded Central Assessment per Lugano Classification","description":"PFS is defined as the time from randomization to disease progression or death due to any cause.","timeFrame":"Up to 5 years"}],"completionDate":"2030-10","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT05371093","acronym":"ZUMA-22","briefTitle":"Study of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Follicular Lymphoma","officialTitle":"A Phase 3 Randomized, Open-Label, Multicenter Study Evaluating the Efficacy of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Subjects With Relapsed/Refractory Follicular Lymphoma","sponsor":"Kite, A Gilead Company","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"CAR-T","conditions":["Relapsed/Refractory Follicular Lymphoma"],"interventions":["Axicabtagene Ciloleucel","Cyclophosphamide","Fludarabine","Lenalidomide","Rituximab","Doxorubicin","Vincristine","Prednisone","Bendamustine"],"primaryOutcomes":[{"measure":"Progression-free Survival (PFS) as Assessed by Blinded Central Assessment per Lugano Classification","description":"PFS is defined as the time from randomization to disease progression or death due to any cause.","timeFrame":"Up to 5 years"}],"completionDate":"2030-10","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "ZUMA-22. Study of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Follicular Lymphoma. ClinicalTrials.gov Identifier: NCT05371093. Primary Sponsor: Kite, A Gilead Company. Available at: https://clinsight.pract.eu/trials/NCT05371093/";

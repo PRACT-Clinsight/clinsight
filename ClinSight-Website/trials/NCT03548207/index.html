@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03548207 CARTITUDE-1 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Janssen Research &amp; Development, LLC">
+    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Unclassified · Sponsor: Janssen Research &amp; Development, LLC">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03548207/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"CARTITUDE-1 (NCT03548207): A Study of JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against B-Cell Maturation Antigen (BCMA) in Participants With Relapsed or Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT03548207/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Janssen Research &amp; Development, LLC","status":"COMPLETED","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"CARTITUDE-1 (NCT03548207)","item":"https://clinsight.pract.eu/trials/NCT03548207/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03548207 (CARTITUDE-1)?","acceptedAnswer":{"@type":"Answer","text":"NCT03548207 is a Phase 1, Phase 2 study sponsored by Janssen Research &amp; Development, LLC evaluating Targeted Oncology &amp; Systemic Therapy in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03548207?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03548207."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"CARTITUDE-1 (NCT03548207): A Study of JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against B-Cell Maturation Antigen (BCMA) in Participants With Relapsed or Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT03548207/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Janssen Research &amp; Development, LLC","status":"COMPLETED","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"CARTITUDE-1 (NCT03548207)","item":"https://clinsight.pract.eu/trials/NCT03548207/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03548207 (CARTITUDE-1)?","acceptedAnswer":{"@type":"Answer","text":"NCT03548207 is a Phase 1, Phase 2 study sponsored by Janssen Research &amp; Development, LLC evaluating Unclassified in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03548207?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03548207."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03548207</span>
             <span class="badge phase">Phase 1, Phase 2</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>CARTITUDE-1: A Study of JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against B-Cell Maturation Antigen (BCMA) in Participants With Relapsed or Refractory Multiple Myeloma</h1>
         <p class="lead">A Phase 1b-2, Open-Label Study of JNJ-68284528, A Chimeric Antigen Receptor T-Cell (CAR-T) Therapy Directed Against BCMA in Subjects With Relapsed or Refractory Multiple Myeloma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/07/NCT03548207/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/07/NCT03548207/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT03548207?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41627370/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41627370)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41627370 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=JNJ-68284528" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (JNJ-68284528) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Multiple Myeloma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Have documented diagnosis of multiple myeloma according to International Myeloma Working Group (IMWG) diagnostic criteria</li><li>Have measurable disease at Screening as defined by any of the following a) Serum monoclonal paraprotein (M-protein) level more than or equal to (\&gt;=) 1.0 gram per deciliter(g/dL) or urine M-protein level \&gt;=200 milligram per 24 hours (mg/24hr); or b) Light chain multiple myeloma without measurable disease in the serum or the urine: Serum immunoglobulin free light chain 10 mg/dL and abnormal serum immunoglobulin kappa lambda free light chain ratio</li><li>Have received at least 3 prior multiple myeloma treatment lines of therapy or are double refractory to an immunomodulatory drug (IMiD) and proteasome inhibitor (PI) (refractory multiple myeloma as defined by IMWG consensus criteria). Note: induction with or without hematopoietic stem cell transplant and with or without maintenance therapy is considered a single lines of therapy a) Undergone at least 1 complete cycle of treatment for each line of therapy, unless progressive disease (PD) was the best response to the regimen</li><li>Have received as part of previous therapy a PI, an IMiD, and an anti-CD38 antibody</li><li>Participant must have documented evidence of progressive disease based on investigator&#39;s determination of response by the IMWG criteria on or within 12 months of their last line of therapy. Confirmation may be from either central or local testing. Also, participants with documented evidence of progressive disease (as above) within the previous 6 months and who are refractory or non-responsive to their most recent line of therapy afterwards are eligible</li><li>Have Eastern Cooperative Oncology Group (ECOG) Performance Status grade of 0 or 1</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Have received prior treatment with chimeric antigen receptor T (CAR-T) therapy directed at any target</li><li>Have received any therapy that is targeted to B-cell maturation antigen (BCMA)</li><li>Have following cardiac conditions: a) New York Heart Association (NYHA) stage III or IV congestive heart failure b) Myocardial infarction or coronary artery bypass graft (CABG) less than or equal to (\&lt;=) 6 months prior to enrollment c) History of clinically significant ventricular arrhythmia or unexplained syncope, not believed to be vasovagal in nature or due to dehydration d) History of severe non-ischemic cardiomyopathy e) Impaired cardiac function (left ventricular ejection fraction \[LVEF\] less than \[\&lt;\]45%) as assessed by echocardiogram or multiple-gated acquisition (MUGA) scan (performed less than or equal to (\&lt;=) 8 weeks of apheresis)</li><li>Received a cumulative dose of corticosteroids equivalent to \&gt;= 70 mg of prednisone within the 7 days prior to apheresis</li><li>Have received either of the following: a) An allogenic stem cell transplant within 6 months before apheresis. Participants who received an allogeneic transplant must be off all immunosuppressive medications for 6 weeks without signs of graft-versus-host disease (GVHD) b) An autologous stem cell transplant less than or equal to (\&lt;=) 12 weeks before apheresis</li><li>Have known active, or prior history of central nervous system (CNS) involvement or exhibits clinical signs of meningeal involvement of multiple myeloma</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03548207" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03548207" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03548207" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03548207)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/07/NCT03548207/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/07/NCT03548207/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT03548207?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41627370/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41627370)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03548207" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03548207","acronym":"CARTITUDE-1","briefTitle":"A Study of JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against B-Cell Maturation Antigen (BCMA) in Participants With Relapsed or Refractory Multiple Myeloma","officialTitle":"A Phase 1b-2, Open-Label Study of JNJ-68284528, A Chimeric Antigen Receptor T-Cell (CAR-T) Therapy Directed Against BCMA in Subjects With Relapsed or Refractory Multiple Myeloma","sponsor":"Janssen Research & Development, LLC","phase":"Phase 1, Phase 2","status":"COMPLETED","modality":"Targeted Oncology & Systemic Therapy","conditions":["Multiple Myeloma"],"interventions":["JNJ-68284528"],"primaryOutcomes":[{"measure":"Phase 1b: Number of Participants With Adverse Events as Per Severity","description":"An AE was any untoward medical occurrence in a clinical study participant administered a pharmaceutical (investigational or non-investigational) product. An AE does not necessarily have a causal relationship with the intervention. Severity was graded according to the National Cancer Institute Common Terminology Criteria for Adverse Events (NCI-CTCAE) version 5.0. Severity scale ranges from Grade 1 (Mild) to Grade 5 (Death). Grade 1= Mild, Grade 2= Moderate, Grade 3= Severe, Grade 4= Life-threatening and Grade 5= Death related to adverse event.","timeFrame":"Day 1 up to 45.2 months"},{"measure":"Phase 2: Overall Response Rate (ORR)","description":"ORR was defined as the percentage of participants who achieved partial response (PR) or better according to international myeloma working group (IMWG) criteria. IMWG criteria for PR: greater than or equal to (\\>=) 50 percent (%) reduction of serum M-protein and reduction in 24-hour urinary M-protein by \\>=90% or to less than (\\<) 200 milligrams (mg) per 24 hours. If the serum and urine M-protein were not measurable, a decrease of \\>=50% in the difference between involved and uninvolved free light chain (FLC) levels was required in place of the M-protein criteria. If serum and urine M-protein were not measurable, and serum free light assay was also not measurable, \\>=50% reduction in bone marrow plasma cells (PCs) was required in place of M-protein, provided baseline bone marrow PC percentage was \\>=30%. In addition to the above criteria, if present at baseline, a \\>=50% reduction in the size of soft tissue plasmacytomas was also required.","timeFrame":"Day 1 up to 45.2 months"}],"completionDate":"2022-08-23","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03548207","acronym":"CARTITUDE-1","briefTitle":"A Study of JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against B-Cell Maturation Antigen (BCMA) in Participants With Relapsed or Refractory Multiple Myeloma","officialTitle":"A Phase 1b-2, Open-Label Study of JNJ-68284528, A Chimeric Antigen Receptor T-Cell (CAR-T) Therapy Directed Against BCMA in Subjects With Relapsed or Refractory Multiple Myeloma","sponsor":"Janssen Research & Development, LLC","phase":"Phase 1, Phase 2","status":"COMPLETED","modality":"Unclassified","conditions":["Multiple Myeloma"],"interventions":["JNJ-68284528"],"primaryOutcomes":[{"measure":"Phase 1b: Number of Participants With Adverse Events as Per Severity","description":"An AE was any untoward medical occurrence in a clinical study participant administered a pharmaceutical (investigational or non-investigational) product. An AE does not necessarily have a causal relationship with the intervention. Severity was graded according to the National Cancer Institute Common Terminology Criteria for Adverse Events (NCI-CTCAE) version 5.0. Severity scale ranges from Grade 1 (Mild) to Grade 5 (Death). Grade 1= Mild, Grade 2= Moderate, Grade 3= Severe, Grade 4= Life-threatening and Grade 5= Death related to adverse event.","timeFrame":"Day 1 up to 45.2 months"},{"measure":"Phase 2: Overall Response Rate (ORR)","description":"ORR was defined as the percentage of participants who achieved partial response (PR) or better according to international myeloma working group (IMWG) criteria. IMWG criteria for PR: greater than or equal to (\\>=) 50 percent (%) reduction of serum M-protein and reduction in 24-hour urinary M-protein by \\>=90% or to less than (\\<) 200 milligrams (mg) per 24 hours. If the serum and urine M-protein were not measurable, a decrease of \\>=50% in the difference between involved and uninvolved free light chain (FLC) levels was required in place of the M-protein criteria. If serum and urine M-protein were not measurable, and serum free light assay was also not measurable, \\>=50% reduction in bone marrow plasma cells (PCs) was required in place of M-protein, provided baseline bone marrow PC percentage was \\>=30%. In addition to the above criteria, if present at baseline, a \\>=50% reduction in the size of soft tissue plasmacytomas was also required.","timeFrame":"Day 1 up to 45.2 months"}],"completionDate":"2022-08-23","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "CARTITUDE-1. A Study of JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against B-Cell Maturation Antigen (BCMA) in Participants With Relapsed or Refractory Multiple Myeloma. ClinicalTrials.gov Identifier: NCT03548207. Primary Sponsor: Janssen Research &amp;amp; Development, LLC. Available at: https://clinsight.pract.eu/trials/NCT03548207/";

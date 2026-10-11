@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04065399 AUGMENT-101 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Targeted Therapy (Small Molecule / TKI) · Sponsor: Syndax Pharmaceuticals">
+    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Unclassified · Sponsor: Syndax Pharmaceuticals">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04065399/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"AUGMENT-101 (NCT04065399): A Study of Revumenib in R/R Leukemias Including Those With an MLL/KMT2A Gene Rearrangement or NPM1 Mutation","url":"https://clinsight.pract.eu/trials/NCT04065399/","studySubject":{"@type":"MedicalCondition","name":"Acute Myeloid Leukemia"},"sponsor":"Syndax Pharmaceuticals","status":"RECRUITING","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"AUGMENT-101 (NCT04065399)","item":"https://clinsight.pract.eu/trials/NCT04065399/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04065399 (AUGMENT-101)?","acceptedAnswer":{"@type":"Answer","text":"NCT04065399 is a Phase 1, Phase 2 study sponsored by Syndax Pharmaceuticals evaluating Targeted Therapy (Small Molecule / TKI) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04065399?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04065399."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"AUGMENT-101 (NCT04065399): A Study of Revumenib in R/R Leukemias Including Those With an MLL/KMT2A Gene Rearrangement or NPM1 Mutation","url":"https://clinsight.pract.eu/trials/NCT04065399/","studySubject":{"@type":"MedicalCondition","name":"Acute Myeloid Leukemia"},"sponsor":"Syndax Pharmaceuticals","status":"RECRUITING","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"AUGMENT-101 (NCT04065399)","item":"https://clinsight.pract.eu/trials/NCT04065399/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04065399 (AUGMENT-101)?","acceptedAnswer":{"@type":"Answer","text":"NCT04065399 is a Phase 1, Phase 2 study sponsored by Syndax Pharmaceuticals evaluating Unclassified in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04065399?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04065399."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04065399</span>
             <span class="badge phase">Phase 1, Phase 2</span>
             <span class="badge status ">RECRUITING</span>
-            <span class="badge modality">Targeted Therapy (Small Molecule / TKI)</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>AUGMENT-101: A Study of Revumenib in R/R Leukemias Including Those With an MLL/KMT2A Gene Rearrangement or NPM1 Mutation</h1>
         <p class="lead">A Phase 1/2, Open-label, Dose-Escalation and Dose-Expansion Cohort Study of SNDX-5613 in Patients With Relapsed/Refractory Leukemias, Including Those Harboring an MLL/KMT2A Gene Rearrangement or Nucleophosmin 1 (NPM1) Mutation</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41621809/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41621809)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41621809 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=revumenib" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (revumenib) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Acute Myeloid Leukemia, Acute Lymphoblastic Leukemia, Mixed Lineage Acute Leukemia, Mixed Phenotype Acute Leukemia, Acute Leukemia of Ambiguous Lineage</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Key <br><br>Participants must have active acute leukemia (bone marrow blasts ≥5% or reappearance of blasts in peripheral blood) as defined by the National Comprehensive Cancer Network (NCCN) in the NCCN Clinical Practice Guidelines in Oncology (NCCN Guidelines®) for Acute Lymphoblastic Leukemia (Version 1.2020) and Acute Myeloid Leukemia (Version 3.2020), or acute leukemia harboring KMT2A rearrangement, NUP98 rearrangement, or NPM1 mutation that have detectable disease in the bone marrow.</li><li>Phase 1:<br><br>   * Arm A: Participants not receiving any strong CYP3A4 inhibitor/inducers or fluconazole.<br>   * Arm B: Participants receiving itraconazole, ketoconazole, posaconazole, or voriconazole (strong CYP3A4 inhibitors) for antifungal prophylaxis.<br>   * Arm C: Participants receiving revumenib in combination with cobicistat.<br>   * Arm D: Participants receiving fluconazole (moderate CYP3A4 inhibitor).<br>   * Arm E: Participants not receiving any weak, moderate, or strong CYP3A4 inhibitors/inducers.<br>   * Arm F: Participants receiving isavuconazole (moderate CYP3A4 inhibitor) for antifungal prophylaxis.</li><li>Phase 2:<br><br>   Documented R/R active acute leukemia (bone marrow blasts ≥5% or reappearance of blasts in peripheral blood) as defined by the NCCN Guidelines® for Acute Lymphoblastic Leukemia (Version 1.2020) and Acute Myeloid Leukemia (Version 3.2020).<br>   * Cohort 2A: Documented R/R ALL/MPAL with KMT2A rearrangement.<br>   * Cohort 2B: Documented R/R AML with KMT2A rearrangement.<br>   * Cohort 2C: Documented R/R AML with NPM1m.<br>   * Cohort 2D: Documented R/R acute leukemia with a genetic mutation expected to lead to HOX/MEIS upregulation (for example, KMT2Ar, NPM1m, and NUP98r), including participants who are MRD-positive by multiparametric flow cytometry or molecular methods only, and including participants with isolated extramedullary disease.</li><li>White blood cell count below 25,000/ microliter at time of enrollment. Participants may receive cytoreduction prior to enrollment per protocol-specified criteria.</li><li>Male or female participants aged ≥30 days old. Participants intended to receive SNDX-5613 in combination with cobicistat must weigh ≥35 kilograms (kg). Participants in Cohort 2D must be ≥18 years of age and have a body weight ≥40 kg.</li><li>Eastern Cooperative Oncology Group (ECOG) performance status score 0-2 or Karnofsky/Lansky score ≥50.</li><li>Any prior treatment-related toxicities resolved to ≤Grade 1 prior to enrollment, with the exception of ≤Grade 2 neuropathy or alopecia.<br><br>   Phase 1 and Phase 2 Cohorts 2A-2C only:</li><li>Radiation Therapy: At least 60 days from prior total body irradiation (TBI), craniospinal radiation and/or ≥50% radiation of the pelvis, or at least 14 days from local palliative radiation therapy (small port).</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Participants meeting any of the following criteria are not eligible for study participation:</li><li>Diagnosis of active acute promyelocytic leukemia.</li><li>Isolated extramedullary relapse (Phase 2 Cohorts 2A-2C only).</li><li>Active central nervous system disease (cytologic, such as any blasts on cytospin, or radiographic).</li><li>Detectable human immunodeficiency virus (HIV) viral load within the previous 6 months. Participants with a known history of HIV 1/2 antibodies must have viral load testing prior to study enrollment.</li><li>Hepatitis B or C.</li><li>Pregnant or nursing women.</li><li>Cardiac Disease:<br><br>   * Any of the following within the 6 months prior to study entry: myocardial infarction, uncontrolled/unstable angina, congestive heart failure (New York Heart Association Classification Class ≥II), life-threatening, uncontrolled arrhythmia, cerebrovascular accident, or transient ischemic attack.<br>   * Corrected QT interval (QTc) \&gt;450 milliseconds.</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04065399" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04065399" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04065399" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04065399)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41621809/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41621809)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT04065399" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Therapy (Small Molecule / TKI)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04065399","acronym":"AUGMENT-101","briefTitle":"A Study of Revumenib in R/R Leukemias Including Those With an MLL/KMT2A Gene Rearrangement or NPM1 Mutation","officialTitle":"A Phase 1/2, Open-label, Dose-Escalation and Dose-Expansion Cohort Study of SNDX-5613 in Patients With Relapsed/Refractory Leukemias, Including Those Harboring an MLL/KMT2A Gene Rearrangement or Nucleophosmin 1 (NPM1) Mutation","sponsor":"Syndax Pharmaceuticals","phase":"Phase 1, Phase 2","status":"RECRUITING","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Acute Myeloid Leukemia","Acute Lymphoblastic Leukemia","Mixed Lineage Acute Leukemia","Mixed Phenotype Acute Leukemia","Acute Leukemia of Ambiguous Lineage"],"interventions":["revumenib","cobicistat"],"primaryOutcomes":[{"measure":"Number of participants with dose-limiting toxicities (DLTs) (Phase 1)","description":"Assessed by the NCI CTCAE version 5.0 (Phase 1)","timeFrame":"Approximately 1 year"},{"measure":"Number of participants with treatment-emergent adverse events (TEAEs) (Phase 1)","description":"Assessed by the NCI CTCAE version 5.0 (Phase 1)","timeFrame":"Approximately 1 year"},{"measure":"Cmax (Phase 1)","description":"Maximum plasma concentration (Cmax) of revumenib and relevant metabolites (Phase 1)","timeFrame":"Approximately 1 year"},{"measure":"Tmax (Phase 1)","description":"Time to observed maximum plasma concentration of revumenib and relevant metabolites (Phase 1)","timeFrame":"Approximately 1 year"},{"measure":"AUC0-t (Phase 1)","description":"Area under the plasma concentration-time curve from time 0 to time of last measurable concentration (AUC0-t) of revumenib and relevant metabolites (Phase 1)","timeFrame":"Approximately 1 year"},{"measure":"CR+CRh rate (Phase 2 [Cohorts 2A-2C])","description":"To assess the complete remission (CR) and complete remission with partial hematologic recovery (CRh) rate (Phase 2 \\[Cohorts 2A-2C\\])","timeFrame":"Approximately 3 years"},{"measure":"Number of participants with TEAEs (Phase 2 [Cohorts 2A-2C])","description":"Assessed by the NCI CTCAE version 5.0 (Phase 2 \\[Cohorts 2A-2C\\])","timeFrame":"Approximately 3 years"},{"measure":"Cmax (Phase 2 [Cohort 2D])","description":"Cmax of revumenib (Phase 2 \\[Cohort 2D\\])","timeFrame":"Approximately 3 years"},{"measure":"AUC0-tau (Phase 2 [Cohort 2D])","description":"Area under the plasma concentration-time curve from time 0 to the end of the dosing interval (AUC0-tau) of revumenib (Phase 2 \\[Cohort 2D\\])","timeFrame":"Approximately 3 years"}],"completionDate":"2027-12-15","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04065399","acronym":"AUGMENT-101","briefTitle":"A Study of Revumenib in R/R Leukemias Including Those With an MLL/KMT2A Gene Rearrangement or NPM1 Mutation","officialTitle":"A Phase 1/2, Open-label, Dose-Escalation and Dose-Expansion Cohort Study of SNDX-5613 in Patients With Relapsed/Refractory Leukemias, Including Those Harboring an MLL/KMT2A Gene Rearrangement or Nucleophosmin 1 (NPM1) Mutation","sponsor":"Syndax Pharmaceuticals","phase":"Phase 1, Phase 2","status":"RECRUITING","modality":"Unclassified","conditions":["Acute Myeloid Leukemia","Acute Lymphoblastic Leukemia","Mixed Lineage Acute Leukemia","Mixed Phenotype Acute Leukemia","Acute Leukemia of Ambiguous Lineage"],"interventions":["revumenib","cobicistat"],"primaryOutcomes":[{"measure":"Number of participants with dose-limiting toxicities (DLTs) (Phase 1)","description":"Assessed by the NCI CTCAE version 5.0 (Phase 1)","timeFrame":"Approximately 1 year"},{"measure":"Number of participants with treatment-emergent adverse events (TEAEs) (Phase 1)","description":"Assessed by the NCI CTCAE version 5.0 (Phase 1)","timeFrame":"Approximately 1 year"},{"measure":"Cmax (Phase 1)","description":"Maximum plasma concentration (Cmax) of revumenib and relevant metabolites (Phase 1)","timeFrame":"Approximately 1 year"},{"measure":"Tmax (Phase 1)","description":"Time to observed maximum plasma concentration of revumenib and relevant metabolites (Phase 1)","timeFrame":"Approximately 1 year"},{"measure":"AUC0-t (Phase 1)","description":"Area under the plasma concentration-time curve from time 0 to time of last measurable concentration (AUC0-t) of revumenib and relevant metabolites (Phase 1)","timeFrame":"Approximately 1 year"},{"measure":"CR+CRh rate (Phase 2 [Cohorts 2A-2C])","description":"To assess the complete remission (CR) and complete remission with partial hematologic recovery (CRh) rate (Phase 2 \\[Cohorts 2A-2C\\])","timeFrame":"Approximately 3 years"},{"measure":"Number of participants with TEAEs (Phase 2 [Cohorts 2A-2C])","description":"Assessed by the NCI CTCAE version 5.0 (Phase 2 \\[Cohorts 2A-2C\\])","timeFrame":"Approximately 3 years"},{"measure":"Cmax (Phase 2 [Cohort 2D])","description":"Cmax of revumenib (Phase 2 \\[Cohort 2D\\])","timeFrame":"Approximately 3 years"},{"measure":"AUC0-tau (Phase 2 [Cohort 2D])","description":"Area under the plasma concentration-time curve from time 0 to the end of the dosing interval (AUC0-tau) of revumenib (Phase 2 \\[Cohort 2D\\])","timeFrame":"Approximately 3 years"}],"completionDate":"2027-12-15","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "AUGMENT-101. A Study of Revumenib in R/R Leukemias Including Those With an MLL/KMT2A Gene Rearrangement or NPM1 Mutation. ClinicalTrials.gov Identifier: NCT04065399. Primary Sponsor: Syndax Pharmaceuticals. Available at: https://clinsight.pract.eu/trials/NCT04065399/";

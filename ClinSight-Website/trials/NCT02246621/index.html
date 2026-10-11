@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT02246621 MONARCH 3 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Therapy (Small Molecule / TKI) · Sponsor: Eli Lilly and Company">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: Eli Lilly and Company">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT02246621/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MONARCH 3 (NCT02246621): A Study of Nonsteroidal Aromatase Inhibitors Plus Abemaciclib (LY2835219) in Postmenopausal Women With Breast Cancer","url":"https://clinsight.pract.eu/trials/NCT02246621/","studySubject":{"@type":"MedicalCondition","name":"Breast Cancer"},"sponsor":"Eli Lilly and Company","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MONARCH 3 (NCT02246621)","item":"https://clinsight.pract.eu/trials/NCT02246621/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02246621 (MONARCH 3)?","acceptedAnswer":{"@type":"Answer","text":"NCT02246621 is a Phase 3 study sponsored by Eli Lilly and Company evaluating Targeted Therapy (Small Molecule / TKI) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02246621?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02246621."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MONARCH 3 (NCT02246621): A Study of Nonsteroidal Aromatase Inhibitors Plus Abemaciclib (LY2835219) in Postmenopausal Women With Breast Cancer","url":"https://clinsight.pract.eu/trials/NCT02246621/","studySubject":{"@type":"MedicalCondition","name":"Breast Cancer"},"sponsor":"Eli Lilly and Company","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MONARCH 3 (NCT02246621)","item":"https://clinsight.pract.eu/trials/NCT02246621/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02246621 (MONARCH 3)?","acceptedAnswer":{"@type":"Answer","text":"NCT02246621 is a Phase 3 study sponsored by Eli Lilly and Company evaluating TKI / Small Molecule in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02246621?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02246621."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT02246621</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Targeted Therapy (Small Molecule / TKI)</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>MONARCH 3: A Study of Nonsteroidal Aromatase Inhibitors Plus Abemaciclib (LY2835219) in Postmenopausal Women With Breast Cancer</h1>
         <p class="lead">A Randomized, Double-Blind, Placebo-Controlled, Phase 3 Study of Nonsteroidal Aromatase Inhibitors (Anastrozole or Letrozole) Plus LY2835219, a CDK4/6 Inhibitor, or Placebo in Postmenopausal Women With Hormone Receptor-Positive, HER2-Negative Locoregionally Recurrent or Metastatic Breast Cancer With No Prior Systemic Therapy in This Disease Setting</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/21/NCT02246621/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/21/NCT02246621/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT02246621?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28968163/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 28968163)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 28968163 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Abemaciclib" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Abemaciclib) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Breast Cancer</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Have a diagnosis of hormone receptor-positive (HR+), human epidermal growth factor receptor 2-negative (HER2-) breast cancer</li><li>Have locoregionally recurrent disease not amenable to resection or radiation therapy with curative intent or metastatic disease</li><li>Have postmenopausal status</li><li>Have either measurable disease or nonmeasurable bone-only disease</li><li>Have a performance status ≤1 on the Eastern Cooperative Oncology Group (ECOG) scale</li><li>Have adequate organ function</li><li>Have discontinued previous localized radiotherapy for palliative purposes or for lytic lesions at risk of fracture prior to randomization and recovered from the acute effects of therapy</li><li>Are able to swallow capsules</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Have visceral crisis, lymphangitic spread, or leptomeningeal carcinomatosis</li><li>Have inflammatory breast cancer</li><li>Have clinical evidence or a history of central nervous system (CNS) metastasis</li><li>Are currently receiving or have previously received endocrine therapy for locoregionally recurrent or metastatic breast cancer</li><li>Have received prior (neo)adjuvant endocrine therapy with a disease-free interval ≤12 months from completion of treatment</li><li>Are currently receiving or have previously received chemotherapy for locoregionally recurrent or metastatic breast cancer</li><li>Have received prior treatment with everolimus</li><li>Have received prior treatment with any cyclin-dependent kinase (CDK) 4/6 inhibitor (or participated in any CDK4/6 inhibitor clinical trial for which treatment assignment is still blinded)</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT02246621" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT02246621" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT02246621" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT02246621)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/21/NCT02246621/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/21/NCT02246621/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT02246621?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/28968163/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 28968163)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT02246621" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Therapy (Small Molecule / TKI)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT02246621","acronym":"MONARCH 3","briefTitle":"A Study of Nonsteroidal Aromatase Inhibitors Plus Abemaciclib (LY2835219) in Postmenopausal Women With Breast Cancer","officialTitle":"A Randomized, Double-Blind, Placebo-Controlled, Phase 3 Study of Nonsteroidal Aromatase Inhibitors (Anastrozole or Letrozole) Plus LY2835219, a CDK4/6 Inhibitor, or Placebo in Postmenopausal Women With Hormone Receptor-Positive, HER2-Negative Locoregionally Recurrent or Metastatic Breast Cancer With No Prior Systemic Therapy in This Disease Setting","sponsor":"Eli Lilly and Company","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Breast Cancer"],"interventions":["Abemaciclib","Anastrozole","Letrozole","Placebo"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"PFS defined as the time from the first day of therapy to the first evidence of disease progression as defined by RECIST v1.1 or death from any cause. Progressive Disease (PD) was at least a 20% increase in the sum of the diameters of target lesions, with reference being the smallest sum on study and an absolute increase of at least 5 mm, or unequivocal progression of non-target lesions, or 1 or more new lesions. If a participant does not have a complete baseline disease assessment, then the PFS time was censored at the date of randomization, regardless of whether or not objectively determined disease progression or death has been observed for the participant. If a participant was not known to have died or have objective progression as of the data inclusion cutoff date for the analysis, the PFS time was censored at the last adequate tumor assessment date.","timeFrame":"Randomization to Progressive Disease or Death Due to Any Cause (Up to 32 Months)"}],"completionDate":"2026-12","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT02246621","acronym":"MONARCH 3","briefTitle":"A Study of Nonsteroidal Aromatase Inhibitors Plus Abemaciclib (LY2835219) in Postmenopausal Women With Breast Cancer","officialTitle":"A Randomized, Double-Blind, Placebo-Controlled, Phase 3 Study of Nonsteroidal Aromatase Inhibitors (Anastrozole or Letrozole) Plus LY2835219, a CDK4/6 Inhibitor, or Placebo in Postmenopausal Women With Hormone Receptor-Positive, HER2-Negative Locoregionally Recurrent or Metastatic Breast Cancer With No Prior Systemic Therapy in This Disease Setting","sponsor":"Eli Lilly and Company","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"TKI / Small Molecule","conditions":["Breast Cancer"],"interventions":["Abemaciclib","Anastrozole","Letrozole","Placebo"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS)","description":"PFS defined as the time from the first day of therapy to the first evidence of disease progression as defined by RECIST v1.1 or death from any cause. Progressive Disease (PD) was at least a 20% increase in the sum of the diameters of target lesions, with reference being the smallest sum on study and an absolute increase of at least 5 mm, or unequivocal progression of non-target lesions, or 1 or more new lesions. If a participant does not have a complete baseline disease assessment, then the PFS time was censored at the date of randomization, regardless of whether or not objectively determined disease progression or death has been observed for the participant. If a participant was not known to have died or have objective progression as of the data inclusion cutoff date for the analysis, the PFS time was censored at the last adequate tumor assessment date.","timeFrame":"Randomization to Progressive Disease or Death Due to Any Cause (Up to 32 Months)"}],"completionDate":"2026-12","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "MONARCH 3. A Study of Nonsteroidal Aromatase Inhibitors Plus Abemaciclib (LY2835219) in Postmenopausal Women With Breast Cancer. ClinicalTrials.gov Identifier: NCT02246621. Primary Sponsor: Eli Lilly and Company. Available at: https://clinsight.pract.eu/trials/NCT02246621/";

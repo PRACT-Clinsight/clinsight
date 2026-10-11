@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03069352 NCT03069352 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Therapy (Small Molecule / TKI) · Sponsor: AbbVie">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: AbbVie">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03069352/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03069352 (NCT03069352): A Study of Venetoclax in Combination With Low Dose Cytarabine Versus Low Dose Cytarabine Alone in Treatment Naive Patients With Acute Myeloid Leukemia Who Are Ineligible for Intensive Chemotherapy","url":"https://clinsight.pract.eu/trials/NCT03069352/","studySubject":{"@type":"MedicalCondition","name":"Acute Myeloid Leukemia (AML)"},"sponsor":"AbbVie","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03069352 (NCT03069352)","item":"https://clinsight.pract.eu/trials/NCT03069352/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03069352 (NCT03069352)?","acceptedAnswer":{"@type":"Answer","text":"NCT03069352 is a Phase 3 study sponsored by AbbVie evaluating Targeted Therapy (Small Molecule / TKI) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03069352?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03069352."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03069352 (NCT03069352): A Study of Venetoclax in Combination With Low Dose Cytarabine Versus Low Dose Cytarabine Alone in Treatment Naive Patients With Acute Myeloid Leukemia Who Are Ineligible for Intensive Chemotherapy","url":"https://clinsight.pract.eu/trials/NCT03069352/","studySubject":{"@type":"MedicalCondition","name":"Acute Myeloid Leukemia (AML)"},"sponsor":"AbbVie","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03069352 (NCT03069352)","item":"https://clinsight.pract.eu/trials/NCT03069352/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03069352 (NCT03069352)?","acceptedAnswer":{"@type":"Answer","text":"NCT03069352 is a Phase 3 study sponsored by AbbVie evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03069352?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03069352."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,21 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03069352</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Therapy (Small Molecule / TKI)</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>A Study of Venetoclax in Combination With Low Dose Cytarabine Versus Low Dose Cytarabine Alone in Treatment Naive Patients With Acute Myeloid Leukemia Who Are Ineligible for Intensive Chemotherapy</h1>
         <p class="lead">A Randomized, Double-Blind, Placebo Controlled Phase 3 Study of Venetoclax Co-Administered With Low Dose Cytarabine Versus Low Dose Cytarabine in Treatment Naïve Patients With Acute Myeloid Leukemia Who Are Ineligible for Intensive Chemotherapy</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/52/NCT03069352/Prot_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/52/NCT03069352/SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT03069352?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41269778/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41269778)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41269778 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -599,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Acute Myeloid Leukemia (AML)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Participant must have histological confirmation of acute myeloid leukemia (AML) by World Health Organization criteria, be ineligible for intensive induction chemotherapy and either be:<br><br>   * ≥ 75 years of age OR<br>   * ≥ 18 to 74 years of age and fulfill at least one criteria associated with lack of fitness for intensive induction chemotherapy:<br><br>     * Eastern Cooperative Oncology Group (ECOG) performance status of 2 - 3<br>     * Cardiac history of congestive heart failure (CHF) requiring treatment or ejection fraction ≤ 50% or chronic stable angina<br>     * Diffusing capacity of the lung for carbon monoxide (DLCO) ≤ 65% or forced expiratory volume in 1 second (FEV1) ≤ 65%<br>     * Creatinine clearance ≥ 30 mL/min to \&lt; 45 ml/min<br>     * Moderate hepatic impairment with total bilirubin \&gt; 1.5 to ≤ 3.0 × upper limit of normal (ULN)<br>     * Other comorbidity that the physician judges to be incompatible with conventional intensive chemotherapy which must be reviewed and approved by the study medical monitor before study enrollment</li><li>Participant must have an ECOG performance status:<br><br>   * of 0 to 2 for subjects ≥ 75 years of age OR<br>   * of 0 to 3 for subjects between 18 to 74 years of age</li><li>Participant must have a projected life expectancy of at least 12 weeks.</li><li>Participant must have adequate renal function as demonstrated by a creatinine clearance ≥ 30 mL/min; calculated by the Cockcroft Gault formula or measured by 24-hour urine collection.</li><li>Participant must have adequate liver function as demonstrated by:<br><br>   * aspartate aminotransferase (AST) ≤ 3.0 × ULN\*<br>   * alanine aminotransferase (ALT) ≤ 3.0 × ULN\*<br>   * bilirubin ≤ 1.5 × ULN\*<br><br>     * Subjects who are \&lt; 75 years of age may have bilirubin of ≤ 3.0 × ULN<br><br>   (\*Unless considered to be due to leukemic organ involvement.)</li><li>Female participants must be either postmenopausal defined as:<br><br>   * Age \&gt; 55 years with no menses for 12 or more months without an alternative medical cause.<br>   * Age ≤ 55 years with no menses for 12 or more months without an alternative medical cause AND a follicle-stimulating hormone (FSH) level \&gt; 40 IU/L.<br><br>   OR<br>   * Permanently surgical sterile (bilateral oophorectomy, bilateral salpingectomy or hysterectomy).<br><br>   OR<br>   * A woman of childbearing potential (WOCBP) practicing at least one protocol specified method of birth control starting at Study Day 1 through at least 180 days after the last dose of study drug.</li><li>Male participants who are sexually active, must agree, from Study Day 1 through at least 180 days after the last dose of study drug, to practice protocol specified methods of contraception. Male subjects must agree to refrain from sperm donation from initial study drug administration through at least 180 days after the last dose of study drug.</li><li>Females of childbearing potential must have negative results for pregnancy test performed:<br><br>   * At Screening with a serum sample obtained within 14 days prior to the first study drug administration, and<br>   * Prior to dosing with urine sample obtained on Cycle 1 Day 1, if it has been \&gt; 7 days since obtaining the serum pregnancy test results.<br>   * Subjects with borderline pregnancy tests at Screening must have a serum pregnancy test ≥ 3 days later to document continued lack of a positive result.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Participant has received any prior treatment for AML with the exception of hydroxyurea, allowed through the first cycle of study treatment. Note: Prior treatment for myelodysplastic syndrome is allowed except for use of cytarabine.</li><li>Participant had an antecedent myeloproliferative neoplasm (MPN) including myelofibrosis, essential thrombocytosis, polycythemia vera, or chronic myelogenous leukemia (CML) with or without BCR-ABL 1 translocation and AML with BCR-ABL 1 translocation.</li><li>Participants that have acute promyelocytic leukemia (APL).</li><li>Participant has known central nervous system (CNS) involvement with AML.</li><li>Participant has known human immunodeficiency virus (HIV) infection (due to potential drug-drug interactions between antiretroviral medications and venetoclax). HIV testing will be performed at Screening, if required per local guidelines or institutional standards.</li><li>Participant is known to be positive for hepatitis B virus (HBV), or hepatitis C virus (HCV) infection. Inactive hepatitis carrier status or low viral hepatitis titer on antivirals (non-exclusionary medications) are not excluded.</li><li>Participant has received strong or moderate cytochrome P450 3A4 (CYP3A) inducers 7 days prior to the initiation of study treatment.<br><br>   * Chinese subjects are excluded from receiving strong and/or moderate CYP3A inhibitors 7 days prior to the initiation of study treatment through the end of intensive pharmacokinetic (PK) collection (24 hours post dose on Cycle 1 Day 10).</li><li>Participant has consumed grapefruit, grapefruit products, Seville oranges (including marmalade containing Seville oranges) or star fruit within 3 days prior to the initiation of study treatment.</li>
                     </ul>
                 </div>
             </div>
@@ -629,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03069352" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03069352" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03069352" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03069352)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/52/NCT03069352/Prot_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/52/NCT03069352/SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT03069352?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41269778/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41269778)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03069352" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -644,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Therapy (Small Molecule / TKI)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -694,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03069352","acronym":null,"briefTitle":"A Study of Venetoclax in Combination With Low Dose Cytarabine Versus Low Dose Cytarabine Alone in Treatment Naive Patients With Acute Myeloid Leukemia Who Are Ineligible for Intensive Chemotherapy","officialTitle":"A Randomized, Double-Blind, Placebo Controlled Phase 3 Study of Venetoclax Co-Administered With Low Dose Cytarabine Versus Low Dose Cytarabine in Treatment Naïve Patients With Acute Myeloid Leukemia Who Are Ineligible for Intensive Chemotherapy","sponsor":"AbbVie","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Acute Myeloid Leukemia (AML)"],"interventions":["Placebo","Venetoclax","Cytarabine"],"primaryOutcomes":[{"measure":"Overall Survival (OS)","description":"Overall survival is defined as the time from the date of randomization to the date of death. Participants who had not died were censored at the date they were last known to be alive on or before the cutoff date. Overall survival was analyzed using Kaplan-Meier methodology.","timeFrame":"From randomization until the primary analysis cut-off date of February 15 2019; the median follow-up time was 12.0 months (range: 0.2-17.0) in the placebo arm and 12.0 months (range: 0.1-17.6) in the venetoclax arm."}],"completionDate":"2025-08-21","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03069352","acronym":null,"briefTitle":"A Study of Venetoclax in Combination With Low Dose Cytarabine Versus Low Dose Cytarabine Alone in Treatment Naive Patients With Acute Myeloid Leukemia Who Are Ineligible for Intensive Chemotherapy","officialTitle":"A Randomized, Double-Blind, Placebo Controlled Phase 3 Study of Venetoclax Co-Administered With Low Dose Cytarabine Versus Low Dose Cytarabine in Treatment Naïve Patients With Acute Myeloid Leukemia Who Are Ineligible for Intensive Chemotherapy","sponsor":"AbbVie","phase":"Phase 3","status":"COMPLETED","modality":"TKI / Small Molecule","conditions":["Acute Myeloid Leukemia (AML)"],"interventions":["Placebo","Venetoclax","Cytarabine"],"primaryOutcomes":[{"measure":"Overall Survival (OS)","description":"Overall survival is defined as the time from the date of randomization to the date of death. Participants who had not died were censored at the date they were last known to be alive on or before the cutoff date. Overall survival was analyzed using Kaplan-Meier methodology.","timeFrame":"From randomization until the primary analysis cut-off date of February 15 2019; the median follow-up time was 12.0 months (range: 0.2-17.0) in the placebo arm and 12.0 months (range: 0.1-17.6) in the venetoclax arm."}],"completionDate":"2025-08-21","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "A Study of Venetoclax in Combination With Low Dose Cytarabine Versus Low Dose Cytarabine Alone in Treatment Naive Patients With Acute Myeloid Leukemia Who Are Ineligible for Intensive Chemotherapy. ClinicalTrials.gov Identifier: NCT03069352. Primary Sponsor: AbbVie. Available at: https://clinsight.pract.eu/trials/NCT03069352/";

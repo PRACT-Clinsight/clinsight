@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT06990503 NCT06990503 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Tongji Hospital">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Unclassified · Sponsor: Tongji Hospital">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT06990503/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06990503 (NCT06990503): SHR - A1811 Versus Chemotherapy for Platinum-resistant Recurrent Epithelial Ovarian Cancer","url":"https://clinsight.pract.eu/trials/NCT06990503/","studySubject":{"@type":"MedicalCondition","name":"Ovarian Cancer"},"sponsor":"Tongji Hospital","status":"NOT_YET_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT06990503 (NCT06990503)","item":"https://clinsight.pract.eu/trials/NCT06990503/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06990503 (NCT06990503)?","acceptedAnswer":{"@type":"Answer","text":"NCT06990503 is a Phase 3 study sponsored by Tongji Hospital evaluating Targeted Oncology &amp; Systemic Therapy in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06990503?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06990503."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06990503 (NCT06990503): SHR - A1811 Versus Chemotherapy for Platinum-resistant Recurrent Epithelial Ovarian Cancer","url":"https://clinsight.pract.eu/trials/NCT06990503/","studySubject":{"@type":"MedicalCondition","name":"Ovarian Cancer"},"sponsor":"Tongji Hospital","status":"NOT_YET_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT06990503 (NCT06990503)","item":"https://clinsight.pract.eu/trials/NCT06990503/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06990503 (NCT06990503)?","acceptedAnswer":{"@type":"Answer","text":"NCT06990503 is a Phase 3 study sponsored by Tongji Hospital evaluating Unclassified in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06990503?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06990503."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT06990503</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">NOT_YET_RECRUITING</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>SHR - A1811 Versus Chemotherapy for Platinum-resistant Recurrent Epithelial Ovarian Cancer</h1>
         <p class="lead">An Open-label, Randomized, Multicenter Phase III Clinical Trial of SHR - A1811 Versus Investigator&#39;s Choice of Chemotherapy in the Treatment of Platinum-resistant Recurrent Epithelial Ovarian Cancer, Fallopian Tube Cancer, or Primary Peritoneal Cancer With HER2 Expression</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=SHR-A1811" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (SHR-A1811) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Ovarian Cancer</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>The patient voluntarily participates in this trial and signs the informed consent form.</li><li>Female, aged 18 - 75 years old (including the boundary values, calculated from the date of signing the informed consent form).</li><li>Pathologically confirmed epithelial ovarian cancer, fallopian tube cancer, or primary peritoneal cancer by tissue or cytology.</li><li>Previously treated with a platinum - containing regimen and confirmed as platinum - resistant recurrence (platinum - resistant recurrence is defined as disease progression \[PD\] during platinum - containing therapy or within \&lt;183 days after the last dose of platinum - containing drugs). If the patient has only received 1 line of platinum - containing treatment, at least 4 cycles of platinum - containing drugs must be received. The determination of platinum - resistant recurrence must have clear documented radiological progression. After platinum resistance, at most 1 line of systemic anti - tumor treatment has been received, and the patient is suitable for single - agent chemotherapy in the next line of treatment.</li><li>Patients with known high expression of folate receptor α (FRα) must have received treatment with mirvetuximab soravtansine, unless the investigator judges that the patient is intolerant or unsuitable for mirvetuximab soravtansine treatment, or the treatment is not approved or unavailable locally, in which case they can be enrolled.</li><li>Disease progression during or after the last - line treatment, or toxicity that is intolerable (with clear evidence).</li><li>HER2 expression confirmed by the central laboratory: IHC 1+, 2+, or 3+; the patient needs to provide sufficient fresh or archived tumor tissue specimens for the sponsor - designated central laboratory to test the HER2 expression level (paraffin blocks, paraffin - embedded sections, or fresh tissue sections are all acceptable, and the scoring criteria for HER2 testing are determined by the central laboratory).</li><li>At least one measurable lesion that meets the RECIST v1.1 criteria (according to the RECIST v1.1 requirements, the long diameter of the measurable lesion on spiral computed tomography \[CT\] scan is ≥10 mm or the short diameter of the enlarged lymph node is ≥15 mm); lesions that have been locally treated can be selected as target lesions if there is clear evidence that they have significantly progressed compared with the post - treatment state.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Pathologically confirmed sarcoma histological subtypes, including hybrid tumors containing sarcomatous components.</li><li>Subjects with untreated or active central nervous system (CNS) tumor metastases. Subjects with a history of leptomeningeal metastasis or current leptomeningeal metastasis. Subjects whose CNS tumor metastases have undergone adequate local treatment (surgery or radiotherapy), do not require hormone therapy, have neurologically returned to baseline (except for residual signs or symptoms related to CNS treatment), and have been stable for ≥4 weeks can be enrolled.</li><li>Subjects who have previously received topoisomerase I inhibitors (including but not limited to irinotecan and topotecan), or ADC drugs containing topoisomerase I inhibitors, such as Enhertu (DS - 8201a), U3 - 1402, etc.</li><li>Subjects who have received systemic anti - tumor treatment within 4 weeks before the start of the study treatment. If the previous anti - tumor treatment was small - molecule targeted therapy, the interval between the end of treatment and the first study treatment should be no less than 5 half - lives of the drug or 7 days.</li><li>Subjects with symptomatic, poorly controlled, or moderate - to - severe pleural effusion, pericardial effusion, or ascites; subjects who have undergone effusion drainage (except diagnostic thoracentesis) can be enrolled if they have been stable for at least 2 weeks after drainage (local treatment within the serous cavity according to routine diagnosis and treatment is allowed before signing the informed consent form).</li><li>Subjects who have completed palliative radiotherapy within 7 days before the first dose.</li><li>Subjects with a history of other malignancies in the past or currently having other malignancies, except for cured basal cell carcinoma of the skin, cervical intraepithelial neoplasia, ductal carcinoma in situ of the breast, papillary thyroid carcinoma, and other malignancies that have been adequately treated and cured for ≥3 years before randomization with evidence proving no recurrence or metastasis.</li><li>Subjects whose toxicity caused by previous anti - tumor treatment has not recovered to ≤Grade 1 according to the NCI - CTCAE v5.0 grading system (except for decreased lymphocyte count, alopecia, fatigue, and laboratory indicators mentioned in the inclusion criteria; some tolerable chronic Grade 2 toxicities can be excluded after consultation between the investigator and the sponsor).</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT06990503" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT06990503" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT06990503" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT06990503)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT06990503","acronym":null,"briefTitle":"SHR - A1811 Versus Chemotherapy for Platinum-resistant Recurrent Epithelial Ovarian Cancer","officialTitle":"An Open-label, Randomized, Multicenter Phase III Clinical Trial of SHR - A1811 Versus Investigator's Choice of Chemotherapy in the Treatment of Platinum-resistant Recurrent Epithelial Ovarian Cancer, Fallopian Tube Cancer, or Primary Peritoneal Cancer With HER2 Expression","sponsor":"Tongji Hospital","phase":"Phase 3","status":"NOT_YET_RECRUITING","modality":"Targeted Oncology & Systemic Therapy","conditions":["Ovarian Cancer"],"interventions":["SHR-A1811","Chemotherapy"],"primaryOutcomes":[{"measure":"Progression Free Survival","description":"Progression - Free Survival (PFS) as assessed by the Independent Radiological Review Committee (IRC) based on the Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v1.1). It is defined as the time from the randomization date of the subject to the first date of documented radiological tumor progression or the date of death due to any cause, whichever occurs first.","timeFrame":"5 Years after treatment."}],"completionDate":"2035-06-01","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT06990503","acronym":null,"briefTitle":"SHR - A1811 Versus Chemotherapy for Platinum-resistant Recurrent Epithelial Ovarian Cancer","officialTitle":"An Open-label, Randomized, Multicenter Phase III Clinical Trial of SHR - A1811 Versus Investigator's Choice of Chemotherapy in the Treatment of Platinum-resistant Recurrent Epithelial Ovarian Cancer, Fallopian Tube Cancer, or Primary Peritoneal Cancer With HER2 Expression","sponsor":"Tongji Hospital","phase":"Phase 3","status":"NOT_YET_RECRUITING","modality":"Unclassified","conditions":["Ovarian Cancer"],"interventions":["SHR-A1811","Chemotherapy"],"primaryOutcomes":[{"measure":"Progression Free Survival","description":"Progression - Free Survival (PFS) as assessed by the Independent Radiological Review Committee (IRC) based on the Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v1.1). It is defined as the time from the randomization date of the subject to the first date of documented radiological tumor progression or the date of death due to any cause, whichever occurs first.","timeFrame":"5 Years after treatment."}],"completionDate":"2035-06-01","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "SHR - A1811 Versus Chemotherapy for Platinum-resistant Recurrent Epithelial Ovarian Cancer. ClinicalTrials.gov Identifier: NCT06990503. Primary Sponsor: Tongji Hospital. Available at: https://clinsight.pract.eu/trials/NCT06990503/";

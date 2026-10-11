@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03971409 InCITe — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2 · Modality: Antibody-Drug Conjugates (ADC) · Sponsor: Laura Huppert, MD, BA">
+    <meta property="og:description" content="Phase: Phase 2 · Modality: ADC · Sponsor: Laura Huppert, MD, BA">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03971409/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"InCITe (NCT03971409): Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer","url":"https://clinsight.pract.eu/trials/NCT03971409/","studySubject":{"@type":"MedicalCondition","name":"Stage III Breast Cancer"},"sponsor":"Laura Huppert, MD, BA","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"InCITe (NCT03971409)","item":"https://clinsight.pract.eu/trials/NCT03971409/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03971409 (InCITe)?","acceptedAnswer":{"@type":"Answer","text":"NCT03971409 is a Phase 2 study sponsored by Laura Huppert, MD, BA evaluating Antibody-Drug Conjugates (ADC) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03971409?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03971409."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"InCITe (NCT03971409): Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer","url":"https://clinsight.pract.eu/trials/NCT03971409/","studySubject":{"@type":"MedicalCondition","name":"Stage III Breast Cancer"},"sponsor":"Laura Huppert, MD, BA","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"InCITe (NCT03971409)","item":"https://clinsight.pract.eu/trials/NCT03971409/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03971409 (InCITe)?","acceptedAnswer":{"@type":"Answer","text":"NCT03971409 is a Phase 2 study sponsored by Laura Huppert, MD, BA evaluating ADC in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03971409?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03971409."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03971409</span>
             <span class="badge phase">Phase 2</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Antibody-Drug Conjugates (ADC)</span>
+            <span class="badge modality">ADC</span>
+            
         </div>
 
         <h1>InCITe: Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer</h1>
         <p class="lead">Innovative Combination Immunotherapy for Metastatic Triple Negative Breast Cancer (TNBC): A Multicenter, Multi-Arm Translational Breast Cancer Research Consortium Study</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Anti-OX40" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Anti-OX40) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Stage III Breast Cancer, Stage IIIA Breast Cancer, Stage IIIB Breast Cancer, Stage IIIC Breast Cancer, Stage IV Breast Cancer, Invasive Breast Carcinoma, Recurrent Breast Carcinoma, Triple-Negative Breast Carcinoma, Unresectable Breast Carcinoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Signed and dated written informed consent</li><li>Subjects \&gt;= 18 years of age</li><li>Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1</li><li>Clinical stage IV invasive breast cancer or unresectable locoregional recurrence of invasive breast cancer meeting the following criteria:<br><br>   * Estrogen receptor (ER)/progesterone receptor (PR)-negative (=\&lt; 5% cells) by immunohistochemistry (IHC) and human epidermal grow (HER2) negative (by IHC or fluorescence in situ hybridization (FISH))<br>   * Measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1 criteria and which can be followed by computed tomography (CT) or magnetic resonance imaging (MRI). A measurable lytic bone lesion(s) and/or skin lesion(s) are allowed. Skin lesions must also be followed by photography with measuring tools within the photograph at each tumor evaluation time point. Ultrasound may be used to follow breast lesions not visible by CT following discussion with Study Chair<br>   * Amenable to biopsy at the time of study entry<br>   * Known tumor/immune cell PD-L1 status by any assay</li><li>Adequate organ function including:<br><br>   * Cardiac ejection fraction at or above the institutional lower limit of normal, as assessed by either echocardiogram or multigated acquisition (MUGA) scan<br>   * Absolute neutrophil count (ANC) \&gt;= 1.0 x 10\^9/L (may have received growth factor)<br>   * Platelets \&gt;= 100 x 10\^9/L<br>   * Hemoglobin \&gt;= 9 g/dL (may have been transfused)<br>   * Total serum bilirubin =\&lt; 1.5 times upper limit of normal (ULN)<br>   * Aspartate aminotransferase (AST/serum glutamic oxaloacetic transaminase (SGOT)) and alanine aminotransferase (ALT/serum glutamate pyruvate transaminase (SGPT)) =\&lt; 2.5 x ULN (or =\&lt; 5 x ULN if liver metastases are present)<br>   * Serum creatinine =\&lt; 1.5 x ULN or estimated creatinine clearance \&gt;= 50 mL/min as calculated using the Cockcroft-Gault (CG) equation<br>   * Prothrombin time (PT)/international normalized ratio (INR) =\&lt; 1.5 x ULN<br>   * Amylase =\&lt; 1 x ULN testing is only required in patients with a history of pancreatic disorders (Abnormality not of pancreatic origin is allowed)<br>   * Participants with treated and controlled hypo or hyperthyroidism are eligible.</li><li>Male and female patients of childbearing potential must agree to use at least two methods of acceptable contraception from 15 days prior to first trial treatment administration until at least 30 days after study participant&#39;s final dose of study drug(s)<br><br>   \* NOTE: Females of childbearing potential are defined as those who are not surgically sterile or post-menopausal (i.e., patient has not had a bilateral tubal ligation, a bilateral oophorectomy, or a complete hysterectomy; or has not been amenorrhoeic for 12 months without an alternative medical cause). Post-menopausal status in females under 55 years of age should be confirmed with a serum follicle-stimulating hormone (FSH) level within laboratory reference range for postmenopausal women</li><li>Patients unable to read/write in English are eligible to participate in the overall study but will not participate in the Patient-Reported Outcome questionnaires throughout the trial.</li><li>Re-enrollment of a subject that has discontinued the study as a pre-randomization screen failure (i.e., a consented patient who was not randomized and did not receive any study treatment) is permitted. If re-enrolled, the subject must be re-consented. Only the screening procedures performed outside of protocol-specified timing must be repeated; if biopsies and correlative blood samples were already obtained, and patient has not received any systemic anti-cancer therapy since they were obtained, they do not need to be repeated.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>More than 2 lines of chemotherapy in the metastatic setting</li><li>More than 1 prior line of checkpoint inhibitor therapy in the metastatic setting</li><li>Prior treatment with sacituzumab, govitecan</li><li>Concurrent anticancer therapy. Required washout from prior therapies are as follows:<br><br>   * Chemotherapy: \&gt;= 14 days: antibody drug conjugants administered every 3 weeks require a 3-week washout.<br>   * Major surgery: \&gt;=14 days (provided wound healing is adequate)<br>   * Radiation: \&gt;= 7 days<br>   * Investigational/biologic therapy (half-life =\&lt; 40 hours): \&gt;= 14 days<br>   * Investigational/biologic therapy (half-life \&gt; 40 hours): \&gt;= 28 days<br>   * Use of corticosteroids or immunosuppressive medication is exclusionary, except the following in the absence of active autoimmune disease:<br><br>     * Subjects are permitted the use of corticosteroids with minimal systemic absorption (e.g. topical, ocular, intra-articular, intranasal, and inhaled)<br>     * Systemic corticosteroids at physiologic doses =\&lt; 10 mg/day of prednisone or equivalent are permitted<br>     * Adrenal replacement steroid doses including doses \&gt; 10 mg daily prednisone are permitted<br>     * A brief (less than 3 weeks) course of corticosteroids for prophylaxis (e.g. CT scan premedication against contrast dye allergy) or for treatment of nonautoimmune conditions (e.g. delayed-type hypersensitivity reaction caused by a contact allergen) is permitted</li><li>Previous malignant disease other than breast cancer within the last 5 years, with the exception of basal or squamous cell carcinoma of the skin, cervical carcinoma in situ, or low-risk cancers considered curatively treated (i.e. complete remission achieved at least 2 years prior to first dose of study drugs AND additional therapy not required while receiving study treatment)</li><li>All subjects with central nervous system metastases and/or carcinomatous meningitis, except those meeting the following criteria::<br><br>   * Brain metastases that have been treated locally and are clinically stable for at least 2 weeks prior to enrollment<br>   * No ongoing neurological symptoms that are related to the brain localization of the disease (sequelae that are a consequence of the treatment of the brain metastases are acceptable)<br>   * Subjects must be either off steroids or on a stable or decreasing dose of =\&lt; 10 mg daily prednisone (or equivalent)</li><li>Receipt of any organ transplantation including allogeneic stem-cell transplantation</li><li>Significant acute or chronic infections including, among others:<br><br>   * Known history of testing positive for human immunodeficiency virus (HIV), or acquired immunodeficiency syndrome (AIDS); testing is not required for this protocol.<br>   * A history of a positive test for hepatitis B virus (HBV) surface antigen (and/or core antibody) and/or confirmatory hepatitis C virus (HCV) ribonucleic acid (RNA) (if anti-HCV antibody tested positive); testing is not required for this protocol</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03971409" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03971409" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03971409" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03971409)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Antibody-Drug Conjugates (ADC)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in ADC</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03971409","acronym":"InCITe","briefTitle":"Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer","officialTitle":"Innovative Combination Immunotherapy for Metastatic Triple Negative Breast Cancer (TNBC): A Multicenter, Multi-Arm Translational Breast Cancer Research Consortium Study","sponsor":"Laura Huppert, MD, BA","phase":"Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Antibody-Drug Conjugates (ADC)","conditions":["Stage III Breast Cancer","Stage IIIA Breast Cancer","Stage IIIB Breast Cancer","Stage IIIC Breast Cancer","Stage IV Breast Cancer","Invasive Breast Carcinoma","Recurrent Breast Carcinoma","Triple-Negative Breast Carcinoma","Unresectable Breast Carcinoma"],"interventions":["Anti-OX40 Antibody PF-04518600","Avelumab","Binimetinib","Utomilumab","Liposomal Doxorubicin","Sacituzumab Govitecan"],"primaryOutcomes":[{"measure":"Best Overall Response Rate (BORR)","description":"BORR is defined as the percentage of patients achieving complete response (CR) or partial response (PR) by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1 and will be reported for each arm along with 95% two-sided confidence intervals.","timeFrame":"From treatment initiation until disease progression, an estimated average of 1 year"}],"completionDate":"2027-01-31","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03971409","acronym":"InCITe","briefTitle":"Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer","officialTitle":"Innovative Combination Immunotherapy for Metastatic Triple Negative Breast Cancer (TNBC): A Multicenter, Multi-Arm Translational Breast Cancer Research Consortium Study","sponsor":"Laura Huppert, MD, BA","phase":"Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"ADC","conditions":["Stage III Breast Cancer","Stage IIIA Breast Cancer","Stage IIIB Breast Cancer","Stage IIIC Breast Cancer","Stage IV Breast Cancer","Invasive Breast Carcinoma","Recurrent Breast Carcinoma","Triple-Negative Breast Carcinoma","Unresectable Breast Carcinoma"],"interventions":["Anti-OX40 Antibody PF-04518600","Avelumab","Binimetinib","Utomilumab","Liposomal Doxorubicin","Sacituzumab Govitecan"],"primaryOutcomes":[{"measure":"Best Overall Response Rate (BORR)","description":"BORR is defined as the percentage of patients achieving complete response (CR) or partial response (PR) by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1 and will be reported for each arm along with 95% two-sided confidence intervals.","timeFrame":"From treatment initiation until disease progression, an estimated average of 1 year"}],"completionDate":"2027-01-31","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "InCITe. Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer. ClinicalTrials.gov Identifier: NCT03971409. Primary Sponsor: Laura Huppert, MD, BA. Available at: https://clinsight.pract.eu/trials/NCT03971409/";

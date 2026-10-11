@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT05669755 REDEFINE 3 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Incretin Mimetics (GLP-1 / GIP) · Sponsor: Novo Nordisk A/S">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: GLP-1 · Sponsor: Novo Nordisk A/S">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT05669755/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"REDEFINE 3 (NCT05669755): REDEFINE 3: A Research Study to See the Effects of CagriSema in People Living With Diseases in the Heart and Blood Vessels","url":"https://clinsight.pract.eu/trials/NCT05669755/","studySubject":{"@type":"MedicalCondition","name":"Cardiovascular Disease"},"sponsor":"Novo Nordisk A/S","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"REDEFINE 3 (NCT05669755)","item":"https://clinsight.pract.eu/trials/NCT05669755/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05669755 (REDEFINE 3)?","acceptedAnswer":{"@type":"Answer","text":"NCT05669755 is a Phase 3 study sponsored by Novo Nordisk A/S evaluating Incretin Mimetics (GLP-1 / GIP) in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05669755?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05669755."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"REDEFINE 3 (NCT05669755): REDEFINE 3: A Research Study to See the Effects of CagriSema in People Living With Diseases in the Heart and Blood Vessels","url":"https://clinsight.pract.eu/trials/NCT05669755/","studySubject":{"@type":"MedicalCondition","name":"Cardiovascular Disease"},"sponsor":"Novo Nordisk A/S","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"REDEFINE 3 (NCT05669755)","item":"https://clinsight.pract.eu/trials/NCT05669755/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05669755 (REDEFINE 3)?","acceptedAnswer":{"@type":"Answer","text":"NCT05669755 is a Phase 3 study sponsored by Novo Nordisk A/S evaluating GLP-1 in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05669755?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05669755."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT05669755</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Incretin Mimetics (GLP-1 / GIP)</span>
+            <span class="badge modality">GLP-1</span>
+            
         </div>
 
         <h1>REDEFINE 3: REDEFINE 3: A Research Study to See the Effects of CagriSema in People Living With Diseases in the Heart and Blood Vessels</h1>
         <p class="lead">The Cardiovascular Safety and Efficacy of Cagrilintide 2.4 mg s.c. in Combination With Semaglutide 2.4 mg s.c. (CagriSema 2.4 mg/2.4 mg s.c.) Once-weekly in Participants With Established Cardiovascular Disease</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42838477/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42838477)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 42838477 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Cagrilintide" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Cagrilintide) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Cardiovascular Disease</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Male or female</li><li>Age above or equal to 55 years at the time of signing informed consent</li><li>Body mass index (BMI) greater than or equal to (\&gt;=) 25.0 kilograms per meter square (kg/m\^2)</li><li>Established CVD as evidenced by at least one of the following:<br><br>  1. Prior myocardial infarction<br>  2. Prior stroke (ischemic or haemorrhagic stroke)<br>  3. Symptomatic peripheral arterial disease (PAD) defined as at least one of the following:<br><br>     1. Intermittent claudication with an ankle-brachial index (ABI) less than (\&lt;) 0.85 at rest<br>     2. Intermittent claudication with a \&gt;= 50% stenosis in a lower extremity peripheral artery documented by X-ray angiography, magnetic resonance (MR) angiography, computed tomography (CT) angiography or Doppler ultrasound<br>     3. Prior revascularization procedure of a lower extremity peripheral artery<br>     4. Lower extremity amputation at or above ankle due to atherosclerotic disease (excluding e.g., trauma or osteomyelitis)<br><br>For participants with T2D at screening the following inclusion criteria also apply:</li><li>Diagnosed with type 2 diabetes mellitus (T2D) \&gt;= 180 days before screening</li><li>HbA1c 6.5%-10% (47-86 millimoles per mole \[mmol/mol\]) (both inclusive), as measured by central laboratory at screening</li><li>Treatment with either:<br><br>  1. Lifestyle intervention alone<br>  2. 1-3 marketed oral antidiabetic drugs (OADs) (metformin, α-glucosidase inhibitors (AGI), glinides, sodium-glucose co-transporter 2 inhibitor (SGLT2i), dipeptidyl peptidase 4 (DPP4)-inhibitors, thiazolidinediones, or sulphonylureas (SU) as a single agent or in combination) according to local label<br>  3. Basal insulin alone or in combination with up to two marketed OADs, all according to local label</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Myocardial infarction, stroke, hospitalization for unstable angina pectoris or transient ischaemic attack within 60 days before screening</li><li>Planned coronary, carotid or peripheral artery revascularisation known on the day of screening</li><li>Heart failure classified as being in New York Heart Association (NYHA) Class IV at screening</li><li>Treatment with any glucagon-like peptide-1 (GLP-1) receptor agonist (RA) or a medication with GLP-1 activity within 90 days before screening</li><li>End stage renal disease defined as estimated glomerular filtration rate (eGFR) \&lt; 15 millileters per minutes per 1.73\^2 (mL/min/1.73 m\^2), as measured by the central laboratory at screening</li><li>Chronic or intermittent haemodialysis or peritoneal dialysis</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT05669755" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT05669755" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT05669755" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT05669755)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/42838477/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 42838477)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT05669755" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Incretin Mimetics (GLP-1 / GIP)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in GLP-1</div>
             <div class="related-grid">
                 
                 <a href="../NCT04526691/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT05669755","acronym":"REDEFINE 3","briefTitle":"REDEFINE 3: A Research Study to See the Effects of CagriSema in People Living With Diseases in the Heart and Blood Vessels","officialTitle":"The Cardiovascular Safety and Efficacy of Cagrilintide 2.4 mg s.c. in Combination With Semaglutide 2.4 mg s.c. (CagriSema 2.4 mg/2.4 mg s.c.) Once-weekly in Participants With Established Cardiovascular Disease","sponsor":"Novo Nordisk A/S","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Incretin Mimetics (GLP-1 / GIP)","conditions":["Cardiovascular Disease"],"interventions":["Cagrilintide","Semaglutide","Placebo"],"primaryOutcomes":[{"measure":"Time to first occurrence of 3-point major adverse cardiovascular event (MACE), a composite endpoint consisting of: cardiovascular (CV) death, non-fatal myocardial infarction, non-fatal stroke","description":"Measured in days.","timeFrame":"From baseline (week 0) to end of study (up to 242 weeks or more)"}],"completionDate":"2027-10-14","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT05669755","acronym":"REDEFINE 3","briefTitle":"REDEFINE 3: A Research Study to See the Effects of CagriSema in People Living With Diseases in the Heart and Blood Vessels","officialTitle":"The Cardiovascular Safety and Efficacy of Cagrilintide 2.4 mg s.c. in Combination With Semaglutide 2.4 mg s.c. (CagriSema 2.4 mg/2.4 mg s.c.) Once-weekly in Participants With Established Cardiovascular Disease","sponsor":"Novo Nordisk A/S","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"GLP-1","conditions":["Cardiovascular Disease"],"interventions":["Cagrilintide","Semaglutide","Placebo"],"primaryOutcomes":[{"measure":"Time to first occurrence of 3-point major adverse cardiovascular event (MACE), a composite endpoint consisting of: cardiovascular (CV) death, non-fatal myocardial infarction, non-fatal stroke","description":"Measured in days.","timeFrame":"From baseline (week 0) to end of study (up to 242 weeks or more)"}],"completionDate":"2027-10-14","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "REDEFINE 3. REDEFINE 3: A Research Study to See the Effects of CagriSema in People Living With Diseases in the Heart and Blood Vessels. ClinicalTrials.gov Identifier: NCT05669755. Primary Sponsor: Novo Nordisk A/S. Available at: https://clinsight.pract.eu/trials/NCT05669755/";

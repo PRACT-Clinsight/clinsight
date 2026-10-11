@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04442022 NCT04442022 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2, Phase 3 · Modality: Targeted Monoclonal Antibodies · Sponsor: Karyopharm Therapeutics Inc">
+    <meta property="og:description" content="Phase: Phase 2, Phase 3 · Modality: Monoclonal Antibody (mAb) · Sponsor: Karyopharm Therapeutics Inc">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04442022/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04442022 (NCT04442022): A Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT04442022/","studySubject":{"@type":"MedicalCondition","name":"Relapsed/Refractory Diffuse Large B-cell Lymphoma"},"sponsor":"Karyopharm Therapeutics Inc","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04442022 (NCT04442022)","item":"https://clinsight.pract.eu/trials/NCT04442022/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04442022 (NCT04442022)?","acceptedAnswer":{"@type":"Answer","text":"NCT04442022 is a Phase 2, Phase 3 study sponsored by Karyopharm Therapeutics Inc evaluating Targeted Monoclonal Antibodies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04442022?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04442022."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04442022 (NCT04442022): A Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT04442022/","studySubject":{"@type":"MedicalCondition","name":"Relapsed/Refractory Diffuse Large B-cell Lymphoma"},"sponsor":"Karyopharm Therapeutics Inc","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04442022 (NCT04442022)","item":"https://clinsight.pract.eu/trials/NCT04442022/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04442022 (NCT04442022)?","acceptedAnswer":{"@type":"Answer","text":"NCT04442022 is a Phase 2, Phase 3 study sponsored by Karyopharm Therapeutics Inc evaluating Monoclonal Antibody (mAb) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04442022?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04442022."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04442022</span>
             <span class="badge phase">Phase 2, Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Targeted Monoclonal Antibodies</span>
+            <span class="badge modality">Monoclonal Antibody (mAb)</span>
+            
         </div>
 
         <h1>A Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma</h1>
         <p class="lead">A Phase 2/3, Multicenter Randomized Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma (RR DLBCL)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Selinexor" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Selinexor) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Relapsed/Refractory Diffuse Large B-cell Lymphoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Have pathologically confirmed de novo DLBCL or DLBCL transformed from previously diagnosed indolent lymphoma (e.g., follicular lymphoma). Patient with high-grade lymphoma with c-MYC, Bcl2 and/or Bcl6 rearrangements are eligible (only for Phase 2). (Documentation to be provided).</li><li>Have received at least 1 but no more than 3 prior lines of systemic therapy for the treatment of DLBCL with relapsed or refractory disease following their most recent regimen.<br><br>  * Salvage chemoimmunotherapy followed by stem cell transplantation will be considered as 1 line of systemic therapy.<br>  * Maintenance therapy will not be counted as a separate line of systemic therapy.<br>  * Radiation with curative intent for localized DLBCL will not be counted as 1 line of systemic therapy.</li><li>Positron emission tomography (PET) positive measurable disease with at least 1 node having the longest diameter (LDi) greater than (\&gt;) 1.5 centimeter (cm) or 1 extranodal lesion with LDi \&gt;1 cm (per the Lugano Criteria 2014). The Deauville 5-point scale (D5PS) score assessed on the FDG PET/CT should be between 3 to 5.</li><li>Not intended for HSCT or CAR-T cell therapy based on objective clinical criteria determined by the treating physician. Patients who cannot receive HSCT due to active disease are allowed on study (up to approximately 15 percent \[%\] of patients enrolled in each Phase). Documentation on lack of intention to proceed to receive HSCT or CAR-T therapy must be provided by the treating physician.</li><li>Adequate bone marrow function at screening, defined as:<br><br>  * Absolute neutrophil count (ANC) ≥1\*10\^9 per liter (/L).<br>  * Platelet count ≥100\*10\^9/L (without platelet transfusion less than \[\&lt;\] 14 days prior to Cycle 1 Day 1 \[C1D1\]).<br>  * Hemoglobin ≥8.5 gram per deciliter (g/dL) (without red blood cell transfusion \&lt;14 days prior to C1D1).</li><li>Circulating lymphocytes less than or equal to (≤) 50\*10\^9/L.</li><li>Adequate liver and kidney function, defined as:<br><br>  * Aspartate transaminase (AST) or alanine transaminase (ALT) ≤2.5\*upper limit of normal (ULN), or ≤5\*ULN in cases with known lymphoma involvement in the liver.<br>  * Serum total bilirubin ≤2\*ULN, or ≤5\*ULN if due to Gilbert syndrome or in cases with known lymphoma involvement in the liver.<br>  * Calculated creatinine clearance (CrCl) ≥30 milliliter per minute (mL/min) based on Cockcroft-Gault formula.</li><li>Eastern Cooperative Oncology Group (ECOG) performance status of ≤2.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>DLBCL with mucosa-associated lymphoid tissue (MALT) lymphoma, composite lymphoma (Hodgkin&#39;s lymphoma + non-Hodgkin&#39;s lymphoma \[NHL\]), DLBCL transformed from diseases other than indolent NHL; primary mediastinal (thymic) large B-cell lymphoma (PMBL); T-cell rich large B-cell lymphoma.</li><li>Previous treatment with selinexor or other XPO1 inhibitors.</li><li>Contraindication to any drug contained in the combination therapy regimen (SR-GDP).</li><li>Known active central nervous system or meningeal involvement by DLBCL at time of Screening.</li><li>Use of any standard or experimental anti-DLBCL therapy (including nonpalliative radiation, chemotherapy, immunotherapy, radio-immunotherapy, or any other anticancer therapy) \&lt;21 days prior to C1D1 (prednisone \&lt;30 mg or equivalent is permitted; palliative radiation is permitted only if on non-target lesions).</li><li>Any AE, by C1D1, which has not recovered to Grade ≤1 (Common Terminology Criteria for Adverse Events \[CTCAE\], v.5.0), or returned to baseline, related to the previous DLBCL therapy, except hematological abnormalities (as specified in the inclusion criteria) and alopecia.</li><li>Major surgery \&lt;14 days of Cycle 1 Day 1.</li><li>Hematopoietic stem cell transplantation/CAR-T therapy as follows:<br><br>  * Autologous stem cell transplant (SCT) \&lt;100 days or allogeneic-SCT \&lt;180 days prior to C1D1<br>  * Active graft-versus-host disease (GVHD) after allogeneic SCT (or cannot discontinue GVHD treatment or prophylaxis)<br>  * CAR-T cell infusion \&lt;90 days prior to Cycle 1</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04442022" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04442022" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04442022" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04442022)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Monoclonal Antibodies</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Monoclonal Antibody (mAb)</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04442022","acronym":null,"briefTitle":"A Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma","officialTitle":"A Phase 2/3, Multicenter Randomized Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma (RR DLBCL)","sponsor":"Karyopharm Therapeutics Inc","phase":"Phase 2, Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Targeted Monoclonal Antibodies","conditions":["Relapsed/Refractory Diffuse Large B-cell Lymphoma"],"interventions":["Selinexor (combination therapy)","Selinexor (combination therapy)","Selinexor (combination therapy)","Placebo matching for Selinexor (combination therapy)","Rituximab (combination therapy)","Rituximab (combination therapy)","Gemcitabine (combination therapy)","Dexamethasone (combination therapy)","Cisplatin (combination therapy)","Selinexor (continuous therapy)","Placebo matching for Selinexor (continuous therapy)"],"primaryOutcomes":[{"measure":"Phase 2: Overall Response Rate (ORR): Based on Lugano Criteria 2014","description":"","timeFrame":"From date of initial randomization to the date of disease progression or initiating a new DLBCL treatment (maximum of 5 years from randomization)"},{"measure":"Phase 3: Progression-free Survival (PFS): Based on Lugano Criteria 2014","description":"","timeFrame":"From date of initial randomization to the date of disease progression or death (maximum of 5 years from randomization)"}],"completionDate":"2026-12","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04442022","acronym":null,"briefTitle":"A Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma","officialTitle":"A Phase 2/3, Multicenter Randomized Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma (RR DLBCL)","sponsor":"Karyopharm Therapeutics Inc","phase":"Phase 2, Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Monoclonal Antibody (mAb)","conditions":["Relapsed/Refractory Diffuse Large B-cell Lymphoma"],"interventions":["Selinexor (combination therapy)","Selinexor (combination therapy)","Selinexor (combination therapy)","Placebo matching for Selinexor (combination therapy)","Rituximab (combination therapy)","Rituximab (combination therapy)","Gemcitabine (combination therapy)","Dexamethasone (combination therapy)","Cisplatin (combination therapy)","Selinexor (continuous therapy)","Placebo matching for Selinexor (continuous therapy)"],"primaryOutcomes":[{"measure":"Phase 2: Overall Response Rate (ORR): Based on Lugano Criteria 2014","description":"","timeFrame":"From date of initial randomization to the date of disease progression or initiating a new DLBCL treatment (maximum of 5 years from randomization)"},{"measure":"Phase 3: Progression-free Survival (PFS): Based on Lugano Criteria 2014","description":"","timeFrame":"From date of initial randomization to the date of disease progression or death (maximum of 5 years from randomization)"}],"completionDate":"2026-12","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "A Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma. ClinicalTrials.gov Identifier: NCT04442022. Primary Sponsor: Karyopharm Therapeutics Inc. Available at: https://clinsight.pract.eu/trials/NCT04442022/";

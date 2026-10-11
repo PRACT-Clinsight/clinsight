@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03987919 SURPASS-2 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Incretin Mimetics (GLP-1 / GIP) · Sponsor: Eli Lilly and Company">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: GLP-1 · Sponsor: Eli Lilly and Company">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03987919/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"SURPASS-2 (NCT03987919): A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Participants With Type 2 Diabetes","url":"https://clinsight.pract.eu/trials/NCT03987919/","studySubject":{"@type":"MedicalCondition","name":"Type 2 Diabetes"},"sponsor":"Eli Lilly and Company","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"SURPASS-2 (NCT03987919)","item":"https://clinsight.pract.eu/trials/NCT03987919/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03987919 (SURPASS-2)?","acceptedAnswer":{"@type":"Answer","text":"NCT03987919 is a Phase 3 study sponsored by Eli Lilly and Company evaluating Incretin Mimetics (GLP-1 / GIP) in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03987919?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03987919."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"SURPASS-2 (NCT03987919): A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Participants With Type 2 Diabetes","url":"https://clinsight.pract.eu/trials/NCT03987919/","studySubject":{"@type":"MedicalCondition","name":"Type 2 Diabetes"},"sponsor":"Eli Lilly and Company","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"SURPASS-2 (NCT03987919)","item":"https://clinsight.pract.eu/trials/NCT03987919/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03987919 (SURPASS-2)?","acceptedAnswer":{"@type":"Answer","text":"NCT03987919 is a Phase 3 study sponsored by Eli Lilly and Company evaluating GLP-1 in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03987919?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03987919."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03987919</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Incretin Mimetics (GLP-1 / GIP)</span>
+            <span class="badge modality">GLP-1</span>
+            
         </div>
 
         <h1>SURPASS-2: A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Participants With Type 2 Diabetes</h1>
         <p class="lead">A Phase 3, Randomized, Open-Label Trial Comparing Efficacy and Safety of Tirzepatide Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Patients With Type 2 Diabetes</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/19/NCT03987919/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/19/NCT03987919/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT03987919?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/39531161/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 39531161)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 39531161 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Tirzepatide" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Tirzepatide) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Type 2 Diabetes</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Have been diagnosed with type 2 diabetes mellitus (T2DM)</li><li>Have HbA1c between ≥7.0% and ≤10.5%</li><li>Be on stable treatment with unchanged dose of metformin \&gt;1500 mg/day for at least 3 months prior to screening</li><li>Be of stable weight (±5%) for at least 3 months before screening</li><li>Have a body mass index (BMI) ≥25 kilograms per meter squared (kg/m²) at screening</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Have type 1 diabetes mellitus</li><li>Have had chronic or acute pancreatitis any time prior to study entry</li><li>Have proliferative diabetic retinopathy or diabetic maculopathy or nonproliferative diabetic retinopathy requiring acute treatment</li><li>Have disorders associated with slowed emptying of the stomach, or have had any stomach surgeries for the purpose of weight loss</li><li>Have acute or chronic hepatitis, signs and symptoms of any other liver disease, or blood alanine transaminase (ALT) enzyme level \&gt;3.0 times the upper limit of normal (ULN) for the reference range, as determined by the central laboratory. Participants with nonalcoholic fatty liver disease (NAFLD) are eligible for participation in this trial only if there ALT level is ≤3.0 the ULN for the reference range</li><li>Have an estimated glomerular filtration rate \&lt;45 milliliters/minute/1.73 m² (or lower than the country specific threshold for using the protocol required dose of metformin per local label)</li><li>Have had a heart attack, stroke, or hospitalization for congestive heart failure in the past 2 months</li><li>Have a personal or family history of medullary thyroid carcinoma or personal history of multiple endocrine neoplasia syndrome type 2</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03987919" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03987919" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03987919" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03987919)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/19/NCT03987919/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/19/NCT03987919/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT03987919?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/39531161/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 39531161)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03987919" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Incretin Mimetics (GLP-1 / GIP)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in GLP-1</div>
             <div class="related-grid">
                 
                 <a href="../NCT03574597/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03987919","acronym":"SURPASS-2","briefTitle":"A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Participants With Type 2 Diabetes","officialTitle":"A Phase 3, Randomized, Open-Label Trial Comparing Efficacy and Safety of Tirzepatide Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Patients With Type 2 Diabetes","sponsor":"Eli Lilly and Company","phase":"Phase 3","status":"COMPLETED","modality":"Incretin Mimetics (GLP-1 / GIP)","conditions":["Type 2 Diabetes"],"interventions":["Tirzepatide","Semaglutide"],"primaryOutcomes":[{"measure":"Change From Baseline in Hemoglobin A1c (HbA1c) (10 mg and 15 mg)","description":"HbA1c is the glycosylated fraction of hemoglobin A. HbA1c is measured primarily to identify average plasma glucose concentration over prolonged periods of time. Least Squares (LS) mean was determined by mixed-model repeated measures (MMRM) model with Baseline + Pooled Country + Treatment + Time + Treatment\\*Time (Type III sum of squares).","timeFrame":"Baseline, Week 40"}],"completionDate":"2021-02-15","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03987919","acronym":"SURPASS-2","briefTitle":"A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Participants With Type 2 Diabetes","officialTitle":"A Phase 3, Randomized, Open-Label Trial Comparing Efficacy and Safety of Tirzepatide Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Patients With Type 2 Diabetes","sponsor":"Eli Lilly and Company","phase":"Phase 3","status":"COMPLETED","modality":"GLP-1","conditions":["Type 2 Diabetes"],"interventions":["Tirzepatide","Semaglutide"],"primaryOutcomes":[{"measure":"Change From Baseline in Hemoglobin A1c (HbA1c) (10 mg and 15 mg)","description":"HbA1c is the glycosylated fraction of hemoglobin A. HbA1c is measured primarily to identify average plasma glucose concentration over prolonged periods of time. Least Squares (LS) mean was determined by mixed-model repeated measures (MMRM) model with Baseline + Pooled Country + Treatment + Time + Treatment\\*Time (Type III sum of squares).","timeFrame":"Baseline, Week 40"}],"completionDate":"2021-02-15","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "SURPASS-2. A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Participants With Type 2 Diabetes. ClinicalTrials.gov Identifier: NCT03987919. Primary Sponsor: Eli Lilly and Company. Available at: https://clinsight.pract.eu/trials/NCT03987919/";

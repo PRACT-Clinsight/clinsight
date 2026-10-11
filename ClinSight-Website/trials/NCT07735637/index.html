@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT07735637 DURGA-6 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Therapy (Small Molecule / TKI) · Sponsor: AstraZeneca">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: AstraZeneca">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT07735637/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"DURGA-6 (NCT07735637): A Phase III, Multicentre Study to Evaluate Consolidation Treatment With AZD0120 Compared With ASCT, in Participants With Newly Diagnosed Multiple Myeloma Who Are Transplant Eligible (DURGA-6).","url":"https://clinsight.pract.eu/trials/NCT07735637/","studySubject":{"@type":"MedicalCondition","name":"Newly Diagnosed Multiple Myeloma (NDMM)"},"sponsor":"AstraZeneca","status":"NOT_YET_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"DURGA-6 (NCT07735637)","item":"https://clinsight.pract.eu/trials/NCT07735637/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07735637 (DURGA-6)?","acceptedAnswer":{"@type":"Answer","text":"NCT07735637 is a Phase 3 study sponsored by AstraZeneca evaluating Targeted Therapy (Small Molecule / TKI) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07735637?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07735637."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"DURGA-6 (NCT07735637): A Phase III, Multicentre Study to Evaluate Consolidation Treatment With AZD0120 Compared With ASCT, in Participants With Newly Diagnosed Multiple Myeloma Who Are Transplant Eligible (DURGA-6).","url":"https://clinsight.pract.eu/trials/NCT07735637/","studySubject":{"@type":"MedicalCondition","name":"Newly Diagnosed Multiple Myeloma (NDMM)"},"sponsor":"AstraZeneca","status":"NOT_YET_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"DURGA-6 (NCT07735637)","item":"https://clinsight.pract.eu/trials/NCT07735637/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07735637 (DURGA-6)?","acceptedAnswer":{"@type":"Answer","text":"NCT07735637 is a Phase 3 study sponsored by AstraZeneca evaluating TKI / Small Molecule in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07735637?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07735637."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT07735637</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">NOT_YET_RECRUITING</span>
-            <span class="badge modality">Targeted Therapy (Small Molecule / TKI)</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>DURGA-6: A Phase III, Multicentre Study to Evaluate Consolidation Treatment With AZD0120 Compared With ASCT, in Participants With Newly Diagnosed Multiple Myeloma Who Are Transplant Eligible (DURGA-6).</h1>
         <p class="lead">A Phase III, Open-label, Multicentre, Randomised Study Comparing Consolidation Treatment With AZD0120, an Autologous Dual Targeting Chimeric Antigen Receptor T-cell (CAR-T) Therapy Directed Against BCMA and CD19, Versus Autologous Stem Cell Transplant (ASCT) in Participants With Newly Diagnosed Multiple Myeloma Who Are Transplant Eligible (TE NDMM) (DURGA-6)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=AZD0120" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (AZD0120) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Newly Diagnosed Multiple Myeloma (NDMM)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>≥18 years of age.</li><li>Documented diagnosis of NDMM according to IMWG diagnostic criteria.</li><li>Documented measurable disease at diagnosis (serum M-protein ≥ 1.0 g/dL, urine M-protein 200 mg/24 hour, or serum Ig FLC 10 mg/dL (100 mg/L) and abnormal serum Ig kappa lambda FLC ratio)</li><li>Must have completed 4 to 6 cycles of induction therapy with any of the following approved regimens: anti-CD38+VRd, DVTd, DRd or VRd</li><li>Participant must have at least SD or better per IMWG response criteria (2016) after completion of induction, and prior to randomisation.</li><li>ECOG performance status score of 0 or 1.</li><li>Eligible for treatment with high-dose melphalan (200 mg/m²) followed by ASCT.</li><li>Adequate organ and bone marrow function.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Known active, or prior history of CNS involvement or exhibits clinical signs of meningeal involvement of MM.</li><li>Primary amyloidosis, active plasma cell leukaemia (at diagnosis and/or at time of screening), Waldenstrom macroglobulinemia or POEMS syndrome.</li><li>Significant neurological or psychiatric condition</li><li>Significant medical condition that places the participant at an unacceptable risk for treatment-related complications</li><li>Participants who required the introduction of an additional agent therapy due to inadequate response.</li><li>Prior T-cell engager therapy directed at any target.</li><li>Prior CAR-T and/or CAR-NK cell therapy directed at any target for any indications</li><li>Prior any therapy that is targeted to BCMA and CD19.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT07735637" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT07735637" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT07735637" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT07735637)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Therapy (Small Molecule / TKI)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT07735637","acronym":"DURGA-6","briefTitle":"A Phase III, Multicentre Study to Evaluate Consolidation Treatment With AZD0120 Compared With ASCT, in Participants With Newly Diagnosed Multiple Myeloma Who Are Transplant Eligible (DURGA-6).","officialTitle":"A Phase III, Open-label, Multicentre, Randomised Study Comparing Consolidation Treatment With AZD0120, an Autologous Dual Targeting Chimeric Antigen Receptor T-cell (CAR-T) Therapy Directed Against BCMA and CD19, Versus Autologous Stem Cell Transplant (ASCT) in Participants With Newly Diagnosed Multiple Myeloma Who Are Transplant Eligible (TE NDMM) (DURGA-6)","sponsor":"AstraZeneca","phase":"Phase 3","status":"NOT_YET_RECRUITING","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Newly Diagnosed Multiple Myeloma (NDMM)"],"interventions":["AZD0120","Cyclophosphamide","Fludarabine","Melphalan (part of ASCT)","Lenalidomide"],"primaryOutcomes":[{"measure":"Progression-Free Survival (PFS)","description":"PFS is defined as time from randomisation until progression as assessed by Blinded Independent Central Review, or death due to any cause, whichever occurs first.","timeFrame":"Up to approximately 13 years."},{"measure":"Minimal Residual Disease (MRD) negative Complete Response Rate (CRR)","description":"MRD negative CRR is defined as the proportion of participants with a MRD negative status and who have a response of CR or a stringent CR.","timeFrame":"Up to approximately 13 years."}],"completionDate":"2039-11-09","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT07735637","acronym":"DURGA-6","briefTitle":"A Phase III, Multicentre Study to Evaluate Consolidation Treatment With AZD0120 Compared With ASCT, in Participants With Newly Diagnosed Multiple Myeloma Who Are Transplant Eligible (DURGA-6).","officialTitle":"A Phase III, Open-label, Multicentre, Randomised Study Comparing Consolidation Treatment With AZD0120, an Autologous Dual Targeting Chimeric Antigen Receptor T-cell (CAR-T) Therapy Directed Against BCMA and CD19, Versus Autologous Stem Cell Transplant (ASCT) in Participants With Newly Diagnosed Multiple Myeloma Who Are Transplant Eligible (TE NDMM) (DURGA-6)","sponsor":"AstraZeneca","phase":"Phase 3","status":"NOT_YET_RECRUITING","modality":"TKI / Small Molecule","conditions":["Newly Diagnosed Multiple Myeloma (NDMM)"],"interventions":["AZD0120","Cyclophosphamide","Fludarabine","Melphalan (part of ASCT)","Lenalidomide"],"primaryOutcomes":[{"measure":"Progression-Free Survival (PFS)","description":"PFS is defined as time from randomisation until progression as assessed by Blinded Independent Central Review, or death due to any cause, whichever occurs first.","timeFrame":"Up to approximately 13 years."},{"measure":"Minimal Residual Disease (MRD) negative Complete Response Rate (CRR)","description":"MRD negative CRR is defined as the proportion of participants with a MRD negative status and who have a response of CR or a stringent CR.","timeFrame":"Up to approximately 13 years."}],"completionDate":"2039-11-09","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "DURGA-6. A Phase III, Multicentre Study to Evaluate Consolidation Treatment With AZD0120 Compared With ASCT, in Participants With Newly Diagnosed Multiple Myeloma Who Are Transplant Eligible (DURGA-6).. ClinicalTrials.gov Identifier: NCT07735637. Primary Sponsor: AstraZeneca. Available at: https://clinsight.pract.eu/trials/NCT07735637/";

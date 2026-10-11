@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT06946628 NCT06946628 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Sun Yat-sen University">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Unclassified · Sponsor: Sun Yat-sen University">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT06946628/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06946628 (NCT06946628): New Triple Therapy in Newly Diagnosed Type 2 Diabetes","url":"https://clinsight.pract.eu/trials/NCT06946628/","studySubject":{"@type":"MedicalCondition","name":"Diabetes Mellitus"},"sponsor":"Sun Yat-sen University","status":"NOT_YET_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"NCT06946628 (NCT06946628)","item":"https://clinsight.pract.eu/trials/NCT06946628/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06946628 (NCT06946628)?","acceptedAnswer":{"@type":"Answer","text":"NCT06946628 is a Phase 3 study sponsored by Sun Yat-sen University evaluating Targeted Oncology &amp; Systemic Therapy in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06946628?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06946628."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06946628 (NCT06946628): New Triple Therapy in Newly Diagnosed Type 2 Diabetes","url":"https://clinsight.pract.eu/trials/NCT06946628/","studySubject":{"@type":"MedicalCondition","name":"Diabetes Mellitus"},"sponsor":"Sun Yat-sen University","status":"NOT_YET_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"NCT06946628 (NCT06946628)","item":"https://clinsight.pract.eu/trials/NCT06946628/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06946628 (NCT06946628)?","acceptedAnswer":{"@type":"Answer","text":"NCT06946628 is a Phase 3 study sponsored by Sun Yat-sen University evaluating Unclassified in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06946628?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06946628."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT06946628</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">NOT_YET_RECRUITING</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>New Triple Therapy in Newly Diagnosed Type 2 Diabetes</h1>
         <p class="lead">Combination Therapy With Semaglutide, Empagliflozin and Pioglitazone Versus Standard Therapy in Newly Diagnosed Type 2 Diabetes: a Multi-center Randomized Controlled Trial</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Group" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Group) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Diabetes Mellitus</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Male or female, 18 years≤age≤75 years at the time of signing informed consent.</li><li>Newly diagnosed with type 2 diabetes, or diagnosed within 1 years according to the WHO diagnostic criteria.</li><li>Individuals who had not received previous antidiabetic therapy, or had not received antidiabetic therapy within 3 months prior to screening, or had not received antidiabetic therapy for more than 3 consecutive months or a combined total of more than 3 months in the past 2 years.</li><li>6.5%≤HbA1c≤9.0% at screening confirmed by central laboratory analysis.</li><li>BMI≥24 kg/m2.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Individuals with type 1 diabetes or special types of diabetes.</li><li>Allergy or intolerance to investigational drugs.</li><li>Estimated Glomerular Filtration Rate (eGFR) \&lt;20 mL/min/1.73 m².</li><li>Individuals with heart failure in New York Heart Association \[NYHA\] class III or IV in the 6 months prior to randomization.</li><li>History of bladder cancer or hematuria.</li><li>History of Multiple Endocrine Neoplasia Type 2 (MEN 2) or relevant family history.</li><li>History or family history of Medullary Thyroid Carcinoma (MTC), or susceptibility to MTC due to hereditary conditions.</li><li>History of fasting blood glucose≥13.9 mmol/L or the necessity for insulin use due to severe infection, diabetic foot, etc.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT06946628" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT06946628" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT06946628" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT06946628)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT02511106/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT06946628","acronym":null,"briefTitle":"New Triple Therapy in Newly Diagnosed Type 2 Diabetes","officialTitle":"Combination Therapy With Semaglutide, Empagliflozin and Pioglitazone Versus Standard Therapy in Newly Diagnosed Type 2 Diabetes: a Multi-center Randomized Controlled Trial","sponsor":"Sun Yat-sen University","phase":"Phase 3","status":"NOT_YET_RECRUITING","modality":"Targeted Oncology & Systemic Therapy","conditions":["Diabetes Mellitus"],"interventions":["Group A (triple combination therapy group)","Group B (standard therapy group)"],"primaryOutcomes":[{"measure":"Diabetic remission rate","description":"Diabetic remission rate at 6 months after discontinuation of medication (percentage of patients with HbA1c \\<6.5% at 6 months after discontinuation of medication)","timeFrame":"6 months after discontinuation of medication"}],"completionDate":"2030-12-31","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT06946628","acronym":null,"briefTitle":"New Triple Therapy in Newly Diagnosed Type 2 Diabetes","officialTitle":"Combination Therapy With Semaglutide, Empagliflozin and Pioglitazone Versus Standard Therapy in Newly Diagnosed Type 2 Diabetes: a Multi-center Randomized Controlled Trial","sponsor":"Sun Yat-sen University","phase":"Phase 3","status":"NOT_YET_RECRUITING","modality":"Unclassified","conditions":["Diabetes Mellitus"],"interventions":["Group A (triple combination therapy group)","Group B (standard therapy group)"],"primaryOutcomes":[{"measure":"Diabetic remission rate","description":"Diabetic remission rate at 6 months after discontinuation of medication (percentage of patients with HbA1c \\<6.5% at 6 months after discontinuation of medication)","timeFrame":"6 months after discontinuation of medication"}],"completionDate":"2030-12-31","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "New Triple Therapy in Newly Diagnosed Type 2 Diabetes. ClinicalTrials.gov Identifier: NCT06946628. Primary Sponsor: Sun Yat-sen University. Available at: https://clinsight.pract.eu/trials/NCT06946628/";

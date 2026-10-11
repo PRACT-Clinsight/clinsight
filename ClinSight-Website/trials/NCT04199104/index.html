@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04199104 NCT04199104 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Immuno-Oncology (Checkpoint Inhibitor) · Sponsor: Merck Sharp &amp; Dohme LLC">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Checkpoint · Sponsor: Merck Sharp &amp; Dohme LLC">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04199104/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04199104 (NCT04199104): A Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) as First Line (1L) Intervention in a Programmed Cell Death-ligand 1 (PD-L1) Selected Population With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (MK-7902-010) (KEYNOTE-010)","url":"https://clinsight.pract.eu/trials/NCT04199104/","studySubject":{"@type":"MedicalCondition","name":"Head and Neck Squamous Cell Carcinoma"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04199104 (NCT04199104)","item":"https://clinsight.pract.eu/trials/NCT04199104/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04199104 (NCT04199104)?","acceptedAnswer":{"@type":"Answer","text":"NCT04199104 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Immuno-Oncology (Checkpoint Inhibitor) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04199104?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04199104."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04199104 (NCT04199104): A Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) as First Line (1L) Intervention in a Programmed Cell Death-ligand 1 (PD-L1) Selected Population With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (MK-7902-010) (KEYNOTE-010)","url":"https://clinsight.pract.eu/trials/NCT04199104/","studySubject":{"@type":"MedicalCondition","name":"Head and Neck Squamous Cell Carcinoma"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04199104 (NCT04199104)","item":"https://clinsight.pract.eu/trials/NCT04199104/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04199104 (NCT04199104)?","acceptedAnswer":{"@type":"Answer","text":"NCT04199104 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Checkpoint in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04199104?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04199104."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,35 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04199104</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Immuno-Oncology (Checkpoint Inhibitor)</span>
+            <span class="badge modality">Checkpoint</span>
+            
         </div>
 
         <h1>A Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) as First Line (1L) Intervention in a Programmed Cell Death-ligand 1 (PD-L1) Selected Population With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (MK-7902-010) (KEYNOTE-010)</h1>
         <p class="lead">A Phase 3, Randomized, Placebo-controlled, Double-blind Clinical Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) to Evaluate the Safety and Efficacy of Pembrolizumab and Lenvatinib as 1L Intervention in a PD-L1 Selected Population of Participants With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (LEAP-010).</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/04/NCT04199104/Prot_SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            
+            <a href="https://clinicaltrials.gov/study/NCT04199104?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41818638/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41818638)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41818638 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Lenvatinib" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Lenvatinib) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +665,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Head and Neck Squamous Cell Carcinoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Has histologically confirmed diagnosis of R/M HNSCC that is considered incurable by local therapies.<br><br>Note: Participants with newly-diagnosed HNSCC must be M1/Stage IV.</li><li>Has a primary tumor location of oropharynx, oral cavity, hypopharynx, or larynx.<br><br>Note: Primary tumor site of nasopharynx (any histology) or unknown primary tumor (including p16+ unknown primary) are not eligible.<br><br>Contraceptive use by men should be consistent with local regulations regarding the methods of contraception for those participating in clinical studies. If the contraception requirements in the local label for any of the study interventions is more stringent than the requirements above, the local label requirements are to be followed.</li><li>Male participants agree to use approved contraception during the treatment period for at least 7 days after the last dose of lenvatinib/placebo, or refrain from heterosexual intercourse during this period</li><li>Female participants are not pregnant or breastfeeding, and are not a woman of childbearing potential (WOCBP), OR are a WOCBP that agrees to use contraception during the treatment period (or 14 days prior to the initiation of study treatment for oral contraception) and for at least 120 days post pembrolizumab, or 30 days post lenvatinib/placebo, whichever occurs last</li><li>Has measurable disease per RECIST 1.1 as assessed by BICR. Note: Lesions situated in a previously irradiated area are considered measurable if progression has been shown in such lesions.</li><li>Participants with oropharyngeal cancer must have results from testing of human papillomavirus HPV status.</li><li>Has an Eastern Cooperative Oncology Group (ECOG) performance score of 0 to 1.</li><li>Have adequately controlled blood pressure with or without antihypertensive medications.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Has a history of any contraindication or has a severe hypersensitivity to any components of pembrolizumab (≥Grade 3) or lenvatinib.</li><li>Has pre-existing ≥Grade 3 gastrointestinal or non-gastrointestinal fistula.</li><li>Has a history of a gastrointestinal condition or procedure that, in the opinion of the investigator, may affect oral study drug absorption.</li><li>Has clinically significant cardiovascular impairment within 12 months of the first dose of study intervention, such as history of congestive heart failure greater than New York Heart Association (NYHA) Class II, unstable angina, myocardial infarction or cerebrovascular accident/transient ischemic attack (TIA)/stroke, cardiac revascularization, or cardiac arrhythmia associated with hemodynamic instability.</li><li>Has disease that is suitable for local therapy administered with curative intent.</li><li>Had PD within 6 months of completion of curatively intended systemic treatment for locoregionally advanced HNSCC.</li><li>Has had major surgery within 3 weeks before to first dose of study interventions.</li><li>Has difficulty swallowing capsules or ingesting a suspension orally or by a feeding tube.</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +691,21 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04199104" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04199104" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04199104" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04199104)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/04/NCT04199104/Prot_SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                
+                <a href="https://clinicaltrials.gov/study/NCT04199104?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41818638/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41818638)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT04199104" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +716,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Immuno-Oncology (Checkpoint Inhibitor)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Checkpoint</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +766,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04199104","acronym":null,"briefTitle":"A Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) as First Line (1L) Intervention in a Programmed Cell Death-ligand 1 (PD-L1) Selected Population With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (MK-7902-010) (KEYNOTE-010)","officialTitle":"A Phase 3, Randomized, Placebo-controlled, Double-blind Clinical Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) to Evaluate the Safety and Efficacy of Pembrolizumab and Lenvatinib as 1L Intervention in a PD-L1 Selected Population of Participants With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (LEAP-010).","sponsor":"Merck Sharp & Dohme LLC","phase":"Phase 3","status":"COMPLETED","modality":"Immuno-Oncology (Checkpoint Inhibitor)","conditions":["Head and Neck Squamous Cell Carcinoma"],"interventions":["Lenvatinib","Pembrolizumab","Placebo"],"primaryOutcomes":[{"measure":"Objective Response Rate (ORR) Per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Review (BICR)","description":"ORR is defined as the percentage of participants who had a Complete Response (CR: Disappearance of all target lesions) or a Partial Response (PR: At least a 30% decrease in the sum of diameters of target lesions, taking as reference the baseline sum diameters) per RECIST 1.1 modified to follow a maximum of 10 target lesions and a maximum of 5 target lesions per organ. The percentage of participants who experienced a CR or PR based on modified RECIST 1.1 is presented.","timeFrame":"Up to ~ 37 months"},{"measure":"Progression Free Survival (PFS) Per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Review (BICR).","description":"PFS is defined as the time from randomization to the first documented progressive disease (PD) or death due to any cause, whichever occurs first. Per RECIST 1.1, PD was defined as ≥20% increase in the sum of diameters of target lesions. In addition to the relative increase of 20%, the sum must also demonstrate an absolute increase of ≥5 mm. Note: The appearance of one or more new lesions is also considered PD.","timeFrame":"Up to ~ 37 months"},{"measure":"Overall Survival (OS)","description":"OS is the time from randomization to death due to any cause.","timeFrame":"Up to ~ 37 months"}],"completionDate":"2025-03-31","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04199104","acronym":null,"briefTitle":"A Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) as First Line (1L) Intervention in a Programmed Cell Death-ligand 1 (PD-L1) Selected Population With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (MK-7902-010) (KEYNOTE-010)","officialTitle":"A Phase 3, Randomized, Placebo-controlled, Double-blind Clinical Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) to Evaluate the Safety and Efficacy of Pembrolizumab and Lenvatinib as 1L Intervention in a PD-L1 Selected Population of Participants With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (LEAP-010).","sponsor":"Merck Sharp & Dohme LLC","phase":"Phase 3","status":"COMPLETED","modality":"Checkpoint","conditions":["Head and Neck Squamous Cell Carcinoma"],"interventions":["Lenvatinib","Pembrolizumab","Placebo"],"primaryOutcomes":[{"measure":"Objective Response Rate (ORR) Per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Review (BICR)","description":"ORR is defined as the percentage of participants who had a Complete Response (CR: Disappearance of all target lesions) or a Partial Response (PR: At least a 30% decrease in the sum of diameters of target lesions, taking as reference the baseline sum diameters) per RECIST 1.1 modified to follow a maximum of 10 target lesions and a maximum of 5 target lesions per organ. The percentage of participants who experienced a CR or PR based on modified RECIST 1.1 is presented.","timeFrame":"Up to ~ 37 months"},{"measure":"Progression Free Survival (PFS) Per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Review (BICR).","description":"PFS is defined as the time from randomization to the first documented progressive disease (PD) or death due to any cause, whichever occurs first. Per RECIST 1.1, PD was defined as ≥20% increase in the sum of diameters of target lesions. In addition to the relative increase of 20%, the sum must also demonstrate an absolute increase of ≥5 mm. Note: The appearance of one or more new lesions is also considered PD.","timeFrame":"Up to ~ 37 months"},{"measure":"Overall Survival (OS)","description":"OS is the time from randomization to death due to any cause.","timeFrame":"Up to ~ 37 months"}],"completionDate":"2025-03-31","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "A Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) as First Line (1L) Intervention in a Programmed Cell Death-ligand 1 (PD-L1) Selected Population With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (MK-7902-010) (KEYNOTE-010). ClinicalTrials.gov Identifier: NCT04199104. Primary Sponsor: Merck Sharp &amp;amp; Dohme LLC. Available at: https://clinsight.pract.eu/trials/NCT04199104/";

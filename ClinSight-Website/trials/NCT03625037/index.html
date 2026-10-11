@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03625037 EPCORE™ NHL-1 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Bispecific Antibodies &amp; T-Cell Engagers · Sponsor: Genmab">
+    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Bispecific · Sponsor: Genmab">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03625037/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"EPCORE™ NHL-1 (NCT03625037): First-in-Human (FIH) Trial in Patients With Relapsed, Progressive or Refractory B-Cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03625037/","studySubject":{"@type":"MedicalCondition","name":"DLBCL"},"sponsor":"Genmab","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"EPCORE™ NHL-1 (NCT03625037)","item":"https://clinsight.pract.eu/trials/NCT03625037/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03625037 (EPCORE™ NHL-1)?","acceptedAnswer":{"@type":"Answer","text":"NCT03625037 is a Phase 1, Phase 2 study sponsored by Genmab evaluating Bispecific Antibodies &amp; T-Cell Engagers in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03625037?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03625037."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"EPCORE™ NHL-1 (NCT03625037): First-in-Human (FIH) Trial in Patients With Relapsed, Progressive or Refractory B-Cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03625037/","studySubject":{"@type":"MedicalCondition","name":"DLBCL"},"sponsor":"Genmab","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"EPCORE™ NHL-1 (NCT03625037)","item":"https://clinsight.pract.eu/trials/NCT03625037/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03625037 (EPCORE™ NHL-1)?","acceptedAnswer":{"@type":"Answer","text":"NCT03625037 is a Phase 1, Phase 2 study sponsored by Genmab evaluating Bispecific in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03625037?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03625037."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03625037</span>
             <span class="badge phase">Phase 1, Phase 2</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Bispecific Antibodies &amp; T-Cell Engagers</span>
+            <span class="badge modality">Bispecific</span>
+            
         </div>
 
         <h1>EPCORE™ NHL-1: First-in-Human (FIH) Trial in Patients With Relapsed, Progressive or Refractory B-Cell Lymphoma</h1>
         <p class="lead">A Phase 1/2, Open-label Safety Trial of GEN3013 in Patients With Relapsed, Progressive or Refractory B-Cell Lymphoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/36548927/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 36548927)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 36548927 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Epcoritamab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Epcoritamab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,28 +659,18 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for DLBCL, High-grade B-cell Lymphoma (HGBCL), Primary Mediastinal Large B-cell Lymphoma (PMBCL), FL, MCL, Small Lymphocytic Lymphoma (SLL), Marginal Zone Lymphoma (MZL), Indolent B-cell Non-Hodgkin Lymphoma (iNHL), Aggressive B-cell Non-Hodgkin Lymphoma (aNHL)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Main Inclusion Criteria - Escalation Part (recruitment completed)</li><li>Documented CD20+ mature B-cell neoplasm<br><br>  1. DLBCL - de novo or transformed<br>  2. HGBCL<br>  3. PMBCL<br>  4. FL<br>  5. MCL<br>  6. SLL<br>  7. MZL (nodal, extranodal or mucosa associated)</li><li>Relapsed and/or refractory disease following treatment with an anti-CD20 monoclonal antibody (e.g. rituximab) potentially in combination with chemotherapy and/or relapsed after autologous stem cell rescue.</li><li>Eastern Cooperative Oncology Group (ECOG) performance status 0,1 or 2.</li><li>Participants must have measurable disease by computed tomography (CT), magnetic resonance imaging (MRI) or Positron emission tomography-Computed tomography (PET-CT) scan</li><li>Acceptable renal function.</li><li>Acceptable liver function.<br><br>Main Inclusion Criteria - Expansion \&amp; Dose-OPT Parts</li><li>Documented CD20 positive mature B cell neoplasm or CD20+ MCL.</li>
                     </ul>
                 </div>
-                <div class="criteria-box">
-                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
-                    <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
 
@@ -632,11 +679,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03625037" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03625037" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03625037" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03625037)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/36548927/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 36548927)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03625037" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +698,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific Antibodies &amp; T-Cell Engagers</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +748,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03625037","acronym":"EPCORE™ NHL-1","briefTitle":"First-in-Human (FIH) Trial in Patients With Relapsed, Progressive or Refractory B-Cell Lymphoma","officialTitle":"A Phase 1/2, Open-label Safety Trial of GEN3013 in Patients With Relapsed, Progressive or Refractory B-Cell Lymphoma","sponsor":"Genmab","phase":"Phase 1, Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific Antibodies & T-Cell Engagers","conditions":["DLBCL","High-grade B-cell Lymphoma (HGBCL)","Primary Mediastinal Large B-cell Lymphoma (PMBCL)","FL","MCL","Small Lymphocytic Lymphoma (SLL)","Marginal Zone Lymphoma (MZL)","Indolent B-cell Non-Hodgkin Lymphoma (iNHL)","Aggressive B-cell Non-Hodgkin Lymphoma (aNHL)"],"interventions":["Epcoritamab"],"primaryOutcomes":[{"measure":"Dose-Escalation: Dose Limiting Toxicity (DLT)","description":"To determine the MTD and/or RP2D to be studied in the Expansion part. DLT will be graded according to National Cancer Institute Common Terminology Criteria for Adverse Events (NCI-CTCAE) version 5.0.","timeFrame":"During the first cycle (28 days)"},{"measure":"Dose-Escalation: Number of Participants with Adverse Events (AEs)","description":"An AE is any untoward medical occurrence in a clinical trial participant, temporally associated with the use of a medicinal product, whether or not considered related to the medicinal product. An AE can therefore be any unfavorable and unintended sign (including an abnormal laboratory finding), symptom, or disease (new or exacerbated) temporally associated with the use of a medicinal product.","timeFrame":"From first dose until the end of the safety follow-up period (Up to 1 year)"},{"measure":"Expansion: Overall Response Rate (ORR)","description":"ORR is defined as the percentage of participants achieving complete response (CR) or partial response (PR) based on Lugano criteria.","timeFrame":"Up to 1.5 years"},{"measure":"Dose-OPT DLBCL, FL and MCL: Percentage of Participants with =>Grade 2 Cytokine Release Syndrome (CRS) Events and All Grade CRS Events","description":"CRS will be graded based on American Society for Transplantation and Cellular Therapy (ASTCT) criteria.","timeFrame":"From first dose until 7 days after second full dose (Day 28 for DLBCL; Day 35 for FL; Day 28-35 for MCL)"}],"completionDate":"2029-01","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03625037","acronym":"EPCORE™ NHL-1","briefTitle":"First-in-Human (FIH) Trial in Patients With Relapsed, Progressive or Refractory B-Cell Lymphoma","officialTitle":"A Phase 1/2, Open-label Safety Trial of GEN3013 in Patients With Relapsed, Progressive or Refractory B-Cell Lymphoma","sponsor":"Genmab","phase":"Phase 1, Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific","conditions":["DLBCL","High-grade B-cell Lymphoma (HGBCL)","Primary Mediastinal Large B-cell Lymphoma (PMBCL)","FL","MCL","Small Lymphocytic Lymphoma (SLL)","Marginal Zone Lymphoma (MZL)","Indolent B-cell Non-Hodgkin Lymphoma (iNHL)","Aggressive B-cell Non-Hodgkin Lymphoma (aNHL)"],"interventions":["Epcoritamab"],"primaryOutcomes":[{"measure":"Dose-Escalation: Dose Limiting Toxicity (DLT)","description":"To determine the MTD and/or RP2D to be studied in the Expansion part. DLT will be graded according to National Cancer Institute Common Terminology Criteria for Adverse Events (NCI-CTCAE) version 5.0.","timeFrame":"During the first cycle (28 days)"},{"measure":"Dose-Escalation: Number of Participants with Adverse Events (AEs)","description":"An AE is any untoward medical occurrence in a clinical trial participant, temporally associated with the use of a medicinal product, whether or not considered related to the medicinal product. An AE can therefore be any unfavorable and unintended sign (including an abnormal laboratory finding), symptom, or disease (new or exacerbated) temporally associated with the use of a medicinal product.","timeFrame":"From first dose until the end of the safety follow-up period (Up to 1 year)"},{"measure":"Expansion: Overall Response Rate (ORR)","description":"ORR is defined as the percentage of participants achieving complete response (CR) or partial response (PR) based on Lugano criteria.","timeFrame":"Up to 1.5 years"},{"measure":"Dose-OPT DLBCL, FL and MCL: Percentage of Participants with =>Grade 2 Cytokine Release Syndrome (CRS) Events and All Grade CRS Events","description":"CRS will be graded based on American Society for Transplantation and Cellular Therapy (ASTCT) criteria.","timeFrame":"From first dose until 7 days after second full dose (Day 28 for DLBCL; Day 35 for FL; Day 28-35 for MCL)"}],"completionDate":"2029-01","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "EPCORE™ NHL-1. First-in-Human (FIH) Trial in Patients With Relapsed, Progressive or Refractory B-Cell Lymphoma. ClinicalTrials.gov Identifier: NCT03625037. Primary Sponsor: Genmab. Available at: https://clinsight.pract.eu/trials/NCT03625037/";

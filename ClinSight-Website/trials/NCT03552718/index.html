@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03552718 NCT03552718 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 1 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: NantBioScience, Inc.">
+    <meta property="og:description" content="Phase: Phase 1 · Modality: Unclassified · Sponsor: NantBioScience, Inc.">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03552718/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03552718 (NCT03552718): QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.","url":"https://clinsight.pract.eu/trials/NCT03552718/","studySubject":{"@type":"MedicalCondition","name":"Colorectal Cancer"},"sponsor":"NantBioScience, Inc.","status":"COMPLETED","phase":"Phase 1"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03552718 (NCT03552718)","item":"https://clinsight.pract.eu/trials/NCT03552718/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03552718 (NCT03552718)?","acceptedAnswer":{"@type":"Answer","text":"NCT03552718 is a Phase 1 study sponsored by NantBioScience, Inc. evaluating Targeted Oncology &amp; Systemic Therapy in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03552718?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03552718."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03552718 (NCT03552718): QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.","url":"https://clinsight.pract.eu/trials/NCT03552718/","studySubject":{"@type":"MedicalCondition","name":"Colorectal Cancer"},"sponsor":"NantBioScience, Inc.","status":"COMPLETED","phase":"Phase 1"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03552718 (NCT03552718)","item":"https://clinsight.pract.eu/trials/NCT03552718/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03552718 (NCT03552718)?","acceptedAnswer":{"@type":"Answer","text":"NCT03552718 is a Phase 1 study sponsored by NantBioScience, Inc. evaluating Unclassified in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03552718?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03552718."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03552718</span>
             <span class="badge phase">Phase 1</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            <span class="badge vacant"><i class="fa-solid fa-triangle-exclamation"></i> Results-Vacant</span>
         </div>
 
         <h1>QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.</h1>
         <p class="lead">QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=YE-NEO-001" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (YE-NEO-001) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Colorectal Cancer, Breast Cancer, Head and Neck Squamous Cell Carcinoma, Melanoma, Non Small Cell Lung Cancer, Pancreatic Cancer, Liver Cancer</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Pre-treatment Phase: Tissue Procurement and Development of Vaccine</li><li>Age ≥ 18 years old.</li><li>Able to understand and provide a signed informed consent that fulfills the relevant IRB or IEC guidelines.</li><li>Histologically-confirmed cancer amenable to treatment with curative intent as part of SoC. Must be willing to provide a tumor tissue sample (either a tumor biopsy specimen or tissue from resected tumor not used for diagnostic purposes) and a blood sample for tumor molecular profiling.<br><br>   * Solid cancers include any of the following surgically resectable cancers: colorectal cancer, head and neck squamous cell carcinoma, non-small cell lung cancer, breast cancer (either hormone receptor positive, HER2-positive or negative, or triple-negative breast cancer), pancreatic cancer, liver cancer, and melanoma. Curative therapy, whether surgery, radiation therapy, or adjuvant chemotherapy, must be completed per National Comprehensive Cancer Network (NCCN) guidelines.</li><li>Must be willing to agree to initiation of development of personalized YE-NEO-001 vaccine.<br><br>Treatment Phase:</li><li>No evidence of disease (NED) at first assessment post multi-modality therapy (ie, surgery and/or radiation therapy and/or chemotherapy). Subjects treated with definitive radiation therapy are considered NED if they have no evidence of cancer growth on the first and second surveillance CT scans. Subjects who have disease recurrence prior to the start of the vaccination process are also eligible if no satisfactory alternative treatment options are available or if subject has refused all other available therapies.</li><li>Must have received \&lt; 6 months of SoC therapy.</li><li>Able to understand and provide a signed informed consent that fulfills the relevant IRB or IEC guidelines.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Pre-treatment Phase: Tissue Procurement and Development of Vaccine<br><br>1\. Unable or unwilling to attend required study visits and return for adequate follow-up, as required by this protocol.<br><br>Treatment Phase:</li><li>Serious uncontrolled concomitant disease that would contraindicate the use of the investigational drug used in this study or that would put the subject at high risk for treatment-related complications.</li><li>Active autoimmune disease requiring systemic immunosuppressive treatment within 4 weeks prior to enrollment on this study (eg, lupus erythematosus, rheumatoid arthritis, Addison&#39;s disease, autoimmune disease associated with lymphoma, ankylosing spondylitis, scleroderma, multiple sclerosis). A history of inactive autoimmune disease or autoimmune disease not requiring systemic immunosuppressive therapy within 4 weeks prior to study enrollment is allowed.</li><li>History of organ transplant requiring immunosuppression.</li><li>History of or active inflammatory bowel disease (eg, Crohn&#39;s disease, ulcerative colitis).</li><li>Inadequate organ function, evidenced by the following laboratory results:<br><br>   1. ANC \&lt; 1,000 cells/mm\^3.<br>   2. Platelet count \&lt; 75,000 cells/mm\^3.<br>   3. Uncorrectable grade 3 anemia (hemoglobin \&lt; 8 g/dL).<br>   4. Total bilirubin \&gt; ULN (unless the subject has documented Gilbert&#39;s syndrome).<br>   5. AST (SGOT) or ALT (SGPT) \&gt; 2.5 × ULN (\&gt; 5 × ULN in subjects with liver metastases).<br>   6. Alkaline phosphatase levels \&gt; 2.5 × ULN (\&gt; 5 × ULN in subjects with liver metastases, or \&gt; 10 × ULN in subjects with bone metastases).<br>   7. Serum creatinine \&gt; 2.0 mg/dL or 177 μmol/L.</li><li>Uncontrolled hypertension (systolic \&gt; 160 mm Hg and/or diastolic \&gt; 110 mm Hg) or clinically significant (ie, active) cardiovascular disease, cerebrovascular accident/stroke, or myocardial infarction within 6 months prior to first study medication; unstable angina; congestive heart failure of New York Heart Association grade 2 or higher; or serious cardiac arrhythmia requiring medication. Subjects with uncontrolled hypertension should be medically managed on a stable regimen to control hypertension prior to study entry.</li><li>Positive results of screening test for HIV.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03552718" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03552718" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03552718" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03552718)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03552718","acronym":null,"briefTitle":"QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.","officialTitle":"QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.","sponsor":"NantBioScience, Inc.","phase":"Phase 1","status":"COMPLETED","modality":"Targeted Oncology & Systemic Therapy","conditions":["Colorectal Cancer","Breast Cancer","Head and Neck Squamous Cell Carcinoma","Melanoma","Non Small Cell Lung Cancer","Pancreatic Cancer","Liver Cancer"],"interventions":["YE-NEO-001"],"primaryOutcomes":[{"measure":"Incidence of treatment-emergent adverse events","description":"","timeFrame":"19 months"},{"measure":"Recommended Phase 2 Dose","description":"","timeFrame":"19 months"}],"completionDate":"2025-03-18","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03552718","acronym":null,"briefTitle":"QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.","officialTitle":"QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.","sponsor":"NantBioScience, Inc.","phase":"Phase 1","status":"COMPLETED","modality":"Unclassified","conditions":["Colorectal Cancer","Breast Cancer","Head and Neck Squamous Cell Carcinoma","Melanoma","Non Small Cell Lung Cancer","Pancreatic Cancer","Liver Cancer"],"interventions":["YE-NEO-001"],"primaryOutcomes":[{"measure":"Incidence of treatment-emergent adverse events","description":"","timeFrame":"19 months"},{"measure":"Recommended Phase 2 Dose","description":"","timeFrame":"19 months"}],"completionDate":"2025-03-18","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.. ClinicalTrials.gov Identifier: NCT03552718. Primary Sponsor: NantBioScience, Inc.. Available at: https://clinsight.pract.eu/trials/NCT03552718/";

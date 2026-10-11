@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT06265428 NCT06265428 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Antibody-Drug Conjugates (ADC) · Sponsor: DualityBio Inc.">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: ADC · Sponsor: DualityBio Inc.">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT06265428/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06265428 (NCT06265428): A Study to Compare DB-1303/BNT323 Versus T-DM1 in Breast Cancer","url":"https://clinsight.pract.eu/trials/NCT06265428/","studySubject":{"@type":"MedicalCondition","name":"HER2-positive Breast Cancer"},"sponsor":"DualityBio Inc.","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT06265428 (NCT06265428)","item":"https://clinsight.pract.eu/trials/NCT06265428/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06265428 (NCT06265428)?","acceptedAnswer":{"@type":"Answer","text":"NCT06265428 is a Phase 3 study sponsored by DualityBio Inc. evaluating Antibody-Drug Conjugates (ADC) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06265428?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06265428."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06265428 (NCT06265428): A Study to Compare DB-1303/BNT323 Versus T-DM1 in Breast Cancer","url":"https://clinsight.pract.eu/trials/NCT06265428/","studySubject":{"@type":"MedicalCondition","name":"HER2-positive Breast Cancer"},"sponsor":"DualityBio Inc.","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT06265428 (NCT06265428)","item":"https://clinsight.pract.eu/trials/NCT06265428/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06265428 (NCT06265428)?","acceptedAnswer":{"@type":"Answer","text":"NCT06265428 is a Phase 3 study sponsored by DualityBio Inc. evaluating ADC in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06265428?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06265428."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT06265428</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Antibody-Drug Conjugates (ADC)</span>
+            <span class="badge modality">ADC</span>
+            
         </div>
 
         <h1>A Study to Compare DB-1303/BNT323 Versus T-DM1 in Breast Cancer</h1>
         <p class="lead">A Phase III, Multicenter, Open-label, Randomized Study to Compare DB-1303 Versus T-DM1 in Patients With HER2-positive Unresectable/Metastatic Breast Cancer Who Have Been Treated With Trastuzumab and a Taxane (Dynasty-Breast01)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=DB-1303" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (DB-1303) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for HER2-positive Breast Cancer</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Male or female adults ≥ 18 years at the time of voluntary signing of informed consent.</li><li>Pathologically confirmed unresectable or metastatic HER2 positive breast cancer previously treated with trastuzumab and taxane</li><li>Eastern Cooperative Oncology Group (ECOG) performance status score is 0 or 1.</li><li>Presence of at least one measurable lesion according to RECIST v1.1</li><li>Expected survival time ≥ 12 weeks.</li><li>Patients must give informed consent to this study and voluntarily sign written informed consent form prior to the study.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Prior anti-HER2 ADC therapy.</li><li>Previous history of interstitial lung disease/noninfectious pneumonitis/radiation pneumonitis requiring steroid therapy.</li><li>Known serious hypersensitivity to the active ingredients of the study drug, inactive ingredients in the formulation, or other antibody drugs.</li><li>Multiple primary malignancies within 3 years, except for adequately resected non-melanoma skin cancer, curatively treated in situ tumor, or contralateral breast cancer</li><li>Uncontrolled infection requiring intravenous antibiotics, antiviral or antifungal agents, autoimmune disease requiring treatment, uncontrolled diabetes, hypertension, or other systemic disease that makes compliance with study procedures difficult</li><li>Unrecovered toxicity from prior anticancer therapy, defined as toxicity (except for alopecia) not recovered to ≤Grade 1 (NCI-CTCAE v5.0) or baseline.<br><br>NOTE: Other protocol defined Inclusion/Exclusion criteria may apply.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT06265428" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT06265428" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT06265428" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT06265428)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Antibody-Drug Conjugates (ADC)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in ADC</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT06265428","acronym":null,"briefTitle":"A Study to Compare DB-1303/BNT323 Versus T-DM1 in Breast Cancer","officialTitle":"A Phase III, Multicenter, Open-label, Randomized Study to Compare DB-1303 Versus T-DM1 in Patients With HER2-positive Unresectable/Metastatic Breast Cancer Who Have Been Treated With Trastuzumab and a Taxane (Dynasty-Breast01)","sponsor":"DualityBio Inc.","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Antibody-Drug Conjugates (ADC)","conditions":["HER2-positive Breast Cancer"],"interventions":["DB-1303/BNT323","T-DM1"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS) by Blinded Independent Central Review (BICR) assessment per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1)","description":"Defined as the time from randomization to the first documented disease progression per RECIST 1.1 as assessed by BICR or death due to any cause, whichever occurs first","timeFrame":"Up to approximately 24 months."}],"completionDate":"2026-02","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT06265428","acronym":null,"briefTitle":"A Study to Compare DB-1303/BNT323 Versus T-DM1 in Breast Cancer","officialTitle":"A Phase III, Multicenter, Open-label, Randomized Study to Compare DB-1303 Versus T-DM1 in Patients With HER2-positive Unresectable/Metastatic Breast Cancer Who Have Been Treated With Trastuzumab and a Taxane (Dynasty-Breast01)","sponsor":"DualityBio Inc.","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"ADC","conditions":["HER2-positive Breast Cancer"],"interventions":["DB-1303/BNT323","T-DM1"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS) by Blinded Independent Central Review (BICR) assessment per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1)","description":"Defined as the time from randomization to the first documented disease progression per RECIST 1.1 as assessed by BICR or death due to any cause, whichever occurs first","timeFrame":"Up to approximately 24 months."}],"completionDate":"2026-02","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "A Study to Compare DB-1303/BNT323 Versus T-DM1 in Breast Cancer. ClinicalTrials.gov Identifier: NCT06265428. Primary Sponsor: DualityBio Inc.. Available at: https://clinsight.pract.eu/trials/NCT06265428/";

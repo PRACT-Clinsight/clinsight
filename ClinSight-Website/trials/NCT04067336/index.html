@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04067336 NCT04067336 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Kura Oncology, Inc.">
+    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Unclassified · Sponsor: Kura Oncology, Inc.">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04067336/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04067336 (NCT04067336): First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia","url":"https://clinsight.pract.eu/trials/NCT04067336/","studySubject":{"@type":"MedicalCondition","name":"Advanced Malignant Neoplasm"},"sponsor":"Kura Oncology, Inc.","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04067336 (NCT04067336)","item":"https://clinsight.pract.eu/trials/NCT04067336/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04067336 (NCT04067336)?","acceptedAnswer":{"@type":"Answer","text":"NCT04067336 is a Phase 1, Phase 2 study sponsored by Kura Oncology, Inc. evaluating Targeted Oncology &amp; Systemic Therapy in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04067336?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04067336."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04067336 (NCT04067336): First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia","url":"https://clinsight.pract.eu/trials/NCT04067336/","studySubject":{"@type":"MedicalCondition","name":"Advanced Malignant Neoplasm"},"sponsor":"Kura Oncology, Inc.","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT04067336 (NCT04067336)","item":"https://clinsight.pract.eu/trials/NCT04067336/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04067336 (NCT04067336)?","acceptedAnswer":{"@type":"Answer","text":"NCT04067336 is a Phase 1, Phase 2 study sponsored by Kura Oncology, Inc. evaluating Unclassified in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04067336?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04067336."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04067336</span>
             <span class="badge phase">Phase 1, Phase 2</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia</h1>
         <p class="lead">A Phase 1/2 First in Human Study of the Menin-MLL(KMT2A) Inhibitor KO-539 in Patients With Relapsed or Refractory Acute Myeloid Leukemia</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/40997296/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 40997296)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 40997296 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Ziftomenib" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Ziftomenib) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Advanced Malignant Neoplasm, Acute Myeloid Leukemia, Mixed Lineage Leukemia, Mixed Lineage Acute Leukemia, Acute Leukemia of Ambiguous Lineage, Mixed Phenotype Acute Leukemia, Acute Lymphoblastic Leukemia</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Key <br><br>Patients with refractory or relapsed AML defined as the reappearance of ≥ 5% blasts in the bone marrow and who have also failed or are ineligible for any approved standard of care therapies, including HSCT.</li><li>Phase 1b:<br><br>   * Patients with a documented lysine\[K\]-specific methyltransferase 2-rearrangement (KMT2A-r), or<br>   * Patients with a documented nucleophosmin 1 mutation (NPM1-m)</li><li>Phase 2:<br><br>   * Patients with a documented nucleophosmin 1 mutation (NPM1-m)</li><li>Sub-studies:<br><br>   * Sub-studies 1 and 2: Patients with R/R AML with NPM1-m or other mutations associated with MEIS1 overexpression.<br>   * Sub-study 3: Patients with R/R Acute Lymphoblastic Leukemia (ALL) with KMT2A-r.<br>   * Sub-study 4: Patients with R/R AML with mutations associated with MEIS1 overexpression.</li><li>≥ 18 years of age.</li><li>Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2, and a life expectancy of at least 2 months.</li><li>Adequate liver and kidney function according to protocol requirements.</li><li>Peripheral white blood cell (WBC) counts ≤ 30,000/μL. Patients may receive hydroxyurea to control and maintain white blood cell count prior to enrollment.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Diagnosis of acute promyelocytic leukemia.</li><li>Diagnosis of chronic myelogenous leukemia in blast crisis.</li><li>Donor lymphocyte infusion \&lt; 30 days prior to study entry.</li><li>Clinically active central nervous system (CNS) leukemia.</li><li>Undergone HSCT and have not had adequate hematologic recovery.</li><li>Receiving immunosuppressive therapy post HSCT within 2 weeks of Cycle 1 Day 1.</li><li>Grade ≥ 2 active graft-versus-host disease (GVHD), moderate or severe limited chronic GVHD, or extensive chronic GVHD of any severity.</li><li>Received chemotherapy immunotherapy, radiotherapy, or any ancillary therapy that is considered to be investigational (i.e., used for non-approved indications(s) and in the context of a research investigation) \&lt; 14 days prior to the first dose of ziftomenib or within 5 drug half-lives prior to the first dose of study drug.</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04067336" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04067336" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04067336" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04067336)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/40997296/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 40997296)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT04067336" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04067336","acronym":null,"briefTitle":"First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia","officialTitle":"A Phase 1/2 First in Human Study of the Menin-MLL(KMT2A) Inhibitor KO-539 in Patients With Relapsed or Refractory Acute Myeloid Leukemia","sponsor":"Kura Oncology, Inc.","phase":"Phase 1, Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Targeted Oncology & Systemic Therapy","conditions":["Advanced Malignant Neoplasm","Acute Myeloid Leukemia","Mixed Lineage Leukemia","Mixed Lineage Acute Leukemia","Acute Leukemia of Ambiguous Lineage","Mixed Phenotype Acute Leukemia","Acute Lymphoblastic Leukemia"],"interventions":["Ziftomenib","Midazolam","Itraconazole"],"primaryOutcomes":[{"measure":"Phase 1a: Maximum tolerated dose (MTD) and/or the recommended Phase 2 dose (RP2D)","description":"MTD is defined as the highest dose that is not expected to cause dose limiting toxicity (DLT) in more than 20% of patients.","timeFrame":"Dose Limiting Toxicities (DLTs) will be evaluated during the first 28 days (1 cycle)"},{"measure":"Phase 1b: Number of patients who experience Adverse Events (AEs) and Serious Adverse Events (SAEs)","description":"Assessed by NCI-CTCAE v5.0","timeFrame":"During treatment and up to approximately 28 days after treatment discontinuation, or until immediately before the initiation of another anticancer therapy, whichever occurs first."},{"measure":"Phase 1b: Minimum biologically effective dose","description":"Minimum biologically effective dose in dosing cohorts which have demonstrated biological activity and have been determined to be safe as a part of Part 1a","timeFrame":"For at least 12 months following end of treatment"},{"measure":"Phase 1a, 1b, and 2: Evidence of anti-leukemia activity","description":"Assessed by the CR + CRh rate","timeFrame":"For at least 12 months following end of treatment"},{"measure":"Sub-study 1: Time to observed maximum plasma concentration (Tmax) of ziftomenib and midazolam","description":"Tmax of ziftomenib, its metabolites, midazolam, and 1-hydroxymidazolam","timeFrame":"Cycle 1 on Days 1 and 15 at predose and postdose"},{"measure":"Sub-study 1: Area under the plasma concentration-time curve from time 0 to time t (AUC0-t) of ziftomenib and midazolam","description":"AUC0-t of ziftomenib, its metabolites, midazolam, and 1-hydroxymidazolam","timeFrame":"Cycle 1 on Days 1 and 15 at predose and postdose"},{"measure":"Sub-study 1: Maximum observed plasma concentration (Cmax) of ziftomenib and midazolam","description":"Cmax of ziftomenib, its metabolites, midazolam, and 1-hydroxymidazolam","timeFrame":"Cycle 1 on Days 1 and 15 at predose and postdose"},{"measure":"Sub-study 2: Time to observed maximum plasma concentration (Tmax) of ziftomenib and itraconazole","description":"Tmax of ziftomenib, its metabolites, and itraconazole","timeFrame":"Cycle 1 on Days 1, 15, and 22 at predose and postdose"},{"measure":"Sub-study 2: Area under the plasma concentration-time curve from time 0 to time t (AUC0-t) of ziftomenib and itraconazole","description":"AUC0-t of ziftomenib, its metabolites, and itraconazole","timeFrame":"Cycle 1 on Days 1, 15, and 22 at predose and postdose"},{"measure":"Sub-study 2: Maximum observed plasma concentration (Cmax) of ziftomenib and itraconazole","description":"Cmax of ziftomenib, its metabolites, and itraconazole","timeFrame":"Cycle 1 on Days 1, 15, and 22 at predose and postdose"},{"measure":"Sub-study 3: Minimum biologically effective dose (MBED) and/or the recommended Phase 2 dose (RP2D)","description":"Assessed by the number of patients that experience Adverse Events (AEs) and Serious Adverse Events (SAEs) per NCI-CTCAE v5.0","timeFrame":"During treatment and up to approximately 28 days after treatment discontinuation, or until immediately before the initiation of another anticancer therapy, whichever occurs first"},{"measure":"Sub-study 3: Minimum biologically effective dose (MBED) and/or the recommended Phase 2 dose (RP2D)","description":"Assessed by CR","timeFrame":"For at least 12 months following end of treatment"},{"measure":"Sub-study 3: Change in Eastern Cooperative Oncology Group (ECOG) status","description":"To assess the change in ECOG status","timeFrame":"Timeframe: from Baseline to End of Treatment"},{"measure":"Sub-study 3: Time to observed maximum plasma concentration (Tmax) of ziftomenib","description":"Tmax of ziftomenib","timeFrame":"Postdose on Cycle 1 Day 1 and Cycle 2 Day 1. Predose at Cycle 2 onwards"},{"measure":"Sub-study 3: Area under the plasma concentration-time curve from time 0 to time t (AUC0-t) of ziftomenib","description":"AUC0-t of ziftomenib","timeFrame":"Postdose on Cycle 1 Day 1 and Cycle 2 Day 1. Predose at Cycle 2 onwards"},{"measure":"Sub-study 3: Maximum observed plasma concentration (Cmax) of ziftomenib","description":"Cmax of ziftomenib","timeFrame":"Postdose on Cycle 1 Day 1 and Cycle 2 Day 1. Predose at Cycle 2 onwards."},{"measure":"Sub-study 4: Complete remission (CR) and complete remission with partial hematologic recovery (CRh)","description":"To assess the CR+CRh rate","timeFrame":"For at least 12 months following end of treatment"}],"completionDate":"2028-10-16","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04067336","acronym":null,"briefTitle":"First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia","officialTitle":"A Phase 1/2 First in Human Study of the Menin-MLL(KMT2A) Inhibitor KO-539 in Patients With Relapsed or Refractory Acute Myeloid Leukemia","sponsor":"Kura Oncology, Inc.","phase":"Phase 1, Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Unclassified","conditions":["Advanced Malignant Neoplasm","Acute Myeloid Leukemia","Mixed Lineage Leukemia","Mixed Lineage Acute Leukemia","Acute Leukemia of Ambiguous Lineage","Mixed Phenotype Acute Leukemia","Acute Lymphoblastic Leukemia"],"interventions":["Ziftomenib","Midazolam","Itraconazole"],"primaryOutcomes":[{"measure":"Phase 1a: Maximum tolerated dose (MTD) and/or the recommended Phase 2 dose (RP2D)","description":"MTD is defined as the highest dose that is not expected to cause dose limiting toxicity (DLT) in more than 20% of patients.","timeFrame":"Dose Limiting Toxicities (DLTs) will be evaluated during the first 28 days (1 cycle)"},{"measure":"Phase 1b: Number of patients who experience Adverse Events (AEs) and Serious Adverse Events (SAEs)","description":"Assessed by NCI-CTCAE v5.0","timeFrame":"During treatment and up to approximately 28 days after treatment discontinuation, or until immediately before the initiation of another anticancer therapy, whichever occurs first."},{"measure":"Phase 1b: Minimum biologically effective dose","description":"Minimum biologically effective dose in dosing cohorts which have demonstrated biological activity and have been determined to be safe as a part of Part 1a","timeFrame":"For at least 12 months following end of treatment"},{"measure":"Phase 1a, 1b, and 2: Evidence of anti-leukemia activity","description":"Assessed by the CR + CRh rate","timeFrame":"For at least 12 months following end of treatment"},{"measure":"Sub-study 1: Time to observed maximum plasma concentration (Tmax) of ziftomenib and midazolam","description":"Tmax of ziftomenib, its metabolites, midazolam, and 1-hydroxymidazolam","timeFrame":"Cycle 1 on Days 1 and 15 at predose and postdose"},{"measure":"Sub-study 1: Area under the plasma concentration-time curve from time 0 to time t (AUC0-t) of ziftomenib and midazolam","description":"AUC0-t of ziftomenib, its metabolites, midazolam, and 1-hydroxymidazolam","timeFrame":"Cycle 1 on Days 1 and 15 at predose and postdose"},{"measure":"Sub-study 1: Maximum observed plasma concentration (Cmax) of ziftomenib and midazolam","description":"Cmax of ziftomenib, its metabolites, midazolam, and 1-hydroxymidazolam","timeFrame":"Cycle 1 on Days 1 and 15 at predose and postdose"},{"measure":"Sub-study 2: Time to observed maximum plasma concentration (Tmax) of ziftomenib and itraconazole","description":"Tmax of ziftomenib, its metabolites, and itraconazole","timeFrame":"Cycle 1 on Days 1, 15, and 22 at predose and postdose"},{"measure":"Sub-study 2: Area under the plasma concentration-time curve from time 0 to time t (AUC0-t) of ziftomenib and itraconazole","description":"AUC0-t of ziftomenib, its metabolites, and itraconazole","timeFrame":"Cycle 1 on Days 1, 15, and 22 at predose and postdose"},{"measure":"Sub-study 2: Maximum observed plasma concentration (Cmax) of ziftomenib and itraconazole","description":"Cmax of ziftomenib, its metabolites, and itraconazole","timeFrame":"Cycle 1 on Days 1, 15, and 22 at predose and postdose"},{"measure":"Sub-study 3: Minimum biologically effective dose (MBED) and/or the recommended Phase 2 dose (RP2D)","description":"Assessed by the number of patients that experience Adverse Events (AEs) and Serious Adverse Events (SAEs) per NCI-CTCAE v5.0","timeFrame":"During treatment and up to approximately 28 days after treatment discontinuation, or until immediately before the initiation of another anticancer therapy, whichever occurs first"},{"measure":"Sub-study 3: Minimum biologically effective dose (MBED) and/or the recommended Phase 2 dose (RP2D)","description":"Assessed by CR","timeFrame":"For at least 12 months following end of treatment"},{"measure":"Sub-study 3: Change in Eastern Cooperative Oncology Group (ECOG) status","description":"To assess the change in ECOG status","timeFrame":"Timeframe: from Baseline to End of Treatment"},{"measure":"Sub-study 3: Time to observed maximum plasma concentration (Tmax) of ziftomenib","description":"Tmax of ziftomenib","timeFrame":"Postdose on Cycle 1 Day 1 and Cycle 2 Day 1. Predose at Cycle 2 onwards"},{"measure":"Sub-study 3: Area under the plasma concentration-time curve from time 0 to time t (AUC0-t) of ziftomenib","description":"AUC0-t of ziftomenib","timeFrame":"Postdose on Cycle 1 Day 1 and Cycle 2 Day 1. Predose at Cycle 2 onwards"},{"measure":"Sub-study 3: Maximum observed plasma concentration (Cmax) of ziftomenib","description":"Cmax of ziftomenib","timeFrame":"Postdose on Cycle 1 Day 1 and Cycle 2 Day 1. Predose at Cycle 2 onwards."},{"measure":"Sub-study 4: Complete remission (CR) and complete remission with partial hematologic recovery (CRh)","description":"To assess the CR+CRh rate","timeFrame":"For at least 12 months following end of treatment"}],"completionDate":"2028-10-16","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia. ClinicalTrials.gov Identifier: NCT04067336. Primary Sponsor: Kura Oncology, Inc.. Available at: https://clinsight.pract.eu/trials/NCT04067336/";

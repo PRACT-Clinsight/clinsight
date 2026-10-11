@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT07186192 NCT07186192 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: City of Hope Medical Center">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Unclassified · Sponsor: City of Hope Medical Center">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT07186192/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07186192 (NCT07186192): Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor (CAR-T) Therapy","url":"https://clinsight.pract.eu/trials/NCT07186192/","studySubject":{"@type":"MedicalCondition","name":"Hematologic Malignancies"},"sponsor":"City of Hope Medical Center","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT07186192 (NCT07186192)","item":"https://clinsight.pract.eu/trials/NCT07186192/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07186192 (NCT07186192)?","acceptedAnswer":{"@type":"Answer","text":"NCT07186192 is a Phase 3 study sponsored by City of Hope Medical Center evaluating Targeted Oncology &amp; Systemic Therapy in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07186192?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07186192."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07186192 (NCT07186192): Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor (CAR-T) Therapy","url":"https://clinsight.pract.eu/trials/NCT07186192/","studySubject":{"@type":"MedicalCondition","name":"Hematologic Malignancies"},"sponsor":"City of Hope Medical Center","status":"RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT07186192 (NCT07186192)","item":"https://clinsight.pract.eu/trials/NCT07186192/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07186192 (NCT07186192)?","acceptedAnswer":{"@type":"Answer","text":"NCT07186192 is a Phase 3 study sponsored by City of Hope Medical Center evaluating Unclassified in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07186192?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07186192."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT07186192</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">RECRUITING</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor (CAR-T) Therapy</h1>
         <p class="lead">Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor-T Cell (CAR-T)Therapy</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Educational" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Educational) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,28 +656,18 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Hematologic Malignancies</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Patient Inclusion Criteria Informed Consent and Willingness to Participate</li><li>Documented informed consent of the participant and/or legally authorized representative Age and Language Criteria</li><li>Age ≥ 18 years old at the time of enrollment</li><li>Ability to read and understand English or Spanish for Questionnaires Nature of Illness and Treatment Related Criteria</li><li>Relapsed or refractory hematologic malignancy</li><li>Scheduled to receive outpatient standard of care (SOC) CAR-T therapy</li><li>Has a FCG committed to living with the patient for the duration of the study<br><br>Family Caregiver Inclusion Criteria Informed Consent and Willingness to Participate</li><li>Documented informed consent of the participant and/or legally authorized representative Age and Language Criteria</li>
                     </ul>
                 </div>
-                <div class="criteria-box">
-                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
-                    <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
 
@@ -632,9 +676,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT07186192" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT07186192" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT07186192" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT07186192)
                 </a>
@@ -647,7 +695,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT04526691/" class="related-card">
@@ -697,7 +745,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT07186192","acronym":null,"briefTitle":"Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor (CAR-T) Therapy","officialTitle":"Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor-T Cell (CAR-T)Therapy","sponsor":"City of Hope Medical Center","phase":"Phase 3","status":"RECRUITING","modality":"Targeted Oncology & Systemic Therapy","conditions":["Hematologic Malignancies"],"interventions":["Educational Intervention","Health Telemonitoring","Questionnaire Administration","Best Practice"],"primaryOutcomes":[{"measure":"MD Anderson Symptom Inventory CAR-T module (MDASI-CAR - patient)","description":"This is validated measure of 22 CAR-T specific symptoms and other cancer-related symptoms. Symptom severity is rated on a 10-point scale: 1-3 mild, 4-6 moderate, ≥7 severe. Patients also rate how much their symptoms interfere with 6 functional domains: walking, activity, working/housework, relationships, enjoyment of life, and mood. A change in 1.2 points is clinically meaningful and cutoffs for clinical deficits have been defined. Cronbach's α reliability: 82-0.94.","timeFrame":"Baseline, Day 15 - Day 20 post-CAR-T, Day 30, Day 60, and Day 90"},{"measure":"Distress Thermometer (DT - FCG)","description":"This is an efficient, low-subject-burden measure to evaluate psychological distress over the past week, based on a scale of 0 (no distress) to 10 (extremely distressed). A cut-off of 3/10 indicates a need for intervention, with acceptable sensitivity (94.1%) and specificity (71.2%) compared to the longer Hospital Anxiety and Depression Scale (HADS). The DT has been validated in FCGs, and we chose it for its brevity, accuracy ease of use in remote monitoring, and validity in FCGs.","timeFrame":"Baseline, Day 15 - Day 20 post-CAR-T, Day 30, Day 60, and Day 90"}],"completionDate":"2029-03-29","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT07186192","acronym":null,"briefTitle":"Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor (CAR-T) Therapy","officialTitle":"Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor-T Cell (CAR-T)Therapy","sponsor":"City of Hope Medical Center","phase":"Phase 3","status":"RECRUITING","modality":"Unclassified","conditions":["Hematologic Malignancies"],"interventions":["Educational Intervention","Health Telemonitoring","Questionnaire Administration","Best Practice"],"primaryOutcomes":[{"measure":"MD Anderson Symptom Inventory CAR-T module (MDASI-CAR - patient)","description":"This is validated measure of 22 CAR-T specific symptoms and other cancer-related symptoms. Symptom severity is rated on a 10-point scale: 1-3 mild, 4-6 moderate, ≥7 severe. Patients also rate how much their symptoms interfere with 6 functional domains: walking, activity, working/housework, relationships, enjoyment of life, and mood. A change in 1.2 points is clinically meaningful and cutoffs for clinical deficits have been defined. Cronbach's α reliability: 82-0.94.","timeFrame":"Baseline, Day 15 - Day 20 post-CAR-T, Day 30, Day 60, and Day 90"},{"measure":"Distress Thermometer (DT - FCG)","description":"This is an efficient, low-subject-burden measure to evaluate psychological distress over the past week, based on a scale of 0 (no distress) to 10 (extremely distressed). A cut-off of 3/10 indicates a need for intervention, with acceptable sensitivity (94.1%) and specificity (71.2%) compared to the longer Hospital Anxiety and Depression Scale (HADS). The DT has been validated in FCGs, and we chose it for its brevity, accuracy ease of use in remote monitoring, and validity in FCGs.","timeFrame":"Baseline, Day 15 - Day 20 post-CAR-T, Day 30, Day 60, and Day 90"}],"completionDate":"2029-03-29","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor (CAR-T) Therapy. ClinicalTrials.gov Identifier: NCT07186192. Primary Sponsor: City of Hope Medical Center. Available at: https://clinsight.pract.eu/trials/NCT07186192/";

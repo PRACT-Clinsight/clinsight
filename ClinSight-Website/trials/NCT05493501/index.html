@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT05493501 NCT05493501 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Therapy (Small Molecule / TKI) · Sponsor: EQRx International, Inc.">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: TKI / Small Molecule · Sponsor: EQRx International, Inc.">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT05493501/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT05493501 (NCT05493501): Aumolertinib With Chemotherapy or Alone Compared With Osimertinib in Patients With Epidermal Growth Factor Receptor-Mutant Non-Small Cell Lung Cancer","url":"https://clinsight.pract.eu/trials/NCT05493501/","studySubject":{"@type":"MedicalCondition","name":"NSCLC"},"sponsor":"EQRx International, Inc.","status":"TERMINATED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT05493501 (NCT05493501)","item":"https://clinsight.pract.eu/trials/NCT05493501/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05493501 (NCT05493501)?","acceptedAnswer":{"@type":"Answer","text":"NCT05493501 is a Phase 3 study sponsored by EQRx International, Inc. evaluating Targeted Therapy (Small Molecule / TKI) in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05493501?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05493501."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT05493501 (NCT05493501): Aumolertinib With Chemotherapy or Alone Compared With Osimertinib in Patients With Epidermal Growth Factor Receptor-Mutant Non-Small Cell Lung Cancer","url":"https://clinsight.pract.eu/trials/NCT05493501/","studySubject":{"@type":"MedicalCondition","name":"NSCLC"},"sponsor":"EQRx International, Inc.","status":"TERMINATED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT05493501 (NCT05493501)","item":"https://clinsight.pract.eu/trials/NCT05493501/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05493501 (NCT05493501)?","acceptedAnswer":{"@type":"Answer","text":"NCT05493501 is a Phase 3 study sponsored by EQRx International, Inc. evaluating TKI / Small Molecule in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05493501?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05493501."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -542,25 +594,36 @@
         <div class="badge-row">
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT05493501</span>
             <span class="badge phase">Phase 3</span>
-            <span class="badge status ">TERMINATED</span>
-            <span class="badge modality">Targeted Therapy (Small Molecule / TKI)</span>
+            <span class="badge status completed">TERMINATED</span>
+            <span class="badge modality">TKI / Small Molecule</span>
+            
         </div>
 
         <h1>Aumolertinib With Chemotherapy or Alone Compared With Osimertinib in Patients With Epidermal Growth Factor Receptor-Mutant Non-Small Cell Lung Cancer</h1>
         <p class="lead">A Randomized, Three-Arm, Open-Label Phase 3b Clinical Trial of Aumolertinib, Versus Aumolertinib With Chemotherapy, Versus Osimertinib for Patients With Metastatic NSCLC and an EGFR Mutation (TREBLE)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT05493501/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT05493501/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT05493501?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Aumolertinib" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Aumolertinib) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +665,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for NSCLC</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Is at least 18 years of age (or the legal age of consent in the jurisdiction in which the study is taking place)</li><li>Has pathologically confirmed NSCLC that is Stage IIIB, metastatic (Stage IVA or IVB), or recurrent, and which is not amenable to curative intent therapy.</li><li>Tumor harbors one of the 2 common EGFR mutations known to be associated with EGFR-TKI sensitivity-ex19del or L858R-either alone or in combination with other EGFR mutations (eg, G719X, exon 20 insertions, S7681, L861Q)</li><li>Has Eastern Cooperative Oncology group performance status of 0, 1, or 2 at the time of enrollment.</li><li>Has adequate organ function at the time of enrollment.</li><li>Has QTc interval of ≤ 470 ms</li><li>Male participants must agree to use a highly effective method of contraception and to refrain from donating sperm while receiving study treatment</li><li>Female participants are eligible to participate if not pregnant or breastfeeding, and at least one of the following conditions applies: is not of childbearing potential OR is of childbearing potential and using a highly effective contraceptive method while receiving study treatment AND agrees not to donate eggs (ova, oocytes) during this period</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Is a candidate for curative intent therapy for the NSCLC diagnosis.</li><li>Tumor has mixed small-cell and non-small-cell pathology.</li><li>Has received prior systemic treatment for metastatic NSCLC. Prior chemotherapy or immunotherapy is permitted, provided that it was used for treatment of locoregional NSCLC as a component of curative intent therapy and administration was completed more than 6 months ago.</li><li>Has refractory nausea and vomiting, chronic gastrointestinal disease(s), inability to swallow the formulated product (percutaneous endoscopic gastrostomy tube administration may be allowed if tablets are not crushed), or a history of previous significant bowel resection-any of which would preclude adequate absorption of aumolertinib or osimertinib.</li><li>Has active or past medical history of interstitial lung disease, drug-induced interstitial lung disease or radiation pneumonitis that required steroid treatment</li><li>Has evidence of active bacterial, viral, or fungal infection which would preclude safe enrollment, as assessed by the treating Investigator.</li><li>Has significant concomitant condition, that in the Investigator&#39;s judgment would prevent the participant from receiving study treatment or being followed in this study, or which otherwise renders the participant inappropriate for the study.</li><li>For participants in the aumolertinib monotherapy and aumolertinib with chemotherapy arms, use of strong CYP3A4 inhibitors/inducers within 14 days before initial study drug dosing and use of grapefruit-containing products within 72 hours before initial study drug dosing is prohibited.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +691,22 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT05493501" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT05493501" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT05493501/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT05493501/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT05493501?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT05493501" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT05493501)
                 </a>
@@ -647,7 +719,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Therapy (Small Molecule / TKI)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in TKI / Small Molecule</div>
             <div class="related-grid">
                 
                 <a href="../NCT04526691/" class="related-card">
@@ -668,10 +740,10 @@
                     <span style="font-size:11px; color:var(--text-low);">National Cancer Institute (NCI)</span>
                 </a>
                 
-                <a href="../NCT04303780/" class="related-card">
-                    <div class="rel-id">NCT04303780 · Phase 3</div>
-                    <div class="rel-title">Study to Compare AMG 510 &quot;Proposed INN Sotorasib&quot; With Docetaxel in Non Small Cell Lung Cancer (NSCLC) (CodeBreak 200).</div>
-                    <span style="font-size:11px; color:var(--text-low);">Amgen</span>
+                <a href="../NCT04181827/" class="related-card">
+                    <div class="rel-id">NCT04181827 · Phase 3</div>
+                    <div class="rel-title">CARTITUDE-4: A Study Comparing JNJ-68284528, a CAR-T Therapy Directed Against B-cell Maturation Antigen (BCMA), Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Participants With Relapsed and Lenalidomide-Refractory Multiple Myeloma</div>
+                    <span style="font-size:11px; color:var(--text-low);">Janssen Research &amp; Development, LLC</span>
                 </a>
                 
             </div>
@@ -697,7 +769,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT05493501","acronym":null,"briefTitle":"Aumolertinib With Chemotherapy or Alone Compared With Osimertinib in Patients With Epidermal Growth Factor Receptor-Mutant Non-Small Cell Lung Cancer","officialTitle":"A Randomized, Three-Arm, Open-Label Phase 3b Clinical Trial of Aumolertinib, Versus Aumolertinib With Chemotherapy, Versus Osimertinib for Patients With Metastatic NSCLC and an EGFR Mutation (TREBLE)","sponsor":"EQRx International, Inc.","phase":"Phase 3","status":"TERMINATED","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["NSCLC"],"interventions":["Aumolertinib monotherapy","Osimertinib monotherapy","Pemetrexed","Cisplatin","Carboplatin","Paclitaxel","Nab paclitaxel","Gemcitabine"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS) as Assessed by Blinded Independent Central Review (BICR) Per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1","description":"PFS is defined as the time from date of randomization until date of disease progression or death due to any cause, whichever occurs first.","timeFrame":"Up to 5 years"}],"completionDate":"2023-08-31","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT05493501","acronym":null,"briefTitle":"Aumolertinib With Chemotherapy or Alone Compared With Osimertinib in Patients With Epidermal Growth Factor Receptor-Mutant Non-Small Cell Lung Cancer","officialTitle":"A Randomized, Three-Arm, Open-Label Phase 3b Clinical Trial of Aumolertinib, Versus Aumolertinib With Chemotherapy, Versus Osimertinib for Patients With Metastatic NSCLC and an EGFR Mutation (TREBLE)","sponsor":"EQRx International, Inc.","phase":"Phase 3","status":"TERMINATED","modality":"TKI / Small Molecule","conditions":["NSCLC"],"interventions":["Aumolertinib monotherapy","Osimertinib monotherapy","Pemetrexed","Cisplatin","Carboplatin","Paclitaxel","Nab paclitaxel","Gemcitabine"],"primaryOutcomes":[{"measure":"Progression Free Survival (PFS) as Assessed by Blinded Independent Central Review (BICR) Per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1","description":"PFS is defined as the time from date of randomization until date of disease progression or death due to any cause, whichever occurs first.","timeFrame":"Up to 5 years"}],"completionDate":"2023-08-31","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Aumolertinib With Chemotherapy or Alone Compared With Osimertinib in Patients With Epidermal Growth Factor Receptor-Mutant Non-Small Cell Lung Cancer. ClinicalTrials.gov Identifier: NCT05493501. Primary Sponsor: EQRx International, Inc.. Available at: https://clinsight.pract.eu/trials/NCT05493501/";

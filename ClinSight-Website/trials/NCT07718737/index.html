@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT07718737 NCT07718737 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2, Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Multitude Therapeutics Inc.">
+    <meta property="og:description" content="Phase: Phase 2, Phase 3 · Modality: Monoclonal Antibody (mAb) · Sponsor: Multitude Therapeutics Inc.">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT07718737/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07718737 (NCT07718737): Global, Multicenter Study of AMT-116 Versus Investigator&#39;s Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy","url":"https://clinsight.pract.eu/trials/NCT07718737/","studySubject":{"@type":"MedicalCondition","name":"NSCLC (Advanced Non-small Cell Lung Cancer)"},"sponsor":"Multitude Therapeutics Inc.","status":"NOT_YET_RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT07718737 (NCT07718737)","item":"https://clinsight.pract.eu/trials/NCT07718737/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07718737 (NCT07718737)?","acceptedAnswer":{"@type":"Answer","text":"NCT07718737 is a Phase 2, Phase 3 study sponsored by Multitude Therapeutics Inc. evaluating Targeted Oncology &amp; Systemic Therapy in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07718737?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07718737."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT07718737 (NCT07718737): Global, Multicenter Study of AMT-116 Versus Investigator&#39;s Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy","url":"https://clinsight.pract.eu/trials/NCT07718737/","studySubject":{"@type":"MedicalCondition","name":"NSCLC (Advanced Non-small Cell Lung Cancer)"},"sponsor":"Multitude Therapeutics Inc.","status":"NOT_YET_RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT07718737 (NCT07718737)","item":"https://clinsight.pract.eu/trials/NCT07718737/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT07718737 (NCT07718737)?","acceptedAnswer":{"@type":"Answer","text":"NCT07718737 is a Phase 2, Phase 3 study sponsored by Multitude Therapeutics Inc. evaluating Monoclonal Antibody (mAb) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT07718737?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT07718737."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT07718737</span>
             <span class="badge phase">Phase 2, Phase 3</span>
             <span class="badge status ">NOT_YET_RECRUITING</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Monoclonal Antibody (mAb)</span>
+            
         </div>
 
         <h1>Global, Multicenter Study of AMT-116 Versus Investigator&#39;s Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy</h1>
         <p class="lead">Open-Label, Global, Multicenter, Randomized, Phase 2/3 Study of AMT-116 Versus Investigator&#39;s Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=AMT-116" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (AMT-116) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for NSCLC (Advanced Non-small Cell Lung Cancer)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Voluntarily agree to join this clinical trial, sign the informed consent form, and follow all trial arrangements, including scheduled hospital visits, examinations and other study requirements.</li><li>Age between 18 and 80 years old (including 18 and 80 years old) at the time of signing the informed consent form.</li><li>Diagnosed with non-squamous non-small cell lung cancer (NSCLC) confirmed by pathological or cytological tests. The disease must be either locally advanced and unresectable (not suitable for radical chemoradiotherapy) or metastatic advanced lung cancer.</li><li>Must have a clear EGFR gene test result before enrollment. Patients with other actionable gene mutations (excluding EGFR mutation) are eligible. Testing for other genes is not mandatory, and can be performed according to local hospital routine standards and available treatment options.</li><li>Have received no more than one line of chemotherapy for advanced or metastatic lung cancer. Neoadjuvant or adjuvant chemotherapy will be counted as one prior chemotherapy line if the disease progresses within 6 months after the end of treatment.</li><li>Have received at least one prior formal treatment (chemotherapy, targeted therapy or immunotherapy) for advanced or metastatic lung cancer, with subsequent disease progression or recurrence. Participants must meet the corresponding requirements based on their genetic status:<br><br>   6.1 Patients without any actionable gene mutations: Have experienced disease progression after platinum-based chemotherapy and immune checkpoint inhibitor therapy (used alone or combined with chemotherapy), or are not suitable for the above two treatments clinically.<br><br>   6.2 Patients with gene mutations that do not routinely use immunotherapy (e.g., ALK fusion): Have experienced disease progression after targeted therapy for gene mutations and platinum-based chemotherapy, or are not suitable for the above two treatments clinically.<br><br>   6.3 Patients with gene mutations for which immunotherapy is a conventional treatment: Have also experienced disease progression after immune checkpoint inhibitor therapy (used alone or combined with chemotherapy), or are not suitable for immunotherapy clinically.</li><li>The investigator confirms that the patient is suitable for docetaxel treatment (only applicable for Phase 3 trial).</li><li>Have at least one measurable tumor lesion assessed by RECIST 1.1 criteria.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>I. General Exclusion Criteria (Applicable to All Phases)<br><br>  1. Prior treatment with antibody-drug conjugates (ADCs) based on topoisomerase 1 inhibitors.<br>  2. Receipt of any systemic anti-cancer therapy within the shorter period between five half-lives of the drug or 21 days prior to randomization is prohibited.<br><br>     Notes:<br><br>     ① If the half-life of an investigational agent has not been determined, its administration within 21 days prior to randomization is not allowed.<br><br>     ② Patients receiving bisphosphonates or denosumab may continue these medications during the study and are not excluded.<br>  3. Tumor pathology confirms adenosquamous, neuroendocrine, or sarcomatoid features.<br>  4. Presence of actionable activating mutations in the epidermal growth factor receptor (EGFR) gene.<br>  5. Non-small cell lung cancer (NSCLC) patients who are eligible for definitive local therapy alone (e.g., selected stage IIIA patients) are excluded.<br>  6. Central nervous system (CNS) metastases:<br><br>     ① Patients with CNS metastases are eligible only if all the following conditions are fully met: the CNS metastases have been treated with surgical resection and/or radiotherapy at least 28 days prior to randomization; and post-treatment evaluation satisfies all three requirements below: (1) No cerebral edema is observed in screening examinations, and no ongoing need for systemic steroids or anticonvulsant medications; (2) Neurological symptoms are absent or stable (Grade ≤ 1); (3) Follow-up imaging conducted within 28 days prior to randomization shows no progression of treated lesions and no new lesions.<br><br>     ② Note: Patients with a history of leptomeningeal disease are strictly excluded.<br>  7. Unresolved toxicities of Grade \&gt; 1 caused by prior systemic anti-cancer treatment.<br><br>     Note: Patients with Grade ≤ 2 peripheral neuropathy, alopecia of any grade, endocrinopathy well-managed by hormone replacement therapy, or other toxicities judged to pose no safety risks by the investigator are eligible for enrollment.<br>  8. Receipt of wide-field radiotherapy (e.g., irradiation covering more than 30% of bone marrow-bearing bones) within 28 days prior to randomization, or palliative radiotherapy for symptom control within 2 weeks prior to randomization.<br>  9. Undergoing major surgery (excluding vascular access device placement and tumor biopsy) within 28 days prior to randomization, or failure to fully recover from postoperative side effects of such surgery.<br>  10. Presence of severe cardiac diseases, including myocardial infarction or acute coronary syndrome (including unstable angina) within 6 months prior to randomization, New York Heart Association (NYHA) Class III/IV congestive heart failure, uncontrolled hypertension, or uncontrolled cardiac arrhythmia.<br>  11. History of idiopathic pulmonary fibrosis, organizing pneumonia (e.g., bronchiolitis obliterans), drug-induced pneumonitis, or idiopathic pneumonitis; or active pneumonitis identified on screening chest computed tomography (CT). A history of radiation-induced pulmonary fibrosis within the previous radiation field is permitted.<br>  12. History of thromboembolic or cerebrovascular events within 6 months prior to randomization, including transient ischemic attack, stroke, deep vein thrombosis (DVT), and pulmonary embolism (PE).<br><br>      Note: Patients diagnosed with DVT or PE within the above 6-month window may be eligible if they have received standardized anticoagulant treatment (or discontinued anticoagulants when clinically unnecessary) and show no evidence of active disease at screening.<br>  13. Presence of acute or clinically significant bacterial, fungal, or viral infections, including active hepatitis B (HBV), hepatitis C (HCV), or confirmed human immunodeficiency virus (HIV) infection.<br><br>      Note: Patients with chronic HBV, HCV, or HIV infection may be enrolled upon mutual approval by the investigator and sponsor, provided they meet one of the following criteria:<br>      1. HIV-positive patients have received stable antiretroviral therapy (ART) for at least 28 days, with CD4+ T-cell count ≥ 350 cells/μL and HIV viral load \&lt; 400 copies/mL;<br>      2. Patients with chronic HBV infection are on concurrent anti-HBV treatment with HBV viral load below the quantitative limit;<br>      3. Patients with prior HCV infection have completed curative anti-HBV treatment with HCV viral load below the quantitative limit;<br>      4. Patients receiving ongoing anti-HCV treatment have HCV viral load below the quantitative limit.<br>  14. Receipt of live vaccine within 28 days prior to randomization.<br>  15. Requirement for concurrent treatment with strong or moderate cytochrome P450 3A4 (CYP3A4) inhibitors within 1 week prior to the first study drug dose or during the entire treatment period (see Appendix 6 for detailed list).<br>  16. Known or suspected intolerance or hypersensitivity to any components of the investigational medicinal product (IMP).<br>  17. Active alcohol or illicit drug abuse.<br>  18. Female patients who are pregnant or breastfeeding.<br>  19. Presence of any mental or medical condition that impairs the ability to provide informed consent or comply with trial requirements; or any severe acute/chronic medical, psychiatric disease or laboratory abnormality that may increase trial-related risks, interfere with study result interpretation, or is deemed inappropriate for enrollment by the investigator.<br>  20. History of other malignant tumors (excluding the study indication cancer) within 5 years prior to randomization.<br><br>      Note: Patients with adequately treated basal cell skin cancer, non-invasive superficial bladder cancer, cervical carcinoma in situ, breast carcinoma in situ, or prostate carcinoma in situ are eligible if no active disease has been observed for 2 years prior to randomization.<br><br>      II. Phase 3 Specific Exclusion Criteria<br>  21. Prior treatment with docetaxel as monotherapy or combination therapy.<br>  22. Radiological evidence of major blood vessel invasion or encasement by tumor.<br>  23. Radiological evidence of intratumoral cavitation.<br>  24. History of uncontrolled hereditary or acquired thrombotic disorders.<br>  25. Receipt of therapeutic anticoagulation with warfarin, low-molecular-weight heparin, or similar agents. Patients receiving low-dose prophylactic anticoagulation are eligible if they meet the coagulation parameter requirements specified in inclusion criterion 11.<br>  26. Receipt of continuous antiplatelet or anticoagulant therapy (excluding prophylactic anticoagulation for venous patency maintenance) within 2 weeks prior to randomization. Aspirin at a daily dose of up to 325 mg is permitted.<br>  27. Presence of severe unhealed wounds, ulcers, or bone fractures within 28 days prior to randomization.<br>  28. Presence of significant bleeding disorders, vasculitis, or Grade 3/4 gastrointestinal bleeding within 3 months prior to randomization.<br>  29. History of gross hemoptysis (defined as bright red blood sputum or blood volume ≥ 1/2 teaspoon) within 2 months prior to randomization.<br>  30. History of gastrointestinal perforation and/or fistula formation within 6 months prior to randomization.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT07718737" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT07718737" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT07718737" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT07718737)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Monoclonal Antibody (mAb)</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT07718737","acronym":null,"briefTitle":"Global, Multicenter Study of AMT-116 Versus Investigator's Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy","officialTitle":"Open-Label, Global, Multicenter, Randomized, Phase 2/3 Study of AMT-116 Versus Investigator's Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy","sponsor":"Multitude Therapeutics Inc.","phase":"Phase 2, Phase 3","status":"NOT_YET_RECRUITING","modality":"Targeted Oncology & Systemic Therapy","conditions":["NSCLC (Advanced Non-small Cell Lung Cancer)"],"interventions":["AMT-116","Investigator's choice regimens (docetaxel or docetaxel plus ramucirumab)"],"primaryOutcomes":[{"measure":"Number of Participants with Adverse Events as Assessed by CTCAE v6.0","description":"","timeFrame":"About 7 months"}],"completionDate":"2028-12-30","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT07718737","acronym":null,"briefTitle":"Global, Multicenter Study of AMT-116 Versus Investigator's Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy","officialTitle":"Open-Label, Global, Multicenter, Randomized, Phase 2/3 Study of AMT-116 Versus Investigator's Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy","sponsor":"Multitude Therapeutics Inc.","phase":"Phase 2, Phase 3","status":"NOT_YET_RECRUITING","modality":"Monoclonal Antibody (mAb)","conditions":["NSCLC (Advanced Non-small Cell Lung Cancer)"],"interventions":["AMT-116","Investigator's choice regimens (docetaxel or docetaxel plus ramucirumab)"],"primaryOutcomes":[{"measure":"Number of Participants with Adverse Events as Assessed by CTCAE v6.0","description":"","timeFrame":"About 7 months"}],"completionDate":"2028-12-30","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Global, Multicenter Study of AMT-116 Versus Investigator&amp;#39;s Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy. ClinicalTrials.gov Identifier: NCT07718737. Primary Sponsor: Multitude Therapeutics Inc.. Available at: https://clinsight.pract.eu/trials/NCT07718737/";

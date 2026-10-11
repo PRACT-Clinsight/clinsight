@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT02500407 NCT02500407 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Bispecific Antibodies &amp; T-Cell Engagers · Sponsor: Genentech, Inc.">
+    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Bispecific · Sponsor: Genentech, Inc.">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT02500407/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT02500407 (NCT02500407): A Safety, Efficacy and Pharmacokinetic Study of BTCT4465A (Mosunetuzumab) as a Single Agent and Combined With Atezolizumab in Non-Hodgkin&#39;s Lymphoma (NHL) and Chronic Lymphocytic Leukemia (CLL)","url":"https://clinsight.pract.eu/trials/NCT02500407/","studySubject":{"@type":"MedicalCondition","name":"Lymphocytic Leukemia, Chronic"},"sponsor":"Genentech, Inc.","status":"COMPLETED","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT02500407 (NCT02500407)","item":"https://clinsight.pract.eu/trials/NCT02500407/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02500407 (NCT02500407)?","acceptedAnswer":{"@type":"Answer","text":"NCT02500407 is a Phase 1, Phase 2 study sponsored by Genentech, Inc. evaluating Bispecific Antibodies &amp; T-Cell Engagers in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02500407?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02500407."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT02500407 (NCT02500407): A Safety, Efficacy and Pharmacokinetic Study of BTCT4465A (Mosunetuzumab) as a Single Agent and Combined With Atezolizumab in Non-Hodgkin&#39;s Lymphoma (NHL) and Chronic Lymphocytic Leukemia (CLL)","url":"https://clinsight.pract.eu/trials/NCT02500407/","studySubject":{"@type":"MedicalCondition","name":"Lymphocytic Leukemia, Chronic"},"sponsor":"Genentech, Inc.","status":"COMPLETED","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT02500407 (NCT02500407)","item":"https://clinsight.pract.eu/trials/NCT02500407/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02500407 (NCT02500407)?","acceptedAnswer":{"@type":"Answer","text":"NCT02500407 is a Phase 1, Phase 2 study sponsored by Genentech, Inc. evaluating Bispecific in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02500407?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02500407."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT02500407</span>
             <span class="badge phase">Phase 1, Phase 2</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Bispecific Antibodies &amp; T-Cell Engagers</span>
+            <span class="badge modality">Bispecific</span>
+            
         </div>
 
         <h1>A Safety, Efficacy and Pharmacokinetic Study of BTCT4465A (Mosunetuzumab) as a Single Agent and Combined With Atezolizumab in Non-Hodgkin&#39;s Lymphoma (NHL) and Chronic Lymphocytic Leukemia (CLL)</h1>
         <p class="lead">An Open-Label, Multicenter, Phase I/II Trial Evaluating the Safety, Efficacy, and Pharmacokinetics of Escalating Doses of Mosunetuzumab (BTCT4465A) as a Single Agent and Combined With Atezolizumab in Patients With Relapsed or Refractory B-Cell Non-Hodgkin&#39;s Lymphoma and Chronic Lymphocytic Leukemia</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41862428/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41862428)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 41862428 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=BTCT4465A" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (BTCT4465A) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Lymphocytic Leukemia, Chronic, Lymphoma, Non Hodgkin</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1</li><li>B-cell hematologic malignancies expected to express the cluster of differentiation 20 (CD20) antigen who have relapsed after or failed to respond to at least one prior treatment regimen and for whom there is no available therapy expected to improve survival</li><li>Adequate hepatic, hematologic, and renal function<br><br>Key</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Pregnant or lactating women</li><li>Monoclonal antibody, radioimmunoconjugate, antibody-drug conjugate, chemotherapy, or other investigational anti-cancer agent within 4 weeks prior to study drug</li><li>Treatment with radiotherapy within 2 weeks prior to the first BTCT4465A (Mosunetuzumab) administration</li><li>Systemic immunosuppressive medication within 2 weeks prior to study drug</li><li>Autologous stem cell transplantation (SCT) within 100 days prior to study drug, or any prior allogeneic SCT or solid organ transplantation</li><li>Autoimmune disease with the exception of controlled/treated hypothyroidism, disease-related immune thrombocytopenic purpura, or hemolytic anemia</li><li>History of central nervous system (CNS) lymphoma or other CNS disease</li><li>Significant cardiovascular or pulmonary disease</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT02500407" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT02500407" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT02500407" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT02500407)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41862428/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 41862428)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT02500407" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific Antibodies &amp; T-Cell Engagers</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT02500407","acronym":null,"briefTitle":"A Safety, Efficacy and Pharmacokinetic Study of BTCT4465A (Mosunetuzumab) as a Single Agent and Combined With Atezolizumab in Non-Hodgkin's Lymphoma (NHL) and Chronic Lymphocytic Leukemia (CLL)","officialTitle":"An Open-Label, Multicenter, Phase I/II Trial Evaluating the Safety, Efficacy, and Pharmacokinetics of Escalating Doses of Mosunetuzumab (BTCT4465A) as a Single Agent and Combined With Atezolizumab in Patients With Relapsed or Refractory B-Cell Non-Hodgkin's Lymphoma and Chronic Lymphocytic Leukemia","sponsor":"Genentech, Inc.","phase":"Phase 1, Phase 2","status":"COMPLETED","modality":"Bispecific Antibodies & T-Cell Engagers","conditions":["Lymphocytic Leukemia, Chronic","Lymphoma, Non Hodgkin"],"interventions":["BTCT4465A (Mosunetuzumab) IV","Atezolizumab","BTCT4465A (Mosunetuzumab) SC"],"primaryOutcomes":[{"measure":"Maximum Tolerated Dose (MTD) of BTCT4465A (Mosunetuzumab)","description":"","timeFrame":"BTCT4465A (Mosunetuzumab) single agent: Cycle 1; BTCT4465A (Mosunetuzumab) in combination with atezolizumab: during the first cycle that BTCT4465A (Mosunetuzumab) and atezolizumab are administered concurrently (cycle length = 21 days)"},{"measure":"Percentage of Participants With Adverse Events","description":"","timeFrame":"Cycle 1 Day 1 until 90 days after the last infusion (cycle length = 21 days; up to approximately 14 months)"},{"measure":"BTCT4465A (Mosunetuzumab) Serum Concentration","description":"","timeFrame":"Baseline up to 30 days after the last infusion of BTCT4465A (Mosunetuzumab) (up to approximately 12 months)"},{"measure":"Atezolizumab Serum Concentration","description":"","timeFrame":"Baseline up to 30 days after the last infusion of BTCT4465A (Mosunetuzumab) (up to approximately 12 months)"},{"measure":"Percentage of Participants with Complete Response as Assessed Using Standard Criteria for NHL","description":"","timeFrame":"Baseline up to approximately 4 years (assessed at screening and then every 3 months until disease progression, start of new anti-cancer therapy, or withdrawal)"}],"completionDate":"2025-09-01","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT02500407","acronym":null,"briefTitle":"A Safety, Efficacy and Pharmacokinetic Study of BTCT4465A (Mosunetuzumab) as a Single Agent and Combined With Atezolizumab in Non-Hodgkin's Lymphoma (NHL) and Chronic Lymphocytic Leukemia (CLL)","officialTitle":"An Open-Label, Multicenter, Phase I/II Trial Evaluating the Safety, Efficacy, and Pharmacokinetics of Escalating Doses of Mosunetuzumab (BTCT4465A) as a Single Agent and Combined With Atezolizumab in Patients With Relapsed or Refractory B-Cell Non-Hodgkin's Lymphoma and Chronic Lymphocytic Leukemia","sponsor":"Genentech, Inc.","phase":"Phase 1, Phase 2","status":"COMPLETED","modality":"Bispecific","conditions":["Lymphocytic Leukemia, Chronic","Lymphoma, Non Hodgkin"],"interventions":["BTCT4465A (Mosunetuzumab) IV","Atezolizumab","BTCT4465A (Mosunetuzumab) SC"],"primaryOutcomes":[{"measure":"Maximum Tolerated Dose (MTD) of BTCT4465A (Mosunetuzumab)","description":"","timeFrame":"BTCT4465A (Mosunetuzumab) single agent: Cycle 1; BTCT4465A (Mosunetuzumab) in combination with atezolizumab: during the first cycle that BTCT4465A (Mosunetuzumab) and atezolizumab are administered concurrently (cycle length = 21 days)"},{"measure":"Percentage of Participants With Adverse Events","description":"","timeFrame":"Cycle 1 Day 1 until 90 days after the last infusion (cycle length = 21 days; up to approximately 14 months)"},{"measure":"BTCT4465A (Mosunetuzumab) Serum Concentration","description":"","timeFrame":"Baseline up to 30 days after the last infusion of BTCT4465A (Mosunetuzumab) (up to approximately 12 months)"},{"measure":"Atezolizumab Serum Concentration","description":"","timeFrame":"Baseline up to 30 days after the last infusion of BTCT4465A (Mosunetuzumab) (up to approximately 12 months)"},{"measure":"Percentage of Participants with Complete Response as Assessed Using Standard Criteria for NHL","description":"","timeFrame":"Baseline up to approximately 4 years (assessed at screening and then every 3 months until disease progression, start of new anti-cancer therapy, or withdrawal)"}],"completionDate":"2025-09-01","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "A Safety, Efficacy and Pharmacokinetic Study of BTCT4465A (Mosunetuzumab) as a Single Agent and Combined With Atezolizumab in Non-Hodgkin&amp;#39;s Lymphoma (NHL) and Chronic Lymphocytic Leukemia (CLL). ClinicalTrials.gov Identifier: NCT02500407. Primary Sponsor: Genentech, Inc.. Available at: https://clinsight.pract.eu/trials/NCT02500407/";

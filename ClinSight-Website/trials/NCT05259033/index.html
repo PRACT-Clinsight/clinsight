@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT05259033 COMBINE 2 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Incretin Mimetics (GLP-1 / GIP) · Sponsor: Novo Nordisk A/S">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: GLP-1 · Sponsor: Novo Nordisk A/S">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT05259033/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"COMBINE 2 (NCT05259033): A Research Study to See How Well the New Weekly Medicine IcoSema, Which is a Combination of Insulin Icodec and Semaglutide, Controls Blood Sugar Level in People With Type 2 Diabetes Compared to Weekly Semaglutide (COMBINE 2)","url":"https://clinsight.pract.eu/trials/NCT05259033/","studySubject":{"@type":"MedicalCondition","name":"Diabetes Mellitus, Type 2"},"sponsor":"Novo Nordisk A/S","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"COMBINE 2 (NCT05259033)","item":"https://clinsight.pract.eu/trials/NCT05259033/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05259033 (COMBINE 2)?","acceptedAnswer":{"@type":"Answer","text":"NCT05259033 is a Phase 3 study sponsored by Novo Nordisk A/S evaluating Incretin Mimetics (GLP-1 / GIP) in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05259033?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05259033."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"COMBINE 2 (NCT05259033): A Research Study to See How Well the New Weekly Medicine IcoSema, Which is a Combination of Insulin Icodec and Semaglutide, Controls Blood Sugar Level in People With Type 2 Diabetes Compared to Weekly Semaglutide (COMBINE 2)","url":"https://clinsight.pract.eu/trials/NCT05259033/","studySubject":{"@type":"MedicalCondition","name":"Diabetes Mellitus, Type 2"},"sponsor":"Novo Nordisk A/S","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"COMBINE 2 (NCT05259033)","item":"https://clinsight.pract.eu/trials/NCT05259033/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05259033 (COMBINE 2)?","acceptedAnswer":{"@type":"Answer","text":"NCT05259033 is a Phase 3 study sponsored by Novo Nordisk A/S evaluating GLP-1 in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05259033?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05259033."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT05259033</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Incretin Mimetics (GLP-1 / GIP)</span>
+            <span class="badge modality">GLP-1</span>
+            
         </div>
 
         <h1>COMBINE 2: A Research Study to See How Well the New Weekly Medicine IcoSema, Which is a Combination of Insulin Icodec and Semaglutide, Controls Blood Sugar Level in People With Type 2 Diabetes Compared to Weekly Semaglutide (COMBINE 2)</h1>
         <p class="lead">A 52 Week Study Comparing the Efficacy and Safety of Once Weekly IcoSema and Once Weekly Semaglutide, Both Treatment Arms With or Without Oral Anti Diabetic Drugs, in Participants With Type 2 Diabetes Inadequately Controlled With a GLP 1 Receptor Agonist. COMBINE 2</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/33/NCT05259033/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/33/NCT05259033/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT05259033?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42557064/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42557064)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 42557064 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=IcoSema" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (IcoSema) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Diabetes Mellitus, Type 2</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Male or female and age above or equal to 18 years at the time of signing informed consent.</li><li>Diagnosed with type 2 diabetes mellitus 180 days or more before screening.</li><li>HbA1c of 7.0 - 10.0% (53.0 - 85.8 mmol/mol) (both inclusive) as assessed by central laboratory on the day of screening.</li><li>Insulin naïve. The following exceptions are permitted: short term insulin treatment for a maximum of 14 days before screening and/or prior insulin treatment for gestational diabetes.</li><li>Treated with stable doses of daily or weekly GLP-1 receptor agonist (excluding once weekly semaglutide with doses higher than 1.0 mg) according to local label for the treatment of diabetes for 90 days or more before screening. The treatment can be with or without any of the following anti diabetic drugs with stable doses for 90 days or more before screening: Metformin - Sulfonylureas (Sulfonylureas, meglitinides (glinides) and DPP 4 inhibitors must be discontinued at randomisation) - Meglitinides (glinides)(Sulfonylureas, meglitinides (glinides) and DPP 4 inhibitors must be discontinued at randomisation) - DPP 4 inhibitors (Sulfonylureas, meglitinides (glinides) and DPP 4 inhibitors must be discontinued at randomisation) - Sodium glucose co transporter 2 inhibitors - Alpha-glucosidase inhibitors - Thiazolidinediones - Marketed oral combination products only including the products listed above.</li><li>Body mass index (BMI) below or equal to 40.0 kg/m\^2.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Female who is pregnant, breast-feeding or intends to become pregnant or is of childbearing potential and not using a highly effective contraceptive method.</li><li>Anticipated initiation or change in concomitant medication (for more than 14 consecutive days) known to affect weight or glucose metabolism (e.g. treatment with orlistat, thyroid hormones, or systemic corticosteroids).</li><li>Treatment with any medication for the indication of diabetes or obesity other than stated in the inclusion criteria within 90 days before screening.</li><li>Any episodes (as declared by the participant or in the medical records) of diabetic ketoacidosis within 90 days before screening.</li><li>Presence or history of pancreatitis (acute or chronic) within 180 days before screening.</li><li>Any of the following: Myocardial infarction, stroke, hospitalization for unstable angina pectoris or transient ischaemic attack within 180 days before screening.</li><li>Chronic heart failure classified as being in New York Heart Association Class IV at screening.</li><li>Uncontrolled and potentially unstable diabetic retinopathy or maculopathy. Verified by a fundus examination performed within the past 90 days before screening or in the period between screening and randomisation. Pharmacological pupil dilation is a requirement unless using a digital fundus photography camera specified for non dilated examination</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT05259033" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT05259033" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT05259033" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT05259033)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/33/NCT05259033/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/33/NCT05259033/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT05259033?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/42557064/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 42557064)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT05259033" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Incretin Mimetics (GLP-1 / GIP)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in GLP-1</div>
             <div class="related-grid">
                 
                 <a href="../NCT03574597/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT05259033","acronym":"COMBINE 2","briefTitle":"A Research Study to See How Well the New Weekly Medicine IcoSema, Which is a Combination of Insulin Icodec and Semaglutide, Controls Blood Sugar Level in People With Type 2 Diabetes Compared to Weekly Semaglutide (COMBINE 2)","officialTitle":"A 52 Week Study Comparing the Efficacy and Safety of Once Weekly IcoSema and Once Weekly Semaglutide, Both Treatment Arms With or Without Oral Anti Diabetic Drugs, in Participants With Type 2 Diabetes Inadequately Controlled With a GLP 1 Receptor Agonist. COMBINE 2","sponsor":"Novo Nordisk A/S","phase":"Phase 3","status":"COMPLETED","modality":"Incretin Mimetics (GLP-1 / GIP)","conditions":["Diabetes Mellitus, Type 2"],"interventions":["IcoSema","Semaglutide 1 mg"],"primaryOutcomes":[{"measure":"Change From Baseline in Glycosylated Haemoglobin (HbA1c)","description":"Change from baseline (week 0) to week 52 in HbA1c is presented.The outcome measure was evaluated based on the data from in study period, where all data from randomisation until last date of any of the following: 1) last direct participant-site contact; 2) participants who withdrew their informed consent; 3) last participant-investigator contact as defined by the investigator for participants who lost to follow-up (i.e. possibly an unscheduled phone visit); 4) death of participants who died before any of the above.","timeFrame":"Baseline (week 0), (week 52)"}],"completionDate":"2024-01-16","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT05259033","acronym":"COMBINE 2","briefTitle":"A Research Study to See How Well the New Weekly Medicine IcoSema, Which is a Combination of Insulin Icodec and Semaglutide, Controls Blood Sugar Level in People With Type 2 Diabetes Compared to Weekly Semaglutide (COMBINE 2)","officialTitle":"A 52 Week Study Comparing the Efficacy and Safety of Once Weekly IcoSema and Once Weekly Semaglutide, Both Treatment Arms With or Without Oral Anti Diabetic Drugs, in Participants With Type 2 Diabetes Inadequately Controlled With a GLP 1 Receptor Agonist. COMBINE 2","sponsor":"Novo Nordisk A/S","phase":"Phase 3","status":"COMPLETED","modality":"GLP-1","conditions":["Diabetes Mellitus, Type 2"],"interventions":["IcoSema","Semaglutide 1 mg"],"primaryOutcomes":[{"measure":"Change From Baseline in Glycosylated Haemoglobin (HbA1c)","description":"Change from baseline (week 0) to week 52 in HbA1c is presented.The outcome measure was evaluated based on the data from in study period, where all data from randomisation until last date of any of the following: 1) last direct participant-site contact; 2) participants who withdrew their informed consent; 3) last participant-investigator contact as defined by the investigator for participants who lost to follow-up (i.e. possibly an unscheduled phone visit); 4) death of participants who died before any of the above.","timeFrame":"Baseline (week 0), (week 52)"}],"completionDate":"2024-01-16","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "COMBINE 2. A Research Study to See How Well the New Weekly Medicine IcoSema, Which is a Combination of Insulin Icodec and Semaglutide, Controls Blood Sugar Level in People With Type 2 Diabetes Compared to Weekly Semaglutide (COMBINE 2). ClinicalTrials.gov Identifier: NCT05259033. Primary Sponsor: Novo Nordisk A/S. Available at: https://clinsight.pract.eu/trials/NCT05259033/";

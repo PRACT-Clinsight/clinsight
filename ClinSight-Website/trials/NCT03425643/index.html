@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03425643 NCT03425643 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Immuno-Oncology (Checkpoint Inhibitor) · Sponsor: Merck Sharp &amp; Dohme LLC">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Checkpoint · Sponsor: Merck Sharp &amp; Dohme LLC">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03425643/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03425643 (NCT03425643): Efficacy and Safety of Pembrolizumab (MK-3475) With Platinum Doublet Chemotherapy as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (MK-3475-671/KEYNOTE-671)","url":"https://clinsight.pract.eu/trials/NCT03425643/","studySubject":{"@type":"MedicalCondition","name":"Non-small Cell Lung Cancer"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03425643 (NCT03425643)","item":"https://clinsight.pract.eu/trials/NCT03425643/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03425643 (NCT03425643)?","acceptedAnswer":{"@type":"Answer","text":"NCT03425643 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Immuno-Oncology (Checkpoint Inhibitor) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03425643?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03425643."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03425643 (NCT03425643): Efficacy and Safety of Pembrolizumab (MK-3475) With Platinum Doublet Chemotherapy as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (MK-3475-671/KEYNOTE-671)","url":"https://clinsight.pract.eu/trials/NCT03425643/","studySubject":{"@type":"MedicalCondition","name":"Non-small Cell Lung Cancer"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03425643 (NCT03425643)","item":"https://clinsight.pract.eu/trials/NCT03425643/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03425643 (NCT03425643)?","acceptedAnswer":{"@type":"Answer","text":"NCT03425643 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Checkpoint in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03425643?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03425643."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,35 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03425643</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Immuno-Oncology (Checkpoint Inhibitor)</span>
+            <span class="badge modality">Checkpoint</span>
+            
         </div>
 
         <h1>Efficacy and Safety of Pembrolizumab (MK-3475) With Platinum Doublet Chemotherapy as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (MK-3475-671/KEYNOTE-671)</h1>
         <p class="lead">A Phase III, Randomized, Double-blind Trial of Platinum Doublet Chemotherapy +/-Pembrolizumab (MK-3475) as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (NSCLC) (KEYNOTE-671)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/43/NCT03425643/Prot_SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            
+            <a href="https://clinicaltrials.gov/study/NCT03425643?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/39288781/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 39288781)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 39288781 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Pembrolizumab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Pembrolizumab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +665,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Non-small Cell Lung Cancer</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Have previously untreated and pathologically confirmed resectable Stage II, IIIA, or IIIB (N2) NSCLC.</li><li>If male, must agree to use contraception or practice abstinence as well as refrain from donating sperm during the treatment period and for the time needed to eliminate each study intervention after the last dose of study intervention.</li><li>If female, may participate if not pregnant or breastfeeding, and at least one of the following conditions apply: 1) not a woman of childbearing potential (WOCBP); or 2) a WOCBP who agrees to follow contraceptive guidance during the treatment period and for the time needed to eliminate each study intervention after the last dose of study intervention and agrees not to donate eggs (ova, oocytes) to others or freeze/store for her own use for the purpose of reproduction during this period.</li><li>Have available formalin-fixed paraffin embedded (FFPE) tumor tissue sample blocks for submission. If blocks are not available, have unstained slides for submission for central programmed death-ligand 1 (PD-L1) testing.</li><li>Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 within 10 days of randomization.</li><li>Have adequate organ function.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Has one of the following tumor locations/types:1) NSCLC involving the superior sulcus; 2) Large cell neuro-endocrine cancer (LCNEC); or 3) Sarcomatoid tumor.</li><li>Has a history of (non-infectious) pneumonitis /interstitial lung disease that required steroids or has current pneumonitis/interstitial lung disease that requires steroids.</li><li>Has an active infection requiring systemic therapy.</li><li>Has had an allogenic tissue/sold organ transplant.</li><li>Has a known severe hypersensitivity (≥ Grade 3) to pembrolizumab, its active substance and/or any of its excipients.</li><li>Has a known severe hypersensitivity (≥ Grade 3) to any of the study chemotherapy agents and/or to any of their excipients.</li><li>Has an active autoimmune disease that has required systemic treatment in past 2 years.</li><li>Has a known history of human immunodeficiency virus (HIV) infection.</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +691,21 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03425643" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03425643" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03425643" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03425643)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/43/NCT03425643/Prot_SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                
+                <a href="https://clinicaltrials.gov/study/NCT03425643?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/39288781/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 39288781)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03425643" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +716,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Immuno-Oncology (Checkpoint Inhibitor)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Checkpoint</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +766,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03425643","acronym":null,"briefTitle":"Efficacy and Safety of Pembrolizumab (MK-3475) With Platinum Doublet Chemotherapy as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (MK-3475-671/KEYNOTE-671)","officialTitle":"A Phase III, Randomized, Double-blind Trial of Platinum Doublet Chemotherapy +/-Pembrolizumab (MK-3475) as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (NSCLC) (KEYNOTE-671)","sponsor":"Merck Sharp & Dohme LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Immuno-Oncology (Checkpoint Inhibitor)","conditions":["Non-small Cell Lung Cancer"],"interventions":["Pembrolizumab","Placebo","Cisplatin","Gemcitabine","Pemetrexed"],"primaryOutcomes":[{"measure":"Event Free Survival (EFS)","description":"EFS is defined as the time from randomization until radiographic disease progression, local progression precluding surgery, inability to resect the tumor, local or distant recurrence, or death due to any cause. EFS determined either by biopsy assessed by local pathologist or by investigator-assessed imaging using Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1). The EFS for all participants is presented (through database cut-off date of 10-Jul-2023).","timeFrame":"Up to approximately 5 years"},{"measure":"Overall Survival (OS)","description":"OS is defined as the time from randomization until death from any cause. The OS for all participants is presented (through database cut-off date of 10-Jul-2023).","timeFrame":"Up to approximately 5 years"}],"completionDate":"2026-10-15","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03425643","acronym":null,"briefTitle":"Efficacy and Safety of Pembrolizumab (MK-3475) With Platinum Doublet Chemotherapy as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (MK-3475-671/KEYNOTE-671)","officialTitle":"A Phase III, Randomized, Double-blind Trial of Platinum Doublet Chemotherapy +/-Pembrolizumab (MK-3475) as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (NSCLC) (KEYNOTE-671)","sponsor":"Merck Sharp & Dohme LLC","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Checkpoint","conditions":["Non-small Cell Lung Cancer"],"interventions":["Pembrolizumab","Placebo","Cisplatin","Gemcitabine","Pemetrexed"],"primaryOutcomes":[{"measure":"Event Free Survival (EFS)","description":"EFS is defined as the time from randomization until radiographic disease progression, local progression precluding surgery, inability to resect the tumor, local or distant recurrence, or death due to any cause. EFS determined either by biopsy assessed by local pathologist or by investigator-assessed imaging using Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1). The EFS for all participants is presented (through database cut-off date of 10-Jul-2023).","timeFrame":"Up to approximately 5 years"},{"measure":"Overall Survival (OS)","description":"OS is defined as the time from randomization until death from any cause. The OS for all participants is presented (through database cut-off date of 10-Jul-2023).","timeFrame":"Up to approximately 5 years"}],"completionDate":"2026-10-15","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Efficacy and Safety of Pembrolizumab (MK-3475) With Platinum Doublet Chemotherapy as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (MK-3475-671/KEYNOTE-671). ClinicalTrials.gov Identifier: NCT03425643. Primary Sponsor: Merck Sharp &amp;amp; Dohme LLC. Available at: https://clinsight.pract.eu/trials/NCT03425643/";

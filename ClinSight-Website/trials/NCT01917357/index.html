@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT01917357 NCT01917357 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Crucell Holland BV">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Unclassified · Sponsor: Crucell Holland BV">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT01917357/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT01917357 (NCT01917357): A Comparison of the Immunogenicity and Safety of Quinvaxem in Mono-dose Vials and Uniject","url":"https://clinsight.pract.eu/trials/NCT01917357/","studySubject":{"@type":"MedicalCondition","name":"Diphtheria"},"sponsor":"Crucell Holland BV","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT01917357 (NCT01917357)","item":"https://clinsight.pract.eu/trials/NCT01917357/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01917357 (NCT01917357)?","acceptedAnswer":{"@type":"Answer","text":"NCT01917357 is a Phase 3 study sponsored by Crucell Holland BV evaluating Targeted Oncology &amp; Systemic Therapy in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01917357?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01917357."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT01917357 (NCT01917357): A Comparison of the Immunogenicity and Safety of Quinvaxem in Mono-dose Vials and Uniject","url":"https://clinsight.pract.eu/trials/NCT01917357/","studySubject":{"@type":"MedicalCondition","name":"Diphtheria"},"sponsor":"Crucell Holland BV","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT01917357 (NCT01917357)","item":"https://clinsight.pract.eu/trials/NCT01917357/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01917357 (NCT01917357)?","acceptedAnswer":{"@type":"Answer","text":"NCT01917357 is a Phase 3 study sponsored by Crucell Holland BV evaluating Unclassified in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01917357?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01917357."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT01917357</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            <span class="badge vacant"><i class="fa-solid fa-triangle-exclamation"></i> Results-Vacant</span>
         </div>
 
         <h1>A Comparison of the Immunogenicity and Safety of Quinvaxem in Mono-dose Vials and Uniject</h1>
         <p class="lead">A Phase III, Open-label, Randomized Parallel-group Study on the Immunogenicity and Safety of Quinvaxem® DTwP-HepB-Hib) in Uniject™ With Quinvaxem® Monodose Vials in Healthy Infants at 6, 10 and 14 Weeks of Age</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Quinvaxem" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Quinvaxem) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Diphtheria, Pertussis, Tetanus, Hepatitis B, Haemophilus Infections</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>A male or female between, and including, 42 and 64 days of age at the time of the first vaccination</li><li>Written informed consent obtained from parents/legal guardians of the subject</li><li>Free of obvious health problems as established by medical history and/or clinical examination before entering the study</li><li>HepB vaccination at birth (within 48 hours)</li><li>Available for all scheduled study visits</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Use of any investigational drug or any investigational vaccine in the 30 days preceding the first dose of study vaccine, or their planned use during the study period and safety follow-up</li><li>Planned administration of a vaccine not foreseen by the Study Protocol</li><li>Known or suspected impairment of immune function, known HIV-positivity; actively receiving immunosuppressive therapy, or in receipt of systemic immunosuppressive therapy in the one month prior to study entry (note: inhaled and topical steroids are allowed)</li><li>Administration of parenteral immunoglobulin preparation and/or blood products since birth</li><li>Previous vaccination against Hib and/or DTP</li><li>History of anaphylaxis, or any serious vaccine reaction, or hypersensitivity to any vaccine component or to products containing mercury compounds, such as thiomersal</li><li>Clinically significant acute infection</li><li>Clinically significant acute illness</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT01917357" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT01917357" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT01917357" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT01917357)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT04526691/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT01917357","acronym":null,"briefTitle":"A Comparison of the Immunogenicity and Safety of Quinvaxem in Mono-dose Vials and Uniject","officialTitle":"A Phase III, Open-label, Randomized Parallel-group Study on the Immunogenicity and Safety of Quinvaxem® DTwP-HepB-Hib) in Uniject™ With Quinvaxem® Monodose Vials in Healthy Infants at 6, 10 and 14 Weeks of Age","sponsor":"Crucell Holland BV","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Oncology & Systemic Therapy","conditions":["Diphtheria","Pertussis","Tetanus","Hepatitis B","Haemophilus Infections"],"interventions":["Quinvaxem in Uniject","Quinvaxem in single dose vials"],"primaryOutcomes":[{"measure":"Seroprotection Rate: Anti-PRP Antibodies","description":"","timeFrame":"1 month after the third vaccination"},{"measure":"Seroprotection Rate: Anti-hepatitis B Surface Antibodies","description":"","timeFrame":"1 month after the third vaccination"},{"measure":"Anti-diphtheria Toxoid Antibodies","description":"","timeFrame":"1 month after the third vaccination"},{"measure":"Seroprotection Rate: Anti-tetanus Toxoid Antibodies","description":"","timeFrame":"1 month after the third vaccination"},{"measure":"Seroprotection Rate: Anti-B. Pertussis Antibodies","description":"","timeFrame":"1 month after the third vaccination"}],"completionDate":"2014-04","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT01917357","acronym":null,"briefTitle":"A Comparison of the Immunogenicity and Safety of Quinvaxem in Mono-dose Vials and Uniject","officialTitle":"A Phase III, Open-label, Randomized Parallel-group Study on the Immunogenicity and Safety of Quinvaxem® DTwP-HepB-Hib) in Uniject™ With Quinvaxem® Monodose Vials in Healthy Infants at 6, 10 and 14 Weeks of Age","sponsor":"Crucell Holland BV","phase":"Phase 3","status":"COMPLETED","modality":"Unclassified","conditions":["Diphtheria","Pertussis","Tetanus","Hepatitis B","Haemophilus Infections"],"interventions":["Quinvaxem in Uniject","Quinvaxem in single dose vials"],"primaryOutcomes":[{"measure":"Seroprotection Rate: Anti-PRP Antibodies","description":"","timeFrame":"1 month after the third vaccination"},{"measure":"Seroprotection Rate: Anti-hepatitis B Surface Antibodies","description":"","timeFrame":"1 month after the third vaccination"},{"measure":"Anti-diphtheria Toxoid Antibodies","description":"","timeFrame":"1 month after the third vaccination"},{"measure":"Seroprotection Rate: Anti-tetanus Toxoid Antibodies","description":"","timeFrame":"1 month after the third vaccination"},{"measure":"Seroprotection Rate: Anti-B. Pertussis Antibodies","description":"","timeFrame":"1 month after the third vaccination"}],"completionDate":"2014-04","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "A Comparison of the Immunogenicity and Safety of Quinvaxem in Mono-dose Vials and Uniject. ClinicalTrials.gov Identifier: NCT01917357. Primary Sponsor: Crucell Holland BV. Available at: https://clinsight.pract.eu/trials/NCT01917357/";

@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT04557098 MajesTEC-1 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2 · Modality: Bispecific Antibodies &amp; T-Cell Engagers · Sponsor: Janssen Research &amp; Development, LLC">
+    <meta property="og:description" content="Phase: Phase 2 · Modality: Bispecific · Sponsor: Janssen Research &amp; Development, LLC">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT04557098/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MajesTEC-1 (NCT04557098): A Study of Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT04557098/","studySubject":{"@type":"MedicalCondition","name":"Hematological Malignancies"},"sponsor":"Janssen Research &amp; Development, LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"MajesTEC-1 (NCT04557098)","item":"https://clinsight.pract.eu/trials/NCT04557098/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04557098 (MajesTEC-1)?","acceptedAnswer":{"@type":"Answer","text":"NCT04557098 is a Phase 2 study sponsored by Janssen Research &amp; Development, LLC evaluating Bispecific Antibodies &amp; T-Cell Engagers in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04557098?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04557098."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MajesTEC-1 (NCT04557098): A Study of Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT04557098/","studySubject":{"@type":"MedicalCondition","name":"Hematological Malignancies"},"sponsor":"Janssen Research &amp; Development, LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"MajesTEC-1 (NCT04557098)","item":"https://clinsight.pract.eu/trials/NCT04557098/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04557098 (MajesTEC-1)?","acceptedAnswer":{"@type":"Answer","text":"NCT04557098 is a Phase 2 study sponsored by Janssen Research &amp; Development, LLC evaluating Bispecific in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04557098?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04557098."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04557098</span>
             <span class="badge phase">Phase 2</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Bispecific Antibodies &amp; T-Cell Engagers</span>
+            <span class="badge modality">Bispecific</span>
+            
         </div>
 
         <h1>MajesTEC-1: A Study of Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma</h1>
         <p class="lead">TECLIMMY1001-P3: A Phase 1/2, First-in-Human, Open-Label, Dose Escalation Study of Teclistamab, a Humanized BCMA x CD3 Bispecific Antibody, in Subjects With Relapsed or Refractory Multiple Myeloma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42534634/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42534634)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 42534634 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Teclistamab" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Teclistamab) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Hematological Malignancies</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Documented diagnosis of multiple myeloma according to IMWG diagnostic criteria</li><li>Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1</li><li>Measurable disease: Cohort A and Cohort C: Multiple myeloma must be measurable by central laboratory assessment</li><li>A female participant of childbearing potential must have a negative pregnancy test at screening</li><li>Willing and able to adhere to the prohibitions and restrictions specified in this protocol</li><li>Cohort A: received at least \&gt;=3 prior lines of therapy and previously received a PI, an IMiD and an anti-CD38 monoclonal antibody; Cohort C: received \&gt;= 3 prior lines of therapy that included a PI, an IMiD, an anti-CD38 monoclonal antibody, and an anti-B cell maturation antigen (BCMA) treatment (with CART-T cells or an antibody drug conjugate (ADC)</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Plasma cell leukemia, Waldenström&#39;s macroglobulinemia, POEMS syndrome, or primary amyloid light-chain amyloidosis</li><li>The following medical conditions: Pulmonary compromise requiring supplemental oxygen use to maintain adequate oxygenation, human immunodeficiency virus (HIV) infection, hepatitis B or C infection, stroke or seizure less than or equal to (\&lt;=) 6 m, autoimmune disease, uncontrolled systemic infection, cardiac conditions (Myocardial Infarction \&lt;= 6 m, stage III-IV congestive heart failure, etc)</li><li>Received any therapy that is targeted to BCMA, with the exception of Cohort C in Part 3</li><li>Prior antitumor therapy, within 21 days (PI or radiotherapy within 14 days, IMiDs within 7 days, Gene modified adoptive cell therapy within 3 months) prior to first dose of study drug</li><li>Toxicities from previous anticancer therapies that have not resolved to baseline or to \&lt;= grade 1 (except for alopecia or peripheral neuropathy)</li><li>Received a cumulative dose of corticosteroids equivalent to \&gt;=140 mg of prednisone within the 14-day period before the first dose of study drug (does not include pretreatment medication)</li><li>Known active central nervous system (CNS) involvement or exhibits clinical signs of meningeal involvement of multiple myeloma (MM)</li><li>Myelodysplastic syndrome or active malignancies other than relapsed/refractory multiple myeloma with exceptions are: 1) Non-muscle invasive bladder cancer treated within the last 24 months that is considered completely cured 2) Skin cancer (non-melanoma or melanoma) treated within the last 24 months that is considered completely cured. 3) Noninvasive cervical cancer treated within the last 24 months that is considered completely cured. 4) Localized prostate cancer (N0M0) 5) Breast cancer: Adequately treated lobular carcinoma in situ or ductal carcinoma in situ, or history of localized breast cancer and receiving antihormonal agents and considered to have a very low risk of recurrence. 6) Malignancy that is considered cured with minimal risk of recurrence</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT04557098" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT04557098" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT04557098" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT04557098)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/42534634/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 42534634)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT04557098" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific Antibodies &amp; T-Cell Engagers</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific</div>
             <div class="related-grid">
                 
                 <a href="../NCT04526691/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT04557098","acronym":"MajesTEC-1","briefTitle":"A Study of Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma","officialTitle":"TECLIMMY1001-P3: A Phase 1/2, First-in-Human, Open-Label, Dose Escalation Study of Teclistamab, a Humanized BCMA x CD3 Bispecific Antibody, in Subjects With Relapsed or Refractory Multiple Myeloma","sponsor":"Janssen Research & Development, LLC","phase":"Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific Antibodies & T-Cell Engagers","conditions":["Hematological Malignancies"],"interventions":["Teclistamab"],"primaryOutcomes":[{"measure":"Cohorts A and C: Overall Response Rate (ORR)","description":"ORR is defined as the proportion of participants who have a partial response (PR) or better according to the International Myeloma Working Group (IMWG) criteria.","timeFrame":"Up to 2.9 years"}],"completionDate":"2027-05-28","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT04557098","acronym":"MajesTEC-1","briefTitle":"A Study of Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma","officialTitle":"TECLIMMY1001-P3: A Phase 1/2, First-in-Human, Open-Label, Dose Escalation Study of Teclistamab, a Humanized BCMA x CD3 Bispecific Antibody, in Subjects With Relapsed or Refractory Multiple Myeloma","sponsor":"Janssen Research & Development, LLC","phase":"Phase 2","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific","conditions":["Hematological Malignancies"],"interventions":["Teclistamab"],"primaryOutcomes":[{"measure":"Cohorts A and C: Overall Response Rate (ORR)","description":"ORR is defined as the proportion of participants who have a partial response (PR) or better according to the International Myeloma Working Group (IMWG) criteria.","timeFrame":"Up to 2.9 years"}],"completionDate":"2027-05-28","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "MajesTEC-1. A Study of Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma. ClinicalTrials.gov Identifier: NCT04557098. Primary Sponsor: Janssen Research &amp;amp; Development, LLC. Available at: https://clinsight.pract.eu/trials/NCT04557098/";

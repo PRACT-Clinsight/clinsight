@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT05605899 ZUMA-23 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Cell &amp; Gene Therapy (CAR-T) · Sponsor: Kite, A Gilead Company">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: CAR-T · Sponsor: Kite, A Gilead Company">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT05605899/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ZUMA-23 (NCT05605899): Study to Compare Axicabtagene Ciloleucel With Standard of Care Therapy as First-line Treatment in Participants With High-risk Large B-cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT05605899/","studySubject":{"@type":"MedicalCondition","name":"High-risk Large B-cell Lymphoma (LBCL)"},"sponsor":"Kite, A Gilead Company","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ZUMA-23 (NCT05605899)","item":"https://clinsight.pract.eu/trials/NCT05605899/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05605899 (ZUMA-23)?","acceptedAnswer":{"@type":"Answer","text":"NCT05605899 is a Phase 3 study sponsored by Kite, A Gilead Company evaluating Cell &amp; Gene Therapy (CAR-T) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05605899?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05605899."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ZUMA-23 (NCT05605899): Study to Compare Axicabtagene Ciloleucel With Standard of Care Therapy as First-line Treatment in Participants With High-risk Large B-cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT05605899/","studySubject":{"@type":"MedicalCondition","name":"High-risk Large B-cell Lymphoma (LBCL)"},"sponsor":"Kite, A Gilead Company","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ZUMA-23 (NCT05605899)","item":"https://clinsight.pract.eu/trials/NCT05605899/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05605899 (ZUMA-23)?","acceptedAnswer":{"@type":"Answer","text":"NCT05605899 is a Phase 3 study sponsored by Kite, A Gilead Company evaluating CAR-T in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05605899?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05605899."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,26 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT05605899</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Cell &amp; Gene Therapy (CAR-T)</span>
+            <span class="badge modality">CAR-T</span>
+            
         </div>
 
         <h1>ZUMA-23: Study to Compare Axicabtagene Ciloleucel With Standard of Care Therapy as First-line Treatment in Participants With High-risk Large B-cell Lymphoma</h1>
         <p class="lead">An Adaptive Phase 3, Randomized, Open-Label, Multicenter Study to Compare the Efficacy and Safety of Axicabtagene Ciloleucel Versus Standard of Care Therapy as First-Line Therapy in Subjects With High-Risk Large B-Cell Lymphoma (ZUMA-23)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Axicabtagene" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Axicabtagene) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +656,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for High-risk Large B-cell Lymphoma (LBCL)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Histologically confirmed large B cell lymphoma (LBCL) based on 2016 World Health Organization (WHO) classification by local pathology lab assessment, including of the following:<br><br>  * Diffuse large B-cell lymphoma (DLBCL), not otherwise specified (NOS)<br>  * High-grade B-cell lymphoma (HGBL)</li><li>Note: Transformed DLBCL from follicular lymphoma or from marginal zone lymphoma is eligible if no prior treatment with anthracycline-containing regimen.</li><li>High-risk disease defined as an International Prognostic Index (IPI) score of 4 or 5 at initial diagnosis.</li><li>Have received only 1 cycle of rituximab plus chemotherapy (R-chemotherapy).</li><li>Adequate bone marrow, renal, hepatic, pulmonary, and cardiac function.</li><li>Females of childbearing potential must have a negative serum or urine pregnancy test.<br><br>Key</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>The following WHO 2016 subcategories by local assessment:<br><br>  * T-cell/histiocyte-rich LBCL<br>  * Primary DLBCL of the central nervous system (CNS)<br>  * Primary mediastinal (thymic) LBCL<br>  * B-cell lymphoma, unclassifiable, with features intermediate between DLBCL and classical Hodgkin lymphoma<br>  * Burkitt lymphoma<br>  * History of Richter&#39;s transformation of chronic lymphocytic leukemia</li><li>Presence of detectable cerebrospinal fluid (CSF)-malignant cells, brain metastases, or a history of CNS involvement of lymphoma.</li><li>Presence of cardiac lymphoma involvement.</li><li>Any prior treatment for LBCL other than the 1 cycle of R-chemotherapy.</li><li>History of severe immediate hypersensitivity reaction to any of the agents used in this study.</li><li>Presence of CNS disorder. History of stroke, transient ischemic attack, or posterior reversible encephalopathy syndrome (PRES) within 12 months prior to enrollment.</li><li>History of acute or chronic active hepatitis B or C infection.</li><li>Positive for human immunodeficiency virus (HIV) unless taking appropriate anti-HIV medications, with an undetectable viral load by PCR and with a cluster of differentiation 4 (CD4) count \&gt; 200 cells/uL.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +682,13 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT05605899" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT05605899" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                
+                
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT05605899" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT05605899)
                 </a>
@@ -647,7 +701,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Cell &amp; Gene Therapy (CAR-T)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in CAR-T</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +751,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT05605899","acronym":"ZUMA-23","briefTitle":"Study to Compare Axicabtagene Ciloleucel With Standard of Care Therapy as First-line Treatment in Participants With High-risk Large B-cell Lymphoma","officialTitle":"An Adaptive Phase 3, Randomized, Open-Label, Multicenter Study to Compare the Efficacy and Safety of Axicabtagene Ciloleucel Versus Standard of Care Therapy as First-Line Therapy in Subjects With High-Risk Large B-Cell Lymphoma (ZUMA-23)","sponsor":"Kite, A Gilead Company","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Cell & Gene Therapy (CAR-T)","conditions":["High-risk Large B-cell Lymphoma (LBCL)"],"interventions":["Axicabtagene Ciloleucel","Cyclophosphamide","Fludarabine","Etoposide","Rituximab","Doxorubicin","Vincristine","Prednisone"],"primaryOutcomes":[{"measure":"Event-free Survival (EFS) by Blinded Central Assessment","description":"EFS, is defined as the time from randomization to the earliest occurrence of death due to any cause, disease progression/relapse, initiation of any non-protocol specified subsequent new lymphoma therapy for the treatment of residual disease or Biopsy-proven residual disease at the Month 6 disease assessment or later, regardless of whether subsequent new lymphoma therapy is initiated or not.","timeFrame":"Up to 5 years"}],"completionDate":"2031-03","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT05605899","acronym":"ZUMA-23","briefTitle":"Study to Compare Axicabtagene Ciloleucel With Standard of Care Therapy as First-line Treatment in Participants With High-risk Large B-cell Lymphoma","officialTitle":"An Adaptive Phase 3, Randomized, Open-Label, Multicenter Study to Compare the Efficacy and Safety of Axicabtagene Ciloleucel Versus Standard of Care Therapy as First-Line Therapy in Subjects With High-Risk Large B-Cell Lymphoma (ZUMA-23)","sponsor":"Kite, A Gilead Company","phase":"Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"CAR-T","conditions":["High-risk Large B-cell Lymphoma (LBCL)"],"interventions":["Axicabtagene Ciloleucel","Cyclophosphamide","Fludarabine","Etoposide","Rituximab","Doxorubicin","Vincristine","Prednisone"],"primaryOutcomes":[{"measure":"Event-free Survival (EFS) by Blinded Central Assessment","description":"EFS, is defined as the time from randomization to the earliest occurrence of death due to any cause, disease progression/relapse, initiation of any non-protocol specified subsequent new lymphoma therapy for the treatment of residual disease or Biopsy-proven residual disease at the Month 6 disease assessment or later, regardless of whether subsequent new lymphoma therapy is initiated or not.","timeFrame":"Up to 5 years"}],"completionDate":"2031-03","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "ZUMA-23. Study to Compare Axicabtagene Ciloleucel With Standard of Care Therapy as First-line Treatment in Participants With High-risk Large B-cell Lymphoma. ClinicalTrials.gov Identifier: NCT05605899. Primary Sponsor: Kite, A Gilead Company. Available at: https://clinsight.pract.eu/trials/NCT05605899/";

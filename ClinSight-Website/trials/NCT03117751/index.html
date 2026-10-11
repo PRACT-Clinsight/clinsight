@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03117751 NCT03117751 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 2, Phase 3 · Modality: Bispecific Antibodies &amp; T-Cell Engagers · Sponsor: St. Jude Children&#39;s Research Hospital">
+    <meta property="og:description" content="Phase: Phase 2, Phase 3 · Modality: Bispecific · Sponsor: St. Jude Children&#39;s Research Hospital">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03117751/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03117751 (NCT03117751): Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03117751/","studySubject":{"@type":"MedicalCondition","name":"Acute Lymphoblastic Leukemia"},"sponsor":"St. Jude Children&#39;s Research Hospital","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03117751 (NCT03117751)","item":"https://clinsight.pract.eu/trials/NCT03117751/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03117751 (NCT03117751)?","acceptedAnswer":{"@type":"Answer","text":"NCT03117751 is a Phase 2, Phase 3 study sponsored by St. Jude Children&#39;s Research Hospital evaluating Bispecific Antibodies &amp; T-Cell Engagers in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03117751?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03117751."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03117751 (NCT03117751): Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03117751/","studySubject":{"@type":"MedicalCondition","name":"Acute Lymphoblastic Leukemia"},"sponsor":"St. Jude Children&#39;s Research Hospital","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03117751 (NCT03117751)","item":"https://clinsight.pract.eu/trials/NCT03117751/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03117751 (NCT03117751)?","acceptedAnswer":{"@type":"Answer","text":"NCT03117751 is a Phase 2, Phase 3 study sponsored by St. Jude Children&#39;s Research Hospital evaluating Bispecific in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03117751?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03117751."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03117751</span>
             <span class="badge phase">Phase 2, Phase 3</span>
             <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
-            <span class="badge modality">Bispecific Antibodies &amp; T-Cell Engagers</span>
+            <span class="badge modality">Bispecific</span>
+            
         </div>
 
         <h1>Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma</h1>
         <p class="lead">Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42154791/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42154791)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 42154791 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Prednisone" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Prednisone) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +659,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Acute Lymphoblastic Leukemia, Acute Lymphoblastic Lymphoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Diagnosis of B- or T-ALL or LLy by immunophenotyping:</li><li>LLy participants must have \&lt; 25% tumor cells in bone marrow and peripheral blood by morphology and flow cytometry. If any of these show ≥25% blasts, patient will be considered to have leukemia. Patients with MPAL are eligible.</li><li>Age 1-18 years (inclusive).</li><li>No prior therapy, or limited prior therapy, including systemic glucocorticoids for one week or less, one dose of vincristine, emergency radiation therapy (e.g., to the mediastinum, head and neck, orbit, etc.) and one dose of intrathecal chemotherapy.</li><li>Written, informed consent and assent following Institutional Review Board (IRB), National Cancer Institute (NCI), Food and Drug Administration (FDA), and Office of Human Research Protections (OHRP) Guidelines.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Participants who are pregnant or lactating. Males or females of reproductive potential must agree to use effective contraception for the duration of study participation.</li><li>Inability or unwillingness of research participant or legal guardian/representative to give written informed consent.</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +685,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03117751" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03117751" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03117751" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03117751)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/42154791/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 42154791)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03117751" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +704,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific Antibodies &amp; T-Cell Engagers</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Bispecific</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +754,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03117751","acronym":null,"briefTitle":"Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma","officialTitle":"Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma","sponsor":"St. Jude Children's Research Hospital","phase":"Phase 2, Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific Antibodies & T-Cell Engagers","conditions":["Acute Lymphoblastic Leukemia","Acute Lymphoblastic Lymphoma"],"interventions":["Prednisone","Vincristine","Daunorubicin","Pegaspargase","Erwinase®","Cyclophosphamide","Cytarabine","Mercaptopurine","Dasatinib","Methotrexate","Blinatumomab","Ruxolitinib","Bortezomib","Dexamethasone","Doxorubicin","Etoposide","Clofarabine","Vorinostat","Idarubicin","Nelarabine","Thioguanine","Asparaginase Erwinia chrysanthemi (recombinant)-rywn","Calaspargase Pegol"],"primaryOutcomes":[{"measure":"Event-free survival of ALL patients (EFS)","description":"5-year EFS: Kaplan-Meier estimates of EFS curve of ALL patients will be computed and compared historically with those of the St. Jude Children's Research Hospital's (SJCRH) TOTXVI study (NCT00549848). All eligible patients entered on the current TOT17 study will be included in these comparisons. Comparisons by log-rank tests will be made both un-stratified and stratified by risk groups.","timeFrame":"At 3.5 years after enrollment of the last participant"},{"measure":"Proportion of patients with CEP72TT genotype who develop two or more episodes of Grade 2 or higher neuropathy during Continuation","description":"This will be a single-blind, stratified block randomized experiment. Although the investigators who evaluate neuropathy and neuropathic pain and the patients are blinded for treatment assignment, treating clinicians and pharmacy staff are not. Patients will be randomized at a 1:1 ratio into two treatment groups: 1.5 mg/m\\^2 vs. 1 mg/m\\^2 vincristine (VCR) dose. Randomization will be stratified by two factors known to significantly affect neuropathy during the Continuation phase, namely, Grade 2 or higher neuropathy prior to Continuation (none, 1 episode, 2 or more episodes) and race (black, others). The proportion of patients who develop two or more episodes of Grade 2 or higher neuropathy during Continuation Treatment will be compared between the two VCR dose groups, using a Z-test for two sample proportions.","timeFrame":"At 6 months after the last randomized patient completes Continuation Treatment (Week 120)."},{"measure":"Cumulative incidence of Grade 2 or higher neuropathy in patients with CEP72 CC or CT genotype","description":"This will be a single blind stratified block randomized experiment. The investigators who evaluate neuropathy and neuropathic pain and the patients are blinded for treatment assignment. Treating clinicians and pharmacy staff will not be blinded. Standard/high-risk patients will be randomized at a 1:1 ratio into two treatment groups at Week 49 of Continuation therapy: to vincristine + dexamethasone (VCR+DEX) pulses or to 6-mercaptopurine + methotrexate (6MP+MTX). The primary analysis will compare the cumulative incidence of the first episode of Grade 2 or higher neuropathy or neuropathic pain (the end point) by stratified Gray's test. Adverse events other than the endpoint rendering a patient drop out after Continuation Week 49 are regarded as competing events.","timeFrame":"After the last randomized patient is followed for 1 year after Week 101 of Continuation therapy"}],"completionDate":"2028-09-30","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03117751","acronym":null,"briefTitle":"Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma","officialTitle":"Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma","sponsor":"St. Jude Children's Research Hospital","phase":"Phase 2, Phase 3","status":"ACTIVE_NOT_RECRUITING","modality":"Bispecific","conditions":["Acute Lymphoblastic Leukemia","Acute Lymphoblastic Lymphoma"],"interventions":["Prednisone","Vincristine","Daunorubicin","Pegaspargase","Erwinase®","Cyclophosphamide","Cytarabine","Mercaptopurine","Dasatinib","Methotrexate","Blinatumomab","Ruxolitinib","Bortezomib","Dexamethasone","Doxorubicin","Etoposide","Clofarabine","Vorinostat","Idarubicin","Nelarabine","Thioguanine","Asparaginase Erwinia chrysanthemi (recombinant)-rywn","Calaspargase Pegol"],"primaryOutcomes":[{"measure":"Event-free survival of ALL patients (EFS)","description":"5-year EFS: Kaplan-Meier estimates of EFS curve of ALL patients will be computed and compared historically with those of the St. Jude Children's Research Hospital's (SJCRH) TOTXVI study (NCT00549848). All eligible patients entered on the current TOT17 study will be included in these comparisons. Comparisons by log-rank tests will be made both un-stratified and stratified by risk groups.","timeFrame":"At 3.5 years after enrollment of the last participant"},{"measure":"Proportion of patients with CEP72TT genotype who develop two or more episodes of Grade 2 or higher neuropathy during Continuation","description":"This will be a single-blind, stratified block randomized experiment. Although the investigators who evaluate neuropathy and neuropathic pain and the patients are blinded for treatment assignment, treating clinicians and pharmacy staff are not. Patients will be randomized at a 1:1 ratio into two treatment groups: 1.5 mg/m\\^2 vs. 1 mg/m\\^2 vincristine (VCR) dose. Randomization will be stratified by two factors known to significantly affect neuropathy during the Continuation phase, namely, Grade 2 or higher neuropathy prior to Continuation (none, 1 episode, 2 or more episodes) and race (black, others). The proportion of patients who develop two or more episodes of Grade 2 or higher neuropathy during Continuation Treatment will be compared between the two VCR dose groups, using a Z-test for two sample proportions.","timeFrame":"At 6 months after the last randomized patient completes Continuation Treatment (Week 120)."},{"measure":"Cumulative incidence of Grade 2 or higher neuropathy in patients with CEP72 CC or CT genotype","description":"This will be a single blind stratified block randomized experiment. The investigators who evaluate neuropathy and neuropathic pain and the patients are blinded for treatment assignment. Treating clinicians and pharmacy staff will not be blinded. Standard/high-risk patients will be randomized at a 1:1 ratio into two treatment groups at Week 49 of Continuation therapy: to vincristine + dexamethasone (VCR+DEX) pulses or to 6-mercaptopurine + methotrexate (6MP+MTX). The primary analysis will compare the cumulative incidence of the first episode of Grade 2 or higher neuropathy or neuropathic pain (the end point) by stratified Gray's test. Adverse events other than the endpoint rendering a patient drop out after Continuation Week 49 are regarded as competing events.","timeFrame":"After the last randomized patient is followed for 1 year after Week 101 of Continuation therapy"}],"completionDate":"2028-09-30","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma. ClinicalTrials.gov Identifier: NCT03117751. Primary Sponsor: St. Jude Children&amp;#39;s Research Hospital. Available at: https://clinsight.pract.eu/trials/NCT03117751/";

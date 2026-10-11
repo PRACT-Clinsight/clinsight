@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT03391466 ZUMA-7 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Cell &amp; Gene Therapy (CAR-T) · Sponsor: Kite, A Gilead Company">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: CAR-T · Sponsor: Kite, A Gilead Company">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03391466/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ZUMA-7 (NCT03391466): Study of Effectiveness of Axicabtagene Ciloleucel Compared to Standard of Care Therapy in Patients With Relapsed/Refractory Diffuse Large B Cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03391466/","studySubject":{"@type":"MedicalCondition","name":"Relapsed/Refractory Diffuse Large B-Cell Lymphoma (DLBCL)"},"sponsor":"Kite, A Gilead Company","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ZUMA-7 (NCT03391466)","item":"https://clinsight.pract.eu/trials/NCT03391466/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03391466 (ZUMA-7)?","acceptedAnswer":{"@type":"Answer","text":"NCT03391466 is a Phase 3 study sponsored by Kite, A Gilead Company evaluating Cell &amp; Gene Therapy (CAR-T) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03391466?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03391466."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ZUMA-7 (NCT03391466): Study of Effectiveness of Axicabtagene Ciloleucel Compared to Standard of Care Therapy in Patients With Relapsed/Refractory Diffuse Large B Cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03391466/","studySubject":{"@type":"MedicalCondition","name":"Relapsed/Refractory Diffuse Large B-Cell Lymphoma (DLBCL)"},"sponsor":"Kite, A Gilead Company","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ZUMA-7 (NCT03391466)","item":"https://clinsight.pract.eu/trials/NCT03391466/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03391466 (ZUMA-7)?","acceptedAnswer":{"@type":"Answer","text":"NCT03391466 is a Phase 3 study sponsored by Kite, A Gilead Company evaluating CAR-T in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03391466?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03391466."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,38 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03391466</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Cell &amp; Gene Therapy (CAR-T)</span>
+            <span class="badge modality">CAR-T</span>
+            
         </div>
 
         <h1>ZUMA-7: Study of Effectiveness of Axicabtagene Ciloleucel Compared to Standard of Care Therapy in Patients With Relapsed/Refractory Diffuse Large B Cell Lymphoma</h1>
         <p class="lead">A Phase 3, Randomized, Open-Label Study Evaluating the Efficacy of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Subjects With Relapsed/Refractory Diffuse Large B Cell Lymphoma (ZUMA-7)</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/66/NCT03391466/Prot_002.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/66/NCT03391466/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT03391466?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/38635762/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 38635762)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 38635762 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=Axicabtagene" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Axicabtagene) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +668,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Relapsed/Refractory Diffuse Large B-Cell Lymphoma (DLBCL)</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Histologically proven large B-cell lymphoma (BCL) including the following types defined by World Health Organization (WHO) 2016.<br><br>  * Diffuse large B-cell lymphoma (DLBCL) not otherwise specified activated B-cell/ germinal center B-cell (ABC/GCB).<br>  * High-grade B-cell lymphoma (HGBL) with or without myelocytomatosis oncogene (MYC) and BCL 2 and/or BCL 6 rearrangement.<br>  * DLBCL arising from follicular lymphoma (FL).<br>  * T-cell/histiocyte rich large B-cell lymphoma.<br>  * DLBCL associated with chronic inflammation.<br>  * Primary cutaneous DLBCL, leg type.<br>  * Epstein-Barr virus (EBV) + DLBCL.</li><li>Relapsed or refractory disease after first-line chemoimmunotherapy.<br><br>  * Refractory disease defined as no complete remission to first-line therapy; individuals who are intolerant to first-line therapy are excluded.<br><br>    * Progressive disease (PD) as best response to first-line therapy.<br>    * Stable disease (SD) as best response after at least 4 cycles of first-line therapy (eg, 4 cycles of R-CHOP).<br>    * Partial response (PR) as best response after at least 6 cycles and biopsy-proven residual disease or disease progression ≤ 12 months of therapy.<br>  * Relapsed disease defined as complete remission to first-line therapy followed by biopsy-proven relapse ≤ 12 months of first-line therapy.</li><li>Individuals must have received adequate first-line therapy including at a minimum:<br><br>  * Anti-Cluster of Differentiation 20 antigen (CD20) monoclonal antibody unless investigator determines that tumor is CD20 negative, and<br>  * An anthracycline containing chemotherapy regimen.</li><li>No known history or suspicion of central nervous system involvement by lymphoma.</li><li>Eastern cooperative oncology group (ECOG) performance status of 0 or 1.</li><li>Adequate bone marrow function as evidenced by:<br><br>  * Absolute neutrophil count (ANC) ≥ 1000/μl<br>  * Platelet ≥ 75,000/μl<br>  * Absolute lymphocyte count ≥ 100/μl</li><li>Adequate renal, hepatic, cardiac, and pulmonary function as evidenced by:<br><br>  * Creatinine clearance (Cockcroft Gault) ≥ 60 mL/min.<br>  * Serum Alanine aminotransferase/Aspartate aminotransferase (ALT/AST) ≤ 2.5 Upper limit of normal (ULN).<br>  * Total bilirubin ≤ 1.5 mg/dl<br>  * Cardiac ejection fraction ≥ 50%, no evidence of pericardial effusion as determined by an Echocardiogram (ECHO), and no clinically significant Electrocardiogram (ECG) findings.<br>  * No clinically significant pleural effusion.<br>  * Baseline oxygen saturation \&gt; 92% on room air.<br><br>Key</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>History of malignancy other than nonmelanoma skin cancer or carcinoma in situ (eg cervix, bladder, breast) unless disease free for at least 3 years.</li><li>Received more than one line of therapy for DLBCL.</li><li>History of autologous or allogeneic stem cell transplant.</li><li>Presence of fungal, bacterial, viral, or other infection that is uncontrolled or requiring intravenous antimicrobials for management.</li><li>Known history of infection with human immunodeficiency virus (HIV) or hepatitis B (HBsAg positive) or anti-hepatitis C virus (HCV) positive. If there is a positive history of treated hepatitis B or hepatitis C, the viral load must be undetectable per quantitative polymerase chain reaction (PCR) and/or nucleic acid testing.</li><li>Individuals with detectable cerebrospinal fluid malignant cells or known brain metastases, or with a history of cerebrospinal fluid malignant cells or brain metastases.</li><li>History or presence of non-malignant central nervous system (CNS) disorder such as seizure disorder, cerebrovascular ischemia/hemorrhage, dementia, cerebellar disease, or any autoimmune disease with CNS involvement.</li><li>Presence of any indwelling line or drain. Dedicated central venous access catheter such as a Port-a-Cath or Hickman catheter are permitted.</li>
                     </ul>
                 </div>
             </div>
@@ -632,11 +694,24 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT03391466" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT03391466" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03391466" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03391466)
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/66/NCT03391466/Prot_002.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/66/NCT03391466/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT03391466?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/38635762/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 38635762)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT03391466" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +722,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Cell &amp; Gene Therapy (CAR-T)</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in CAR-T</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +772,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT03391466","acronym":"ZUMA-7","briefTitle":"Study of Effectiveness of Axicabtagene Ciloleucel Compared to Standard of Care Therapy in Patients With Relapsed/Refractory Diffuse Large B Cell Lymphoma","officialTitle":"A Phase 3, Randomized, Open-Label Study Evaluating the Efficacy of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Subjects With Relapsed/Refractory Diffuse Large B Cell Lymphoma (ZUMA-7)","sponsor":"Kite, A Gilead Company","phase":"Phase 3","status":"COMPLETED","modality":"Cell & Gene Therapy (CAR-T)","conditions":["Relapsed/Refractory Diffuse Large B-Cell Lymphoma (DLBCL)"],"interventions":["Axicabtagene Ciloleucel","Platinum-containing Salvage Chemotherapy","Cyclophosphamide","Fludarabine"],"primaryOutcomes":[{"measure":"Event Free Survival (EFS) Per Blinded Central Assessment","description":"EFS:Time from randomization to disease progression (PD), best response of stable disease (SD) up to Day 150, start of new anti-lymphoma therapy including stem cell transplant, or death from any cause. PD=Score 4 (uptake moderately \\> liver) or 5 (uptake markedly \\> liver and/or new lesions) with increased uptake from baseline; New fluorodeoxyglucose (FDG)-avid foci consistent with lymphoma rather than another etiology or in bone marrow; Individual node/lesion abnormal with longest diameter \\> 1.5 cm, ≥ 50% increase from nadir; Splenic length increase \\> 50% of prior increase beyond baseline or ≥ 2 cm increase if no prior splenomegaly; New/recurrent splenomegaly, progression of non-measurable lesions, new lesion, or new/recurrent bone marrow involvement. KM estimates was used for analysis.","timeFrame":"From randomization date up to a median follow-up: 24.9 months"}],"completionDate":"2024-11-25","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT03391466","acronym":"ZUMA-7","briefTitle":"Study of Effectiveness of Axicabtagene Ciloleucel Compared to Standard of Care Therapy in Patients With Relapsed/Refractory Diffuse Large B Cell Lymphoma","officialTitle":"A Phase 3, Randomized, Open-Label Study Evaluating the Efficacy of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Subjects With Relapsed/Refractory Diffuse Large B Cell Lymphoma (ZUMA-7)","sponsor":"Kite, A Gilead Company","phase":"Phase 3","status":"COMPLETED","modality":"CAR-T","conditions":["Relapsed/Refractory Diffuse Large B-Cell Lymphoma (DLBCL)"],"interventions":["Axicabtagene Ciloleucel","Platinum-containing Salvage Chemotherapy","Cyclophosphamide","Fludarabine"],"primaryOutcomes":[{"measure":"Event Free Survival (EFS) Per Blinded Central Assessment","description":"EFS:Time from randomization to disease progression (PD), best response of stable disease (SD) up to Day 150, start of new anti-lymphoma therapy including stem cell transplant, or death from any cause. PD=Score 4 (uptake moderately \\> liver) or 5 (uptake markedly \\> liver and/or new lesions) with increased uptake from baseline; New fluorodeoxyglucose (FDG)-avid foci consistent with lymphoma rather than another etiology or in bone marrow; Individual node/lesion abnormal with longest diameter \\> 1.5 cm, ≥ 50% increase from nadir; Splenic length increase \\> 50% of prior increase beyond baseline or ≥ 2 cm increase if no prior splenomegaly; New/recurrent splenomegaly, progression of non-measurable lesions, new lesion, or new/recurrent bone marrow involvement. KM estimates was used for analysis.","timeFrame":"From randomization date up to a median follow-up: 24.9 months"}],"completionDate":"2024-11-25","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "ZUMA-7. Study of Effectiveness of Axicabtagene Ciloleucel Compared to Standard of Care Therapy in Patients With Relapsed/Refractory Diffuse Large B Cell Lymphoma. ClinicalTrials.gov Identifier: NCT03391466. Primary Sponsor: Kite, A Gilead Company. Available at: https://clinsight.pract.eu/trials/NCT03391466/";

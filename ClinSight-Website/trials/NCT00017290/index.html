@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT00017290 NCT00017290 — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Genitope Corporation">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: ADC · Sponsor: Genitope Corporation">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT00017290/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT00017290 (NCT00017290): Combination Chemotherapy Followed By Vaccine Therapy Plus Sargramostim in Treating Patients With Stage III or Stage IV Non-Hodgkin&#39;s Lymphoma","url":"https://clinsight.pract.eu/trials/NCT00017290/","studySubject":{"@type":"MedicalCondition","name":"Lymphoma"},"sponsor":"Genitope Corporation","status":"UNKNOWN","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT00017290 (NCT00017290)","item":"https://clinsight.pract.eu/trials/NCT00017290/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT00017290 (NCT00017290)?","acceptedAnswer":{"@type":"Answer","text":"NCT00017290 is a Phase 3 study sponsored by Genitope Corporation evaluating Targeted Oncology &amp; Systemic Therapy in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT00017290?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT00017290."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT00017290 (NCT00017290): Combination Chemotherapy Followed By Vaccine Therapy Plus Sargramostim in Treating Patients With Stage III or Stage IV Non-Hodgkin&#39;s Lymphoma","url":"https://clinsight.pract.eu/trials/NCT00017290/","studySubject":{"@type":"MedicalCondition","name":"Lymphoma"},"sponsor":"Genitope Corporation","status":"UNKNOWN","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT00017290 (NCT00017290)","item":"https://clinsight.pract.eu/trials/NCT00017290/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT00017290 (NCT00017290)?","acceptedAnswer":{"@type":"Answer","text":"NCT00017290 is a Phase 3 study sponsored by Genitope Corporation evaluating ADC in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT00017290?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT00017290."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,29 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT00017290</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status ">UNKNOWN</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">ADC</span>
+            
         </div>
 
         <h1>Combination Chemotherapy Followed By Vaccine Therapy Plus Sargramostim in Treating Patients With Stage III or Stage IV Non-Hodgkin&#39;s Lymphoma</h1>
         <p class="lead">A Phase III Trial To Evaluate The Safety And Efficacy Of Specific Immunotherapy, Recombinant Idiotype Conjugated To KLH With GM-CSF, Compared To Non-Specific Immunotherapy, KLH With GM-CSF, In Patients With Follicular Non-Hodgkin&#39;s Lymphoma</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            
+            
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/24799467/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 24799467)">
+                <i class="fa-solid fa-book-medical"></i> PubMed: 24799467 ↗
+            </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=autologous" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (autologous) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,28 +659,18 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Lymphoma</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>DISEASE CHARACTERISTICS:</li><li>Histologically confirmed stage III or IV follicular B-cell non-Hodgkin&#39;s lymphoma</li><li>At least 1 bidimensionally measurable lesion by radiography, in addition to lesion removed for biopsy</li><li>No clinical evidence of CNS involvement<br><br>PATIENT CHARACTERISTICS:<br><br>Age:</li><li>18 and over<br><br>Performance status:</li><li>ECOG 0-2<br><br>Life expectancy:</li><li>Not specified<br><br>Hematopoietic:</li><li>WBC greater than 1,500/mm\^3</li>
                     </ul>
                 </div>
-                <div class="criteria-box">
-                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
-                    <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
 
@@ -632,11 +679,15 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT00017290" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT00017290" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT00017290" target="_blank" class="btn btn-outline">
-                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT00017290)
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/24799467/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(245, 158, 11, 0.4); color:var(--amber);">
+                    <i class="fa-solid fa-book-medical"></i> Primary Paper (PMID: 24799467)
                 </a>
                 <a href="https://scholar.google.com/scholar?q=NCT00017290" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
@@ -647,7 +698,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in ADC</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -662,16 +713,16 @@
                     <span style="font-size:11px; color:var(--text-low);">Daiichi Sankyo</span>
                 </a>
                 
+                <a href="../NCT04526691/" class="related-card">
+                    <div class="rel-id">NCT04526691 · Phase 1</div>
+                    <div class="rel-title">Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)</div>
+                    <span style="font-size:11px; color:var(--text-low);">Daiichi Sankyo</span>
+                </a>
+                
                 <a href="../NCT03971409/" class="related-card">
                     <div class="rel-id">NCT03971409 · Phase 2</div>
                     <div class="rel-title">InCITe: Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer</div>
                     <span style="font-size:11px; color:var(--text-low);">Laura Huppert, MD, BA</span>
-                </a>
-                
-                <a href="../NCT02142738/" class="related-card">
-                    <div class="rel-id">NCT02142738 · Phase 3</div>
-                    <div class="rel-title">Study of Pembrolizumab (MK-3475) Compared to Platinum-Based Chemotherapies in Participants With Metastatic Non-Small Cell Lung Cancer (MK-3475-024/KEYNOTE-024)</div>
-                    <span style="font-size:11px; color:var(--text-low);">Merck Sharp &amp; Dohme LLC</span>
                 </a>
                 
             </div>
@@ -697,7 +748,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT00017290","acronym":null,"briefTitle":"Combination Chemotherapy Followed By Vaccine Therapy Plus Sargramostim in Treating Patients With Stage III or Stage IV Non-Hodgkin's Lymphoma","officialTitle":"A Phase III Trial To Evaluate The Safety And Efficacy Of Specific Immunotherapy, Recombinant Idiotype Conjugated To KLH With GM-CSF, Compared To Non-Specific Immunotherapy, KLH With GM-CSF, In Patients With Follicular Non-Hodgkin's Lymphoma","sponsor":"Genitope Corporation","phase":"Phase 3","status":"UNKNOWN","modality":"Targeted Oncology & Systemic Therapy","conditions":["Lymphoma"],"interventions":["autologous immunoglobulin idiotype-KLH conjugate vaccine","keyhole limpet hemocyanin","sargramostim","cyclophosphamide","prednisone","vincristine sulfate"],"primaryOutcomes":[],"completionDate":"2024","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT00017290","acronym":null,"briefTitle":"Combination Chemotherapy Followed By Vaccine Therapy Plus Sargramostim in Treating Patients With Stage III or Stage IV Non-Hodgkin's Lymphoma","officialTitle":"A Phase III Trial To Evaluate The Safety And Efficacy Of Specific Immunotherapy, Recombinant Idiotype Conjugated To KLH With GM-CSF, Compared To Non-Specific Immunotherapy, KLH With GM-CSF, In Patients With Follicular Non-Hodgkin's Lymphoma","sponsor":"Genitope Corporation","phase":"Phase 3","status":"UNKNOWN","modality":"ADC","conditions":["Lymphoma"],"interventions":["autologous immunoglobulin idiotype-KLH conjugate vaccine","keyhole limpet hemocyanin","sargramostim","cyclophosphamide","prednisone","vincristine sulfate"],"primaryOutcomes":[],"completionDate":"2024","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "Combination Chemotherapy Followed By Vaccine Therapy Plus Sargramostim in Treating Patients With Stage III or Stage IV Non-Hodgkin&amp;#39;s Lymphoma. ClinicalTrials.gov Identifier: NCT00017290. Primary Sponsor: Genitope Corporation. Available at: https://clinsight.pract.eu/trials/NCT00017290/";

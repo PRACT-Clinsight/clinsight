@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="NCT02997501 ADELOS — Clinical Study Protocol">
-    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: AstraZeneca">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Unclassified · Sponsor: AstraZeneca">
     <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT02997501/">
     <meta property="og:type" content="article">
     
@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ADELOS (NCT02997501): T790M Plasma Testing Methodology Comparison and Clinical Validation","url":"https://clinsight.pract.eu/trials/NCT02997501/","studySubject":{"@type":"MedicalCondition","name":"Lung Cancer"},"sponsor":"AstraZeneca","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ADELOS (NCT02997501)","item":"https://clinsight.pract.eu/trials/NCT02997501/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02997501 (ADELOS)?","acceptedAnswer":{"@type":"Answer","text":"NCT02997501 is a Phase 3 study sponsored by AstraZeneca evaluating Targeted Oncology &amp; Systemic Therapy in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02997501?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02997501."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ADELOS (NCT02997501): T790M Plasma Testing Methodology Comparison and Clinical Validation","url":"https://clinsight.pract.eu/trials/NCT02997501/","studySubject":{"@type":"MedicalCondition","name":"Lung Cancer"},"sponsor":"AstraZeneca","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ADELOS (NCT02997501)","item":"https://clinsight.pract.eu/trials/NCT02997501/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02997501 (ADELOS)?","acceptedAnswer":{"@type":"Answer","text":"NCT02997501 is a Phase 3 study sponsored by AstraZeneca evaluating Unclassified in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02997501?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02997501."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,65 @@
             overflow: hidden;
         }
 
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
         .action-bar {
             display: flex;
             flex-wrap: wrap;
@@ -452,14 +511,7 @@
             border-color: var(--border-hover);
             background: rgba(255, 255, 255, 0.05);
         }
-        .vigisight-action {
-            color: var(--emerald);
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-        .vigisight-action:hover {
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.7);
-        }
+
         .consulting-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
@@ -543,24 +595,35 @@
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT02997501</span>
             <span class="badge phase">Phase 3</span>
             <span class="badge status completed">COMPLETED</span>
-            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            <span class="badge modality">Unclassified</span>
+            
         </div>
 
         <h1>ADELOS: T790M Plasma Testing Methodology Comparison and Clinical Validation</h1>
         <p class="lead">Detect EGFR T790M Mutation in ctDNA of Chinese Advanced/Metastatic NSCLC Patients by Cobas, Super-ARMS, Digital PCR and NGS and Evaluate Clinical Outcomes of T790M Mutation Positive Patients Who Had AZD9291 Monotherapy</p>
 
-        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
         <div class="action-bar">
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT02997501/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
+                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+            </a>
+            
+            <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT02997501/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
+                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+            </a>
+            
+            <a href="https://clinicaltrials.gov/study/NCT02997501?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
+                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+            </a>
+            
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
             </button>
             <button onclick="downloadJson()" class="btn-action">
-                <i class="fa-solid fa-download"></i> Download Protocol JSON
+                <i class="fa-solid fa-download"></i> Protocol JSON
             </button>
-            
-            <a href="https://vigisight.pract.eu/?search=T790M%2B" target="_blank" class="btn-action vigisight-action">
-                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (T790M+) ↗
-            </a>
+
         </div>
 
         <!-- Official Registry Overview -->
@@ -602,26 +665,22 @@
             </div>
         </div>
 
-        <!-- Eligibility Criteria Checklist -->
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
             <div class="criteria-grid">
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
                     <ul>
-                        <li>Histologically confirmed diagnosis for Lung Cancer</li>
-                             <li>Measurable disease according to standardized response evaluation criteria</li>
-                             <li>Adequate baseline organ and bone marrow function</li>
-                             <li>Age &ge; 18 years at time of written informed consent</li>
+                        <li>Provision of informed consent prior to any study specific procedures.</li><li>Adults (according to China regulations for age of majority)</li><li>Histological or cytological confirmed locally advanced NSCLC (stage IIIB) or metastatic (stage IV) NSCLC, not amenable to curative surgery or radiotherapy.</li><li>Patients who have progressed following prior therapy with an EGFR-TKI agent.</li>
                     </ul>
                 </div>
+                
                 <div class="criteria-box">
                     <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
                     <ul>
-                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
-                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
-                             <li>Prior intolerance or hypersensitivity to study intervention</li>
-                             <li>Participation in another investigational intervention within protocol window</li>
+                        <li>Patients who disagree to participate this study.</li><li>Patients whose medical objection was recorded to use the existing data from medical practice for scientific research.</li>
                     </ul>
                 </div>
             </div>
@@ -632,9 +691,22 @@
             <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
             <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
             <div class="actions-row">
-                <a href="https://clinicaltrials.gov/study/NCT02997501" target="_blank" class="btn btn-primary">
+                <a href="https://clinicaltrials.gov/study/NCT02997501" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
                 </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT02997501/Prot_000.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(56, 189, 248, 0.4); color:var(--cyan);">
+                    <i class="fa-solid fa-file-pdf"></i> Download Protocol (PDF)
+                </a>
+                
+                <a href="https://cdn.clinicaltrials.gov/large-docs/01/NCT02997501/SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(168, 85, 247, 0.4); color:var(--purple);">
+                    <i class="fa-solid fa-chart-line"></i> Download SAP (PDF)
+                </a>
+                
+                <a href="https://clinicaltrials.gov/study/NCT02997501?tab=results" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);">
+                    <i class="fa-solid fa-square-poll-vertical"></i> View Results Tab
+                </a>
+                
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT02997501" target="_blank" class="btn btn-outline">
                     <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT02997501)
                 </a>
@@ -647,7 +719,7 @@
         
         <!-- Related Studies in Modality -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Targeted Oncology &amp; Systemic Therapy</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Unclassified</div>
             <div class="related-grid">
                 
                 <a href="../NCT03734029/" class="related-card">
@@ -697,7 +769,7 @@
     </div>
 
     <script>
-        const studyData = {"nctId":"NCT02997501","acronym":"ADELOS","briefTitle":"T790M Plasma Testing Methodology Comparison and Clinical Validation","officialTitle":"Detect EGFR T790M Mutation in ctDNA of Chinese Advanced/Metastatic NSCLC Patients by Cobas, Super-ARMS, Digital PCR and NGS and Evaluate Clinical Outcomes of T790M Mutation Positive Patients Who Had AZD9291 Monotherapy","sponsor":"AstraZeneca","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Oncology & Systemic Therapy","conditions":["Lung Cancer"],"interventions":["T790M+ Testing","Baseline Visit Blood & Urine Testing","Baseline ECG","Visual Slit-Lamp Testing","AZD9291 Dosing","Plasma AZD9291 testing"],"primaryOutcomes":[{"measure":"Concordance","description":"To evaluate concordance of T790M plasma mutation testing between the Cobas test and each of other platforms: Super-ARMS, digital PCR or NGS.","timeFrame":"Up to 6 months"},{"measure":"PFS Using Investigator Assessments According to RECIST v1.1","description":"To assess the efficacy of AZD9291 monotherapy by assessment of PFS in adult patients with advanced or metastatic NSCLC, who have received prior EGFR- TKI therapy and are T790M mutation positive detected by any one of the four plasma testing platforms. PFS was defined using Response Evaluation Criteria In Solid Tumors version 1.1(RECIST v1.1).","timeFrame":"The time from first dose of AZD9291 in this study until the date of disease progression as recorded in CRF or death (by any cause in the absence of progression), assessed up to 18 months"}],"completionDate":"2018-10-24","source":"ClinicalTrials.gov API v2"};
+        const studyData = {"nctId":"NCT02997501","acronym":"ADELOS","briefTitle":"T790M Plasma Testing Methodology Comparison and Clinical Validation","officialTitle":"Detect EGFR T790M Mutation in ctDNA of Chinese Advanced/Metastatic NSCLC Patients by Cobas, Super-ARMS, Digital PCR and NGS and Evaluate Clinical Outcomes of T790M Mutation Positive Patients Who Had AZD9291 Monotherapy","sponsor":"AstraZeneca","phase":"Phase 3","status":"COMPLETED","modality":"Unclassified","conditions":["Lung Cancer"],"interventions":["T790M+ Testing","Baseline Visit Blood & Urine Testing","Baseline ECG","Visual Slit-Lamp Testing","AZD9291 Dosing","Plasma AZD9291 testing"],"primaryOutcomes":[{"measure":"Concordance","description":"To evaluate concordance of T790M plasma mutation testing between the Cobas test and each of other platforms: Super-ARMS, digital PCR or NGS.","timeFrame":"Up to 6 months"},{"measure":"PFS Using Investigator Assessments According to RECIST v1.1","description":"To assess the efficacy of AZD9291 monotherapy by assessment of PFS in adult patients with advanced or metastatic NSCLC, who have received prior EGFR- TKI therapy and are T790M mutation positive detected by any one of the four plasma testing platforms. PFS was defined using Response Evaluation Criteria In Solid Tumors version 1.1(RECIST v1.1).","timeFrame":"The time from first dose of AZD9291 in this study until the date of disease progression as recorded in CRF or death (by any cause in the absence of progression), assessed up to 18 months"}],"completionDate":"2018-10-24","source":"ClinicalTrials.gov API v2"};
 
         function copyCitation() {
             const text = "ADELOS. T790M Plasma Testing Methodology Comparison and Clinical Validation. ClinicalTrials.gov Identifier: NCT02997501. Primary Sponsor: AstraZeneca. Available at: https://clinsight.pract.eu/trials/NCT02997501/";
