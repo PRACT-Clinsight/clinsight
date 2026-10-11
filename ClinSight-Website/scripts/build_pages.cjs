@@ -51,10 +51,19 @@ function renderTrialPage(trial, allTrials) {
 
   // Safety signals / FAERS cross-linking completely removed per strict liability protocol
 
-  // Related trials in the same domain
-  const related = allTrials
-    .filter(t => t.nctId !== trial.nctId && (t.modality === trial.modality || t.category === trial.category))
-    .slice(0, 4);
+  // Related trials: strictly by disease subtype or verified specific modality, never across Unclassified
+  const hasValidModality = trial.modality && trial.modality !== 'Unclassified' && !trial.modality.includes('Standard of Care');
+  const hasSpecificSubtype = trial.subtype && trial.subtype !== 'Systemic Disease' && trial.subtype !== 'Solid Tumors';
+  
+  const related = (hasValidModality && hasSpecificSubtype)
+    ? allTrials.filter(t => t.nctId !== trial.nctId && t.subtype === trial.subtype && t.modality === trial.modality).slice(0, 4)
+    : hasSpecificSubtype
+      ? allTrials.filter(t => t.nctId !== trial.nctId && t.subtype === trial.subtype).slice(0, 4)
+      : [];
+
+  const relatedHeader = hasSpecificSubtype 
+    ? `Related Studies in ${escapeHtml(trial.subtype)}`
+    : (hasValidModality ? `Related Studies in ${modality}` : 'Related Studies');
 
   // Structured Data Schema (Registry Fact compliant + Breadcrumbs GEO)
   const schemaJson = JSON.stringify({
@@ -844,9 +853,9 @@ function renderTrialPage(trial, allTrials) {
         </div>
 
         ${related.length > 0 ? `
-        <!-- Related Studies in Modality -->
+        <!-- Related Studies -->
         <div class="card">
-            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in ${modality}</div>
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> ${relatedHeader}</div>
             <div class="related-grid">
                 ${related.map(r => `
                 <a href="../${escapeHtml(r.nctId)}/" class="related-card">
