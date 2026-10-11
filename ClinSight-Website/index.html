@@ -17,10 +17,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Theme Initializer (Instant OS/Browser preference detection) -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('clinsight_theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 
     <style>
         :root {
+            /* Dark Theme (Default) */
             --bg-void: #07090e;
             --bg-base: #0b0f19;
             --bg-surface: #111827;
@@ -38,21 +51,115 @@
             --text-high: #f8fafc;
             --text-med: #cbd5e1;
             --text-low: #64748b;
+            --input-bg: rgba(11, 15, 25, 0.95);
+            --hero-bg: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(15, 23, 42, 0.5) 100%);
+            --chip-bg: rgba(255, 255, 255, 0.05);
+            --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            --bg-grad-1: rgba(56, 189, 248, 0.04);
+            --bg-grad-2: rgba(168, 85, 247, 0.03);
             --font-sans: 'Inter', sans-serif;
             --font-mono: 'Inter', sans-serif;
             --sidebar-width: 240px;
+            color-scheme: dark;
+        }
+
+        /* Auto-adapt to OS / Browser light mode */
+        @media (prefers-color-scheme: light) {
+            :root:not([data-theme="dark"]) {
+                --bg-void: #f8fafc;
+                --bg-base: #ffffff;
+                --bg-surface: #ffffff;
+                --bg-card: #ffffff;
+                --border-subtle: #e2e8f0;
+                --border-hover: rgba(2, 132, 199, 0.4);
+                --cyan: #0284c7;
+                --cyan-glow: rgba(2, 132, 199, 0.08);
+                --emerald: #059669;
+                --emerald-glow: rgba(5, 150, 105, 0.08);
+                --purple: #7c3aed;
+                --purple-glow: rgba(124, 58, 237, 0.08);
+                --amber: #d97706;
+                --amber-glow: rgba(217, 119, 6, 0.08);
+                --text-high: #0f172a;
+                --text-med: #334155;
+                --text-low: #64748b;
+                --input-bg: #ffffff;
+                --hero-bg: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+                --chip-bg: #f1f5f9;
+                --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+                --bg-grad-1: rgba(2, 132, 199, 0.03);
+                --bg-grad-2: rgba(124, 58, 237, 0.02);
+                color-scheme: light;
+            }
+        }
+
+        /* Explicit Light Theme via Toggle */
+        :root[data-theme="light"] {
+            --bg-void: #f8fafc;
+            --bg-base: #ffffff;
+            --bg-surface: #ffffff;
+            --bg-card: #ffffff;
+            --border-subtle: #e2e8f0;
+            --border-hover: rgba(2, 132, 199, 0.4);
+            --cyan: #0284c7;
+            --cyan-glow: rgba(2, 132, 199, 0.08);
+            --emerald: #059669;
+            --emerald-glow: rgba(5, 150, 105, 0.08);
+            --purple: #7c3aed;
+            --purple-glow: rgba(124, 58, 237, 0.08);
+            --amber: #d97706;
+            --amber-glow: rgba(217, 119, 6, 0.08);
+            --text-high: #0f172a;
+            --text-med: #334155;
+            --text-low: #64748b;
+            --input-bg: #ffffff;
+            --hero-bg: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            --chip-bg: #f1f5f9;
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+            --bg-grad-1: rgba(2, 132, 199, 0.03);
+            --bg-grad-2: rgba(124, 58, 237, 0.02);
+            color-scheme: light;
+        }
+
+        /* Explicit Dark Theme via Toggle */
+        :root[data-theme="dark"] {
+            --bg-void: #07090e;
+            --bg-base: #0b0f19;
+            --bg-surface: #111827;
+            --bg-card: rgba(17, 24, 39, 0.75);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.35);
+            --cyan: #38bdf8;
+            --cyan-glow: rgba(56, 189, 248, 0.12);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.12);
+            --purple: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.12);
+            --amber: #fbbf24;
+            --amber-glow: rgba(251, 191, 36, 0.12);
+            --text-high: #f8fafc;
+            --text-med: #cbd5e1;
+            --text-low: #64748b;
+            --input-bg: rgba(11, 15, 25, 0.95);
+            --hero-bg: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(15, 23, 42, 0.5) 100%);
+            --chip-bg: rgba(255, 255, 255, 0.05);
+            --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            --bg-grad-1: rgba(56, 189, 248, 0.04);
+            --bg-grad-2: rgba(168, 85, 247, 0.03);
+            color-scheme: dark;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: var(--font-sans);
             background-color: var(--bg-void);
-            background-image: radial-gradient(circle at 70% 10%, rgba(56, 189, 248, 0.04), transparent 40%),
-                              radial-gradient(circle at 20% 60%, rgba(168, 85, 247, 0.03), transparent 50%);
+            background-image: radial-gradient(circle at 70% 10%, var(--bg-grad-1), transparent 40%),
+                              radial-gradient(circle at 20% 60%, var(--bg-grad-2), transparent 50%);
             color: var(--text-high);
             line-height: 1.6;
             min-height: 100vh;
             display: flex;
+            transition: background-color 0.2s, color 0.2s;
         }
 
         .app-layout {
@@ -64,7 +171,7 @@
         /* Left Sidebar */
         .sidebar {
             width: var(--sidebar-width);
-            background: rgba(11, 15, 25, 0.95);
+            background: var(--bg-base);
             border-right: 1px solid var(--border-subtle);
             padding: 24px 16px;
             display: flex;
@@ -220,7 +327,7 @@
         .search-input {
             width: 100%;
             padding: 12px 42px 12px 38px;
-            background: rgba(11, 15, 25, 0.95);
+            background: var(--input-bg);
             border: 1px solid var(--border-subtle);
             border-radius: 8px;
             color: var(--text-high);
@@ -232,8 +339,8 @@
         .search-input:focus {
             outline: none;
             border-color: var(--cyan);
-            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
-            background: #0f172a;
+            box-shadow: 0 0 0 3px var(--cyan-glow);
+            background: var(--bg-surface);
         }
         .search-shortcut {
             position: absolute;
@@ -243,7 +350,7 @@
             font-family: var(--font-mono);
             font-size: 11px;
             color: var(--text-low);
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--chip-bg);
             border: 1px solid var(--border-subtle);
             padding: 2px 6px;
             border-radius: 4px;
@@ -252,10 +359,11 @@
         /* Hero Banner */
         .clean-hero {
             margin-bottom: 24px;
-            background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(15, 23, 42, 0.5) 100%);
+            background: var(--hero-bg);
             border: 1px solid var(--border-subtle);
             border-radius: 14px;
             padding: 24px 28px;
+            box-shadow: var(--card-shadow);
         }
         .clean-hero h1 {
             font-size: 24px;
@@ -288,7 +396,7 @@
             margin-right: 4px;
         }
         .drug-chip {
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--chip-bg);
             border: 1px solid var(--border-subtle);
             color: var(--text-med);
             padding: 4px 10px;
@@ -301,7 +409,7 @@
         .drug-chip:hover {
             background: var(--cyan-glow);
             color: var(--cyan);
-            border-color: rgba(56, 189, 248, 0.35);
+            border-color: var(--border-hover);
         }
 
         /* Modality Grid */
@@ -380,11 +488,11 @@
             margin-bottom: 12px;
         }
         .filter-select {
-            background: rgba(11, 15, 25, 0.9);
+            background: var(--input-bg);
             border: 1px solid var(--border-subtle);
             border-radius: 8px;
             padding: 7px 10px;
-            color: var(--text-med);
+            color: var(--text-high);
             font-size: 12.5px;
             font-family: inherit;
         }
@@ -400,7 +508,7 @@
             align-items: center;
         }
         .chip {
-            background: rgba(255, 255, 255, 0.04);
+            background: var(--chip-bg);
             border: 1px solid var(--border-subtle);
             color: var(--text-med);
             padding: 4px 10px;
@@ -413,7 +521,7 @@
         .chip:hover, .chip.active {
             background: var(--cyan-glow);
             color: var(--cyan);
-            border-color: rgba(56, 189, 248, 0.4);
+            border-color: var(--border-hover);
         }
         .btn-clear {
             background: transparent;
@@ -451,12 +559,34 @@
             text-decoration: none;
             color: inherit;
             display: block;
+            box-shadow: var(--card-shadow);
             transition: all 0.15s;
         }
         .study-item:hover {
             border-color: var(--border-hover);
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-family: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.15s;
+        }
+        .theme-toggle:hover {
+            color: var(--text-high);
+            border-color: var(--border-hover);
+            background: var(--chip-bg);
         }
         .study-item-top {
             display: flex;
@@ -476,7 +606,7 @@
         }
         .badge.nct { background: var(--cyan-glow); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.25); }
         .badge.phase { background: var(--purple-glow); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.25); }
-        .badge.modality { background: rgba(255, 255, 255, 0.05); color: var(--text-med); border: 1px solid var(--border-subtle); }
+        .badge.modality { background: var(--chip-bg); color: var(--text-med); border: 1px solid var(--border-subtle); }
         .badge.completed { background: var(--emerald-glow); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.25); }
         
         .study-item-year {
@@ -539,6 +669,11 @@
             </ul>
 
             <div class="sidebar-footer">
+                <div style="margin-bottom:12px;">
+                    <button id="themeToggleSidebar" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light or dark appearance" style="width:100%; justify-content:center;">
+                        <i class="fa-regular fa-sun"></i> <span id="themeToggleTextSidebar">Appearance</span>
+                    </button>
+                </div>
                 <a href="https://pract.eu" target="_blank">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a>
             </div>
         </aside>
@@ -549,6 +684,9 @@
             <div class="mobile-header">
                 <button class="mobile-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
                 <div class="logo-text" style="font-size:18px;">ClinSight<span>™</span></div>
+                <button id="themeToggleMobile" class="theme-toggle" onclick="toggleTheme()" style="margin-left:auto;" aria-label="Toggle appearance">
+                    <i class="fa-regular fa-sun"></i>
+                </button>
             </div>
 
             <!-- Overview Section -->
@@ -882,8 +1020,46 @@
             }
         });
 
+        function getEffectiveTheme() {
+            const saved = localStorage.getItem('clinsight_theme');
+            if (saved) return saved;
+            return (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const isLight = theme === 'light';
+            const iconHtml = isLight ? '<i class="fa-regular fa-moon"></i>' : '<i class="fa-regular fa-sun"></i>';
+            const text = isLight ? 'Dark Mode' : 'Light Mode';
+            
+            const btnSidebar = document.getElementById('themeToggleSidebar');
+            if (btnSidebar) {
+                btnSidebar.innerHTML = `${iconHtml} <span id="themeToggleTextSidebar">${text}</span>`;
+            }
+            const btnMobile = document.getElementById('themeToggleMobile');
+            if (btnMobile) {
+                btnMobile.innerHTML = iconHtml;
+            }
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || getEffectiveTheme();
+            const next = current === 'light' ? 'dark' : 'light';
+            localStorage.setItem('clinsight_theme', next);
+            applyTheme(next);
+        }
+
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('clinsight_theme')) {
+                    applyTheme(e.matches ? 'light' : 'dark');
+                }
+            });
+        }
+
         // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
+            applyTheme(getEffectiveTheme());
             loadTrials();
         });
     </script>

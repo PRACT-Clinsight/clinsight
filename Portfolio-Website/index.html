@@ -10,11 +10,26 @@
     <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Theme Initializer (Instant OS/Browser preference detection) -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('clinsight_theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 
     <style>
         :root {
+            /* Dark Theme (Default) */
             --bg-void: #090d16;
             --bg-card: rgba(17, 24, 39, 0.85);
             --border-subtle: rgba(255, 255, 255, 0.08);
@@ -28,7 +43,72 @@
             --text-high: #f8fafc;
             --text-med: #cbd5e1;
             --text-low: #64748b;
+            --navbar-bg: rgba(11, 15, 25, 0.9);
+            --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
             --font-main: 'Inter', sans-serif;
+            color-scheme: dark;
+        }
+
+        /* Auto-adapt to OS / Browser light mode */
+        @media (prefers-color-scheme: light) {
+            :root:not([data-theme="dark"]) {
+                --bg-void: #f8fafc;
+                --bg-card: #ffffff;
+                --border-subtle: #e2e8f0;
+                --border-hover: rgba(2, 132, 199, 0.4);
+                --cyan: #0284c7;
+                --cyan-glow: rgba(2, 132, 199, 0.08);
+                --emerald: #059669;
+                --emerald-glow: rgba(5, 150, 105, 0.08);
+                --purple: #7c3aed;
+                --purple-glow: rgba(124, 58, 237, 0.08);
+                --text-high: #0f172a;
+                --text-med: #334155;
+                --text-low: #64748b;
+                --navbar-bg: rgba(255, 255, 255, 0.9);
+                --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+                color-scheme: light;
+            }
+        }
+
+        /* Explicit Light Theme */
+        :root[data-theme="light"] {
+            --bg-void: #f8fafc;
+            --bg-card: #ffffff;
+            --border-subtle: #e2e8f0;
+            --border-hover: rgba(2, 132, 199, 0.4);
+            --cyan: #0284c7;
+            --cyan-glow: rgba(2, 132, 199, 0.08);
+            --emerald: #059669;
+            --emerald-glow: rgba(5, 150, 105, 0.08);
+            --purple: #7c3aed;
+            --purple-glow: rgba(124, 58, 237, 0.08);
+            --text-high: #0f172a;
+            --text-med: #334155;
+            --text-low: #64748b;
+            --navbar-bg: rgba(255, 255, 255, 0.9);
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+            color-scheme: light;
+        }
+
+        /* Explicit Dark Theme */
+        :root[data-theme="dark"] {
+            --bg-void: #090d16;
+            --bg-card: rgba(17, 24, 39, 0.85);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            --cyan: #38bdf8;
+            --cyan-glow: rgba(56, 189, 248, 0.12);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.12);
+            --purple: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.12);
+            --text-high: #f8fafc;
+            --text-med: #cbd5e1;
+            --text-low: #64748b;
+            --navbar-bg: rgba(11, 15, 25, 0.9);
+            --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            color-scheme: dark;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,11 +119,12 @@
             color: var(--text-high);
             line-height: 1.6;
             min-height: 100vh;
+            transition: background-color 0.2s, color 0.2s;
         }
 
         /* Navigation */
         .navbar {
-            background: rgba(11, 15, 25, 0.9);
+            background: var(--navbar-bg);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-subtle);
             padding: 18px 32px;
@@ -199,6 +280,24 @@
             font-size: 13px;
             color: var(--text-low);
         }
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 7px 11px;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .theme-toggle:hover {
+            color: var(--text-high);
+            border-color: var(--border-hover);
+            background: rgba(125, 125, 125, 0.08);
+        }
     </style>
 </head>
 <body>
@@ -209,6 +308,11 @@
                 <li><a href="https://clinsight.pract.eu/" class="nav-btn">ClinSight</a></li>
                 <li><a href="https://regsight.pract.eu/" target="_blank">RegSight</a></li>
                 <li><a href="https://vigisight.pract.eu/" target="_blank">VigiSight</a></li>
+                <li>
+                    <button id="themeToggleNav" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle appearance">
+                        <i class="fa-regular fa-sun"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -251,5 +355,29 @@
             <div>&copy; 2026 PRACT · pract.eu</div>
         </footer>
     </div>
+
+    <script>
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const isLight = theme === 'light';
+            const btn = document.getElementById('themeToggleNav');
+            if (btn) btn.innerHTML = isLight ? '<i class="fa-regular fa-moon"></i>' : '<i class="fa-regular fa-sun"></i>';
+        }
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            const next = current === 'light' ? 'dark' : 'light';
+            localStorage.setItem('clinsight_theme', next);
+            applyTheme(next);
+        }
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('clinsight_theme')) {
+                    applyTheme(e.matches ? 'light' : 'dark');
+                }
+            });
+        }
+        const saved = localStorage.getItem('clinsight_theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        applyTheme(saved);
+    </script>
 </body>
 </html>
