@@ -26,13 +26,37 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
+function formatStatus(status) {
+  if (!status) return 'Status Not Specified';
+  const s = String(status).trim().toUpperCase();
+  const map = {
+    'ACTIVE_NOT_RECRUITING': 'Active, Not Recruiting',
+    'RECRUITING': 'Recruiting',
+    'ENROLLING_BY_INVITATION': 'Enrolling by Invitation',
+    'NOT_YET_RECRUITING': 'Not Yet Recruiting',
+    'COMPLETED': 'Completed',
+    'SUSPENDED': 'Suspended',
+    'TERMINATED': 'Terminated',
+    'WITHDRAWN': 'Withdrawn',
+    'AVAILABLE': 'Available',
+    'APPROVED_FOR_MARKETING': 'Approved for Marketing'
+  };
+  if (map[s]) return map[s];
+  return status.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
 function renderTrialPage(trial, allTrials) {
   const nctId = escapeHtml(trial.nctId);
   const title = escapeHtml(trial.briefTitle);
   const officialTitle = escapeHtml(trial.officialTitle || trial.briefTitle);
   const acronym = (trial.acronym && trial.acronym !== 'undefined') ? escapeHtml(trial.acronym) : nctId;
   const phase = escapeHtml(trial.phase || 'Phase Not Specified');
-  const status = escapeHtml(trial.status || 'Unknown');
+  const rawStatus = (trial.status || '').toUpperCase();
+  const displayStatus = escapeHtml(formatStatus(trial.status));
+  let statusBadgeClass = 'status';
+  if (trial.isCompleted) statusBadgeClass = 'status completed';
+  else if (rawStatus === 'RECRUITING') statusBadgeClass = 'status recruiting';
+  else if (rawStatus === 'ACTIVE_NOT_RECRUITING') statusBadgeClass = 'status active-not-recruiting';
   const sponsor = escapeHtml(trial.sponsor || 'Not Disclosed');
   const category = escapeHtml(trial.category || 'Life Sciences');
   const subtype = escapeHtml(trial.subtype || '');
@@ -379,6 +403,16 @@ function renderTrialPage(trial, allTrials) {
             color: var(--emerald);
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
+        .badge.status.recruiting {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.status.active-not-recruiting {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
         .badge.modality {
             background: var(--chip-bg);
             color: var(--text-med);
@@ -564,10 +598,13 @@ function renderTrialPage(trial, allTrials) {
             border-radius: 6px;
             font-size: 12.5px;
             font-family: var(--font-mono);
-            font-weight: 600;
+            font-weight: 500;
             text-decoration: none;
             transition: all 0.15s ease;
             line-height: 1.2;
+        }
+        .doc-btn b {
+            font-weight: 700;
         }
         .doc-btn:hover {
             transform: translateY(-1px);
@@ -724,7 +761,7 @@ function renderTrialPage(trial, allTrials) {
         <div class="badge-row">
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> ${nctId}</span>
             <span class="badge phase">${phase}</span>
-            <span class="badge status ${trial.isCompleted ? 'completed' : ''}">${status}</span>
+            <span class="badge ${statusBadgeClass}">${displayStatus}</span>
             <span class="badge modality">${modality}</span>
             ${isResultsVacant ? '<span class="badge vacant"><i class="fa-solid fa-triangle-exclamation"></i> Results-Vacant</span>' : ''}
         </div>
@@ -736,19 +773,19 @@ function renderTrialPage(trial, allTrials) {
         <div class="action-bar">
             ${protocolUrl ? `
             <a href="${protocolUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
-                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+                <i class="fa-solid fa-file-pdf"></i> <b>Protocol:</b> PDF
             </a>` : ''}
             ${(sapUrl && sapUrl !== protocolUrl) ? `
             <a href="${sapUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF">
-                <i class="fa-solid fa-chart-line"></i> SAP (PDF)
+                <i class="fa-solid fa-chart-line"></i> <b>SAP:</b> PDF
             </a>` : ''}
             ${(trial.hasResults && resultsUrl) ? `
             <a href="${resultsUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
-                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+                <i class="fa-solid fa-square-poll-vertical"></i> <b>Results:</b> Tab ↗
             </a>` : ''}
             ${primaryPmid ? `
             <a href="https://pubmed.ncbi.nlm.nih.gov/${primaryPmid}/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: ${primaryPmid})">
-                <i class="fa-solid fa-book-medical"></i> PubMed: ${primaryPmid} ↗
+                <i class="fa-solid fa-book-medical"></i> <b>PubMed:</b> ${primaryPmid} ↗
             </a>` : ''}
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
@@ -777,7 +814,7 @@ function renderTrialPage(trial, allTrials) {
                 </div>
                 <div class="meta-item">
                     <h4>Patient Enrollment</h4>
-                    <p>${enrollment} participants</p>
+                    <p>${enrollment} individuals</p>
                 </div>
                 <div class="meta-item">
                     <h4>Trial Phase</h4>

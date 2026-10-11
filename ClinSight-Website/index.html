@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Theme Initializer (Instant OS/Browser preference detection) -->
     <script>
         (function() {
@@ -197,7 +198,7 @@
             display: block;
         }
         .logo-text {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 800;
             letter-spacing: -0.03em;
             color: var(--cyan);
@@ -205,15 +206,15 @@
         }
         .logo-text span {
             color: var(--cyan);
-            font-size: 14px;
+            font-size: 15px;
             vertical-align: super;
             font-weight: 700;
         }
         .logo-sub {
-            font-size: 11.5px;
+            font-size: 12.5px;
             font-weight: 500;
             color: var(--text-med);
-            margin-top: 4px;
+            margin-top: 5px;
             letter-spacing: -0.01em;
             line-height: 1.35;
         }
@@ -287,6 +288,50 @@
             gap: 6px;
             font-weight: 500;
             margin-top: 4px;
+        }
+
+        /* Elegant Segmented Pill Theme Switcher (Linear / Raycast aesthetic) */
+        .theme-segmented {
+            display: flex;
+            align-items: center;
+            background: var(--chip-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 3px;
+            gap: 2px;
+            width: 100%;
+        }
+        .theme-seg-btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 11.5px;
+            font-weight: 500;
+            font-family: inherit;
+            border: none;
+            background: transparent;
+            color: var(--text-low);
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+        .theme-seg-btn:hover {
+            color: var(--text-high);
+        }
+        .theme-seg-btn.active {
+            background: var(--bg-surface);
+            color: var(--text-high);
+            font-weight: 600;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+            border: 1px solid var(--border-subtle);
+        }
+        :root[data-theme="dark"] .theme-seg-btn.active {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.12);
+            color: var(--text-high);
         }
 
         /* Main Content Container */
@@ -647,6 +692,11 @@
         .badge.modality { background: var(--chip-bg); color: var(--text-high); border: 1px solid var(--border-subtle); }
         .badge.completed { background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.35); }
         :root[data-theme="dark"] .badge.completed { color: #34d399; }
+        .badge.recruiting { background: rgba(56, 189, 248, 0.15); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.35); }
+        :root[data-theme="dark"] .badge.recruiting { color: #38bdf8; }
+        .badge.active-not-recruiting { background: rgba(245, 158, 11, 0.15); color: #b45309; border: 1px solid rgba(245, 158, 11, 0.35); }
+        :root[data-theme="dark"] .badge.active-not-recruiting { color: #fbbf24; }
+        .badge.status { background: var(--chip-bg); color: var(--text-med); border: 1px solid var(--border-subtle); }
         .badge.vacant { background: rgba(239, 68, 68, 0.15); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.35); }
         :root[data-theme="dark"] .badge.vacant { color: #f87171; }
 
@@ -666,11 +716,14 @@
             border-radius: 6px;
             font-size: 11.5px;
             font-family: var(--font-mono);
-            font-weight: 600;
+            font-weight: 500;
             text-decoration: none;
             transition: all 0.15s ease;
             white-space: nowrap;
             line-height: 1.2;
+        }
+        .doc-btn b {
+            font-weight: 700;
         }
         .doc-btn:hover {
             transform: translateY(-1px);
@@ -760,18 +813,35 @@
         .study-meta-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px 16px;
+            gap: 8px 18px;
             font-size: 12.5px;
             color: var(--text-med);
+            margin-top: 5px;
         }
         .study-meta-pills span {
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            line-height: 1.45;
         }
         .study-meta-pills b {
-            color: var(--text-low);
-            font-weight: 500;
+            color: var(--text-high);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+        .study-meta-pills .meta-val {
+            font-weight: 400;
+            color: var(--text-med);
+        }
+        .pmid-link {
+            color: var(--text-med);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--border-hover);
+            transition: color 0.15s, border-color 0.15s;
+        }
+        .pmid-link:hover {
+            color: var(--cyan);
+            border-bottom-style: solid;
         }
 
         .study-item-aside {
@@ -781,16 +851,33 @@
             justify-content: space-between;
             align-self: stretch;
             gap: 12px;
-            padding-left: 16px;
+            padding-left: 18px;
             border-left: 1px solid var(--border-subtle);
-            min-width: 105px;
+            min-width: 120px;
+        }
+
+        .study-year-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
 
         .study-year {
             font-family: var(--font-mono);
-            font-size: 12px;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--text-high);
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+
+        .study-year-sub {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             color: var(--text-low);
-            font-weight: 500;
+            margin-top: 4px;
         }
 
         .view-protocol-btn {
@@ -851,12 +938,24 @@
                 <div class="logo-sub">Clinical Trials & Evidence Generation</div>
             </a>
 
+            <!-- Navigation -->
+            <div class="sidebar-section-title">Navigation</div>
             <ul class="sidebar-nav">
                 <li><a href="#overview" class="active" onclick="switchNav('overview')"><i class="fa-solid fa-compass"></i> Overview</a></li>
-                <li><a href="#explorer" onclick="switchNav('explorer')"><i class="fa-solid fa-table-cells"></i> Browse Trials <span class="nav-badge" id="navTotalCount">119</span></a></li>
+                <li><a href="#explorer" onclick="switchNav('explorer')"><i class="fa-solid fa-table-cells"></i> Registry Explorer <span class="nav-badge" id="navTotalCount">0</span></a></li>
             </ul>
 
-            <ul class="sidebar-nav" style="margin-top:16px;">
+            <!-- Therapeutic Areas -->
+            <div class="sidebar-section-title">Therapeutic Areas</div>
+            <ul class="sidebar-nav">
+                <li><a href="#explorer" onclick="filterByCategory('Oncology')"><i class="fa-solid fa-disease" style="color:var(--purple);"></i> Oncology</a></li>
+                <li><a href="#explorer" onclick="filterByCategory('Cardiometabolic & Endocrinology')"><i class="fa-solid fa-heart-pulse" style="color:#f43f5e;"></i> Cardiometabolic</a></li>
+                <li><a href="#explorer" onclick="filterByCategory('Rare Disease & Immunology')"><i class="fa-solid fa-shield-virus" style="color:var(--emerald);"></i> Immunology &amp; Rare</a></li>
+            </ul>
+
+            <!-- Drug Modalities -->
+            <div class="sidebar-section-title">Drug Modalities</div>
+            <ul class="sidebar-nav">
                 <li><a href="#explorer" onclick="filterByModality('Antibody-Drug Conjugates (ADC)')" aria-label="Filter studies by Antibody-Drug Conjugates"><i class="fa-solid fa-dna" style="color:var(--purple);"></i> ADCs</a></li>
                 <li><a href="#explorer" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')" aria-label="Filter studies by CAR-T Therapy"><i class="fa-solid fa-vial" style="color:var(--cyan);"></i> CAR-T Therapy</a></li>
                 <li><a href="#explorer" onclick="filterByModality('Bispecific Antibodies & T-Cell Engagers')" aria-label="Filter studies by Bispecific Antibodies"><i class="fa-solid fa-arrows-split-up-and-left" style="color:#f43f5e;"></i> Bispecifics</a></li>
@@ -866,9 +965,17 @@
             </ul>
 
             <div class="sidebar-footer">
-                <button id="themeToggleSidebar" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light or dark appearance" style="width:100%; justify-content:center;">
-                    <i class="fa-regular fa-sun"></i> <span id="themeToggleTextSidebar">Appearance</span>
-                </button>
+                <div style="font-size:11px; font-family:var(--font-mono); color:var(--text-low); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-certificate" style="color:var(--cyan);"></i> Primary Registry Fact Base
+                </div>
+                <div class="theme-segmented" role="radiogroup" aria-label="Appearance Mode">
+                    <button type="button" class="theme-seg-btn" id="themeBtnLight" onclick="setTheme('light')" aria-label="Switch to light mode">
+                        <i class="fa-regular fa-sun"></i> Light
+                    </button>
+                    <button type="button" class="theme-seg-btn" id="themeBtnDark" onclick="setTheme('dark')" aria-label="Switch to dark mode">
+                        <i class="fa-regular fa-moon"></i> Dark
+                    </button>
+                </div>
             </div>
         </aside>
 
@@ -999,13 +1106,18 @@
                         <select id="filterStatus" class="filter-select" onchange="applyFilters()" aria-label="Filter by Recruitment Status">
                             <option value="">All Statuses</option>
                             <option value="completed">Completed</option>
-                            <option value="recruiting">Recruiting / Active</option>
+                            <option value="recruiting">Recruiting</option>
+                            <option value="active_not_recruiting">Active, not recruiting</option>
+                            <option value="not_yet_recruiting">Not yet recruiting</option>
+                            <option value="enrolling_by_invitation">Enrolling by invitation</option>
                         </select>
 
                         <select id="sortSelect" class="filter-select" onchange="applyFilters()" aria-label="Sort Trials List">
-                            <option value="relevance">Sort by Relevance</option>
-                            <option value="year-desc">Latest Year</option>
-                            <option value="enrollment-desc">Largest Enrollment</option>
+                            <option value="relevance">Sort: Relevance (Default)</option>
+                            <option value="year-desc">Start Year: Newest First</option>
+                            <option value="year-asc">Start Year: Oldest First</option>
+                            <option value="enrollment-desc">Participants: High to Low</option>
+                            <option value="enrollment-asc">Participants: Low to High</option>
                         </select>
                     </div>
 
@@ -1090,6 +1202,26 @@
             }
         }
 
+        function formatStatus(status) {
+            if (!status) return 'Status not specified';
+            const s = String(status).trim().toUpperCase();
+            const map = {
+                'ACTIVE_NOT_RECRUITING': 'Active, not recruiting',
+                'RECRUITING': 'Recruiting',
+                'ENROLLING_BY_INVITATION': 'Enrolling by invitation',
+                'NOT_YET_RECRUITING': 'Not yet recruiting',
+                'COMPLETED': 'Completed',
+                'SUSPENDED': 'Suspended',
+                'TERMINATED': 'Terminated',
+                'WITHDRAWN': 'Withdrawn',
+                'AVAILABLE': 'Available',
+                'APPROVED_FOR_MARKETING': 'Approved for marketing'
+            };
+            if (map[s]) return map[s];
+            const clean = status.replace(/_/g, ' ').toLowerCase();
+            return clean.charAt(0).toUpperCase() + clean.slice(1);
+        }
+
         function highlightMatch(text, query) {
             if (!query || !text) return text || '';
             const safeQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -1124,21 +1256,35 @@
                 const displaySponsor = highlightMatch(t.sponsor, query);
                 const displayAcronym = hasAcronym ? highlightMatch(t.acronym, query) : '';
 
-                // Build 1-click primary document action buttons
+                // Normalized Status
+                const rawStatus = (t.status || '').toUpperCase();
+                const formattedStatus = formatStatus(t.status);
+                let statusBadgeClass = 'status';
+                if (t.isCompleted) {
+                    statusBadgeClass = 'completed';
+                } else if (rawStatus === 'RECRUITING') {
+                    statusBadgeClass = 'recruiting';
+                } else if (rawStatus === 'ACTIVE_NOT_RECRUITING') {
+                    statusBadgeClass = 'active-not-recruiting';
+                } else if (rawStatus === 'NOT_YET_RECRUITING') {
+                    statusBadgeClass = 'not-yet-recruiting';
+                }
+
+                // 1-Click Primary Document Action Buttons (Symmetrical bold labels)
                 const docButtons = [];
                 if (t.protocolUrl) {
-                    docButtons.push(`<a href="${t.protocolUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN" aria-label="Download official Protocol PDF for ${t.id}"><i class="fa-solid fa-file-pdf"></i> Protocol (PDF)</a>`);
+                    docButtons.push(`<a href="${t.protocolUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN" aria-label="Download official Protocol PDF for ${t.id}"><i class="fa-solid fa-file-pdf"></i> <b>Protocol:</b> PDF</a>`);
                 }
                 if (t.sapUrl && t.sapUrl !== t.protocolUrl) {
-                    docButtons.push(`<a href="${t.sapUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF" aria-label="Download Statistical Analysis Plan PDF for ${t.id}"><i class="fa-solid fa-chart-line"></i> SAP (PDF)</a>`);
+                    docButtons.push(`<a href="${t.sapUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF" aria-label="Download Statistical Analysis Plan PDF for ${t.id}"><i class="fa-solid fa-chart-line"></i> <b>SAP:</b> PDF</a>`);
                 }
                 if (t.hasResults && t.resultsUrl) {
-                    docButtons.push(`<a href="${t.resultsUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov" aria-label="View statutory results tab for ${t.id} on ClinicalTrials.gov"><i class="fa-solid fa-square-poll-vertical"></i> Results Tab</a>`);
+                    docButtons.push(`<a href="${t.resultsUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov" aria-label="View statutory results tab for ${t.id} on ClinicalTrials.gov"><i class="fa-solid fa-square-poll-vertical"></i> <b>Results:</b> Tab</a>`);
                 }
                 if (t.primaryPmid) {
-                    docButtons.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${t.primaryPmid}/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View peer-reviewed paper on PubMed (PMID: ${t.primaryPmid})" aria-label="View peer-reviewed trial paper on PubMed for ${t.id}"><i class="fa-solid fa-book-medical"></i> PubMed: ${t.primaryPmid}</a>`);
+                    docButtons.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${t.primaryPmid}/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View peer-reviewed paper on PubMed (PMID: ${t.primaryPmid})" aria-label="View peer-reviewed trial paper on PubMed for ${t.id}"><i class="fa-solid fa-book-medical"></i> <b>PubMed:</b> ${t.primaryPmid}</a>`);
                 }
-                docButtons.push(`<a href="${t.registryUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-registry" title="Open primary study record on ClinicalTrials.gov" aria-label="Open primary ClinicalTrials.gov study record for ${t.id}"><i class="fa-solid fa-arrow-up-right-from-square"></i> Registry</a>`);
+                docButtons.push(`<a href="${t.registryUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-registry" title="Open primary study record on ClinicalTrials.gov" aria-label="Open primary ClinicalTrials.gov study record for ${t.id}"><i class="fa-solid fa-arrow-up-right-from-square"></i> <b>Registry:</b> ${t.id}</a>`);
 
                 return `
                 <div class="study-item">
@@ -1148,8 +1294,8 @@
                             <span class="badge nct"><i class="fa-solid fa-hashtag" style="font-size:10px;"></i> ${t.id}</span>
                             <span class="badge phase">${t.phase}</span>
                             <span class="badge modality">${t.modality}</span>
-                            <span class="badge status ${t.isCompleted ? 'completed' : ''}">
-                                ${t.isCompleted ? '<i class="fa-solid fa-check" style="font-size:10px;"></i> Completed' : t.status}
+                            <span class="badge ${statusBadgeClass}">
+                                ${t.isCompleted ? '<i class="fa-solid fa-check" style="font-size:10px;"></i> Completed' : formattedStatus}
                             </span>
                             ${t.isResultsVacant ? '<span class="badge vacant" title="Completed trial with zero reported results or publications"><i class="fa-solid fa-triangle-exclamation" style="font-size:10px;"></i> Results-Vacant</span>' : ''}
                         </div>
@@ -1159,10 +1305,11 @@
                         </div>
 
                         <div class="study-meta-pills">
-                            <span><i class="fa-solid fa-dna" style="color:var(--purple);"></i> <b>Condition:</b> ${displayCond}</span>
-                            ${displayInterv ? `<span><i class="fa-solid fa-pills" style="color:var(--cyan);"></i> <b>Regimen:</b> ${displayInterv}</span>` : ''}
-                            <span><i class="fa-regular fa-building"></i> ${displaySponsor}</span>
-                            ${t.enrollment ? `<span><i class="fa-solid fa-users"></i> ${t.enrollment.toLocaleString()} participants</span>` : ''}
+                            <span><i class="fa-solid fa-dna" style="color:var(--purple);"></i> <b>Condition:</b> <span class="meta-val">${displayCond}</span></span>
+                            ${displayInterv ? `<span><i class="fa-solid fa-pills" style="color:var(--cyan);"></i> <b>Regimen:</b> <span class="meta-val">${displayInterv}</span></span>` : ''}
+                            <span><i class="fa-regular fa-building" style="color:var(--text-low);"></i> <b>Sponsor:</b> <span class="meta-val">${displaySponsor || 'Not Disclosed'}</span></span>
+                            ${t.enrollment ? `<span><i class="fa-solid fa-users" style="color:var(--emerald);"></i> <b>Participants:</b> <span class="meta-val">${t.enrollment.toLocaleString()} individuals</span></span>` : ''}
+                            ${t.primaryPmid ? `<span><i class="fa-solid fa-book-medical" style="color:var(--amber);"></i> <b>PubMed:</b> <span class="meta-val"><a href="https://pubmed.ncbi.nlm.nih.gov/${t.primaryPmid}/" target="_blank" rel="noopener noreferrer" class="pmid-link">${t.primaryPmid}</a></span></span>` : ''}
                         </div>
 
                         <!-- 1-Click Primary Document Links -->
@@ -1172,7 +1319,10 @@
                     </div>
 
                     <div class="study-item-aside">
-                        <span class="study-year">${t.year || ''}</span>
+                        <div class="study-year-box">
+                            <span class="study-year">${t.year || '—'}</span>
+                            <span class="study-year-sub">Start Year</span>
+                        </div>
                         <a href="./trials/${t.id}/" class="view-protocol-btn">Protocol Profile <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -1215,16 +1365,26 @@
                 if (resStatus === 'has-protocol' && !t.protocolUrl) return false;
                 if (resStatus === 'vacant' && !t.isResultsVacant) return false;
                 if (phase && !t.phase.includes(phase)) return false;
-                if (status === 'completed' && !t.isCompleted) return false;
-                if (status === 'recruiting' && !t.status.toLowerCase().includes('recruiting')) return false;
+                if (status) {
+                    const rawSt = (t.status || '').toUpperCase();
+                    if (status === 'completed' && !t.isCompleted) return false;
+                    if (status === 'recruiting' && rawSt !== 'RECRUITING') return false;
+                    if (status === 'active_not_recruiting' && rawSt !== 'ACTIVE_NOT_RECRUITING') return false;
+                    if (status === 'not_yet_recruiting' && rawSt !== 'NOT_YET_RECRUITING') return false;
+                    if (status === 'enrolling_by_invitation' && rawSt !== 'ENROLLING_BY_INVITATION') return false;
+                }
                 return true;
             });
 
-            // Sorting
+            // Multi-directional sorting (Year asc/desc, Participants asc/desc)
             if (sort === 'year-desc') {
-                filtered.sort((a, b) => b.year - a.year);
+                filtered.sort((a, b) => (parseInt(b.year) || 0) - (parseInt(a.year) || 0));
+            } else if (sort === 'year-asc') {
+                filtered.sort((a, b) => (parseInt(a.year) || 9999) - (parseInt(b.year) || 9999));
             } else if (sort === 'enrollment-desc') {
                 filtered.sort((a, b) => (b.enrollment || 0) - (a.enrollment || 0));
+            } else if (sort === 'enrollment-asc') {
+                filtered.sort((a, b) => (a.enrollment || 0) - (b.enrollment || 0));
             }
 
             renderList(filtered, q);
@@ -1232,6 +1392,14 @@
 
         function searchDrug(drugName) {
             document.getElementById('searchInput').value = drugName;
+            applyFilters();
+            scrollToExplorer();
+        }
+
+        function filterByCategory(catName) {
+            clearFilters();
+            const el = document.getElementById('filterCategory');
+            if (el) el.value = catName;
             applyFilters();
             scrollToExplorer();
         }
@@ -1397,24 +1565,36 @@
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';
-            const iconHtml = isLight ? '<i class="fa-regular fa-moon"></i>' : '<i class="fa-regular fa-sun"></i>';
-            const text = isLight ? 'Dark Mode' : 'Light Mode';
-            
-            const btnSidebar = document.getElementById('themeToggleSidebar');
-            if (btnSidebar) {
-                btnSidebar.innerHTML = `${iconHtml} <span id="themeToggleTextSidebar">${text}</span>`;
+
+            // Update segmented toggle buttons in sidebar
+            const btnLight = document.getElementById('themeBtnLight');
+            const btnDark = document.getElementById('themeBtnDark');
+            if (btnLight && btnDark) {
+                if (isLight) {
+                    btnLight.classList.add('active');
+                    btnDark.classList.remove('active');
+                } else {
+                    btnDark.classList.add('active');
+                    btnLight.classList.remove('active');
+                }
             }
+
+            // Update mobile header toggle
             const btnMobile = document.getElementById('themeToggleMobile');
             if (btnMobile) {
-                btnMobile.innerHTML = iconHtml;
+                btnMobile.innerHTML = isLight ? '<i class="fa-regular fa-moon"></i>' : '<i class="fa-regular fa-sun"></i>';
             }
+        }
+
+        function setTheme(theme) {
+            localStorage.setItem('clinsight_theme', theme);
+            applyTheme(theme);
         }
 
         function toggleTheme() {
             const current = document.documentElement.getAttribute('data-theme') || getEffectiveTheme();
             const next = current === 'light' ? 'dark' : 'light';
-            localStorage.setItem('clinsight_theme', next);
-            applyTheme(next);
+            setTheme(next);
         }
 
         if (window.matchMedia) {
