@@ -111,21 +111,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://clinsight.pract.eu/trials/NCT05721456/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://clinsight.pract.eu/trials/NCT00678301/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://clinsight.pract.eu/trials/NCT01026038/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://clinsight.pract.eu/trials/NCT03907488/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -151,52 +136,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://clinsight.pract.eu/trials/NCT01154088/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://clinsight.pract.eu/trials/NCT01692886/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://clinsight.pract.eu/trials/NCT01917357/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://clinsight.pract.eu/trials/NCT01964716/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://clinsight.pract.eu/trials/NCT07768189/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://clinsight.pract.eu/trials/NCT01310413/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://clinsight.pract.eu/trials/NCT00368966/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://clinsight.pract.eu/trials/NCT02520739/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://clinsight.pract.eu/trials/NCT07160244/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://clinsight.pract.eu/trials/NCT01641133/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
