@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClinSight | Open Clinical Trials & Knowledge Hub</title>
-    <meta name="description" content="An open, non-commercial explorer for pivotal clinical trial protocols and public registry data across Oncology, ADCs, CAR-T, and GLP-1 therapeutics.">
+    <title>ClinSight | Clinical Trials Explorer</title>
+    <meta name="description" content="Simplified, clutter-free clinical trial protocols, primary endpoints, and eligibility data across Oncology, ADCs, CAR-T, and GLP-1 therapeutics.">
     <link rel="canonical" href="https://clinsight.pract.eu/">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ClinSight | Open Clinical Trials & Knowledge Hub">
-    <meta property="og:description" content="Explore pivotal Phase 3 trial designs, primary endpoints, and registry data without paywalls or corporate spin.">
+    <meta property="og:title" content="ClinSight | Clinical Trials Explorer">
+    <meta property="og:description" content="Search clinical trial protocols, primary endpoints, and eligibility data.">
     <meta property="og:url" content="https://clinsight.pract.eu/">
     <meta property="og:type" content="website">
 
-    <!-- Antigravity Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <!-- Clean Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -38,16 +38,16 @@
             --text-high: #f8fafc;
             --text-med: #cbd5e1;
             --text-low: #64748b;
-            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
-            --sidebar-width: 260px;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --sidebar-width: 240px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: var(--font-sans);
             background-color: var(--bg-void);
-            background-image: radial-gradient(circle at 70% 10%, rgba(56, 189, 248, 0.05), transparent 40%),
+            background-image: radial-gradient(circle at 70% 10%, rgba(56, 189, 248, 0.04), transparent 40%),
                               radial-gradient(circle at 20% 60%, rgba(168, 85, 247, 0.03), transparent 50%);
             color: var(--text-high);
             line-height: 1.6;
@@ -55,7 +55,6 @@
             display: flex;
         }
 
-        /* App Layout with Left Sidebar */
         .app-layout {
             display: flex;
             width: 100%;
@@ -79,38 +78,22 @@
             overflow-y: auto;
         }
 
+        /* Pure Text Logo (Font itself is the logo) */
         .sidebar-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 0 8px 20px;
+            padding: 4px 8px 20px;
             border-bottom: 1px solid var(--border-subtle);
             margin-bottom: 20px;
             text-decoration: none;
+            display: block;
+        }
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
             color: var(--text-high);
         }
-        .sidebar-logo-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #FFF;
-            font-size: 15px;
-            box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
-        }
-        .sidebar-brand-text h2 {
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-        .sidebar-brand-text span {
-            font-size: 11px;
-            color: var(--text-low);
-            font-family: var(--font-mono);
-            display: block;
+        .logo-text span {
+            color: var(--cyan);
         }
 
         .sidebar-section-title {
@@ -134,7 +117,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 9px 12px;
+            padding: 8px 12px;
             color: var(--text-med);
             text-decoration: none;
             font-size: 13.5px;
@@ -181,14 +164,14 @@
             align-items: center;
             gap: 6px;
             font-weight: 500;
-            margin-top: 6px;
+            margin-top: 4px;
         }
 
         /* Main Content Container */
         .main-content {
             margin-left: var(--sidebar-width);
             flex: 1;
-            padding: 32px 40px 80px;
+            padding: 28px 40px 80px;
             max-width: 1200px;
         }
         @media (max-width: 900px) {
@@ -198,13 +181,13 @@
             .mobile-toggle { display: block !important; }
         }
 
-        /* Top Bar */
+        /* Search Header */
         .content-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 32px;
-            padding-bottom: 18px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
             border-bottom: 1px solid var(--border-subtle);
         }
         .mobile-toggle {
@@ -218,11 +201,10 @@
             margin-right: 12px;
         }
 
-        /* Global Search Input */
         .search-box-wrap {
             position: relative;
             flex: 1;
-            max-width: 480px;
+            max-width: 600px;
         }
         .search-box-wrap i {
             position: absolute;
@@ -234,8 +216,8 @@
         }
         .search-input {
             width: 100%;
-            padding: 10px 42px 10px 38px;
-            background: rgba(17, 24, 39, 0.8);
+            padding: 11px 42px 11px 38px;
+            background: rgba(17, 24, 39, 0.85);
             border: 1px solid var(--border-subtle);
             border-radius: 10px;
             color: var(--text-high);
@@ -263,202 +245,143 @@
             border-radius: 4px;
         }
 
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .btn-ghost {
-            color: var(--text-med);
-            text-decoration: none;
-            font-size: 13px;
-            padding: 8px 14px;
-            border-radius: 8px;
+        /* Hero Banner */
+        .clean-hero {
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(15, 23, 42, 0.5) 100%);
             border: 1px solid var(--border-subtle);
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            border-radius: 14px;
+            padding: 24px 28px;
         }
-        .btn-ghost:hover {
-            color: var(--text-high);
-            border-color: rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        /* Hero Section (Humanized, Thoughtful) */
-        .hub-hero {
-            margin-bottom: 36px;
-            background: linear-gradient(135deg, rgba(17, 24, 39, 0.7) 0%, rgba(15, 23, 42, 0.4) 100%);
-            border: 1px solid var(--border-subtle);
-            border-radius: 16px;
-            padding: 36px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hub-hero::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .hero-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-family: var(--font-mono);
-            font-size: 11.5px;
-            font-weight: 600;
-            color: var(--cyan);
-            background: var(--cyan-glow);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-bottom: 16px;
-        }
-        .hub-hero h1 {
-            font-size: 28px;
+        .clean-hero h1 {
+            font-size: 24px;
             font-weight: 800;
             letter-spacing: -0.02em;
             color: var(--text-high);
-            margin-bottom: 12px;
-            line-height: 1.3;
+            margin-bottom: 6px;
         }
-        .hub-hero p {
-            font-size: 15px;
+        .clean-hero p {
+            font-size: 14px;
             color: var(--text-med);
-            max-width: 720px;
-            line-height: 1.65;
-            margin-bottom: 24px;
-        }
-        .hero-stats-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 28px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-subtle);
-        }
-        .hero-stat {
-            display: flex;
-            flex-direction: column;
-        }
-        .hero-stat .stat-num {
-            font-family: var(--font-mono);
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--text-high);
-        }
-        .hero-stat .stat-label {
-            font-size: 12px;
-            color: var(--text-low);
+            max-width: 680px;
+            line-height: 1.55;
+            margin-bottom: 16px;
         }
 
-        /* Curated Modality Cards Grid */
+        /* Quick Drug Search Chips */
+        .drug-chips-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        .drug-chip-label {
+            font-size: 11.5px;
+            color: var(--text-low);
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-right: 4px;
+        }
+        .drug-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-family: var(--font-mono);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .drug-chip:hover {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border-color: rgba(56, 189, 248, 0.35);
+        }
+
+        /* Modality Grid */
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
+            margin-top: 20px;
         }
         .section-header h3 {
-            font-size: 17px;
+            font-size: 15.5px;
             font-weight: 700;
-            letter-spacing: -0.01em;
+            color: var(--text-high);
             display: flex;
             align-items: center;
             gap: 8px;
         }
-        .section-header h3 i { color: var(--cyan); font-size: 15px; }
-        .section-header p { font-size: 13px; color: var(--text-low); margin-top: 2px; }
 
         .modality-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 16px;
-            margin-bottom: 36px;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 12px;
+            margin-bottom: 26px;
         }
         .modality-card {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 14px 16px;
             cursor: pointer;
             transition: all 0.2s;
             text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
-            backdrop-filter: blur(8px);
         }
         .modality-card:hover {
             border-color: var(--border-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
-        .modality-card .card-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 14px;
-            font-size: 16px;
-        }
-        .icon-adc { background: var(--purple-glow); color: var(--purple); }
-        .icon-cart { background: var(--cyan-glow); color: var(--cyan); }
-        .icon-glp1 { background: var(--emerald-glow); color: var(--emerald); }
-        .icon-tki { background: var(--amber-glow); color: var(--amber); }
-
         .modality-card h4 {
-            font-size: 15px;
+            font-size: 13.5px;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             color: var(--text-high);
         }
         .modality-card p {
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--text-low);
-            line-height: 1.5;
-            margin-bottom: 12px;
+            line-height: 1.4;
+            margin-bottom: 8px;
             flex: 1;
         }
-        .modality-card .modality-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .modality-card .mod-link {
             font-family: var(--font-mono);
-            font-size: 11.5px;
+            font-size: 11px;
             color: var(--cyan);
-            border-top: 1px solid var(--border-subtle);
-            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         /* Filter Controls */
         .controls-card {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
-            border-radius: 14px;
-            padding: 20px;
-            margin-bottom: 24px;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 20px;
         }
         .filters-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            margin-bottom: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 10px;
+            margin-bottom: 12px;
         }
         .filter-select {
             background: rgba(11, 15, 25, 0.9);
             border: 1px solid var(--border-subtle);
             border-radius: 8px;
-            padding: 8px 12px;
+            padding: 7px 10px;
             color: var(--text-med);
-            font-size: 13px;
+            font-size: 12.5px;
             font-family: inherit;
         }
         .filter-select:focus {
@@ -466,7 +389,6 @@
             border-color: var(--cyan);
         }
 
-        /* Quick Filter Chips */
         .chips-bar {
             display: flex;
             flex-wrap: wrap;
@@ -477,9 +399,9 @@
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border-subtle);
             color: var(--text-med);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 11.5px;
             font-family: var(--font-mono);
             cursor: pointer;
             transition: all 0.15s;
@@ -500,13 +422,13 @@
         }
         .btn-clear:hover { color: var(--text-med); }
 
-        /* Counter and Sort Header */
+        /* Counter Header */
         .results-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 16px;
-            font-size: 13px;
+            margin-bottom: 14px;
+            font-size: 12.5px;
             color: var(--text-low);
             font-family: var(--font-mono);
         }
@@ -515,23 +437,22 @@
         /* Study Cards List */
         .study-grid {
             display: grid;
-            gap: 14px;
+            gap: 12px;
         }
         .study-item {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 16px 18px;
             text-decoration: none;
             color: inherit;
             display: block;
-            transition: all 0.2s;
-            backdrop-filter: blur(8px);
+            transition: all 0.15s;
         }
         .study-item:hover {
             border-color: var(--border-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
         }
         .study-item-top {
             display: flex;
@@ -539,15 +460,15 @@
             justify-content: space-between;
             align-items: center;
             gap: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .badges-wrap { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
         .badge {
             font-family: var(--font-mono);
-            font-size: 11.5px;
+            font-size: 11px;
             font-weight: 600;
-            padding: 3px 8px;
-            border-radius: 5px;
+            padding: 3px 7px;
+            border-radius: 4px;
         }
         .badge.nct { background: var(--cyan-glow); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.25); }
         .badge.phase { background: var(--purple-glow); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.25); }
@@ -556,22 +477,22 @@
         
         .study-item-year {
             font-family: var(--font-mono);
-            font-size: 12px;
+            font-size: 11.5px;
             color: var(--text-low);
         }
         .study-title {
-            font-size: 15.5px;
+            font-size: 14.5px;
             font-weight: 600;
             color: var(--text-high);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             line-height: 1.4;
         }
         .study-meta {
-            font-size: 13px;
+            font-size: 12.5px;
             color: var(--text-low);
             display: flex;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 14px;
         }
         .study-meta span { display: inline-flex; align-items: center; gap: 5px; }
 
@@ -580,13 +501,14 @@
             margin-top: 60px;
             padding-top: 24px;
             border-top: 1px solid var(--border-subtle);
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--text-low);
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 12px;
+            font-family: var(--font-mono);
         }
         .main-footer a { color: var(--cyan); text-decoration: none; }
     </style>
@@ -596,24 +518,15 @@
         <!-- Left Sidebar Navigation -->
         <aside class="sidebar" id="sidebar">
             <a href="https://clinsight.pract.eu/" class="sidebar-brand">
-                <div class="sidebar-logo-icon">
-                    <i class="fa-solid fa-atom"></i>
-                </div>
-                <div class="sidebar-brand-text">
-                    <h2>ClinSight</h2>
-                    <span>Open Evidence Hub</span>
-                </div>
+                <div class="logo-text">ClinSight<span>™</span></div>
             </a>
 
-            <div class="sidebar-section-title">Navigation</div>
             <ul class="sidebar-nav">
                 <li><a href="#overview" class="active" onclick="switchNav('overview')"><i class="fa-solid fa-compass"></i> Overview</a></li>
-                <li><a href="#explorer" onclick="switchNav('explorer')"><i class="fa-solid fa-table-cells"></i> Browse Trials <span class="nav-badge" id="navTotalCount">120</span></a></li>
-                <li><a href="#methodology" onclick="switchNav('methodology')"><i class="fa-solid fa-book-open"></i> Methodology</a></li>
+                <li><a href="#explorer" onclick="switchNav('explorer')"><i class="fa-solid fa-table-cells"></i> Browse Trials <span class="nav-badge" id="navTotalCount">119</span></a></li>
             </ul>
 
-            <div class="sidebar-section-title">Filter by Modality</div>
-            <ul class="sidebar-nav">
+            <ul class="sidebar-nav" style="margin-top:16px;">
                 <li><a href="javascript:void(0)" onclick="filterByModality('Antibody-Drug Conjugates (ADC)')"><i class="fa-solid fa-dna" style="color:var(--purple);"></i> ADCs</a></li>
                 <li><a href="javascript:void(0)" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')"><i class="fa-solid fa-vial" style="color:var(--cyan);"></i> CAR-T Therapy</a></li>
                 <li><a href="javascript:void(0)" onclick="filterByModality('Targeted Therapy (Small Molecule / TKI)')"><i class="fa-solid fa-capsules" style="color:var(--amber);"></i> Targeted TKIs</a></li>
@@ -622,129 +535,81 @@
             </ul>
 
             <div class="sidebar-footer">
-                <div>Part of the <b>PRACT</b> Open Knowledge Network</div>
-                <a href="https://pract.eu" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit pract.eu</a>
+                <a href="https://pract.eu" target="_blank">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a>
             </div>
         </aside>
 
         <!-- Main Content Area -->
         <main class="main-content">
-            <!-- Header Bar -->
+            <!-- Search Header -->
             <div class="content-header">
-                <div style="display:flex; align-items:center;">
-                    <button class="mobile-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
-                    <div class="search-box-wrap">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="searchInput" class="search-input" placeholder="Search by NCT, study name, drug, or indication..." oninput="applyFilters()">
-                        <span class="search-shortcut">/</span>
-                    </div>
-                </div>
-
-                <div class="header-actions">
-                    <a href="https://github.com/PRACT-Clinsight/clinsight" target="_blank" class="btn-ghost">
-                        <i class="fa-brands fa-github"></i> Open Source
-                    </a>
-                    <a href="https://pract.eu" target="_blank" class="btn-ghost">
-                        <i class="fa-solid fa-globe"></i> PRACT Ecosystem
-                    </a>
+                <button class="mobile-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+                <div class="search-box-wrap">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search drug (e.g. Doxorubicin, Pembrolizumab), disease, or NCT..." oninput="applyFilters()">
+                    <span class="search-shortcut">/</span>
                 </div>
             </div>
 
-            <!-- Overview Section (Humanized, Thoughtful Normal Page) -->
+            <!-- Overview Section -->
             <div id="overviewSection">
-                <section class="hub-hero">
-                    <div class="hero-pill"><i class="fa-solid fa-heart-pulse"></i> Open Science & Clinical Evidence Hub</div>
-                    <h1>Pivotal Clinical Trials & Evidence Explorer</h1>
+                <section class="clean-hero">
+                    <h1>Clinical Trials Protocol & Evidence Explorer</h1>
                     <p>
-                        An open, non-commercial explorer for pivotal Phase 3 clinical trial protocols, primary endpoints, and statutory registry data. Built for computational biologists, clinical researchers, and life science enthusiasts who want to explore primary trial records without paywalls or corporate spin.
+                        Simplified, clutter-free clinical trial protocols, primary study designs, and patient eligibility criteria across oncology and major therapeutic areas.
                     </p>
 
-                    <div style="display:flex; gap:12px; margin-bottom:24px;">
-                        <button onclick="scrollToExplorer()" class="btn-ghost" style="background:var(--cyan-glow); color:var(--cyan); border-color:rgba(56,189,248,0.3); font-weight:600; padding:10px 20px;">
-                            <i class="fa-solid fa-magnifying-glass"></i> Explore All 120 Trials
-                        </button>
-                        <a href="#methodology" class="btn-ghost" style="padding:10px 18px;">
-                            <i class="fa-solid fa-circle-info"></i> How We Sourced This
-                        </a>
-                    </div>
-
-                    <div class="hero-stats-row">
-                        <div class="hero-stat">
-                            <span class="stat-num">120</span>
-                            <span class="stat-label">Pivotal Phase 3 Studies</span>
-                        </div>
-                        <div class="hero-stat">
-                            <span class="stat-num">5</span>
-                            <span class="stat-label">Core Therapeutic Modalities</span>
-                        </div>
-                        <div class="hero-stat">
-                            <span class="stat-num">100%</span>
-                            <span class="stat-label">Primary Public Data (ClinicalTrials.gov)</span>
-                        </div>
-                        <div class="hero-stat">
-                            <span class="stat-num">Free</span>
-                            <span class="stat-label">No Login, No Commercial Pitch</span>
-                        </div>
+                    <!-- Quick Drug Search Chips -->
+                    <div class="drug-chips-bar">
+                        <span class="drug-chip-label">Quick Drug Search:</span>
+                        <button class="drug-chip" onclick="searchDrug('Doxorubicin')">Doxorubicin (9)</button>
+                        <button class="drug-chip" onclick="searchDrug('Pembrolizumab')">Pembrolizumab</button>
+                        <button class="drug-chip" onclick="searchDrug('Trastuzumab')">Trastuzumab Deruxtecan</button>
+                        <button class="drug-chip" onclick="searchDrug('Semaglutide')">Semaglutide</button>
+                        <button class="drug-chip" onclick="searchDrug('Osimertinib')">Osimertinib</button>
+                        <button class="drug-chip" onclick="searchDrug('Axicabtagene')">Axicabtagene</button>
                     </div>
                 </section>
 
-                <!-- Curated Modality Cards -->
+                <!-- Modalities -->
                 <div class="section-header">
                     <div>
-                        <h3><i class="fa-solid fa-layer-group"></i> Explore by Therapeutic Modality</h3>
-                        <p>Browse trials grouped by biological mechanism and therapeutic approach</p>
+                        <h3>Browse by Therapeutic Class</h3>
                     </div>
                 </div>
 
                 <div class="modality-grid">
                     <div class="modality-card" onclick="filterByModality('Antibody-Drug Conjugates (ADC)')">
-                        <div class="card-icon icon-adc"><i class="fa-solid fa-dna"></i></div>
-                        <h4>Antibody-Drug Conjugates (ADC)</h4>
-                        <p>Targeted chemotherapeutic delivery platforms including DESTINY-Breast04, EV-302, and TROPiCS-02.</p>
-                        <div class="modality-meta">
-                            <span>Explore Studies</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
+                        <h4>Antibody-Drug Conjugates (ADCs)</h4>
+                        <p>Targeted cytotoxic conjugates including DESTINY-Breast03/04 and related trials.</p>
+                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
 
-                    <div class="modality-card" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')">
-                        <div class="card-icon icon-cart"><i class="fa-solid fa-vial"></i></div>
-                        <h4>CAR-T & Cell Therapies</h4>
-                        <p>Engineered autologous T-cell immunotherapies including CARTITUDE-1/4, ZUMA-1, and KarMMa-3.</p>
-                        <div class="modality-meta">
-                            <span>Explore Studies</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
+                    <div class="modality-card" onclick="filterByModality('Immuno-Oncology (Checkpoint Inhibitor)')">
+                        <h4>Checkpoint Inhibitors</h4>
+                        <p>PD-1 / PD-L1 and CTLA-4 trials across solid tumors and hematology.</p>
+                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
 
                     <div class="modality-card" onclick="filterByModality('Targeted Therapy (Small Molecule / TKI)')">
-                        <div class="card-icon icon-tki"><i class="fa-solid fa-capsules"></i></div>
-                        <h4>Targeted Small Molecules & TKIs</h4>
-                        <p>Genomically directed oncogene inhibitors including ADAURA, CodeBreaK 200, and monarchE.</p>
-                        <div class="modality-meta">
-                            <span>Explore Studies</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
+                        <h4>Targeted Small Molecules</h4>
+                        <p>Genomically directed oncogene inhibitors across EGFR, KRAS, and CDK4/6.</p>
+                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
 
-                    <div class="modality-card" onclick="filterByModality('Incretin Mimetics (GLP-1 / GIP)')">
-                        <div class="card-icon icon-glp1"><i class="fa-solid fa-bolt"></i></div>
-                        <h4>GLP-1 & Incretin Mimetics</h4>
-                        <p>Metabolic and cardiometabolic outcome trials including STEP 1, SELECT, SURMOUNT-1, and DAPA-HF.</p>
-                        <div class="modality-meta">
-                            <span>Explore Studies</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
+                    <div class="modality-card" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')">
+                        <h4>Cell & Gene Therapies</h4>
+                        <p>Engineered autologous T-cell immunotherapies in lymphoma and myeloma.</p>
+                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
                 </div>
             </div>
 
             <!-- Explorer Section (Search, Filters & Cards) -->
             <div id="explorerSection">
-                <div class="section-header" style="margin-top:20px;">
+                <div class="section-header">
                     <div>
-                        <h3><i class="fa-solid fa-database"></i> Trial Registry Explorer</h3>
-                        <p>Filter by phase, therapeutic area, completion status, or search terms</p>
+                        <h3>Trial Registry Explorer</h3>
                     </div>
                 </div>
 
@@ -794,49 +659,30 @@
                         <button class="chip" onclick="quickFilter('glp1')">GLP-1</button>
                         <button class="chip" onclick="quickFilter('phase3')">Phase 3</button>
                         <button class="chip" onclick="quickFilter('completed')">Completed</button>
-                        <button class="btn-clear" onclick="clearFilters()">Reset Filters</button>
+                        <button class="btn-clear" onclick="clearFilters()">Reset</button>
                     </div>
                 </div>
 
                 <!-- Results Header -->
                 <div class="results-header">
-                    <div>Showing <b id="displayedCount">0</b> of <span id="totalCount">0</span> indexed studies</div>
+                    <div>Showing <b id="displayedCount">0</b> of <span id="totalCount">0</span> studies</div>
                 </div>
 
                 <!-- Trials List -->
                 <div class="study-grid" id="studyList">
-                    <!-- Cards injected by JavaScript -->
-                </div>
-            </div>
-
-            <!-- Methodology Section (Humanized, Transparent) -->
-            <div id="methodologySection" style="margin-top:60px;">
-                <div class="hub-hero" style="background:rgba(17,24,39,0.5);">
-                    <div class="hero-pill"><i class="fa-solid fa-scroll"></i> Open Science Principles</div>
-                    <h2 style="font-size:22px; font-weight:700; margin-bottom:12px; color:var(--text-high);">Data Provenance & Methodology</h2>
-                    <p style="font-size:14px; color:var(--text-med); max-width:800px; line-height:1.65; margin-bottom:16px;">
-                        Every record in ClinSight is ingested directly from the official <b>ClinicalTrials.gov REST API</b> (National Library of Medicine / NIH). We prioritize pivotal Phase 3 trials because they form the statutory foundation for global regulatory decisions and clinical practice guidelines.
-                    </p>
-                    <p style="font-size:14px; color:var(--text-med); max-width:800px; line-height:1.65; margin-bottom:20px;">
-                        We believe clinical evidence should be completely accessible without commercial paywalls, opaque rating algorithms, or sales pitches. Each study page provides direct one-click links to the verbatim government registry record and open medical literature search engines.
-                    </p>
-                    <div style="display:flex; gap:12px; flex-wrap:wrap;">
-                        <a href="https://clinicaltrials.gov" target="_blank" class="btn-ghost"><i class="fa-solid fa-building-columns"></i> ClinicalTrials.gov NIH</a>
-                        <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" class="btn-ghost"><i class="fa-solid fa-book-medical"></i> PubMed NCBI</a>
-                        <a href="https://github.com/PRACT-Clinsight/clinsight" target="_blank" class="btn-ghost"><i class="fa-brands fa-github"></i> Repository & Pipeline</a>
-                    </div>
+                    <!-- Injected by JavaScript -->
                 </div>
             </div>
 
             <!-- Footer -->
             <footer class="main-footer">
-                <div>&copy; 2026 ClinSight · An Open Science & Research Intelligence Initiative under the PRACT Open Knowledge Hub.</div>
-                <div>Primary data sourced directly from ClinicalTrials.gov.</div>
+                <div>&copy; 2026 ClinSight · Clinical Trials Explorer</div>
+                <div>Primary study records sourced directly from ClinicalTrials.gov</div>
             </footer>
         </main>
     </div>
 
-    <!-- Embedded Normalized Trials Dataset -->
+    <!-- Embedded Search Engine -->
     <script>
         let ALL_TRIALS = [];
 
@@ -846,19 +692,20 @@
                 const data = await res.json();
                 ALL_TRIALS = data.map(d => ({
                     id: d.nctId,
-                    acronym: d.acronym || d.nctId,
+                    acronym: (d.acronym && d.acronym !== 'undefined') ? d.acronym : d.nctId,
                     title: d.briefTitle,
                     officialTitle: d.officialTitle || d.briefTitle,
-                    category: d.category,
-                    subtype: d.subtype,
-                    modality: d.modality,
-                    phase: d.phase,
-                    status: d.status,
+                    category: d.category || '',
+                    subtype: d.subtype || '',
+                    modality: d.modality || '',
+                    phase: d.phase || '',
+                    status: d.status || '',
                     isCompleted: d.isCompleted,
-                    year: d.year,
+                    year: d.year || '',
                     enrollment: d.enrollment || 0,
-                    sponsor: d.sponsor,
-                    conditions: (d.conditions || []).join(', ')
+                    sponsor: d.sponsor || '',
+                    conditions: (d.conditions || []).join(' '),
+                    interventions: (d.interventions || []).join(' ')
                 }));
 
                 document.getElementById('totalCount').innerText = ALL_TRIALS.length;
@@ -877,9 +724,9 @@
                 listEl.innerHTML = `
                     <div style="text-align:center; padding:48px 20px; color:var(--text-low); background:var(--bg-card); border-radius:12px; border:1px solid var(--border-subtle);">
                         <i class="fa-solid fa-flask" style="font-size:32px; margin-bottom:12px; color:var(--cyan); opacity:0.6;"></i>
-                        <h4 style="color:var(--text-high); font-size:16px; margin-bottom:6px;">No studies matched your criteria</h4>
-                        <p style="font-size:13px;">Try clearing search keywords or selecting a broader therapeutic modality.</p>
-                        <button onclick="clearFilters()" class="btn-ghost" style="margin-top:16px;">Reset All Filters</button>
+                        <h4 style="color:var(--text-high); font-size:16px; margin-bottom:6px;">No studies matched your search</h4>
+                        <p style="font-size:13px;">Try clearing search keywords or selecting a broader category.</p>
+                        <button onclick="clearFilters()" class="btn-clear" style="margin-top:16px; text-decoration:none; color:var(--cyan); font-weight:600;">Reset All Filters</button>
                     </div>
                 `;
                 return;
@@ -898,12 +745,13 @@
                     </div>
 
                     <div class="study-title">
-                        ${t.acronym !== t.id ? '<span style="color:var(--cyan);">' + t.acronym + ':</span> ' : ''}${t.title}
+                        ${(t.acronym && t.acronym !== t.id) ? '<span style="color:var(--cyan);">' + t.acronym + ':</span> ' : ''}${t.title}
                     </div>
 
                     <div class="study-meta">
                         <span><i class="fa-regular fa-building"></i> ${t.sponsor}</span>
                         <span><i class="fa-solid fa-dna"></i> ${t.conditions || t.subtype}</span>
+                        ${t.interventions ? `<span><i class="fa-solid fa-pills"></i> ${t.interventions}</span>` : ''}
                         ${t.enrollment ? `<span><i class="fa-solid fa-users"></i> ${t.enrollment.toLocaleString()} participants</span>` : ''}
                     </div>
                 </a>
@@ -911,16 +759,30 @@
         }
 
         function applyFilters() {
-            const q = document.getElementById('searchInput').value.trim().toLowerCase();
+            let q = document.getElementById('searchInput').value.trim().toLowerCase();
             const cat = document.getElementById('filterCategory').value;
             const mod = document.getElementById('filterModality').value;
             const phase = document.getElementById('filterPhase').value;
             const status = document.getElementById('filterStatus').value;
             const sort = document.getElementById('sortSelect').value;
 
+            // Alias handling for common drug search terms (e.g. alvedon -> paracetamol/acetaminophen)
+            if (q === 'alvedon') q = 'paracetamol';
+
             let filtered = ALL_TRIALS.filter(t => {
                 if (q) {
-                    const matchStr = (t.id + ' ' + t.acronym + ' ' + t.title + ' ' + (t.subtype || '') + ' ' + (t.modality || '') + ' ' + (t.sponsor || '')).toLowerCase();
+                    const matchStr = (
+                        t.id + ' ' +
+                        t.acronym + ' ' +
+                        t.title + ' ' +
+                        t.officialTitle + ' ' +
+                        t.interventions + ' ' +
+                        t.conditions + ' ' +
+                        t.subtype + ' ' +
+                        t.modality + ' ' +
+                        t.sponsor
+                    ).toLowerCase();
+
                     if (!matchStr.includes(q)) return false;
                 }
                 if (cat && t.category !== cat) return false;
@@ -939,6 +801,12 @@
             }
 
             renderList(filtered);
+        }
+
+        function searchDrug(drugName) {
+            document.getElementById('searchInput').value = drugName;
+            applyFilters();
+            scrollToExplorer();
         }
 
         function filterByModality(modalityName) {
@@ -984,13 +852,9 @@
             }
 
             if (section === 'overview') {
-                document.getElementById('overviewSection').style.display = 'block';
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else if (section === 'explorer') {
                 scrollToExplorer();
-            } else if (section === 'methodology') {
-                const el = document.getElementById('methodologySection');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
             }
         }
 
