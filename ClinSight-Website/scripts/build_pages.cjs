@@ -728,10 +728,12 @@ function buildLlmsTxt(trials) {
 
 ## Overview
 ClinSight indexes pivotal Phase 3 and registrational clinical studies across high-impact modalities:
-- Antibody-Drug Conjugates (ADCs)
-- Checkpoint Inhibitors & Immuno-Oncology
-- Targeted Oncology (TKIs, KRAS, PARP inhibitors)
-- Cell & Gene Therapy (CAR-T)
+- Bispecific Antibodies & T-Cell Engagers (Teclistamab, Elranatamab, Talquetamab, Epcoritamab, Glofitamab, Mosunetuzumab)
+- Cell & Gene Therapy (CAR-T: Cilta-cel, Ide-cel, Axi-cel, Liso-cel)
+- Antibody-Drug Conjugates (ADCs: T-DXd, Polatuzumab, Belantamab mafodotin, EV)
+- Targeted Oncology (TKIs, Menin inhibitors, BTK/BCL2 inhibitors, KRAS, PARP inhibitors)
+- Targeted Monoclonal Antibodies (Daratumumab, Isatuximab, Obinutuzumab)
+- Checkpoint Inhibitors & Immuno-Oncology (PD-1 / PD-L1)
 - Incretin Mimetics (GLP-1 / GIP Dual Agonists)
 
 ## Indexed Pivotal Trials (${trials.length} Studies)

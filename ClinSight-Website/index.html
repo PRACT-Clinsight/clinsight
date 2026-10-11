@@ -697,15 +697,16 @@
                         Simplified, clutter-free clinical trial protocols, primary study designs, and patient eligibility criteria across oncology and major therapeutic areas.
                     </p>
 
-                    <!-- Quick Drug Search Chips -->
+                    <!-- Quick Disease & Drug Search Chips -->
                     <div class="drug-chips-bar">
-                        <span class="drug-chip-label">Quick Drug Search:</span>
-                        <button class="drug-chip" onclick="searchDrug('Doxorubicin')">Doxorubicin (9)</button>
+                        <span class="drug-chip-label">Batch 1 Malignancies:</span>
+                        <button class="drug-chip" onclick="searchDrug('Multiple Myeloma')">Multiple Myeloma (22)</button>
+                        <button class="drug-chip" onclick="searchDrug('DLBCL')">DLBCL (11)</button>
+                        <button class="drug-chip" onclick="searchDrug('Chronic Lymphocytic Leukemia')">CLL (10)</button>
+                        <button class="drug-chip" onclick="searchDrug('Acute Myeloid Leukemia')">AML (9)</button>
+                        <button class="drug-chip" onclick="searchDrug('Follicular Lymphoma')">Follicular (6)</button>
+                        <button class="drug-chip" onclick="searchDrug('Doxorubicin')">Doxorubicin</button>
                         <button class="drug-chip" onclick="searchDrug('Pembrolizumab')">Pembrolizumab</button>
-                        <button class="drug-chip" onclick="searchDrug('Trastuzumab')">Trastuzumab Deruxtecan</button>
-                        <button class="drug-chip" onclick="searchDrug('Semaglutide')">Semaglutide</button>
-                        <button class="drug-chip" onclick="searchDrug('Osimertinib')">Osimertinib</button>
-                        <button class="drug-chip" onclick="searchDrug('Axicabtagene')">Axicabtagene</button>
                     </div>
                 </section>
 
@@ -770,10 +771,12 @@
 
                         <select id="filterModality" class="filter-select" onchange="applyFilters()">
                             <option value="">All Modalities</option>
-                            <option value="Antibody-Drug Conjugates (ADC)">ADCs</option>
-                            <option value="Immuno-Oncology (Checkpoint Inhibitor)">Checkpoint Inhibitors</option>
-                            <option value="Targeted Therapy (Small Molecule / TKI)">Targeted TKIs</option>
+                            <option value="Bispecific Antibodies & T-Cell Engagers">Bispecifics & T-Cell Engagers</option>
                             <option value="Cell & Gene Therapy (CAR-T)">CAR-T Therapy</option>
+                            <option value="Antibody-Drug Conjugates (ADC)">ADCs</option>
+                            <option value="Targeted Monoclonal Antibodies">Monoclonal Antibodies</option>
+                            <option value="Targeted Therapy (Small Molecule / TKI)">Targeted TKIs & Small Molecules</option>
+                            <option value="Immuno-Oncology (Checkpoint Inhibitor)">Checkpoint Inhibitors</option>
                             <option value="Incretin Mimetics (GLP-1 / GIP)">Incretin Mimetics (GLP-1)</option>
                         </select>
 
@@ -799,9 +802,14 @@
 
                     <div class="chips-bar">
                         <span style="font-size:11.5px; color:var(--text-low); font-family:var(--font-mono); text-transform:uppercase;">Quick Filters:</span>
-                        <button class="chip" onclick="quickFilter('adc')">ADCs</button>
+                        <button class="chip" onclick="quickFilter('myeloma')">Myeloma</button>
+                        <button class="chip" onclick="quickFilter('dlbcl')">DLBCL</button>
+                        <button class="chip" onclick="quickFilter('cll')">CLL</button>
+                        <button class="chip" onclick="quickFilter('aml')">AML</button>
+                        <button class="chip" onclick="quickFilter('follicular')">Follicular</button>
+                        <button class="chip" onclick="quickFilter('bispecific')">Bispecifics</button>
                         <button class="chip" onclick="quickFilter('cart')">CAR-T</button>
-                        <button class="chip" onclick="quickFilter('glp1')">GLP-1</button>
+                        <button class="chip" onclick="quickFilter('adc')">ADCs</button>
                         <button class="chip" onclick="quickFilter('phase3')">Phase 3</button>
                         <button class="chip" onclick="quickFilter('completed')">Completed</button>
                         <button class="btn-clear" onclick="clearFilters()">Reset</button>
@@ -965,12 +973,28 @@
             document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
             if (event && event.target) event.target.classList.add('active');
 
-            if (type === 'adc') {
+            if (type === 'myeloma') {
+                clearFilters();
+                document.getElementById('searchInput').value = 'Multiple Myeloma';
+            } else if (type === 'dlbcl') {
+                clearFilters();
+                document.getElementById('searchInput').value = 'DLBCL';
+            } else if (type === 'cll') {
+                clearFilters();
+                document.getElementById('searchInput').value = 'Chronic Lymphocytic Leukemia';
+            } else if (type === 'aml') {
+                clearFilters();
+                document.getElementById('searchInput').value = 'Acute Myeloid Leukemia';
+            } else if (type === 'follicular') {
+                clearFilters();
+                document.getElementById('searchInput').value = 'Follicular';
+            } else if (type === 'bispecific') {
+                clearFilters();
+                document.getElementById('filterModality').value = 'Bispecific Antibodies & T-Cell Engagers';
+            } else if (type === 'adc') {
                 document.getElementById('filterModality').value = 'Antibody-Drug Conjugates (ADC)';
             } else if (type === 'cart') {
                 document.getElementById('filterModality').value = 'Cell & Gene Therapy (CAR-T)';
-            } else if (type === 'glp1') {
-                document.getElementById('filterModality').value = 'Incretin Mimetics (GLP-1 / GIP)';
             } else if (type === 'phase3') {
                 document.getElementById('filterPhase').value = 'Phase 3';
             } else if (type === 'completed') {

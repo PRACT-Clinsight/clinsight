@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-const DATA_FILE = path.join(__dirname, 'ClinSight-Website/data/trials.json');
+const DATA_FILE = path.join(__dirname, '../data/trials.json');
 const ONE_DRIVE_FILE = 'c:/Users/xthomk/OneDrive/Antigravity/Monetization/ClinSight-Website/data/trials.json';
 
 function fetchStudy(nctId) {
@@ -40,14 +40,20 @@ function fetchStudy(nctId) {
 
 function inferModality(title, interventions) {
   const text = (title + ' ' + (interventions || []).join(' ')).toLowerCase();
-  if (text.includes('deruxtecan') || text.includes('vedotin') || text.includes('govitecan') || text.includes('soravtansine') || text.includes('t-dxd') || text.includes('t-dm1') || text.includes('conjugate')) {
+  if (text.includes('deruxtecan') || text.includes('vedotin') || text.includes('govitecan') || text.includes('soravtansine') || text.includes('t-dxd') || text.includes('t-dm1') || text.includes('conjugate') || text.includes('blenrep') || text.includes('belantamab') || text.includes('polatuzumab')) {
     return 'Antibody-Drug Conjugates (ADC)';
   }
   if (text.includes('ciloleucel') || text.includes('autoleucel') || text.includes('vicleucel') || text.includes('car-t') || text.includes('chimeric antigen') || text.includes('t cell') || text.includes('t-cell')) {
     return 'Cell & Gene Therapy (CAR-T)';
   }
+  if (text.includes('teclistamab') || text.includes('elranatamab') || text.includes('talquetamab') || text.includes('epcoritamab') || text.includes('glofitamab') || text.includes('mosunetuzumab') || text.includes('odronextamab') || text.includes('bispecific') || text.includes('t-cell engager') || text.includes('bite') || text.includes('cevostamab')) {
+    return 'Bispecific Antibodies & T-Cell Engagers';
+  }
   if (text.includes('pembrolizumab') || text.includes('nivolumab') || text.includes('atezolizumab') || text.includes('durvalumab') || text.includes('ipilimumab') || text.includes('cemiplimab') || text.includes('pd-1') || text.includes('pd-l1') || text.includes('ctla-4')) {
     return 'Immuno-Oncology (Checkpoint Inhibitor)';
+  }
+  if (text.includes('daratumumab') || text.includes('isatuximab') || text.includes('rituximab') || text.includes('obinutuzumab') || text.includes('tafasitamab') || text.includes('elotuzumab')) {
+    return 'Targeted Monoclonal Antibodies';
   }
   if (text.includes('semaglutide') || text.includes('tirzepatide') || text.includes('retatrutide') || text.includes('liraglutide') || text.includes('glp-1') || text.includes('gip')) {
     return 'Incretin Mimetics (GLP-1 / GIP)';
@@ -55,7 +61,7 @@ function inferModality(title, interventions) {
   if (text.includes('mrna') || text.includes('sirna') || text.includes('antisense') || text.includes('patisiran') || text.includes('inclisiran')) {
     return 'RNA Therapeutics (mRNA / siRNA)';
   }
-  if (text.includes('osimertinib') || text.includes('sotorasib') || text.includes('abemaciclib') || text.includes('olaparib') || text.includes('empagliflozin') || text.includes('dapagliflozin') || text.includes('ceritinib') || text.includes('amg 510') || text.includes('inhibitor') || text.includes('kinase') || text.includes('tki')) {
+  if (text.includes('venetoclax') || text.includes('ibrutinib') || text.includes('acalabrutinib') || text.includes('zanubrutinib') || text.includes('pirtobrutinib') || text.includes('midostaurin') || text.includes('gilteritinib') || text.includes('ivosidenib') || text.includes('revumenib') || text.includes('ziftomenib') || text.includes('bortezomib') || text.includes('carfilzomib') || text.includes('ixazomib') || text.includes('lenalidomide') || text.includes('pomalidomide') || text.includes('copanlisib') || text.includes('osimertinib') || text.includes('sotorasib') || text.includes('abemaciclib') || text.includes('olaparib') || text.includes('empagliflozin') || text.includes('dapagliflozin') || text.includes('ceritinib') || text.includes('amg 510') || text.includes('inhibitor') || text.includes('kinase') || text.includes('tki')) {
     return 'Targeted Therapy (Small Molecule / TKI)';
   }
   return 'Biological Products & Targeted Therapies';
@@ -78,7 +84,22 @@ function inferCategoryAndSubtype(title, conditions) {
     else if (text.includes('small cell') || text.includes('sclc')) sub = 'Lung Cancer (Small Cell)';
     return { category: 'Oncology', subtype: sub };
   }
-  if (text.includes('myeloma') || text.includes('lymphoma') || text.includes('leukemia') || text.includes('dlbcl')) {
+  if (text.includes('multiple myeloma') || text.includes('myeloma') || text.includes('plasma cell')) {
+    return { category: 'Oncology', subtype: 'Multiple Myeloma' };
+  }
+  if (text.includes('diffuse large b-cell') || text.includes('dlbcl')) {
+    return { category: 'Oncology', subtype: 'Diffuse Large B-Cell Lymphoma (DLBCL)' };
+  }
+  if (text.includes('chronic lymphocytic leukemia') || text.includes('cll') || text.includes('small lymphocytic')) {
+    return { category: 'Oncology', subtype: 'Chronic Lymphocytic Leukemia (CLL)' };
+  }
+  if (text.includes('acute myeloid leukemia') || text.includes('aml')) {
+    return { category: 'Oncology', subtype: 'Acute Myeloid Leukemia (AML)' };
+  }
+  if (text.includes('follicular lymphoma') || text.includes('follicular non-hodgkin') || text.includes('indolent non-hodgkin')) {
+    return { category: 'Oncology', subtype: 'Follicular Lymphoma (FL)' };
+  }
+  if (text.includes('lymphoma') || text.includes('leukemia')) {
     return { category: 'Oncology', subtype: 'Hematologic Malignancies' };
   }
   if (text.includes('urothelial') || text.includes('bladder') || text.includes('prostate') || text.includes('renal')) {
@@ -158,6 +179,59 @@ async function sanitizeAll() {
     'NCT04244461': 'NCT04223856', // VA Survey -> EV-302 (Enfortumab Vedotin)
   };
 
+  // Verified landmark acronym mappings
+  const landmarkAcronyms = {
+    'NCT02252172': 'MAIA',
+    'NCT03652064': 'CEPHEUS',
+    'NCT03710603': 'PERSEUS',
+    'NCT02541383': 'CASSIOPEIA',
+    'NCT03548207': 'CARTITUDE-1',
+    'NCT04181827': 'CARTITUDE-4',
+    'NCT03651128': 'KarMMa-3',
+    'NCT04557098': 'MajesTEC-1',
+    'NCT05083169': 'MajesTEC-3',
+    'NCT04649359': 'MagnetisMM-3',
+    'NCT03399799': 'MonumenTAL-1',
+    'NCT05455320': 'MonumenTAL-3',
+    'NCT04246047': 'DREAMM-7',
+    'NCT04484623': 'DREAMM-8',
+    'NCT03275285': 'IKEMA',
+    'NCT03274492': 'POLARIX',
+    'NCT02348216': 'ZUMA-1',
+    'NCT03391466': 'ZUMA-7',
+    'NCT03575351': 'TRANSFORM',
+    'NCT03625037': 'EPCORE NHL-1',
+    'NCT04628494': 'EPCORE DLBCL-1',
+    'NCT04408638': 'STARGLO',
+    'NCT02399085': 'L-MIND',
+    'NCT02445248': 'JULIET',
+    'NCT02631044': 'TRANSCEND NHL 001',
+    'NCT03734016': 'ALPINE',
+    'NCT02477696': 'ELEVATE-RR',
+    'NCT02475681': 'ELEVATE-TN',
+    'NCT02242942': 'CLL14',
+    'NCT02005471': 'MURANO',
+    'NCT04666038': 'BRUIN CLL-321',
+    'NCT03462719': 'GLOW',
+    'NCT01578707': 'RESONATE',
+    'NCT02993523': 'VIALE-A',
+    'NCT03069352': 'VIALE-C',
+    'NCT01757535': 'QUAZAR AML-001',
+    'NCT00651261': 'RATIFY',
+    'NCT02421939': 'ADMIRAL',
+    'NCT03173248': 'AGILE',
+    'NCT04065399': 'AUGMENT-101',
+    'NCT04067336': 'KOMET-001',
+    'NCT01476787': 'RELEVANCE',
+    'NCT01938001': 'AUGMENT',
+    'NCT01332968': 'GALLIUM',
+    'NCT02367040': 'CHRONOS-3',
+    'NCT02500407': 'GO29781',
+    'NCT03888105': 'ELM-2',
+    'NCT03105336': 'ZUMA-5',
+    'NCT05371093': 'ZUMA-22',
+  };
+
   // Replace bad IDs with valid IDs
   nctIds = nctIds.map(id => replacements[id] || id);
   // Also ensure key landmarks are present
@@ -165,8 +239,6 @@ async function sanitizeAll() {
     'NCT02142738', // KEYNOTE-024
     'NCT02578680', // KEYNOTE-189
     'NCT03036488', // KEYNOTE-522
-    'NCT03548207', // CARTITUDE-1
-    'NCT04181827', // CARTITUDE-4
     'NCT03036124', // DAPA-HF
     'NCT03057977', // EMPEROR-Reduced
     'NCT04303780', // CodeBreaK 200
@@ -178,12 +250,69 @@ async function sanitizeAll() {
     'NCT02246621', // CheckMate-067
     'NCT02511106', // ADAURA
     'NCT03155620', // monarchE
-    'NCT02348216', // ZUMA-1
     'NCT03574597', // STEP 1
     'NCT03552718', // SELECT
     'NCT04184622', // SURMOUNT-1
     'NCT04209855', // MIRASOL
-    'NCT03422523'  // POLARIX
+
+    // Batch 1: Multiple Myeloma
+    'NCT03710603', // PERSEUS
+    'NCT03652064', // CEPHEUS
+    'NCT02252172', // MAIA
+    'NCT02541383', // CASSIOPEIA
+    'NCT03548207', // CARTITUDE-1
+    'NCT04181827', // CARTITUDE-4
+    'NCT03651128', // KarMMa-3
+    'NCT04557098', // MajesTEC-1
+    'NCT05083169', // MajesTEC-3
+    'NCT04649359', // MagnetisMM-3
+    'NCT03399799', // MonumenTAL-1
+    'NCT05455320', // MonumenTAL-3
+    'NCT04246047', // DREAMM-7
+    'NCT04484623', // DREAMM-8
+    'NCT03275285', // IKEMA
+
+    // Batch 1: DLBCL
+    'NCT03274492', // POLARIX
+    'NCT02348216', // ZUMA-1
+    'NCT03391466', // ZUMA-7
+    'NCT03575351', // TRANSFORM
+    'NCT03625037', // EPCORE NHL-1
+    'NCT04628494', // EPCORE DLBCL-1
+    'NCT04408638', // STARGLO
+    'NCT02399085', // L-MIND
+    'NCT02445248', // JULIET
+    'NCT02631044', // TRANSCEND NHL 001
+
+    // Batch 1: CLL
+    'NCT03734016', // ALPINE
+    'NCT02477696', // ELEVATE-RR
+    'NCT02475681', // ELEVATE-TN
+    'NCT02242942', // CLL14
+    'NCT02005471', // MURANO
+    'NCT04666038', // BRUIN CLL-321
+    'NCT03462719', // GLOW
+    'NCT01578707', // RESONATE
+
+    // Batch 1: AML
+    'NCT02993523', // VIALE-A
+    'NCT03069352', // VIALE-C
+    'NCT01757535', // QUAZAR AML-001
+    'NCT00651261', // RATIFY
+    'NCT02421939', // ADMIRAL
+    'NCT03173248', // AGILE
+    'NCT04065399', // AUGMENT-101
+    'NCT04067336', // KOMET-001
+
+    // Batch 1: Follicular Lymphoma
+    'NCT01476787', // RELEVANCE
+    'NCT01938001', // AUGMENT
+    'NCT01332968', // GALLIUM
+    'NCT02367040', // CHRONOS-3
+    'NCT02500407', // GO29781 (Mosunetuzumab)
+    'NCT03888105', // ELM-2
+    'NCT03105336', // ZUMA-5
+    'NCT05371093'  // ZUMA-22
   ];
 
   for (const landId of essentialLandmarks) {
@@ -211,7 +340,7 @@ async function sanitizeAll() {
     const briefTitle = p.identificationModule?.briefTitle || '';
     const officialTitle = p.identificationModule?.officialTitle || briefTitle;
     const rawAcronym = p.identificationModule?.acronym;
-    const acronym = extractAcronym(rawAcronym, briefTitle, officialTitle);
+    const acronym = landmarkAcronyms[id] || extractAcronym(rawAcronym, briefTitle, officialTitle);
 
     const phases = p.designModule?.phases || [];
     let phaseStr = phases.join(', ').replace(/PHASE/g, 'Phase ');
