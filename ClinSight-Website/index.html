@@ -190,20 +190,32 @@
 
         /* Pure Text Logo (Font itself is the logo) */
         .sidebar-brand {
-            padding: 4px 8px 20px;
+            padding: 4px 8px 18px;
             border-bottom: 1px solid var(--border-subtle);
             margin-bottom: 20px;
             text-decoration: none;
             display: block;
         }
         .logo-text {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 800;
             letter-spacing: -0.03em;
-            color: var(--text-high);
+            color: var(--cyan);
+            line-height: 1.15;
         }
         .logo-text span {
             color: var(--cyan);
+            font-size: 14px;
+            vertical-align: super;
+            font-weight: 700;
+        }
+        .logo-sub {
+            font-size: 11.5px;
+            font-weight: 500;
+            color: var(--text-med);
+            margin-top: 4px;
+            letter-spacing: -0.01em;
+            line-height: 1.35;
         }
 
         .sidebar-section-title {
@@ -836,6 +848,7 @@
         <aside class="sidebar" id="sidebar">
             <a href="https://clinsight.pract.eu/" class="sidebar-brand">
                 <div class="logo-text">ClinSight<span>™</span></div>
+                <div class="logo-sub">Clinical Trials & Evidence Generation</div>
             </a>
 
             <ul class="sidebar-nav">
@@ -864,7 +877,10 @@
             <!-- Mobile Header (Mobile only) -->
             <div class="mobile-header">
                 <button class="mobile-toggle" onclick="toggleSidebar()" aria-label="Open mobile navigation menu"><i class="fa-solid fa-bars"></i></button>
-                <div class="logo-text" style="font-size:18px;">ClinSight<span>™</span></div>
+                <div>
+                    <div class="logo-text" style="font-size:18px; line-height:1.15;">ClinSight<span>™</span></div>
+                    <div class="logo-sub" style="font-size:10px; margin-top:2px;">Clinical Trials & Evidence Generation</div>
+                </div>
                 <div style="margin-left:auto; display:flex; align-items:center; gap:8px;">
                     <button id="themeToggleMobile" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light or dark appearance">
                         <i class="fa-regular fa-sun"></i>
