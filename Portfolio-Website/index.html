@@ -3,215 +3,556 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRACT | Translational Science & Regulatory Intelligence</title>
-    <!-- Google Fonts: Inter -->
+    <title>PRACT | Open Translational Science & Knowledge Hub</title>
+    <meta name="description" content="An open, non-commercial knowledge ecosystem bridging Pharmacovigilance, Regulatory Affairs, and Clinical Trials for computational biologists and researchers.">
+    <link rel="canonical" href="https://pract.eu/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="PRACT | Open Translational Science & Knowledge Hub">
+    <meta property="og:description" content="Open-access research intelligence across Clinical Trials, Regulatory Guidance, and Pharmacovigilance.">
+    <meta property="og:url" content="https://pract.eu/">
+    <meta property="og:type" content="website">
+
+    <!-- Antigravity Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --bg-void: #07090e;
+            --bg-base: #0b0f19;
+            --bg-surface: #111827;
+            --bg-card: rgba(17, 24, 39, 0.75);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.35);
+            --cyan: #38bdf8;
+            --cyan-glow: rgba(56, 189, 248, 0.12);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.12);
+            --purple: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.12);
+            --amber: #fbbf24;
+            --amber-glow: rgba(251, 191, 36, 0.12);
+            --text-high: #f8fafc;
+            --text-med: #cbd5e1;
+            --text-low: #64748b;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-void);
+            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.06), transparent 45%),
+                              radial-gradient(circle at 80% 40%, rgba(168, 85, 247, 0.04), transparent 50%);
+            color: var(--text-high);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 16px 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-high);
+        }
+        .brand-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+            font-size: 15px;
+            box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+        }
+        .brand-text h1 {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .brand-text span {
+            font-size: 11px;
+            color: var(--text-low);
+            font-family: var(--font-mono);
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--text-med);
+            text-decoration: none;
+            font-size: 13.5px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--cyan); }
+        .nav-btn {
+            background: var(--cyan-glow);
+            color: var(--cyan) !important;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 7px 16px;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            font-size: 13px !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .nav-btn:hover {
+            background: rgba(56, 189, 248, 0.22);
+            color: #FFF !important;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--cyan);
+            background: var(--cyan-glow);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 5px 16px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+        .hero h2 {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-high);
+            margin-bottom: 18px;
+            line-height: 1.25;
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero p {
+            font-size: 16.5px;
+            color: var(--text-med);
+            max-width: 760px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn-main {
+            background: linear-gradient(135deg, var(--cyan) 0%, #0284c7 100%);
+            color: #04101e;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: all 0.2s;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+        }
+        .btn-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 28px rgba(56, 189, 248, 0.4);
+            color: #000;
+        }
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-high);
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Pillars Overview */
+        .section-tag {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+            display: block;
+        }
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-high);
+            margin-bottom: 12px;
+        }
+        .section-subtitle {
+            font-size: 15px;
+            color: var(--text-med);
+            margin-bottom: 36px;
+            max-width: 680px;
+            line-height: 1.6;
+        }
+
+        /* 3 Core Modules Cards */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 70px;
+        }
+        .module-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 28px;
+            backdrop-filter: blur(12px);
+            transition: all 0.25s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .module-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        }
+        .module-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+        .mod-icon-clinsight { background: var(--cyan-glow); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.3); }
+        .mod-icon-regsight { background: var(--purple-glow); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.3); }
+        .mod-icon-vigisight { background: var(--emerald-glow); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
+
+        .module-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 10px;
+        }
+        .module-card p {
+            font-size: 14px;
+            color: var(--text-med);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .module-features {
+            list-style: none;
+            margin-bottom: 22px;
+            font-size: 12.5px;
+            color: var(--text-low);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-family: var(--font-mono);
+        }
+        .module-features li { display: flex; align-items: center; gap: 8px; }
+        .module-features li i { font-size: 10px; color: var(--cyan); }
+
+        .module-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--cyan);
+            text-decoration: none;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-subtle);
+            transition: gap 0.2s;
+        }
+        .module-card:hover .module-link { gap: 12px; }
+
+        /* The Lab / Open Datasets */
+        .lab-section {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.6) 0%, rgba(11, 15, 25, 0.8) 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 44px;
+            margin-bottom: 70px;
+        }
+        .lab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 28px;
+        }
+        .lab-item {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .lab-item-tag {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--emerald);
+            background: var(--emerald-glow);
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .lab-item h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-high);
+            margin-bottom: 6px;
+        }
+        .lab-item p {
+            font-size: 13px;
+            color: var(--text-med);
+            line-height: 1.55;
+        }
+
+        /* Community & Open Science */
+        .principles-box {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .principles-box h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 14px;
+        }
+        .principles-box p {
+            font-size: 15px;
+            color: var(--text-med);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 36px 0;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-low);
+            font-family: var(--font-mono);
+        }
+        footer a { color: var(--cyan); text-decoration: none; }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">PRACT™</div>
+            <a href="https://pract.eu/" class="brand">
+                <div class="brand-icon"><i class="fa-solid fa-atom"></i></div>
+                <div class="brand-text">
+                    <h1>PRACT</h1>
+                    <span>Open Science Ecosystem</span>
+                </div>
+            </a>
+
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Intelligence Modules</a></li>
-                <li><a href="#portfolio">Research & Data</a></li>
-                <li><a href="#contact" class="btn-primary-small">Contact</a></li>
+                <li><a href="#modules">Intelligence Modules</a></li>
+                <li><a href="#lab">Open Research Lab</a></li>
+                <li><a href="#principles">About PRACT</a></li>
+                <li><a href="https://clinsight.pract.eu/" class="nav-btn"><i class="fa-solid fa-flask"></i> ClinSight Engine</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-badge">PRACT Intelligence Ecosystem</div>
-            <h1>Bridging Deep Science with Global Regulatory Strategy</h1>
-            <p>Deploying the PRACT methodology (Pharmacovigilance, Regulatory Affairs, Clinical Trials) to translate complex scientific data into actionable regulatory execution for Pharma & MedTech.</p>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-badge"><i class="fa-solid fa-cube"></i> Open Translational Science & Evidence Hub</div>
+            <h2>Connecting Deep Molecular Science, Regulatory Standards, and Clinical Evidence</h2>
+            <p>
+                PRACT is an open, non-commercial knowledge ecosystem for computational biologists, clinical researchers, and scientific founders. We map the intersection of <b>Pharmacovigilance</b>, <b>Regulatory Affairs</b>, and <b>Clinical Trials</b> to make primary therapeutic evidence transparent and accessible.
+            </p>
             <div class="hero-actions">
-                <a href="#services" class="btn-primary">Explore Modules</a>
-                <a href="#contact" class="btn-secondary">Inquire / Consult</a>
+                <a href="https://clinsight.pract.eu/" class="btn-main">
+                    <i class="fa-solid fa-compass"></i> Launch ClinSight™ Explorer
+                </a>
+                <a href="#modules" class="btn-outline">
+                    <i class="fa-solid fa-layer-group"></i> Explore All 3 Modules
+                </a>
             </div>
-        </div>
-        <div class="hero-background-shape"></div>
-    </header>
+        </section>
 
-    <!-- About Section -->
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>Bridging Deep Science with Regulatory Precision</h2>
-                    <p>In life sciences product development, bridging the gap between raw scientific discovery and stringent global regulatory pathways is the most expensive and time-critical bottleneck.</p>
-                    <p>The PRACT framework integrates deep domain expertise across oncology and advanced therapeutics with rigorous statutory evidence standards. We translate preclinical data, clinical trials, and real-world safety evidence directly into actionable submission pathways and post-market compliance.</p>
-                    
-                    <div class="credentials-list">
-                        <div class="credential-item">
-                            <i class="fa-solid fa-microchip"></i>
-                            <div>
-                                <h4>Regulatory Affairs Intelligence</h4>
-                                <span>Global Guidelines & Statutory Horizons (FDA, EMA, MDCG)</span>
-                            </div>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fa-solid fa-shield-virus"></i>
-                            <div>
-                                <h4>Pharmacovigilance & Safety</h4>
-                                <span>Signal Detection, Benefit-Risk Evaluation & FAERS Analysis</span>
-                            </div>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fa-solid fa-chart-line"></i>
-                            <div>
-                                <h4>Clinical Trial Data & Evidence</h4>
-                                <span>Target Trial Emulation, Systematic Reviews & PMCF Modeling</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>12k+</h3>
-                        <p>Regulatory Guidelines Indexed</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>3</h3>
-                        <p>Intelligence Modules</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Global</h3>
-                        <p>Pharma & MedTech Scope</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- 3 Core Modules -->
+        <section id="modules" style="padding-top:40px;">
+            <span class="section-tag">Ecosystem Architecture</span>
+            <h2 class="section-title">The Three Core PRACT Intelligence Modules</h2>
+            <p class="section-subtitle">
+                Each module provides specialized, open exploration tools focused on a distinct pillar of translational therapeutics:
+            </p>
 
-    <!-- Services Section -->
-    <section class="services section" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>The PRACT Core Intelligence Modules</h2>
-                <p>Our capabilities are structured across three dedicated intelligence platforms to ensure end-to-end clinical and regulatory success.</p>
-            </div>
-            
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
-                    <h3>VigiSight™ | Pharmacovigilance</h3>
-                    <p>Specialized drug safety signal detection and competitive safety analysis using global databases (FAERS, EudraVigilance) to mitigate pre-clinical and post-market risk.</p>
-                    <a href="https://vigisight.pract.eu/" target="_blank" class="portfolio-link" style="display:inline-block; margin-top:14px; font-weight:600;">Visit vigisight.pract.eu <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
-                    <h3>RegSight™ | Regulatory Affairs</h3>
-                    <p>Automated tracking of shifting FDA/EMA/MDCG guidelines and deep strategic negotiation to accelerate submission pathways and maintain market compliance.</p>
-                    <a href="https://regsight.pract.eu/" target="_blank" class="portfolio-link" style="display:inline-block; margin-top:14px; font-weight:600;">Visit regsight.pract.eu <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3>ClinSight™ | Clinical Trials & Data</h3>
-                    <p>Rigorous systematic literature reviews, Target Trial Emulation, and Post-Market Clinical Follow-up (PMCF) strategy backed by robust clinical data modeling.</p>
-                    <a href="https://clinsight.pract.eu/" target="_blank" class="portfolio-link" style="display:inline-block; margin-top:14px; font-weight:600;">Visit clinsight.pract.eu <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio section bg-light" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Lab: Specialized Research & Intelligence</h2>
-                <p>Demonstrating capabilities through targeted research, data engineering, and statutory tracking.</p>
-            </div>
-            
-            <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <div class="portfolio-card">
-                    <div class="portfolio-content">
-                        <span class="portfolio-category">Pharmacovigilance</span>
-                        <h3>ADC Ocular Toxicity FAERS Analysis</h3>
-                        <p>A comprehensive signal detection report analyzing ocular adverse events associated with Antibody-Drug Conjugates using the FDA Adverse Event Reporting System (FAERS). Currently in preparation for publication in Drug Safety.</p>
-                        <a href="https://vigisight.pract.eu/" class="portfolio-link">Explore Safety Analysis <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="modules-grid">
+                <!-- Module 1: ClinSight -->
+                <div class="module-card">
+                    <div class="module-icon mod-icon-clinsight">
+                        <i class="fa-solid fa-flask"></i>
                     </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="portfolio-card">
-                    <div class="portfolio-content">
-                        <span class="portfolio-category">Regulatory Intelligence</span>
-                        <h3>Regulatory Guidance Index Engine</h3>
-                        <p>A highly structured, filterable repository aggregating complex medical device and pharmaceutical regulatory standards (ISO, MDCG, FDA) to rapidly assess compliance impact.</p>
-                        <a href="https://regsight.pract.eu/" class="portfolio-link">Launch Guidance Index <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="portfolio-card">
-                    <div class="portfolio-content">
-                        <span class="portfolio-category">Data Engineering</span>
-                        <h3>DNA Damage Response (DDR) Database</h3>
-                        <p>A custom-built data repository structuring complex genomic and clinical trial data surrounding DDR programs for oncology therapeutics targeting ALT and ATRX mechanisms.</p>
-                        <a href="https://clinsight.pract.eu/" class="portfolio-link">Explore Clinical Evidence <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <div class="contact-card">
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <p>Whether you want to discuss a specific regulatory challenge, explore the PRACT methodology, or connect regarding industry collaborations, let's start a conversation.</p>
-                    <ul class="contact-details">
-                        <li><i class="fa-solid fa-globe"></i> Global Remote & Institutional Consulting</li>
-                        <li><i class="fa-solid fa-envelope"></i> contact@pract.eu</li>
+                    <h3>ClinSight™ | Clinical Trials</h3>
+                    <p>
+                        An open explorer for pivotal Phase 3 clinical trials across Oncology, ADCs, CAR-T, and Incretin mimetics. Structured protocols, primary endpoints, and direct links to ClinicalTrials.gov.
+                    </p>
+                    <ul class="module-features">
+                        <li><i class="fa-solid fa-check"></i> 120+ Pivotal Studies Indexed</li>
+                        <li><i class="fa-solid fa-check"></i> Filter by Phase, Drug Modality & Year</li>
+                        <li><i class="fa-solid fa-check"></i> Primary Registry Links & PubMed Citations</li>
                     </ul>
+                    <a href="https://clinsight.pract.eu/" class="module-link">
+                        Launch clinsight.pract.eu <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="contact-form-container">
-                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="fff4db53-8ee0-4143-884b-cdad8baf4852">
-                        <input type="hidden" name="redirect" value="https://pract.eu">
-                        
-                        <div class="form-group">
-                            <label for="name">Name / Company</label>
-                            <input type="text" id="name" name="name" required placeholder="Organization / Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="contact@company.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message / Opportunity Details</label>
-                            <textarea id="message" name="message" rows="4" required placeholder="Describe your project, regulatory requirements, or collaboration goals..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
-                    </form>
+
+                <!-- Module 2: RegSight -->
+                <div class="module-card">
+                    <div class="module-icon mod-icon-regsight">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                    </div>
+                    <h3>RegSight™ | Regulatory Guidance</h3>
+                    <p>
+                        A structured reference catalog tracking global statutory guidance documents across FDA, EMA, and MDCG. Designed to demystify complex therapeutic submission standards.
+                    </p>
+                    <ul class="module-features">
+                        <li><i class="fa-solid fa-check"></i> Global FDA & EMA Guidance Standards</li>
+                        <li><i class="fa-solid fa-check"></i> Medical Device & Pharma Guidelines</li>
+                        <li><i class="fa-solid fa-check"></i> Structured Statutory Search</li>
+                    </ul>
+                    <a href="https://regsight.pract.eu/" target="_blank" class="module-link">
+                        Explore regsight.pract.eu <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Module 3: VigiSight -->
+                <div class="module-card">
+                    <div class="module-icon mod-icon-vigisight">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h3>VigiSight™ | Pharmacovigilance</h3>
+                    <p>
+                        Post-market safety signal analysis exploring real-world adverse event data through open FAERS reports and published pharmacovigilance literature.
+                    </p>
+                    <ul class="module-features">
+                        <li><i class="fa-solid fa-check"></i> FAERS Spontaneous Reporting Insights</li>
+                        <li><i class="fa-solid fa-check"></i> Targeted Toxicity Signals (ADCs, TKIs)</li>
+                        <li><i class="fa-solid fa-check"></i> Benefit-Risk Modeling</li>
+                    </ul>
+                    <a href="https://vigisight.pract.eu/" target="_blank" class="module-link">
+                        Explore vigisight.pract.eu <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 PRACT™. All rights reserved.</p>
-        </div>
-    </footer>
+        <!-- Open Research Lab -->
+        <section id="lab" class="lab-section">
+            <span class="section-tag" style="color:var(--emerald);">Knowledge Lab</span>
+            <h2 class="section-title">Open Datasets & Methodological Pipelines</h2>
+            <p style="font-size:14.5px; color:var(--text-med); max-width:700px; line-height:1.6;">
+                We build and maintain open-access data pipelines for complex therapeutics, emphasizing reproducibility and open public scientific sources.
+            </p>
 
-    <script src="script.js"></script>
+            <div class="lab-grid">
+                <div class="lab-item">
+                    <span class="lab-item-tag">Safety Signal Mining</span>
+                    <h4>ADC Ocular & Hematologic Toxicity</h4>
+                    <p>Systematic extraction and signal disproportionality analysis of adverse events reported in connection with Antibody-Drug Conjugate therapies.</p>
+                </div>
+                <div class="lab-item">
+                    <span class="lab-item-tag">Genomic Biology</span>
+                    <h4>DNA Damage Response (DDR) Explorer</h4>
+                    <p>Curated catalog mapping clinical trials and therapeutic mechanisms targeting synthetic lethality, ALT, and ATRX genomic pathways.</p>
+                </div>
+                <div class="lab-item">
+                    <span class="lab-item-tag">Registry Engineering</span>
+                    <h4>ClinicalTrials.gov Programmatic Ingestion</h4>
+                    <p>Open-source tools to pull, normalize, and render static clinical trial protocols for high-speed, zero-cost knowledge exploration.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Principles -->
+        <section id="principles" class="principles-box">
+            <span class="section-tag">Our Ethos</span>
+            <h3>Built for Open Science & Enthusiasts</h3>
+            <p>
+                PRACT is an independent, non-commercial research initiative. We don't sell consulting packages, run commercial advertisements, or lock scientific data behind subscriptions. All data is synthesized from public statutory repositories and open scientific literature.
+            </p>
+            <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+                <a href="https://github.com/PRACT-Clinsight" target="_blank" class="btn-outline">
+                    <i class="fa-brands fa-github"></i> GitHub Organization
+                </a>
+                <a href="mailto:hello@pract.eu" class="btn-outline">
+                    <i class="fa-solid fa-envelope"></i> hello@pract.eu
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div>&copy; 2026 PRACT™ · Open Translational Science & Evidence Hub.</div>
+            <div style="margin-top:6px;">An independent, non-commercial research initiative. All data sourced from public records.</div>
+        </footer>
+    </div>
 </body>
 </html>

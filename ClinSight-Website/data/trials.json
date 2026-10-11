@@ -69,17 +69,7 @@
         "pmid": "41062831",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Progression-Free Survival (PFS) by BICR",
-      "benchmarkMetric": "Median PFS 9.9 mo (T-DXd) vs 5.1 mo (TPC); Hazard Ratio 0.50 (95% CI 0.40–0.63; p < 0.001)",
-      "secondaryMetric": "Overall Survival 23.4 mo vs 16.8 mo; Hazard Ratio 0.64 (95% CI 0.49–0.84; p = 0.001)",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa2203690",
-      "fdaApprovalStatus": "FDA Approved (Priority Review & Breakthrough Designation, August 2022)",
-      "euApprovalStatus": "EMA Approved (January 2023)"
-    }
+    ]
   },
   {
     "nctId": "NCT03529110",
@@ -146,21 +136,10 @@
         "pmid": "38442809",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Progression-Free Survival (PFS) by BICR",
-      "benchmarkMetric": "Median PFS 28.8 mo (T-DXd) vs 6.8 mo (T-DM1); Hazard Ratio 0.33 (95% CI 0.26–0.43; p < 0.0001)",
-      "secondaryMetric": "12-Month OS Rate 94.1% vs 85.9%; Hazard Ratio 0.64 (95% CI 0.47–0.87)",
-      "publishedJournal": "The Lancet & NEJM",
-      "publicationDoi": "10.1016/S0140-6736(22)02123-1",
-      "fdaApprovalStatus": "FDA Approved (May 2022)",
-      "euApprovalStatus": "EMA Approved (July 2022)"
-    }
+    ]
   },
   {
     "nctId": "NCT04526691",
-    "acronym": "DESTINY-PanTumor02",
     "briefTitle": "Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)",
     "officialTitle": "Phase 1b, Multicenter, Open-label Study of Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)",
     "phase": "Phase 1",
@@ -214,91 +193,10 @@
         "pmid": "41871716",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Objective Response Rate (ORR) by ICR",
-      "benchmarkMetric": "Confirmed ORR 37.1% across pan-tumor cohort; 61.3% in HER2 IHC 3+ patients",
-      "secondaryMetric": "Median Duration of Response 11.3 months overall; 22.1 months in IHC 3+",
-      "publishedJournal": "Journal of Clinical Oncology (JCO)",
-      "publicationDoi": "10.1200/JCO.23.02005",
-      "fdaApprovalStatus": "FDA Accelerated Approval (Pan-Tumor HER2 3+, April 2024)",
-      "euApprovalStatus": "EMA Review / Breakthrough Indication"
-    }
-  },
-  {
-    "nctId": "NCT04244461",
-    "acronym": "EV-302 / KEYNOTE-A39",
-    "briefTitle": "Brief Online Intervention for Veterans",
-    "officialTitle": "Preventing Alcohol Misuse Among Young Adult Veterans Through Brief Online Intervention",
-    "phase": "NA",
-    "status": "COMPLETED",
-    "isCompleted": true,
-    "sponsor": "RAND",
-    "conditions": [
-      "Heavy Drinking",
-      "Mental Health Wellness"
-    ],
-    "interventions": [
-      "Personalized Normative Feedback"
-    ],
-    "category": "Oncology & Hematology",
-    "subtype": "Genitourinary (Urothelial Cancer)",
-    "modality": "Antibody-Drug Conjugates (ADC)",
-    "regions": [
-      "United States (US FDA)"
-    ],
-    "completionDate": "2024-11-30",
-    "year": 2024,
-    "enrollment": 754,
-    "primaryOutcomes": [
-      {
-        "measure": "Drinking frequency",
-        "description": "Number of days reported any drinking on the timeline followback",
-        "timeFrame": "Past month (30 days)"
-      },
-      {
-        "measure": "Drinks of drinking days",
-        "description": "Average number of drinks reported during drinking days on the timeline followback",
-        "timeFrame": "Past month (30 days)"
-      },
-      {
-        "measure": "21-item Brief Young Adult Alcohol Consequences Questionnaire",
-        "description": "Number of 21 assessed alcohol consequences experienced (yes/no). Yes responses are summed to yield a score on this measure. Higher scores indicate experience of a greater number of consequences. Scores range from 0 (no consequences) to 21 (experience of all 21 consequences)",
-        "timeFrame": "Past month (30 days)"
-      }
-    ],
-    "inclusionCriteria": [
-      "Veterans aged 18 to 40 who has separated/discharged from military service from the Air Force, Army, Marine Corps, or Navy",
-      "Not currently affiliated with active duty service or in the reserves or guard units",
-      "Able to read English (also a requirement of military service)",
-      "Access to a computer, Internet, and personal email address",
-      "No appointments in the past six months and no pending appointments with a mental health professional or medical doctor for treatment of concerns related to alcohol use, other substance use, PTSD, depression, or other mental health concerns"
-    ],
-    "exclusionCriteria": [
-      "None besides not meeting eligibility criteria"
-    ],
-    "publications": [
-      {
-        "citation": "Pedersen ER, Davis JP, Hummer JF, Bouskill K, Buch KD, Shute IM, Fitzke RE, Tran DD, Neighbors C, Saba S. Reducing Alcohol Misuse and Promoting Treatment Initiation Among Veterans Through a Brief Internet-Based Intervention: Protocol for a Randomized Controlled Trial. JMIR Res Protoc. 2024 Aug 22;13:e59993. doi: 10.2196/59993.",
-        "pmid": "39173142",
-        "type": "DERIVED"
-      }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Progression-Free Survival (PFS) & Overall Survival (OS)",
-      "benchmarkMetric": "Median OS 31.5 mo (EV+Pembro) vs 16.1 mo (Chemotherapy); HR 0.47 (95% CI 0.38–0.58; p < 0.00001)",
-      "secondaryMetric": "Median PFS 12.5 mo vs 6.3 mo; Hazard Ratio 0.45 (95% CI 0.38–0.54; p < 0.00001)",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa2312117",
-      "fdaApprovalStatus": "FDA Approved (First-Line Standard of Care, December 2023)",
-      "euApprovalStatus": "EMA Approved (April 2024)"
-    }
+    ]
   },
   {
     "nctId": "NCT03971409",
-    "acronym": "TROPiCS-02",
     "briefTitle": "Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer",
     "officialTitle": "Innovative Combination Immunotherapy for Metastatic Triple Negative Breast Cancer (TNBC): A Multicenter, Multi-Arm Translational Breast Cancer Research Consortium Study",
     "phase": "Phase 2",
@@ -355,17 +253,7 @@
       "Concurrent anticancer therapy. Required washout from prior therapies are as follows:",
       "Chemotherapy: \\>= 14 days: antibody drug conjugants administered every 3 weeks require a 3-week washout."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Progression-Free Survival (PFS)",
-      "benchmarkMetric": "Median PFS 5.5 mo vs 4.0 mo; Hazard Ratio 0.66 (95% CI 0.53–0.83; p = 0.0003)",
-      "secondaryMetric": "Median OS 14.4 mo vs 11.2 mo; Hazard Ratio 0.79 (95% CI 0.65–0.96; p = 0.020)",
-      "publishedJournal": "Journal of Clinical Oncology (JCO)",
-      "publicationDoi": "10.1200/JCO.22.01002",
-      "fdaApprovalStatus": "FDA Approved (February 2023)",
-      "euApprovalStatus": "EMA Approved (July 2023)"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT02638909",
@@ -417,17 +305,7 @@
       "Patients who are currently receiving treatment with warfarin sodium (Coumadin®) or any other coumarin-derivative anti-coagulants.",
       "Patients with symptomatic CNS metastases who are neurologically unstable or have required increasing doses of steroids within the 1 week prior to study entry to manage CNS symptoms."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Progression-Free Survival (PFS)",
-      "benchmarkMetric": "Median OS 30.0 mo (Pembrolizumab) vs 14.2 mo (Chemo); Hazard Ratio 0.63 (95% CI 0.47–0.86)",
-      "secondaryMetric": "5-Year Overall Survival Rate 31.9% vs 16.3%",
-      "publishedJournal": "New England Journal of Medicine & JCO",
-      "publicationDoi": "10.1200/JCO.20.00149",
-      "fdaApprovalStatus": "FDA Approved (October 2016)",
-      "euApprovalStatus": "EMA Approved (January 2017)"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT02578680",
@@ -502,17 +380,7 @@
         "pmid": "37465924",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Pathological Complete Response (pCR) & EFS",
-      "benchmarkMetric": "pCR Rate 64.8% (Pembro+Chemo) vs 51.2% (Placebo); Difference 13.6% (p < 0.001)",
-      "secondaryMetric": "3-Year EFS 84.5% vs 76.8%; Hazard Ratio 0.63 (95% CI 0.48–0.82; p < 0.001)",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa1910549",
-      "fdaApprovalStatus": "FDA Approved (July 2021)",
-      "euApprovalStatus": "EMA Approved (May 2022)"
-    }
+    ]
   },
   {
     "nctId": "NCT02246621",
@@ -582,17 +450,7 @@
         "pmid": "38470447",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Progression-Free Survival (PFS) & Overall Survival (OS)",
-      "benchmarkMetric": "Median OS 72.1 mo (Nivo+Ipi) vs 36.9 mo (Nivo) vs 19.9 mo (Ipi); HR 0.52 (p < 0.001)",
-      "secondaryMetric": "7.5-Year Overall Survival Rate 48% with combination therapy",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa1709684",
-      "fdaApprovalStatus": "FDA Approved (September 2015)",
-      "euApprovalStatus": "EMA Approved (May 2016)"
-    }
+    ]
   },
   {
     "nctId": "NCT02511106",
@@ -661,17 +519,7 @@
         "pmid": "40311309",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Disease-Free Survival (DFS) in Stage II–IIIA",
-      "benchmarkMetric": "5-Year DFS 65% (Osimertinib) vs 19% (Placebo); Hazard Ratio 0.23 (95% CI 0.18–0.30; p < 0.001)",
-      "secondaryMetric": "5-Year Overall Survival 88% vs 78%; Hazard Ratio 0.49 (95% CI 0.34–0.70; p < 0.001)",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa2304594",
-      "fdaApprovalStatus": "FDA Approved (December 2020)",
-      "euApprovalStatus": "EMA Approved (May 2021)"
-    }
+    ]
   },
   {
     "nctId": "NCT03155620",
@@ -804,17 +652,7 @@
         "pmid": "35353553",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Invasive Disease-Free Survival (IDFS)",
-      "benchmarkMetric": "5-Year IDFS 83.6% (Abemaciclib+ET) vs 76.0% (ET alone); HR 0.68 (95% CI 0.59–0.78; p < 0.0001)",
-      "secondaryMetric": "Distant Relapse-Free Survival 86.0% vs 79.2%; Hazard Ratio 0.67 (p < 0.0001)",
-      "publishedJournal": "Journal of Clinical Oncology & Lancet Oncology",
-      "publicationDoi": "10.1200/JCO.23.01994",
-      "fdaApprovalStatus": "FDA Approved (October 2021)",
-      "euApprovalStatus": "EMA Approved (April 2022)"
-    }
+    ]
   },
   {
     "nctId": "NCT03041311",
@@ -888,17 +726,7 @@
         "pmid": "34873975",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Overall Response Rate (ORR) & Safety",
-      "benchmarkMetric": "Overall Response Rate 97.9%; Stringent Complete Response Rate 82.5%",
-      "secondaryMetric": "Median PFS 34.9 months in heavily pre-treated quad/penta-refractory patients",
-      "publishedJournal": "The Lancet",
-      "publicationDoi": "10.1016/S0140-6736(21)00933-8",
-      "fdaApprovalStatus": "FDA Approved (Carvykti, February 2022)",
-      "euApprovalStatus": "EMA Approved (May 2022)"
-    }
+    ]
   },
   {
     "nctId": "NCT04181827",
@@ -969,17 +797,7 @@
         "pmid": "41519141",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Progression-Free Survival (PFS)",
-      "benchmarkMetric": "Median PFS Not Reached (Cilta-cel) vs 11.8 mo (Standard of Care); HR 0.26 (95% CI 0.18–0.38; p < 0.001)",
-      "secondaryMetric": "Complete Response Rate 73.1% vs 21.8%",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa2303379",
-      "fdaApprovalStatus": "FDA Expanded Approval (Second-Line, April 2024)",
-      "euApprovalStatus": "EMA Expanded Approval (April 2024)"
-    }
+    ]
   },
   {
     "nctId": "NCT02348216",
@@ -1081,17 +899,7 @@
         "citation": "Abstract: Oluwole OO, et al. Prophylactic corticosteroid use with axicabtagene ciloleucel in patients with relapsed/refractory large B-cell lymphoma. Transplantation and Cellular Therapy 2021.",
         "type": "RESULT"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Objective Response Rate (ORR)",
-      "benchmarkMetric": "Objective Response Rate 83%; Complete Response Rate 58%",
-      "secondaryMetric": "5-Year Overall Survival Rate 42.6% with single infusion",
-      "publishedJournal": "New England Journal of Medicine & Lancet Oncology",
-      "publicationDoi": "10.1056/NEJMoa1707447",
-      "fdaApprovalStatus": "FDA Approved (Yescarta, October 2017)",
-      "euApprovalStatus": "EMA Approved (August 2018)"
-    }
+    ]
   },
   {
     "nctId": "NCT03574597",
@@ -1159,17 +967,7 @@
         "pmid": "37952131",
         "type": "RESULT"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Percentage Change in Body Weight at Week 68",
-      "benchmarkMetric": "Mean Weight Loss -14.9% (Semaglutide 2.4 mg) vs -2.4% (Placebo); Difference -12.4% (p < 0.001)",
-      "secondaryMetric": "86.4% of patients achieved ≥5% body weight reduction vs 31.5%",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa2032183",
-      "fdaApprovalStatus": "FDA Approved (Wegovy, June 2021)",
-      "euApprovalStatus": "EMA Approved (January 2022)"
-    }
+    ]
   },
   {
     "nctId": "NCT03552718",
@@ -1227,17 +1025,7 @@
       "Serious uncontrolled concomitant disease that would contraindicate the use of the investigational drug used in this study or that would put the subject at high risk for treatment-related complications.",
       "Active autoimmune disease requiring systemic immunosuppressive treatment within 4 weeks prior to enrollment on this study (eg, lupus erythematosus, rheumatoid arthritis, Addison's disease, autoimmune disease associated with lymphoma, ankylosing spondylitis, scleroderma, multiple sclerosis). A history of inactive autoimmune disease or autoimmune disease not requiring systemic immunosuppressive therapy within 4 weeks prior to study enrollment is allowed."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Major Adverse Cardiovascular Events (MACE)",
-      "benchmarkMetric": "Primary MACE Hazard Ratio 0.80 (95% CI 0.72–0.90; p < 0.001); 20% Risk Reduction",
-      "secondaryMetric": "Cardiovascular Death HR 0.85; All-Cause Mortality HR 0.81 (95% CI 0.71–0.93)",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa2307563",
-      "fdaApprovalStatus": "FDA Approved (Cardiovascular Risk Reduction, March 2024)",
-      "euApprovalStatus": "EMA Approved (July 2024)"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT04184622",
@@ -1306,17 +1094,7 @@
         "pmid": "42233927",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Percentage Change in Body Weight at Week 72",
-      "benchmarkMetric": "Mean Weight Reduction -20.9% (Tirzepatide 15 mg) vs -3.1% (Placebo); Difference -17.8% (p < 0.001)",
-      "secondaryMetric": "91% of participants achieved ≥5% reduction; 57% achieved ≥20% reduction",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa2206038",
-      "fdaApprovalStatus": "FDA Approved (Zepbound, November 2023)",
-      "euApprovalStatus": "EMA Approved (December 2023)"
-    }
+    ]
   },
   {
     "nctId": "NCT03057977",
@@ -1383,17 +1161,7 @@
         "pmid": "38558314",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Worsening Heart Failure or CV Death",
-      "benchmarkMetric": "Primary Composite Outcome Hazard Ratio 0.74 (95% CI 0.65–0.85; p < 0.001); 26% Relative Risk Reduction",
-      "secondaryMetric": "Cardiovascular Death HR 0.82; All-Cause Mortality HR 0.83",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa1911303",
-      "fdaApprovalStatus": "FDA Approved (May 2020)",
-      "euApprovalStatus": "EMA Approved (November 2020)"
-    }
+    ]
   },
   {
     "nctId": "NCT04209855",
@@ -1459,17 +1227,7 @@
         "pmid": "38055253",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Progression-Free Survival (PFS) by Investigator",
-      "benchmarkMetric": "Median PFS 5.6 mo (Mirvetuximab) vs 4.0 mo (Chemo); Hazard Ratio 0.65 (95% CI 0.52–0.81; p < 0.0001)",
-      "secondaryMetric": "Median OS 16.5 mo vs 12.8 mo; Hazard Ratio 0.67 (95% CI 0.50–0.89; p = 0.0046)",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa2309169",
-      "fdaApprovalStatus": "FDA Full Approval (Elahere, March 2024)",
-      "euApprovalStatus": "EMA Approved (November 2024)"
-    }
+    ]
   },
   {
     "nctId": "NCT03422523",
@@ -1521,17 +1279,7 @@
       "DLBCL that is refractory to or relapsed within 3 months of a gemcitabine regimen for DLBCL",
       "Major surgery within 4 weeks of registration."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Progression-Free Survival (PFS) by Investigator",
-      "benchmarkMetric": "2-Year PFS 76.7% (Pola-R-CHP) vs 70.2% (R-CHOP); Hazard Ratio 0.73 (95% CI 0.57–0.95; p = 0.02)",
-      "secondaryMetric": "Event-Free Survival Hazard Ratio 0.75 (p = 0.02)",
-      "publishedJournal": "New England Journal of Medicine (NEJM)",
-      "publicationDoi": "10.1056/NEJMoa2115304",
-      "fdaApprovalStatus": "FDA Approved (April 2023)",
-      "euApprovalStatus": "EMA Approved (May 2022)"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT03355911",
@@ -1574,17 +1322,7 @@
       "the need for a penetrating keratoplasty following endothelial graft failure",
       "severe postoperative complications resulting in unquantifiable visual acuity"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": true,
-      "primaryEndpoint": "Progression-Free Survival (PFS) by BICR",
-      "benchmarkMetric": "1-Year PFS Rate 24.8% (Sotorasib) vs 10.1% (Docetaxel); Hazard Ratio 0.66 (95% CI 0.51–0.86; p = 0.0017)",
-      "secondaryMetric": "Objective Response Rate 28.1% vs 13.2% (p < 0.001)",
-      "publishedJournal": "The Lancet",
-      "publicationDoi": "10.1016/S0140-6736(23)00221-0",
-      "fdaApprovalStatus": "FDA Accelerated Approval (Lumakras, May 2021)",
-      "euApprovalStatus": "EMA Approved (January 2022)"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT00017290",
@@ -1630,17 +1368,7 @@
         "pmid": "24799467",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Primary Efficacy Endpoint",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 24799467)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT02545868",
@@ -1695,17 +1423,7 @@
         "pmid": "32727835",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percentage of Participants With Positive Response to TT Vaccine Measured 8 Weeks After TT Vaccine",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 32727835)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT05721456",
@@ -1752,17 +1470,7 @@
       "Coagulation problems.",
       "Chronic administration (more than 14 days in total) of corticosteroids, immunosuppressants or other immune-modifying drugs (except palivizumab) since birth or planned use during the study."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "The immunological non-inferiority of pneumococcal vaccine 12 in relation to pneumococcal vaccine 10 and 13.",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT00678301",
@@ -1831,17 +1539,7 @@
         "pmid": "26954689",
         "type": "BACKGROUND"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Concentrations of Antibodies Against Vaccine Pneumococcal Serotypes",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 22112189)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT01026038",
@@ -1896,17 +1594,7 @@
       "Previous anaphylactic reaction to any vaccine or vaccine-related component.",
       "Contraindication to vaccination"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Serotype-specific Pneumococcal Immunoglobulin G (IgG) Geometric Mean Concentration (GMC) 1 Month After Single Dose of 13 Valent Pneumococcal Conjugate (13vPnC) Vaccine",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT03907488",
@@ -1986,17 +1674,7 @@
         "pmid": "41512237",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression Free Survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 42577949)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT06990503",
@@ -2044,17 +1722,7 @@
       "Subjects who have received systemic anti - tumor treatment within 4 weeks before the start of the study treatment. If the previous anti - tumor treatment was small - molecule targeted therapy, the interval between the end of treatment and the first study treatment should be no less than 5 half - lives of the drug or 7 days.",
       "Subjects with symptomatic, poorly controlled, or moderate - to - severe pleural effusion, pericardial effusion, or ascites; subjects who have undergone effusion drainage (except diagnostic thoracentesis) can be enrolled if they have been stable for at least 2 weeks after drainage (local treatment within the serous cavity according to routine diagnosis and treatment is allowed before signing the informed consent form)."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression Free Survival",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06265428",
@@ -2102,17 +1770,7 @@
       "Multiple primary malignancies within 3 years, except for adequately resected non-melanoma skin cancer, curatively treated in situ tumor, or contralateral breast cancer",
       "Uncontrolled infection requiring intravenous antibiotics, antiviral or antifungal agents, autoimmune disease requiring treatment, uncontrolled diabetes, hypertension, or other systemic disease that makes compliance with study procedures difficult"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression Free Survival (PFS) by Blinded Independent Central Review (BICR) assessment per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06868654",
@@ -2162,17 +1820,7 @@
       "Ongoing Grade 2 or higher peripheral neuropathy or neuropathic pain.",
       "Prior treatment with anti-B-cell maturation antigen (anti-BCMA) therapy."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-free Survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07718737",
@@ -2221,17 +1869,7 @@
       "① If the half-life of an investigational agent has not been determined, its administration within 21 days prior to randomization is not allowed.",
       "② Patients receiving bisphosphonates or denosumab may continue these medications during the study and are not excluded."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Number of Participants with Adverse Events as Assessed by CTCAE v6.0",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT01154088",
@@ -2290,17 +1928,7 @@
         "pmid": "23885033",
         "type": "BACKGROUND"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Number of Subjects With Vaccine Response for Serum Bactericidal Assay Using Rabbit Complement Against Neisseria Meningitides Serogroups A, C, W-135, Y (rSBA-MenA, rSBA-MenC, rSBA-MenW-135 and rSBA-MenY) Antibodies",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 23885033)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT01692886",
@@ -2401,17 +2029,7 @@
         "pmid": "27254028",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percentage of Participants Achieving Serotype-specific Pneumococcal IgG Antibody Level ≥0.35 mcg/mL 1 Month After the Infant Series in Group 1 And Group 2.",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 31626050)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT01917357",
@@ -2483,17 +2101,7 @@
       "Administration of parenteral immunoglobulin preparation and/or blood products since birth",
       "Previous vaccination against Hib and/or DTP"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Seroprotection Rate: Anti-PRP Antibodies",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT01964716",
@@ -2589,17 +2197,7 @@
         "pmid": "28479175",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percentage of Participants Achieving a Serotype-Specific Pneumococcal Immunoglobulin G (IgG) Antibody Concentration Greater Than or Equal To (>=) 0.35 Microgram Per Milliliter (mcg/mL) 1 Month After the Infant Series for Each Vaccine Group",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 28479175)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07768189",
@@ -2657,17 +2255,7 @@
       "Any other significant co-morbidities, disease, metabolic dysfunction, physical examination, or clinical laboratory finding that contraindicates the use of the investigational drug or may represent an unacceptable risk from treatment complications or may affect adherence to the study procedures or the interpretation of the results.",
       "Pregnant or breastfeeding females"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Objective Response Rate (%)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT01310413",
@@ -2726,17 +2314,7 @@
         "pmid": "25293368",
         "type": "BACKGROUND"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Number of Subjects Seroprotected for Haemagglutination Inhibition (HI) Antibody Titers Against the H5N1 A/Indonesia Virus Strain.",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT00368966",
@@ -2839,17 +2417,7 @@
         "pmid": "21704105",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percentage of Participants Achieving Predefined Meningococcal C Serum Bactericidal Assay (SBA) Titer of ≥ 1:8, and a Predefined Antibody Level for Diphtheria in 13vPnC Group Relative to 7vPnC Group After 2-doses of the Infant Series",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 23965217)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT02520739",
@@ -2957,17 +2525,7 @@
         "pmid": "27770787",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Systolic and diastolic blood pressures",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 30845690)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07160244",
@@ -3083,17 +2641,7 @@
       "Capable of giving personal signed informed consent."
     ],
     "exclusionCriteria": [],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "The proportion of maternal participants reporting prespecified local reactions within 7 days following study intervention",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT01641133",
@@ -3151,17 +2699,7 @@
         "pmid": "33297773",
         "type": "BACKGROUND"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Number of Subjects With Grade 3 Adverse Events (AEs) (Solicited and Unsolicited) - Primary Period",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 33297773)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT05371093",
@@ -3219,17 +2757,7 @@
       "Full-thickness involvement of the gastric wall by lymphoma",
       "Prior CD19-targeted therapy"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-free Survival (PFS) as Assessed by Blinded Central Assessment per Lugano Classification",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07709715",
@@ -3281,17 +2809,7 @@
       "History of malignancy (other than AL amyloidosis) within 3 years",
       "Stroke or seizure within 6 months of signing ICF"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Overall complete hematologic response (CHR) rate using consensus recommendations for AL amyloidosis treatment response criteria per protocol",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06154252",
@@ -3362,17 +2880,7 @@
         "pmid": "39245937",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Phase 1/2: Incidence and severity of adverse events (AEs)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 39245937)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07391657",
@@ -3433,17 +2941,7 @@
       "Significant neurological or psychiatric condition",
       "Significant medical condition that places the participant at an unacceptable risk for treatment-related complications"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "To demonstrate the superiority of AZD0120 relative to standard therapy (DKd, DPd, PVd, or Kd) by assessment of PFS in participants with RRMM.",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06413498",
@@ -3505,17 +3003,7 @@
       "Active or prior history of central nervous system (CNS) or meningeal involvement of MM",
       "Cardiac atrial or cardiac ventricular MM involvement"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-Free Survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06615479",
@@ -3571,17 +3059,7 @@
       "Participants must have measurable disease during screening."
     ],
     "exclusionCriteria": [],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression Free Survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07441291",
@@ -3631,17 +3109,7 @@
       "autoimmune diseases",
       "other active malignancies"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "3-month MRD negativity rate",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05605899",
@@ -3698,17 +3166,7 @@
       "Primary mediastinal (thymic) LBCL",
       "B-cell lymphoma, unclassifiable, with features intermediate between DLBCL and classical Hodgkin lymphoma"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Event-free Survival (EFS) by Blinded Central Assessment",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT03117751",
@@ -3792,17 +3250,7 @@
         "pmid": "42154791",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Event-free survival of ALL patients (EFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 42154791)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07186192",
@@ -3851,17 +3299,7 @@
       "Relapsed or refractory hematologic malignancy"
     ],
     "exclusionCriteria": [],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "MD Anderson Symptom Inventory CAR-T module (MDASI-CAR - patient)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05802992",
@@ -3932,17 +3370,7 @@
         "pmid": "30429232",
         "type": "BACKGROUND"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Serum M protein",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 28832953)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07735637",
@@ -4002,17 +3430,7 @@
       "Significant medical condition that places the participant at an unacceptable risk for treatment-related complications",
       "Participants who required the introduction of an additional agent therapy due to inadequate response."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-Free Survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07502118",
@@ -4073,17 +3491,7 @@
         "pmid": "30518999",
         "type": "BACKGROUND"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Overall Response Rate (ORR) to CD19 CAR-T cell product at Day 28 post-infusion",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 29287970)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT04287660",
@@ -4130,17 +3538,7 @@
       "Patients with uncontrolled active infection.",
       "Patients with active hepatitis B or hepatitis C infection."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Overall response rate (ORR)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07479797",
@@ -4198,17 +3596,7 @@
       "History of a severe, immediate hypersensitivity reaction attributed to aminoglycosides",
       "Presence or suspicion of fungal, bacterial, viral, or other infection that is uncontrolled or requires intravenous (IV) antimicrobials for management. Note: Simple urinary tract infections and uncomplicated bacterial or viral upper respiratory tract infections are permitted if the individual is responding to active treatment and satisfies the criteria of being afebrile for 48 hours (ie, temperature \\< 38°C)."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Proportion of Participants in Complete Response (CR) at Month 6",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT04442022",
@@ -4272,17 +3660,7 @@
       "Known active central nervous system or meningeal involvement by DLBCL at time of Screening.",
       "Use of any standard or experimental anti-DLBCL therapy (including nonpalliative radiation, chemotherapy, immunotherapy, radio-immunotherapy, or any other anticancer therapy) \\<21 days prior to C1D1 (prednisone \\<30 mg or equivalent is permitted; palliative radiation is permitted only if on non-target lesions)."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Phase 2: Overall Response Rate (ORR): Based on Lugano Criteria 2014",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06652633",
@@ -4348,17 +3726,7 @@
     "exclusionCriteria": [
       "There are no exclusion criteria for this study"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percentage of participants with targeted adverse events (AEs)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05020392",
@@ -4426,17 +3794,7 @@
         "pmid": "24464309",
         "type": "BACKGROUND"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Incidence of Treatment-related Adverse Events",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 32076701)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT06328777",
@@ -4490,17 +3848,7 @@
       "Current symptoms of severe, progressive, or uncontrolled renal, hepatic, hematological, gastrointestinal, pulmonary, psychiatric, cardiac, neurological, or cerebral disease, including severe and uncontrolled infections, such as sepsis and opportunistic infections.",
       "Concomitant medical conditions that, in the opinion of the investigator, might place the subject at unacceptable risk for participation in this study, interfere with the assessment of the effects or safety of the investigational product or with the study procedures"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Phase 1/2: To evaluate incidence of adverse events",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT04257175",
@@ -4558,17 +3906,7 @@
       "Pregnancy or lactation",
       "Graft versus host disease III-IV grade - Stroke or seizure in the last six months before treatment"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "The change in the peripheral blood counts and differential",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT04885634",
@@ -4627,17 +3965,7 @@
       "Treatment with GLP-1 receptor agonists within the last 3 months before randomisation",
       "Treatment with dipeptidyl peptidase-4 (DPP-4) inhibitors"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Number of Participants to Complete Recruitment",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06588283",
@@ -4691,17 +4019,7 @@
         "pmid": "42139049",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percentage of Participants Who Simultaneously Achieved Psoriasis Area and Severity Index (PASI) 100 and At Least 10% Weight Reduction",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 42139049)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT05691712",
@@ -4758,17 +4076,7 @@
         "pmid": "41167231",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Mean Change From Baseline in HbA1c (Tirzepatide 10 or 15 Milligram [mg])",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 41167231)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT04847557",
@@ -4840,17 +4148,7 @@
         "pmid": "40701669",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Change From Baseline in the Kansas City Cardiomyopathy Questionnaire (KCCQ) Clinical Summary Score (CSS)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 42417681)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07064486",
@@ -4899,17 +4197,7 @@
       "Known to be allergic to 3 or more kinds of foods or medications, or allergic to GLP-1 agonist or metformin, or have a severe allergic disease (asthma, urticaria, eczematous dermatitis, etc.) at screening;",
       "Have a serious mental illness or speech impediment and be unable to fully understand the study;"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Change From Baseline in Hemoglobin A1c (HbA1c)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07284979",
@@ -4958,17 +4246,7 @@
       "Family or personal history of multiple endocrine neoplasia Type 2 or medullary thyroid cancer.",
       "Uncontrolled hypertension or unstable cardiovascular disease."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percent Change From Baseline in Body Weight at Week 76",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06489457",
@@ -5042,17 +4320,7 @@
         "pmid": "39511836",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Change in semen volume from baseline and between the treatment arms",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 39511836)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT06946628",
@@ -5099,17 +4367,7 @@
       "Individuals with heart failure in New York Heart Association \\[NYHA\\] class III or IV in the 6 months prior to randomization.",
       "History of bladder cancer or hematuria."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Diabetic remission rate",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05822830",
@@ -5171,17 +4429,7 @@
         "pmid": "40980721",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percent Change From Baseline in Body Weight",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 42434924)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT03987919",
@@ -5247,17 +4495,7 @@
         "pmid": "37668888",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Change From Baseline in Hemoglobin A1c (HbA1c) (10 mg and 15 mg)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 39531161)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT04537923",
@@ -5311,17 +4549,7 @@
         "pmid": "37786396",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Change From Baseline in Hemoglobin A1c (HbA1c) (Pooled Doses of Tirzepatide 5 mg, 10 mg and 15 mg)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 41961454)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT06662383",
@@ -5366,17 +4594,7 @@
       "Have taken weight loss drugs, including over-the-counter medications, within 90 days prior to screening.",
       "Have a family or personal history of medullary thyroid carcinoma (MTC) or multiple endocrine neoplasia syndrome type 2 (MEN-2)."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percent Change from Baseline in Body Weight",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07150975",
@@ -5424,17 +4642,7 @@
       "Use of glucagon-like peptide-1 receptor (GLP-1R) agonists or drugs with a GLP-1R agonist mechanism of action (e.g., GLP-1R/glucagon receptor (GCGR) agonists, glucose-dependent insulinotropic polypeptide receptor (GIPR)/GLP-1R agonists, or GIPR/GLP-1R/GCGR agonists, etc.) prior to screening.",
       "For subjects with type 2 diabetes at screening, the following situations are excluded:"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percentage change in body weight from baseline after 52 weeks (W) of treatment.",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT02863419",
@@ -5503,17 +4711,7 @@
         "pmid": "35373893",
         "type": "RESULT"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Change in HbA1c (Week 26)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 31186120)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT06534411",
@@ -5568,17 +4766,7 @@
       "Treatment with any anti-diabetic or anti-obesity medication (irrespective of indication) other than stated in the inclusion criteria within 90 days before screening. However, short term insulin treatment for a maximum of 14 consecutive days is allowed.",
       "Uncontrolled and potentially unstable diabetic retinopathy or maculopathy. Verified by an eye examination performed within 90 days before screening or in the period between screening and randomisation. Pharmacological pupil-dilation is a requirement unless using a digital fundus photography camera specified for non-dilated examination."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Change in Glycated Haemoglobin (HbA1c)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06780449",
@@ -5625,17 +4813,7 @@
       "Glycated haemoglobin (HbA1c) \\>= 6.5 percent (48 millimoles per mole \\[mmol/mol\\]) as measured by the central laboratory at screening.",
       "History of type 1 or type 2 diabetes."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Relative change in body weight",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT03548935",
@@ -5709,17 +4887,7 @@
         "pmid": "40980163",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Change in Body Weight (%)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 32441473)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07834398",
@@ -5761,17 +4929,7 @@
     "exclusionCriteria": [
       "Subjects with liver disease, renal dysfunction diabetes, pancreatic diseases ,thyroid disorder or goiter psychological diseases like depression and pregnant women, and Patients who will refuse"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "change in body weight at 3 and 6 months",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05669755",
@@ -5830,17 +4988,7 @@
         "pmid": "42838477",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Time to first occurrence of 3-point major adverse cardiovascular event (MACE), a composite endpoint consisting of: cardiovascular (CV) death, non-fatal myocardial infarction, non-fatal stroke",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 42838477)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT05259033",
@@ -5903,17 +5051,7 @@
         "pmid": "39820580",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Change From Baseline in Glycosylated Haemoglobin (HbA1c)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 42557064)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07554339",
@@ -5965,17 +5103,7 @@
       "Has active inflammatory bowel disease requiring immunosuppressive medication or previous clear history of inflammatory bowel disease.",
       "Has uncontrolled, significant cardiovascular disease or cerebrovascular disease."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-Free Survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05132075",
@@ -6025,17 +5153,7 @@
       "Participant has an history of interstitial lung disease or pneumonitis grade \\> 1.",
       "Other inclusion/exclusion criteria may apply"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression free survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07738172",
@@ -6077,17 +5195,7 @@
       "Patients must complete 12 weeks of osimertinib 80 mg once daily and undergo restaging evaluation. Only patients with partial response (PR) or stable disease (SD) by RECIST 1.1, and who remain suitable for thoracic surgery, will proceed to randomization."
     ],
     "exclusionCriteria": [],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-Free Survival",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07601048",
@@ -6137,17 +5245,7 @@
       "Subjects with a history of interstitial pneumonia or suspected interstitial pneumonia by imaging examination during screening ; or other lung diseases that seriously affect lung function ;",
       "Have serious cardiovascular and cerebrovascular diseases"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "PFS based on BICR evaluation",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT04303780",
@@ -6210,17 +5308,7 @@
         "pmid": "40437272",
         "type": "BACKGROUND"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-free Survival (PFS)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 39303400)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT03521154",
@@ -6281,17 +5369,7 @@
         "pmid": "42019226",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-free Survival (PFS) by Blinded Independent Central Review (BICR)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 42296617)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT02972333",
@@ -6348,17 +5426,7 @@
         "pmid": "32817079",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "PFSo (overall progression free survival)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 32817079)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT04695925",
@@ -6408,17 +5476,7 @@
         "pmid": "42574006",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "progression free survival",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 42574006)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT06417814",
@@ -6478,17 +5536,7 @@
         "pmid": "41466843",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression free Survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 41466843)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07100080",
@@ -6545,17 +5593,7 @@
       "Poorly controlled systemic medical conditions.",
       "Other protocol-defined inclusion/exclusion criteria apply."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Recommended Phase 3 Dose (RP3D) of BMS-986507",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06416410",
@@ -6607,17 +5645,7 @@
       "Uncontrolled pleural effusion, pericardial effusion, and ascites",
       "Subjects with impaired heart function or clinically significant heart disease"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Outcome Progression-free Survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07640789",
@@ -6665,17 +5693,7 @@
       "Prior treatment with ADC drugs using topoisomerase I inhibitors as toxins, or antibodies/ADCs targeting EGFR and/or HER3;",
       "History of severe heart disease or cerebrovascular disease;"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-free survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05120349",
@@ -6726,17 +5744,7 @@
         "pmid": "40311309",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Disease-Free Survival (DFS) in high-risk stratum",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 40311309)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT04613596",
@@ -6797,17 +5805,7 @@
       "Any untreated brain lesions \\> 2.0 cm in size",
       "Any brainstem lesions"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Phase 2: To evaluate the efficacy of Adagrasib monotherapy and in combination with pembrolizumab administered to patients having advanced/metastatic NSCLC.",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05261399",
@@ -6862,17 +5860,7 @@
       "Spinal cord compression or brain metastases, unless asymptomatic and are stable.",
       "History or active leptomeningeal carcinomatosis."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-free survival (PFS) / savolitinib + osimertinib versus platinum doublet chemotherapy in participants with EGFR mutated, MET-overexpressed and/or amplified, locally advanced or metastatic NSCLC who have progressed on osimertinib.",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05493501",
@@ -6926,17 +5914,7 @@
       "Has refractory nausea and vomiting, chronic gastrointestinal disease(s), inability to swallow the formulated product (percutaneous endoscopic gastrostomy tube administration may be allowed if tablets are not crushed), or a history of previous significant bowel resection-any of which would preclude adequate absorption of aumolertinib or osimertinib.",
       "Has active or past medical history of interstitial lung disease, drug-induced interstitial lung disease or radiation pneumonitis that required steroid treatment"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression Free Survival (PFS) as Assessed by Blinded Independent Central Review (BICR) Per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05020769",
@@ -6989,17 +5967,7 @@
       "The history of severe heart disease within the past six months was screened, such as symptomatic congestive heart failure (CHF) ≥ grade 2 (CTCAE v5.0), New York Heart Association (NYHA) ≥ grade 2 heart failure, acute coronary syndrome, etc.",
       "Prolonged QT interval (QTc \\> 450 msec in men or QTc \\> 470 msec in women), complete left bundle branch block, atrioventricular block III degree;"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "ORR",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT02997501",
@@ -7052,17 +6020,7 @@
       "Patients who disagree to participate this study.",
       "Patients whose medical objection was recorded to use the existing data from medical practice for scientific research."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Concordance",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT05015608",
@@ -7116,17 +6074,7 @@
         "pmid": "41544643",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "PFS",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 41544643)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT06793215",
@@ -7181,17 +6129,7 @@
       "Documentation of the presence of a KRAS G12C mutation"
     ],
     "exclusionCriteria": [],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-Free Survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT06966700",
@@ -7258,17 +6196,7 @@
       "Has undergone excisional biopsy of the primary tumor, axillary lymph node dissection, and/or axillary sentinel lymph node biopsy prior to study treatment.",
       "Received prior systemic anticancer therapy including investigational agents within 4 weeks before C1D1."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Percentage of Participants with Pathological Complete Response (pCR) at the Time of Definitive Surgery",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT04003636",
@@ -7331,17 +6259,7 @@
         "pmid": "40268484",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Overall Survival (OS)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 37075781)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT06624644",
@@ -7396,17 +6314,7 @@
       "Allogeneic tissue/solid organ transplant.",
       "Unstable autoimmune or immunodeficiency disease."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Compare progression-free survival (PFS) of LNS8801 + pembrolizumab vs PC arms as assessed by RECIST v1.1.",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT04199104",
@@ -7479,17 +6387,7 @@
         "pmid": "33300372",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Objective Response Rate (ORR) Per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Review (BICR)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 41818638)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07315750",
@@ -7540,17 +6438,7 @@
       "Severe gastrointestinal dysfunction that may affect drug intake, transport, or absorption",
       "Bone metastases with a risk of paraplegia"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-Free Survival (assessed by the BIRC)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT02853305",
@@ -7631,17 +6519,7 @@
         "pmid": "38823511",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Pembro Combo vs Chemo: Progression-free Survival (PFS) Using Response Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Review (BICR)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 40037029)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT04777851",
@@ -7691,17 +6569,7 @@
       "Prior treatment with regorafenib, a PD-1, PD-L1/PD-L2, or cytotoxic T lymphocyte associated protein 4 (CTLA-4) inhibitors, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways.",
       "Major surgical procedure, open biopsy, or significant traumatic injury ≤28 days prior to randomization."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-free Survival (PFS) Assessed by the Investigator as per Modified Response Evaluation Criteria in Solid Tumors (mRECIST) for HCC",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT04949256",
@@ -7780,17 +6648,7 @@
         "pmid": "38695479",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Part 1 (FP and TP Safety Run-in): Number of Participants With Dose Limiting Toxicities (DLTs)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 38695479)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT04222972",
@@ -7863,17 +6721,7 @@
       "Participant with a history of pneumonitis within the last 12 months.",
       "Participant has CNS metastases or a primary CNS tumor that is associated with progressive neurological symptoms or requires increasing doses of corticosteroids to control the CNS disease. If a participant requires corticosteroids for management of CNS disease, the dose must have been stable for the 2 weeks before Cycle 1 Day 1."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Arm A vs Arm B: Treatment Period: Progression-free Survival (PFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT04241185",
@@ -7932,17 +6780,7 @@
       "Has the presence of bilateral hydronephrosis",
       "Has limited bladder function with frequency of small amounts of urine (\\< 30 mL), urinary incontinence, or requires self-catheterization or a permanent indwelling catheter"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Bladder Intact Event-Free Survival (BI-EFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT04210115",
@@ -8013,17 +6851,7 @@
         "pmid": "33533655",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Event-free Survival (EFS)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 33533655)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT02494583",
@@ -8110,17 +6938,7 @@
         "pmid": "36533429",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Pembro Combo vs SOC: Progression Free Survival (PFS) Per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) by Blinded Independent Central Review (BICR) in Participants With PD-L1 CPS ≥1 (All Participants)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 40117530)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT06998069",
@@ -8166,17 +6984,7 @@
       "Patients who have previously received systemic chemoimmunotherapy for H/N cancer.",
       "Patients with uncontrolled intercurrent illness."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Treatment Completion",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT07566156",
@@ -8237,17 +7045,7 @@
       "Inadequate bladder function",
       "Other active malignancies within 3 years prior to randomization"
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Bladder-intact Event Free Survival (BI-EFS) by Blinded Independent Central Review (BICR)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT02853331",
@@ -8317,17 +7115,7 @@
         "pmid": "37526095",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-Free Survival (PFS) Per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Imaging Review",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 40750932)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT07756645",
@@ -8382,17 +7170,7 @@
       "Known actionable genomic alterations (including EGFR, ALK, ROS1, BRAF, NTRK, RET, and MET) for which first-line approved therapies are available.",
       "Active central nervous system (CNS) metastases and/or carcinomatous meningitis."
     ],
-    "publications": [],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-Free Survival (PFS) assessed by the Blinded Independent Central Review (BICR) according to Response Evaluation Criteria in Solid Tumors (RECIST) v1.1",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "Peer-Reviewed Clinical Literature",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    "publications": []
   },
   {
     "nctId": "NCT03425643",
@@ -8467,17 +7245,7 @@
         "pmid": "42774586",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Event Free Survival (EFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 39288781)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT03765918",
@@ -8547,17 +7315,7 @@
         "pmid": "40532178",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Event-free Survival (EFS)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 40532178)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT03820986",
@@ -8621,17 +7379,7 @@
         "pmid": "40885529",
         "type": "RESULT"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-free Survival (PFS) as Assessed by Blinded Independent Central Review (BICR) Per Modified Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1)",
-      "benchmarkMetric": "Primary completion recorded; published clinical trial report available in medical literature.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 40885529)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   },
   {
     "nctId": "NCT04380636",
@@ -8703,16 +7451,6 @@
         "pmid": "35618629",
         "type": "DERIVED"
       }
-    ],
-    "verifiedEvidence": {
-      "hasBenchmark": false,
-      "primaryEndpoint": "Progression-Free Survival (PFS) According to Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Review (BICR)",
-      "benchmarkMetric": "Study actively recruiting; primary endpoints in active longitudinal follow-up.",
-      "secondaryMetric": "Secondary outcome assessments and safety biomarker monitoring documented.",
-      "publishedJournal": "PubMed (PMID: 35618629)",
-      "publicationDoi": null,
-      "fdaApprovalStatus": "US Investigational New Drug (IND) / Regulatory Application",
-      "euApprovalStatus": "EU Clinical Trials Information System (CTIS) Tracked"
-    }
+    ]
   }
 ]

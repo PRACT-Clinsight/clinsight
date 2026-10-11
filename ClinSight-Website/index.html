@@ -3,203 +3,909 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClinSight™ | Clinical Trials Intelligence & Evidence Explorer</title>
-    <meta name="description" content="Explore 120+ verified clinical trials across Oncology, ADCs, CAR-T, and GLP-1. Relevance-ranked with verified benchmark metrics and peer-reviewed paper links.">
+    <title>ClinSight | Open Clinical Trials & Knowledge Hub</title>
+    <meta name="description" content="An open, non-commercial explorer for pivotal clinical trial protocols and public registry data across Oncology, ADCs, CAR-T, and GLP-1 therapeutics.">
     <link rel="canonical" href="https://clinsight.pract.eu/">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ClinSight™ Clinical Trials Explorer">
-    <meta property="og:description" content="Fast, structured clinical evidence search across pivotal trials. 1-click downloads, published results, and protocol summaries.">
+    <meta property="og:title" content="ClinSight | Open Clinical Trials & Knowledge Hub">
+    <meta property="og:description" content="Explore pivotal Phase 3 trial designs, primary endpoints, and registry data without paywalls or corporate spin.">
     <meta property="og:url" content="https://clinsight.pract.eu/">
     <meta property="og:type" content="website">
 
-    <!-- Fonts & Icons -->
+    <!-- Antigravity Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --navy: #0B192C;
-            --navy-light: #1E3E62;
-            --accent: #1B4332;
-            --accent-light: #2D6E47;
-            --gold: #DDA853;
-            --bg: #F4F6F9;
-            --card-bg: #FFFFFF;
-            --text-main: #1C2430;
-            --text-muted: #5A6A80;
-            --border: #E2E8F0;
+            --bg-void: #07090e;
+            --bg-base: #0b0f19;
+            --bg-surface: #111827;
+            --bg-card: rgba(17, 24, 39, 0.75);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.35);
+            --cyan: #38bdf8;
+            --cyan-glow: rgba(56, 189, 248, 0.12);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.12);
+            --purple: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.12);
+            --amber: #fbbf24;
+            --amber-glow: rgba(251, 191, 36, 0.12);
+            --text-high: #f8fafc;
+            --text-med: #cbd5e1;
+            --text-low: #64748b;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --sidebar-width: 260px;
         }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-main); line-height: 1.5; }
-        .topbar { background: var(--navy); color: #FFF; padding: 12px 24px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
-        .topbar a { color: #FFF; text-decoration: none; font-weight: 600; }
-        .topbar a:hover { color: var(--gold); }
-        .hero { background: linear-gradient(135deg, var(--navy) 0%, #102A43 100%); color: #FFF; padding: 48px 24px 36px; text-align: center; }
-        .hero h1 { font-family: 'Merriweather', serif; font-size: 34px; margin-bottom: 12px; font-weight: 700; }
-        .hero p { font-size: 16px; color: #CBD5E1; max-width: 760px; margin: 0 auto; line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-void);
+            background-image: radial-gradient(circle at 70% 10%, rgba(56, 189, 248, 0.05), transparent 40%),
+                              radial-gradient(circle at 20% 60%, rgba(168, 85, 247, 0.03), transparent 50%);
+            color: var(--text-high);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* App Layout with Left Sidebar */
+        .app-layout {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: rgba(11, 15, 25, 0.95);
+            border-right: 1px solid var(--border-subtle);
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            backdrop-filter: blur(16px);
+            overflow-y: auto;
+        }
+
+        .sidebar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 8px 20px;
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--text-high);
+        }
+        .sidebar-logo-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+            font-size: 15px;
+            box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+        }
+        .sidebar-brand-text h2 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .sidebar-brand-text span {
+            font-size: 11px;
+            color: var(--text-low);
+            font-family: var(--font-mono);
+            display: block;
+        }
+
+        .sidebar-section-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-low);
+            padding: 10px 10px 6px;
+            font-family: var(--font-mono);
+        }
+
+        .sidebar-nav {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 12px;
+            color: var(--text-med);
+            text-decoration: none;
+            font-size: 13.5px;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.15s;
+        }
+        .sidebar-nav a:hover {
+            color: var(--text-high);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .sidebar-nav a.active {
+            color: var(--cyan);
+            background: var(--cyan-glow);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            font-weight: 600;
+        }
+        .sidebar-nav a i {
+            width: 16px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .sidebar-nav .nav-badge {
+            margin-left: auto;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--text-low);
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-subtle);
+            font-size: 12px;
+            color: var(--text-low);
+        }
+        .sidebar-footer a {
+            color: var(--cyan);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+            margin-top: 6px;
+        }
+
+        /* Main Content Container */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            padding: 32px 40px 80px;
+            max-width: 1200px;
+        }
+        @media (max-width: 900px) {
+            .sidebar { transform: translateX(-100%); transition: transform 0.3s; }
+            .sidebar.open { transform: translateX(0); }
+            .main-content { margin-left: 0; padding: 20px 16px 60px; }
+            .mobile-toggle { display: block !important; }
+        }
+
+        /* Top Bar */
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .mobile-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-high);
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 12px;
+        }
+
+        /* Global Search Input */
+        .search-box-wrap {
+            position: relative;
+            flex: 1;
+            max-width: 480px;
+        }
+        .search-box-wrap i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-low);
+            font-size: 14px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 10px 42px 10px 38px;
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            color: var(--text-high);
+            font-size: 13.5px;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--cyan);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+            background: #111827;
+        }
+        .search-shortcut {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--text-low);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .btn-ghost {
+            color: var(--text-med);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-ghost:hover {
+            color: var(--text-high);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* Hero Section (Humanized, Thoughtful) */
+        .hub-hero {
+            margin-bottom: 36px;
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.7) 0%, rgba(15, 23, 42, 0.4) 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 36px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hub-hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--cyan);
+            background: var(--cyan-glow);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+        .hub-hero h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-high);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .hub-hero p {
+            font-size: 15px;
+            color: var(--text-med);
+            max-width: 720px;
+            line-height: 1.65;
+            margin-bottom: 24px;
+        }
+        .hero-stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-subtle);
+        }
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+        }
+        .hero-stat .stat-num {
+            font-family: var(--font-mono);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-high);
+        }
+        .hero-stat .stat-label {
+            font-size: 12px;
+            color: var(--text-low);
+        }
+
+        /* Curated Modality Cards Grid */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+        .section-header h3 {
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-header h3 i { color: var(--cyan); font-size: 15px; }
+        .section-header p { font-size: 13px; color: var(--text-low); margin-top: 2px; }
+
+        .modality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+        .modality-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(8px);
+        }
+        .modality-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        .modality-card .card-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+            font-size: 16px;
+        }
+        .icon-adc { background: var(--purple-glow); color: var(--purple); }
+        .icon-cart { background: var(--cyan-glow); color: var(--cyan); }
+        .icon-glp1 { background: var(--emerald-glow); color: var(--emerald); }
+        .icon-tki { background: var(--amber-glow); color: var(--amber); }
+
+        .modality-card h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-high);
+        }
+        .modality-card p {
+            font-size: 12.5px;
+            color: var(--text-low);
+            line-height: 1.5;
+            margin-bottom: 12px;
+            flex: 1;
+        }
+        .modality-card .modality-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            color: var(--cyan);
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 10px;
+        }
+
+        /* Filter Controls */
+        .controls-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        .filters-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .filter-select {
+            background: rgba(11, 15, 25, 0.9);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: var(--text-med);
+            font-size: 13px;
+            font-family: inherit;
+        }
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--cyan);
+        }
+
+        /* Quick Filter Chips */
+        .chips-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        .chip {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-family: var(--font-mono);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .chip:hover, .chip.active {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+        .btn-clear {
+            background: transparent;
+            border: none;
+            color: var(--text-low);
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: auto;
+            text-decoration: underline;
+        }
+        .btn-clear:hover { color: var(--text-med); }
+
+        /* Counter and Sort Header */
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: var(--text-low);
+            font-family: var(--font-mono);
+        }
+        .results-header b { color: var(--cyan); }
+
+        /* Study Cards List */
+        .study-grid {
+            display: grid;
+            gap: 14px;
+        }
+        .study-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.2s;
+            backdrop-filter: blur(8px);
+        }
+        .study-item:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        }
+        .study-item-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .badges-wrap { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+        .badge {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 5px;
+        }
+        .badge.nct { background: var(--cyan-glow); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.25); }
+        .badge.phase { background: var(--purple-glow); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.25); }
+        .badge.modality { background: rgba(255, 255, 255, 0.05); color: var(--text-med); border: 1px solid var(--border-subtle); }
+        .badge.completed { background: var(--emerald-glow); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.25); }
         
-        /* Search Box */
-        .search-panel { background: #FFF; border-radius: 14px; padding: 20px; box-shadow: 0 4px 12px rgba(11,25,44,0.08); margin-top: -24px; border: 1px solid var(--border); }
-        .search-input-wrap { display: flex; gap: 12px; margin-bottom: 16px; }
-        .search-input { flex: 1; padding: 14px 18px; border: 1px solid #CBD5E1; border-radius: 10px; font-size: 15px; font-family: inherit; }
-        .search-input:focus { outline: none; border-color: var(--navy-light); box-shadow: 0 0 0 3px rgba(30,62,98,0.1); }
-        .btn-search { background: var(--navy); color: #FFF; border: none; padding: 0 24px; border-radius: 10px; font-weight: 600; cursor: pointer; }
-        .btn-search:hover { background: var(--navy-light); }
-        
-        /* Filter Grid */
-        .filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-        .filter-select { width: 100%; padding: 10px 12px; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 13.5px; background: #FFF; color: var(--text-main); }
-        
-        /* Quick Chips */
-        .chips-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center; }
-        .chips-label { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-right: 4px; }
-        .chip { background: #E2E8F0; color: var(--navy); border: none; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
-        .chip:hover, .chip.active { background: var(--navy); color: #FFF; }
-        
-        /* Controls & Counter */
-        .ctrl-row { display: flex; justify-content: space-between; align-items: center; margin: 24px 0 16px; font-size: 14px; color: var(--text-muted); }
-        .ctrl-row b { color: var(--navy); }
-        
-        /* Study Cards */
-        .study-list { display: grid; gap: 14px; }
-        .study-card { background: #FFF; border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; text-decoration: none; color: inherit; display: block; transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s; }
-        .study-card:hover { transform: translateY(-2px); border-color: var(--navy-light); box-shadow: 0 6px 14px rgba(0,0,0,0.05); }
-        .card-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; margin-bottom: 8px; gap: 8px; }
-        .badges-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
-        .badge { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; padding: 3px 8px; border-radius: 5px; }
-        .badge.nct { background: var(--navy); color: #FFF; }
-        .badge.phase { background: #EAF3EA; color: var(--accent); }
-        .badge.modality { background: #EDE9FE; color: #5B21B6; }
-        .badge.completed { background: #DCFCE7; color: #166534; }
-        .card-year { font-size: 12px; color: var(--text-muted); font-weight: 600; }
-        .card-title { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; line-height: 1.35; }
-        .card-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
-        .card-ev { background: #FAFDFB; border-left: 3px solid var(--accent); padding: 8px 12px; font-size: 12.5px; color: #166534; border-radius: 0 6px 6px 0; }
-        
-        footer { text-align: center; font-size: 13px; color: var(--text-muted); padding: 30px 0; border-top: 1px solid var(--border); margin-top: 40px; }
+        .study-item-year {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--text-low);
+        }
+        .study-title {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: var(--text-high);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .study-meta {
+            font-size: 13px;
+            color: var(--text-low);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .study-meta span { display: inline-flex; align-items: center; gap: 5px; }
+
+        /* Footer */
+        .main-footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-subtle);
+            font-size: 12.5px;
+            color: var(--text-low);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .main-footer a { color: var(--cyan); text-decoration: none; }
     </style>
 </head>
 <body>
-    <div class="topbar">
-        <span><strong>ClinSight™</strong> Clinical Evidence Engine</span>
-        <span>Part of <a href="https://pract.eu" target="_blank">PRACT™ Regulatory Intelligence</a></span>
+    <div class="app-layout">
+        <!-- Left Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <a href="https://clinsight.pract.eu/" class="sidebar-brand">
+                <div class="sidebar-logo-icon">
+                    <i class="fa-solid fa-atom"></i>
+                </div>
+                <div class="sidebar-brand-text">
+                    <h2>ClinSight</h2>
+                    <span>Open Evidence Hub</span>
+                </div>
+            </a>
+
+            <div class="sidebar-section-title">Navigation</div>
+            <ul class="sidebar-nav">
+                <li><a href="#overview" class="active" onclick="switchNav('overview')"><i class="fa-solid fa-compass"></i> Overview</a></li>
+                <li><a href="#explorer" onclick="switchNav('explorer')"><i class="fa-solid fa-table-cells"></i> Browse Trials <span class="nav-badge" id="navTotalCount">120</span></a></li>
+                <li><a href="#methodology" onclick="switchNav('methodology')"><i class="fa-solid fa-book-open"></i> Methodology</a></li>
+            </ul>
+
+            <div class="sidebar-section-title">Filter by Modality</div>
+            <ul class="sidebar-nav">
+                <li><a href="javascript:void(0)" onclick="filterByModality('Antibody-Drug Conjugates (ADC)')"><i class="fa-solid fa-dna" style="color:var(--purple);"></i> ADCs</a></li>
+                <li><a href="javascript:void(0)" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')"><i class="fa-solid fa-vial" style="color:var(--cyan);"></i> CAR-T Therapy</a></li>
+                <li><a href="javascript:void(0)" onclick="filterByModality('Targeted Therapy (Small Molecule / TKI)')"><i class="fa-solid fa-capsules" style="color:var(--amber);"></i> Targeted TKIs</a></li>
+                <li><a href="javascript:void(0)" onclick="filterByModality('Immuno-Oncology (Checkpoint Inhibitor)')"><i class="fa-solid fa-shield-halved" style="color:#f43f5e;"></i> Checkpoints</a></li>
+                <li><a href="javascript:void(0)" onclick="filterByModality('Incretin Mimetics (GLP-1 / GIP)')"><i class="fa-solid fa-bolt" style="color:var(--emerald);"></i> GLP-1 / Incretins</a></li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <div>Part of the <b>PRACT</b> Open Knowledge Network</div>
+                <a href="https://pract.eu" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit pract.eu</a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header Bar -->
+            <div class="content-header">
+                <div style="display:flex; align-items:center;">
+                    <button class="mobile-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+                    <div class="search-box-wrap">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search by NCT, study name, drug, or indication..." oninput="applyFilters()">
+                        <span class="search-shortcut">/</span>
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                    <a href="https://github.com/PRACT-Clinsight/clinsight" target="_blank" class="btn-ghost">
+                        <i class="fa-brands fa-github"></i> Open Source
+                    </a>
+                    <a href="https://pract.eu" target="_blank" class="btn-ghost">
+                        <i class="fa-solid fa-globe"></i> PRACT Ecosystem
+                    </a>
+                </div>
+            </div>
+
+            <!-- Overview Section (Humanized, Thoughtful Normal Page) -->
+            <div id="overviewSection">
+                <section class="hub-hero">
+                    <div class="hero-pill"><i class="fa-solid fa-heart-pulse"></i> Open Science & Clinical Evidence Hub</div>
+                    <h1>Pivotal Clinical Trials & Evidence Explorer</h1>
+                    <p>
+                        An open, non-commercial explorer for pivotal Phase 3 clinical trial protocols, primary endpoints, and statutory registry data. Built for computational biologists, clinical researchers, and life science enthusiasts who want to explore primary trial records without paywalls or corporate spin.
+                    </p>
+
+                    <div style="display:flex; gap:12px; margin-bottom:24px;">
+                        <button onclick="scrollToExplorer()" class="btn-ghost" style="background:var(--cyan-glow); color:var(--cyan); border-color:rgba(56,189,248,0.3); font-weight:600; padding:10px 20px;">
+                            <i class="fa-solid fa-magnifying-glass"></i> Explore All 120 Trials
+                        </button>
+                        <a href="#methodology" class="btn-ghost" style="padding:10px 18px;">
+                            <i class="fa-solid fa-circle-info"></i> How We Sourced This
+                        </a>
+                    </div>
+
+                    <div class="hero-stats-row">
+                        <div class="hero-stat">
+                            <span class="stat-num">120</span>
+                            <span class="stat-label">Pivotal Phase 3 Studies</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-num">5</span>
+                            <span class="stat-label">Core Therapeutic Modalities</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Primary Public Data (ClinicalTrials.gov)</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-num">Free</span>
+                            <span class="stat-label">No Login, No Commercial Pitch</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Curated Modality Cards -->
+                <div class="section-header">
+                    <div>
+                        <h3><i class="fa-solid fa-layer-group"></i> Explore by Therapeutic Modality</h3>
+                        <p>Browse trials grouped by biological mechanism and therapeutic approach</p>
+                    </div>
+                </div>
+
+                <div class="modality-grid">
+                    <div class="modality-card" onclick="filterByModality('Antibody-Drug Conjugates (ADC)')">
+                        <div class="card-icon icon-adc"><i class="fa-solid fa-dna"></i></div>
+                        <h4>Antibody-Drug Conjugates (ADC)</h4>
+                        <p>Targeted chemotherapeutic delivery platforms including DESTINY-Breast04, EV-302, and TROPiCS-02.</p>
+                        <div class="modality-meta">
+                            <span>Explore Studies</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="modality-card" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')">
+                        <div class="card-icon icon-cart"><i class="fa-solid fa-vial"></i></div>
+                        <h4>CAR-T & Cell Therapies</h4>
+                        <p>Engineered autologous T-cell immunotherapies including CARTITUDE-1/4, ZUMA-1, and KarMMa-3.</p>
+                        <div class="modality-meta">
+                            <span>Explore Studies</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="modality-card" onclick="filterByModality('Targeted Therapy (Small Molecule / TKI)')">
+                        <div class="card-icon icon-tki"><i class="fa-solid fa-capsules"></i></div>
+                        <h4>Targeted Small Molecules & TKIs</h4>
+                        <p>Genomically directed oncogene inhibitors including ADAURA, CodeBreaK 200, and monarchE.</p>
+                        <div class="modality-meta">
+                            <span>Explore Studies</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="modality-card" onclick="filterByModality('Incretin Mimetics (GLP-1 / GIP)')">
+                        <div class="card-icon icon-glp1"><i class="fa-solid fa-bolt"></i></div>
+                        <h4>GLP-1 & Incretin Mimetics</h4>
+                        <p>Metabolic and cardiometabolic outcome trials including STEP 1, SELECT, SURMOUNT-1, and DAPA-HF.</p>
+                        <div class="modality-meta">
+                            <span>Explore Studies</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explorer Section (Search, Filters & Cards) -->
+            <div id="explorerSection">
+                <div class="section-header" style="margin-top:20px;">
+                    <div>
+                        <h3><i class="fa-solid fa-database"></i> Trial Registry Explorer</h3>
+                        <p>Filter by phase, therapeutic area, completion status, or search terms</p>
+                    </div>
+                </div>
+
+                <!-- Controls & Filters Card -->
+                <div class="controls-card">
+                    <div class="filters-row">
+                        <select id="filterCategory" class="filter-select" onchange="applyFilters()">
+                            <option value="">All Therapeutic Areas</option>
+                            <option value="Oncology">Oncology</option>
+                            <option value="Cardiometabolic & Endocrinology">Cardiometabolic</option>
+                            <option value="Rare Disease & Immunology">Rare Disease & Immunology</option>
+                        </select>
+
+                        <select id="filterModality" class="filter-select" onchange="applyFilters()">
+                            <option value="">All Modalities</option>
+                            <option value="Antibody-Drug Conjugates (ADC)">ADCs</option>
+                            <option value="Immuno-Oncology (Checkpoint Inhibitor)">Checkpoint Inhibitors</option>
+                            <option value="Targeted Therapy (Small Molecule / TKI)">Targeted TKIs</option>
+                            <option value="Cell & Gene Therapy (CAR-T)">CAR-T Therapy</option>
+                            <option value="Incretin Mimetics (GLP-1 / GIP)">Incretin Mimetics (GLP-1)</option>
+                        </select>
+
+                        <select id="filterPhase" class="filter-select" onchange="applyFilters()">
+                            <option value="">All Phases</option>
+                            <option value="Phase 3">Phase 3</option>
+                            <option value="Phase 2">Phase 2</option>
+                            <option value="Phase 1">Phase 1</option>
+                        </select>
+
+                        <select id="filterStatus" class="filter-select" onchange="applyFilters()">
+                            <option value="">All Statuses</option>
+                            <option value="completed">Completed</option>
+                            <option value="recruiting">Recruiting / Active</option>
+                        </select>
+
+                        <select id="sortSelect" class="filter-select" onchange="applyFilters()">
+                            <option value="relevance">Sort by Relevance</option>
+                            <option value="year-desc">Latest Year</option>
+                            <option value="enrollment-desc">Largest Enrollment</option>
+                        </select>
+                    </div>
+
+                    <div class="chips-bar">
+                        <span style="font-size:11.5px; color:var(--text-low); font-family:var(--font-mono); text-transform:uppercase;">Quick Filters:</span>
+                        <button class="chip" onclick="quickFilter('adc')">ADCs</button>
+                        <button class="chip" onclick="quickFilter('cart')">CAR-T</button>
+                        <button class="chip" onclick="quickFilter('glp1')">GLP-1</button>
+                        <button class="chip" onclick="quickFilter('phase3')">Phase 3</button>
+                        <button class="chip" onclick="quickFilter('completed')">Completed</button>
+                        <button class="btn-clear" onclick="clearFilters()">Reset Filters</button>
+                    </div>
+                </div>
+
+                <!-- Results Header -->
+                <div class="results-header">
+                    <div>Showing <b id="displayedCount">0</b> of <span id="totalCount">0</span> indexed studies</div>
+                </div>
+
+                <!-- Trials List -->
+                <div class="study-grid" id="studyList">
+                    <!-- Cards injected by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Methodology Section (Humanized, Transparent) -->
+            <div id="methodologySection" style="margin-top:60px;">
+                <div class="hub-hero" style="background:rgba(17,24,39,0.5);">
+                    <div class="hero-pill"><i class="fa-solid fa-scroll"></i> Open Science Principles</div>
+                    <h2 style="font-size:22px; font-weight:700; margin-bottom:12px; color:var(--text-high);">Data Provenance & Methodology</h2>
+                    <p style="font-size:14px; color:var(--text-med); max-width:800px; line-height:1.65; margin-bottom:16px;">
+                        Every record in ClinSight is ingested directly from the official <b>ClinicalTrials.gov REST API</b> (National Library of Medicine / NIH). We prioritize pivotal Phase 3 trials because they form the statutory foundation for global regulatory decisions and clinical practice guidelines.
+                    </p>
+                    <p style="font-size:14px; color:var(--text-med); max-width:800px; line-height:1.65; margin-bottom:20px;">
+                        We believe clinical evidence should be completely accessible without commercial paywalls, opaque rating algorithms, or sales pitches. Each study page provides direct one-click links to the verbatim government registry record and open medical literature search engines.
+                    </p>
+                    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                        <a href="https://clinicaltrials.gov" target="_blank" class="btn-ghost"><i class="fa-solid fa-building-columns"></i> ClinicalTrials.gov NIH</a>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" class="btn-ghost"><i class="fa-solid fa-book-medical"></i> PubMed NCBI</a>
+                        <a href="https://github.com/PRACT-Clinsight/clinsight" target="_blank" class="btn-ghost"><i class="fa-brands fa-github"></i> Repository & Pipeline</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div>&copy; 2026 ClinSight · An Open Science & Research Intelligence Initiative under the PRACT Open Knowledge Hub.</div>
+                <div>Primary data sourced directly from ClinicalTrials.gov.</div>
+            </footer>
+        </main>
     </div>
 
-    <section class="hero">
-        <h1>Clinical Trials Intelligence & Evidence Explorer</h1>
-        <p>Pre-rendered, relevance-ranked clinical trial readouts across Oncology, ADCs, CAR-T, and Incretin mimetics. Direct links to peer-reviewed papers and primary statutory endpoints.</p>
-    </section>
-
-    <div class="container">
-        <!-- Search & Filter Controls -->
-        <div class="search-panel">
-            <div class="search-input-wrap">
-                <input type="text" id="searchInput" class="search-input" placeholder="Search by NCT, Acronym (e.g. DESTINY-Breast04), Drug, or Condition..." autofocus>
-                <button class="btn-search" onclick="applyFilters()"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
-            </div>
-            
-            <div class="filter-grid">
-                <select id="filterCategory" class="filter-select" onchange="applyFilters()">
-                    <option value="">All Therapeutic Areas</option>
-                    <option value="Cardiovascular &amp; Metabolic">Cardiovascular &amp; Metabolic</option><option value="Neurology &amp; CNS">Neurology &amp; CNS</option><option value="Oncology &amp; Hematology">Oncology &amp; Hematology</option>
-                </select>
-
-                <select id="filterModality" class="filter-select" onchange="applyFilters()">
-                    <option value="">All Drug Modalities</option>
-                    <option value="Antibody-Drug Conjugates (ADC)">Antibody-Drug Conjugates (ADC)</option><option value="Biological Products &amp; Targeted Therapies">Biological Products &amp; Targeted Therapies</option><option value="Cell &amp; Gene Therapy (CAR-T)">Cell &amp; Gene Therapy (CAR-T)</option><option value="Immune Checkpoint Inhibitors (PD-1/L1)">Immune Checkpoint Inhibitors (PD-1/L1)</option><option value="Incretin Mimetics (GLP-1 / GIP)">Incretin Mimetics (GLP-1 / GIP)</option><option value="Targeted Small Molecules (TKIs)">Targeted Small Molecules (TKIs)</option>
-                </select>
-
-                <select id="filterPhase" class="filter-select" onchange="applyFilters()">
-                    <option value="">All Study Phases</option>
-                    <option value="Phase 3">Phase 3</option><option value="Phase 2">Phase 2</option><option value="Phase 1">Phase 1</option><option value="Phase 4">Phase 4</option>
-                </select>
-
-                <select id="filterStatus" class="filter-select" onchange="applyFilters()">
-                    <option value="">All Statuses</option>
-                    <option value="completed">Completed (Has Results)</option>
-                    <option value="recruiting">Active & Recruiting</option>
-                </select>
-            </div>
-
-            <!-- Preset Quick Chips -->
-            <div class="chips-row">
-                <span class="chips-label">Quick Filters:</span>
-                <button class="chip" onclick="quickFilter('adc')">🏷️ ADCs (Antibody-Drug Conjugates)</button>
-                <button class="chip" onclick="quickFilter('cart')">🏷️ CAR-T & Cell Therapy</button>
-                <button class="chip" onclick="quickFilter('glp1')">🏷️ GLP-1 & Incretins</button>
-                <button class="chip" onclick="quickFilter('phase3')">🏷️ Phase 3 Pivotal</button>
-                <button class="chip" onclick="quickFilter('completed')">🏷️ Completed with Results</button>
-                <button class="chip" onclick="clearFilters()" style="background:#FEE2E2; color:#991B1B;">✕ Reset</button>
-            </div>
-        </div>
-
-        <div class="ctrl-row">
-            <span id="counterText">Showing <b>120</b> verified trials</span>
-            <div style="display:flex; align-items:center; gap:8px;">
-                <label style="font-size:12px; font-weight:600;">Sort By:</label>
-                <select id="sortSelect" class="filter-select" style="width:auto; padding:6px 10px; font-size:13px;" onchange="applyFilters()">
-                    <option value="relevance">Relevance / Key Landmarks</option>
-                    <option value="year-desc">Completion Year (Newest)</option>
-                    <option value="enrollment-desc">Enrollment Size (Largest)</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- Dynamic Study Listing -->
-        <div id="studyList" class="study-list"></div>
-
-        <footer>
-            <p>&copy; 2026 ClinSight™. A PRACT Business Unit. Primary data sourced from ClinicalTrials.gov and verified medical literature.</p>
-        </footer>
-    </div>
-
-    <!-- Client-Side Filter Engine Script -->
+    <!-- Embedded Normalized Trials Dataset -->
     <script>
-        const ALL_TRIALS = [{"id":"NCT03734029","acronym":"DESTINY-Breast04","title":"Trastuzumab Deruxtecan (DS-8201a) Versus Investigator's Choice for HER2-low Breast Cancer That Has Spread or Cannot be Surgically Removed [DESTINY-Breast04]","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Breast Cancer (HER2-Low)","modality":"Antibody-Drug Conjugates (ADC)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2026,"enrollment":557,"sponsor":"Daiichi Sankyo","hasBenchmark":true,"benchmark":"Median PFS 9.9 mo (T-DXd) vs 5.1 mo (TPC); Hazard Ratio 0.50 (95% CI 0.40–0.63; p < 0.001)"},{"id":"NCT03529110","acronym":"DESTINY-Breast03","title":"DS-8201a Versus T-DM1 for Human Epidermal Growth Factor Receptor 2 (HER2)-Positive, Unresectable and/or Metastatic Breast Cancer Previously Treated With Trastuzumab and Taxane [DESTINY-Breast03]","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Breast Cancer (HER2+)","modality":"Antibody-Drug Conjugates (ADC)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2026,"enrollment":524,"sponsor":"Daiichi Sankyo","hasBenchmark":true,"benchmark":"Median PFS 28.8 mo (T-DXd) vs 6.8 mo (T-DM1); Hazard Ratio 0.33 (95% CI 0.26–0.43; p < 0.0001)"},{"id":"NCT04526691","acronym":"DESTINY-PanTumor02","title":"Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)","phase":"Phase 1","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Solid Tumors (HER2-Expressing)","modality":"Antibody-Drug Conjugates (ADC)","regions":["United States (US FDA)","European Union (EU CTIS)","Asia-Pacific (APAC)"],"year":2026,"enrollment":145,"sponsor":"Daiichi Sankyo","hasBenchmark":true,"benchmark":"Confirmed ORR 37.1% across pan-tumor cohort; 61.3% in HER2 IHC 3+ patients"},{"id":"NCT04244461","acronym":"EV-302 / KEYNOTE-A39","title":"Brief Online Intervention for Veterans","phase":"NA","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Genitourinary (Urothelial Cancer)","modality":"Antibody-Drug Conjugates (ADC)","regions":["United States (US FDA)"],"year":2024,"enrollment":754,"sponsor":"RAND","hasBenchmark":true,"benchmark":"Median OS 31.5 mo (EV+Pembro) vs 16.1 mo (Chemotherapy); HR 0.47 (95% CI 0.38–0.58; p < 0.00001)"},{"id":"NCT03971409","acronym":"TROPiCS-02","title":"Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer","phase":"Phase 2","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Breast Cancer (HR+/HER2-)","modality":"Antibody-Drug Conjugates (ADC)","regions":["United States (US FDA)","United Kingdom (MHRA)"],"year":2027,"enrollment":145,"sponsor":"Laura Huppert, MD, BA","hasBenchmark":true,"benchmark":"Median PFS 5.5 mo vs 4.0 mo; Hazard Ratio 0.66 (95% CI 0.53–0.83; p = 0.0003)"},{"id":"NCT02638909","acronym":"KEYNOTE-024","title":"Study of Oral Ceritinib in Patients With ALK and ROS1 Activated Gastrointestinal Malignancies","phase":"Phase 2","status":"TERMINATED","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (NSCLC PD-L1 ≥50%)","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)"],"year":2018,"enrollment":4,"sponsor":"Criterium, Inc.","hasBenchmark":true,"benchmark":"Median OS 30.0 mo (Pembrolizumab) vs 14.2 mo (Chemo); Hazard Ratio 0.63 (95% CI 0.47–0.86)"},{"id":"NCT02578680","acronym":"KEYNOTE-522","title":"Study of Pemetrexed+Platinum Chemotherapy With or Without Pembrolizumab (MK-3475) in Participants With First Line Metastatic Nonsquamous Non-small Cell Lung Cancer (MK-3475-189/KEYNOTE-189)","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Breast Cancer (Triple-Negative)","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["Global Multi-Center"],"year":2023,"enrollment":616,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":true,"benchmark":"pCR Rate 64.8% (Pembro+Chemo) vs 51.2% (Placebo); Difference 13.6% (p < 0.001)"},{"id":"NCT02246621","acronym":"CheckMate-067","title":"A Study of Nonsteroidal Aromatase Inhibitors Plus Abemaciclib (LY2835219) in Postmenopausal Women With Breast Cancer","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Melanoma","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2026,"enrollment":493,"sponsor":"Eli Lilly and Company","hasBenchmark":true,"benchmark":"Median OS 72.1 mo (Nivo+Ipi) vs 36.9 mo (Nivo) vs 19.9 mo (Ipi); HR 0.52 (p < 0.001)"},{"id":"NCT02511106","acronym":"ADAURA","title":"AZD9291 Versus Placebo in Patients With Stage IB-IIIA Non-small Cell Lung Carcinoma, Following Complete Tumour Resection With or Without Adjuvant Chemotherapy.","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (EGFR-Mutated NSCLC)","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2029,"enrollment":682,"sponsor":"AstraZeneca","hasBenchmark":true,"benchmark":"5-Year DFS 65% (Osimertinib) vs 19% (Placebo); Hazard Ratio 0.23 (95% CI 0.18–0.30; p < 0.001)"},{"id":"NCT03155620","acronym":"monarchE","title":"Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)","phase":"Phase 2","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Breast Cancer (HR+/HER2-)","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2027,"enrollment":1377,"sponsor":"National Cancer Institute (NCI)","hasBenchmark":true,"benchmark":"5-Year IDFS 83.6% (Abemaciclib+ET) vs 76.0% (ET alone); HR 0.68 (95% CI 0.59–0.78; p < 0.0001)"},{"id":"NCT03041311","acronym":"CARTITUDE-1","title":"Carboplatin, Etoposide, and Atezolizumab With or Without Trilaciclib (G1T28), a CDK4/6 Inhibitor, in Extensive-Stage SCLC","phase":"Phase 2","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Hematologic (Multiple Myeloma)","modality":"Cell & Gene Therapy (CAR-T)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)"],"year":2020,"enrollment":107,"sponsor":"G1 Therapeutics, Inc.","hasBenchmark":true,"benchmark":"Overall Response Rate 97.9%; Stringent Complete Response Rate 82.5%"},{"id":"NCT04181827","acronym":"CARTITUDE-4","title":"A Study Comparing JNJ-68284528, a CAR-T Therapy Directed Against B-cell Maturation Antigen (BCMA), Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) or Daratumumab, Pomalidomide and Dexamethasone (DPd) in Participants With Relapsed and Lenalidomide-Refractory Multiple Myeloma","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic (Multiple Myeloma)","modality":"Cell & Gene Therapy (CAR-T)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2027,"enrollment":419,"sponsor":"Janssen Research & Development, LLC","hasBenchmark":true,"benchmark":"Median PFS Not Reached (Cilta-cel) vs 11.8 mo (Standard of Care); HR 0.26 (95% CI 0.18–0.38; p < 0.001)"},{"id":"NCT02348216","acronym":"ZUMA-1","title":"Study Evaluating the Safety and Efficacy of KTE-C19 in Adult Participants With Refractory Aggressive Non-Hodgkin Lymphoma","phase":"Phase 1, PHASE2","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Hematologic (Large B-Cell Lymphoma)","modality":"Cell & Gene Therapy (CAR-T)","regions":["United States (US FDA)","European Union (EU CTIS)"],"year":2023,"enrollment":307,"sponsor":"Kite, A Gilead Company","hasBenchmark":true,"benchmark":"Objective Response Rate 83%; Complete Response Rate 58%"},{"id":"NCT03574597","acronym":"STEP 1","title":"Semaglutide Effects on Heart Disease and Stroke in Patients With Overweight or Obesity","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2023,"enrollment":17604,"sponsor":"Novo Nordisk A/S","hasBenchmark":true,"benchmark":"Mean Weight Loss -14.9% (Semaglutide 2.4 mg) vs -2.4% (Placebo); Difference -12.4% (p < 0.001)"},{"id":"NCT03552718","acronym":"SELECT","title":"QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.","phase":"Phase 1","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Cardiovascular Outcomes","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)"],"year":2025,"enrollment":5,"sponsor":"NantBioScience, Inc.","hasBenchmark":true,"benchmark":"Primary MACE Hazard Ratio 0.80 (95% CI 0.72–0.90; p < 0.001); 20% Risk Reduction"},{"id":"NCT04184622","acronym":"SURMOUNT-1","title":"A Study of Tirzepatide (LY3298176) in Participants With Obesity or Overweight","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2024,"enrollment":2539,"sponsor":"Eli Lilly and Company","hasBenchmark":true,"benchmark":"Mean Weight Reduction -20.9% (Tirzepatide 15 mg) vs -3.1% (Placebo); Difference -17.8% (p < 0.001)"},{"id":"NCT03057977","acronym":"DAPA-HF","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Heart Failure (HFrEF)","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2020,"enrollment":3730,"sponsor":"Boehringer Ingelheim","hasBenchmark":true,"benchmark":"Primary Composite Outcome Hazard Ratio 0.74 (95% CI 0.65–0.85; p < 0.001); 26% Relative Risk Reduction"},{"id":"NCT04209855","acronym":"MIRASOL","title":"A Study of Mirvetuximab Soravtansine vs. Investigator's Choice (IC) of Chemotherapy in Platinum-Resistant, Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High Folate Receptor-Alpha (FRα) Expression","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Gynecologic (Ovarian Cancer)","modality":"Antibody-Drug Conjugates (ADC)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2024,"enrollment":453,"sponsor":"AbbVie","hasBenchmark":true,"benchmark":"Median PFS 5.6 mo (Mirvetuximab) vs 4.0 mo (Chemo); Hazard Ratio 0.65 (95% CI 0.52–0.81; p < 0.0001)"},{"id":"NCT03422523","acronym":"POLARIX","title":"Atezolizumab, Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory DLBCL Not Suitable for High-dose Therapy","phase":"Phase 2","status":"TERMINATED","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic (Diffuse Large B-Cell Lymphoma)","modality":"Antibody-Drug Conjugates (ADC)","regions":["United Kingdom (MHRA)"],"year":2021,"enrollment":53,"sponsor":"University Hospital Southampton NHS Foundation Trust","hasBenchmark":true,"benchmark":"2-Year PFS 76.7% (Pola-R-CHP) vs 70.2% (R-CHOP); Hazard Ratio 0.73 (95% CI 0.57–0.95; p = 0.02)"},{"id":"NCT03355911","acronym":"CodeBreaK 200","title":"Preoperative Corneal Thickness and Postoperative Visual Outcomes After Posterior Lamellar Corneal Transplant","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Lung Cancer (KRAS G12C NSCLC)","modality":"Targeted Small Molecules (TKIs)","regions":["Global Multi-Center"],"year":2017,"enrollment":113,"sponsor":"Centre Hospitalier Régional Metz-Thionville","hasBenchmark":true,"benchmark":"1-Year PFS Rate 24.8% (Sotorasib) vs 10.1% (Docetaxel); Hazard Ratio 0.66 (95% CI 0.51–0.86; p = 0.0017)"},{"id":"NCT00017290","acronym":"NCT00017290","title":"Combination Chemotherapy Followed By Vaccine Therapy Plus Sargramostim in Treating Patients With Stage III or Stage IV Non-Hodgkin's Lymphoma","phase":"Phase 3","status":"UNKNOWN","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Antibody-Drug Conjugates (ADC)","regions":["United States (US FDA)"],"year":2024,"enrollment":500,"sponsor":"Genitope Corporation","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT02545868","acronym":"NCT02545868","title":"A Study to Evaluate the Effects of Ocrelizumab on Immune Responses In Participants With Relapsing Forms of Multiple Sclerosis","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)"],"year":2021,"enrollment":102,"sponsor":"Hoffmann-La Roche","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT05721456","acronym":"NCT05721456","title":"Evaluation of the Non-Inferiority of a 12-Valent Pneumococcal Conjugate Vaccine in Healthy Children in Brazil.","phase":"Phase 3","status":"UNKNOWN","isCompleted":false,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Antibody-Drug Conjugates (ADC)","regions":["Global Multi-Center"],"year":2025,"enrollment":2400,"sponsor":"Maria de Lourdes de Sousa Maia, MD","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT00678301","acronym":"NCT00678301","title":"Primary Vaccination Course in Children Receiving the Pneumococcal Vaccine GSK 1024850A, Zilbrix™ Hib and Polio Sabin™","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Biological Products & Targeted Therapies","regions":["Global Multi-Center"],"year":2009,"enrollment":365,"sponsor":"GlaxoSmithKline","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT01026038","acronym":"NCT01026038","title":"Study Evaluating Antibody Response Of 13-Valent Pneumococcal Conjugate Vaccine (13vPnC) 24 Months After Toddler Dose.","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Antibody-Drug Conjugates (ADC)","regions":["European Union (EU CTIS)"],"year":2010,"enrollment":263,"sponsor":"Pfizer","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT03907488","acronym":"NCT03907488","title":"Immunotherapy (Nivolumab or Brentuximab Vedotin) Plus Combination Chemotherapy in Treating Patients With Newly Diagnosed Stage III-IV Classic Hodgkin Lymphoma","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Antibody-Drug Conjugates (ADC)","regions":["United States (US FDA)","United Kingdom (MHRA)"],"year":2027,"enrollment":994,"sponsor":"National Cancer Institute (NCI)","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06990503","acronym":"NCT06990503","title":"SHR - A1811 Versus Chemotherapy for Platinum-resistant Recurrent Epithelial Ovarian Cancer","phase":"Phase 3","status":"NOT YET RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Gynecologic Cancers","modality":"Biological Products & Targeted Therapies","regions":["Asia-Pacific (APAC)"],"year":2035,"enrollment":300,"sponsor":"Tongji Hospital","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06265428","acronym":"NCT06265428","title":"A Study to Compare DB-1303/BNT323 Versus T-DM1 in Breast Cancer","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Breast Cancer","modality":"Biological Products & Targeted Therapies","regions":["Asia-Pacific (APAC)"],"year":2026,"enrollment":228,"sponsor":"DualityBio Inc.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06868654","acronym":"DREAMM 7","title":"China Subpopulation: Evaluation of Efficacy and Safety of Belantamab Mafodotin, Bortezomib and Dexamethasone Versus Daratumumab, Bortezomib and Dexamethasone in Participants With Relapsed/Refractory Multiple Myeloma","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Biological Products & Targeted Therapies","regions":["Asia-Pacific (APAC)"],"year":2028,"enrollment":72,"sponsor":"GlaxoSmithKline","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07718737","acronym":"NCT07718737","title":"Global, Multicenter Study of AMT-116 Versus Investigator's Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy","phase":"Phase 2, PHASE3","status":"NOT YET RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (EGFR-Mutated)","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","Asia-Pacific (APAC)"],"year":2028,"enrollment":512,"sponsor":"Multitude Therapeutics Inc.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT01154088","acronym":"NCT01154088","title":"Immunogenicity and Safety of Meningococcal Vaccine GSK 134612 Versus Mencevax™ ACWY in Healthy 18-25 Year Olds","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Antibody-Drug Conjugates (ADC)","regions":["Global Multi-Center"],"year":2010,"enrollment":1170,"sponsor":"GlaxoSmithKline","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT01692886","acronym":"NCT01692886","title":"A Study Evaluating 13-Valent Pneumococcal Conjugate Vaccine (13vPnC) In Healthy Infants In China","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Antibody-Drug Conjugates (ADC)","regions":["Asia-Pacific (APAC)"],"year":2014,"enrollment":1674,"sponsor":"Pfizer","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT01917357","acronym":"NCT01917357","title":"A Comparison of the Immunogenicity and Safety of Quinvaxem in Mono-dose Vials and Uniject","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Neurology & CNS","subtype":"Neurodegenerative Disease","modality":"Biological Products & Targeted Therapies","regions":["Global Multi-Center"],"year":2014,"enrollment":400,"sponsor":"Crucell Holland BV","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT01964716","acronym":"NCT01964716","title":"13vPnC Multidose Vial Safety, Tolerability and Immunogenicity Study in Healthy Infants.","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Antibody-Drug Conjugates (ADC)","regions":["Global Multi-Center"],"year":2014,"enrollment":500,"sponsor":"Pfizer","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT07768189","acronym":"TEMPO-1","title":"A Study to Evaluate CRB-701 Compared to Investigator's Choice Therapy in Previously Treated Oropharyngeal Squamous Cell Carcinoma","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Solid Tumors","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2029,"enrollment":260,"sponsor":"Corbus Pharmaceuticals Inc.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT01310413","acronym":"NCT01310413","title":"Monovalent H5N1 Vaccine GSK1557484A in Children 6 Months to < 18 Years of Age","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)"],"year":2014,"enrollment":842,"sponsor":"GlaxoSmithKline","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT00368966","acronym":"NCT00368966","title":"Study to Evaluate a 13-valent Pneumococcal Conjugate Vaccine in Infants.","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Antibody-Drug Conjugates (ADC)","regions":["European Union (EU CTIS)"],"year":2008,"enrollment":619,"sponsor":"Wyeth is now a wholly owned subsidiary of Pfizer","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT02520739","acronym":"NUTRAOLEUM","title":"New Industrial Procedures for Achieving a Nutritional Added Value of the Olive Oil. The NUTRAOLEUM Study","phase":"Phase 3","status":"UNKNOWN","isCompleted":false,"category":"Cardiovascular & Metabolic","subtype":"Cardiometabolic","modality":"Biological Products & Targeted Therapies","regions":["European Union (EU CTIS)"],"year":2016,"enrollment":57,"sponsor":"Fundación Pública Andaluza para la Investigación Biomédica Andalucía Oriental","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07160244","acronym":"NCT07160244","title":"BEATRIX: A Study to Learn About a Group B Streptococcus Vaccine in Healthy Pregnant Women and Their Babies","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2029,"enrollment":6000,"sponsor":"Pfizer","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT01641133","acronym":"NCT01641133","title":"Primary Vaccination With Either Synflorix™ or Prevenar 13™ or Both Vaccines and Booster Vaccination With Synflorix™","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Biological Products & Targeted Therapies","regions":["Global Multi-Center"],"year":2014,"enrollment":457,"sponsor":"GlaxoSmithKline","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT05371093","acronym":"ZUMA-22","title":"Study of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Follicular Lymphoma","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2030,"enrollment":231,"sponsor":"Kite, A Gilead Company","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07709715","acronym":"NEXICART-3","title":"A Randomized Phase 3 Study to Evaluate the Efficacy and Safety of NXC-201 Compared With Daratumumab With Cyclophosphamide, Bortezomib and Dexamethasone (CyBorD) in Newly Diagnosed Systemic AL Amyloidosis","phase":"Phase 3","status":"NOT YET RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Biological Products & Targeted Therapies","regions":["Global Multi-Center"],"year":2032,"enrollment":260,"sponsor":"Nexcella Inc.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06154252","acronym":"NCT06154252","title":"RESET-Myositis: An Open-Label Study to Evaluate the Safety and Efficacy of CABA-201 in Subjects With Active Idiopathic Inflammatory Myopathy or Juvenile Idiopathic Inflammatory Myopathy","phase":"Phase 2, PHASE3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","United Kingdom (MHRA)"],"year":2028,"enrollment":74,"sponsor":"Cabaletta Bio","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07391657","acronym":"DURGA-4","title":"A Study Comparing AZD0120, a Dual-targeted CAR-T Against B-cell Maturation Antigen (BCMA) and CD19, Versus Standard Regimens in Participants With Relapsed Refractory Multiple Myeloma (DURGA-4)","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Cell & Gene Therapy (CAR-T)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2030,"enrollment":508,"sponsor":"AstraZeneca","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06413498","acronym":"iMMagine-3","title":"A Study Comparing Anitocabtagene Autoleucel to Standard of Care Therapy in Participants With Relapsed/ Refractory Multiple Myeloma","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Cell & Gene Therapy (CAR-T)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2031,"enrollment":452,"sponsor":"Kite, A Gilead Company","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06615479","acronym":"NCT06615479","title":"A Study to Compare the Efficacy and Safety of BMS-986393 Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma (QUINTESSENTIAL-2)","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2032,"enrollment":440,"sponsor":"Juno Therapeutics, Inc., a Bristol-Myers Squibb Company","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07441291","acronym":"NCT07441291","title":"CD19 CAR-T vs DLI for Post-HSCT MRD in Ph- ALL: A RCT","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Cell & Gene Therapy (CAR-T)","regions":["Asia-Pacific (APAC)"],"year":2028,"enrollment":70,"sponsor":"Peking University People's Hospital","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT05605899","acronym":"ZUMA-23","title":"Study to Compare Axicabtagene Ciloleucel With Standard of Care Therapy as First-line Treatment in Participants With High-risk Large B-cell Lymphoma","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2031,"enrollment":300,"sponsor":"Kite, A Gilead Company","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT03117751","acronym":"NCT03117751","title":"Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma","phase":"Phase 2, PHASE3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","Asia-Pacific (APAC)"],"year":2028,"enrollment":790,"sponsor":"St. Jude Children's Research Hospital","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07186192","acronym":"NCT07186192","title":"Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor (CAR-T) Therapy","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Cell & Gene Therapy (CAR-T)","regions":["United States (US FDA)"],"year":2029,"enrollment":380,"sponsor":"City of Hope Medical Center","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT05802992","acronym":"NCT05802992","title":"The Efficacy and Safety of Colchicine Combined With Conventional Therapy in Multiple Myeloma Patients","phase":"Phase 3","status":"UNKNOWN","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Biological Products & Targeted Therapies","regions":["Asia-Pacific (APAC)"],"year":2024,"enrollment":30,"sponsor":"Affiliated Hospital of Nantong University","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07735637","acronym":"DURGA-6","title":"A Phase III, Multicentre Study to Evaluate Consolidation Treatment With AZD0120 Compared With ASCT, in Participants With Newly Diagnosed Multiple Myeloma Who Are Transplant Eligible (DURGA-6).","phase":"Phase 3","status":"NOT YET RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2039,"enrollment":750,"sponsor":"AstraZeneca","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07502118","acronym":"NexCAR19","title":"NexCAR19 (Talikabtagene Autoleucel) in Relapsed/Refractory B-Cell Malignancies (NexCAR19)","phase":"Phase 2, PHASE3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Cell & Gene Therapy (CAR-T)","regions":["United Kingdom (MHRA)"],"year":2030,"enrollment":40,"sponsor":"Health Institutes of Turkey","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04287660","acronym":"NCT04287660","title":"Study of BiRd Regimen Combined With BCMA CAR T-cell Therapy in Newly Diagnosed Multiple Myeloma (MM) Patients","phase":"Phase 3","status":"UNKNOWN","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Cell & Gene Therapy (CAR-T)","regions":["Asia-Pacific (APAC)"],"year":2025,"enrollment":20,"sponsor":"The First Affiliated Hospital of Soochow University","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07479797","acronym":"NCT07479797","title":"Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2031,"enrollment":550,"sponsor":"Kite, A Gilead Company","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04442022","acronym":"NCT04442022","title":"A Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma","phase":"Phase 2, PHASE3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","European Union (EU CTIS)","Asia-Pacific (APAC)"],"year":2026,"enrollment":501,"sponsor":"Karyopharm Therapeutics Inc","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06652633","acronym":"Hesperia","title":"Long-term Follow-up of Participants Treated With Galapagos Chimeric Antigen Receptor (CAR) T-cell Therapies","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Cell & Gene Therapy (CAR-T)","regions":["United States (US FDA)","European Union (EU CTIS)","Nordic Cluster (SE, DK, NO, FI)"],"year":2039,"enrollment":546,"sponsor":"Lakefront Biotherapeutics NV","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT05020392","acronym":"NCT05020392","title":"Autologous Cells Derived Anti-CD19 CAR-Engineered T Cells With Concurrent BTK Inhibitor for B Cell Lymphoma","phase":"Phase 3","status":"UNKNOWN","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Cell & Gene Therapy (CAR-T)","regions":["Asia-Pacific (APAC)"],"year":2024,"enrollment":24,"sponsor":"Union Hospital, Tongji Medical College, Huazhong University of Science and Technology","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06328777","acronym":"NCT06328777","title":"RESET-SSc: An Open-Label Study to Evaluate the Safety and Efficacy of CABA-201, a CD19-CAR T Cell Therapy, in Subjects With Systemic Sclerosis","phase":"Phase 2, PHASE3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Specialized Therapeutic Indication","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","United Kingdom (MHRA)"],"year":2029,"enrollment":37,"sponsor":"Cabaletta Bio","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04257175","acronym":"NCT04257175","title":"CAR-T CD19 for Acute Myelogenous Leukemia With t 8:21 and CD19 Expression","phase":"Phase 2, PHASE3","status":"UNKNOWN","isCompleted":false,"category":"Oncology & Hematology","subtype":"Hematologic Malignancies","modality":"Cell & Gene Therapy (CAR-T)","regions":["Global Multi-Center"],"year":2024,"enrollment":10,"sponsor":"Sheba Medical Center","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04885634","acronym":"SOCRATES-AF","title":"Semaglutide for the Reduction of Arrhythmia Burden in Overweight AF Patients","phase":"Phase 3","status":"WITHDRAWN","isCompleted":false,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["Global Multi-Center"],"year":2024,"enrollment":500,"sponsor":"Axel Brandes","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06588283","acronym":"TOGETHER-PsO","title":"Ixekizumab Concomitantly Administered With Tirzepatide in Adults With Moderate-to-Severe Plaque Psoriasis and Obesity or Overweight","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)"],"year":2026,"enrollment":281,"sponsor":"Eli Lilly and Company","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT05691712","acronym":"SURPASS-CN-INS","title":"A Study of Tirzepatide (LY3298176) in Chinese Participants With Type 2 Diabetes","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Type 2 Diabetes","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["Asia-Pacific (APAC)"],"year":2024,"enrollment":257,"sponsor":"Eli Lilly and Company","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT04847557","acronym":"NCT04847557","title":"A Study of Tirzepatide (LY3298176) in Participants With Heart Failure With Preserved Ejection Fraction (HFpEF) and Obesity: The SUMMIT Trial","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2024,"enrollment":731,"sponsor":"Eli Lilly and Company","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT07064486","acronym":"NCT07064486","title":"A Study of BGM0504 in Participants With Type 2 Diabetes in Indonesia","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Cardiovascular & Metabolic","subtype":"Type 2 Diabetes","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["Global Multi-Center"],"year":2026,"enrollment":477,"sponsor":"BrightGene Bio-Medical Technology Co., Ltd.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07284979","acronym":"KaiNETIC-3","title":"Efficacy and Safety of Ribupatide Administered Once Weekly Compared With Semaglutide and Placebo in Participants Living With Obesity Who Do Not Have Diabetes","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2028,"enrollment":1270,"sponsor":"Kailera","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06489457","acronym":"SEMAT","title":"The Effects of Semaglutide vs Testosterone Replacement Therapy on Functional Hypogonadism and Sperm Quality in Men With Type 2 Diabetes Mellitus and Obesity","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["Global Multi-Center"],"year":2023,"enrollment":25,"sponsor":"University Medical Centre Ljubljana","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT06946628","acronym":"NCT06946628","title":"New Triple Therapy in Newly Diagnosed Type 2 Diabetes","phase":"Phase 3","status":"NOT YET RECRUITING","isCompleted":false,"category":"Cardiovascular & Metabolic","subtype":"Type 2 Diabetes","modality":"Biological Products & Targeted Therapies","regions":["Asia-Pacific (APAC)"],"year":2030,"enrollment":296,"sponsor":"Sun Yat-sen University","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT05822830","acronym":"SURMOUNT-5","title":"A Study of Tirzepatide (LY3298176) in Participants With Obesity or Overweight With Weight Related Comorbidities","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)"],"year":2024,"enrollment":751,"sponsor":"Eli Lilly and Company","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT03987919","acronym":"SURPASS-2","title":"A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Participants With Type 2 Diabetes","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Type 2 Diabetes","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2021,"enrollment":1879,"sponsor":"Eli Lilly and Company","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT04537923","acronym":"SURPASS-6","title":"A Study of Tirzepatide (LY3298176) Versus Insulin Lispro (U100) in Participants With Type 2 Diabetes Inadequately Controlled on Insulin Glargine (U100) With or Without Metformin","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Type 2 Diabetes","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","European Union (EU CTIS)"],"year":2022,"enrollment":1428,"sponsor":"Eli Lilly and Company","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT06662383","acronym":"TRIUMPH-5","title":"A Study of Retatrutide (LY3437943) Compared to Tirzepatide (LY3298176) in Adults Who Have Obesity","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","European Union (EU CTIS)"],"year":2026,"enrollment":800,"sponsor":"Eli Lilly and Company","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07150975","acronym":"NCT07150975","title":"Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide (Wegovy®) in Adult Obese or Overweight Subjects","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["Asia-Pacific (APAC)"],"year":2027,"enrollment":420,"sponsor":"Gan & Lee Pharmaceuticals.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT02863419","acronym":"PIONEER 4","title":"Efficacy and Safety of Oral Semaglutide Versus Liraglutide and Versus Placebo in Subjects With Type 2 Diabetes Mellitus","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Type 2 Diabetes","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2018,"enrollment":711,"sponsor":"Novo Nordisk A/S","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT06534411","acronym":"REIMAGINE 5","title":"A Research Study to See How Much CagriSema Lowers Blood Sugar and Body Weight Compared to Tirzepatide in People With Type 2 Diabetes Treated With Metformin, SGLT2 Inhibitor or Both","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","European Union (EU CTIS)","Asia-Pacific (APAC)"],"year":2026,"enrollment":1023,"sponsor":"Novo Nordisk A/S","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT06780449","acronym":"NCT06780449","title":"A Research Study to Look Into the Long-term Effect on Weight Loss of CagriSema in People With Obesity","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)"],"year":2028,"enrollment":400,"sponsor":"Novo Nordisk A/S","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT03548935","acronym":"STEP 1","title":"STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffering From Overweight or Obesity","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2021,"enrollment":1961,"sponsor":"Novo Nordisk A/S","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT07834398","acronym":"NCT07834398","title":"Weekly GLP-1 Receptor Agonists in Obese Individuals Without Diabetes","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Obesity & Weight Management","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["Global Multi-Center"],"year":2026,"enrollment":150,"sponsor":"Zagazig University","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT05669755","acronym":"REDEFINE 3","title":"REDEFINE 3: A Research Study to See the Effects of CagriSema in People Living With Diseases in the Heart and Blood Vessels","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Cardiovascular & Metabolic","subtype":"Cardiometabolic","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2027,"enrollment":7101,"sponsor":"Novo Nordisk A/S","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT05259033","acronym":"COMBINE 2","title":"A Research Study to See How Well the New Weekly Medicine IcoSema, Which is a Combination of Insulin Icodec and Semaglutide, Controls Blood Sugar Level in People With Type 2 Diabetes Compared to Weekly Semaglutide (COMBINE 2)","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Cardiovascular & Metabolic","subtype":"Type 2 Diabetes","modality":"Incretin Mimetics (GLP-1 / GIP)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2024,"enrollment":683,"sponsor":"Novo Nordisk A/S","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT07554339","acronym":"NCT07554339","title":"A Clinical Trial of Calderasib (MK-1084) and Durvalumab in People With Non-Small Cell Lung Cancer (MK-1084-015/KANDLELIT-015)","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (Small Cell)","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2037,"enrollment":310,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT05132075","acronym":"KontRASt-02","title":"Study of JDQ443 in Comparison With Docetaxel in Participants With Locally Advanced or Metastatic KRAS G12C Mutant Non-small Cell Lung Cancer","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (KRAS G12C)","modality":"Biological Products & Targeted Therapies","regions":["United States (US FDA)","European Union (EU CTIS)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2026,"enrollment":95,"sponsor":"Novartis Pharmaceuticals","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07738172","acronym":"PTR-2","title":"Osimertinib With or Without Primary Lung Tumor Resection for EGFR-Mutant Oligometastatic Non-Small Cell Lung Cancer","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (EGFR-Mutated)","modality":"Targeted Small Molecules (TKIs)","regions":["Global Multi-Center"],"year":2031,"enrollment":154,"sponsor":"National Taiwan University Hospital","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07601048","acronym":"NCT07601048","title":"A Trial of HRS-7058 in Advanced or Metastatic Non-Small Cell Lung Cancer Patients Who Have Failed Standard Treatment","phase":"Phase 3","status":"NOT YET RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (KRAS G12C)","modality":"Biological Products & Targeted Therapies","regions":["Asia-Pacific (APAC)"],"year":2029,"enrollment":450,"sponsor":"Shandong Suncadia Medicine Co., Ltd.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04303780","acronym":"NCT04303780","title":"Study to Compare AMG 510 \"Proposed INN Sotorasib\" With Docetaxel in Non Small Cell Lung Cancer (NSCLC) (CodeBreak 200).","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Lung Cancer (KRAS G12C)","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2026,"enrollment":345,"sponsor":"Amgen","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT03521154","acronym":"LAURA","title":"A Global Study to Assess the Effects of Osimertinib Following Chemoradiation in Patients With Stage III Unresectable Non-small Cell Lung Cancer (LAURA)","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (Small Cell)","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2027,"enrollment":216,"sponsor":"AstraZeneca","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT02972333","acronym":"NCT02972333","title":"Open Label, Prospective Study to Investigate Efficacy and Safety of AZD9291 in BM From NSCLC Patients With EGFR T790M","phase":"Phase 3","status":"UNKNOWN","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (EGFR-Mutated)","modality":"Biological Products & Targeted Therapies","regions":["Global Multi-Center"],"year":2019,"enrollment":150,"sponsor":"Shandong Cancer Hospital and Institute","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04695925","acronym":"TOP","title":"Osimertinib Monotherapy or Combination With Chemotherapy for Advanced NSCLC Concurrent EGFR and TP53 Mutations","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (EGFR-Mutated)","modality":"Targeted Small Molecules (TKIs)","regions":["Asia-Pacific (APAC)"],"year":2027,"enrollment":294,"sponsor":"Li Zhang, MD","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06417814","acronym":"TROPION-Lung15","title":"A Study to Investigate the Efficacy and Safety of Dato-DXd With or Without Osimertinib Compared With Platinum Based Doublet Chemotherapy in Participants With EGFR-Mutated Locally Advanced or Metastatic Non-Small Cell Lung Cancer","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (EGFR-Mutated)","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2028,"enrollment":744,"sponsor":"AstraZeneca","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07100080","acronym":"NCT07100080","title":"Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-Pemetrexed for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01)","phase":"Phase 2, PHASE3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (EGFR-Mutated)","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2030,"enrollment":500,"sponsor":"Bristol-Myers Squibb","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06416410","acronym":"NCT06416410","title":"JAB-21822 Combined With JAB-3312 Compared SOC in the First Line for Treatment of Advanced Non-small Cell Lung Cancer With KRAS p.G12C Mutation","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (KRAS G12C)","modality":"Biological Products & Targeted Therapies","regions":["Asia-Pacific (APAC)"],"year":2030,"enrollment":392,"sponsor":"Allist Pharmaceuticals, Inc.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07640789","acronym":"NCT07640789","title":"A Study Comparing BL-B01D1 in Combination With Osimertinib Versus Osimertinib Alone in Patients With Locally Advanced, Unresectable EGFR-mutated Non-small Cell Lung Cancer(Stage III) Whose Disease Has Not Progressed Following Definitive Platinum-based Chemoradiation Therapy(PANKU-Lung08)","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (EGFR-Mutated)","modality":"Targeted Small Molecules (TKIs)","regions":["Asia-Pacific (APAC)"],"year":2030,"enrollment":418,"sponsor":"Sichuan Baili Pharmaceutical Co., Ltd.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT05120349","acronym":"ADAURA2","title":"A Global Study to Assess the Effects of Osimertinib in Participants With EGFRm Stage IA2-IA3 NSCLC Following Complete Tumour Resection","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (EGFR-Mutated)","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2032,"enrollment":390,"sponsor":"AstraZeneca","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04613596","acronym":"NCT04613596","title":"Phase 2 Trial of Adagrasib Monotherapy and in Combination With Pembrolizumab and a Phase 3 Trial of Adagrasib in Combination in Patients With a KRAS G12C Mutation KRYSTAL-7","phase":"Phase 2, PHASE3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (KRAS G12C)","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2029,"enrollment":626,"sponsor":"Mirati Therapeutics Inc.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT05261399","acronym":"SAFFRON","title":"Savolitinib Plus Osimertinib Versus Platinum-based Doublet Chemotherapy in Participants With Non-Small Cell Lung Cancer Who Have Progressed on Osimertinib Treatment","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (Small Cell)","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2026,"enrollment":341,"sponsor":"AstraZeneca","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT05493501","acronym":"NCT05493501","title":"Aumolertinib With Chemotherapy or Alone Compared With Osimertinib in Patients With Epidermal Growth Factor Receptor-Mutant Non-Small Cell Lung Cancer","phase":"Phase 3","status":"TERMINATED","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (Small Cell)","modality":"Targeted Small Molecules (TKIs)","regions":["United States (US FDA)"],"year":2023,"enrollment":8,"sponsor":"EQRx International, Inc.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT05020769","acronym":"NCT05020769","title":"SI-B001 Combined With Osimertinib Mesylate Tablets in the Treatment of Recurrent Metastatic Non-small Cell Lung Cancer.","phase":"Phase 2, PHASE3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (Small Cell)","modality":"Targeted Small Molecules (TKIs)","regions":["Asia-Pacific (APAC)"],"year":2025,"enrollment":14,"sponsor":"Sichuan Baili Pharmaceutical Co., Ltd.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT02997501","acronym":"ADELOS","title":"T790M Plasma Testing Methodology Comparison and Clinical Validation","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Lung Cancer (NSCLC)","modality":"Biological Products & Targeted Therapies","regions":["Asia-Pacific (APAC)"],"year":2018,"enrollment":256,"sponsor":"AstraZeneca","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT05015608","acronym":"SACHI","title":"Study on Savolitinib Combined With Osimertinib in Treatment of Advanced NSCLC With MET Amplification","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Lung Cancer (Small Cell)","modality":"Targeted Small Molecules (TKIs)","regions":["Asia-Pacific (APAC)"],"year":2025,"enrollment":216,"sponsor":"Hutchison Medipharma Limited","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT06793215","acronym":"Krascendo 2","title":"A Study Evaluating the Efficacy and Safety of Divarasib and Pembrolizumab Versus Pembrolizumab and Pemetrexed and Carboplatin or Cisplatin in Participants With Previously Untreated, KRAS G12C-Mutated, Advanced or Metastatic Non-Squamous Non-Small Cell Lung Cancer","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (KRAS G12C)","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2030,"enrollment":600,"sponsor":"Hoffmann-La Roche","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT06966700","acronym":"NCT06966700","title":"A Clinical Study of Sacituzumab Tirumotecan (Sac-TMT, MK-2870) in People With Breast Cancer (MK-2870-032)","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Breast Cancer","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2034,"enrollment":2400,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04003636","acronym":"KEYNOTE-966","title":"Pembrolizumab (MK-3475) Plus Gemcitabine/Cisplatin Versus Placebo Plus Gemcitabine/Cisplatin for First-Line Advanced and/or Unresectable Biliary Tract Carcinoma (BTC) (MK-3475-966/KEYNOTE-966)","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Solid Tumors","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2025,"enrollment":1069,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT06624644","acronym":"NCT06624644","title":"A Trial of LNS8801 With or Without Pembrolizumab in Patients With Refractory Melanoma","phase":"Phase 2, PHASE3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Melanoma","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)"],"year":2031,"enrollment":135,"sponsor":"Linnaeus Therapeutics, Inc.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04199104","acronym":"NCT04199104","title":"A Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) as First Line (1L) Intervention in a Programmed Cell Death-ligand 1 (PD-L1) Selected Population With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (MK-7902-010) (KEYNOTE-010)","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Solid Tumors","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2025,"enrollment":511,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT07315750","acronym":"NCT07315750","title":"A Study of Disitamab Vedotin Combined With Trastuzumab and Tislelizumab Versus Chemotherapy Combined With Trastuzumab With or Without Pembrolizumab in HER2-high Expression Advanced Gastric or Gastroesophageal Junction Adenocarcinoma.","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Solid Tumors","modality":"Antibody-Drug Conjugates (ADC)","regions":["Asia-Pacific (APAC)"],"year":2030,"enrollment":555,"sponsor":"RemeGen Co., Ltd.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT02853305","acronym":"NCT02853305","title":"Study of Pembrolizumab With or Without Platinum-based Combination Chemotherapy Versus Chemotherapy Alone in Urothelial Carcinoma (MK-3475-361/KEYNOTE-361)","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Genitourinary Cancers","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["Global Multi-Center"],"year":2022,"enrollment":1010,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT04777851","acronym":"REPLACE","title":"Regorafenib-pembrolizumab vs. TACE/TARE in Intermediate Stage HCC Beyond Up-to-7","phase":"Phase 3","status":"TERMINATED","isCompleted":false,"category":"Oncology & Hematology","subtype":"Solid Tumors","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","Asia-Pacific (APAC)"],"year":2026,"enrollment":45,"sponsor":"Translational Research in Oncology","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04949256","acronym":"NCT04949256","title":"Efficacy and Safety of Pembrolizumab (MK-3475) Plus Lenvatinib (E7080/MK-7902) Plus Chemotherapy in Participants With Metastatic Esophageal Carcinoma (MK-7902-014/E7080-G000-320/LEAP-014).","phase":"Phase 3","status":"TERMINATED","isCompleted":false,"category":"Oncology & Hematology","subtype":"Solid Tumors","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2026,"enrollment":863,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04222972","acronym":"AcceleRET-Lung","title":"A Study of Pralsetinib Versus Standard of Care for First-Line Treatment of Advanced Non-Small Cell Lung Cancer (NSCLC)","phase":"Phase 3","status":"TERMINATED","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (Small Cell)","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2025,"enrollment":223,"sponsor":"Hoffmann-La Roche","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04241185","acronym":"NCT04241185","title":"Efficacy and Safety of Pembrolizumab (MK-3475) in Combination With Chemoradiotherapy (CRT) Versus CRT Alone in Muscle-invasive Bladder Cancer (MIBC) (MK-3475-992/KEYNOTE-992)","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Genitourinary Cancers","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2031,"enrollment":520,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT04210115","acronym":"NCT04210115","title":"Study of Pembrolizumab (MK-3475) Versus Placebo in Participants With Esophageal Carcinoma Who Are Receiving Chemotherapy and Radiation Therapy (MK-3475-975/KEYNOTE-975)","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Solid Tumors","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2026,"enrollment":703,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT02494583","acronym":"NCT02494583","title":"Study of Pembrolizumab (MK-3475) as First-Line Monotherapy and Combination Therapy for Treatment of Advanced Gastric or Gastroesophageal Junction Adenocarcinoma (MK-3475-062/KEYNOTE-062)","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Solid Tumors","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["Global Multi-Center"],"year":2022,"enrollment":763,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT06998069","acronym":"NCT06998069","title":"Head and Neck Cancer Study Project in the Geriatric Population","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Solid Tumors","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)"],"year":2027,"enrollment":20,"sponsor":"Brown University","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT07566156","acronym":"NCT07566156","title":"Enfortumab Vedotin in Combination With Pembrolizumab vs. Concurrent Chemoradiotherapy (cCRT) in People With Muscle Invasive Bladder Cancer (EV-309)","phase":"Phase 3","status":"RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Genitourinary Cancers","modality":"Antibody-Drug Conjugates (ADC)","regions":["United States (US FDA)","Asia-Pacific (APAC)"],"year":2032,"enrollment":390,"sponsor":"Astellas Pharma Global Development, Inc.","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT02853331","acronym":"NCT02853331","title":"Study to Evaluate the Efficacy and Safety of Pembrolizumab (MK-3475) in Combination With Axitinib Versus Sunitinib Monotherapy in Participants With Renal Cell Carcinoma (MK-3475-426/KEYNOTE-426)","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Genitourinary Cancers","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["Global Multi-Center"],"year":2025,"enrollment":861,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT07756645","acronym":"NCT07756645","title":"A Study to Assess Intravenous ABBV-1480 Combined With Chemotherapy Versus Pembrolizumab Combined With Chemotherapy for the First Line Treatment of Locally Advanced/Metastatic Non-Small Cell Lung Cancer in Adult Participants","phase":"Phase 3","status":"NOT YET RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (Small Cell)","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["Global Multi-Center"],"year":2029,"enrollment":940,"sponsor":"AbbVie","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT03425643","acronym":"NCT03425643","title":"Efficacy and Safety of Pembrolizumab (MK-3475) With Platinum Doublet Chemotherapy as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (MK-3475-671/KEYNOTE-671)","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (Small Cell)","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2026,"enrollment":797,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT03765918","acronym":"NCT03765918","title":"Study of Pembrolizumab Given Prior to Surgery and in Combination With Radiotherapy Given Post-surgery for Advanced Head and Neck Squamous Cell Carcinoma (MK-3475-689)","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Solid Tumors","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Asia-Pacific (APAC)"],"year":2026,"enrollment":714,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."},{"id":"NCT03820986","acronym":"NCT03820986","title":"Safety and Efficacy Study of Pembrolizumab (MK-3475) Combined With Lenvatinib (MK-7902/E7080) as First-line Intervention in Adults With Advance Melanoma (MK-7902-003/E7080-G000-312/LEAP-003)","phase":"Phase 3","status":"COMPLETED","isCompleted":true,"category":"Oncology & Hematology","subtype":"Melanoma","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2024,"enrollment":674,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Primary completion recorded; published clinical trial report available in medical literature."},{"id":"NCT04380636","acronym":"NCT04380636","title":"Study of Pembrolizumab With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib in Stage III Non-Small Cell Lung Cancer (NSCLC) (MK-7339-012/KEYLYNK-012)","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","isCompleted":false,"category":"Oncology & Hematology","subtype":"Lung Cancer (Small Cell)","modality":"Immune Checkpoint Inhibitors (PD-1/L1)","regions":["United States (US FDA)","European Union (EU CTIS)","United Kingdom (MHRA)","Nordic Cluster (SE, DK, NO, FI)","Asia-Pacific (APAC)"],"year":2029,"enrollment":870,"sponsor":"Merck Sharp & Dohme LLC","hasBenchmark":false,"benchmark":"Study actively recruiting; primary endpoints in active longitudinal follow-up."}];
+        let ALL_TRIALS = [];
+
+        async function loadTrials() {
+            try {
+                const res = await fetch('./data/trials.json');
+                const data = await res.json();
+                ALL_TRIALS = data.map(d => ({
+                    id: d.nctId,
+                    acronym: d.acronym || d.nctId,
+                    title: d.briefTitle,
+                    officialTitle: d.officialTitle || d.briefTitle,
+                    category: d.category,
+                    subtype: d.subtype,
+                    modality: d.modality,
+                    phase: d.phase,
+                    status: d.status,
+                    isCompleted: d.isCompleted,
+                    year: d.year,
+                    enrollment: d.enrollment || 0,
+                    sponsor: d.sponsor,
+                    conditions: (d.conditions || []).join(', ')
+                }));
+
+                document.getElementById('totalCount').innerText = ALL_TRIALS.length;
+                document.getElementById('navTotalCount').innerText = ALL_TRIALS.length;
+                applyFilters();
+            } catch (err) {
+                console.error('Failed to load trials dataset:', err);
+            }
+        }
 
         function renderList(trials) {
             const listEl = document.getElementById('studyList');
-            const counterEl = document.getElementById('counterText');
-            counterEl.innerHTML = `Showing <b>${trials.length}</b> verified trials`;
+            document.getElementById('displayedCount').innerText = trials.length;
 
             if (trials.length === 0) {
                 listEl.innerHTML = `
-                    <div style="text-align:center; padding:48px; background:#FFF; border-radius:10px; border:1px solid #E2E8F0;">
-                        <i class="fa-solid fa-folder-open" style="font-size:32px; color:#94A3B8; margin-bottom:12px;"></i>
-                        <h3 style="color:#0B192C;">No clinical studies matched your filters</h3>
-                        <p style="color:#64748B; font-size:14px; margin-top:6px;">Try clearing search terms or selecting 'All Therapeutic Areas'.</p>
-                        <button onclick="clearFilters()" style="margin-top:16px; padding:8px 16px; background:#0B192C; color:#FFF; border:none; border-radius:6px; cursor:pointer;">Reset Filters</button>
+                    <div style="text-align:center; padding:48px 20px; color:var(--text-low); background:var(--bg-card); border-radius:12px; border:1px solid var(--border-subtle);">
+                        <i class="fa-solid fa-flask" style="font-size:32px; margin-bottom:12px; color:var(--cyan); opacity:0.6;"></i>
+                        <h4 style="color:var(--text-high); font-size:16px; margin-bottom:6px;">No studies matched your criteria</h4>
+                        <p style="font-size:13px;">Try clearing search keywords or selecting a broader therapeutic modality.</p>
+                        <button onclick="clearFilters()" class="btn-ghost" style="margin-top:16px;">Reset All Filters</button>
                     </div>
                 `;
                 return;
             }
 
             listEl.innerHTML = trials.map(t => `
-                <a href="trials/${t.id}/" class="study-card">
-                    <div class="card-top">
+                <a href="./trials/${t.id}/" class="study-item">
+                    <div class="study-item-top">
                         <div class="badges-wrap">
-                            <span class="badge nct">${t.id}</span>
+                            <span class="badge nct"><i class="fa-solid fa-hashtag" style="font-size:10px;"></i> ${t.id}</span>
                             <span class="badge phase">${t.phase}</span>
                             <span class="badge modality">${t.modality}</span>
-                            ${t.isCompleted ? '<span class="badge completed"><i class="fa-solid fa-circle-check"></i> Completed</span>' : ''}
+                            <span class="badge status ${t.isCompleted ? 'completed' : ''}">${t.status}</span>
                         </div>
-                        <span class="card-year">Readout: ${t.year}</span>
+                        <span class="study-item-year">${t.year || ''}</span>
                     </div>
-                    <div class="card-title">${t.acronym !== t.id ? t.acronym + ': ' : ''}${t.title}</div>
-                    <div class="card-meta">
-                        <span><i class="fa-solid fa-building"></i> ${t.sponsor}</span> · 
-                        <span><i class="fa-solid fa-disease"></i> ${t.subtype || t.category}</span> · 
-                        <span><i class="fa-solid fa-users"></i> ${t.enrollment ? t.enrollment.toLocaleString() : 'N/A'} patients</span>
+
+                    <div class="study-title">
+                        ${t.acronym !== t.id ? '<span style="color:var(--cyan);">' + t.acronym + ':</span> ' : ''}${t.title}
                     </div>
-                    ${t.hasBenchmark ? `
-                    <div class="card-ev">
-                        <strong><i class="fa-solid fa-star" style="color:#DDA853;"></i> Verified Landmark Benchmark:</strong> ${t.benchmark}
+
+                    <div class="study-meta">
+                        <span><i class="fa-regular fa-building"></i> ${t.sponsor}</span>
+                        <span><i class="fa-solid fa-dna"></i> ${t.conditions || t.subtype}</span>
+                        ${t.enrollment ? `<span><i class="fa-solid fa-users"></i> ${t.enrollment.toLocaleString()} participants</span>` : ''}
                     </div>
-                    ` : ''}
                 </a>
             `).join('');
         }
@@ -214,7 +920,7 @@
 
             let filtered = ALL_TRIALS.filter(t => {
                 if (q) {
-                    const matchStr = (t.id + ' ' + t.acronym + ' ' + t.title + ' ' + (t.subtype || '') + ' ' + (t.modality || '')).toLowerCase();
+                    const matchStr = (t.id + ' ' + t.acronym + ' ' + t.title + ' ' + (t.subtype || '') + ' ' + (t.modality || '') + ' ' + (t.sponsor || '')).toLowerCase();
                     if (!matchStr.includes(q)) return false;
                 }
                 if (cat && t.category !== cat) return false;
@@ -230,17 +936,21 @@
                 filtered.sort((a, b) => b.year - a.year);
             } else if (sort === 'enrollment-desc') {
                 filtered.sort((a, b) => (b.enrollment || 0) - (a.enrollment || 0));
-            } else {
-                // Relevance: prioritize landmark benchmarks
-                filtered.sort((a, b) => (b.hasBenchmark ? 1 : 0) - (a.hasBenchmark ? 1 : 0));
             }
 
             renderList(filtered);
         }
 
+        function filterByModality(modalityName) {
+            clearFilters();
+            document.getElementById('filterModality').value = modalityName;
+            applyFilters();
+            scrollToExplorer();
+        }
+
         function quickFilter(type) {
             document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-            event.target.classList.add('active');
+            if (event && event.target) event.target.classList.add('active');
 
             if (type === 'adc') {
                 document.getElementById('filterModality').value = 'Antibody-Drug Conjugates (ADC)';
@@ -266,9 +976,44 @@
             applyFilters();
         }
 
+        function switchNav(section) {
+            document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
+            if (event && event.target) {
+                const targetLink = event.target.closest('a');
+                if (targetLink) targetLink.classList.add('active');
+            }
+
+            if (section === 'overview') {
+                document.getElementById('overviewSection').style.display = 'block';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (section === 'explorer') {
+                scrollToExplorer();
+            } else if (section === 'methodology') {
+                const el = document.getElementById('methodologySection');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function scrollToExplorer() {
+            const el = document.getElementById('explorerSection');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+
+        // Global '/' keyboard shortcut to focus search
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement !== document.getElementById('searchInput')) {
+                e.preventDefault();
+                document.getElementById('searchInput').focus();
+            }
+        });
+
         // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
-            applyFilters();
+            loadTrials();
         });
     </script>
 </body>

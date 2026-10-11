@@ -21,11 +21,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://clinsight.pract.eu/trials/NCT04244461/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://clinsight.pract.eu/trials/NCT03971409/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
