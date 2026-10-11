@@ -3,6 +3,3 @@ node_modules/
 scratch/
 .gemini/
 *.log
-
-conversation_summary_*.md
-CONVERSATION_MASTER_ARCHIVE.md
