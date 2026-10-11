@@ -133,8 +133,8 @@ function renderTrialPage(trial, allTrials) {
             --text-high: #f8fafc;
             --text-med: #cbd5e1;
             --text-low: #64748b;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-mono: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --font-mono: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
