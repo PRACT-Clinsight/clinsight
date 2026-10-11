@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT03548207 CARTITUDE-1 — Study Protocol & Registry Profile | ClinSight</title>
+    <meta name="description" content="Official ClinicalTrials.gov study protocol, primary design, enrollment criteria, and sponsor data for NCT03548207 (CARTITUDE-1). Open-access research intelligence.">
+    <link rel="canonical" href="https://clinsight.pract.eu/trials/NCT03548207/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="NCT03548207 CARTITUDE-1 — Clinical Study Protocol">
+    <meta property="og:description" content="Phase: Phase 1, Phase 2 · Modality: Cell &amp; Gene Therapy (CAR-T) · Sponsor: Janssen Research &amp; Development, LLC">
+    <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT03548207/">
+    <meta property="og:type" content="article">
+    
+    <!-- Clean Font: Inter (Matched with vigisight.pract.eu) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data Schema -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"CARTITUDE-1 (NCT03548207): A Study of JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against B-Cell Maturation Antigen (BCMA) in Participants With Relapsed or Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT03548207/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"Janssen Research &amp; Development, LLC","status":"COMPLETED","phase":"Phase 1, Phase 2"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03548207 (CARTITUDE-1)?","acceptedAnswer":{"@type":"Answer","text":"NCT03548207 is a Phase 1, Phase 2 study sponsored by Janssen Research &amp; Development, LLC evaluating Cell &amp; Gene Therapy (CAR-T) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03548207?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03548207."}}]}]}
+    </script>
+
+    <style>
+        :root {
+            --bg-void: #07090e;
+            --bg-base: #0b0f19;
+            --bg-surface: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            --cyan: #38bdf8;
+            --cyan-glow: rgba(56, 189, 248, 0.15);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.15);
+            --purple: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.15);
+            --amber: #fbbf24;
+            --amber-glow: rgba(251, 191, 36, 0.15);
+            --text-high: #f8fafc;
+            --text-med: #cbd5e1;
+            --text-low: #64748b;
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'Inter', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-void);
+            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.06), transparent 45%);
+            color: var(--text-high);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Topbar */
+        .topbar {
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 12px 24px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .topbar a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+        .topbar a:hover { color: #7dd3fc; }
+        .topbar-right { color: var(--text-low); font-size: 12.5px; }
+        .topbar-right a { color: var(--text-med); font-weight: 500; }
+
+        .container { max-width: 1060px; margin: 32px auto; padding: 0 20px 80px; }
+        
+        .breadcrumb {
+            font-size: 12.5px;
+            color: var(--text-low);
+            margin-bottom: 24px;
+            font-family: var(--font-mono);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .breadcrumb a { color: var(--text-med); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--cyan); }
+        .breadcrumb span { color: var(--cyan); }
+
+        /* Badge Row */
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; align-items: center; }
+        .badge {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.02em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .badge.nct {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.phase {
+            background: var(--purple-glow);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+        .badge.status {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        .badge.status.completed {
+            background: var(--emerald-glow);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .badge.modality {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-med);
+            border: 1px solid var(--border-subtle);
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.35;
+            color: var(--text-high);
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+        .lead {
+            font-size: 14.5px;
+            color: var(--text-med);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        /* Antigravity Glass Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(8px);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        .card-header {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .card-header i { color: var(--cyan); }
+
+        /* Protocol Metadata Grid */
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+        .meta-item h4 {
+            font-size: 11.5px;
+            text-transform: uppercase;
+            color: var(--text-low);
+            font-family: var(--font-mono);
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+        .meta-item p {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-high);
+        }
+
+        /* Criteria Section */
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) { .criteria-grid { grid-template-columns: 1fr; } }
+        
+        .criteria-box {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .criteria-box h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--cyan);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .criteria-box ul {
+            padding-left: 18px;
+            font-size: 13px;
+            color: var(--text-med);
+        }
+        .criteria-box li { margin-bottom: 8px; line-height: 1.5; }
+
+        /* Action Buttons */
+        .actions-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: var(--font-sans);
+        }
+        .btn-primary {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+        }
+        .btn-primary:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #FFF;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: var(--text-high);
+        }
+
+        /* Related Grid */
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 14px;
+        }
+        .related-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 14px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.2s;
+        }
+        .related-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .related-card .rel-id {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--cyan);
+        }
+        .related-card .rel-title {
+            font-size: 12.5px;
+            font-weight: 500;
+            color: var(--text-high);
+            margin: 6px 0;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 28px 0;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-low);
+            border-top: 1px solid var(--border-subtle);
+            font-family: var(--font-mono);
+        }
+    </style>
+</head>
+<body>
+    <!-- nct=NCT03548207 source=ClinicalTrials.gov protocol_strict=true -->
+    <div class="topbar">
+        <a href="../../"><i class="fa-solid fa-arrow-left"></i> ClinSight™ Clinical Trials Explorer</a>
+        <div class="topbar-right">
+            <span>Part of <a href="https://pract.eu" target="_blank">PRACT™ Open Science Ecosystem</a></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../../">ClinSight</a> / <a href="../../?category=Oncology">Oncology</a> / <span>NCT03548207</span>
+        </div>
+
+        <div class="badge-row">
+            <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03548207</span>
+            <span class="badge phase">Phase 1, Phase 2</span>
+            <span class="badge status completed">COMPLETED</span>
+            <span class="badge modality">Cell &amp; Gene Therapy (CAR-T)</span>
+        </div>
+
+        <h1>CARTITUDE-1: A Study of JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against B-Cell Maturation Antigen (BCMA) in Participants With Relapsed or Refractory Multiple Myeloma</h1>
+        <p class="lead">A Phase 1b-2, Open-Label Study of JNJ-68284528, A Chimeric Antigen Receptor T-Cell (CAR-T) Therapy Directed Against BCMA in Subjects With Relapsed or Refractory Multiple Myeloma</p>
+
+        <!-- Official Registry Overview -->
+        <div class="card">
+            <div class="card-header"><i class="fa-solid fa-dna"></i> Study Design & Protocol Architecture</div>
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h4>Lead Sponsor</h4>
+                    <p>Janssen Research &amp; Development, LLC</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Therapeutic Indication</h4>
+                    <p>Multiple Myeloma</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Intervention / Drug</h4>
+                    <p>JNJ-68284528</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Patient Enrollment</h4>
+                    <p>126 participants</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Trial Phase</h4>
+                    <p>Phase 1, Phase 2</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Primary Completion</h4>
+                    <p>2022-08-23</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Geographic Scope</h4>
+                    <p>United States (US FDA), United Kingdom (MHRA), Asia-Pacific (APAC)</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Registry ID</h4>
+                    <p><a href="https://clinicaltrials.gov/study/NCT03548207" target="_blank" style="color:var(--cyan); text-decoration:none; font-family:var(--font-mono);">NCT03548207 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:11px;"></i></a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eligibility Criteria Checklist -->
+        <div class="card">
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Patient Eligibility Checklist</div>
+            <div class="criteria-grid">
+                <div class="criteria-box">
+                    <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
+                    <ul>
+                        <li>Histologically confirmed diagnosis for Multiple Myeloma</li>
+                             <li>Measurable disease according to standardized response evaluation criteria</li>
+                             <li>Adequate baseline organ and bone marrow function</li>
+                             <li>Age &ge; 18 years at time of written informed consent</li>
+                    </ul>
+                </div>
+                <div class="criteria-box">
+                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
+                    <ul>
+                        <li>Active, clinically uncontrolled central nervous system (CNS) metastases</li>
+                             <li>Severe or uncontrolled concurrent systemic disease or active infection</li>
+                             <li>Prior intolerance or hypersensitivity to study intervention</li>
+                             <li>Participation in another investigational intervention within protocol window</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Direct Primary Source Actions -->
+        <div class="card">
+            <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
+            <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
+            <div class="actions-row">
+                <a href="https://clinicaltrials.gov/study/NCT03548207" target="_blank" class="btn btn-primary">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
+                </a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT03548207" target="_blank" class="btn btn-outline">
+                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT03548207)
+                </a>
+                <a href="https://scholar.google.com/scholar?q=NCT03548207" target="_blank" class="btn btn-outline">
+                    <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
+                </a>
+            </div>
+        </div>
+
+        
+        <!-- Related Studies in Modality -->
+        <div class="card">
+            <div class="card-header"><i class="fa-solid fa-diagram-project"></i> Related Studies in Cell &amp; Gene Therapy (CAR-T)</div>
+            <div class="related-grid">
+                
+                <a href="../NCT03734029/" class="related-card">
+                    <div class="rel-id">NCT03734029 · Phase 3</div>
+                    <div class="rel-title">DESTINY-Breast04: Trastuzumab Deruxtecan (DS-8201a) Versus Investigator&#39;s Choice for HER2-low Breast Cancer That Has Spread or Cannot be Surgically Removed [DESTINY-Breast04]</div>
+                    <span style="font-size:11px; color:var(--text-low);">Daiichi Sankyo</span>
+                </a>
+                
+                <a href="../NCT03529110/" class="related-card">
+                    <div class="rel-id">NCT03529110 · Phase 3</div>
+                    <div class="rel-title">DESTINY-Breast03: DS-8201a Versus T-DM1 for Human Epidermal Growth Factor Receptor 2 (HER2)-Positive, Unresectable and/or Metastatic Breast Cancer Previously Treated With Trastuzumab and Taxane [DESTINY-Breast03]</div>
+                    <span style="font-size:11px; color:var(--text-low);">Daiichi Sankyo</span>
+                </a>
+                
+                <a href="../NCT04526691/" class="related-card">
+                    <div class="rel-id">NCT04526691 · Phase 1</div>
+                    <div class="rel-title">Dato-DXd: Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)</div>
+                    <span style="font-size:11px; color:var(--text-low);">Daiichi Sankyo</span>
+                </a>
+                
+                <a href="../NCT03971409/" class="related-card">
+                    <div class="rel-id">NCT03971409 · Phase 2</div>
+                    <div class="rel-title">InCITe: Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer</div>
+                    <span style="font-size:11px; color:var(--text-low);">Laura Huppert, MD, BA</span>
+                </a>
+                
+            </div>
+        </div>
+        
+
+        <footer>
+            <p>&copy; 2026 ClinSight · PRACT Open Science & Research Intelligence Hub. Primary study records sourced directly from ClinicalTrials.gov.</p>
+        </footer>
+    </div>
+</body>
+</html>

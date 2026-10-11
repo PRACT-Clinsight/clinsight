@@ -13,10 +13,10 @@
     <meta property="og:url" content="https://clinsight.pract.eu/">
     <meta property="og:type" content="website">
 
-    <!-- Clean Font: Inter -->
+    <!-- Clean Font: Inter (Matched with vigisight.pract.eu) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -38,8 +38,8 @@
             --text-high: #f8fafc;
             --text-med: #cbd5e1;
             --text-low: #64748b;
-            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            --font-mono: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'Inter', sans-serif;
             --sidebar-width: 240px;
         }
 
@@ -181,13 +181,13 @@
             .mobile-toggle { display: block !important; }
         }
 
-        /* Search Header */
-        .content-header {
-            display: flex;
-            justify-content: space-between;
+        /* Mobile Header */
+        .mobile-header {
+            display: none;
             align-items: center;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 14px;
             border-bottom: 1px solid var(--border-subtle);
         }
         .mobile-toggle {
@@ -198,13 +198,16 @@
             padding: 8px 12px;
             border-radius: 8px;
             cursor: pointer;
-            margin-right: 12px;
+        }
+        @media (max-width: 900px) {
+            .mobile-header { display: flex; }
+            .mobile-toggle { display: block; }
         }
 
         .search-box-wrap {
             position: relative;
-            flex: 1;
-            max-width: 600px;
+            width: 100%;
+            margin-bottom: 12px;
         }
         .search-box-wrap i {
             position: absolute;
@@ -216,24 +219,25 @@
         }
         .search-input {
             width: 100%;
-            padding: 11px 42px 11px 38px;
-            background: rgba(17, 24, 39, 0.85);
+            padding: 12px 42px 12px 38px;
+            background: rgba(11, 15, 25, 0.95);
             border: 1px solid var(--border-subtle);
-            border-radius: 10px;
+            border-radius: 8px;
             color: var(--text-high);
             font-size: 13.5px;
             font-family: inherit;
             transition: all 0.2s;
+            box-sizing: border-box;
         }
         .search-input:focus {
             outline: none;
             border-color: var(--cyan);
             box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
-            background: #111827;
+            background: #0f172a;
         }
         .search-shortcut {
             position: absolute;
-            right: 12px;
+            right: 14px;
             top: 50%;
             transform: translateY(-50%);
             font-family: var(--font-mono);
@@ -541,14 +545,10 @@
 
         <!-- Main Content Area -->
         <main class="main-content">
-            <!-- Search Header -->
-            <div class="content-header">
+            <!-- Mobile Header (Mobile only) -->
+            <div class="mobile-header">
                 <button class="mobile-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
-                <div class="search-box-wrap">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="searchInput" class="search-input" placeholder="Search drug (e.g. Doxorubicin, Pembrolizumab), disease, or NCT..." oninput="applyFilters()">
-                    <span class="search-shortcut">/</span>
-                </div>
+                <div class="logo-text" style="font-size:18px;">ClinSight<span>™</span></div>
             </div>
 
             <!-- Overview Section -->
@@ -615,6 +615,13 @@
 
                 <!-- Controls & Filters Card -->
                 <div class="controls-card">
+                    <!-- Search Input (Directly above filters) -->
+                    <div class="search-box-wrap">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search drug (e.g. Doxorubicin, Pembrolizumab), disease, or NCT..." oninput="applyFilters()">
+                        <span class="search-shortcut">/</span>
+                    </div>
+
                     <div class="filters-row">
                         <select id="filterCategory" class="filter-select" onchange="applyFilters()">
                             <option value="">All Therapeutic Areas</option>

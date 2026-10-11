@@ -19,7 +19,7 @@
       "Paclitaxel",
       "Nab-paclitaxel"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Breast Cancer (HER2-Low)",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
@@ -87,8 +87,8 @@
       "Trastuzumab deruxtecan (T-DXd)",
       "Ado-trastuzumab emtansine (T-DM1)"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Breast Cancer (HER2+)",
+    "category": "Oncology",
+    "subtype": "Breast Cancer",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "United States (US FDA)",
@@ -140,6 +140,7 @@
   },
   {
     "nctId": "NCT04526691",
+    "acronym": "Dato-DXd",
     "briefTitle": "Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)",
     "officialTitle": "Phase 1b, Multicenter, Open-label Study of Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)",
     "phase": "Phase 1",
@@ -155,8 +156,8 @@
       "Carboplatin",
       "Cisplatin"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Solid Tumors (HER2-Expressing)",
+    "category": "Oncology",
+    "subtype": "Lung Cancer (Small Cell)",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "United States (US FDA)",
@@ -197,6 +198,7 @@
   },
   {
     "nctId": "NCT03971409",
+    "acronym": "InCITe",
     "briefTitle": "Avelumab With Binimetinib, Sacituzumab Govitecan, or Liposomal Doxorubicin in Treating Stage IV or Unresectable, Recurrent Triple Negative Breast Cancer",
     "officialTitle": "Innovative Combination Immunotherapy for Metastatic Triple Negative Breast Cancer (TNBC): A Multicenter, Multi-Arm Translational Breast Cancer Research Consortium Study",
     "phase": "Phase 2",
@@ -222,8 +224,8 @@
       "Liposomal Doxorubicin",
       "Sacituzumab Govitecan"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Breast Cancer (HR+/HER2-)",
+    "category": "Oncology",
+    "subtype": "Breast Cancer (Triple-Negative)",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "United States (US FDA)",
@@ -256,60 +258,76 @@
     "publications": []
   },
   {
-    "nctId": "NCT02638909",
+    "nctId": "NCT02142738",
     "acronym": "KEYNOTE-024",
-    "briefTitle": "Study of Oral Ceritinib in Patients With ALK and ROS1 Activated Gastrointestinal Malignancies",
-    "officialTitle": "A Phase II, Multicenter, Single-Arm Study of Oral Ceritinib in Adult Patients With ALK and ROS1 Activated Gastrointestinal Malignancies",
-    "phase": "Phase 2",
-    "status": "TERMINATED",
-    "isCompleted": false,
-    "sponsor": "Criterium, Inc.",
+    "briefTitle": "Study of Pembrolizumab (MK-3475) Compared to Platinum-Based Chemotherapies in Participants With Metastatic Non-Small Cell Lung Cancer (MK-3475-024/KEYNOTE-024)",
+    "officialTitle": "A Randomized Open-Label Phase III Trial of Pembrolizumab Versus Platinum Based Chemotherapy in 1L Subjects With PD-L1 Strong Metastatic Non-Small Cell Lung Cancer",
+    "phase": "Phase 3",
+    "status": "COMPLETED",
+    "isCompleted": true,
+    "sponsor": "Merck Sharp & Dohme LLC",
     "conditions": [
-      "Colorectal Adenocarcinoma",
-      "Cholangiocarcinoma",
-      "Pancreatic Adenocarcinoma",
-      "Hepatocellular Adenocarcinoma",
-      "Gastric Adenocarcinoma",
-      "Esophageal Adenocarcinoma"
+      "Non-Small Cell Lung Carcinoma"
     ],
     "interventions": [
-      "ceritinib"
+      "Pembrolizumab",
+      "Paclitaxel",
+      "Carboplatin",
+      "Pemetrexed",
+      "Cisplatin",
+      "Gemcitabine"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Lung Cancer (NSCLC PD-L1 ≥50%)",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "category": "Oncology",
+    "subtype": "Lung Cancer (Small Cell)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
-      "United States (US FDA)"
+      "Global Multi-Center"
     ],
-    "completionDate": "2018-03-29",
-    "year": 2018,
-    "enrollment": 4,
+    "completionDate": "2021-05-27",
+    "year": 2021,
+    "enrollment": 305,
     "primaryOutcomes": [
       {
-        "measure": "Clinical Benefit Rate (CBR) of ceritinib, as defined as the percentage of patients who have achieved complete response, partial response, and stable disease at 2 months per RECIST 1.1) to ceritinib by investigator assessment",
-        "description": "",
-        "timeFrame": "2 months"
+        "measure": "Progression Free Survival (PFS) Rate at Month 6",
+        "description": "PFS was defined as the time from randomization to documented disease progression per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST 1.1) or death due to any cause, whichever occurred first and was based on blinded independent central radiologists' (BICR) review. Progressive Disease (PD) was defined as ≥20% increase in the sum of diameters of target lesions and an absolute increase of ≥5 mm. (Note: the appearance of one or more new lesions was also considered progression). Participants were evaluated every 9 weeks with radiographic imaging to assess their response to treatment. The data cutoff was 09-May-2016. The PFS rate at Month 6 was calculated.",
+        "timeFrame": "Month 6"
       }
     ],
     "inclusionCriteria": [
-      "Histologically or cytologically confirmed diagnosis of inoperable colorectal adenocarcinoma, pancreatic, hepatocellular, cholangiocarcinoma, small bowel, gastric or esophageal adenocarcinoma that carries an activated ALK or ROS1 pathway",
-      "Age 18 years or older at the time of informed consent.",
-      "Patients must have received at least 1 line of cytotoxic chemotherapy",
-      "Patients must have archival tissue sample available, collected either at the time of diagnosis or any time since.",
-      "\\- If archival tissue is unavailable, patient must be eligible and willing to undergo a fresh tissue biopsy"
+      "Histological or cytological diagnosis of Stage IV NSCLC lacking epidermal growth factor receptor (EGFR)-sensitizing mutation and/or anaplastic lymphoma kinase (ALK) translocation, and received no prior systemic chemotherapy treatment for their metastatic NSCLC",
+      "At least one radiographically measurable lesion per RECIST 1.1",
+      "Life expectancy of at least 3 months",
+      "Performance status of 0 or 1 on the Eastern Cooperative Oncology Group (ECOG) Performance Status",
+      "Adequate organ function"
     ],
     "exclusionCriteria": [
-      "Patients who have had chemotherapy or radiotherapy within 3 weeks (4 weeks for radiotherapy to the lung fields and 6 weeks for nitrosoureas or mitomycin C) prior to entering the study or those who have not recovered from adverse events due to agents administered more than 4 weeks earlier.",
-      "Patients with known hypersensitivity to any of the excipients of ceritinib (microcrystalline cellulose, mannitol, crospovidone, colloidal silicon dioxide and magnesium stearate)",
-      "Prior therapy with ceritinib or other ALK or ROS1 inhibitor agents",
-      "Patients who are currently receiving treatment with warfarin sodium (Coumadin®) or any other coumarin-derivative anti-coagulants.",
-      "Patients with symptomatic CNS metastases who are neurologically unstable or have required increasing doses of steroids within the 1 week prior to study entry to manage CNS symptoms."
+      "EGFR sensitizing mutation and/or ALK translocation",
+      "Has received systemic therapy for the treatment of their stage IV NSCLC. Completion of treatment with chemotherapy and/or radiation as part of neoadjuvant/adjuvant therapy is allowed as long as therapy was completed at least 6 months prior to the diagnosis of metastatic disease.",
+      "Currently participating or has participated in a study of an investigational agent or using an investigational device within 4 weeks of first dose of study drug",
+      "Tumor specimen is not evaluable for PD-L1 expression by the central laboratory",
+      "Receiving systemic steroid therapy \\< 3 days prior to first dose of study drug or receiving any other form of immunosuppressive medication"
     ],
-    "publications": []
+    "publications": [
+      {
+        "citation": "Reck M, Rodriguez-Abreu D, Robinson AG, Hui R, Csoszi T, Fulop A, Gottfried M, Peled N, Tafreshi A, Cuffe S, O'Brien M, Rao S, Hotta K, Leiby MA, Lubiniecki GM, Shentu Y, Rangwala R, Brahmer JR; KEYNOTE-024 Investigators. Pembrolizumab versus Chemotherapy for PD-L1-Positive Non-Small-Cell Lung Cancer. N Engl J Med. 2016 Nov 10;375(19):1823-1833. doi: 10.1056/NEJMoa1606774. Epub 2016 Oct 8.",
+        "pmid": "27718847",
+        "type": "RESULT"
+      },
+      {
+        "citation": "Halmos B, Burke T, Kalyvas C, Insinga R, Vandormael K, Frederickson A, Piperdi B. Indirect comparison of pembrolizumab monotherapy versus nivolumab + ipilimumab in first-line metastatic lung cancer. Immunotherapy. 2022 Apr;14(5):295-307. doi: 10.2217/imt-2021-0273. Epub 2022 Jan 25.",
+        "pmid": "35073727",
+        "type": "DERIVED"
+      },
+      {
+        "citation": "Satouchi M, Nosaki K, Takahashi T, Nakagawa K, Aoe K, Kurata T, Sekine A, Horiike A, Fukuhara T, Sugawara S, Umemura S, Saka H, Okamoto I, Yamamoto N, Sakai H, Kishi K, Katakami N, Horinouchi H, Hida T, Okamoto H, Atagi S, Ohira T, Rong Han S, Noguchi K, Ebiana V, Hotta K. First-line pembrolizumab vs chemotherapy in metastatic non-small-cell lung cancer: KEYNOTE-024 Japan subset. Cancer Sci. 2021 Dec;112(12):5000-5010. doi: 10.1111/cas.15144. Epub 2021 Nov 5.",
+        "pmid": "34543477",
+        "type": "DERIVED"
+      }
+    ]
   },
   {
     "nctId": "NCT02578680",
-    "acronym": "KEYNOTE-522",
+    "acronym": "KEYNOTE-189",
     "briefTitle": "Study of Pemetrexed+Platinum Chemotherapy With or Without Pembrolizumab (MK-3475) in Participants With First Line Metastatic Nonsquamous Non-small Cell Lung Cancer (MK-3475-189/KEYNOTE-189)",
     "officialTitle": "A Randomized, Double-Blind, Phase III Study of Platinum+Pemetrexed Chemotherapy With or Without Pembrolizumab (MK-3475) in First Line Metastatic Non-squamous Non-small Cell Lung Cancer Subjects (KEYNOTE-189)",
     "phase": "Phase 3",
@@ -329,9 +347,9 @@
       "Dexamethasone 4 mg",
       "Saline solution"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Breast Cancer (Triple-Negative)",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "category": "Oncology",
+    "subtype": "Lung Cancer (Small Cell)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "Global Multi-Center"
     ],
@@ -384,7 +402,7 @@
   },
   {
     "nctId": "NCT02246621",
-    "acronym": "CheckMate-067",
+    "acronym": "MONARCH 3",
     "briefTitle": "A Study of Nonsteroidal Aromatase Inhibitors Plus Abemaciclib (LY2835219) in Postmenopausal Women With Breast Cancer",
     "officialTitle": "A Randomized, Double-Blind, Placebo-Controlled, Phase 3 Study of Nonsteroidal Aromatase Inhibitors (Anastrozole or Letrozole) Plus LY2835219, a CDK4/6 Inhibitor, or Placebo in Postmenopausal Women With Hormone Receptor-Positive, HER2-Negative Locoregionally Recurrent or Metastatic Breast Cancer With No Prior Systemic Therapy in This Disease Setting",
     "phase": "Phase 3",
@@ -400,9 +418,9 @@
       "Letrozole",
       "Placebo"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Melanoma",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "category": "Oncology",
+    "subtype": "Breast Cancer",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -469,9 +487,9 @@
       "Placebo AZD9291 80 mg/40 mg",
       "Open-label AZD9291 80 mg/40 mg"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Lung Cancer (EGFR-Mutated NSCLC)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "category": "Oncology",
+    "subtype": "Solid Tumors",
+    "modality": "Biological Products & Targeted Therapies",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -523,7 +541,7 @@
   },
   {
     "nctId": "NCT03155620",
-    "acronym": "monarchE",
+    "acronym": "NCT03155620",
     "briefTitle": "Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)",
     "officialTitle": "NCI-COG Pediatric MATCH (Molecular Analysis for Therapy Choice) Screening Protocol",
     "phase": "Phase 2",
@@ -604,9 +622,9 @@
       "Vemurafenib",
       "X-Ray Imaging"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Breast Cancer (HR+/HER2-)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "category": "Oncology",
+    "subtype": "Hematologic Malignancies",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "United States (US FDA)",
       "United Kingdom (MHRA)",
@@ -655,75 +673,71 @@
     ]
   },
   {
-    "nctId": "NCT03041311",
+    "nctId": "NCT03548207",
     "acronym": "CARTITUDE-1",
-    "briefTitle": "Carboplatin, Etoposide, and Atezolizumab With or Without Trilaciclib (G1T28), a CDK4/6 Inhibitor, in Extensive-Stage SCLC",
-    "officialTitle": "Phase 2 Study of Carboplatin, Etoposide, and Atezolizumab With or Without Trilaciclib in Patients With Untreated Extensive-Stage Small Cell Lung Cancer (SCLC)",
-    "phase": "Phase 2",
+    "briefTitle": "A Study of JNJ-68284528, a Chimeric Antigen Receptor T Cell (CAR-T) Therapy Directed Against B-Cell Maturation Antigen (BCMA) in Participants With Relapsed or Refractory Multiple Myeloma",
+    "officialTitle": "A Phase 1b-2, Open-Label Study of JNJ-68284528, A Chimeric Antigen Receptor T-Cell (CAR-T) Therapy Directed Against BCMA in Subjects With Relapsed or Refractory Multiple Myeloma",
+    "phase": "Phase 1, Phase 2",
     "status": "COMPLETED",
     "isCompleted": true,
-    "sponsor": "G1 Therapeutics, Inc.",
+    "sponsor": "Janssen Research & Development, LLC",
     "conditions": [
-      "Small Cell Lung Cancer"
+      "Multiple Myeloma"
     ],
     "interventions": [
-      "Trilaciclib",
-      "Placebo",
-      "Carboplatin",
-      "Etoposide",
-      "Atezolizumab"
+      "JNJ-68284528"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Hematologic (Multiple Myeloma)",
+    "category": "Oncology",
+    "subtype": "Hematologic Malignancies",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "United States (US FDA)",
-      "European Union (EU CTIS)",
-      "United Kingdom (MHRA)"
+      "United Kingdom (MHRA)",
+      "Asia-Pacific (APAC)"
     ],
-    "completionDate": "2020-10-29",
-    "year": 2020,
-    "enrollment": 107,
+    "completionDate": "2022-08-23",
+    "year": 2022,
+    "enrollment": 126,
     "primaryOutcomes": [
       {
-        "measure": "Duration of Severe (Grade 4) Neutropenia in Cycle 1",
-        "description": "Duration of severe neutropenia (DSN; days) was defined as the number of days from the date of the first absolute neutrophil count (ANC) value of \\<0.5 × 10⁹/L observed between start of cycle and end of cycle to the date of the first ANC value ≥0.5 × 10⁹/L that met the following criteria: (1) occurred after the ANC value of \\<0.5 × 10⁹/L and (2) no other ANC values \\<0.5 × 10⁹/L occurred between this day and end of cycle. DSN was set to 0 for patients who did not experience severe neutropenia in a cycle, including those that were randomized and not treated. Data from unscheduled visits and the actual assessment date (rather than visit date) were included in the derivation.",
-        "timeFrame": "Evaluated for Cycle 1 of the Induction Period (i.e., from randomization to the end of Cycle 1, each cycle = 21 days)."
+        "measure": "Phase 1b: Number of Participants With Adverse Events as Per Severity",
+        "description": "An AE was any untoward medical occurrence in a clinical study participant administered a pharmaceutical (investigational or non-investigational) product. An AE does not necessarily have a causal relationship with the intervention. Severity was graded according to the National Cancer Institute Common Terminology Criteria for Adverse Events (NCI-CTCAE) version 5.0. Severity scale ranges from Grade 1 (Mild) to Grade 5 (Death). Grade 1= Mild, Grade 2= Moderate, Grade 3= Severe, Grade 4= Life-threatening and Grade 5= Death related to adverse event.",
+        "timeFrame": "Day 1 up to 45.2 months"
       },
       {
-        "measure": "Number of Participants With at Least 1 Occurrence of Severe (Grade 4) Neutropenia",
-        "description": "The occurrence of severe (Grade 4) neutropenia (SN) was a binary variable. If a patient had at least 1 absolute neutrophil count value \\<0.5 × 10\\^9/L during the Induction Period, the patient was assigned as Yes to the occurrence of SN; otherwise, it was No.",
-        "timeFrame": "Induction Period. From date of randomization, 21 day treatment cycles up to a maximum of 4 cycles or until (if earlier) disease progression, unacceptable toxicity, or discontinuation by the patient or investigator, assessed up to a maximum of 409 days."
+        "measure": "Phase 2: Overall Response Rate (ORR)",
+        "description": "ORR was defined as the percentage of participants who achieved partial response (PR) or better according to international myeloma working group (IMWG) criteria. IMWG criteria for PR: greater than or equal to (\\>=) 50 percent (%) reduction of serum M-protein and reduction in 24-hour urinary M-protein by \\>=90% or to less than (\\<) 200 milligrams (mg) per 24 hours. If the serum and urine M-protein were not measurable, a decrease of \\>=50% in the difference between involved and uninvolved free light chain (FLC) levels was required in place of the M-protein criteria. If serum and urine M-protein were not measurable, and serum free light assay was also not measurable, \\>=50% reduction in bone marrow plasma cells (PCs) was required in place of M-protein, provided baseline bone marrow PC percentage was \\>=30%. In addition to the above criteria, if present at baseline, a \\>=50% reduction in the size of soft tissue plasmacytomas was also required.",
+        "timeFrame": "Day 1 up to 45.2 months"
       }
     ],
     "inclusionCriteria": [
-      "Male or female subjects aged ≥18 years",
-      "Unequivocally confirmed diagnosis of SCLC by histology or cytology, preferably including the presence of neuroendocrine features by immunohistochemistry",
-      "Extensive-stage SCLC",
-      "At least 1 target lesion that is measurable by Response Evaluation Criteria in Solid Tumors (RECIST) Version 1.1",
-      "Adequate organ function"
+      "Have documented diagnosis of multiple myeloma according to International Myeloma Working Group (IMWG) diagnostic criteria",
+      "Have measurable disease at Screening as defined by any of the following a) Serum monoclonal paraprotein (M-protein) level more than or equal to (\\>=) 1.0 gram per deciliter(g/dL) or urine M-protein level \\>=200 milligram per 24 hours (mg/24hr); or b) Light chain multiple myeloma without measurable disease in the serum or the urine: Serum immunoglobulin free light chain 10 mg/dL and abnormal serum immunoglobulin kappa lambda free light chain ratio",
+      "Have received at least 3 prior multiple myeloma treatment lines of therapy or are double refractory to an immunomodulatory drug (IMiD) and proteasome inhibitor (PI) (refractory multiple myeloma as defined by IMWG consensus criteria). Note: induction with or without hematopoietic stem cell transplant and with or without maintenance therapy is considered a single lines of therapy a) Undergone at least 1 complete cycle of treatment for each line of therapy, unless progressive disease (PD) was the best response to the regimen",
+      "Have received as part of previous therapy a PI, an IMiD, and an anti-CD38 antibody",
+      "Participant must have documented evidence of progressive disease based on investigator's determination of response by the IMWG criteria on or within 12 months of their last line of therapy. Confirmation may be from either central or local testing. Also, participants with documented evidence of progressive disease (as above) within the previous 6 months and who are refractory or non-responsive to their most recent line of therapy afterwards are eligible"
     ],
     "exclusionCriteria": [
-      "Limited-stage SCLC",
-      "Prior chemotherapy for limited or extensive-stage SCLC",
-      "Prior treatment with immunotherapies including but not limited to cluster of differentiation 137 agonists or immune checkpoint blockade therapies (such as anti-programmed cell death protein 1 (PD-1), anti-programmed death-ligand 1(PD-L1), and cytotoxic T-lymphocyte-associated protein 4 (CTLA-4) therapeutic antibodies).",
-      "Presence of symptomatic brain metastases requiring immediate treatment with radiation therapy or steroids.",
-      "Malignancies other than SCLC within 3 years prior to randomization, with the exception of those with negligible risk of metastasis or death treated with expected curative outcome"
+      "Have received prior treatment with chimeric antigen receptor T (CAR-T) therapy directed at any target",
+      "Have received any therapy that is targeted to B-cell maturation antigen (BCMA)",
+      "Have following cardiac conditions: a) New York Heart Association (NYHA) stage III or IV congestive heart failure b) Myocardial infarction or coronary artery bypass graft (CABG) less than or equal to (\\<=) 6 months prior to enrollment c) History of clinically significant ventricular arrhythmia or unexplained syncope, not believed to be vasovagal in nature or due to dehydration d) History of severe non-ischemic cardiomyopathy e) Impaired cardiac function (left ventricular ejection fraction \\[LVEF\\] less than \\[\\<\\]45%) as assessed by echocardiogram or multiple-gated acquisition (MUGA) scan (performed less than or equal to (\\<=) 8 weeks of apheresis)",
+      "Received a cumulative dose of corticosteroids equivalent to \\>= 70 mg of prednisone within the 7 days prior to apheresis",
+      "Have received either of the following: a) An allogenic stem cell transplant within 6 months before apheresis. Participants who received an allogeneic transplant must be off all immunosuppressive medications for 6 weeks without signs of graft-versus-host disease (GVHD) b) An autologous stem cell transplant less than or equal to (\\<=) 12 weeks before apheresis"
     ],
     "publications": [
       {
-        "citation": "Daniel D, Kuchava V, Bondarenko I, Ivashchuk O, Reddy S, Jaal J, Kudaba I, Hart L, Matitashvili A, Pritchett Y, Morris SR, Sorrentino JA, Antal JM, Goldschmidt J. Trilaciclib prior to chemotherapy and atezolizumab in patients with newly diagnosed extensive-stage small cell lung cancer: A multicentre, randomised, double-blind, placebo-controlled Phase II trial. Int J Cancer. 2021 May 15;148(10):2557-2570. doi: 10.1002/ijc.33453. Epub 2021 Jan 12.",
-        "pmid": "33348420",
-        "type": "BACKGROUND"
+        "citation": "Lopez-Munoz N, Bar N, Diels J, van Sanden S, Mendes J, Lee S, Hernando T, Lendvai N, Patel N, Ishida T, Er J, Harrison SJ. Ciltacabtagene Autoleucel Versus Idecabtagene Vicleucel in Triple-Class-Exposed Relapsed/Refractory Multiple Myeloma with 2-4 Prior Lines of Therapy: Updated Matching-Adjusted Indirect Comparison. Adv Ther. 2026 Mar;43(3):1327-1340. doi: 10.1007/s12325-025-03479-y. Epub 2026 Feb 2.",
+        "pmid": "41627370",
+        "type": "DERIVED"
       },
       {
-        "citation": "Weiss J, Goldschmidt J, Andric Z, Dragnev KH, Gwaltney C, Skaltsa K, Pritchett Y, Antal JM, Morris SR, Daniel D. Effects of Trilaciclib on Chemotherapy-Induced Myelosuppression and Patient-Reported Outcomes in Patients with Extensive-Stage Small Cell Lung Cancer: Pooled Results from Three Phase II Randomized, Double-Blind, Placebo-Controlled Studies. Clin Lung Cancer. 2021 Sep;22(5):449-460. doi: 10.1016/j.cllc.2021.03.010. Epub 2021 Mar 26.",
-        "pmid": "33895103",
-        "type": "BACKGROUND"
+        "citation": "Jagannath S, Martin TG, Lin Y, Cohen AD, Raje N, Htut M, Deol A, Agha M, Berdeja JG, Lesokhin AM, Liegel JJ, Rossi A, Lieberman-Cribbin A, Usmani SZ, Dhakal B, Parekh S, Li H, Wang F, Montes de Oca R, Plaks V, Sun H, Banerjee A, Schecter JM, Lendvai N, Madduri D, Lengil T, Zhu J, Koneru M, Akram M, Patel N, Costa Filho O, Jakubowiak AJ, Voorhees PM. Long-Term (>/=5-Year) Remission and Survival After Treatment With Ciltacabtagene Autoleucel in CARTITUDE-1 Patients With Relapsed/Refractory Multiple Myeloma. J Clin Oncol. 2025 Sep;43(25):2766-2771. doi: 10.1200/JCO-25-00760. Epub 2025 Jun 3.",
+        "pmid": "40459151",
+        "type": "DERIVED"
       },
       {
-        "citation": "Abraham I, Onyekwere U, Deniz B, Moran D, Chioda M, MacDonald K, Huang H. Trilaciclib and the economic value of multilineage myeloprotection from chemotherapy-induced myelosuppression among patients with extensive-stage small cell lung cancer treated with first-line chemotherapy. J Med Econ. 2021 Nov;24(sup1):71-83. doi: 10.1080/13696998.2021.2014163.",
-        "pmid": "34873975",
+        "citation": "Palmer S, Lin Y, Martin TG, Jagannath S, Jakubowiak A, Usmani SZ, Buyukkaramikli N, Phelps H, Slowik R, Pan F, Valluri S, Pacaud L, Jackson G. Extrapolation of Survival Data Using a Bayesian Approach: A Case Study Leveraging External Data from Cilta-Cel Therapy in Multiple Myeloma. Oncol Ther. 2023 Sep;11(3):313-326. doi: 10.1007/s40487-023-00230-x. Epub 2023 Jun 4.",
+        "pmid": "37270762",
         "type": "DERIVED"
       }
     ]
@@ -747,8 +761,8 @@
       "Dexamethasone",
       "Daratumumab"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Hematologic (Multiple Myeloma)",
+    "category": "Oncology",
+    "subtype": "Hematologic Malignancies",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "United States (US FDA)",
@@ -804,7 +818,7 @@
     "acronym": "ZUMA-1",
     "briefTitle": "Study Evaluating the Safety and Efficacy of KTE-C19 in Adult Participants With Refractory Aggressive Non-Hodgkin Lymphoma",
     "officialTitle": "A Phase 1/2 Multicenter Study Evaluating the Safety and Efficacy of KTE-C19 in Adults With Refractory Aggressive Non-Hodgkin Lymphoma",
-    "phase": "Phase 1, PHASE2",
+    "phase": "Phase 1, Phase 2",
     "status": "COMPLETED",
     "isCompleted": true,
     "sponsor": "Kite, A Gilead Company",
@@ -836,8 +850,8 @@
       "Cisplatin",
       "Methylprednisolone"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Hematologic (Large B-Cell Lymphoma)",
+    "category": "Oncology",
+    "subtype": "Hematologic Malignancies",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "United States (US FDA)",
@@ -903,7 +917,7 @@
   },
   {
     "nctId": "NCT03574597",
-    "acronym": "STEP 1",
+    "acronym": "SELECT",
     "briefTitle": "Semaglutide Effects on Heart Disease and Stroke in Patients With Overweight or Obesity",
     "officialTitle": "SELECT - Semaglutide Effects on Cardiovascular Outcomes in People With Overweight or Obesity",
     "phase": "Phase 3",
@@ -918,7 +932,7 @@
       "Semaglutide",
       "Placebo (semaglutide)"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -971,7 +985,7 @@
   },
   {
     "nctId": "NCT03552718",
-    "acronym": "SELECT",
+    "acronym": "YE-NEO-001",
     "briefTitle": "QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.",
     "officialTitle": "QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.",
     "phase": "Phase 1",
@@ -990,9 +1004,9 @@
     "interventions": [
       "YE-NEO-001"
     ],
-    "category": "Cardiovascular & Metabolic",
-    "subtype": "Obesity & Cardiovascular Outcomes",
-    "modality": "Incretin Mimetics (GLP-1 / GIP)",
+    "category": "Oncology",
+    "subtype": "Breast Cancer",
+    "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "United States (US FDA)"
     ],
@@ -1044,7 +1058,7 @@
       "Tirzepatide",
       "Placebo"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -1098,7 +1112,7 @@
   },
   {
     "nctId": "NCT03057977",
-    "acronym": "DAPA-HF",
+    "acronym": "EMPEROR-Reduced",
     "briefTitle": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)",
     "officialTitle": "A Phase III Randomised, Double-blind Trial to Evaluate Efficacy and Safety of Once Daily Empagliflozin 10 mg Compared to Placebo, in Patients With Chronic Heart Failure With Reduced Ejection Fraction (HFrEF)",
     "phase": "Phase 3",
@@ -1112,9 +1126,9 @@
       "Empagliflozin",
       "Placebo"
     ],
-    "category": "Cardiovascular & Metabolic",
-    "subtype": "Heart Failure (HFrEF)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "category": "Cardiometabolic & Endocrinology",
+    "subtype": "Heart Failure",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -1183,8 +1197,8 @@
       "Topotecan",
       "Pegylated liposomal doxorubicin"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Gynecologic (Ovarian Cancer)",
+    "category": "Oncology",
+    "subtype": "Solid Tumors",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "United States (US FDA)",
@@ -1231,7 +1245,7 @@
   },
   {
     "nctId": "NCT03422523",
-    "acronym": "POLARIX",
+    "acronym": "ARGO",
     "briefTitle": "Atezolizumab, Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory DLBCL Not Suitable for High-dose Therapy",
     "officialTitle": "A Phase II Study of Atezolizumab With Rituximab, Gemcitabine and Oxaliplatin in Patients With Relapsed or Refractory Diffuse Large B-Cell Lymphoma Who Are Not Candidates for High-dose Therapy",
     "phase": "Phase 2",
@@ -1249,9 +1263,9 @@
       "Gemcitabine 1000 mg",
       "Oxaliplatin 100 MG"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Hematologic (Diffuse Large B-Cell Lymphoma)",
-    "modality": "Antibody-Drug Conjugates (ADC)",
+    "category": "Oncology",
+    "subtype": "Hematologic Malignancies",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United Kingdom (MHRA)"
     ],
@@ -1282,51 +1296,71 @@
     "publications": []
   },
   {
-    "nctId": "NCT03355911",
-    "acronym": "CodeBreaK 200",
-    "briefTitle": "Preoperative Corneal Thickness and Postoperative Visual Outcomes After Posterior Lamellar Corneal Transplant",
-    "officialTitle": "Relationship Between Preoperative Corneal Thickness and Postoperative",
+    "nctId": "NCT04303780",
+    "acronym": "CodeBreak-200",
+    "briefTitle": "Study to Compare AMG 510 \"Proposed INN Sotorasib\" With Docetaxel in Non Small Cell Lung Cancer (NSCLC) (CodeBreak 200).",
+    "officialTitle": "A Phase 3 Multicenter, Randomized, Open Label, Active-controlled, Study of AMG 510 Versus Docetaxel for the Treatment of Previously Treated Locally Advanced and Unresectable or Metastatic NSCLC Subjects With Mutated KRAS p.G12C",
     "phase": "Phase 3",
     "status": "COMPLETED",
     "isCompleted": true,
-    "sponsor": "Centre Hospitalier Régional Metz-Thionville",
+    "sponsor": "Amgen",
     "conditions": [
-      "Corneal Changes of Membranes"
+      "KRAS p, G12c Mutated /Advanced Metastatic NSCLC"
     ],
-    "interventions": [],
-    "category": "Oncology & Hematology",
-    "subtype": "Lung Cancer (KRAS G12C NSCLC)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "interventions": [
+      "AMG 510",
+      "Docetaxel"
+    ],
+    "category": "Oncology",
+    "subtype": "Lung Cancer (KRAS G12C)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
-      "Global Multi-Center"
+      "United States (US FDA)",
+      "European Union (EU CTIS)",
+      "United Kingdom (MHRA)",
+      "Nordic Cluster (SE, DK, NO, FI)",
+      "Asia-Pacific (APAC)"
     ],
-    "completionDate": "2017-05-30",
-    "year": 2017,
-    "enrollment": 113,
+    "completionDate": "2026-06-24",
+    "year": 2026,
+    "enrollment": 345,
     "primaryOutcomes": [
       {
-        "measure": "Descemet's stripping endothelial keratoplasty (DSAEK) or Descemet membrane endothelial keratoplasty (DMEK)",
-        "description": "LogMar",
-        "timeFrame": "month 6"
+        "measure": "Progression-free Survival (PFS)",
+        "description": "PFS was defined as the time from randomization (baseline) until disease progression or death from any cause, whichever occurred first for all participants. Progression was based on blinded independent central review (BICR) of disease response per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v1.1).\n\nAs pre-specified in the statistical analysis plan, for participants who crossed over from docetaxel to AMG 510, the participant's response post first progression or post crossover was not used for the primary analyses. Data are presented per original treatment randomized.",
+        "timeFrame": "Baseline up to primary analysis data cut-off date (02 August 2022); max time on study as of primary analysis data cut off was 24.3 months"
       }
     ],
     "inclusionCriteria": [
-      "Clinically indicated need for posterior lamellar graft surgery (DSAEK or DMEK) such as:",
-      "Fuchs dystrophy,",
-      "pseudophakic bullous decompensation",
-      "or other endothelial dysfunction corneal"
+      "Men or women greater than or equal to 18 years old.",
+      "Pathologically documented, previously treated, locally-advanced and unresectable or metastatic NSCLC with KRAS p.G12C mutation confirmed through central testing or have documentation of KRAS p.G12C mutation through Amgen Study 20190294 prior to enrollment"
     ],
     "exclusionCriteria": [
-      "were a history of penetrating keratoplasty in the indicated eye",
-      "the technical inability of preoperative CCT measurement",
-      "the need for a penetrating keratoplasty following endothelial graft failure",
-      "severe postoperative complications resulting in unquantifiable visual acuity"
+      "Active brain metastases",
+      "Myocardial infarction within 6 months of study day 1",
+      "Gastrointestinal (GI) tract disease causing the inability to take oral medication"
     ],
-    "publications": []
+    "publications": [
+      {
+        "citation": "Waterhouse DM, Rothschild S, Dooms C, Mennecier B, Bozorgmehr F, Majem M, van den Heuvel MH, Linardou H, Chul Cho B, Roberts-Thomson R, Tanaka K, Blais N, Schvartsman G, Holmskov Hansen K, Chmielewska I, Forster MD, Giannopoulou C, Stollenwerk B, Obiozor CC, Wang Y, Novello S. Patient-reported outcomes in CodeBreaK 200: Sotorasib versus docetaxel for previously treated advanced NSCLC with KRAS G12C mutation. Lung Cancer. 2024 Oct;196:107921. doi: 10.1016/j.lungcan.2024.107921. Epub 2024 Aug 6.",
+        "pmid": "39303400",
+        "type": "BACKGROUND"
+      },
+      {
+        "citation": "Skoulidis F, Li BT, Hochmair M, Govindan R, Vincent M, van der Wekken AJ, Reguart Aransay N, O'Byrne KJ, Girard N, Griesinger F, Nishio M, Hafliger S, Lindsay C, Reinmuth N, Paulus A, Papakotoulas P, Kim SW, Ferreira CG, Pasello G, Duruisseaux M, Gennatas S, Dimou A, Mehta B, Kormany W, Nduka C, Sylvester BE, Ardito-Abraham C, Wang Y, de Langen AJ. Pooled safety analysis and management of sotorasib-related adverse events in KRAS G12C-mutated advanced non-small cell lung cancer. Oncologist. 2025 Jan 17;30(1):oyae356. doi: 10.1093/oncolo/oyae356.",
+        "pmid": "39846981",
+        "type": "BACKGROUND"
+      },
+      {
+        "citation": "Skoulidis F, Li BT, de Langen AJ, Hong DS, Lena H, Wolf J, Dy GK, Curioni Fontecedro A, Tomasini P, Velcheti V, van der Wekken AJ, Dooms C, Paz-Ares Rodriguez L, Mountzios G, Sacher A, Nadal E, Couraud S, Kim SW, O'Byrne K, Rocco D, Toyozawa R, Chmielewska I, Lindsay CR, Hindoyan A, Mukundan L, Wilmanski T, Anderson A, Ardito-Abraham C, Pati A, Reddy A, Mehta B, Schuler M. Molecular determinants of sotorasib clinical efficacy in KRASG12C-mutated non-small-cell lung cancer. Nat Med. 2025 Aug;31(8):2755-2767. doi: 10.1038/s41591-025-03732-5. Epub 2025 May 28.",
+        "pmid": "40437272",
+        "type": "BACKGROUND"
+      }
+    ]
   },
   {
     "nctId": "NCT00017290",
-    "acronym": "",
+    "acronym": "NCT00017290",
     "briefTitle": "Combination Chemotherapy Followed By Vaccine Therapy Plus Sargramostim in Treating Patients With Stage III or Stage IV Non-Hodgkin's Lymphoma",
     "officialTitle": "A Phase III Trial To Evaluate The Safety And Efficacy Of Specific Immunotherapy, Recombinant Idiotype Conjugated To KLH With GM-CSF, Compared To Non-Specific Immunotherapy, KLH With GM-CSF, In Patients With Follicular Non-Hodgkin's Lymphoma",
     "phase": "Phase 3",
@@ -1344,7 +1378,7 @@
       "prednisone",
       "vincristine sulfate"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
@@ -1372,7 +1406,7 @@
   },
   {
     "nctId": "NCT02545868",
-    "acronym": "",
+    "acronym": "NCT02545868",
     "briefTitle": "A Study to Evaluate the Effects of Ocrelizumab on Immune Responses In Participants With Relapsing Forms of Multiple Sclerosis",
     "officialTitle": "A Phase IIIB, Multicenter, Randomized, Parallel-Group, Open-Label Study to Evaluate the Effects of Ocrelizumab on Immune Responses in Patients With Relapsing Forms of Multiple Sclerosis",
     "phase": "Phase 3",
@@ -1390,8 +1424,8 @@
       "OCR",
       "TT Vaccine"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
       "United States (US FDA)"
@@ -1427,7 +1461,7 @@
   },
   {
     "nctId": "NCT05721456",
-    "acronym": "",
+    "acronym": "NCT05721456",
     "briefTitle": "Evaluation of the Non-Inferiority of a 12-Valent Pneumococcal Conjugate Vaccine in Healthy Children in Brazil.",
     "officialTitle": "A Phase 3, Randomized, Partially-Blind, Clinical Trial to Evaluate the Non-Inferiority of a 12-Valent Pneumococcal Conjugate Vaccine in Healthy Children in Brazil, Compared to 10- and 13-Valent Pneumococcal Conjugate Vaccines",
     "phase": "Phase 3",
@@ -1440,8 +1474,8 @@
     "interventions": [
       "12-Valent Pneumococcal Conjugate Vaccine"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "Global Multi-Center"
@@ -1474,7 +1508,7 @@
   },
   {
     "nctId": "NCT00678301",
-    "acronym": "",
+    "acronym": "NCT00678301",
     "briefTitle": "Primary Vaccination Course in Children Receiving the Pneumococcal Vaccine GSK 1024850A, Zilbrix™ Hib and Polio Sabin™",
     "officialTitle": "Primary Vaccination Course in Children Receiving the Pneumococcal Vaccine GSK 1024850A Co-administered With Zilbrix™ Hib and Polio Sabin™",
     "phase": "Phase 3",
@@ -1489,8 +1523,8 @@
       "GSK Biologicals' Polio Sabin™",
       "GSK Biologicals' Zilbrix™ Hib"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
       "Global Multi-Center"
@@ -1543,7 +1577,7 @@
   },
   {
     "nctId": "NCT01026038",
-    "acronym": "",
+    "acronym": "13vPnC",
     "briefTitle": "Study Evaluating Antibody Response Of 13-Valent Pneumococcal Conjugate Vaccine (13vPnC) 24 Months After Toddler Dose.",
     "officialTitle": "A Phase 3, Open-label Study to Evaluate Persistence of the Antibody Response Elicited by Pneumococcal Conjugate Vaccine in Healthy Children Who Have Been Previously Immunized With a 4-Dose Series of a Pneumococcal Conjugate Vaccine During Infancy in Study 6096A1-008-EU and the Safety and Immunogenicity of 13-valent Pneumococcal Conjugate Vaccine Administered at Least 24 Months After the Last Toddler Dose of Pneumococcal Conjugate Vaccine",
     "phase": "Phase 3",
@@ -1559,8 +1593,8 @@
     "interventions": [
       "13-valent pneumococcal conjugate vaccine"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "European Union (EU CTIS)"
@@ -1598,7 +1632,7 @@
   },
   {
     "nctId": "NCT03907488",
-    "acronym": "",
+    "acronym": "Opdivo",
     "briefTitle": "Immunotherapy (Nivolumab or Brentuximab Vedotin) Plus Combination Chemotherapy in Treating Patients With Newly Diagnosed Stage III-IV Classic Hodgkin Lymphoma",
     "officialTitle": "A Phase III, Randomized Study of Nivolumab (Opdivo) Plus AVD or Brentuximab Vedotin (Adcetris) Plus AVD in Patients (Age &gt;/= 12 Years) With Newly Diagnosed Advanced Stage Classical Hodgkin Lymphoma",
     "phase": "Phase 3",
@@ -1633,7 +1667,7 @@
       "Radiation Therapy",
       "Vinblastine Sulfate"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
@@ -1678,7 +1712,7 @@
   },
   {
     "nctId": "NCT06990503",
-    "acronym": "",
+    "acronym": "NCT06990503",
     "briefTitle": "SHR - A1811 Versus Chemotherapy for Platinum-resistant Recurrent Epithelial Ovarian Cancer",
     "officialTitle": "An Open-label, Randomized, Multicenter Phase III Clinical Trial of SHR - A1811 Versus Investigator's Choice of Chemotherapy in the Treatment of Platinum-resistant Recurrent Epithelial Ovarian Cancer, Fallopian Tube Cancer, or Primary Peritoneal Cancer With HER2 Expression",
     "phase": "Phase 3",
@@ -1692,8 +1726,8 @@
       "SHR-A1811",
       "Chemotherapy"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Gynecologic Cancers",
+    "category": "Oncology",
+    "subtype": "Solid Tumors",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
       "Asia-Pacific (APAC)"
@@ -1726,7 +1760,7 @@
   },
   {
     "nctId": "NCT06265428",
-    "acronym": "",
+    "acronym": "Dynasty-Breast01",
     "briefTitle": "A Study to Compare DB-1303/BNT323 Versus T-DM1 in Breast Cancer",
     "officialTitle": "A Phase III, Multicenter, Open-label, Randomized Study to Compare DB-1303 Versus T-DM1 in Patients With HER2-positive Unresectable/Metastatic Breast Cancer Who Have Been Treated With Trastuzumab and a Taxane (Dynasty-Breast01)",
     "phase": "Phase 3",
@@ -1740,9 +1774,9 @@
       "DB-1303/BNT323",
       "T-DM1"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Breast Cancer",
-    "modality": "Biological Products & Targeted Therapies",
+    "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "Asia-Pacific (APAC)"
     ],
@@ -1790,7 +1824,7 @@
       "Bortezomib",
       "Dexamethasone"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -1824,10 +1858,10 @@
   },
   {
     "nctId": "NCT07718737",
-    "acronym": "",
+    "acronym": "NCT07718737",
     "briefTitle": "Global, Multicenter Study of AMT-116 Versus Investigator's Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy",
     "officialTitle": "Open-Label, Global, Multicenter, Randomized, Phase 2/3 Study of AMT-116 Versus Investigator's Choice in Participants With Advanced or Metastatic Non-squamous EGFR-Wildtype Non-Small Cell Lung Cancer (NSCLC) With Progression on or After Platinum-Based Chemotherapy and Anti-PD-1/PD-L1 Immunotherapy",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "NOT YET RECRUITING",
     "isCompleted": false,
     "sponsor": "Multitude Therapeutics Inc.",
@@ -1838,9 +1872,9 @@
       "AMT-116",
       "Investigator's choice regimens (docetaxel or docetaxel plus ramucirumab)"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (EGFR-Mutated)",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "Asia-Pacific (APAC)"
@@ -1873,7 +1907,7 @@
   },
   {
     "nctId": "NCT01154088",
-    "acronym": "",
+    "acronym": "Blinded Lots",
     "briefTitle": "Immunogenicity and Safety of Meningococcal Vaccine GSK 134612 Versus Mencevax™ ACWY in Healthy 18-25 Year Olds",
     "officialTitle": "Immunogenicity and Safety Study of One Dose of GSK Biologicals' Meningococcal Vaccine GSK 134612 (Blinded Lots) Versus One Dose of Mencevax™ ACWY in Healthy Subjects Aged 18-25 Years",
     "phase": "Phase 3",
@@ -1887,8 +1921,8 @@
       "Mencevax ACWY",
       "GSK Biologicals' meningococcal serogroup A, C, W-135, Y tetanus toxoid conjugate investigational vaccine [GSK 134612]"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "Global Multi-Center"
@@ -1932,7 +1966,7 @@
   },
   {
     "nctId": "NCT01692886",
-    "acronym": "",
+    "acronym": "13vPnC",
     "briefTitle": "A Study Evaluating 13-Valent Pneumococcal Conjugate Vaccine (13vPnC) In Healthy Infants In China",
     "officialTitle": "A Phase 3, Randomized, Active-controlled, Trial Evaluating The Safety, Tolerability, And Immunogenicity Of A 13vpnc Compared With A 7vpnc In Healthy Infants In China",
     "phase": "Phase 3",
@@ -1948,8 +1982,8 @@
       "13-valent Pnumococcal Conjugate vaccine",
       "13-valent Pnumococcal Conjugate vaccine"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "Asia-Pacific (APAC)"
@@ -2033,7 +2067,7 @@
   },
   {
     "nctId": "NCT01917357",
-    "acronym": "",
+    "acronym": "NCT01917357",
     "briefTitle": "A Comparison of the Immunogenicity and Safety of Quinvaxem in Mono-dose Vials and Uniject",
     "officialTitle": "A Phase III, Open-label, Randomized Parallel-group Study on the Immunogenicity and Safety of Quinvaxem® DTwP-HepB-Hib) in Uniject™ With Quinvaxem® Monodose Vials in Healthy Infants at 6, 10 and 14 Weeks of Age",
     "phase": "Phase 3",
@@ -2051,8 +2085,8 @@
       "Quinvaxem in Uniject",
       "Quinvaxem in single dose vials"
     ],
-    "category": "Neurology & CNS",
-    "subtype": "Neurodegenerative Disease",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
       "Global Multi-Center"
@@ -2105,7 +2139,7 @@
   },
   {
     "nctId": "NCT01964716",
-    "acronym": "",
+    "acronym": "NCT01964716",
     "briefTitle": "13vPnC Multidose Vial Safety, Tolerability and Immunogenicity Study in Healthy Infants.",
     "officialTitle": "A Phase 3, Randomized, Open-label Trial To Evaluate The Safety, Tolerability And Immunogenicity Of 13-valent Pneumococcal Conjugate Vaccine Formulated In Multidose Vials Given With Routine Pediatric Vaccinations In Healthy Infants",
     "phase": "Phase 3",
@@ -2119,8 +2153,8 @@
       "13-valent pneumococcal conjugate vaccine",
       "13-valent pneumococcal conjugate vaccine"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "Global Multi-Center"
@@ -2217,9 +2251,9 @@
       "Cetuximab (EGFR inhibitor)",
       "Docetaxel"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Solid Tumors",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -2259,7 +2293,7 @@
   },
   {
     "nctId": "NCT01310413",
-    "acronym": "",
+    "acronym": "NCT01310413",
     "briefTitle": "Monovalent H5N1 Vaccine GSK1557484A in Children 6 Months to < 18 Years of Age",
     "officialTitle": "Safety and Immunogenicity of Monovalent H5N1 Vaccine GSK1557484A in Children 6 Months to < 18 Years of Age",
     "phase": "Phase 3",
@@ -2274,8 +2308,8 @@
       "Influenza A (H5N1) Virus monovalent vaccine",
       "Saline placebo"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
       "United States (US FDA)"
@@ -2318,7 +2352,7 @@
   },
   {
     "nctId": "NCT00368966",
-    "acronym": "",
+    "acronym": "NCT00368966",
     "briefTitle": "Study to Evaluate a 13-valent Pneumococcal Conjugate Vaccine in Infants.",
     "officialTitle": "A Phase 3, Randomized, Active-Controlled, Double-blind Trial Evaluating the Safety, Tolerability, and Immunogenicity of a 13-valent Pneumococcal Conjugate Vaccine in Healthy Infants Given With Routine Pediatric Vaccinations in Spain",
     "phase": "Phase 3",
@@ -2332,8 +2366,8 @@
       "13-valent Pneumococcal Conjugate Vaccine",
       "7-valent Pneumococcal Conjugate Vaccine"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
       "European Union (EU CTIS)"
@@ -2436,7 +2470,7 @@
       "Optimized High Phenolic Content Oil (OHPCO)",
       "Functional Olive Oil (FOO)"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Cardiometabolic",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -2529,7 +2563,7 @@
   },
   {
     "nctId": "NCT07160244",
-    "acronym": "",
+    "acronym": "NCT07160244",
     "briefTitle": "BEATRIX: A Study to Learn About a Group B Streptococcus Vaccine in Healthy Pregnant Women and Their Babies",
     "officialTitle": "A PHASE 3, RANDOMIZED, PLACEBO-CONTROLLED, DOUBLE-BLINDED TRIAL TO EVALUATE THE SAFETY, TOLERABILITY, AND IMMUNOGENICITY OF A MULTIVALENT GROUP B STREPTOCOCCUS VACCINE IN HEALTHY PREGNANT WOMEN AND THEIR INFANTS",
     "phase": "Phase 3",
@@ -2548,8 +2582,8 @@
       "Prevnar 20",
       "Infanrix"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
       "United States (US FDA)",
@@ -2645,7 +2679,7 @@
   },
   {
     "nctId": "NCT01641133",
-    "acronym": "",
+    "acronym": "NCT01641133",
     "briefTitle": "Primary Vaccination With Either Synflorix™ or Prevenar 13™ or Both Vaccines and Booster Vaccination With Synflorix™",
     "officialTitle": "Two-dose Primary Vaccination With Either GSK Biologicals' 10-valent Pneumococcal Vaccine (Synflorix™) or Pfizer's Prevenar 13™ or Both Vaccines Followed by a Booster Dose of Synflorix™",
     "phase": "Phase 3",
@@ -2663,8 +2697,8 @@
       "Prevenar 13 (Single Dose)",
       "Prevenar 13 (2-Dose)"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
       "Global Multi-Center"
@@ -2724,9 +2758,9 @@
       "Prednisone",
       "Bendamustine"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
-    "modality": "Biological Products & Targeted Therapies",
+    "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -2775,8 +2809,8 @@
       "NXC-201",
       "Dara-CyBorD"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
       "Global Multi-Center"
@@ -2813,10 +2847,10 @@
   },
   {
     "nctId": "NCT06154252",
-    "acronym": "",
+    "acronym": "CABA-201",
     "briefTitle": "RESET-Myositis: An Open-Label Study to Evaluate the Safety and Efficacy of CABA-201 in Subjects With Active Idiopathic Inflammatory Myopathy or Juvenile Idiopathic Inflammatory Myopathy",
     "officialTitle": "A Phase 1/2, Open-Label Study to Evaluate the Safety and Efficacy of Autologous CD19-specific Chimeric Antigen Receptor T Cells (CABA-201) in Subjects With Active Idiopathic Inflammatory Myopathy or Juvenile Idiopathic Inflammatory Myopathy",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "RECRUITING",
     "isCompleted": false,
     "sponsor": "Cabaletta Bio",
@@ -2833,8 +2867,8 @@
     "interventions": [
       "CABA-201 following preconditioning with fludarabine and cyclophosphamide"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
       "United States (US FDA)",
@@ -2902,7 +2936,7 @@
       "Bortezomib",
       "Pomalidomide"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
@@ -2965,7 +2999,7 @@
       "Daratumumab",
       "Carfilzomib"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
@@ -2994,7 +3028,7 @@
       "Received 1 to 3 prior lines of antimyeloma therapy, including an immunomodulatory drug (IMiD) and an anti-cluster of differentiation 38 (CD38) monoclonal antibody (mAb). A minimum of 2 consecutive cycles of an IMiD and an anti-CD38 mAb in any prior line of therapy is required. The IMiD and anti-CD38 mAb do not need to be from the same regimen in the prior line(s) of therapy.",
       "Documented evidence of progressive disease by IMWG criteria based on the investigator's determination on or within 12 months of the last dose of the last regimen",
       "Measurable disease at screening per IMWG, defined as any of the following:",
-      "Serum M-protein level ≥ 0.5 g/dL or urine M-protein level ≥ 200 mg/24 hours; or"
+      "Serum M-protein level ≥ 0.5 g/dL or urine M-protein level �� 200 mg/24 hours; or"
     ],
     "exclusionCriteria": [
       "Prior B-cell maturation antigen (BCMA)-targeted therapy",
@@ -3007,7 +3041,7 @@
   },
   {
     "nctId": "NCT06615479",
-    "acronym": "",
+    "acronym": "QUINTESSENTIAL-2",
     "briefTitle": "A Study to Compare the Efficacy and Safety of BMS-986393 Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma (QUINTESSENTIAL-2)",
     "officialTitle": "A Phase 3, Randomized, Open-Label, Multicenter Study to Compare the Efficacy and Safety of Arlocabtagene Autoleucel (BMS-986393), a GPRC5D-directed CAR-T Cell Therapy, Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma",
     "phase": "Phase 3",
@@ -3026,7 +3060,7 @@
       "Dexamethasone",
       "Carfilzomib"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -3063,7 +3097,7 @@
   },
   {
     "nctId": "NCT07441291",
-    "acronym": "",
+    "acronym": "NCT07441291",
     "briefTitle": "CD19 CAR-T vs DLI for Post-HSCT MRD in Ph- ALL: A RCT",
     "officialTitle": "CD19 Chimeric Antigen Receptor T-Cell Therapy Versus Donor Lymphocyte Infusion for Minimal Residual Disease in Patients With Ph-Negative Acute B-Lymphoblastic Leukemia After Hematopoietic Stem Cell Transplantation: A Prospective, Open-Label, Randomized Controlled Trial",
     "phase": "Phase 3",
@@ -3079,8 +3113,8 @@
       "CAR-T",
       "DLI"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Hematologic Malignancies",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "Asia-Pacific (APAC)"
@@ -3133,9 +3167,9 @@
       "Vincristine",
       "Prednisone"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
-    "modality": "Biological Products & Targeted Therapies",
+    "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -3170,10 +3204,10 @@
   },
   {
     "nctId": "NCT03117751",
-    "acronym": "",
+    "acronym": "NCT03117751",
     "briefTitle": "Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma",
     "officialTitle": "Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "ACTIVE NOT RECRUITING",
     "isCompleted": false,
     "sponsor": "St. Jude Children's Research Hospital",
@@ -3206,7 +3240,7 @@
       "Asparaginase Erwinia chrysanthemi (recombinant)-rywn",
       "Calaspargase Pegol"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -3254,7 +3288,7 @@
   },
   {
     "nctId": "NCT07186192",
-    "acronym": "",
+    "acronym": "CAR-T",
     "briefTitle": "Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor (CAR-T) Therapy",
     "officialTitle": "Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor-T Cell (CAR-T)Therapy",
     "phase": "Phase 3",
@@ -3270,8 +3304,8 @@
       "Questionnaire Administration",
       "Best Practice"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "United States (US FDA)"
@@ -3303,7 +3337,7 @@
   },
   {
     "nctId": "NCT05802992",
-    "acronym": "",
+    "acronym": "NCT05802992",
     "briefTitle": "The Efficacy and Safety of Colchicine Combined With Conventional Therapy in Multiple Myeloma Patients",
     "officialTitle": "A Single-center Clinical Trial to Evaluate the Efficacy and Safety of Colchicine Combined With Conventional Therapy in Multiple Myeloma Patients",
     "phase": "Phase 3",
@@ -3317,7 +3351,7 @@
       "Colchicine",
       "Lenalidomide"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -3391,7 +3425,7 @@
       "Melphalan (part of ASCT)",
       "Lenalidomide"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -3437,7 +3471,7 @@
     "acronym": "NexCAR19",
     "briefTitle": "NexCAR19 (Talikabtagene Autoleucel) in Relapsed/Refractory B-Cell Malignancies (NexCAR19)",
     "officialTitle": "An Open-Label, Multicenter Phase 2-3 Clinical Study of Anti-CD19 Chimeric Antigen Receptor T Cells (Talikabtagene Autoleucel) in Patients With Relapsed/Refractory B-Cell Malignancies (NexCAR19)",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "RECRUITING",
     "isCompleted": false,
     "sponsor": "Health Institutes of Turkey",
@@ -3451,7 +3485,7 @@
     "interventions": [
       "Talikabtagene Autoleucel"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
@@ -3495,7 +3529,7 @@
   },
   {
     "nctId": "NCT04287660",
-    "acronym": "",
+    "acronym": "Biaxin",
     "briefTitle": "Study of BiRd Regimen Combined With BCMA CAR T-cell Therapy in Newly Diagnosed Multiple Myeloma (MM) Patients",
     "officialTitle": "A Phase 3, Single Arm, Multi-Center Study to Assess the Efficacy and Safety of Clarithromycin(Biaxin)-Lenalidomide-Low-Dose-Dexamethasone (BiRd) Combined With B-cell Maturation Antigen (BCMA)-Directed Chimeric Antigen Receptor (CAR) T-cell Therapy in Patients With Newly Diagnosed Multiple Myeloma",
     "phase": "Phase 3",
@@ -3508,7 +3542,7 @@
     "interventions": [
       "clarithromycin, lenalidomide, dexamethasone and autologous BCMA-directed CAR T-cells"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
@@ -3542,7 +3576,7 @@
   },
   {
     "nctId": "NCT07479797",
-    "acronym": "",
+    "acronym": "NCT07479797",
     "briefTitle": "Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy",
     "officialTitle": "A Phase 3, Randomized, Open-Label, Multicenter Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy",
     "phase": "Phase 3",
@@ -3558,9 +3592,9 @@
       "Fludarabine",
       "Cyclophosphamide"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
-    "modality": "Biological Products & Targeted Therapies",
+    "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -3600,10 +3634,10 @@
   },
   {
     "nctId": "NCT04442022",
-    "acronym": "",
+    "acronym": "R-GDP",
     "briefTitle": "A Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma",
     "officialTitle": "A Phase 2/3, Multicenter Randomized Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma (RR DLBCL)",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "ACTIVE NOT RECRUITING",
     "isCompleted": false,
     "sponsor": "Karyopharm Therapeutics Inc",
@@ -3623,7 +3657,7 @@
       "Selinexor (continuous therapy)",
       "Placebo matching for Selinexor (continuous therapy)"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -3677,8 +3711,8 @@
     "interventions": [
       "GLPG CAR T-cell therapy"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "United States (US FDA)",
@@ -3730,7 +3764,7 @@
   },
   {
     "nctId": "NCT05020392",
-    "acronym": "",
+    "acronym": "NCT05020392",
     "briefTitle": "Autologous Cells Derived Anti-CD19 CAR-Engineered T Cells With Concurrent BTK Inhibitor for B Cell Lymphoma",
     "officialTitle": "Efficacy and Safety of Autologous Cells Derived Anti-CD19 CAR-Engineered T Cells With Concurrent BTK Inhibitor for B Cell Lymphoma：a Single-center, Open-label, Pragmatic Clinical Trial",
     "phase": "Phase 3",
@@ -3748,7 +3782,7 @@
       "BTK inhibitor+ Fludarabine-based chemotherapy + CAR-T-CD19 Cells",
       "Fludarabine-based chemotherapy + CAR-T-CD19 Cells"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
@@ -3798,10 +3832,10 @@
   },
   {
     "nctId": "NCT06328777",
-    "acronym": "",
+    "acronym": "CABA-201",
     "briefTitle": "RESET-SSc: An Open-Label Study to Evaluate the Safety and Efficacy of CABA-201, a CD19-CAR T Cell Therapy, in Subjects With Systemic Sclerosis",
     "officialTitle": "A Phase 1/2, Open-Label Study to Evaluate the Safety and Efficacy of Autologous CD19-specific Chimeric Antigen Receptor T Cells (CABA-201) in Subjects With Systemic Sclerosis",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "RECRUITING",
     "isCompleted": false,
     "sponsor": "Cabaletta Bio",
@@ -3814,9 +3848,9 @@
       "CABA-201",
       "CABA-201"
     ],
-    "category": "Oncology & Hematology",
-    "subtype": "Specialized Therapeutic Indication",
-    "modality": "Biological Products & Targeted Therapies",
+    "category": "Rare Disease & Immunology",
+    "subtype": "Specialized Indication",
+    "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
       "United States (US FDA)",
       "United Kingdom (MHRA)"
@@ -3852,10 +3886,10 @@
   },
   {
     "nctId": "NCT04257175",
-    "acronym": "",
+    "acronym": "AML",
     "briefTitle": "CAR-T CD19 for Acute Myelogenous Leukemia With t 8:21 and CD19 Expression",
     "officialTitle": "Giving CAR-T CD19 Transgenic T Cells for Acute Myeloid Leukemia Patients (AML) With t 8:21 and CD19 Expression",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "UNKNOWN",
     "isCompleted": false,
     "sponsor": "Sheba Medical Center",
@@ -3865,7 +3899,7 @@
     "interventions": [
       "CAR-T CD19"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Hematologic Malignancies",
     "modality": "Cell & Gene Therapy (CAR-T)",
     "regions": [
@@ -3925,7 +3959,7 @@
       "Semaglutide Injectable Product",
       "Placebo"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -3984,7 +4018,7 @@
       "Ixekizumab",
       "Tirzepatide"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4041,7 +4075,7 @@
       "Tirzepatide",
       "Placebo"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Type 2 Diabetes",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4080,7 +4114,7 @@
   },
   {
     "nctId": "NCT04847557",
-    "acronym": "",
+    "acronym": "LY3298176",
     "briefTitle": "A Study of Tirzepatide (LY3298176) in Participants With Heart Failure With Preserved Ejection Fraction (HFpEF) and Obesity: The SUMMIT Trial",
     "officialTitle": "A Randomized, Double-Blind, Placebo-Controlled, Phase 3 Study Comparing the Efficacy and Safety of Tirzepatide Versus Placebo in Patients With Heart Failure With Preserved Ejection Fraction and Obesity (SUMMIT)",
     "phase": "Phase 3",
@@ -4095,8 +4129,8 @@
       "Tirzepatide",
       "Placebo"
     ],
-    "category": "Cardiovascular & Metabolic",
-    "subtype": "Obesity & Weight Management",
+    "category": "Cardiometabolic & Endocrinology",
+    "subtype": "Heart Failure",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
       "United States (US FDA)",
@@ -4152,7 +4186,7 @@
   },
   {
     "nctId": "NCT07064486",
-    "acronym": "",
+    "acronym": "NCT07064486",
     "briefTitle": "A Study of BGM0504 in Participants With Type 2 Diabetes in Indonesia",
     "officialTitle": "A Phase 3, Randomized, Open Label Trial Comparing Efficacy and Safety of BGM0504 Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Patients With Type 2 Diabetes",
     "phase": "Phase 3",
@@ -4167,7 +4201,7 @@
       "BGM0504",
       "Semaglutide"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Type 2 Diabetes",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4216,7 +4250,7 @@
       "Semaglutide",
       "Placebo"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4266,7 +4300,7 @@
       "Semaglutide",
       "Testosterone Undecanoate"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4324,7 +4358,7 @@
   },
   {
     "nctId": "NCT06946628",
-    "acronym": "",
+    "acronym": "NCT06946628",
     "briefTitle": "New Triple Therapy in Newly Diagnosed Type 2 Diabetes",
     "officialTitle": "Combination Therapy With Semaglutide, Empagliflozin and Pioglitazone Versus Standard Therapy in Newly Diagnosed Type 2 Diabetes: a Multi-center Randomized Controlled Trial",
     "phase": "Phase 3",
@@ -4338,7 +4372,7 @@
       "Group A (triple combination therapy group)",
       "Group B (standard therapy group)"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Type 2 Diabetes",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -4386,7 +4420,7 @@
       "Tirzepatide",
       "Semaglutide"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4447,7 +4481,7 @@
       "Tirzepatide",
       "Semaglutide"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Type 2 Diabetes",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4513,7 +4547,7 @@
       "Tirzepatide",
       "Insulin Lispro (U100)"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Type 2 Diabetes",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4567,7 +4601,7 @@
       "Retatrutide",
       "Tirzepatide"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4598,7 +4632,7 @@
   },
   {
     "nctId": "NCT07150975",
-    "acronym": "",
+    "acronym": "NCT07150975",
     "briefTitle": "Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide (Wegovy®) in Adult Obese or Overweight Subjects",
     "officialTitle": "A Multicenter, Randomized, Open-Label, Parallel-Group Phase III Clinical Study Comparing the Efficacy and Safety of GZR18 Injection and Semaglutide(Wegovy®) in Adult Obese or Overweight Subjects",
     "phase": "Phase 3",
@@ -4612,7 +4646,7 @@
       "GZR18",
       "Semaglutide(Wegovy® )"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4662,7 +4696,7 @@
       "liraglutide",
       "placebo"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Type 2 Diabetes",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4730,7 +4764,7 @@
       "Semaglutide",
       "Tirzepatide"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4770,7 +4804,7 @@
   },
   {
     "nctId": "NCT06780449",
-    "acronym": "",
+    "acronym": "NCT06780449",
     "briefTitle": "A Research Study to Look Into the Long-term Effect on Weight Loss of CagriSema in People With Obesity",
     "officialTitle": "Long-term Efficacy and Safety of Cagrilintide s.c. 2.4 mg in Combination With Semaglutide s.c. 2.4 mg (CagriSema 2.4 mg/2.4 mg) Once Weekly Versus Placebo in Participants With Obesity",
     "phase": "Phase 3",
@@ -4786,7 +4820,7 @@
       "Placebo cagrilintide",
       "Placebo semaglutide"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4832,7 +4866,7 @@
       "Semaglutide",
       "Placebo (semaglutide)"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4891,7 +4925,7 @@
   },
   {
     "nctId": "NCT07834398",
-    "acronym": "",
+    "acronym": "NCT07834398",
     "briefTitle": "Weekly GLP-1 Receptor Agonists in Obese Individuals Without Diabetes",
     "officialTitle": "Evaluating the Efficacy of Various Weekly GLP1receptor Agonist Among Obese Individuals Without Diabetes",
     "phase": "Phase 3",
@@ -4907,7 +4941,7 @@
       "Semagludtide",
       "Tirzepatide"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Obesity & Weight Management",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -4948,7 +4982,7 @@
       "Semaglutide",
       "Placebo"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Cardiometabolic",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -5006,7 +5040,7 @@
       "IcoSema",
       "Semaglutide 1 mg"
     ],
-    "category": "Cardiovascular & Metabolic",
+    "category": "Cardiometabolic & Endocrinology",
     "subtype": "Type 2 Diabetes",
     "modality": "Incretin Mimetics (GLP-1 / GIP)",
     "regions": [
@@ -5055,7 +5089,7 @@
   },
   {
     "nctId": "NCT07554339",
-    "acronym": "",
+    "acronym": "MK-1084",
     "briefTitle": "A Clinical Trial of Calderasib (MK-1084) and Durvalumab in People With Non-Small Cell Lung Cancer (MK-1084-015/KANDLELIT-015)",
     "officialTitle": "A Phase 3, Randomized, Double-blind, Placebo- and Active-Comparator-Controlled Study of MK-1084 Plus Durvalumab Versus Placebo Plus Durvalumab in Participants With Locally Advanced, Unresected KRAS G12C-Mutant Non-Small Cell Lung Cancer Without Disease Progression Following Definitive Platinum-Based Chemoradiotherapy (KANDLELIT-015)",
     "phase": "Phase 3",
@@ -5070,9 +5104,9 @@
       "Durvalumab",
       "Placebo to MK-1084"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (Small Cell)",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -5121,7 +5155,7 @@
       "JDQ443",
       "docetaxel"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (KRAS G12C)",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -5171,9 +5205,9 @@
       "Primary Tumor Resection",
       "Osimertinib"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (EGFR-Mutated)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "Global Multi-Center"
     ],
@@ -5199,7 +5233,7 @@
   },
   {
     "nctId": "NCT07601048",
-    "acronym": "",
+    "acronym": "NCT07601048",
     "briefTitle": "A Trial of HRS-7058 in Advanced or Metastatic Non-Small Cell Lung Cancer Patients Who Have Failed Standard Treatment",
     "officialTitle": "A Randomized, Open-Label, Multicenter Phase III Trial of HRS-7058 Versus the Investigator-Selected KRAS G12C Inhibitor in KRAS G12C-positive Advanced or Metastatic Non-Small Cell Lung Cancer Patients Who Have Failed Standard Treatment",
     "phase": "Phase 3",
@@ -5215,7 +5249,7 @@
       "Garsorasib Tablets",
       "Glecirasib Citrate Tablets"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (KRAS G12C)",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -5248,69 +5282,6 @@
     "publications": []
   },
   {
-    "nctId": "NCT04303780",
-    "acronym": "",
-    "briefTitle": "Study to Compare AMG 510 \"Proposed INN Sotorasib\" With Docetaxel in Non Small Cell Lung Cancer (NSCLC) (CodeBreak 200).",
-    "officialTitle": "A Phase 3 Multicenter, Randomized, Open Label, Active-controlled, Study of AMG 510 Versus Docetaxel for the Treatment of Previously Treated Locally Advanced and Unresectable or Metastatic NSCLC Subjects With Mutated KRAS p.G12C",
-    "phase": "Phase 3",
-    "status": "COMPLETED",
-    "isCompleted": true,
-    "sponsor": "Amgen",
-    "conditions": [
-      "KRAS p, G12c Mutated /Advanced Metastatic NSCLC"
-    ],
-    "interventions": [
-      "AMG 510",
-      "Docetaxel"
-    ],
-    "category": "Oncology & Hematology",
-    "subtype": "Lung Cancer (KRAS G12C)",
-    "modality": "Targeted Small Molecules (TKIs)",
-    "regions": [
-      "United States (US FDA)",
-      "European Union (EU CTIS)",
-      "United Kingdom (MHRA)",
-      "Nordic Cluster (SE, DK, NO, FI)",
-      "Asia-Pacific (APAC)"
-    ],
-    "completionDate": "2026-06-24",
-    "year": 2026,
-    "enrollment": 345,
-    "primaryOutcomes": [
-      {
-        "measure": "Progression-free Survival (PFS)",
-        "description": "PFS was defined as the time from randomization (baseline) until disease progression or death from any cause, whichever occurred first for all participants. Progression was based on blinded independent central review (BICR) of disease response per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v1.1).\n\nAs pre-specified in the statistical analysis plan, for participants who crossed over from docetaxel to AMG 510, the participant's response post first progression or post crossover was not used for the primary analyses. Data are presented per original treatment randomized.",
-        "timeFrame": "Baseline up to primary analysis data cut-off date (02 August 2022); max time on study as of primary analysis data cut off was 24.3 months"
-      }
-    ],
-    "inclusionCriteria": [
-      "Men or women greater than or equal to 18 years old.",
-      "Pathologically documented, previously treated, locally-advanced and unresectable or metastatic NSCLC with KRAS p.G12C mutation confirmed through central testing or have documentation of KRAS p.G12C mutation through Amgen Study 20190294 prior to enrollment"
-    ],
-    "exclusionCriteria": [
-      "Active brain metastases",
-      "Myocardial infarction within 6 months of study day 1",
-      "Gastrointestinal (GI) tract disease causing the inability to take oral medication"
-    ],
-    "publications": [
-      {
-        "citation": "Waterhouse DM, Rothschild S, Dooms C, Mennecier B, Bozorgmehr F, Majem M, van den Heuvel MH, Linardou H, Chul Cho B, Roberts-Thomson R, Tanaka K, Blais N, Schvartsman G, Holmskov Hansen K, Chmielewska I, Forster MD, Giannopoulou C, Stollenwerk B, Obiozor CC, Wang Y, Novello S. Patient-reported outcomes in CodeBreaK 200: Sotorasib versus docetaxel for previously treated advanced NSCLC with KRAS G12C mutation. Lung Cancer. 2024 Oct;196:107921. doi: 10.1016/j.lungcan.2024.107921. Epub 2024 Aug 6.",
-        "pmid": "39303400",
-        "type": "BACKGROUND"
-      },
-      {
-        "citation": "Skoulidis F, Li BT, Hochmair M, Govindan R, Vincent M, van der Wekken AJ, Reguart Aransay N, O'Byrne KJ, Girard N, Griesinger F, Nishio M, Hafliger S, Lindsay C, Reinmuth N, Paulus A, Papakotoulas P, Kim SW, Ferreira CG, Pasello G, Duruisseaux M, Gennatas S, Dimou A, Mehta B, Kormany W, Nduka C, Sylvester BE, Ardito-Abraham C, Wang Y, de Langen AJ. Pooled safety analysis and management of sotorasib-related adverse events in KRAS G12C-mutated advanced non-small cell lung cancer. Oncologist. 2025 Jan 17;30(1):oyae356. doi: 10.1093/oncolo/oyae356.",
-        "pmid": "39846981",
-        "type": "BACKGROUND"
-      },
-      {
-        "citation": "Skoulidis F, Li BT, de Langen AJ, Hong DS, Lena H, Wolf J, Dy GK, Curioni Fontecedro A, Tomasini P, Velcheti V, van der Wekken AJ, Dooms C, Paz-Ares Rodriguez L, Mountzios G, Sacher A, Nadal E, Couraud S, Kim SW, O'Byrne K, Rocco D, Toyozawa R, Chmielewska I, Lindsay CR, Hindoyan A, Mukundan L, Wilmanski T, Anderson A, Ardito-Abraham C, Pati A, Reddy A, Mehta B, Schuler M. Molecular determinants of sotorasib clinical efficacy in KRASG12C-mutated non-small-cell lung cancer. Nat Med. 2025 Aug;31(8):2755-2767. doi: 10.1038/s41591-025-03732-5. Epub 2025 May 28.",
-        "pmid": "40437272",
-        "type": "BACKGROUND"
-      }
-    ]
-  },
-  {
     "nctId": "NCT03521154",
     "acronym": "LAURA",
     "briefTitle": "A Global Study to Assess the Effects of Osimertinib Following Chemoradiation in Patients With Stage III Unresectable Non-small Cell Lung Cancer (LAURA)",
@@ -5326,9 +5297,9 @@
       "Osimertinib 80mg/40mg",
       "Placebo Osimertinib 80mg/40mg"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (Small Cell)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -5373,7 +5344,7 @@
   },
   {
     "nctId": "NCT02972333",
-    "acronym": "",
+    "acronym": "NCT02972333",
     "briefTitle": "Open Label, Prospective Study to Investigate Efficacy and Safety of AZD9291 in BM From NSCLC Patients With EGFR T790M",
     "officialTitle": "Open Label, Multi-center, Prospective Study to Investigate the Efficacy and Safety of AZD9291 in Brain Metastases From Patients With EGFR T790M Positive NSCLC Who Have Received Prior Therapy With an EGFR-TKI",
     "phase": "Phase 3",
@@ -5390,7 +5361,7 @@
       "AZD9291 80mg oral each day",
       "Radiation therapy"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (EGFR-Mutated)",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -5446,9 +5417,9 @@
       "Pemetrexed",
       "Carboplatin"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (EGFR-Mutated)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "Asia-Pacific (APAC)"
     ],
@@ -5497,9 +5468,9 @@
       "Carboplatin",
       "Cisplatin"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (EGFR-Mutated)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -5540,10 +5511,10 @@
   },
   {
     "nctId": "NCT07100080",
-    "acronym": "",
+    "acronym": "BMS-986507",
     "briefTitle": "Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-Pemetrexed for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01)",
     "officialTitle": "IZABRIGHT-Lung01: A Randomized, Open-label, Phase 2/3 Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-based Chemotherapy in Patients With EGFR-mutated Non-small Cell Lung Cancer and Disease Progression on EGFR Tyrosine Kinase Inhibitor Therapy",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "RECRUITING",
     "isCompleted": false,
     "sponsor": "Bristol-Myers Squibb",
@@ -5556,9 +5527,9 @@
       "Cisplatin",
       "Pemetrexed"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (EGFR-Mutated)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -5597,7 +5568,7 @@
   },
   {
     "nctId": "NCT06416410",
-    "acronym": "",
+    "acronym": "NCT06416410",
     "briefTitle": "JAB-21822 Combined With JAB-3312 Compared SOC in the First Line for Treatment of Advanced Non-small Cell Lung Cancer With KRAS p.G12C Mutation",
     "officialTitle": "An Open-label, Randomized, Positive Control, Multicenter Phase III Clinical Study. Evaluating JAB-21822 Combined With JAB-3312 Compared Tislelizumab Combined With Pemetrexed + Carboplatin in the First Line for Treatment of Advanced Non-squamous Non-small Cell Lung Cancer With KRAS p.G12C Mutation",
     "phase": "Phase 3",
@@ -5615,7 +5586,7 @@
       "Pemetrexed",
       "Carboplatin"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (KRAS G12C)",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -5649,7 +5620,7 @@
   },
   {
     "nctId": "NCT07640789",
-    "acronym": "",
+    "acronym": "NCT07640789",
     "briefTitle": "A Study Comparing BL-B01D1 in Combination With Osimertinib Versus Osimertinib Alone in Patients With Locally Advanced, Unresectable EGFR-mutated Non-small Cell Lung Cancer(Stage III) Whose Disease Has Not Progressed Following Definitive Platinum-based Chemoradiation Therapy(PANKU-Lung08)",
     "officialTitle": "A Phase III Randomized Controlled Clinical Study Comparing BL-B01D1 in Combination With Osimertinib Versus Osimertinib Alone in Patients With Locally Advanced, Unresectable EGFR-mutated Non-small Cell Lung Cancer(Stage III) Whose Disease Has Not Progressed Following Definitive Platinum-based Chemoradiation Therapy(PANKU-Lung08)",
     "phase": "Phase 3",
@@ -5663,9 +5634,9 @@
       "BL-B01D1",
       "Osimertinib"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (EGFR-Mutated)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "Asia-Pacific (APAC)"
     ],
@@ -5711,9 +5682,9 @@
       "Osimertinib",
       "Placebo"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (EGFR-Mutated)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -5748,10 +5719,10 @@
   },
   {
     "nctId": "NCT04613596",
-    "acronym": "",
+    "acronym": "NCT04613596",
     "briefTitle": "Phase 2 Trial of Adagrasib Monotherapy and in Combination With Pembrolizumab and a Phase 3 Trial of Adagrasib in Combination in Patients With a KRAS G12C Mutation KRYSTAL-7",
     "officialTitle": "A Phase 2 Trial of Adagrasib Monotherapy and in Combination With Pembrolizumab and a Phase 3 Trial of Adagrasib in Combination With Pembrolizumab Versus Pembrolizumab in Patients With Advanced Non-Small Cell Lung Cancer With KRAS G12C Mutation",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "RECRUITING",
     "isCompleted": false,
     "sponsor": "Mirati Therapeutics Inc.",
@@ -5766,9 +5737,9 @@
       "Adagrasib",
       "Pembrolizumab"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (KRAS G12C)",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -5827,9 +5798,9 @@
       "Cisplatin",
       "Carboplatin"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (Small Cell)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -5864,7 +5835,7 @@
   },
   {
     "nctId": "NCT05493501",
-    "acronym": "",
+    "acronym": "TREBLE",
     "briefTitle": "Aumolertinib With Chemotherapy or Alone Compared With Osimertinib in Patients With Epidermal Growth Factor Receptor-Mutant Non-Small Cell Lung Cancer",
     "officialTitle": "A Randomized, Three-Arm, Open-Label Phase 3b Clinical Trial of Aumolertinib, Versus Aumolertinib With Chemotherapy, Versus Osimertinib for Patients With Metastatic NSCLC and an EGFR Mutation (TREBLE)",
     "phase": "Phase 3",
@@ -5884,9 +5855,9 @@
       "Nab paclitaxel",
       "Gemcitabine"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (Small Cell)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "United States (US FDA)"
     ],
@@ -5918,10 +5889,10 @@
   },
   {
     "nctId": "NCT05020769",
-    "acronym": "",
+    "acronym": "NCT05020769",
     "briefTitle": "SI-B001 Combined With Osimertinib Mesylate Tablets in the Treatment of Recurrent Metastatic Non-small Cell Lung Cancer.",
     "officialTitle": "A Phase II/III Clinical Study to Evaluate the Efficacy and Safety of SI-B001 in Combination With Osimertinib Mesylate Tablets in the Treatment of Recurrent and Metastatic Non- Small Cell Lung Cancer",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "ACTIVE NOT RECRUITING",
     "isCompleted": false,
     "sponsor": "Sichuan Baili Pharmaceutical Co., Ltd.",
@@ -5932,9 +5903,9 @@
       "SI-B001",
       "Osimertinib"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (Small Cell)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "Asia-Pacific (APAC)"
     ],
@@ -5989,7 +5960,7 @@
       "AZD9291 Dosing",
       "Plasma AZD9291 testing"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (NSCLC)",
     "modality": "Biological Products & Targeted Therapies",
     "regions": [
@@ -6038,9 +6009,9 @@
       "Savolitinib + Osimertinib",
       "Pemetrexed + Cisplatin /Carboplatin"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (Small Cell)",
-    "modality": "Targeted Small Molecules (TKIs)",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
     "regions": [
       "Asia-Pacific (APAC)"
     ],
@@ -6096,9 +6067,9 @@
       "Carboplatin",
       "Cisplatin"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (KRAS G12C)",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -6133,7 +6104,7 @@
   },
   {
     "nctId": "NCT06966700",
-    "acronym": "",
+    "acronym": "MK-2870-032",
     "briefTitle": "A Clinical Study of Sacituzumab Tirumotecan (Sac-TMT, MK-2870) in People With Breast Cancer (MK-2870-032)",
     "officialTitle": "A Phase 3, Randomized, Open-label Study to Evaluate the Efficacy and Safety of Sac-TMT (Sacituzumab Tirumotecan, MK-2870) Followed by Carboplatin/Paclitaxel vs Chemotherapy, Both in Combination With Pembrolizumab as Neoadjuvant Therapy for High-Risk, Early-Stage, Triple-Negative Breast Cancer or Hormone Receptor-low Positive/Human Epidermal Growth Factor Receptor-2 Negative Breast Cancer",
     "phase": "Phase 3",
@@ -6157,9 +6128,9 @@
       "Capecitabine",
       "Olaparib"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Breast Cancer",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -6216,9 +6187,9 @@
       "Cisplatin",
       "Placebo"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Solid Tumors",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -6263,10 +6234,10 @@
   },
   {
     "nctId": "NCT06624644",
-    "acronym": "",
+    "acronym": "NCT06624644",
     "briefTitle": "A Trial of LNS8801 With or Without Pembrolizumab in Patients With Refractory Melanoma",
     "officialTitle": "A Multicenter, Open-Label, Randomized, Controlled Study to Assess the Antitumor Activity of LNS8801 With and Without Pembrolizumab in Patients With Treatment-Refractory, Unresectable Melanoma",
-    "phase": "Phase 2, PHASE3",
+    "phase": "Phase 2, Phase 3",
     "status": "RECRUITING",
     "isCompleted": false,
     "sponsor": "Linnaeus Therapeutics, Inc.",
@@ -6284,9 +6255,9 @@
       "Immunotherapy (nivolumab and relatlimab)",
       "Immunotherapy (ipilimumab and nivolumab)"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Melanoma",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)"
     ],
@@ -6318,7 +6289,7 @@
   },
   {
     "nctId": "NCT04199104",
-    "acronym": "",
+    "acronym": "KEYNOTE-010",
     "briefTitle": "A Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) as First Line (1L) Intervention in a Programmed Cell Death-ligand 1 (PD-L1) Selected Population With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (MK-7902-010) (KEYNOTE-010)",
     "officialTitle": "A Phase 3, Randomized, Placebo-controlled, Double-blind Clinical Study of Pembrolizumab (MK-3475) With or Without Lenvatinib (E7080/MK-7902) to Evaluate the Safety and Efficacy of Pembrolizumab and Lenvatinib as 1L Intervention in a PD-L1 Selected Population of Participants With Recurrent or Metastatic Head and Neck Squamous Cell Carcinoma (R/M HNSCC) (LEAP-010).",
     "phase": "Phase 3",
@@ -6333,9 +6304,9 @@
       "Pembrolizumab",
       "Placebo"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Solid Tumors",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -6391,7 +6362,7 @@
   },
   {
     "nctId": "NCT07315750",
-    "acronym": "",
+    "acronym": "CAPOX",
     "briefTitle": "A Study of Disitamab Vedotin Combined With Trastuzumab and Tislelizumab Versus Chemotherapy Combined With Trastuzumab With or Without Pembrolizumab in HER2-high Expression Advanced Gastric or Gastroesophageal Junction Adenocarcinoma.",
     "officialTitle": "A Randomized Controlled Phase III Study to Evaluate the Combination of Disitamab Vedotin, Trastuzumab, and Tislelizumab Versus Chemotherapy (CAPOX) Combined With Trastuzumab With or Without Pembrolizumab as First-Line Treatment for Advanced Gastric/Gastroesophageal Junction Adenocarcinoma With HER2-high Expression",
     "phase": "Phase 3",
@@ -6408,7 +6379,7 @@
       "Trastuzumab",
       "Pembrolizumab"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Solid Tumors",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
@@ -6442,7 +6413,7 @@
   },
   {
     "nctId": "NCT02853305",
-    "acronym": "",
+    "acronym": "KEYNOTE-361",
     "briefTitle": "Study of Pembrolizumab With or Without Platinum-based Combination Chemotherapy Versus Chemotherapy Alone in Urothelial Carcinoma (MK-3475-361/KEYNOTE-361)",
     "officialTitle": "A Phase III Randomized, Controlled Clinical Trial of Pembrolizumab With or Without Platinum-Based Combination Chemotherapy Versus Chemotherapy in Subjects With Advanced or Metastatic Urothelial Carcinoma",
     "phase": "Phase 3",
@@ -6458,9 +6429,9 @@
       "Carboplatin",
       "Gemcitabine"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Genitourinary Cancers",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "Global Multi-Center"
     ],
@@ -6537,9 +6508,9 @@
       "Regorafenib in combination with pembrolizumab",
       "Loco-regional therapy"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Solid Tumors",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -6573,7 +6544,7 @@
   },
   {
     "nctId": "NCT04949256",
-    "acronym": "",
+    "acronym": "MK-3475",
     "briefTitle": "Efficacy and Safety of Pembrolizumab (MK-3475) Plus Lenvatinib (E7080/MK-7902) Plus Chemotherapy in Participants With Metastatic Esophageal Carcinoma (MK-7902-014/E7080-G000-320/LEAP-014).",
     "officialTitle": "A Phase 3, Randomized Study to Evaluate the Efficacy and Safety of Pembrolizumab (MK-3475) + Lenvatinib (E7080/MK-7902) + Chemotherapy Compared With Standard of Care as First-line Intervention in Participants With Metastatic Esophageal Carcinoma.",
     "phase": "Phase 3",
@@ -6593,9 +6564,9 @@
       "Levoleucovorin",
       "Paclitaxel"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Solid Tumors",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -6688,9 +6659,9 @@
       "Paclitaxel",
       "Nab-Paclitaxel"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (Small Cell)",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "European Union (EU CTIS)",
       "United Kingdom (MHRA)",
@@ -6725,7 +6696,7 @@
   },
   {
     "nctId": "NCT04241185",
-    "acronym": "",
+    "acronym": "KEYNOTE-992",
     "briefTitle": "Efficacy and Safety of Pembrolizumab (MK-3475) in Combination With Chemoradiotherapy (CRT) Versus CRT Alone in Muscle-invasive Bladder Cancer (MIBC) (MK-3475-992/KEYNOTE-992)",
     "officialTitle": "A Phase 3, Randomized, Double-blind, Placebo-controlled Clinical Trial to Study the Efficacy and Safety of Pembrolizumab (MK-3475) in Combination With Chemoradiotherapy (CRT) Versus CRT Alone in Participants With Muscle-invasive Bladder Cancer (MIBC) (KEYNOTE-992)",
     "phase": "Phase 3",
@@ -6746,9 +6717,9 @@
       "Gemcitabine",
       "Placebo to Pembrolizumab"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Genitourinary Cancers",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -6784,7 +6755,7 @@
   },
   {
     "nctId": "NCT04210115",
-    "acronym": "",
+    "acronym": "KEYNOTE-975",
     "briefTitle": "Study of Pembrolizumab (MK-3475) Versus Placebo in Participants With Esophageal Carcinoma Who Are Receiving Chemotherapy and Radiation Therapy (MK-3475-975/KEYNOTE-975)",
     "officialTitle": "A Randomized, Double-blind, Placebo-controlled Phase 3 Trial of Pembrolizumab (MK-3475) Versus Placebo in Participants With Esophageal Carcinoma Receiving Concurrent Definitive Chemoradiotherapy (KEYNOTE 975)",
     "phase": "Phase 3",
@@ -6806,9 +6777,9 @@
       "levoleucovorin",
       "oxaliplatin"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Solid Tumors",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -6855,7 +6826,7 @@
   },
   {
     "nctId": "NCT02494583",
-    "acronym": "",
+    "acronym": "KEYNOTE-062",
     "briefTitle": "Study of Pembrolizumab (MK-3475) as First-Line Monotherapy and Combination Therapy for Treatment of Advanced Gastric or Gastroesophageal Junction Adenocarcinoma (MK-3475-062/KEYNOTE-062)",
     "officialTitle": "A Randomized, Active-Controlled, Partially Blinded, Biomarker Select, Phase III Clinical Trial of Pembrolizumab as Monotherapy and in Combination With Cisplatin+5-Fluorouracil Versus Placebo+Cisplatin+5-Fluorouracil as First-Line Treatment in Subjects With Advanced Gastric or Gastroesophageal Junction (GEJ) Adenocarcinoma",
     "phase": "Phase 3",
@@ -6872,9 +6843,9 @@
       "Capecitabine",
       "Placebo"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Solid Tumors",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "Global Multi-Center"
     ],
@@ -6942,7 +6913,7 @@
   },
   {
     "nctId": "NCT06998069",
-    "acronym": "",
+    "acronym": "NCT06998069",
     "briefTitle": "Head and Neck Cancer Study Project in the Geriatric Population",
     "officialTitle": "Head and Neck Cancer Study Project in the Geriatric Population",
     "phase": "Phase 3",
@@ -6957,9 +6928,9 @@
       "Arm II Carboplatin, Paclitaxel, Cetuximab",
       "Arm III Pembrolizumab"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Solid Tumors",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)"
     ],
@@ -6988,7 +6959,7 @@
   },
   {
     "nctId": "NCT07566156",
-    "acronym": "",
+    "acronym": "cCRT",
     "briefTitle": "Enfortumab Vedotin in Combination With Pembrolizumab vs. Concurrent Chemoradiotherapy (cCRT) in People With Muscle Invasive Bladder Cancer (EV-309)",
     "officialTitle": "A PHASE 3, OPEN-LABEL, RANDOMIZED STUDY TO EVALUATE ENFORTUMAB VEDOTIN IN COMBINATION WITH PEMBROLIZUMAB IN ADULT PARTICIPANTS WITH MUSCLE-INVASIVE BLADDER CANCER WHO ARE INELIGIBLE FOR OR HAVE ELECTED NOT TO UNDERGO CYSTECTOMY",
     "phase": "Phase 3",
@@ -7009,7 +6980,7 @@
       "Gemcitabine",
       "Pembrolizumab"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Genitourinary Cancers",
     "modality": "Antibody-Drug Conjugates (ADC)",
     "regions": [
@@ -7049,7 +7020,7 @@
   },
   {
     "nctId": "NCT02853331",
-    "acronym": "",
+    "acronym": "KEYNOTE-426",
     "briefTitle": "Study to Evaluate the Efficacy and Safety of Pembrolizumab (MK-3475) in Combination With Axitinib Versus Sunitinib Monotherapy in Participants With Renal Cell Carcinoma (MK-3475-426/KEYNOTE-426)",
     "officialTitle": "A Phase III Randomized, Open-label Study to Evaluate Efficacy and Safety of Pembrolizumab (MK-3475) in Combination With Axitinib Versus Sunitinib Monotherapy as a First-line Treatment for Locally Advanced or Metastatic Renal Cell Carcinoma (mRCC) (KEYNOTE-426)",
     "phase": "Phase 3",
@@ -7064,9 +7035,9 @@
       "Axitinib",
       "Sunitinib"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Genitourinary Cancers",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "Global Multi-Center"
     ],
@@ -7119,7 +7090,7 @@
   },
   {
     "nctId": "NCT07756645",
-    "acronym": "",
+    "acronym": "NCT07756645",
     "briefTitle": "A Study to Assess Intravenous ABBV-1480 Combined With Chemotherapy Versus Pembrolizumab Combined With Chemotherapy for the First Line Treatment of Locally Advanced/Metastatic Non-Small Cell Lung Cancer in Adult Participants",
     "officialTitle": "A Randomized, Multiregional, Open-Label Phase 3 Clinical Trial of ABBV-1480 Combined With Chemotherapy Versus Pembrolizumab Combined With Chemotherapy for the First Line Treatment of Locally Advanced/Metastatic Non-Small Cell Lung Cancer",
     "phase": "Phase 3",
@@ -7136,9 +7107,9 @@
       "Paclitaxel",
       "Nab- Paclitaxel"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (Small Cell)",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "Global Multi-Center"
     ],
@@ -7174,7 +7145,7 @@
   },
   {
     "nctId": "NCT03425643",
-    "acronym": "",
+    "acronym": "KEYNOTE-671",
     "briefTitle": "Efficacy and Safety of Pembrolizumab (MK-3475) With Platinum Doublet Chemotherapy as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (MK-3475-671/KEYNOTE-671)",
     "officialTitle": "A Phase III, Randomized, Double-blind Trial of Platinum Doublet Chemotherapy +/-Pembrolizumab (MK-3475) as Neoadjuvant/Adjuvant Therapy for Participants With Resectable Stage II, IIIA, and Resectable IIIB (T3-4N2) Non-small Cell Lung Cancer (NSCLC) (KEYNOTE-671)",
     "phase": "Phase 3",
@@ -7191,9 +7162,9 @@
       "Gemcitabine",
       "Pemetrexed"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (Small Cell)",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -7249,7 +7220,7 @@
   },
   {
     "nctId": "NCT03765918",
-    "acronym": "",
+    "acronym": "MK-3475-689",
     "briefTitle": "Study of Pembrolizumab Given Prior to Surgery and in Combination With Radiotherapy Given Post-surgery for Advanced Head and Neck Squamous Cell Carcinoma (MK-3475-689)",
     "officialTitle": "A Phase III, Randomized, Open-label Study to Evaluate Pembrolizumab as Neoadjuvant Therapy and in Combination With Standard of Care as Adjuvant Therapy for Stage III-IVA Resectable Locoregionally Advanced Head and Neck Squamous Cell Carcinoma (LA HNSCC)",
     "phase": "Phase 3",
@@ -7266,9 +7237,9 @@
       "Radiotherapy 70 Gray",
       "Cisplatin 100 mg/m^2"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Solid Tumors",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -7319,7 +7290,7 @@
   },
   {
     "nctId": "NCT03820986",
-    "acronym": "",
+    "acronym": "MK-3475",
     "briefTitle": "Safety and Efficacy Study of Pembrolizumab (MK-3475) Combined With Lenvatinib (MK-7902/E7080) as First-line Intervention in Adults With Advance Melanoma (MK-7902-003/E7080-G000-312/LEAP-003)",
     "officialTitle": "A Phase 3 Randomized, Placebo-controlled Trial to Evaluate the Safety and Efficacy of Pembrolizumab (MK-3475) and Lenvatinib (E7080/MK-7902) Versus Pembrolizumab Alone as First-line Intervention in Participants With Advanced Melanoma (LEAP-003)",
     "phase": "Phase 3",
@@ -7334,9 +7305,9 @@
       "Lenvatinib",
       "Placebo for lenvatinib"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Melanoma",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -7383,7 +7354,7 @@
   },
   {
     "nctId": "NCT04380636",
-    "acronym": "",
+    "acronym": "NCT04380636",
     "briefTitle": "Study of Pembrolizumab With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib in Stage III Non-Small Cell Lung Cancer (NSCLC) (MK-7339-012/KEYLYNK-012)",
     "officialTitle": "A Phase 3 Study of Pembrolizumab (MK-3475) in Combination With Concurrent Chemoradiation Therapy Followed by Pembrolizumab With or Without Olaparib vs Concurrent Chemoradiation Therapy Followed by Durvalumab in Participants With Unresectable, Locally Advanced, Stage III Non-Small Cell Lung Cancer (NSCLC)",
     "phase": "Phase 3",
@@ -7406,9 +7377,9 @@
       "Thoracic Radiotherapy",
       "Durvalumab"
     ],
-    "category": "Oncology & Hematology",
+    "category": "Oncology",
     "subtype": "Lung Cancer (Small Cell)",
-    "modality": "Immune Checkpoint Inhibitors (PD-1/L1)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
     "regions": [
       "United States (US FDA)",
       "European Union (EU CTIS)",
@@ -7449,6 +7420,229 @@
       {
         "citation": "Jabbour SK, Cho BC, Bria E, Kato T, Bhosle J, Gainor JF, Reguart N, Wang L, Morgensztern D, Shentu Y, Kim SJ, Souza F, Reck M. Rationale and Design of the Phase III KEYLYNK-012 Study of Pembrolizumab and Concurrent Chemoradiotherapy Followed by Pembrolizumab With or Without Olaparib for Stage III Non-Small-Cell Lung Cancer. Clin Lung Cancer. 2022 Sep;23(6):e342-e346. doi: 10.1016/j.cllc.2022.04.003. Epub 2022 Apr 29.",
         "pmid": "35618629",
+        "type": "DERIVED"
+      }
+    ]
+  },
+  {
+    "nctId": "NCT03036488",
+    "acronym": "KEYNOTE-522",
+    "briefTitle": "Study of Pembrolizumab (MK-3475) Plus Chemotherapy vs Placebo Plus Chemotherapy as Neoadjuvant Therapy and Pembrolizumab vs Placebo as Adjuvant Therapy in Participants With Triple Negative Breast Cancer (TNBC) (MK-3475-522/KEYNOTE-522)",
+    "officialTitle": "A Phase III, Randomized, Double-blind Study to Evaluate Pembrolizumab Plus Chemotherapy vs Placebo Plus Chemotherapy as Neoadjuvant Therapy and Pembrolizumab vs Placebo as Adjuvant Therapy for Triple Negative Breast Cancer (TNBC)",
+    "phase": "Phase 3",
+    "status": "COMPLETED",
+    "isCompleted": true,
+    "sponsor": "Merck Sharp & Dohme LLC",
+    "conditions": [
+      "Triple Negative Breast Neoplasms"
+    ],
+    "interventions": [
+      "Pembrolizumab",
+      "Carboplatin",
+      "Paclitaxel",
+      "Doxorubicin",
+      "Epirubicin",
+      "Cyclophosphamide",
+      "Placebo",
+      "Granulocyte colony stimulating factor: Filgrastim or Pegfilgastrim"
+    ],
+    "category": "Oncology",
+    "subtype": "Breast Cancer (Triple-Negative)",
+    "modality": "Immuno-Oncology (Checkpoint Inhibitor)",
+    "regions": [
+      "United States (US FDA)",
+      "European Union (EU CTIS)",
+      "United Kingdom (MHRA)",
+      "Nordic Cluster (SE, DK, NO, FI)",
+      "Asia-Pacific (APAC)"
+    ],
+    "completionDate": "2025-10-14",
+    "year": 2025,
+    "enrollment": 1174,
+    "primaryOutcomes": [
+      {
+        "measure": "Pathological complete response (pCR) rate using the definition of ypT0/Tis ypN0 (i.e., no invasive residual in breast or nodes; noninvasive breast residuals allowed) at the time of definitive surgery",
+        "description": "pCR rate (ypT0/Tis ypN0) is defined as the percentage of participants without residual invasive cancer on hematoxylin and eosin evaluation of the complete resected breast specimen and all sampled regional lymph nodes following completion of neoadjuvant systemic therapy by current American Joint Committee on Cancer (AJCC) staging criteria assessed by the local pathologist at the time of definitive surgery.",
+        "timeFrame": "Up to approximately 27-30 weeks"
+      },
+      {
+        "measure": "Event-free Survival (EFS) as assessed by Investigator",
+        "description": "EFS is defined as the time from randomization to any of the following events: progression of disease that precludes surgery, local or distant recurrence, second primary malignancy (breast or other cancers) or death due to any cause.",
+        "timeFrame": "Up to approximately 8 years"
+      }
+    ],
+    "inclusionCriteria": [
+      "Has newly diagnosed, locally advanced, centrally confirmed TNBC, as defined by the most recent American Society of Clinical Oncology (ASCO)/College of American Pathologists (CAP) guidelines.",
+      "Has previously untreated locally advanced non-metastatic (M0) TNBC defined as the following combined primary tumor (T) and regional lymph node (N) staging per current American Joint Committee of Cancer (AJCC) staging criteria for breast cancer as assessed by the investigator based on radiological and/or clinical assessment:",
+      "Provides a core needle biopsy consisting of at least 2 separate tumor cores from the primary tumor at screening to the central laboratory.",
+      "Has Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 performed within 10 days of treatment initiation.",
+      "Demonstrates adequate organ function."
+    ],
+    "exclusionCriteria": [
+      "Has a history of invasive malignancy ≤5 years prior to signing informed consent except for adequately treated basal cell or squamous cell skin cancer or in situ cervical cancer.",
+      "Has received prior chemotherapy, targeted therapy, and radiation therapy within the past 12 months.",
+      "Has received prior therapy with an anti-programmed cell death protein 1 (anti-PD-1), anti-programmed death - ligand 1 (anti-PD-L1), or anti-PD-L2 agent or with an agent directed to another co-inhibitory T-cell receptor (e.g., cytotoxic T-lymphocyte-associated antigen-4 \\[CTLA-4\\], OX-40, CD137 \\[tumor necrosis factor receptor superfamily member 9 (TNFRSF9)\\]) or has previously participated in a pembrolizumab (MK-3475) clinical study.",
+      "Is currently participating in or has participated in an interventional clinical study with an investigational compound or device within 4 weeks of the first dose of treatment in this current study.",
+      "Has received a live vaccine within 30 days of the first dose of study treatment."
+    ],
+    "publications": [
+      {
+        "citation": "Schmid P, Cortes J, Dent R, McArthur H, Pusztai L, Kummel S, Denkert C, Park YH, Hui R, Harbeck N, Takahashi M, Im SA, Untch M, Fasching PA, Mouret-Reynier MA, Foukakis T, Ferreira M, Cardoso F, Zhou X, Karantza V, Tryfonidis K, Aktan G, O'Shaughnessy J; KEYNOTE-522 Investigators. Overall Survival with Pembrolizumab in Early-Stage Triple-Negative Breast Cancer. N Engl J Med. 2024 Nov 28;391(21):1981-1991. doi: 10.1056/NEJMoa2409932. Epub 2024 Sep 15.",
+        "pmid": "39282906",
+        "type": "RESULT"
+      },
+      {
+        "citation": "Kuemmel S, Fasching PA, Schmid P, Harbeck N, Takahashi M, Untch M, Boileau JF, Cortes J, Dent R, O'Shaughnessy J, Pusztai L, Foukakis T, Park YH, Hui R, Cardoso F, Denkert C, Jia L, Pan W, Karantza V, McArthur H. Surgical Outcomes After Neoadjuvant Pembrolizumab Plus Chemotherapy for Triple-Negative Breast Cancer: Results from the Randomized, Placebo-Controlled Phase 3 KEYNOTE-522 Study. Ann Surg Oncol. 2026 Jun;33(6):5550-5557. doi: 10.1245/s10434-026-19121-2. Epub 2026 Feb 25.",
+        "pmid": "41739398",
+        "type": "DERIVED"
+      },
+      {
+        "citation": "Takahashi M, Mukai H, Takano T, Tsugawa K, Inoue K, Itoh M, Watanabe J, Tanabe Y, Yamamoto N, Miyoshi Y, Watanabe K, Mukohara T, Kong Y, Shimura M, Beca F, Schmid P, Iwata H. Pembrolizumab for Early-Stage Triple-Negative Breast Cancer: KEYNOTE-522 Japan Subgroup Analysis. Cancer Sci. 2026 Apr;117(4):1106-1116. doi: 10.1111/cas.70307. Epub 2026 Jan 14.",
+        "pmid": "41536071",
+        "type": "DERIVED"
+      }
+    ]
+  },
+  {
+    "nctId": "NCT03036124",
+    "acronym": "DAPA-HF",
+    "briefTitle": "Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure",
+    "officialTitle": "Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure With Reduced Ejection Fraction",
+    "phase": "Phase 3",
+    "status": "COMPLETED",
+    "isCompleted": true,
+    "sponsor": "AstraZeneca",
+    "conditions": [
+      "Chronic Heart Failure With Reduced Ejection Fraction (HFrEF)"
+    ],
+    "interventions": [
+      "Dapagliflozin",
+      "Placebo"
+    ],
+    "category": "Cardiometabolic & Endocrinology",
+    "subtype": "Heart Failure",
+    "modality": "Targeted Therapy (Small Molecule / TKI)",
+    "regions": [
+      "United States (US FDA)",
+      "European Union (EU CTIS)",
+      "United Kingdom (MHRA)",
+      "Nordic Cluster (SE, DK, NO, FI)",
+      "Asia-Pacific (APAC)"
+    ],
+    "completionDate": "2019-07-17",
+    "year": 2019,
+    "enrollment": 4744,
+    "primaryOutcomes": [
+      {
+        "measure": "Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.",
+        "description": "Primary efficacy",
+        "timeFrame": "Up to 27.8 months."
+      }
+    ],
+    "inclusionCriteria": [
+      "Provision of signed informed consent prior to any study specific procedures",
+      "Male or female, aged ≥18 years",
+      "Established documented diagnosis of symptomatic HFrEF (NYHA functional class II-IV), which has been present for at least 2 months",
+      "Elevated NT-proBNP levels",
+      "Patients should receive background standard of care for HFrEF and be treated according to locally recognized guidelines"
+    ],
+    "exclusionCriteria": [
+      "Receiving therapy with an SGLT2 inhibitor within 8 weeks prior to enrolment or previous intolerance of an SGLT2 inhibitor",
+      "Type 1 diabetes mellitus",
+      "Symptomatic hypotension or systolic BP \\<95 mmHg at 2 out of 3 measurements either at visit 1 or visit 2",
+      "Current acute decompensated HF or hospitalization due to decompensated HF \\<4 weeks prior to enrolment",
+      "MI, unstable angina, stroke or transient ischemic attack within 12 weeks prior to enrolment"
+    ],
+    "publications": [
+      {
+        "citation": "Myte R, Mattsson A, Poole M, Little DJ, Nystrom P, Henderson A, Claggett BL, Gasparyan SB, Solomon SD, McMurray JJV. Survival Odds to Minimize Risk Heterogeneity Bias in Heart Failure Trials: Application to Dapagliflozin. Circ Heart Fail. 2025 Dec;18(12):e013496. doi: 10.1161/CIRCHEARTFAILURE.125.013496. Epub 2025 Oct 31.",
+        "pmid": "41170566",
+        "type": "DERIVED"
+      },
+      {
+        "citation": "McDowell K, Welsh P, Docherty KF, Morrow DA, Jhund PS, De Boer RA, O'Meara E, Inzucchi SE, Kober L, Kosiborod MN, Martinez FA, Ponikowski P, Hammarstedt A, Langkilde AM, Solomon SD, Sattar N, Sabatine MS, McMurray JJV. Cellular Adhesion Molecules and Adverse Outcomes in Chronic Heart Failure: Findings From the DAPA-HF Randomized Clinical Trial. JAMA Cardiol. 2025 Aug 1;10(8):797-808. doi: 10.1001/jamacardio.2025.1592.",
+        "pmid": "40465275",
+        "type": "DERIVED"
+      },
+      {
+        "citation": "Docherty KF, McDowell K, Welsh P, Petrie MC, Anand I, Berg DD, de Boer RA, Kober L, Kosiborod MN, Martinez FA, O'Meara E, Morrow DA, Ponikowski P, Sabatine MS, Sattar N, Schou M, Hammarstedt A, Sjostrand M, Langkilde AM, Jhund PS, Solomon SD, McMurray JJV. Interleukin-6 in Heart Failure With Reduced Ejection Fraction and the Effect of Dapagliflozin: An Exploratory Analysis of the Dapagliflozin and Prevention of Adverse Outcomes in Heart Failure Trial. JACC Heart Fail. 2025 Jul;13(7):102393. doi: 10.1016/j.jchf.2024.12.012. Epub 2025 Mar 12.",
+        "pmid": "40088234",
+        "type": "DERIVED"
+      }
+    ]
+  },
+  {
+    "nctId": "NCT04223856",
+    "acronym": "EV-302",
+    "briefTitle": "Enfortumab Vedotin and Pembrolizumab vs. Chemotherapy Alone in Untreated Locally Advanced or Metastatic Urothelial Cancer",
+    "officialTitle": "An Open-label, Randomized, Controlled Phase 3 Study of Enfortumab Vedotin in Combination With Pembrolizumab Versus Chemotherapy Alone in Previously Untreated Locally Advanced or Metastatic Urothelial Cancer",
+    "phase": "Phase 3",
+    "status": "ACTIVE NOT RECRUITING",
+    "isCompleted": false,
+    "sponsor": "Astellas Pharma Global Development, Inc.",
+    "conditions": [
+      "Urothelial Cancer"
+    ],
+    "interventions": [
+      "Enfortumab vedotin",
+      "Pembrolizumab",
+      "Cisplatin",
+      "Carboplatin",
+      "Gemcitabine"
+    ],
+    "category": "Oncology",
+    "subtype": "Genitourinary Cancers",
+    "modality": "Antibody-Drug Conjugates (ADC)",
+    "regions": [
+      "United States (US FDA)",
+      "European Union (EU CTIS)",
+      "United Kingdom (MHRA)",
+      "Nordic Cluster (SE, DK, NO, FI)",
+      "Asia-Pacific (APAC)"
+    ],
+    "completionDate": "2028-03-01",
+    "year": 2028,
+    "enrollment": 886,
+    "primaryOutcomes": [
+      {
+        "measure": "Progression-Free Survival (PFS) Per Response Evaluation Criteria in Solid Tumors (RECIST) Version (v) 1.1 by Blinded Independent Central Review (BICR)",
+        "description": "PFS was defined as the time from date of randomization to first documentation of disease progression (PD), or to death due to any cause, whichever occurred first. PD: at least a 20 percent (%) increase in the sum of diameters of target lesions, taking as reference the smallest sum on study. In addition to the relative increase of 20%, the sum must also demonstrate an absolute increase of at least 5 millimeter (mm). PD could also be unequivocal progression of non-target lesions or the presence of unequivocal new lesions. Kaplan-Meier method was used for analysis.",
+        "timeFrame": "From the date of randomization to first documentation of PD or death due to any cause, whichever occurred first (maximum exposure to treatment was up to 39.2 months)"
+      },
+      {
+        "measure": "Overall Survival (OS)",
+        "description": "OS was defined as the time from the date of randomization to the date of death from any cause. In the absence of death, OS was censored at the date the participant was last known to be alive. Kaplan-Meier method was used for analysis.",
+        "timeFrame": "From randomization to date of death due to any cause or censoring date, whichever occurred first (maximum exposure to treatment was up to 39.2 months)"
+      }
+    ],
+    "inclusionCriteria": [
+      "Histologically documented, unresectable locally advanced or metastatic urothelial carcinoma",
+      "Measurable disease by investigator assessment according to RECIST v1.1",
+      "Participants with prior definitive radiation therapy must have measurable disease per RECIST v1.1 that is outside the radiation field or has demonstrated unequivocal progression since completion of radiation therapy",
+      "Participants must not have received prior systemic therapy for locally advanced or metastatic urothelial carcinoma with the following exceptions:",
+      "Participants that received neoadjuvant chemotherapy with recurrence \\>12 months from completion of therapy are permitted"
+    ],
+    "exclusionCriteria": [
+      "Previously received enfortumab vedotin or other monomethyl auristatin E (MMAE)-based antibody-drug conjugate (ADCs)",
+      "Received prior treatment with a programmed cell death ligand-1 (PD-(L)-1) inhibitor for any malignancy, including earlier stage urothelial cancer (UC), defined as a PD-1 inhibitor or PD-L1 inhibitor",
+      "Received prior treatment with an agent directed to another stimulatory or co inhibitory T-cell receptor",
+      "Received anti-cancer treatment with chemotherapy, biologics, or investigational agents not otherwise prohibited by exclusion criterion 1-3 that is not completed 4 weeks prior to first dose of study treatment",
+      "Uncontrolled diabetes"
+    ],
+    "publications": [
+      {
+        "citation": "Gupta S, Loriot Y, Van der Heijden MS, Bedke J, Valderrama BP, Kikuchi E, Flechon A, Petrylak D, De Santis M, Galsky MD, Lee JL, Swami U, Sridhar SS, De Giorgi U, Wright P, Shih V, Lu YT, Guan X, Dillon R, Shetty A, Homet Moreno B, Beaumont JL, Purnajo I, McManus S, Powles T. How enfortumab vedotin plus pembrolizumab affects the quality of life of people with advanced urothelial cancer compared with platinum-based chemotherapy: a plain language summary of patient-reported outcomes from the EV-302 study. Future Oncol. 2026 Apr;22(9):1015-1029. doi: 10.1080/14796694.2026.2645984. Epub 2026 Apr 2.",
+        "pmid": "41925239",
+        "type": "DERIVED"
+      },
+      {
+        "citation": "Kikuchi E, Van der Heijden MS, Valderrama BP, Gupta S, Bedke J, Shin SJ, Li JR, Guo J, Danchaivijitr P, Kanesvaran R, Park SH, Su WP, Kandori S, Bae WK, Wong A, Gorla S, Bavle A, Yu X, Lu YT, Powles T. Pan-Asian subgroup analysis of EV-302/KEYNOTE-A39: a phase 3 study to evaluate enfortumab vedotin and pembrolizumab in patients with untreated advanced urothelial carcinoma. Int J Clin Oncol. 2026 Mar;31(3):436-446. doi: 10.1007/s10147-025-02950-8. Epub 2026 Jan 21.",
+        "pmid": "41563650",
+        "type": "DERIVED"
+      },
+      {
+        "citation": "Meng Y, Zhang S, Aout M, Babcock A, Li H, Lai Y, Brand-Wiita S, Notinger S, Bavle A, Mamtani R. Cost-effectiveness of enfortumab vedotin plus pembrolizumab as a first-line treatment of locally advanced or metastatic urothelial carcinoma in the United States. J Med Econ. 2025 Dec;28(1):1779-1797. doi: 10.1080/13696998.2025.2567190. Epub 2025 Oct 14.",
+        "pmid": "41039930",
         "type": "DERIVED"
       }
     ]
