@@ -628,11 +628,15 @@
             padding: 3px 7px;
             border-radius: 4px;
         }
-        .badge.nct { background: var(--cyan-glow); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.25); }
-        .badge.phase { background: var(--purple-glow); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.25); }
-        .badge.modality { background: var(--chip-bg); color: var(--text-med); border: 1px solid var(--border-subtle); }
-        .badge.completed { background: var(--emerald-glow); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.25); }
-        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+        .badge.nct { background: rgba(56, 189, 248, 0.15); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.35); }
+        :root[data-theme="dark"] .badge.nct { color: #38bdf8; }
+        .badge.phase { background: rgba(168, 85, 247, 0.15); color: #9333ea; border: 1px solid rgba(168, 85, 247, 0.35); }
+        :root[data-theme="dark"] .badge.phase { color: #c084fc; }
+        .badge.modality { background: var(--chip-bg); color: var(--text-high); border: 1px solid var(--border-subtle); }
+        .badge.completed { background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.35); }
+        :root[data-theme="dark"] .badge.completed { color: #34d399; }
+        .badge.vacant { background: rgba(239, 68, 68, 0.15); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.35); }
+        :root[data-theme="dark"] .badge.vacant { color: #f87171; }
 
         /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
         .doc-actions-row {
@@ -660,9 +664,12 @@
             transform: translateY(-1px);
         }
         .doc-btn-protocol {
-            background: rgba(56, 189, 248, 0.12);
-            color: var(--cyan);
-            border: 1px solid rgba(56, 189, 248, 0.3);
+            background: rgba(56, 189, 248, 0.15);
+            color: #0284c7;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+        }
+        :root[data-theme="dark"] .doc-btn-protocol {
+            color: #38bdf8;
         }
         .doc-btn-protocol:hover {
             background: rgba(56, 189, 248, 0.25);
@@ -837,12 +844,12 @@
             </ul>
 
             <ul class="sidebar-nav" style="margin-top:16px;">
-                <li><a href="javascript:void(0)" onclick="filterByModality('Antibody-Drug Conjugates (ADC)')"><i class="fa-solid fa-dna" style="color:var(--purple);"></i> ADCs</a></li>
-                <li><a href="javascript:void(0)" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')"><i class="fa-solid fa-vial" style="color:var(--cyan);"></i> CAR-T Therapy</a></li>
-                <li><a href="javascript:void(0)" onclick="filterByModality('Bispecific Antibodies & T-Cell Engagers')"><i class="fa-solid fa-arrows-split-up-and-left" style="color:#f43f5e;"></i> Bispecifics</a></li>
-                <li><a href="javascript:void(0)" onclick="filterByModality('Targeted Therapy (Small Molecule / TKI)')"><i class="fa-solid fa-capsules" style="color:var(--amber);"></i> Targeted TKIs</a></li>
-                <li><a href="javascript:void(0)" onclick="filterByModality('Immuno-Oncology (Checkpoint Inhibitor)')"><i class="fa-solid fa-shield-halved" style="color:#ec4899;"></i> Checkpoints</a></li>
-                <li><a href="javascript:void(0)" onclick="filterByModality('Incretin Mimetics (GLP-1 / GIP)')"><i class="fa-solid fa-bolt" style="color:var(--emerald);"></i> GLP-1 / Incretins</a></li>
+                <li><a href="#explorer" onclick="filterByModality('Antibody-Drug Conjugates (ADC)')" aria-label="Filter studies by Antibody-Drug Conjugates"><i class="fa-solid fa-dna" style="color:var(--purple);"></i> ADCs</a></li>
+                <li><a href="#explorer" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')" aria-label="Filter studies by CAR-T Therapy"><i class="fa-solid fa-vial" style="color:var(--cyan);"></i> CAR-T Therapy</a></li>
+                <li><a href="#explorer" onclick="filterByModality('Bispecific Antibodies & T-Cell Engagers')" aria-label="Filter studies by Bispecific Antibodies"><i class="fa-solid fa-arrows-split-up-and-left" style="color:#f43f5e;"></i> Bispecifics</a></li>
+                <li><a href="#explorer" onclick="filterByModality('Targeted Therapy (Small Molecule / TKI)')" aria-label="Filter studies by Targeted TKIs and Small Molecules"><i class="fa-solid fa-capsules" style="color:var(--amber);"></i> Targeted TKIs</a></li>
+                <li><a href="#explorer" onclick="filterByModality('Immuno-Oncology (Checkpoint Inhibitor)')" aria-label="Filter studies by Checkpoint Inhibitors"><i class="fa-solid fa-shield-halved" style="color:#ec4899;"></i> Checkpoints</a></li>
+                <li><a href="#explorer" onclick="filterByModality('Incretin Mimetics (GLP-1 / GIP)')" aria-label="Filter studies by GLP-1 Incretin Mimetics"><i class="fa-solid fa-bolt" style="color:var(--emerald);"></i> GLP-1 / Incretins</a></li>
             </ul>
 
             <div class="sidebar-footer">
@@ -856,10 +863,10 @@
         <main class="main-content">
             <!-- Mobile Header (Mobile only) -->
             <div class="mobile-header">
-                <button class="mobile-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+                <button class="mobile-toggle" onclick="toggleSidebar()" aria-label="Open mobile navigation menu"><i class="fa-solid fa-bars"></i></button>
                 <div class="logo-text" style="font-size:18px;">ClinSight<span>™</span></div>
                 <div style="margin-left:auto; display:flex; align-items:center; gap:8px;">
-                    <button id="themeToggleMobile" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle appearance">
+                    <button id="themeToggleMobile" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light or dark appearance">
                         <i class="fa-regular fa-sun"></i>
                     </button>
                 </div>
@@ -939,14 +946,14 @@
                     </div>
 
                     <div class="filters-row">
-                        <select id="filterCategory" class="filter-select" onchange="applyFilters()">
+                        <select id="filterCategory" class="filter-select" onchange="applyFilters()" aria-label="Filter by Therapeutic Area">
                             <option value="">All Therapeutic Areas</option>
                             <option value="Oncology">Oncology</option>
                             <option value="Cardiometabolic & Endocrinology">Cardiometabolic</option>
                             <option value="Rare Disease & Immunology">Rare Disease & Immunology</option>
                         </select>
 
-                        <select id="filterModality" class="filter-select" onchange="applyFilters()">
+                        <select id="filterModality" class="filter-select" onchange="applyFilters()" aria-label="Filter by Drug Modality">
                             <option value="">All Modalities</option>
                             <option value="ADC">Antibody-Drug Conjugates (ADC)</option>
                             <option value="CAR-T">Cell & Gene Therapy (CAR-T)</option>
@@ -958,7 +965,7 @@
                             <option value="Unclassified">Unclassified</option>
                         </select>
 
-                        <select id="filterResultsStatus" class="filter-select" onchange="applyFilters()">
+                        <select id="filterResultsStatus" class="filter-select" onchange="applyFilters()" aria-label="Filter by Results and Protocol Document Status">
                             <option value="">All Results Statuses</option>
                             <option value="has-results">Has Posted Results (Tabular)</option>
                             <option value="has-paper">Has Peer-Reviewed Paper</option>
@@ -966,20 +973,20 @@
                             <option value="vacant">Results-Vacant (Completed / No Data)</option>
                         </select>
 
-                        <select id="filterPhase" class="filter-select" onchange="applyFilters()">
+                        <select id="filterPhase" class="filter-select" onchange="applyFilters()" aria-label="Filter by Trial Phase">
                             <option value="">All Phases</option>
                             <option value="Phase 3">Phase 3</option>
                             <option value="Phase 2">Phase 2</option>
                             <option value="Phase 1">Phase 1</option>
                         </select>
 
-                        <select id="filterStatus" class="filter-select" onchange="applyFilters()">
+                        <select id="filterStatus" class="filter-select" onchange="applyFilters()" aria-label="Filter by Recruitment Status">
                             <option value="">All Statuses</option>
                             <option value="completed">Completed</option>
                             <option value="recruiting">Recruiting / Active</option>
                         </select>
 
-                        <select id="sortSelect" class="filter-select" onchange="applyFilters()">
+                        <select id="sortSelect" class="filter-select" onchange="applyFilters()" aria-label="Sort Trials List">
                             <option value="relevance">Sort by Relevance</option>
                             <option value="year-desc">Latest Year</option>
                             <option value="enrollment-desc">Largest Enrollment</option>
@@ -1104,18 +1111,18 @@
                 // Build 1-click primary document action buttons
                 const docButtons = [];
                 if (t.protocolUrl) {
-                    docButtons.push(`<a href="${t.protocolUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN"><i class="fa-solid fa-file-pdf"></i> Protocol (PDF)</a>`);
+                    docButtons.push(`<a href="${t.protocolUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN" aria-label="Download official Protocol PDF for ${t.id}"><i class="fa-solid fa-file-pdf"></i> Protocol (PDF)</a>`);
                 }
                 if (t.sapUrl && t.sapUrl !== t.protocolUrl) {
-                    docButtons.push(`<a href="${t.sapUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF"><i class="fa-solid fa-chart-line"></i> SAP (PDF)</a>`);
+                    docButtons.push(`<a href="${t.sapUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF" aria-label="Download Statistical Analysis Plan PDF for ${t.id}"><i class="fa-solid fa-chart-line"></i> SAP (PDF)</a>`);
                 }
                 if (t.hasResults && t.resultsUrl) {
-                    docButtons.push(`<a href="${t.resultsUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov"><i class="fa-solid fa-square-poll-vertical"></i> Results Tab</a>`);
+                    docButtons.push(`<a href="${t.resultsUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov" aria-label="View statutory results tab for ${t.id} on ClinicalTrials.gov"><i class="fa-solid fa-square-poll-vertical"></i> Results Tab</a>`);
                 }
                 if (t.primaryPmid) {
-                    docButtons.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${t.primaryPmid}/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View peer-reviewed paper on PubMed (PMID: ${t.primaryPmid})"><i class="fa-solid fa-book-medical"></i> PubMed: ${t.primaryPmid}</a>`);
+                    docButtons.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${t.primaryPmid}/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View peer-reviewed paper on PubMed (PMID: ${t.primaryPmid})" aria-label="View peer-reviewed trial paper on PubMed for ${t.id}"><i class="fa-solid fa-book-medical"></i> PubMed: ${t.primaryPmid}</a>`);
                 }
-                docButtons.push(`<a href="${t.registryUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-registry" title="Open primary study record on ClinicalTrials.gov"><i class="fa-solid fa-arrow-up-right-from-square"></i> Registry</a>`);
+                docButtons.push(`<a href="${t.registryUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-registry" title="Open primary study record on ClinicalTrials.gov" aria-label="Open primary ClinicalTrials.gov study record for ${t.id}"><i class="fa-solid fa-arrow-up-right-from-square"></i> Registry</a>`);
 
                 return `
                 <div class="study-item">
