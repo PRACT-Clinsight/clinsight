@@ -43,12 +43,22 @@ function renderTrialPage(trial, allTrials) {
   const conditions = (trial.conditions || []).map(escapeHtml).join(', ');
   const interventions = (trial.interventions || []).map(escapeHtml).join(', ');
 
+  // Compute primary drug for VigiSight FAERS safety cross-link
+  let vigisightDrug = null;
+  if (trial.interventions && trial.interventions.length > 0) {
+    const rawDrug = trial.interventions[0].replace(/^Drug:\s*/i, '').trim();
+    const cleaned = rawDrug.split(/[\s,\/]+/)[0];
+    if (cleaned && cleaned.length >= 3 && !['placebo', 'study', 'saline', 'standard', 'comparator'].includes(cleaned.toLowerCase())) {
+      vigisightDrug = cleaned;
+    }
+  }
+
   // Related trials in the same domain
   const related = allTrials
     .filter(t => t.nctId !== trial.nctId && (t.modality === trial.modality || t.category === trial.category))
     .slice(0, 4);
 
-  // Structured Data Schema (Registry Fact compliant)
+  // Structured Data Schema (Registry Fact compliant + Breadcrumbs GEO)
   const schemaJson = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -63,6 +73,29 @@ function renderTrialPage(trial, allTrials) {
         "sponsor": sponsor,
         "status": status,
         "phase": phase
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ClinSight",
+            "item": `${BASE_URL}/`
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": category,
+            "item": `${BASE_URL}/?category=${encodeURIComponent(trial.category || '')}`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": `${acronym} (${nctId})`,
+            "item": `${BASE_URL}/trials/${nctId}/`
+          }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -515,6 +548,92 @@ function renderTrialPage(trial, allTrials) {
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -552,6 +671,20 @@ function renderTrialPage(trial, allTrials) {
 
         <h1>${acronym !== nctId ? acronym + ': ' : ''}${title}</h1>
         <p class="lead">${officialTitle}</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            ${vigisightDrug ? `
+            <a href="https://vigisight.pract.eu/?search=${encodeURIComponent(vigisightDrug)}" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (${escapeHtml(vigisightDrug)}) ↗
+            </a>` : ''}
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -654,12 +787,61 @@ function renderTrialPage(trial, allTrials) {
         </div>
         ` : ''}
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20${nctId}%20(${encodeURIComponent(acronym)})" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = ${JSON.stringify({
+          nctId: trial.nctId,
+          acronym: trial.acronym,
+          briefTitle: trial.briefTitle,
+          officialTitle: trial.officialTitle,
+          sponsor: trial.sponsor,
+          phase: trial.phase,
+          status: trial.status,
+          modality: trial.modality,
+          conditions: trial.conditions,
+          interventions: trial.interventions,
+          primaryOutcomes: trial.primaryOutcomes,
+          completionDate: trial.completionDate,
+          source: 'ClinicalTrials.gov API v2'
+        })};
+
+        function copyCitation() {
+            const text = "${acronym !== nctId ? acronym + '. ' : ''}${escapeHtml(title).replace(/"/g, '\\"')}. ClinicalTrials.gov Identifier: ${nctId}. Primary Sponsor: ${escapeHtml(sponsor).replace(/"/g, '\\"')}. Available at: ${BASE_URL}/trials/${nctId}/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = '${nctId}-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

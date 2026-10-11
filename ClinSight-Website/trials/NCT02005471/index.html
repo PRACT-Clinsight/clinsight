@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MURANO (NCT02005471): A Study to Evaluate the Benefit of Venetoclax Plus Rituximab Compared With Bendamustine Plus Rituximab in Participants With Relapsed or Refractory Chronic Lymphocytic Leukemia (CLL)","url":"https://clinsight.pract.eu/trials/NCT02005471/","studySubject":{"@type":"MedicalCondition","name":"Chronic Lymphocytic Leukemia"},"sponsor":"Hoffmann-La Roche","status":"COMPLETED","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02005471 (MURANO)?","acceptedAnswer":{"@type":"Answer","text":"NCT02005471 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating Targeted Monoclonal Antibodies in Chronic Lymphocytic Leukemia (CLL)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02005471?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02005471."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MURANO (NCT02005471): A Study to Evaluate the Benefit of Venetoclax Plus Rituximab Compared With Bendamustine Plus Rituximab in Participants With Relapsed or Refractory Chronic Lymphocytic Leukemia (CLL)","url":"https://clinsight.pract.eu/trials/NCT02005471/","studySubject":{"@type":"MedicalCondition","name":"Chronic Lymphocytic Leukemia"},"sponsor":"Hoffmann-La Roche","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MURANO (NCT02005471)","item":"https://clinsight.pract.eu/trials/NCT02005471/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02005471 (MURANO)?","acceptedAnswer":{"@type":"Answer","text":"NCT02005471 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating Targeted Monoclonal Antibodies in Chronic Lymphocytic Leukemia (CLL)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02005471?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02005471."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>MURANO: A Study to Evaluate the Benefit of Venetoclax Plus Rituximab Compared With Bendamustine Plus Rituximab in Participants With Relapsed or Refractory Chronic Lymphocytic Leukemia (CLL)</h1>
         <p class="lead">A Multicenter, Phase III, Open-Label, Randomized Study in Relapsed/Refractory Patients With Chronic Lymphocytic Leukemia to Evaluate the Benefit of Venetoclax (GDC-0199/ABT-199) Plus Rituximab Compared With Bendamustine Plus Rituximab</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=Bendamustine" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Bendamustine) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT02005471%20(MURANO)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT02005471","acronym":"MURANO","briefTitle":"A Study to Evaluate the Benefit of Venetoclax Plus Rituximab Compared With Bendamustine Plus Rituximab in Participants With Relapsed or Refractory Chronic Lymphocytic Leukemia (CLL)","officialTitle":"A Multicenter, Phase III, Open-Label, Randomized Study in Relapsed/Refractory Patients With Chronic Lymphocytic Leukemia to Evaluate the Benefit of Venetoclax (GDC-0199/ABT-199) Plus Rituximab Compared With Bendamustine Plus Rituximab","sponsor":"Hoffmann-La Roche","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Monoclonal Antibodies","conditions":["Chronic Lymphocytic Leukemia"],"interventions":["Bendamustine","Venetoclax","Rituximab"],"primaryOutcomes":[{"measure":"Percentage of Participants With PD as Assessed by the Investigator Using Standard International Workshop on Chronic Lymphocytic Leukemia (iwCLL) Guidelines or Death","description":"Assessment of response was performed by the investigator according to the iwCLL guidelines. PD was defined as occurrence of one of the following events: appearance of any new extra nodal lesion; new palpable lymph node (greater than \\[\\>\\] 1.5 centimeters \\[cm\\]); unequivocal progression of non-target lesion; an increase of greater than or equal to (\\>/=) 50 percent (%) compared to baseline in splenomegaly, hepatomegaly, number of blood lymphocytes with lymphocyte count \\>/=5000 per microliter (mcL), or in longest diameter of any extra nodal lesion; transformation to a more aggressive histology; decrease of \\>/=50% compared to baseline in platelet or neutrophil count; or decrease in hemoglobin level by \\>2 grams per deciliter (g/dL) or to less than \\[\\<\\] 10 g/dL. Percentages are rounded off.","timeFrame":"Baseline up to PD or death from any cause, whichever occurred first (up to approximately 8 years 5 months)"},{"measure":"Progression-Free Survival (PFS) as Assessed by the Investigator Using Standard iwCLL Guidelines","description":"PFS was defined as the time from randomization until first occurrence of PD/relapse as assessed by the investigator using iwCLL guidelines, or death from any cause, whichever occurred first. PD: occurrence of one of the following: new lesion; new palpable lymph node (\\>1.5 cm); unequivocal progression of non-target lesion; increase of \\>/=50% in splenomegaly, hepatomegaly, blood lymphocytes with count \\>/=5000/mcL, longest diameter of any lesion; transformation to more aggressive histology; decrease of \\>/=50% in platelet or neutrophil count, or hemoglobin level by \\>2 g/dL or to \\<10 g/dL. Participants who had not progressed, relapsed, or died at the time of analysis, were censored on the date of last assessment. In case of no disease assessment after baseline, PFS was censored at the time of randomization+1 day. The median PFS was estimated using Kaplan-Meier method and the 95% confidence interval (CI) was computed using method of Brookmeyer and Crowley.","timeFrame":"Baseline up to PD or death, whichever occurred first (up to approximately 8 years 5 months)"}],"completionDate":"2022-08-03","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "MURANO. A Study to Evaluate the Benefit of Venetoclax Plus Rituximab Compared With Bendamustine Plus Rituximab in Participants With Relapsed or Refractory Chronic Lymphocytic Leukemia (CLL). ClinicalTrials.gov Identifier: NCT02005471. Primary Sponsor: Hoffmann-La Roche. Available at: https://clinsight.pract.eu/trials/NCT02005471/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT02005471-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

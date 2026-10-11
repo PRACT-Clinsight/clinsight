@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MK-3475 (NCT02494583): Study of Pembrolizumab (MK-3475) as First-Line Monotherapy and Combination Therapy for Treatment of Advanced Gastric or Gastroesophageal Junction Adenocarcinoma (MK-3475-062/KEYNOTE-062)","url":"https://clinsight.pract.eu/trials/NCT02494583/","studySubject":{"@type":"MedicalCondition","name":"Gastric Adenocarcinoma"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"COMPLETED","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02494583 (MK-3475)?","acceptedAnswer":{"@type":"Answer","text":"NCT02494583 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Immuno-Oncology (Checkpoint Inhibitor) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02494583?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02494583."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MK-3475 (NCT02494583): Study of Pembrolizumab (MK-3475) as First-Line Monotherapy and Combination Therapy for Treatment of Advanced Gastric or Gastroesophageal Junction Adenocarcinoma (MK-3475-062/KEYNOTE-062)","url":"https://clinsight.pract.eu/trials/NCT02494583/","studySubject":{"@type":"MedicalCondition","name":"Gastric Adenocarcinoma"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MK-3475 (NCT02494583)","item":"https://clinsight.pract.eu/trials/NCT02494583/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02494583 (MK-3475)?","acceptedAnswer":{"@type":"Answer","text":"NCT02494583 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Immuno-Oncology (Checkpoint Inhibitor) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02494583?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02494583."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>MK-3475: Study of Pembrolizumab (MK-3475) as First-Line Monotherapy and Combination Therapy for Treatment of Advanced Gastric or Gastroesophageal Junction Adenocarcinoma (MK-3475-062/KEYNOTE-062)</h1>
         <p class="lead">A Randomized, Active-Controlled, Partially Blinded, Biomarker Select, Phase III Clinical Trial of Pembrolizumab as Monotherapy and in Combination With Cisplatin+5-Fluorouracil Versus Placebo+Cisplatin+5-Fluorouracil as First-Line Treatment in Subjects With Advanced Gastric or Gastroesophageal Junction (GEJ) Adenocarcinoma</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=Pembrolizumab" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Pembrolizumab) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT02494583%20(MK-3475)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT02494583","acronym":"MK-3475","briefTitle":"Study of Pembrolizumab (MK-3475) as First-Line Monotherapy and Combination Therapy for Treatment of Advanced Gastric or Gastroesophageal Junction Adenocarcinoma (MK-3475-062/KEYNOTE-062)","officialTitle":"A Randomized, Active-Controlled, Partially Blinded, Biomarker Select, Phase III Clinical Trial of Pembrolizumab as Monotherapy and in Combination With Cisplatin+5-Fluorouracil Versus Placebo+Cisplatin+5-Fluorouracil as First-Line Treatment in Subjects With Advanced Gastric or Gastroesophageal Junction (GEJ) Adenocarcinoma","sponsor":"Merck Sharp & Dohme LLC","phase":"Phase 3","status":"COMPLETED","modality":"Immuno-Oncology (Checkpoint Inhibitor)","conditions":["Gastric Adenocarcinoma"],"interventions":["Pembrolizumab","Cisplatin","5-FU","Capecitabine","Placebo"],"primaryOutcomes":[{"measure":"Pembro Combo vs SOC: Progression Free Survival (PFS) Per Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) by Blinded Independent Central Review (BICR) in Participants With PD-L1 CPS ≥1 (All Participants)","description":"PFS was defined as the time from randomization to the first documented progressive disease (PD) per RECIST 1.1 based on BICR, or death due to any cause, whichever occurred first. Per RECIST 1.1, PD was defined as ≥20% increase in the sum of diameters of target lesions. In addition to the relative increase of 20%, the sum had to demonstrate an absolute increase of ≥5 mm. The appearance of one or more new lesions was also considered PD.\n\nPer protocol, PFS in the pembro combo arm was compared to the SOC arm as a pre-specified primary analysis of the Intent-To-Treat (ITT) population. PFS is reported here for all participants in the pembro combo arm and SOC arm who were PD-L1 CPS ≥1 (all participants). Per protocol, PFS was compared separately between CPS ≥1 participants of the pembro mono arm and SOC arm and is presented later in the record.","timeFrame":"Up to approximately 36 months"},{"measure":"Pembro Combo vs SOC: Overall Survival (OS) in Participants With PD-L1 CPS ≥1 (All Participants)","description":"OS was defined as the time from randomization to death due to any cause. Participants without documented death at the time of the final analysis were censored at the date of the last follow-up. Per protocol, OS in the pembro combo arm was compared to the SOC arm as a pre-specified primary analysis of the ITT population. OS is reported here for all participants in the pembro combo arm and SOC arm who were PD-L1 CPS ≥1 (all participants). Per protocol, OS was compared separately between CPS ≥1 participants of the pembro mono arm and SOC arm and is presented later in the record.","timeFrame":"Up to approximately 42 months"},{"measure":"Pembro Combo vs SOC: OS in Participants With PD-L1 CPS ≥10","description":"OS was defined as the time from randomization to death due to any cause. Participants without documented death at the time of the final analysis were censored at the date of the last follow-up. Per protocol, OS in the pembro combo arm was compared to the SOC arm as a pre-specified primary analysis of the ITT population. OS is reported here for all participants in the pembro combo arm and SOC arm who were PD-L1 CPS ≥10. Per protocol, OS was compared separately between CPS ≥10 participants of the pembro mono arm and SOC arm and is presented later in the record.","timeFrame":"Up to approximately 42 months"},{"measure":"Pembro Mono vs SOC: OS in Participants With PD-L1 CPS ≥1 (All Participants)","description":"OS was defined as the time from randomization to death due to any cause. Participants without documented death at the time of the final analysis were censored at the date of the last follow-up. Per protocol, OS in the pembro mono arm was compared to the SOC arm as a pre-specified primary analysis of the ITT population. OS is reported here for all participants in the pembro mono arm and SOC arm who were PD-L1 CPS ≥1 (all participants). Per protocol, OS was compared separately between CPS ≥1 participants of the pembro combo arm and SOC arm and is presented earlier in the record.","timeFrame":"Up to approximately 42 months"},{"measure":"Pembro Mono vs SOC: OS in Participants With PD-L1 CPS ≥10","description":"OS was defined as the time from randomization to death due to any cause. Participants without documented death at the time of the final analysis were censored at the date of the last follow-up. Per protocol, OS in the pembro mono arm was compared to the SOC arm as a pre-specified primary analysis of the ITT population. OS is reported here for all participants in the pembro mono arm and SOC arm who were PD-L1 CPS ≥10. Per protocol, OS was compared separately between CPS ≥10 participants of the pembro combo arm and SOC arm and is presented earlier in the record.","timeFrame":"Up to approximately 42 months"}],"completionDate":"2022-06-06","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "MK-3475. Study of Pembrolizumab (MK-3475) as First-Line Monotherapy and Combination Therapy for Treatment of Advanced Gastric or Gastroesophageal Junction Adenocarcinoma (MK-3475-062/KEYNOTE-062). ClinicalTrials.gov Identifier: NCT02494583. Primary Sponsor: Merck Sharp &amp;amp; Dohme LLC. Available at: https://clinsight.pract.eu/trials/NCT02494583/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT02494583-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NUTRAOLEUM (NCT02520739): New Industrial Procedures for Achieving a Nutritional Added Value of the Olive Oil. The NUTRAOLEUM Study","url":"https://clinsight.pract.eu/trials/NCT02520739/","studySubject":{"@type":"MedicalCondition","name":"Cardiovascular Diseases"},"sponsor":"Fundación Pública Andaluza para la Investigación Biomédica Andalucía Oriental","status":"UNKNOWN","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02520739 (NUTRAOLEUM)?","acceptedAnswer":{"@type":"Answer","text":"NCT02520739 is a Phase 3 study sponsored by Fundación Pública Andaluza para la Investigación Biomédica Andalucía Oriental evaluating Biological Products &amp; Targeted Therapies in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02520739?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02520739."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NUTRAOLEUM (NCT02520739): New Industrial Procedures for Achieving a Nutritional Added Value of the Olive Oil. The NUTRAOLEUM Study","url":"https://clinsight.pract.eu/trials/NCT02520739/","studySubject":{"@type":"MedicalCondition","name":"Cardiovascular Diseases"},"sponsor":"Fundación Pública Andaluza para la Investigación Biomédica Andalucía Oriental","status":"UNKNOWN","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Cardiometabolic &amp; Endocrinology","item":"https://clinsight.pract.eu/?category=Cardiometabolic%20%26%20Endocrinology"},{"@type":"ListItem","position":3,"name":"NUTRAOLEUM (NCT02520739)","item":"https://clinsight.pract.eu/trials/NCT02520739/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02520739 (NUTRAOLEUM)?","acceptedAnswer":{"@type":"Answer","text":"NCT02520739 is a Phase 3 study sponsored by Fundación Pública Andaluza para la Investigación Biomédica Andalucía Oriental evaluating Biological Products &amp; Targeted Therapies in Cardiometabolic."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02520739?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02520739."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>NUTRAOLEUM: New Industrial Procedures for Achieving a Nutritional Added Value of the Olive Oil. The NUTRAOLEUM Study</h1>
         <p class="lead">New Industrial Procedures for Achieving a Nutritional Added Value of the Olive Oil. The NUTRAOLEUM Study</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=Virgin" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Virgin) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT02520739%20(NUTRAOLEUM)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT02520739","acronym":"NUTRAOLEUM","briefTitle":"New Industrial Procedures for Achieving a Nutritional Added Value of the Olive Oil. The NUTRAOLEUM Study","officialTitle":"New Industrial Procedures for Achieving a Nutritional Added Value of the Olive Oil. The NUTRAOLEUM Study","sponsor":"Fundación Pública Andaluza para la Investigación Biomédica Andalucía Oriental","phase":"Phase 3","status":"UNKNOWN","modality":"Biological Products & Targeted Therapies","conditions":["Cardiovascular Diseases"],"interventions":["Virgin Olive Oil (VOO)","Optimized High Phenolic Content Oil (OHPCO)","Functional Olive Oil (FOO)"],"primaryOutcomes":[{"measure":"Systolic and diastolic blood pressures","description":"measured with a mercury sphygmomanometer after a minimum of 10 minutes rest in the seated position; the average of two measurements was taken for analysis.","timeFrame":"Up to 10 months"},{"measure":"Physical activity","description":"a potential confounder variable concerning oxidative and anti-inflammatory status was recorded at the beginning and at the of the study, and assessed by the Minnesota Leisure Time Physical Activity Questionnaire validated for its use in Spanish men and women","timeFrame":"Up to 10 months"},{"measure":"Serum glucose","description":"determined by enzymatic methods","timeFrame":"Up to 10 months"},{"measure":"Total cholesterol","description":"determined by enzymatic methods","timeFrame":"Up to 10 months"},{"measure":"high-density lipoprotein cholesterol","description":"determined by enzymatic methods","timeFrame":"Up to 10 months"},{"measure":"triglycerides","description":"determined by enzymatic methods","timeFrame":"Up to 10 months"},{"measure":"LDL cholesterol","description":"calculated by the Friedewald formula","timeFrame":"Up to 10 months"},{"measure":"Oxidized LDL (oxLDL)","description":"determined in plasma by ELISA using two antibodies against antigenic determinants of oxidized apolipoprotein B molecule (ox-LDL, Uppsala, Sweden)","timeFrame":"Up to 10 months"},{"measure":"Conjugated dienes in LDL","description":"measured spectrophotometrically at 234 nm and 300 nm after Cu++ oxidation","timeFrame":"Up to 10 months"},{"measure":"Tyrosol and hydroxytyrosol in urine samples and oleanolic and maslinic in plasma","description":"measured as markers of compliance of the intervention, will be determined by gas chromatography-mass spectrometry","timeFrame":"Up to 10 months"}],"completionDate":"2016-12","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "NUTRAOLEUM. New Industrial Procedures for Achieving a Nutritional Added Value of the Olive Oil. The NUTRAOLEUM Study. ClinicalTrials.gov Identifier: NCT02520739. Primary Sponsor: Fundación Pública Andaluza para la Investigación Biomédica Andalucía Oriental. Available at: https://clinsight.pract.eu/trials/NCT02520739/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT02520739-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

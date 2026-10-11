@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"AGILE (NCT03173248): Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation","url":"https://clinsight.pract.eu/trials/NCT03173248/","studySubject":{"@type":"MedicalCondition","name":"Newly Diagnosed Acute Myeloid Leukemia (AML)"},"sponsor":"Institut de Recherches Internationales Servier","status":"ACTIVE NOT RECRUITING","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03173248 (AGILE)?","acceptedAnswer":{"@type":"Answer","text":"NCT03173248 is a Phase 3 study sponsored by Institut de Recherches Internationales Servier evaluating Targeted Therapy (Small Molecule / TKI) in Acute Myeloid Leukemia (AML)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03173248?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03173248."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"AGILE (NCT03173248): Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation","url":"https://clinsight.pract.eu/trials/NCT03173248/","studySubject":{"@type":"MedicalCondition","name":"Newly Diagnosed Acute Myeloid Leukemia (AML)"},"sponsor":"Institut de Recherches Internationales Servier","status":"ACTIVE NOT RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"AGILE (NCT03173248)","item":"https://clinsight.pract.eu/trials/NCT03173248/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03173248 (AGILE)?","acceptedAnswer":{"@type":"Answer","text":"NCT03173248 is a Phase 3 study sponsored by Institut de Recherches Internationales Servier evaluating Targeted Therapy (Small Molecule / TKI) in Acute Myeloid Leukemia (AML)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03173248?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03173248."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>AGILE: Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation</h1>
         <p class="lead">A Phase 3, Multicenter, Double-Blind, Randomized, Placebo-Controlled Study of AG-120 in Combination With Azacitidine in Subjects ≥ 18 Years of Age With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=AG-120" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (AG-120) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT03173248%20(AGILE)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT03173248","acronym":"AGILE","briefTitle":"Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation","officialTitle":"A Phase 3, Multicenter, Double-Blind, Randomized, Placebo-Controlled Study of AG-120 in Combination With Azacitidine in Subjects ≥ 18 Years of Age With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation","sponsor":"Institut de Recherches Internationales Servier","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Newly Diagnosed Acute Myeloid Leukemia (AML)","Untreated AML","AML Arising From Myelodysplastic Syndrome (MDS)","Leukemia, Myeloid, Acute"],"interventions":["AG-120","Placebo","Azacitidine"],"primaryOutcomes":[{"measure":"Event-Free Survival (EFS)","description":"EFS was defined as the time from randomization until treatment failure, relapse from remission, or death from any cause, whichever occurs first. Treatment failure was defined as failure to achieve complete remission (CR) by Week 24. CR: Bone marrow blasts \\<5% and no Auer rods; absence of extramedullary disease; Absolute neutrophil count (ANC) ≥1.0 × 10\\^9 per litre (10\\^9/L) (1000 per microlitre \\[1000/μL\\]); platelet count ≥100 × 10\\^9/L (100,000/μL); independence of red blood cell transfusions. Participants who had an EFS event (relapse or death) after, 2 or more missing disease assessments were censored at the last adequate disease assessment documenting no relapse before the missing assessments. The reported data represents the Kaplan-Meier median value.","timeFrame":"Up to Week 24"}],"completionDate":"2026-06-30","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "AGILE. Study of AG-120 (Ivosidenib) vs. Placebo in Combination With Azacitidine in Participants With Previously Untreated Acute Myeloid Leukemia With an IDH1 Mutation. ClinicalTrials.gov Identifier: NCT03173248. Primary Sponsor: Institut de Recherches Internationales Servier. Available at: https://clinsight.pract.eu/trials/NCT03173248/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT03173248-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

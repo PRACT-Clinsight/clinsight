@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"TRANSFORM (NCT03575351): A Study to Compare the Efficacy and Safety of JCAR017 to Standard of Care in Adult Subjects With High-risk, Transplant-eligible Relapsed or Refractory Aggressive B-cell Non-Hodgkin Lymphomas","url":"https://clinsight.pract.eu/trials/NCT03575351/","studySubject":{"@type":"MedicalCondition","name":"Lymphoma, Non-Hodgkin"},"sponsor":"Celgene","status":"COMPLETED","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03575351 (TRANSFORM)?","acceptedAnswer":{"@type":"Answer","text":"NCT03575351 is a Phase 3 study sponsored by Celgene evaluating Biological Products &amp; Targeted Therapies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03575351?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03575351."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"TRANSFORM (NCT03575351): A Study to Compare the Efficacy and Safety of JCAR017 to Standard of Care in Adult Subjects With High-risk, Transplant-eligible Relapsed or Refractory Aggressive B-cell Non-Hodgkin Lymphomas","url":"https://clinsight.pract.eu/trials/NCT03575351/","studySubject":{"@type":"MedicalCondition","name":"Lymphoma, Non-Hodgkin"},"sponsor":"Celgene","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"TRANSFORM (NCT03575351)","item":"https://clinsight.pract.eu/trials/NCT03575351/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03575351 (TRANSFORM)?","acceptedAnswer":{"@type":"Answer","text":"NCT03575351 is a Phase 3 study sponsored by Celgene evaluating Biological Products &amp; Targeted Therapies in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03575351?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03575351."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,17 @@
 
         <h1>TRANSFORM: A Study to Compare the Efficacy and Safety of JCAR017 to Standard of Care in Adult Subjects With High-risk, Transplant-eligible Relapsed or Refractory Aggressive B-cell Non-Hodgkin Lymphomas</h1>
         <p class="lead">A Global Randomized Multicenter Phase 3 Trial of JCAR017 Compared to Standard of Care in Adult Subjects With High-risk, Second-line, Transplant-eligible Relapsed or Refractory Aggressive B-cell Non-Hodgkin Lymphomas (TRANSFORM).</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +675,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT03575351%20(TRANSFORM)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT03575351","acronym":"TRANSFORM","briefTitle":"A Study to Compare the Efficacy and Safety of JCAR017 to Standard of Care in Adult Subjects With High-risk, Transplant-eligible Relapsed or Refractory Aggressive B-cell Non-Hodgkin Lymphomas","officialTitle":"A Global Randomized Multicenter Phase 3 Trial of JCAR017 Compared to Standard of Care in Adult Subjects With High-risk, Second-line, Transplant-eligible Relapsed or Refractory Aggressive B-cell Non-Hodgkin Lymphomas (TRANSFORM).","sponsor":"Celgene","phase":"Phase 3","status":"COMPLETED","modality":"Biological Products & Targeted Therapies","conditions":["Lymphoma, Non-Hodgkin"],"interventions":["Standard of Care","JCAR017"],"primaryOutcomes":[{"measure":"Event-free Survival (EFS) Per Independent Review Committee (IRC)","description":"Time from randomization to death, progressive disease (PD), failure to achieve complete response (CR) or partial response (PR) by 9 weeks or start of new antineoplastic therapy, whichever occurs first. CR: Target nodes masses must regress to ≤ 1.5cm in LDi, no extralymphatic sites, no new lesions. PR: ≥ 50% decrease in sum of diameters of up to 6 target nodes and extranodal sites, no new lesions, spleen must have regressed \\> 50% in length. PD: LDi \\> 1.5cm, increase by ≥ 50% from PPD nadir, an increase in LDi or SDi from nadir, 0.5 cm for lesions ≤ 2cm, 1.0cm for lesions \\> 2cm. Complete metabolic response: Lymph nodes score 1, 2, 3 with/without residual mass on 5-point scale, no new lesions, no FDG-avid disease. Partial metabolic response: Lymph nodes score 4 or 5, reduced uptake from baseline, no new lesions, residual uptake higher than normal, reduced from baseline. Progressive metabolic disease: Score 4 or 5 with an increase in uptake intensity from baseline and/or new FDG-avid.","timeFrame":"From randomization to death from any cause, PD, failure to achieve CR or PR by 9 weeks post randomization, or start of new antineoplastic therapy due to efficacy concerns, whichever occurs first (Up to 36 months)"}],"completionDate":"2023-10-23","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "TRANSFORM. A Study to Compare the Efficacy and Safety of JCAR017 to Standard of Care in Adult Subjects With High-risk, Transplant-eligible Relapsed or Refractory Aggressive B-cell Non-Hodgkin Lymphomas. ClinicalTrials.gov Identifier: NCT03575351. Primary Sponsor: Celgene. Available at: https://clinsight.pract.eu/trials/NCT03575351/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT03575351-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

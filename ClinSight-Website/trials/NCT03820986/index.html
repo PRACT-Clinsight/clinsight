@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MK-3475 (NCT03820986): Safety and Efficacy Study of Pembrolizumab (MK-3475) Combined With Lenvatinib (MK-7902/E7080) as First-line Intervention in Adults With Advance Melanoma (MK-7902-003/E7080-G000-312/LEAP-003)","url":"https://clinsight.pract.eu/trials/NCT03820986/","studySubject":{"@type":"MedicalCondition","name":"Malignant Melanoma"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"COMPLETED","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03820986 (MK-3475)?","acceptedAnswer":{"@type":"Answer","text":"NCT03820986 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Immuno-Oncology (Checkpoint Inhibitor) in Melanoma."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03820986?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03820986."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"MK-3475 (NCT03820986): Safety and Efficacy Study of Pembrolizumab (MK-3475) Combined With Lenvatinib (MK-7902/E7080) as First-line Intervention in Adults With Advance Melanoma (MK-7902-003/E7080-G000-312/LEAP-003)","url":"https://clinsight.pract.eu/trials/NCT03820986/","studySubject":{"@type":"MedicalCondition","name":"Malignant Melanoma"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"MK-3475 (NCT03820986)","item":"https://clinsight.pract.eu/trials/NCT03820986/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03820986 (MK-3475)?","acceptedAnswer":{"@type":"Answer","text":"NCT03820986 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Immuno-Oncology (Checkpoint Inhibitor) in Melanoma."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03820986?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03820986."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>MK-3475: Safety and Efficacy Study of Pembrolizumab (MK-3475) Combined With Lenvatinib (MK-7902/E7080) as First-line Intervention in Adults With Advance Melanoma (MK-7902-003/E7080-G000-312/LEAP-003)</h1>
         <p class="lead">A Phase 3 Randomized, Placebo-controlled Trial to Evaluate the Safety and Efficacy of Pembrolizumab (MK-3475) and Lenvatinib (E7080/MK-7902) Versus Pembrolizumab Alone as First-line Intervention in Participants With Advanced Melanoma (LEAP-003)</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=Pembrolizumab" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Pembrolizumab) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT03820986%20(MK-3475)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT03820986","acronym":"MK-3475","briefTitle":"Safety and Efficacy Study of Pembrolizumab (MK-3475) Combined With Lenvatinib (MK-7902/E7080) as First-line Intervention in Adults With Advance Melanoma (MK-7902-003/E7080-G000-312/LEAP-003)","officialTitle":"A Phase 3 Randomized, Placebo-controlled Trial to Evaluate the Safety and Efficacy of Pembrolizumab (MK-3475) and Lenvatinib (E7080/MK-7902) Versus Pembrolizumab Alone as First-line Intervention in Participants With Advanced Melanoma (LEAP-003)","sponsor":"Merck Sharp & Dohme LLC","phase":"Phase 3","status":"COMPLETED","modality":"Immuno-Oncology (Checkpoint Inhibitor)","conditions":["Malignant Melanoma"],"interventions":["Pembrolizumab","Lenvatinib","Placebo for lenvatinib"],"primaryOutcomes":[{"measure":"Progression-free Survival (PFS) as Assessed by Blinded Independent Central Review (BICR) Per Modified Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1)","description":"PFS is defined as the time from date of randomization to the date of the first documentation of progressive disease (PD) or death from any cause, whichever occurs first. Per RECIST 1.1, PD is defined as ≥20% increase in the sum of diameters of target lesions. In addition to the relative increase of 20%, the sum must also demonstrate an absolute increase of ≥5 mm. Note: The appearance of one or more new lesions is also considered PD. For this study, RECIST 1.1 has been modified to follow a maximum of 10 target lesions and a maximum of 5 target lesions per organ. The final analysis for this outcome is presented here.","timeFrame":"Up to approximately 34 months"},{"measure":"Overall Survival (OS)","description":"OS is defined as the time from date of randomization to date of death from any cause. The final analysis for this outcome is presented here.","timeFrame":"Up to approximately 46 months"}],"completionDate":"2024-11-01","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "MK-3475. Safety and Efficacy Study of Pembrolizumab (MK-3475) Combined With Lenvatinib (MK-7902/E7080) as First-line Intervention in Adults With Advance Melanoma (MK-7902-003/E7080-G000-312/LEAP-003). ClinicalTrials.gov Identifier: NCT03820986. Primary Sponsor: Merck Sharp &amp;amp; Dohme LLC. Available at: https://clinsight.pract.eu/trials/NCT03820986/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT03820986-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

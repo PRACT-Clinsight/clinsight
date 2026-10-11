@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"RESONATE (NCT01578707): A Phase 3 Study of Ibrutinib (PCI-32765) Versus Ofatumumab in Patients With Relapsed or Refractory Chronic Lymphocytic Leukemia","url":"https://clinsight.pract.eu/trials/NCT01578707/","studySubject":{"@type":"MedicalCondition","name":"Relapsed or Refractory Chronic Lymphocytic Leukemia"},"sponsor":"Pharmacyclics LLC.","status":"COMPLETED","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01578707 (RESONATE)?","acceptedAnswer":{"@type":"Answer","text":"NCT01578707 is a Phase 3 study sponsored by Pharmacyclics LLC. evaluating Targeted Therapy (Small Molecule / TKI) in Chronic Lymphocytic Leukemia (CLL)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01578707?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01578707."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"RESONATE (NCT01578707): A Phase 3 Study of Ibrutinib (PCI-32765) Versus Ofatumumab in Patients With Relapsed or Refractory Chronic Lymphocytic Leukemia","url":"https://clinsight.pract.eu/trials/NCT01578707/","studySubject":{"@type":"MedicalCondition","name":"Relapsed or Refractory Chronic Lymphocytic Leukemia"},"sponsor":"Pharmacyclics LLC.","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"RESONATE (NCT01578707)","item":"https://clinsight.pract.eu/trials/NCT01578707/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT01578707 (RESONATE)?","acceptedAnswer":{"@type":"Answer","text":"NCT01578707 is a Phase 3 study sponsored by Pharmacyclics LLC. evaluating Targeted Therapy (Small Molecule / TKI) in Chronic Lymphocytic Leukemia (CLL)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT01578707?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT01578707."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>RESONATE: A Phase 3 Study of Ibrutinib (PCI-32765) Versus Ofatumumab in Patients With Relapsed or Refractory Chronic Lymphocytic Leukemia</h1>
         <p class="lead">A Randomized, Multicenter, Open-label, Phase 3 Study of the Bruton&#39;s Tyrosine Kinase (BTK) Inhibitor Ibrutinib (PCI-32765) Versus Ofatumumab in Patients With Relapsed or Refractory Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=ofatumumab" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (ofatumumab) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT01578707%20(RESONATE)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT01578707","acronym":"RESONATE","briefTitle":"A Phase 3 Study of Ibrutinib (PCI-32765) Versus Ofatumumab in Patients With Relapsed or Refractory Chronic Lymphocytic Leukemia","officialTitle":"A Randomized, Multicenter, Open-label, Phase 3 Study of the Bruton's Tyrosine Kinase (BTK) Inhibitor Ibrutinib (PCI-32765) Versus Ofatumumab in Patients With Relapsed or Refractory Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma","sponsor":"Pharmacyclics LLC.","phase":"Phase 3","status":"COMPLETED","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Relapsed or Refractory Chronic Lymphocytic Leukemia","Small Lymphocytic Lymphoma"],"interventions":["ofatumumab","ibrutinib"],"primaryOutcomes":[{"measure":"PFS (Progression Free Survival) by Independent Review Committee (IRC), Limited to the Time of Primary Analysis 06 November 2013","description":"The primary objective of this study was to evaluate the efficacy of ibrutinib compared to ofatumumab based on independent review committee (IRC) assessment of progression-free survival (PFS) according to 2008 IWCLL guidelines.","timeFrame":"Analysis was conducted after observing approximately 117 PFS events, which occurred about 18 months after the first subject was enrolled."}],"completionDate":"2018-10-25","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "RESONATE. A Phase 3 Study of Ibrutinib (PCI-32765) Versus Ofatumumab in Patients With Relapsed or Refractory Chronic Lymphocytic Leukemia. ClinicalTrials.gov Identifier: NCT01578707. Primary Sponsor: Pharmacyclics LLC.. Available at: https://clinsight.pract.eu/trials/NCT01578707/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT01578707-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

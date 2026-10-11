@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT00368966 (NCT00368966): Study to Evaluate a 13-valent Pneumococcal Conjugate Vaccine in Infants.","url":"https://clinsight.pract.eu/trials/NCT00368966/","studySubject":{"@type":"MedicalCondition","name":"Vaccines, Pneumococcal"},"sponsor":"Wyeth is now a wholly owned subsidiary of Pfizer","status":"COMPLETED","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT00368966 (NCT00368966)?","acceptedAnswer":{"@type":"Answer","text":"NCT00368966 is a Phase 3 study sponsored by Wyeth is now a wholly owned subsidiary of Pfizer evaluating Antibody-Drug Conjugates (ADC) in Specialized Indication."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT00368966?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT00368966."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT00368966 (NCT00368966): Study to Evaluate a 13-valent Pneumococcal Conjugate Vaccine in Infants.","url":"https://clinsight.pract.eu/trials/NCT00368966/","studySubject":{"@type":"MedicalCondition","name":"Vaccines, Pneumococcal"},"sponsor":"Wyeth is now a wholly owned subsidiary of Pfizer","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Rare Disease &amp; Immunology","item":"https://clinsight.pract.eu/?category=Rare%20Disease%20%26%20Immunology"},{"@type":"ListItem","position":3,"name":"NCT00368966 (NCT00368966)","item":"https://clinsight.pract.eu/trials/NCT00368966/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT00368966 (NCT00368966)?","acceptedAnswer":{"@type":"Answer","text":"NCT00368966 is a Phase 3 study sponsored by Wyeth is now a wholly owned subsidiary of Pfizer evaluating Antibody-Drug Conjugates (ADC) in Specialized Indication."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT00368966?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT00368966."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>Study to Evaluate a 13-valent Pneumococcal Conjugate Vaccine in Infants.</h1>
         <p class="lead">A Phase 3, Randomized, Active-Controlled, Double-blind Trial Evaluating the Safety, Tolerability, and Immunogenicity of a 13-valent Pneumococcal Conjugate Vaccine in Healthy Infants Given With Routine Pediatric Vaccinations in Spain</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=13-valent" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (13-valent) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT00368966%20(NCT00368966)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT00368966","acronym":"NCT00368966","briefTitle":"Study to Evaluate a 13-valent Pneumococcal Conjugate Vaccine in Infants.","officialTitle":"A Phase 3, Randomized, Active-Controlled, Double-blind Trial Evaluating the Safety, Tolerability, and Immunogenicity of a 13-valent Pneumococcal Conjugate Vaccine in Healthy Infants Given With Routine Pediatric Vaccinations in Spain","sponsor":"Wyeth is now a wholly owned subsidiary of Pfizer","phase":"Phase 3","status":"COMPLETED","modality":"Antibody-Drug Conjugates (ADC)","conditions":["Vaccines, Pneumococcal"],"interventions":["13-valent Pneumococcal Conjugate Vaccine","7-valent Pneumococcal Conjugate Vaccine"],"primaryOutcomes":[{"measure":"Percentage of Participants Achieving Predefined Meningococcal C Serum Bactericidal Assay (SBA) Titer of ≥ 1:8, and a Predefined Antibody Level for Diphtheria in 13vPnC Group Relative to 7vPnC Group After 2-doses of the Infant Series","description":"Percentage of participants achieving predefined antibody threshold levels; greater than or equal to (≥) 1:8 for meningococcal C SBA titer and ≥ 0.10 or \\>=0.01 International Units Per Milliliter (IU/mL) for diphtheria along with the corresponding 95% Confidence Interval (CI) are presented.","timeFrame":"One month after 2-doses of the infant series (5 months of age)"},{"measure":"Geometric Mean Titer (GMT) of Meningococcal C in 13vPnC Group Relative to 7vPnC Group After 2-doses of the Infant Series","description":"","timeFrame":"One month after 2-doses of the infant series (5 months of age)"},{"measure":"Geometric Mean Antibody Concentration (GMC) for Diphtheria in 13vPnC Group Relative to 7vPnC Group After 2-doses of the Infant Series","description":"","timeFrame":"One month after 2-doses of the infant series (5 months of age)"},{"measure":"Percentage of Participants Reporting Pre-Specified Local Reactions","description":"Local reactions were collected using an electronic diary. Tenderness was scaled as Any (tenderness present); Significant (Sig) (present and interfered with limb movement). Swelling and redness were scaled as Any (swelling or redness present); Mild (0.5 centimeters \\[cm\\] to 2.0 cm); Moderate (Mod) (2.5 to 7.0 cm); Severe (\\>7.0 cm). Participants may be represented in more than 1 category.","timeFrame":"During the 4-day period after each dose"},{"measure":"Percentage of Participants Reporting Pre-Specified Systemic Events","description":"Systemic events (fever \\[Fv\\] ≥ 37.5 degrees Celsius \\[C\\], fever ≥ 38 C but ≤ 39 C, fever \\>39 C but ≤ 40 C, fever \\> 40 C, decreased \\[Decr\\] appetite, irritability, increased \\[Incr\\] sleep, decreased sleep, hives, use of medication \\[Med\\] to treat symptoms \\[sx\\], and use of medication to prevent symptoms) were reported using an electronic diary. Participants may be represented in more than 1 category.","timeFrame":"During the 4-day period after each dose"},{"measure":"Geometric Mean Antibody Concentration (GMC) for Serotype-specific Pneumococcal Immunoglobulin G (IgG) Antibody in 13vPnC Group After the Second Dose and After the Third Dose of a 3-Dose Infant Series and After the Toddler Dose","description":"GMC as measured by enzyme-linked immunosorbent assay (ELISA) for 7 common pneumococcal serotypes which are present in both 7vPnC and 13vPnC (serotypes 4, 6B, 9V, 14, 18C, 19F, and 23F) and 6 additional pneumococcal serotypes specific to 13vPnC (Serotypes 1, 3, 5, 6A, 7F, and 19A) are presented.","timeFrame":"One month after infant series dose 2 (at 5 months of age) and dose 3 (at 7 months of age) and one month after the toddler dose (at 16 months of age)"},{"measure":"Percentage of Participants Achieving Predefined Antibody Levels for Pertussis, Diphtheria, Tetanus, and Poliovirus in 13vPnC Group Relative to 7vPnC Group After the 3-dose Infant Series and the Toddler Dose","description":"Percentage of participants achieving predefined antibody threshold levels with the corresponding 95% CI for each concomitant antigen (pertussis antigens including Pertussis Toxoid (PT), Filamentous Haemagglutinin (FHA), and Pertactin (PRN); diphtheria; tetanus; and poliovirus types 1, 2, and 3) are presented.","timeFrame":"One month after the 3-dose infant series (7 months of age) and the toddler dose (16 months of age)"},{"measure":"Geometric Mean Titers (GMT) for Poliovirus in 13vPnC Group Relative to 7vPnC Group After the 3-dose Infant Series and the Toddler Dose","description":"","timeFrame":"One month after the 3-dose infant series (7 months of age) and the toddler dose (16 months of age)"},{"measure":"Geometric Mean Antibody Concentrations (GMC) for Diphtheria and Tetanus in 13vPnC Group Relative to 7vPnC Group After the 3-dose Infant Series and the Toddler Dose","description":"","timeFrame":"One month after the 3-dose infant series (7 months of age) and the toddler dose (16 months of age)"},{"measure":"Geometric Mean Antibody Concentrations (GMC) for Pertussis in 13vPnC Group Relative to 7vPnC Group After the 3-dose Infant Series and the Toddler Dose","description":"GMCs with the corresponding 95% CI for each concomitant antigen pertussis antigens (PT, FHA, PRN, and FIM) as measured by EU/mL are presented.","timeFrame":"One month after the 3-dose infant series (7 months of age) and the toddler dose (16 months of age)"},{"measure":"Percentage of Participants Achieving Antibody Level ≥ 0.35 Microgram Per Milliliter (μg/mL) in 13vPnC Group After the Second Dose and After the Third Dose of a 3-Dose Infant Series and After the Toddler Dose","description":"Percentages of participants achieving World Health Organization (WHO) predefined antibody threshold ≥ 0.35μg/mL along with the corresponding 95% CI for the 7 common pneumococcal serotypes, present in both 13vPnC and 7vPnC (serotypes 4, 6B, 9V, 14, 18C, 19F, and 23F) and 6 additional pneumococcal serotypes specific to 13vPnC (serotypes 1, 3, 5, 6A, 7F, and 19A) are presented.","timeFrame":"One month after infant series dose 2 (at 5 months of age) and dose 3 (at 7 months of age) and one month after the toddler dose (at 16 months of age)"}],"completionDate":"2008-07","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "Study to Evaluate a 13-valent Pneumococcal Conjugate Vaccine in Infants.. ClinicalTrials.gov Identifier: NCT00368966. Primary Sponsor: Wyeth is now a wholly owned subsidiary of Pfizer. Available at: https://clinsight.pract.eu/trials/NCT00368966/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT00368966-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

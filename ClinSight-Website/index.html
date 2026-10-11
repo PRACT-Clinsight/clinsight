@@ -288,6 +288,57 @@
             .mobile-toggle { display: block !important; }
         }
 
+        /* Desktop Topbar Header */
+        .desktop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        @media (max-width: 900px) {
+            .desktop-header { display: none; }
+        }
+        .hub-pill {
+            font-size: 11.5px;
+            font-family: var(--font-mono);
+            color: var(--text-low);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: 0.02em;
+        }
+        .hub-pill i {
+            color: var(--emerald);
+            font-size: 11px;
+        }
+        .desktop-header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .topbar-portal-link {
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-mono);
+            color: var(--text-med);
+            text-decoration: none;
+            padding: 5px 11px;
+            border-radius: 6px;
+            border: 1px solid var(--border-subtle);
+            background: var(--bg-card);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.15s;
+        }
+        .topbar-portal-link:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: var(--chip-bg);
+        }
+
         /* Mobile Header */
         .mobile-header {
             display: none;
@@ -663,30 +714,50 @@
             <ul class="sidebar-nav" style="margin-top:16px;">
                 <li><a href="javascript:void(0)" onclick="filterByModality('Antibody-Drug Conjugates (ADC)')"><i class="fa-solid fa-dna" style="color:var(--purple);"></i> ADCs</a></li>
                 <li><a href="javascript:void(0)" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')"><i class="fa-solid fa-vial" style="color:var(--cyan);"></i> CAR-T Therapy</a></li>
+                <li><a href="javascript:void(0)" onclick="filterByModality('Bispecific Antibodies & T-Cell Engagers')"><i class="fa-solid fa-arrows-split-up-and-left" style="color:#f43f5e;"></i> Bispecifics</a></li>
                 <li><a href="javascript:void(0)" onclick="filterByModality('Targeted Therapy (Small Molecule / TKI)')"><i class="fa-solid fa-capsules" style="color:var(--amber);"></i> Targeted TKIs</a></li>
-                <li><a href="javascript:void(0)" onclick="filterByModality('Immuno-Oncology (Checkpoint Inhibitor)')"><i class="fa-solid fa-shield-halved" style="color:#f43f5e;"></i> Checkpoints</a></li>
+                <li><a href="javascript:void(0)" onclick="filterByModality('Immuno-Oncology (Checkpoint Inhibitor)')"><i class="fa-solid fa-shield-halved" style="color:#ec4899;"></i> Checkpoints</a></li>
                 <li><a href="javascript:void(0)" onclick="filterByModality('Incretin Mimetics (GLP-1 / GIP)')"><i class="fa-solid fa-bolt" style="color:var(--emerald);"></i> GLP-1 / Incretins</a></li>
             </ul>
 
+            <div class="sidebar-section-title">PRACT Ecosystem</div>
+            <ul class="sidebar-nav">
+                <li><a href="https://regsight.pract.eu/" target="_blank"><i class="fa-solid fa-book-bookmark" style="color:var(--purple);"></i> RegSight <span class="nav-badge" style="font-size:10px;">Guidance</span></a></li>
+                <li><a href="https://vigisight.pract.eu/" target="_blank"><i class="fa-solid fa-shield-virus" style="color:var(--emerald);"></i> VigiSight <span class="nav-badge" style="font-size:10px;">Safety</span></a></li>
+            </ul>
+
             <div class="sidebar-footer">
-                <div style="margin-bottom:12px;">
-                    <button id="themeToggleSidebar" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light or dark appearance" style="width:100%; justify-content:center;">
-                        <i class="fa-regular fa-sun"></i> <span id="themeToggleTextSidebar">Appearance</span>
-                    </button>
-                </div>
-                <a href="https://pract.eu" target="_blank">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a>
+                <button id="themeToggleSidebar" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light or dark appearance" style="width:100%; justify-content:center;">
+                    <i class="fa-regular fa-sun"></i> <span id="themeToggleTextSidebar">Appearance</span>
+                </button>
             </div>
         </aside>
 
         <!-- Main Content Area -->
         <main class="main-content">
+            <!-- Desktop Topbar Header (pract.eu on right side) -->
+            <div class="desktop-header">
+                <div class="desktop-header-left">
+                    <span class="hub-pill"><i class="fa-solid fa-circle-check"></i> Primary Registry Provenance · ClinicalTrials.gov API v2</span>
+                </div>
+                <div class="desktop-header-right">
+                    <a href="https://pract.eu" target="_blank" class="topbar-portal-link">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a>
+                    <button id="themeToggleDesktop" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light or dark appearance">
+                        <i class="fa-regular fa-sun"></i>
+                    </button>
+                </div>
+            </div>
+
             <!-- Mobile Header (Mobile only) -->
             <div class="mobile-header">
                 <button class="mobile-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
                 <div class="logo-text" style="font-size:18px;">ClinSight<span>™</span></div>
-                <button id="themeToggleMobile" class="theme-toggle" onclick="toggleTheme()" style="margin-left:auto;" aria-label="Toggle appearance">
-                    <i class="fa-regular fa-sun"></i>
-                </button>
+                <div style="margin-left:auto; display:flex; align-items:center; gap:8px;">
+                    <a href="https://pract.eu" target="_blank" class="topbar-portal-link" style="padding:4px 8px; font-size:11.5px;">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:9px;"></i></a>
+                    <button id="themeToggleMobile" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle appearance">
+                        <i class="fa-regular fa-sun"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- Overview Section -->
@@ -1059,6 +1130,10 @@
             const btnSidebar = document.getElementById('themeToggleSidebar');
             if (btnSidebar) {
                 btnSidebar.innerHTML = `${iconHtml} <span id="themeToggleTextSidebar">${text}</span>`;
+            }
+            const btnDesktop = document.getElementById('themeToggleDesktop');
+            if (btnDesktop) {
+                btnDesktop.innerHTML = iconHtml;
             }
             const btnMobile = document.getElementById('themeToggleMobile');
             if (btnMobile) {

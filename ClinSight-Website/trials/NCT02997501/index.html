@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ADELOS (NCT02997501): T790M Plasma Testing Methodology Comparison and Clinical Validation","url":"https://clinsight.pract.eu/trials/NCT02997501/","studySubject":{"@type":"MedicalCondition","name":"Lung Cancer"},"sponsor":"AstraZeneca","status":"COMPLETED","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02997501 (ADELOS)?","acceptedAnswer":{"@type":"Answer","text":"NCT02997501 is a Phase 3 study sponsored by AstraZeneca evaluating Biological Products &amp; Targeted Therapies in Lung Cancer (NSCLC)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02997501?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02997501."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"ADELOS (NCT02997501): T790M Plasma Testing Methodology Comparison and Clinical Validation","url":"https://clinsight.pract.eu/trials/NCT02997501/","studySubject":{"@type":"MedicalCondition","name":"Lung Cancer"},"sponsor":"AstraZeneca","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"ADELOS (NCT02997501)","item":"https://clinsight.pract.eu/trials/NCT02997501/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02997501 (ADELOS)?","acceptedAnswer":{"@type":"Answer","text":"NCT02997501 is a Phase 3 study sponsored by AstraZeneca evaluating Biological Products &amp; Targeted Therapies in Lung Cancer (NSCLC)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02997501?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02997501."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>ADELOS: T790M Plasma Testing Methodology Comparison and Clinical Validation</h1>
         <p class="lead">Detect EGFR T790M Mutation in ctDNA of Chinese Advanced/Metastatic NSCLC Patients by Cobas, Super-ARMS, Digital PCR and NGS and Evaluate Clinical Outcomes of T790M Mutation Positive Patients Who Had AZD9291 Monotherapy</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=T790M%2B" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (T790M+) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT02997501%20(ADELOS)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT02997501","acronym":"ADELOS","briefTitle":"T790M Plasma Testing Methodology Comparison and Clinical Validation","officialTitle":"Detect EGFR T790M Mutation in ctDNA of Chinese Advanced/Metastatic NSCLC Patients by Cobas, Super-ARMS, Digital PCR and NGS and Evaluate Clinical Outcomes of T790M Mutation Positive Patients Who Had AZD9291 Monotherapy","sponsor":"AstraZeneca","phase":"Phase 3","status":"COMPLETED","modality":"Biological Products & Targeted Therapies","conditions":["Lung Cancer"],"interventions":["T790M+ Testing","Baseline Visit Blood & Urine Testing","Baseline ECG","Visual Slit-Lamp Testing","AZD9291 Dosing","Plasma AZD9291 testing"],"primaryOutcomes":[{"measure":"Concordance","description":"To evaluate concordance of T790M plasma mutation testing between the Cobas test and each of other platforms: Super-ARMS, digital PCR or NGS.","timeFrame":"Up to 6 months"},{"measure":"PFS Using Investigator Assessments According to RECIST v1.1","description":"To assess the efficacy of AZD9291 monotherapy by assessment of PFS in adult patients with advanced or metastatic NSCLC, who have received prior EGFR- TKI therapy and are T790M mutation positive detected by any one of the four plasma testing platforms. PFS was defined using Response Evaluation Criteria In Solid Tumors version 1.1(RECIST v1.1).","timeFrame":"The time from first dose of AZD9291 in this study until the date of disease progression as recorded in CRF or death (by any cause in the absence of progression), assessed up to 18 months"}],"completionDate":"2018-10-24","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "ADELOS. T790M Plasma Testing Methodology Comparison and Clinical Validation. ClinicalTrials.gov Identifier: NCT02997501. Primary Sponsor: AstraZeneca. Available at: https://clinsight.pract.eu/trials/NCT02997501/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT02997501-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

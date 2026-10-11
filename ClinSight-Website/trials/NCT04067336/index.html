@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"KOMET-001 (NCT04067336): First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia","url":"https://clinsight.pract.eu/trials/NCT04067336/","studySubject":{"@type":"MedicalCondition","name":"Advanced Malignant Neoplasm"},"sponsor":"Kura Oncology, Inc.","status":"ACTIVE NOT RECRUITING","phase":"Phase 1, Phase 2"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04067336 (KOMET-001)?","acceptedAnswer":{"@type":"Answer","text":"NCT04067336 is a Phase 1, Phase 2 study sponsored by Kura Oncology, Inc. evaluating Targeted Therapy (Small Molecule / TKI) in Acute Myeloid Leukemia (AML)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04067336?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04067336."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"KOMET-001 (NCT04067336): First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia","url":"https://clinsight.pract.eu/trials/NCT04067336/","studySubject":{"@type":"MedicalCondition","name":"Advanced Malignant Neoplasm"},"sponsor":"Kura Oncology, Inc.","status":"ACTIVE NOT RECRUITING","phase":"Phase 1, Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"KOMET-001 (NCT04067336)","item":"https://clinsight.pract.eu/trials/NCT04067336/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04067336 (KOMET-001)?","acceptedAnswer":{"@type":"Answer","text":"NCT04067336 is a Phase 1, Phase 2 study sponsored by Kura Oncology, Inc. evaluating Targeted Therapy (Small Molecule / TKI) in Acute Myeloid Leukemia (AML)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04067336?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04067336."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>KOMET-001: First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia</h1>
         <p class="lead">A Phase 1/2 First in Human Study of the Menin-MLL(KMT2A) Inhibitor KO-539 in Patients With Relapsed or Refractory Acute Myeloid Leukemia</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=Ziftomenib" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Ziftomenib) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT04067336%20(KOMET-001)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT04067336","acronym":"KOMET-001","briefTitle":"First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia","officialTitle":"A Phase 1/2 First in Human Study of the Menin-MLL(KMT2A) Inhibitor KO-539 in Patients With Relapsed or Refractory Acute Myeloid Leukemia","sponsor":"Kura Oncology, Inc.","phase":"Phase 1, Phase 2","status":"ACTIVE NOT RECRUITING","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Advanced Malignant Neoplasm","Acute Myeloid Leukemia","Mixed Lineage Leukemia","Mixed Lineage Acute Leukemia","Acute Leukemia of Ambiguous Lineage","Mixed Phenotype Acute Leukemia","Acute Lymphoblastic Leukemia"],"interventions":["Ziftomenib","Midazolam","Itraconazole"],"primaryOutcomes":[{"measure":"Phase 1a: Maximum tolerated dose (MTD) and/or the recommended Phase 2 dose (RP2D)","description":"MTD is defined as the highest dose that is not expected to cause dose limiting toxicity (DLT) in more than 20% of patients.","timeFrame":"Dose Limiting Toxicities (DLTs) will be evaluated during the first 28 days (1 cycle)"},{"measure":"Phase 1b: Number of patients who experience Adverse Events (AEs) and Serious Adverse Events (SAEs)","description":"Assessed by NCI-CTCAE v5.0","timeFrame":"During treatment and up to approximately 28 days after treatment discontinuation, or until immediately before the initiation of another anticancer therapy, whichever occurs first."},{"measure":"Phase 1b: Minimum biologically effective dose","description":"Minimum biologically effective dose in dosing cohorts which have demonstrated biological activity and have been determined to be safe as a part of Part 1a","timeFrame":"For at least 12 months following end of treatment"},{"measure":"Phase 1a, 1b, and 2: Evidence of anti-leukemia activity","description":"Assessed by the CR + CRh rate","timeFrame":"For at least 12 months following end of treatment"},{"measure":"Sub-study 1: Time to observed maximum plasma concentration (Tmax) of ziftomenib and midazolam","description":"Tmax of ziftomenib, its metabolites, midazolam, and 1-hydroxymidazolam","timeFrame":"Cycle 1 on Days 1 and 15 at predose and postdose"},{"measure":"Sub-study 1: Area under the plasma concentration-time curve from time 0 to time t (AUC0-t) of ziftomenib and midazolam","description":"AUC0-t of ziftomenib, its metabolites, midazolam, and 1-hydroxymidazolam","timeFrame":"Cycle 1 on Days 1 and 15 at predose and postdose"},{"measure":"Sub-study 1: Maximum observed plasma concentration (Cmax) of ziftomenib and midazolam","description":"Cmax of ziftomenib, its metabolites, midazolam, and 1-hydroxymidazolam","timeFrame":"Cycle 1 on Days 1 and 15 at predose and postdose"},{"measure":"Sub-study 2: Time to observed maximum plasma concentration (Tmax) of ziftomenib and itraconazole","description":"Tmax of ziftomenib, its metabolites, and itraconazole","timeFrame":"Cycle 1 on Days 1, 15, and 22 at predose and postdose"},{"measure":"Sub-study 2: Area under the plasma concentration-time curve from time 0 to time t (AUC0-t) of ziftomenib and itraconazole","description":"AUC0-t of ziftomenib, its metabolites, and itraconazole","timeFrame":"Cycle 1 on Days 1, 15, and 22 at predose and postdose"},{"measure":"Sub-study 2: Maximum observed plasma concentration (Cmax) of ziftomenib and itraconazole","description":"Cmax of ziftomenib, its metabolites, and itraconazole","timeFrame":"Cycle 1 on Days 1, 15, and 22 at predose and postdose"},{"measure":"Sub-study 3: Minimum biologically effective dose (MBED) and/or the recommended Phase 2 dose (RP2D)","description":"Assessed by the number of patients that experience Adverse Events (AEs) and Serious Adverse Events (SAEs) per NCI-CTCAE v5.0","timeFrame":"During treatment and up to approximately 28 days after treatment discontinuation, or until immediately before the initiation of another anticancer therapy, whichever occurs first"},{"measure":"Sub-study 3: Minimum biologically effective dose (MBED) and/or the recommended Phase 2 dose (RP2D)","description":"Assessed by CR","timeFrame":"For at least 12 months following end of treatment"},{"measure":"Sub-study 3: Change in Eastern Cooperative Oncology Group (ECOG) status","description":"To assess the change in ECOG status","timeFrame":"Timeframe: from Baseline to End of Treatment"},{"measure":"Sub-study 3: Time to observed maximum plasma concentration (Tmax) of ziftomenib","description":"Tmax of ziftomenib","timeFrame":"Postdose on Cycle 1 Day 1 and Cycle 2 Day 1. Predose at Cycle 2 onwards"},{"measure":"Sub-study 3: Area under the plasma concentration-time curve from time 0 to time t (AUC0-t) of ziftomenib","description":"AUC0-t of ziftomenib","timeFrame":"Postdose on Cycle 1 Day 1 and Cycle 2 Day 1. Predose at Cycle 2 onwards"},{"measure":"Sub-study 3: Maximum observed plasma concentration (Cmax) of ziftomenib","description":"Cmax of ziftomenib","timeFrame":"Postdose on Cycle 1 Day 1 and Cycle 2 Day 1. Predose at Cycle 2 onwards."},{"measure":"Sub-study 4: Complete remission (CR) and complete remission with partial hematologic recovery (CRh)","description":"To assess the CR+CRh rate","timeFrame":"For at least 12 months following end of treatment"}],"completionDate":"2028-10-16","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "KOMET-001. First in Human Study of Ziftomenib in Relapsed or Refractory Acute Myeloid Leukemia. ClinicalTrials.gov Identifier: NCT04067336. Primary Sponsor: Kura Oncology, Inc.. Available at: https://clinsight.pract.eu/trials/NCT04067336/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT04067336-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

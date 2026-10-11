@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"DREAMM 7 (NCT06868654): China Subpopulation: Evaluation of Efficacy and Safety of Belantamab Mafodotin, Bortezomib and Dexamethasone Versus Daratumumab, Bortezomib and Dexamethasone in Participants With Relapsed/Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT06868654/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"GlaxoSmithKline","status":"ACTIVE NOT RECRUITING","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06868654 (DREAMM 7)?","acceptedAnswer":{"@type":"Answer","text":"NCT06868654 is a Phase 3 study sponsored by GlaxoSmithKline evaluating Antibody-Drug Conjugates (ADC) in Multiple Myeloma."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06868654?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06868654."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"DREAMM 7 (NCT06868654): China Subpopulation: Evaluation of Efficacy and Safety of Belantamab Mafodotin, Bortezomib and Dexamethasone Versus Daratumumab, Bortezomib and Dexamethasone in Participants With Relapsed/Refractory Multiple Myeloma","url":"https://clinsight.pract.eu/trials/NCT06868654/","studySubject":{"@type":"MedicalCondition","name":"Multiple Myeloma"},"sponsor":"GlaxoSmithKline","status":"ACTIVE NOT RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"DREAMM 7 (NCT06868654)","item":"https://clinsight.pract.eu/trials/NCT06868654/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06868654 (DREAMM 7)?","acceptedAnswer":{"@type":"Answer","text":"NCT06868654 is a Phase 3 study sponsored by GlaxoSmithKline evaluating Antibody-Drug Conjugates (ADC) in Multiple Myeloma."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06868654?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06868654."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>DREAMM 7: China Subpopulation: Evaluation of Efficacy and Safety of Belantamab Mafodotin, Bortezomib and Dexamethasone Versus Daratumumab, Bortezomib and Dexamethasone in Participants With Relapsed/Refractory Multiple Myeloma</h1>
         <p class="lead">DREAMM 7: A Multicenter, Open-Label, Randomized Phase III Study to Evaluate the Efficacy and Safety of the Combination of Belantamab Mafodotin, Bortezomib, and Dexamethasone (B-Vd) Compared With the Combination of Daratumumab, Bortezomib and Dexamethasone (D-Vd) in Participants With Relapsed/Refractory Multiple Myeloma</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=Belantamab" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Belantamab) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT06868654%20(DREAMM%207)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT06868654","acronym":"DREAMM 7","briefTitle":"China Subpopulation: Evaluation of Efficacy and Safety of Belantamab Mafodotin, Bortezomib and Dexamethasone Versus Daratumumab, Bortezomib and Dexamethasone in Participants With Relapsed/Refractory Multiple Myeloma","officialTitle":"DREAMM 7: A Multicenter, Open-Label, Randomized Phase III Study to Evaluate the Efficacy and Safety of the Combination of Belantamab Mafodotin, Bortezomib, and Dexamethasone (B-Vd) Compared With the Combination of Daratumumab, Bortezomib and Dexamethasone (D-Vd) in Participants With Relapsed/Refractory Multiple Myeloma","sponsor":"GlaxoSmithKline","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","modality":"Antibody-Drug Conjugates (ADC)","conditions":["Multiple Myeloma"],"interventions":["Belantamab mafodotin","Daratumumab","Bortezomib","Dexamethasone"],"primaryOutcomes":[{"measure":"Progression-free Survival (PFS)","description":"PFS is defined as time from randomization until earliest date of disease progression (PD), determined by Independent Review Committee (IRC), according to the International Myeloma Working Group (IMWG) Response Criteria, or death due to any cause. PD= increase of \\>=25% from lowest value in \\>=1 of following (serum M-protein \\[absolute increase \\>=0.5 grams per deciliter {g/dL}\\]; serum M-protein increase \\>=1g/dL \\[when lowest M-protein \\>=5g/dL\\]; urine M-protein \\[absolute increase \\>=200 milligrams per 24 hours {mg/24h}\\]; participants without measurable serum \\& urine M-protein levels, difference between involved \\& uninvolved serum free light chains (sFLC) levels \\[absolute increase \\>10mg/dL\\]; appearance of new lesion,\\>=50% increase from nadir in Sum of the products of the maximal perpendicular diameters of measured lesions (SPD) of \\>1 lesion, or \\>=50% increase in longest diameter of previous lesion \\>1 centimeter (cm) in short axis.","timeFrame":"Up to approximately 32 months"}],"completionDate":"2028-06-30","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "DREAMM 7. China Subpopulation: Evaluation of Efficacy and Safety of Belantamab Mafodotin, Bortezomib and Dexamethasone Versus Daratumumab, Bortezomib and Dexamethasone in Participants With Relapsed/Refractory Multiple Myeloma. ClinicalTrials.gov Identifier: NCT06868654. Primary Sponsor: GlaxoSmithKline. Available at: https://clinsight.pract.eu/trials/NCT06868654/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT06868654-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

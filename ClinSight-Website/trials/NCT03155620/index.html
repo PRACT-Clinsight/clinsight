@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03155620 (NCT03155620): Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)","url":"https://clinsight.pract.eu/trials/NCT03155620/","studySubject":{"@type":"MedicalCondition","name":"Advanced Malignant Solid Neoplasm"},"sponsor":"National Cancer Institute (NCI)","status":"ACTIVE NOT RECRUITING","phase":"Phase 2"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03155620 (NCT03155620)?","acceptedAnswer":{"@type":"Answer","text":"NCT03155620 is a Phase 2 study sponsored by National Cancer Institute (NCI) evaluating Targeted Therapy (Small Molecule / TKI) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03155620?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03155620."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03155620 (NCT03155620): Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)","url":"https://clinsight.pract.eu/trials/NCT03155620/","studySubject":{"@type":"MedicalCondition","name":"Advanced Malignant Solid Neoplasm"},"sponsor":"National Cancer Institute (NCI)","status":"ACTIVE NOT RECRUITING","phase":"Phase 2"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03155620 (NCT03155620)","item":"https://clinsight.pract.eu/trials/NCT03155620/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03155620 (NCT03155620)?","acceptedAnswer":{"@type":"Answer","text":"NCT03155620 is a Phase 2 study sponsored by National Cancer Institute (NCI) evaluating Targeted Therapy (Small Molecule / TKI) in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03155620?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03155620."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)</h1>
         <p class="lead">NCI-COG Pediatric MATCH (Molecular Analysis for Therapy Choice) Screening Protocol</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=Biopsy" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Biopsy) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT03155620%20(NCT03155620)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT03155620","acronym":"NCT03155620","briefTitle":"Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial)","officialTitle":"NCI-COG Pediatric MATCH (Molecular Analysis for Therapy Choice) Screening Protocol","sponsor":"National Cancer Institute (NCI)","phase":"Phase 2","status":"ACTIVE NOT RECRUITING","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Advanced Malignant Solid Neoplasm","Ann Arbor Stage III Non-Hodgkin Lymphoma","Ann Arbor Stage IV Non-Hodgkin Lymphoma","Histiocytic Sarcoma","Juvenile Xanthogranuloma","Langerhans Cell Histiocytosis","Malignant Glioma","Recurrent Childhood Rhabdomyosarcoma","Recurrent Ependymoma","Recurrent Ewing Sarcoma","Recurrent Glioma","Recurrent Hepatoblastoma","Recurrent Langerhans Cell Histiocytosis","Recurrent Malignant Germ Cell Tumor","Recurrent Malignant Solid Neoplasm","Recurrent Medulloblastoma","Recurrent Neuroblastoma","Recurrent Non-Hodgkin Lymphoma","Recurrent Osteosarcoma","Recurrent Peripheral Primitive Neuroectodermal Tumor","Recurrent Primary Central Nervous System Neoplasm","Recurrent Rhabdoid Tumor","Recurrent Soft Tissue Sarcoma","Refractory Ewing Sarcoma","Refractory Glioma","Refractory Hepatoblastoma","Refractory Langerhans Cell Histiocytosis","Refractory Malignant Germ Cell Tumor","Refractory Malignant Solid Neoplasm","Refractory Medulloblastoma","Refractory Neuroblastoma","Refractory Non-Hodgkin Lymphoma","Refractory Osteosarcoma","Refractory Peripheral Primitive Neuroectodermal Tumor","Refractory Primary Central Nervous System Neoplasm","Refractory Rhabdoid Tumor","Refractory Rhabdomyosarcoma","Rhabdoid Tumor","Stage III Osteosarcoma AJCC v7","Stage III Soft Tissue Sarcoma AJCC v7","Stage IV Osteosarcoma AJCC v7","Stage IV Soft Tissue Sarcoma AJCC v7","Stage IVA Osteosarcoma AJCC v7","Stage IVB Osteosarcoma AJCC v7","Wilms Tumor"],"interventions":["Biopsy Procedure","Biospecimen Collection","Bone Marrow Aspiration and Biopsy","Bone Scan","Computed Tomography","Ensartinib","Erdafitinib","Ivosidenib","Laboratory Biomarker Analysis","Larotrectinib Sulfate","Magnetic Resonance Imaging","Mutation Carrier Screening","Olaparib","Palbociclib","Pharmacological Study","Positron Emission Tomography","Radionuclide Imaging","Samotolisib","Selpercatinib","Selumetinib Sulfate","Tazemetostat","Tipifarnib","Ulixertinib","Vemurafenib","X-Ray Imaging"],"primaryOutcomes":[{"measure":"Proportion of Pediatric Patients Whose Advanced Tumors Have Pathway Alterations That Can be Targeted by Select Anti-cancer Drugs","description":"Match rate will be calculated as the percent of eligible patients who have an actionable mutation of interest and are matched to at least one of the subprotocols, and confidence intervals will be constructed using the Wilson score interval method. Patients enrolled on or after Amendment 4 will not be included in this analysis as screening of unselected patients will no longer be conducted.","timeFrame":"Up to 2 years from study entry"}],"completionDate":"2027-01-06","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "Targeted Therapy Directed by Genetic Testing in Treating Pediatric Patients With Relapsed or Refractory Advanced Solid Tumors, Non-Hodgkin Lymphomas, or Histiocytic Disorders (The Pediatric MATCH Screening Trial). ClinicalTrials.gov Identifier: NCT03155620. Primary Sponsor: National Cancer Institute (NCI). Available at: https://clinsight.pract.eu/trials/NCT03155620/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT03155620-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';

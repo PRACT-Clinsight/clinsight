@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"VIALE-A (NCT02993523): A Study of Venetoclax in Combination With Azacitidine Versus Azacitidine in Treatment Naïve Participants With Acute Myeloid Leukemia Who Are Ineligible for Standard Induction Therapy","url":"https://clinsight.pract.eu/trials/NCT02993523/","studySubject":{"@type":"MedicalCondition","name":"Acute Myeloid Leukemia (AML)"},"sponsor":"AbbVie","status":"ACTIVE NOT RECRUITING","phase":"Phase 3"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02993523 (VIALE-A)?","acceptedAnswer":{"@type":"Answer","text":"NCT02993523 is a Phase 3 study sponsored by AbbVie evaluating Targeted Therapy (Small Molecule / TKI) in Acute Myeloid Leukemia (AML)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02993523?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02993523."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"VIALE-A (NCT02993523): A Study of Venetoclax in Combination With Azacitidine Versus Azacitidine in Treatment Naïve Participants With Acute Myeloid Leukemia Who Are Ineligible for Standard Induction Therapy","url":"https://clinsight.pract.eu/trials/NCT02993523/","studySubject":{"@type":"MedicalCondition","name":"Acute Myeloid Leukemia (AML)"},"sponsor":"AbbVie","status":"ACTIVE NOT RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"VIALE-A (NCT02993523)","item":"https://clinsight.pract.eu/trials/NCT02993523/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02993523 (VIALE-A)?","acceptedAnswer":{"@type":"Answer","text":"NCT02993523 is a Phase 3 study sponsored by AbbVie evaluating Targeted Therapy (Small Molecule / TKI) in Acute Myeloid Leukemia (AML)."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02993523?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02993523."}}]}]}
     </script>
 
     <style>
@@ -425,6 +425,92 @@
             overflow: hidden;
         }
 
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .vigisight-action {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .vigisight-action:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+        }
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
         footer {
             margin-top: 60px;
             padding: 28px 0;
@@ -462,6 +548,20 @@
 
         <h1>VIALE-A: A Study of Venetoclax in Combination With Azacitidine Versus Azacitidine in Treatment Naïve Participants With Acute Myeloid Leukemia Who Are Ineligible for Standard Induction Therapy</h1>
         <p class="lead">A Randomized, Double-Blind, Placebo Controlled Phase 3 Study of Venetoclax in Combination With Azacitidine Versus Azacitidine in Treatment Naïve Subjects With Acute Myeloid Leukemia Who Are Ineligible for Standard Induction Therapy</p>
+
+        <!-- Action Toolbar: 1-Click Citation, Protocol JSON, and VigiSight Safety Signals -->
+        <div class="action-bar">
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Download Protocol JSON
+            </button>
+            
+            <a href="https://vigisight.pract.eu/?search=Azacitidine" target="_blank" class="btn-action vigisight-action">
+                <i class="fa-solid fa-shield-virus"></i> View FAERS Safety Signals (Azacitidine) ↗
+            </a>
+        </div>
 
         <!-- Official Registry Overview -->
         <div class="card">
@@ -578,12 +678,47 @@
         </div>
         
 
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT02993523%20(VIALE-A)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
         <footer>
             <p>&copy; 2026 ClinSight · Clinical Trials Explorer. Primary study records sourced directly from ClinicalTrials.gov.</p>
         </footer>
     </div>
 
     <script>
+        const studyData = {"nctId":"NCT02993523","acronym":"VIALE-A","briefTitle":"A Study of Venetoclax in Combination With Azacitidine Versus Azacitidine in Treatment Naïve Participants With Acute Myeloid Leukemia Who Are Ineligible for Standard Induction Therapy","officialTitle":"A Randomized, Double-Blind, Placebo Controlled Phase 3 Study of Venetoclax in Combination With Azacitidine Versus Azacitidine in Treatment Naïve Subjects With Acute Myeloid Leukemia Who Are Ineligible for Standard Induction Therapy","sponsor":"AbbVie","phase":"Phase 3","status":"ACTIVE NOT RECRUITING","modality":"Targeted Therapy (Small Molecule / TKI)","conditions":["Acute Myeloid Leukemia (AML)"],"interventions":["Azacitidine","Venetoclax","Placebo"],"primaryOutcomes":[{"measure":"Overall Survival (OS)","description":"OS is defined as the number of days from the date of randomization to the date of death. Log rank test was used to compare the OS distribution between two treatment arms. Cox regression was used to report the hazard ratio.","timeFrame":"From the study start up to death or alive or lost to follow-up (up to approximately 4.8 years; data cut off date: 1 December 2021)"},{"measure":"Percentage of Participants With Complete Remission (CR) and Complete Remission With Incomplete Marrow Recovery (CRi)","description":"CR and CRi was calculated based on current International Working Group (IWG) criteria. CR is defined as absolute neutrophil count \\>10\\^3/ microliter (mcL), platelets \\>10\\^5/mcL, red cell transfusion independence, and bone marrow with \\<5% blasts. CRi is defined as bone marrow with less than 5% blasts, and absolute neutrophils of ≤10\\^3/mcL or platelets ≤10\\^5/mcL. Percentages are rounded off to whole number at the nearest decimal.","timeFrame":"From the study start up to death (up to approximately 4.8 years; data cut-off date: 1 December 2021)"}],"completionDate":"2026-06-15","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "VIALE-A. A Study of Venetoclax in Combination With Azacitidine Versus Azacitidine in Treatment Naïve Participants With Acute Myeloid Leukemia Who Are Ineligible for Standard Induction Therapy. ClinicalTrials.gov Identifier: NCT02993523. Primary Sponsor: AbbVie. Available at: https://clinsight.pract.eu/trials/NCT02993523/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT02993523-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             const isLight = theme === 'light';
