@@ -872,17 +872,60 @@ function renderTrialPage(trial, allTrials) {
 }
 
 function buildSitemap(trials) {
+  const today = new Date().toISOString().slice(0, 10);
   const urls = [
-    `  <url>\n    <loc>${BASE_URL}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>`
+    `  <url>\n    <loc>${BASE_URL}/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>`,
+    `  <url>\n    <loc>${BASE_URL}/trials/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>`
   ];
 
   for (const trial of trials) {
     urls.push(
-      `  <url>\n    <loc>${BASE_URL}/trials/${trial.nctId}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`
+      `  <url>\n    <loc>${BASE_URL}/trials/${trial.nctId}/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`
     );
   }
 
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>`;
+}
+
+// Static, crawlable directory of every trial (plain <a href> links, no JavaScript needed).
+function buildTrialsDirectory(trials) {
+  const esc = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const groups = {};
+  for (const t of trials) {
+    const key = t.subtype || t.category || 'Other';
+    (groups[key] = groups[key] || []).push(t);
+  }
+  const sections = Object.keys(groups).sort().map((k) => {
+    const items = groups[k].map((t) => {
+      const ac = t.acronym ? `<strong>${esc(t.acronym)}</strong> — ` : '';
+      return `        <li><a href="./${t.nctId}/">${ac}${esc(t.briefTitle)}</a> <span class="m">${t.nctId} · ${esc(t.phase)} · ${esc(t.sponsor)}</span></li>`;
+    }).join('\n');
+    return `    <h2>${esc(k)} (${groups[k].length})</h2>\n    <ul>\n${items}\n    </ul>`;
+  }).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Indexed Clinical Trials (${trials.length}) | ClinSight</title>
+<meta name="description" content="Browse all ${trials.length} clinical trial records on ClinSight, grouped by condition. Each record is sourced from ClinicalTrials.gov and keyed by NCT ID.">
+<link rel="canonical" href="${BASE_URL}/trials/">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  body{font-family:'Inter',sans-serif;max-width:960px;margin:0 auto;padding:32px 20px;line-height:1.55;color:#0f172a;background:#fff}
+  @media (prefers-color-scheme: dark){body{background:#0b0f19;color:#e2e8f0}a{color:#38bdf8}}
+  h1{font-size:26px} h2{font-size:17px;margin-top:32px;border-bottom:1px solid #8884;padding-bottom:6px}
+  ul{padding-left:18px} li{margin:6px 0} .m{display:block;font-size:12px;opacity:.65}
+</style>
+</head>
+<body>
+<p><a href="../">&larr; ClinSight</a></p>
+<h1>All indexed clinical trials (${trials.length})</h1>
+<p>Records are sourced from ClinicalTrials.gov and keyed by NCT ID.</p>
+${sections}
+</body>
+</html>`;
 }
 
 function buildRobotsTxt() {
@@ -961,6 +1004,10 @@ function runBuild() {
     count++;
   }
   console.log(`Generated ${count} static trial pages in /trials/[nctId]/index.html`);
+
+  // 1b. Build crawlable directory /trials/index.html
+  fs.writeFileSync(path.join(TRIALS_DIR, 'index.html'), buildTrialsDirectory(trials), 'utf-8');
+  console.log('Generated crawlable directory /trials/index.html');
 
   // 2. Build sitemap.xml
   const sitemapXml = buildSitemap(trials);
