@@ -568,62 +568,55 @@
         }
         .results-header b { color: var(--cyan); }
 
-        /* Study Cards List */
+        /* Study List View (Intuitive, Clean, Easy to Browse) */
         .study-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
-            gap: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
-        @media (max-width: 600px) {
-            .study-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+
         .study-item {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
             border-radius: 10px;
-            padding: 16px 18px;
+            padding: 16px 20px;
             text-decoration: none;
             color: inherit;
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
             box-shadow: var(--card-shadow);
-            transition: all 0.15s;
+            transition: all 0.15s ease;
         }
         .study-item:hover {
             border-color: var(--border-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+            background: var(--bg-surface);
+            transform: translateX(3px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         }
 
-        /* Theme Toggle Button */
-        .theme-toggle {
-            background: transparent;
-            border: 1px solid var(--border-subtle);
-            color: var(--text-med);
-            padding: 6px 10px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-family: inherit;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.15s;
+        .study-item-main {
+            flex: 1;
+            min-width: 0;
         }
-        .theme-toggle:hover {
-            color: var(--text-high);
-            border-color: var(--border-hover);
-            background: var(--chip-bg);
-        }
-        .study-item-top {
+
+        .study-item-header {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             align-items: center;
             gap: 8px;
             margin-bottom: 8px;
         }
+
+        .study-acronym {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--cyan);
+            letter-spacing: -0.01em;
+            margin-right: 4px;
+        }
+
         .badges-wrap { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
         .badge {
             font-family: var(--font-mono);
@@ -636,27 +629,82 @@
         .badge.phase { background: var(--purple-glow); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.25); }
         .badge.modality { background: var(--chip-bg); color: var(--text-med); border: 1px solid var(--border-subtle); }
         .badge.completed { background: var(--emerald-glow); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.25); }
-        
-        .study-item-year {
-            font-family: var(--font-mono);
-            font-size: 11.5px;
-            color: var(--text-low);
-        }
+
         .study-title {
             font-size: 14.5px;
             font-weight: 600;
             color: var(--text-high);
-            margin-bottom: 6px;
-            line-height: 1.4;
+            margin-bottom: 8px;
+            line-height: 1.45;
         }
-        .study-meta {
-            font-size: 12.5px;
-            color: var(--text-low);
+
+        .study-meta-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 10px 16px;
+            font-size: 12.5px;
+            color: var(--text-med);
         }
-        .study-meta span { display: inline-flex; align-items: center; gap: 5px; }
+        .study-meta-pills span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .study-meta-pills b {
+            color: var(--text-low);
+            font-weight: 500;
+        }
+
+        .study-item-aside {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+            align-self: stretch;
+            gap: 12px;
+            padding-left: 16px;
+            border-left: 1px solid var(--border-subtle);
+            min-width: 105px;
+        }
+
+        .study-year {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--text-low);
+            font-weight: 500;
+        }
+
+        .view-protocol-btn {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--cyan);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            transition: transform 0.15s;
+        }
+        .study-item:hover .view-protocol-btn {
+            transform: translateX(3px);
+        }
+
+        @media (max-width: 768px) {
+            .study-item {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 16px;
+                gap: 12px;
+            }
+            .study-item-aside {
+                flex-direction: row;
+                align-items: center;
+                border-left: none;
+                border-top: 1px solid var(--border-subtle);
+                padding-left: 0;
+                padding-top: 10px;
+                min-width: 0;
+            }
+        }
 
         /* Footer */
         .main-footer {
@@ -727,7 +775,7 @@
 
                     <!-- Quick Disease & Drug Search Chips -->
                     <div class="drug-chips-bar">
-                        <span class="drug-chip-label">Batch 1 Malignancies:</span>
+                        <span class="drug-chip-label">Featured Indications:</span>
                         <button class="drug-chip" onclick="searchDrug('Multiple Myeloma')">Multiple Myeloma (22)</button>
                         <button class="drug-chip" onclick="searchDrug('DLBCL')">DLBCL (11)</button>
                         <button class="drug-chip" onclick="searchDrug('Chronic Lymphocytic Leukemia')">CLL (10)</button>
@@ -897,7 +945,14 @@
             }
         }
 
-        function renderList(trials) {
+        function highlightMatch(text, query) {
+            if (!query || !text) return text || '';
+            const safeQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(`(${safeQuery})`, 'gi');
+            return text.replace(regex, '<mark style="background:rgba(56, 189, 248, 0.22); color:inherit; padding:1px 4px; border-radius:3px;">$1</mark>');
+        }
+
+        function renderList(trials, query = '') {
             const listEl = document.getElementById('studyList');
             document.getElementById('displayedCount').innerText = trials.length;
 
@@ -913,30 +968,44 @@
                 return;
             }
 
-            listEl.innerHTML = trials.map(t => `
+            listEl.innerHTML = trials.map(t => {
+                const hasAcronym = t.acronym && t.acronym !== t.id && t.acronym !== 'undefined';
+                const displayTitle = highlightMatch(t.title, query);
+                const displayCond = highlightMatch(t.conditions || t.subtype, query);
+                const displayInterv = t.interventions ? highlightMatch(t.interventions, query) : '';
+                const displaySponsor = highlightMatch(t.sponsor, query);
+                const displayAcronym = hasAcronym ? highlightMatch(t.acronym, query) : '';
+
+                return `
                 <a href="./trials/${t.id}/" class="study-item">
-                    <div class="study-item-top">
-                        <div class="badges-wrap">
+                    <div class="study-item-main">
+                        <div class="study-item-header">
+                            ${hasAcronym ? `<span class="study-acronym">${displayAcronym}</span>` : ''}
                             <span class="badge nct"><i class="fa-solid fa-hashtag" style="font-size:10px;"></i> ${t.id}</span>
                             <span class="badge phase">${t.phase}</span>
                             <span class="badge modality">${t.modality}</span>
-                            <span class="badge status ${t.isCompleted ? 'completed' : ''}">${t.status}</span>
+                            <span class="badge status ${t.isCompleted ? 'completed' : ''}">
+                                ${t.isCompleted ? '<i class="fa-solid fa-check" style="font-size:10px;"></i> Completed' : t.status}
+                            </span>
                         </div>
-                        <span class="study-item-year">${t.year || ''}</span>
+
+                        <div class="study-title">${displayTitle}</div>
+
+                        <div class="study-meta-pills">
+                            <span><i class="fa-solid fa-dna" style="color:var(--purple);"></i> <b>Condition:</b> ${displayCond}</span>
+                            ${displayInterv ? `<span><i class="fa-solid fa-pills" style="color:var(--cyan);"></i> <b>Regimen:</b> ${displayInterv}</span>` : ''}
+                            <span><i class="fa-regular fa-building"></i> ${displaySponsor}</span>
+                            ${t.enrollment ? `<span><i class="fa-solid fa-users"></i> ${t.enrollment.toLocaleString()} pts</span>` : ''}
+                        </div>
                     </div>
 
-                    <div class="study-title">
-                        ${(t.acronym && t.acronym !== t.id) ? '<span style="color:var(--cyan);">' + t.acronym + ':</span> ' : ''}${t.title}
-                    </div>
-
-                    <div class="study-meta">
-                        <span><i class="fa-regular fa-building"></i> ${t.sponsor}</span>
-                        <span><i class="fa-solid fa-dna"></i> ${t.conditions || t.subtype}</span>
-                        ${t.interventions ? `<span><i class="fa-solid fa-pills"></i> ${t.interventions}</span>` : ''}
-                        ${t.enrollment ? `<span><i class="fa-solid fa-users"></i> ${t.enrollment.toLocaleString()} participants</span>` : ''}
+                    <div class="study-item-aside">
+                        <span class="study-year">${t.year || ''}</span>
+                        <span class="view-protocol-btn">Protocol <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
-            `).join('');
+                `;
+            }).join('');
         }
 
         function applyFilters() {
@@ -981,7 +1050,7 @@
                 filtered.sort((a, b) => (b.enrollment || 0) - (a.enrollment || 0));
             }
 
-            renderList(filtered);
+            renderList(filtered, q);
         }
 
         function searchDrug(drugName) {
