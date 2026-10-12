@@ -1022,18 +1022,6 @@
                     <p>
                         Simplified, clutter-free clinical trial protocols, primary study designs, and patient eligibility criteria across oncology and major therapeutic areas.
                     </p>
-
-                    <!-- Quick Disease & Drug Search Chips -->
-                    <div class="drug-chips-bar">
-                        <span class="drug-chip-label">Quick Search:</span>
-                        <button class="drug-chip" onclick="searchDrug('Multiple Myeloma')">Multiple Myeloma (22)</button>
-                        <button class="drug-chip" onclick="searchDrug('DLBCL')">DLBCL (11)</button>
-                        <button class="drug-chip" onclick="searchDrug('Chronic Lymphocytic Leukemia')">CLL (10)</button>
-                        <button class="drug-chip" onclick="searchDrug('Acute Myeloid Leukemia')">AML (9)</button>
-                        <button class="drug-chip" onclick="searchDrug('Follicular Lymphoma')">Follicular (6)</button>
-                        <button class="drug-chip" onclick="searchDrug('Doxorubicin')">Doxorubicin</button>
-                        <button class="drug-chip" onclick="searchDrug('Pembrolizumab')">Pembrolizumab</button>
-                    </div>
                 </section>
 
                 <!-- Modalities -->
@@ -1044,25 +1032,25 @@
                 </div>
 
                 <div class="modality-grid">
-                    <div class="modality-card" onclick="filterByModality('Antibody-Drug Conjugates (ADC)')">
+                    <div class="modality-card" onclick="filterByModality('ADC')">
                         <h4>Antibody-Drug Conjugates (ADCs)</h4>
                         <p>Targeted cytotoxic conjugates including DESTINY-Breast03/04 and related trials.</p>
                         <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
 
-                    <div class="modality-card" onclick="filterByModality('Immuno-Oncology (Checkpoint Inhibitor)')">
+                    <div class="modality-card" onclick="filterByModality('Checkpoint')">
                         <h4>Checkpoint Inhibitors</h4>
                         <p>PD-1 / PD-L1 and CTLA-4 trials across solid tumors and hematology.</p>
                         <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
 
-                    <div class="modality-card" onclick="filterByModality('Targeted Therapy (Small Molecule / TKI)')">
+                    <div class="modality-card" onclick="filterByModality('TKI / Small Molecule')">
                         <h4>Targeted Small Molecules</h4>
                         <p>Genomically directed oncogene inhibitors across EGFR, KRAS, and CDK4/6.</p>
                         <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
 
-                    <div class="modality-card" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')">
+                    <div class="modality-card" onclick="filterByModality('CAR-T')">
                         <h4>Cell & Gene Therapies</h4>
                         <p>Engineered autologous T-cell immunotherapies in lymphoma and myeloma.</p>
                         <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
@@ -1416,15 +1404,67 @@
 
         function filterByCategory(catName) {
             clearFilters();
+            const map = {
+                'Oncology': 'Oncology',
+                'Cardiometabolic': 'Cardiometabolic & Endocrinology',
+                'Cardiometabolic & Endocrinology': 'Cardiometabolic & Endocrinology',
+                'Immunology & Rare': 'Rare Disease & Immunology',
+                'Rare Disease & Immunology': 'Rare Disease & Immunology'
+            };
+            const val = map[catName] || catName;
             const el = document.getElementById('filterCategory');
-            if (el) el.value = catName;
+            if (el) el.value = val;
             applyFilters();
             scrollToExplorer();
         }
 
         function filterByModality(modalityName) {
             clearFilters();
-            document.getElementById('filterModality').value = modalityName;
+            const map = {
+                'Antibody-Drug Conjugates (ADC)': 'ADC',
+                'ADCs': 'ADC',
+                'ADC': 'ADC',
+                'Cell & Gene Therapy (CAR-T)': 'CAR-T',
+                'CAR-T Therapy': 'CAR-T',
+                'CAR-T': 'CAR-T',
+                'Bispecific Antibodies & T-Cell Engagers': 'Bispecific',
+                'Bispecifics': 'Bispecific',
+                'Bispecific': 'Bispecific',
+                'Immuno-Oncology (Checkpoint Inhibitor)': 'Checkpoint',
+                'Checkpoint Inhibitors': 'Checkpoint',
+                'Checkpoint': 'Checkpoint',
+                'Incretin Mimetics (GLP-1 / GIP)': 'GLP-1',
+                'GLP-1 / Incretins': 'GLP-1',
+                'GLP-1': 'GLP-1',
+                'Targeted Therapy (Small Molecule / TKI)': 'TKI / Small Molecule',
+                'Targeted Small Molecules': 'TKI / Small Molecule',
+                'Targeted TKIs': 'TKI / Small Molecule',
+                'TKI / Small Molecule': 'TKI / Small Molecule',
+                'Monoclonal Antibody (mAb)': 'Monoclonal Antibody (mAb)'
+            };
+            const val = map[modalityName] || modalityName;
+            const el = document.getElementById('filterModality');
+            if (el) el.value = val;
+
+            // Sync quick filter chip highlight
+            document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+            if (val === 'ADC') {
+                const chip = document.querySelector('.chip[onclick*="adc"]');
+                if (chip) chip.classList.add('active');
+            } else if (val === 'CAR-T') {
+                const chip = document.querySelector('.chip[onclick*="cart"]');
+                if (chip) chip.classList.add('active');
+            } else if (val === 'Bispecific') {
+                const chip = document.querySelector('.chip[onclick*="bispecific"]');
+                if (chip) chip.classList.add('active');
+            } else if (val === 'Checkpoint') {
+                const chip = document.querySelector('.chip[onclick*="checkpoint"]');
+                if (chip) chip.classList.add('active');
+            } else if (val === 'GLP-1') {
+                const chip = document.querySelector('.chip[onclick*="glp1"]');
+                if (chip) chip.classList.add('active');
+            }
+
             applyFilters();
             scrollToExplorer();
         }
