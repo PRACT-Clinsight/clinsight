@@ -102,7 +102,7 @@ function renderTrialPage(trial, allTrials) {
           "name": trial.conditions && trial.conditions[0] ? trial.conditions[0] : "Target Clinical Indication"
         },
         "sponsor": sponsor,
-        "status": status,
+        "status": displayStatus,
         "phase": phase
       },
       {
