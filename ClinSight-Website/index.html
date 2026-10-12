@@ -442,11 +442,11 @@
 
         /* Hero Banner */
         .clean-hero {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             background: var(--hero-bg);
             border: 1px solid var(--border-subtle);
-            border-radius: 14px;
-            padding: 24px 28px;
+            border-radius: 12px;
+            padding: 16px 20px;
             box-shadow: var(--card-shadow);
         }
         .clean-hero h1 {
@@ -454,46 +454,14 @@
             font-weight: 700;
             letter-spacing: -0.015em;
             color: var(--text-high);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         .clean-hero p {
-            font-size: 14px;
+            font-size: 13.5px;
             color: var(--text-med);
-            max-width: 680px;
-            line-height: 1.55;
-            margin-bottom: 16px;
-        }
-
-        /* Quick Drug Search Chips */
-        .drug-chips-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center;
-        }
-        .drug-chip-label {
-            font-size: 11.5px;
-            color: var(--text-low);
-            font-family: var(--font-mono);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-right: 4px;
-        }
-        .drug-chip {
-            background: var(--chip-bg);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-med);
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-family: var(--font-mono);
-            cursor: pointer;
-            transition: all 0.15s;
-        }
-        .drug-chip:hover {
-            background: var(--cyan-glow);
-            color: var(--cyan);
-            border-color: var(--border-hover);
+            max-width: 760px;
+            line-height: 1.5;
+            margin-bottom: 0;
         }
 
         /* Modality Grid */
@@ -532,9 +500,9 @@
 
         .modality-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 12px;
-            margin-bottom: 26px;
+            margin-bottom: 24px;
         }
         .modality-card {
             background: var(--bg-card);
@@ -1056,6 +1024,18 @@
                     <div class="modality-card" onclick="filterByModality('CAR-T')">
                         <h4>Cell & Gene Therapies</h4>
                         <p>Engineered autologous T-cell immunotherapies in lymphoma and myeloma.</p>
+                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+
+                    <div class="modality-card" onclick="filterByModality('Bispecific')">
+                        <h4>Bispecific Antibodies</h4>
+                        <p>Dual-targeting T-cell engagers (BiTEs) in lymphoma and myeloma.</p>
+                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+
+                    <div class="modality-card" onclick="filterByModality('GLP-1')">
+                        <h4>Incretin Mimetics (GLP-1)</h4>
+                        <p>GLP-1 / GIP receptor agonists in cardiometabolic and diabetes trials.</p>
                         <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
                 </div>
