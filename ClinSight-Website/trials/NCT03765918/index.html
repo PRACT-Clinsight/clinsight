@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03765918 (NCT03765918): Study of Pembrolizumab Given Prior to Surgery and in Combination With Radiotherapy Given Post-surgery for Advanced Head and Neck Squamous Cell Carcinoma (MK-3475-689)","url":"https://clinsight.pract.eu/trials/NCT03765918/","studySubject":{"@type":"MedicalCondition","name":"Head and Neck Neoplasms"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT03765918 (NCT03765918)","item":"https://clinsight.pract.eu/trials/NCT03765918/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03765918 (NCT03765918)?","acceptedAnswer":{"@type":"Answer","text":"NCT03765918 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Checkpoint in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03765918?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03765918."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03765918 (NCT03765918): Study of Pembrolizumab Given Prior to Surgery and in Combination With Radiotherapy Given Post-surgery for Advanced Head and Neck Squamous Cell Carcinoma (MK-3475-689)","url":"https://clinsight.pract.eu/trials/NCT03765918/","studySubject":{"@type":"MedicalCondition","name":"Head and Neck Neoplasms"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"Active, Not Recruiting","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT03765918 (NCT03765918)","item":"https://clinsight.pract.eu/trials/NCT03765918/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03765918 (NCT03765918)?","acceptedAnswer":{"@type":"Answer","text":"NCT03765918 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Checkpoint in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03765918?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03765918."}}]}]}
     </script>
 
     <style>
@@ -249,6 +249,16 @@
             color: var(--emerald);
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
+        .badge.status.recruiting {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.status.active-not-recruiting {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
         .badge.modality {
             background: var(--chip-bg);
             color: var(--text-med);
@@ -434,10 +444,13 @@
             border-radius: 6px;
             font-size: 12.5px;
             font-family: var(--font-mono);
-            font-weight: 600;
+            font-weight: 500;
             text-decoration: none;
             transition: all 0.15s ease;
             line-height: 1.2;
+        }
+        .doc-btn b {
+            font-weight: 700;
         }
         .doc-btn:hover {
             transform: translateY(-1px);
@@ -594,7 +607,7 @@
         <div class="badge-row">
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03765918</span>
             <span class="badge phase">Phase 3</span>
-            <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
+            <span class="badge status active-not-recruiting">Active, Not Recruiting</span>
             <span class="badge modality">Checkpoint</span>
             
         </div>
@@ -606,16 +619,16 @@
         <div class="action-bar">
             
             <a href="https://cdn.clinicaltrials.gov/large-docs/18/NCT03765918/Prot_SAP_000.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
-                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+                <i class="fa-solid fa-file-pdf"></i> <b>Protocol:</b> PDF
             </a>
             
             
             <a href="https://clinicaltrials.gov/study/NCT03765918?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
-                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+                <i class="fa-solid fa-square-poll-vertical"></i> <b>Results:</b> Tab ↗
             </a>
             
             <a href="https://pubmed.ncbi.nlm.nih.gov/40532178/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 40532178)">
-                <i class="fa-solid fa-book-medical"></i> PubMed: 40532178 ↗
+                <i class="fa-solid fa-book-medical"></i> <b>PubMed:</b> 40532178 ↗
             </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
@@ -644,7 +657,7 @@
                 </div>
                 <div class="meta-item">
                     <h4>Patient Enrollment</h4>
-                    <p>714 participants</p>
+                    <p>714 individuals</p>
                 </div>
                 <div class="meta-item">
                     <h4>Trial Phase</h4>

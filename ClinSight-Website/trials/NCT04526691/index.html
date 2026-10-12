@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04526691 (NCT04526691): Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)","url":"https://clinsight.pract.eu/trials/NCT04526691/","studySubject":{"@type":"MedicalCondition","name":"Advanced or Metastatic NSCLC"},"sponsor":"Daiichi Sankyo","status":"ACTIVE_NOT_RECRUITING","phase":"Phase 1"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT04526691 (NCT04526691)","item":"https://clinsight.pract.eu/trials/NCT04526691/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04526691 (NCT04526691)?","acceptedAnswer":{"@type":"Answer","text":"NCT04526691 is a Phase 1 study sponsored by Daiichi Sankyo evaluating ADC in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04526691?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04526691."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT04526691 (NCT04526691): Datopotamab Deruxtecan (Dato-DXd) in Combination With Pembrolizumab With or Without Platinum Chemotherapy in Subjects With Advanced or Metastatic Non-Small Cell Lung Cancer (TROPION-Lung02)","url":"https://clinsight.pract.eu/trials/NCT04526691/","studySubject":{"@type":"MedicalCondition","name":"Advanced or Metastatic NSCLC"},"sponsor":"Daiichi Sankyo","status":"Active, Not Recruiting","phase":"Phase 1"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT04526691 (NCT04526691)","item":"https://clinsight.pract.eu/trials/NCT04526691/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT04526691 (NCT04526691)?","acceptedAnswer":{"@type":"Answer","text":"NCT04526691 is a Phase 1 study sponsored by Daiichi Sankyo evaluating ADC in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT04526691?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT04526691."}}]}]}
     </script>
 
     <style>
@@ -249,6 +249,16 @@
             color: var(--emerald);
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
+        .badge.status.recruiting {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.status.active-not-recruiting {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
         .badge.modality {
             background: var(--chip-bg);
             color: var(--text-med);
@@ -434,10 +444,13 @@
             border-radius: 6px;
             font-size: 12.5px;
             font-family: var(--font-mono);
-            font-weight: 600;
+            font-weight: 500;
             text-decoration: none;
             transition: all 0.15s ease;
             line-height: 1.2;
+        }
+        .doc-btn b {
+            font-weight: 700;
         }
         .doc-btn:hover {
             transform: translateY(-1px);
@@ -594,7 +607,7 @@
         <div class="badge-row">
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT04526691</span>
             <span class="badge phase">Phase 1</span>
-            <span class="badge status ">ACTIVE_NOT_RECRUITING</span>
+            <span class="badge status active-not-recruiting">Active, Not Recruiting</span>
             <span class="badge modality">ADC</span>
             
         </div>
@@ -609,7 +622,7 @@
             
             
             <a href="https://pubmed.ncbi.nlm.nih.gov/41871716/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 41871716)">
-                <i class="fa-solid fa-book-medical"></i> PubMed: 41871716 ↗
+                <i class="fa-solid fa-book-medical"></i> <b>PubMed:</b> 41871716 ↗
             </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
@@ -638,7 +651,7 @@
                 </div>
                 <div class="meta-item">
                     <h4>Patient Enrollment</h4>
-                    <p>145 participants</p>
+                    <p>145 individuals</p>
                 </div>
                 <div class="meta-item">
                     <h4>Trial Phase</h4>

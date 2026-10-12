@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03552718 (NCT03552718): QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.","url":"https://clinsight.pract.eu/trials/NCT03552718/","studySubject":{"@type":"MedicalCondition","name":"Colorectal Cancer"},"sponsor":"NantBioScience, Inc.","status":"COMPLETED","phase":"Phase 1"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03552718 (NCT03552718)","item":"https://clinsight.pract.eu/trials/NCT03552718/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03552718 (NCT03552718)?","acceptedAnswer":{"@type":"Answer","text":"NCT03552718 is a Phase 1 study sponsored by NantBioScience, Inc. evaluating Unclassified in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03552718?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03552718."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT03552718 (NCT03552718): QUILT-2.025 NANT Neoepitope Yeast Vaccine (YE-NEO-001): Adjuvant Immunotherapy Using a Personalized Neoepitope Yeast-Based Vaccine To Induce T-Cell Responses In Subjects W/ Previously Treated Cancers.","url":"https://clinsight.pract.eu/trials/NCT03552718/","studySubject":{"@type":"MedicalCondition","name":"Colorectal Cancer"},"sponsor":"NantBioScience, Inc.","status":"Completed","phase":"Phase 1"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT03552718 (NCT03552718)","item":"https://clinsight.pract.eu/trials/NCT03552718/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03552718 (NCT03552718)?","acceptedAnswer":{"@type":"Answer","text":"NCT03552718 is a Phase 1 study sponsored by NantBioScience, Inc. evaluating Unclassified in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03552718?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03552718."}}]}]}
     </script>
 
     <style>
@@ -249,6 +249,16 @@
             color: var(--emerald);
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
+        .badge.status.recruiting {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.status.active-not-recruiting {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
         .badge.modality {
             background: var(--chip-bg);
             color: var(--text-med);
@@ -434,10 +444,13 @@
             border-radius: 6px;
             font-size: 12.5px;
             font-family: var(--font-mono);
-            font-weight: 600;
+            font-weight: 500;
             text-decoration: none;
             transition: all 0.15s ease;
             line-height: 1.2;
+        }
+        .doc-btn b {
+            font-weight: 700;
         }
         .doc-btn:hover {
             transform: translateY(-1px);
@@ -594,7 +607,7 @@
         <div class="badge-row">
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03552718</span>
             <span class="badge phase">Phase 1</span>
-            <span class="badge status completed">COMPLETED</span>
+            <span class="badge status completed">Completed</span>
             <span class="badge modality">Unclassified</span>
             <span class="badge vacant"><i class="fa-solid fa-triangle-exclamation"></i> Results-Vacant</span>
         </div>
@@ -635,7 +648,7 @@
                 </div>
                 <div class="meta-item">
                     <h4>Patient Enrollment</h4>
-                    <p>5 participants</p>
+                    <p>5 individuals</p>
                 </div>
                 <div class="meta-item">
                     <h4>Trial Phase</h4>

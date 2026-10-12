@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT02853305 (NCT02853305): Study of Pembrolizumab With or Without Platinum-based Combination Chemotherapy Versus Chemotherapy Alone in Urothelial Carcinoma (MK-3475-361/KEYNOTE-361)","url":"https://clinsight.pract.eu/trials/NCT02853305/","studySubject":{"@type":"MedicalCondition","name":"Urothelial Carcinoma Associated 1 RNA, Human"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT02853305 (NCT02853305)","item":"https://clinsight.pract.eu/trials/NCT02853305/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02853305 (NCT02853305)?","acceptedAnswer":{"@type":"Answer","text":"NCT02853305 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Checkpoint in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02853305?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02853305."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT02853305 (NCT02853305): Study of Pembrolizumab With or Without Platinum-based Combination Chemotherapy Versus Chemotherapy Alone in Urothelial Carcinoma (MK-3475-361/KEYNOTE-361)","url":"https://clinsight.pract.eu/trials/NCT02853305/","studySubject":{"@type":"MedicalCondition","name":"Urothelial Carcinoma Associated 1 RNA, Human"},"sponsor":"Merck Sharp &amp; Dohme LLC","status":"Completed","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT02853305 (NCT02853305)","item":"https://clinsight.pract.eu/trials/NCT02853305/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT02853305 (NCT02853305)?","acceptedAnswer":{"@type":"Answer","text":"NCT02853305 is a Phase 3 study sponsored by Merck Sharp &amp; Dohme LLC evaluating Checkpoint in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT02853305?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT02853305."}}]}]}
     </script>
 
     <style>
@@ -249,6 +249,16 @@
             color: var(--emerald);
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
+        .badge.status.recruiting {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.status.active-not-recruiting {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
         .badge.modality {
             background: var(--chip-bg);
             color: var(--text-med);
@@ -434,10 +444,13 @@
             border-radius: 6px;
             font-size: 12.5px;
             font-family: var(--font-mono);
-            font-weight: 600;
+            font-weight: 500;
             text-decoration: none;
             transition: all 0.15s ease;
             line-height: 1.2;
+        }
+        .doc-btn b {
+            font-weight: 700;
         }
         .doc-btn:hover {
             transform: translateY(-1px);
@@ -594,7 +607,7 @@
         <div class="badge-row">
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT02853305</span>
             <span class="badge phase">Phase 3</span>
-            <span class="badge status completed">COMPLETED</span>
+            <span class="badge status completed">Completed</span>
             <span class="badge modality">Checkpoint</span>
             
         </div>
@@ -606,16 +619,16 @@
         <div class="action-bar">
             
             <a href="https://cdn.clinicaltrials.gov/large-docs/05/NCT02853305/Prot_SAP_001.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN">
-                <i class="fa-solid fa-file-pdf"></i> Protocol (PDF)
+                <i class="fa-solid fa-file-pdf"></i> <b>Protocol:</b> PDF
             </a>
             
             
             <a href="https://clinicaltrials.gov/study/NCT02853305?tab=results" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov">
-                <i class="fa-solid fa-square-poll-vertical"></i> Results Tab ↗
+                <i class="fa-solid fa-square-poll-vertical"></i> <b>Results:</b> Tab ↗
             </a>
             
             <a href="https://pubmed.ncbi.nlm.nih.gov/40037029/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 40037029)">
-                <i class="fa-solid fa-book-medical"></i> PubMed: 40037029 ↗
+                <i class="fa-solid fa-book-medical"></i> <b>PubMed:</b> 40037029 ↗
             </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
@@ -644,7 +657,7 @@
                 </div>
                 <div class="meta-item">
                     <h4>Patient Enrollment</h4>
-                    <p>1,010 participants</p>
+                    <p>1,010 individuals</p>
                 </div>
                 <div class="meta-item">
                     <h4>Trial Phase</h4>

@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06154252 (NCT06154252): RESET-Myositis: An Open-Label Study to Evaluate the Safety and Efficacy of CABA-201 in Subjects With Active Idiopathic Inflammatory Myopathy or Juvenile Idiopathic Inflammatory Myopathy","url":"https://clinsight.pract.eu/trials/NCT06154252/","studySubject":{"@type":"MedicalCondition","name":"Idiopathic Inflammatory Myopathy"},"sponsor":"Cabaletta Bio","status":"RECRUITING","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT06154252 (NCT06154252)","item":"https://clinsight.pract.eu/trials/NCT06154252/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06154252 (NCT06154252)?","acceptedAnswer":{"@type":"Answer","text":"NCT06154252 is a Phase 2, Phase 3 study sponsored by Cabaletta Bio evaluating Unclassified in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06154252?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06154252."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06154252 (NCT06154252): RESET-Myositis: An Open-Label Study to Evaluate the Safety and Efficacy of CABA-201 in Subjects With Active Idiopathic Inflammatory Myopathy or Juvenile Idiopathic Inflammatory Myopathy","url":"https://clinsight.pract.eu/trials/NCT06154252/","studySubject":{"@type":"MedicalCondition","name":"Idiopathic Inflammatory Myopathy"},"sponsor":"Cabaletta Bio","status":"Recruiting","phase":"Phase 2, Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Specialized Clinical Areas","item":"https://clinsight.pract.eu/?category=Specialized%20Clinical%20Areas"},{"@type":"ListItem","position":3,"name":"NCT06154252 (NCT06154252)","item":"https://clinsight.pract.eu/trials/NCT06154252/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06154252 (NCT06154252)?","acceptedAnswer":{"@type":"Answer","text":"NCT06154252 is a Phase 2, Phase 3 study sponsored by Cabaletta Bio evaluating Unclassified in Systemic Disease."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06154252?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06154252."}}]}]}
     </script>
 
     <style>
@@ -249,6 +249,16 @@
             color: var(--emerald);
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
+        .badge.status.recruiting {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.status.active-not-recruiting {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
         .badge.modality {
             background: var(--chip-bg);
             color: var(--text-med);
@@ -434,10 +444,13 @@
             border-radius: 6px;
             font-size: 12.5px;
             font-family: var(--font-mono);
-            font-weight: 600;
+            font-weight: 500;
             text-decoration: none;
             transition: all 0.15s ease;
             line-height: 1.2;
+        }
+        .doc-btn b {
+            font-weight: 700;
         }
         .doc-btn:hover {
             transform: translateY(-1px);
@@ -594,7 +607,7 @@
         <div class="badge-row">
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT06154252</span>
             <span class="badge phase">Phase 2, Phase 3</span>
-            <span class="badge status ">RECRUITING</span>
+            <span class="badge status recruiting">Recruiting</span>
             <span class="badge modality">Unclassified</span>
             
         </div>
@@ -609,7 +622,7 @@
             
             
             <a href="https://pubmed.ncbi.nlm.nih.gov/39245937/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 39245937)">
-                <i class="fa-solid fa-book-medical"></i> PubMed: 39245937 ↗
+                <i class="fa-solid fa-book-medical"></i> <b>PubMed:</b> 39245937 ↗
             </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
@@ -638,7 +651,7 @@
                 </div>
                 <div class="meta-item">
                     <h4>Patient Enrollment</h4>
-                    <p>74 participants</p>
+                    <p>74 individuals</p>
                 </div>
                 <div class="meta-item">
                     <h4>Trial Phase</h4>

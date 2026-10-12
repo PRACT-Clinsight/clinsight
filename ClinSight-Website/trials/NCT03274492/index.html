@@ -35,7 +35,7 @@
 
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"POLARIX (NCT03274492): A Study Comparing the Efficacy and Safety of Polatuzumab Vedotin With Rituximab-Cyclophosphamide, Doxorubicin, and Prednisone (R-CHP) Versus Rituximab-Cyclophosphamide, Doxorubicin, Vincristine, and Prednisone (R-CHOP) in Participants With Diffuse Large B-Cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03274492/","studySubject":{"@type":"MedicalCondition","name":"Diffuse Large B-Cell Lymphoma"},"sponsor":"Hoffmann-La Roche","status":"COMPLETED","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"POLARIX (NCT03274492)","item":"https://clinsight.pract.eu/trials/NCT03274492/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03274492 (POLARIX)?","acceptedAnswer":{"@type":"Answer","text":"NCT03274492 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating ADC in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03274492?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03274492."}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"POLARIX (NCT03274492): A Study Comparing the Efficacy and Safety of Polatuzumab Vedotin With Rituximab-Cyclophosphamide, Doxorubicin, and Prednisone (R-CHP) Versus Rituximab-Cyclophosphamide, Doxorubicin, Vincristine, and Prednisone (R-CHOP) in Participants With Diffuse Large B-Cell Lymphoma","url":"https://clinsight.pract.eu/trials/NCT03274492/","studySubject":{"@type":"MedicalCondition","name":"Diffuse Large B-Cell Lymphoma"},"sponsor":"Hoffmann-La Roche","status":"Completed","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"POLARIX (NCT03274492)","item":"https://clinsight.pract.eu/trials/NCT03274492/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT03274492 (POLARIX)?","acceptedAnswer":{"@type":"Answer","text":"NCT03274492 is a Phase 3 study sponsored by Hoffmann-La Roche evaluating ADC in Hematologic Malignancies."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT03274492?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT03274492."}}]}]}
     </script>
 
     <style>
@@ -249,6 +249,16 @@
             color: var(--emerald);
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
+        .badge.status.recruiting {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.status.active-not-recruiting {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
         .badge.modality {
             background: var(--chip-bg);
             color: var(--text-med);
@@ -434,10 +444,13 @@
             border-radius: 6px;
             font-size: 12.5px;
             font-family: var(--font-mono);
-            font-weight: 600;
+            font-weight: 500;
             text-decoration: none;
             transition: all 0.15s ease;
             line-height: 1.2;
+        }
+        .doc-btn b {
+            font-weight: 700;
         }
         .doc-btn:hover {
             transform: translateY(-1px);
@@ -594,7 +607,7 @@
         <div class="badge-row">
             <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT03274492</span>
             <span class="badge phase">Phase 3</span>
-            <span class="badge status completed">COMPLETED</span>
+            <span class="badge status completed">Completed</span>
             <span class="badge modality">ADC</span>
             
         </div>
@@ -609,7 +622,7 @@
             
             
             <a href="https://pubmed.ncbi.nlm.nih.gov/42699559/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View primary peer-reviewed publication on PubMed (PMID: 42699559)">
-                <i class="fa-solid fa-book-medical"></i> PubMed: 42699559 ↗
+                <i class="fa-solid fa-book-medical"></i> <b>PubMed:</b> 42699559 ↗
             </a>
             <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
                 <i class="fa-regular fa-copy"></i> Copy Citation
@@ -638,7 +651,7 @@
                 </div>
                 <div class="meta-item">
                     <h4>Patient Enrollment</h4>
-                    <p>1,000 participants</p>
+                    <p>1,000 individuals</p>
                 </div>
                 <div class="meta-item">
                     <h4>Trial Phase</h4>
