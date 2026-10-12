@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT06264180 Study Protocol & Registry Profile | ClinSight</title>
+    <meta name="description" content="Official ClinicalTrials.gov study protocol, primary design, enrollment criteria, and sponsor data for NCT06264180 (NCT06264180). Open-access research intelligence.">
+    <link rel="canonical" href="https://clinsight.pract.eu/trials/NCT06264180/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="NCT06264180 NCT06264180 — Clinical Study Protocol">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Immuno-Oncology (Checkpoint Inhibitor) · Sponsor: Replimune, Inc.">
+    <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT06264180/">
+    <meta property="og:type" content="article">
+    
+    <!-- Clean Font: Inter (Matched with vigisight.pract.eu) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Theme Initializer (Instant OS/Browser preference detection) -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('clinsight_theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <!-- Structured Data Schema -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"NCT06264180 (NCT06264180): VO and Nivolumab vs Physician&#39;s Choice in Advanced Melanoma That Progressed on Anti-PD-1 &amp; Anti-CTLA-4 Drugs [IGNYTE-3]","url":"https://clinsight.pract.eu/trials/NCT06264180/","studySubject":{"@type":"MedicalCondition","name":"Advanced Melanoma"},"sponsor":"Replimune, Inc.","status":"Recruiting","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"NCT06264180 (NCT06264180)","item":"https://clinsight.pract.eu/trials/NCT06264180/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT06264180 (NCT06264180)?","acceptedAnswer":{"@type":"Answer","text":"NCT06264180 is a Phase 3 study sponsored by Replimune, Inc. evaluating Immuno-Oncology (Checkpoint Inhibitor) in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT06264180?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT06264180."}}]}]}
+    </script>
+
+    <style>
+        :root {
+            /* Dark Theme (Default) */
+            --bg-void: #07090e;
+            --bg-base: #0b0f19;
+            --bg-surface: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            --cyan: #38bdf8;
+            --cyan-glow: rgba(56, 189, 248, 0.15);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.15);
+            --purple: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.15);
+            --amber: #fbbf24;
+            --amber-glow: rgba(251, 191, 36, 0.15);
+            --text-high: #f8fafc;
+            --text-med: #cbd5e1;
+            --text-low: #64748b;
+            --chip-bg: rgba(255, 255, 255, 0.05);
+            --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            --bg-grad-1: rgba(56, 189, 248, 0.06);
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'Inter', sans-serif;
+            color-scheme: dark;
+        }
+
+        /* Auto-adapt to OS / Browser light mode */
+        @media (prefers-color-scheme: light) {
+            :root:not([data-theme="dark"]) {
+                --bg-void: #f8fafc;
+                --bg-base: #ffffff;
+                --bg-surface: #ffffff;
+                --bg-card: #ffffff;
+                --border-subtle: #e2e8f0;
+                --border-hover: rgba(2, 132, 199, 0.4);
+                --cyan: #0284c7;
+                --cyan-glow: rgba(2, 132, 199, 0.08);
+                --emerald: #059669;
+                --emerald-glow: rgba(5, 150, 105, 0.08);
+                --purple: #7c3aed;
+                --purple-glow: rgba(124, 58, 237, 0.08);
+                --amber: #d97706;
+                --amber-glow: rgba(217, 119, 6, 0.08);
+                --text-high: #0f172a;
+                --text-med: #334155;
+                --text-low: #64748b;
+                --chip-bg: #f1f5f9;
+                --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+                --bg-grad-1: rgba(2, 132, 199, 0.03);
+                color-scheme: light;
+            }
+        }
+
+        /* Explicit Light Theme */
+        :root[data-theme="light"] {
+            --bg-void: #f8fafc;
+            --bg-base: #ffffff;
+            --bg-surface: #ffffff;
+            --bg-card: #ffffff;
+            --border-subtle: #e2e8f0;
+            --border-hover: rgba(2, 132, 199, 0.4);
+            --cyan: #0284c7;
+            --cyan-glow: rgba(2, 132, 199, 0.08);
+            --emerald: #059669;
+            --emerald-glow: rgba(5, 150, 105, 0.08);
+            --purple: #7c3aed;
+            --purple-glow: rgba(124, 58, 237, 0.08);
+            --amber: #d97706;
+            --amber-glow: rgba(217, 119, 6, 0.08);
+            --text-high: #0f172a;
+            --text-med: #334155;
+            --text-low: #64748b;
+            --chip-bg: #f1f5f9;
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+            --bg-grad-1: rgba(2, 132, 199, 0.03);
+            color-scheme: light;
+        }
+
+        /* Explicit Dark Theme */
+        :root[data-theme="dark"] {
+            --bg-void: #07090e;
+            --bg-base: #0b0f19;
+            --bg-surface: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            --cyan: #38bdf8;
+            --cyan-glow: rgba(56, 189, 248, 0.15);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.15);
+            --purple: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.15);
+            --amber: #fbbf24;
+            --amber-glow: rgba(251, 191, 36, 0.15);
+            --text-high: #f8fafc;
+            --text-med: #cbd5e1;
+            --text-low: #64748b;
+            --chip-bg: rgba(255, 255, 255, 0.05);
+            --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            --bg-grad-1: rgba(56, 189, 248, 0.06);
+            color-scheme: dark;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-void);
+            background-image: radial-gradient(circle at 50% 0%, var(--bg-grad-1), transparent 45%);
+            color: var(--text-high);
+            line-height: 1.6;
+            min-height: 100vh;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        /* Topbar */
+        .topbar {
+            background: var(--bg-base);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 12px 24px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .topbar a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+        .topbar a:hover { color: #7dd3fc; }
+        .topbar-right { color: var(--text-low); font-size: 12.5px; display: flex; align-items: center; gap: 14px; }
+        .topbar-right a { color: var(--text-med); font-weight: 500; }
+
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 5px 9px;
+            border-radius: 6px;
+            font-size: 11.5px;
+            font-family: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.15s;
+        }
+        .theme-toggle:hover {
+            color: var(--text-high);
+            border-color: var(--border-hover);
+            background: var(--chip-bg);
+        }
+
+        .container { max-width: 1060px; margin: 32px auto; padding: 0 20px 80px; }
+        
+        .breadcrumb {
+            font-size: 12.5px;
+            color: var(--text-low);
+            margin-bottom: 24px;
+            font-family: var(--font-mono);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .breadcrumb a { color: var(--text-med); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--cyan); }
+        .breadcrumb span { color: var(--cyan); }
+
+        /* Badge Row */
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; align-items: center; }
+        .badge {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.02em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .badge.nct {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.phase {
+            background: var(--purple-glow);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+        .badge.status {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        .badge.status.completed {
+            background: var(--emerald-glow);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .badge.status.recruiting {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.status.active-not-recruiting {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        .badge.modality {
+            background: var(--chip-bg);
+            color: var(--text-med);
+            border: 1px solid var(--border-subtle);
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.35;
+            color: var(--text-high);
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+        .lead {
+            font-size: 14.5px;
+            color: var(--text-med);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        /* Antigravity Glass Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 22px;
+            box-shadow: var(--card-shadow);
+            backdrop-filter: blur(8px);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            border-color: var(--border-hover);
+        }
+        .card-header {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .card-header i { color: var(--cyan); }
+
+        /* Protocol Metadata Grid */
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+        .meta-item h4 {
+            font-size: 11.5px;
+            text-transform: uppercase;
+            color: var(--text-low);
+            font-family: var(--font-mono);
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+        .meta-item p {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-high);
+        }
+
+        /* Criteria Section */
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) { .criteria-grid { grid-template-columns: 1fr; } }
+        
+        .criteria-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .criteria-box h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--cyan);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .criteria-box ul {
+            padding-left: 18px;
+            font-size: 13px;
+            color: var(--text-med);
+        }
+        .criteria-box li { margin-bottom: 8px; line-height: 1.5; }
+
+        /* Action Buttons */
+        .actions-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: var(--font-sans);
+        }
+        .btn-primary {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+        }
+        .btn-primary:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #FFF;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: var(--text-high);
+        }
+
+        /* Related Grid */
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 14px;
+        }
+        .related-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 14px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.2s;
+        }
+        .related-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .related-card .rel-id {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--cyan);
+        }
+        .related-card .rel-title {
+            font-size: 12.5px;
+            font-weight: 500;
+            color: var(--text-high);
+            margin: 6px 0;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn b {
+            font-weight: 700;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
+        footer {
+            margin-top: 60px;
+            padding: 28px 0;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-low);
+            border-top: 1px solid var(--border-subtle);
+            font-family: var(--font-mono);
+        }
+    </style>
+</head>
+<body>
+    <!-- nct=NCT06264180 source=ClinicalTrials.gov protocol_strict=true -->
+    <div class="topbar">
+        <a href="../../"><i class="fa-solid fa-arrow-left"></i> ClinSight™ Clinical Trials Explorer</a>
+        <div class="topbar-right">
+            <button id="themeToggleTopbar" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle appearance">
+                <i class="fa-regular fa-sun"></i>
+            </button>
+            <a href="https://pract.eu" target="_blank">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../../">ClinSight</a> / <a href="../../?category=Oncology">Oncology</a> / <span>NCT06264180</span>
+        </div>
+
+        <div class="badge-row">
+            <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT06264180</span>
+            <span class="badge phase">Phase 3</span>
+            <span class="badge status recruiting">Recruiting</span>
+            <span class="badge modality">Immuno-Oncology (Checkpoint Inhibitor)</span>
+            
+        </div>
+
+        <h1>VO and Nivolumab vs Physician&#39;s Choice in Advanced Melanoma That Progressed on Anti-PD-1 &amp; Anti-CTLA-4 Drugs [IGNYTE-3]</h1>
+        <p class="lead">Randomized, Ph3 Clinical Study Comparing Vusolimogene Oderparepvec in Combination With Nivolumab Vs Treatment of Physician&#39;s Choice in Patients With Advanced Melanoma That Progressed on Anti-PD-1 and Anti-CTLA-4 Containing Treatment [IGNYTE-3]</p>
+
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
+        <div class="action-bar">
+            
+            
+            
+            
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Protocol JSON
+            </button>
+
+        </div>
+
+        <!-- Official Registry Overview -->
+        <div class="card">
+            <div class="card-header"><i class="fa-solid fa-dna"></i> Study Design & Protocol Architecture</div>
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h4>Lead Sponsor</h4>
+                    <p>Replimune, Inc.</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Therapeutic Indication</h4>
+                    <p>Advanced Melanoma</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Intervention / Drug</h4>
+                    <p>Vusolimogene Oderparepvec, Nivolumab, Nivolumab + Relatlimab, Pembrolizumab, Single-agent chemotherapy</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Patient Enrollment</h4>
+                    <p>400 individuals</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Trial Phase</h4>
+                    <p>Phase 3</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Primary Completion</h4>
+                    <p>2031-03-31</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Geographic Scope</h4>
+                    <p>Global</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Registry ID</h4>
+                    <p><a href="https://clinicaltrials.gov/study/NCT06264180" target="_blank" style="color:var(--cyan); text-decoration:none; font-family:var(--font-mono);">NCT06264180 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:11px;"></i></a></p>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
+        <div class="card">
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
+            <div class="criteria-grid">
+                <div class="criteria-box">
+                    <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
+                    <ul>
+                        <li>Key <br><br>I 1. Male or female who is 12 years of age or older at the time of signed informed consent.<br><br>I 2. Patients with histologically or cytologically confirmed unresectable or metastatic Stage IIIb through IV/M1a through M1d cutaneous melanoma, as per AJCC staging system, 8th edition).<br><br>I 3. Confirmed disease progression (PD) on an anti-PD-1 antibody treatment and an anti-CTLA-4 antibody treatment, administered as either a combination regimen (eg, nivolumab + ipilimumab) or in sequence.</li><li>Treatment with prior anti-PD-1 therapy must have continued for a minimum of 8 weeks (note: treatment with prior pembrolizumab therapy when administered every 6 weeks must have continued for a minimum of 12 weeks \[ie, 2 treatment cycles\]). Any number of doses of prior anti-CTLA-4 therapy may have been administered in combination with an anti-PD-1. The anti-PD-1-containing therapy must be the immediate prior line of treatment before randomization (for patients with BRAF mutation, see I 4).</li><li>Patients who in the physician&#39;s judgement are not candidates for treatment with an anti-CTLA-4 antibody (eg, due to documented clinically significant comorbidities or history of immune-related adverse events) are eligible for the study if they have confirmed PD on an anti-PD-1 antibody (including unresectable disease relapse during adjuvant therapy or \&lt; 6 months from completion of adjuvant therapy).</li><li>Disease progression must have been confirmed and documented using clinical or radiological assessment by 2 assessments at least 4 weeks apart while being treated with an anti-PD-1 antibody and an anti-CTLA-4 antibody. Radiological confirmation of PD can occur during the Screening period for this study. Treatment with prior anti-PD-1 therapy must have continued from the time of initial tumor progression until confirmation of PD (ie, such that no doses of anti-PD-1 therapy were missed).<br><br>Note: If radiographic progression at the initial scan where PD was documented is accompanied by clear clinical progression, defined as a decline in performance status directly attributed to disease or increased disease-related symptoms, anti-PD-1 therapy does not need to continue. For patients with documented PD while on adjuvant therapy with an anti-PD-1 therapy, a confirmatory biopsy can be used in place of a confirmatory scan.<br><br>I 4. Has documented BRAF V600 mutation status or must consent to BRAF V600 mutation testing per local institutional standards during the Screening period. Patients with BRAF mutation should have received prior BRAF-directed therapy (with or without a MEK inhibitor) prior to randomization, unless deemed not clinically indicated at Investigator&#39;s discretion due to concurrent medical condition or prior toxicity.<br><br>Note: Prior exposure to BRAF-directed therapy (with or without a MEK inhibitor) includes treatment in the adjuvant setting. One line of BRAF-directed therapy (with or without a MEK inhibitor) can be the most recent systemic treatment administered before randomization.<br><br>I 5. Has least 1 measurable tumor of ≥ 1 cm in longest diameter (or shortest diameter for lymph nodes) and injectable lesion(s) of at least 1 cm in longest diameter.<br><br>I 6. Has adequate hematologic function, including:</li><li>White blood cell (WBC) count ≥ 2.0 × 109/L</li><li>Absolute neutrophil count (ANC) ≥ 1.5 × 109/L</li><li>Platelet count ≥ 75 × 109/L</li><li>Hemoglobin ≥ 8 g/dL (without packed red blood cell \[RBC\] transfusion within 2 weeks of dosing)<br><br>I 7. Has adequate hepatic function, including:</li>
+                    </ul>
+                </div>
+                
+                <div class="criteria-box">
+                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
+                    <ul>
+                        <li>E 1. Primary mucosal or uveal melanoma. E 2. More than 2 lines of systemic therapy for advanced melanoma. Note: One additional line of anti-PD-1 therapy in the adjuvant or neoadjuvant setting is allowed if the patient was free of treatment and of PD for at least 6 months and subsequently had confirmed PD on an anti-PD-1 and an anti-CTLA-4 antibody therapy administered in the advanced setting.<br><br>E 3. Known acute or chronic hepatitis B (defined as hepatitis B surface antigen \[HBsAg\] reactive) or known acute or chronic hepatitis C virus (defined as HCV RNA \[qualitative\] is detected).<br><br>Note: Patients who have been effectively treated are eligible for randomization. Patients must be negative for HBsAg and HCV RNA.<br><br>E 4. Known human immunodeficiency virus (HIV) infection. Note: Testing for HIV is not required unless mandated by local health authority or clinically indicated.<br><br>E 5. Active significant herpetic infections or prior complications of HSV-1 infection (eg, herpetic keratitis or encephalitis) or requires intermittent or chronic use of systemic (oral or IV) antivirals with known antiherpetic activity (eg, acyclovir).<br><br>Note: Patients with sporadic cold sores may be randomized if no active cold sores are present at the time of first dose of study treatment.<br><br>E 6. Had systemic infection requiring IV antibiotics or other serious active infection requiring antimicrobial, antiviral, or antifungal treatment within 14 days prior to the first dose.<br><br>E 7. Evidence of spinal cord compression or at high risk of spinal cord compression.<br><br>E 8. Known active central nervous system (CNS) metastases and/or carcinomatous meningitis at time of screening. Patients with known central nervous system metastases are eligible if they have received standard-of-care therapy for central nervous system disease (such as stereotactic radiosurgery or radical surgical resection followed by radiotherapy) and have evidence of disease stability on 2 subsequent scans performed at least at a 4-week interval.<br><br>E 9. Serum lactate dehydrogenase (LDH) \&gt; 2 × ULN. E 10. Major surgery ≤ 2 weeks prior to starting study treatment. Note: Patients must have recovered adequately from all acute complications of all previous procedures prior to randomization.<br><br>E 11. Prior malignancy active within the previous 3 years, except for locally curable cancers that have apparently been cured, such as basal or squamous cell skin cancer, superficial bladder cancer, or carcinoma in situ (without invasive component) of the prostate, cervix, or breast.<br><br>E 12. History of significant cardiac disease including myocarditis or congestive heart failure (defined as New York Heart Association Functional Classification III or IV), or unstable angina, serious uncontrolled cardiac arrhythmia, cerebral vascular accident, or myocardial infarction within 6 months from first dose of VO.<br><br>E 13. History of life-threatening toxicity related to prior immune therapy except those that are unlikely to recur with standard countermeasures (eg, hormone replacement after adrenal crisis).<br><br>E 14. History or evidence of psychiatric, substance abuse (including IV substance abuse), or any other clinically significant disorder, condition, or disease (with the exception of those described above) that, in the opinion of the Investigator or the Medical Monitor, would pose a risk to patient safety or interfere with the study evaluation, procedures, or completion.<br><br>E 15. History or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the patient&#39;s participation for the full duration of the study, or is not in the best interest of the patient to participate, in the opinion of the treating Investigator.<br><br>E 16. Active, known, or suspected autoimmune disease requiring systemic treatment.<br><br>E 17. History of (noninfectious) pneumonitis that required steroids or has current pneumonitis.<br><br>E 18. Prior oncolytic virus therapy or other therapy given by intratumoral administration.<br><br>E 19. Requires chronic use of systemic (oral or IV) antivirals with known antiherpetic activity (eg, acyclovir).<br><br>E 20. Has received a live vaccine within 28 days prior to the first dose of study treatment.<br><br>E 21. Systemic anticancer therapies within 5 half-lives or 4 weeks of the first dose, whichever is shorter.<br><br>E 22. Is currently participating in or has participated in a study of an investigational agent within 4 weeks prior to the first dose of study treatment.<br><br>E 23. Has received prior radiotherapy within 2 weeks of start of study treatment or has not recovered from radiotherapy.<br><br>E 24. Conditions requiring treatment with immunosuppressive doses (\&gt; 10 mg per day of prednisone or equivalent) of systemic corticosteroids other than for corticosteroid replacement therapy 14 days before randomization.<br><br>Note: Patients who require a brief course (≤ 7 days) or corticosteroids (eg, as prophylaxis for imaging studies due to hypersensitivity to contrast agents) are not excluded. Physiologic replacement doses of systemic corticosteroids are permitted, only if the dose does not exceed 10 mg/day prednisone equivalent.<br><br>E 25. History of allergy or sensitivity to study drug components (VO, nivolumab, pembrolizumab, or relatlimab) or to cisplatin or carboplatin or paclitaxel (dependent on cohort) or prior monoclonal antibody treatment.<br><br>E 26. Treatment with botanical preparations (eg, herbal supplements or traditional Chinese medicines) intended for general health support or to treat the disease under study within 2 weeks prior to treatment.<br><br>E 27. Is a person who is deprived of freedom by an administrative or court order, or in an emergency setting, or hospitalized involuntarily.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Direct Primary Source Actions -->
+        <div class="card">
+            <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
+            <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
+            <div class="actions-row">
+                <a href="https://clinicaltrials.gov/study/NCT06264180" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
+                </a>
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT06264180" target="_blank" class="btn btn-outline">
+                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT06264180)
+                </a>
+                <a href="https://scholar.google.com/scholar?q=NCT06264180" target="_blank" class="btn btn-outline">
+                    <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
+                </a>
+            </div>
+        </div>
+
+        
+
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT06264180%20(NCT06264180)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
+        <footer>
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                <div>&copy; 2026 ClinSight · Primary study records from ClinicalTrials.gov</div>
+                <div><a href="https://pract.eu" target="_blank" style="color:var(--text-med); text-decoration:none;">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a></div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const studyData = {"nctId":"NCT06264180","acronym":null,"briefTitle":"VO and Nivolumab vs Physician's Choice in Advanced Melanoma That Progressed on Anti-PD-1 & Anti-CTLA-4 Drugs [IGNYTE-3]","officialTitle":"Randomized, Ph3 Clinical Study Comparing Vusolimogene Oderparepvec in Combination With Nivolumab Vs Treatment of Physician's Choice in Patients With Advanced Melanoma That Progressed on Anti-PD-1 and Anti-CTLA-4 Containing Treatment [IGNYTE-3]","sponsor":"Replimune, Inc.","phase":"Phase 3","status":"RECRUITING","modality":"Immuno-Oncology (Checkpoint Inhibitor)","conditions":["Advanced Melanoma"],"interventions":["Vusolimogene Oderparepvec","Nivolumab","Nivolumab + Relatlimab","Pembrolizumab","Single-agent chemotherapy"],"primaryOutcomes":[{"measure":"Overall Survival (OS)","description":"Time from the date of randomization to death due to any cause","timeFrame":"Assessed up to January 2029, approximately 55 months"}],"completionDate":"2031-03-31","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "VO and Nivolumab vs Physician&amp;#39;s Choice in Advanced Melanoma That Progressed on Anti-PD-1 &amp;amp; Anti-CTLA-4 Drugs [IGNYTE-3]. ClinicalTrials.gov Identifier: NCT06264180. Primary Sponsor: Replimune, Inc.. Available at: https://clinsight.pract.eu/trials/NCT06264180/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT06264180-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const isLight = theme === 'light';
+            const btn = document.getElementById('themeToggleTopbar');
+            if (btn) btn.innerHTML = isLight ? '<i class="fa-regular fa-moon"></i>' : '<i class="fa-regular fa-sun"></i>';
+        }
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            const next = current === 'light' ? 'dark' : 'light';
+            localStorage.setItem('clinsight_theme', next);
+            applyTheme(next);
+        }
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('clinsight_theme')) {
+                    applyTheme(e.matches ? 'light' : 'dark');
+                }
+            });
+        }
+        const saved = localStorage.getItem('clinsight_theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        applyTheme(saved);
+    </script>
+</body>
+</html>
