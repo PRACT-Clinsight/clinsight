@@ -345,9 +345,70 @@
             min-width: 0;
             box-sizing: border-box;
         }
+        /* Mobile Backdrop and Close Button */
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 99;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            pointer-events: none;
+        }
+        .sidebar-close-btn {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            font-size: 15px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s;
+        }
+        .sidebar-close-btn:hover {
+            color: var(--text-high);
+            background: var(--chip-bg);
+            border-color: var(--border-hover);
+        }
         @media (max-width: 900px) {
-            .sidebar { transform: translateX(-100%); transition: transform 0.3s; }
+            .sidebar {
+                width: min(280px, 80vw);
+                box-shadow: 4px 0 30px rgba(0, 0, 0, 0.6);
+                transform: translateX(-100%);
+                transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+            }
             .sidebar.open { transform: translateX(0); }
+            .sidebar-backdrop.active {
+                display: block;
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .sidebar-header-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 16px;
+                padding-bottom: 12px;
+                border-bottom: 1px solid var(--border-subtle);
+            }
+            .sidebar-header-row .sidebar-brand {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding: 0;
+            }
+            .sidebar-close-btn {
+                display: inline-flex;
+            }
             .main-content { margin-left: 0; width: 100%; padding: 20px 16px 60px; }
             .mobile-toggle { display: block !important; }
         }
@@ -922,12 +983,20 @@
 <body>
     <a href="#explorerSection" class="skip-link">Skip to registry explorer</a>
     <div class="app-layout">
+        <!-- Backdrop for mobile navigation drawer -->
+        <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="closeSidebar()" aria-hidden="true"></div>
+
         <!-- Left Sidebar Navigation -->
-        <aside class="sidebar" id="sidebar">
-            <a href="https://clinsight.pract.eu/" class="sidebar-brand">
-                <div class="logo-text">ClinSight<span>™</span></div>
-                <div class="logo-sub">Clinical Trials & Evidence Generation</div>
-            </a>
+        <aside class="sidebar" id="sidebar" aria-label="Primary Navigation">
+            <div class="sidebar-header-row">
+                <a href="https://clinsight.pract.eu/" class="sidebar-brand">
+                    <div class="logo-text">ClinSight<span>™</span></div>
+                    <div class="logo-sub">Clinical Trials & Evidence Generation</div>
+                </a>
+                <button type="button" class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Close navigation menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
 
             <!-- Navigation -->
             <div class="sidebar-section-title">Navigation</div>
@@ -1399,6 +1468,7 @@
             if (el) el.value = val;
             applyFilters();
             scrollToExplorer();
+            if (window.innerWidth <= 900) closeSidebar();
         }
 
         function filterByModality(modalityName) {
@@ -1450,6 +1520,7 @@
 
             applyFilters();
             scrollToExplorer();
+            if (window.innerWidth <= 900) closeSidebar();
         }
 
         function quickFilter(type) {
@@ -1578,6 +1649,7 @@
             } else if (section === 'explorer') {
                 scrollToExplorer();
             }
+            if (window.innerWidth <= 900) closeSidebar();
         }
 
         function scrollToExplorer() {
@@ -1585,12 +1657,36 @@
             if (el) el.scrollIntoView({ behavior: 'smooth' });
         }
 
-        function toggleSidebar() {
-            document.getElementById('sidebar').classList.toggle('open');
+        function openSidebar() {
+            const sb = document.getElementById('sidebar');
+            const bd = document.getElementById('sidebarBackdrop');
+            if (sb) sb.classList.add('open');
+            if (bd) bd.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
-        // Global '/' keyboard shortcut to focus search
+        function closeSidebar() {
+            const sb = document.getElementById('sidebar');
+            const bd = document.getElementById('sidebarBackdrop');
+            if (sb) sb.classList.remove('open');
+            if (bd) bd.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function toggleSidebar() {
+            const sb = document.getElementById('sidebar');
+            if (sb && sb.classList.contains('open')) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        }
+
+        // Global keyboard shortcut ('/' focuses search, 'Escape' closes mobile sidebar)
         document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeSidebar();
+            }
             if (e.key === '/' && document.activeElement !== document.getElementById('searchInput')) {
                 e.preventDefault();
                 document.getElementById('searchInput').focus();
