@@ -121,10 +121,23 @@
             font-size: 13.5px;
             font-weight: 500;
             transition: color 0.15s;
+            white-space: nowrap;
         }
         .nav-links a:hover, .nav-links a.active {
             color: var(--cyan);
         }
+        .nav-text-desktop { display: inline; }
+        .nav-text-mobile { display: none; }
+
+        @media (max-width: 640px) {
+            .site-nav { padding: 12px 14px; }
+            .nav-links { gap: 10px; }
+            .nav-links a { font-size: 12.5px; }
+            .nav-link-home { display: none; }
+            .nav-text-desktop { display: none; }
+            .nav-text-mobile { display: inline; }
+        }
+
         .theme-toggle-btn {
             background: transparent;
             border: 1px solid var(--border-subtle);
@@ -362,8 +375,11 @@
                 <div class="logo-tag">Clinical Trials &amp; Evidence Generation</div>
             </a>
             <div class="nav-links">
-                <a href="https://clinsight.pract.eu/">Home</a>
-                <a href="https://clinsight.pract.eu/explorer/">Trials Explorer</a>
+                <a href="https://clinsight.pract.eu/" class="nav-link-home">Home</a>
+                <a href="https://clinsight.pract.eu/explorer/">
+                    <span class="nav-text-desktop">Trials Explorer</span>
+                    <span class="nav-text-mobile">Explorer</span>
+                </a>
                 <a href="https://clinsight.pract.eu/compare/">Comparator</a>
                 <a href="https://clinsight.pract.eu/jobs/" class="active">Careers</a>
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -384,26 +400,28 @@
 
         <div class="filter-bar">
             <div class="filter-chip active" onclick="filterJobs('all')">All Positions</div>
+            <div class="filter-chip" onclick="filterJobs('denmark')">🇩🇰 Denmark &amp; Medicon Valley</div>
+            <div class="filter-chip" onclick="filterJobs('sweden')">🇸🇪 Sweden</div>
             <div class="filter-chip" onclick="filterJobs('site')">Hospital Trial Units</div>
             <div class="filter-chip" onclick="filterJobs('biopharma')">Biopharma Sponsors</div>
-            <div class="filter-chip" onclick="filterJobs('biostat')">Biostatistics & Data</div>
-            <div class="filter-chip" onclick="filterJobs('coord')">Study Coordinators & CRAs</div>
+            <div class="filter-chip" onclick="filterJobs('biostat')">Biostatistics &amp; Data</div>
+            <div class="filter-chip" onclick="filterJobs('coord')">Study Coordinators &amp; CRAs</div>
         </div>
 
         <div class="jobs-list">
             <!-- Job 1: Karolinska -->
-            <article class="job-card" data-category="site coord">
+            <article class="job-card" data-category="sweden site coord">
                 <div class="job-card-header">
                     <h2 class="job-title">Research Nurse / Clinical Trial Coordinator</h2>
                     <span class="job-dept">Phase 1/2 Oncology</span>
                 </div>
                 <div class="job-meta-row">
                     <span><i class="fa-solid fa-building"></i> <strong>Karolinska University Hospital</strong></span>
-                    <span><i class="fa-solid fa-location-dot"></i> Solna, Stockholm</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Solna, Stockholm · Sweden</span>
                     <span><i class="fa-solid fa-id-card"></i> Varbi: 760421</span>
                 </div>
                 <p class="job-summary">
-                    Operational coordination of Phase 1/2 cellular immunotherapy and antibody-drug conjugate (ADC) clinical trials at the Center for Clinical Cancer Studies (CKC). Direct patient monitoring, biological protocol sampling, and GCP eCRF documentation.
+                    Operational coordination of Phase 1/2 cellular immunotherapy and antibody-drug conjugate (ADC) clinical trials at the Center for Clinical Cancer Studies (CKC). Patient monitoring, biological protocol sampling, and GCP eCRF documentation.
                 </p>
                 <div class="req-grid">
                     <div class="req-col-mandatory">
@@ -433,15 +451,99 @@
                 </div>
             </article>
 
-            <!-- Job 2: AstraZeneca -->
-            <article class="job-card" data-category="biopharma biostat">
+            <!-- Job 2: Rigshospitalet (Denmark) -->
+            <article class="job-card" data-category="denmark site coord">
                 <div class="job-card-header">
-                    <h2 class="job-title">Director, Medical & Payer Evidence Statistics</h2>
+                    <h2 class="job-title">Clinical Trial Nurse / Studiekoordinator</h2>
+                    <span class="job-dept">Phase 1 Early Clinical Trials</span>
+                </div>
+                <div class="job-meta-row">
+                    <span><i class="fa-solid fa-building"></i> <strong>Rigshospitalet (Trial Nation)</strong></span>
+                    <span><i class="fa-solid fa-location-dot"></i> Blegdamsvej, Copenhagen · Denmark</span>
+                    <span><i class="fa-solid fa-id-card"></i> Region Hovedstaden: 254890</span>
+                </div>
+                <p class="job-summary">
+                    Coordination of early-phase oncology and hematology first-in-human (FIH) trials within the Phase 1 Unit at Rigshospitalet. Protocol administration, pharmacokinetics (PK) sampling, adverse event tracking, and sponsor audit coordination.
+                </p>
+                <div class="req-grid">
+                    <div class="req-col-mandatory">
+                        <div class="req-col-title"><i class="fa-solid fa-circle-check"></i> Mandatory (Krav)</div>
+                        <ul class="req-list">
+                            <li>Danish Registered Nurse Authorization (Dansk sygeplejeautorisation)</li>
+                            <li>Documented experience in clinical oncology or hematology</li>
+                            <li>Certified in ICH-GCP guidelines for clinical intervention trials</li>
+                        </ul>
+                    </div>
+                    <div class="req-col-desirable">
+                        <div class="req-col-title"><i class="fa-solid fa-star"></i> Desirable (Meriterande)</div>
+                        <ul class="req-list">
+                            <li>Experience coordinating early-phase basket or umbrella protocol designs</li>
+                            <li>Familiarity with Danish regional clinical research platforms (Sundhedsplatformen)</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://clinsight.pract.eu/trials/NCT03734029/" target="_blank" class="trial-link-pill">
+                    <i class="fa-solid fa-link"></i> Linked ClinSight Protocol: <strong>NCT03734029 (DESTINY-Breast04)</strong> &rarr;
+                </a>
+                <div class="job-card-footer">
+                    <span>Rigshospitalet · Onkologisk Klinik Fase 1 Enhed</span>
+                    <a href="https://www.rigshospitalet.dk/job" target="_blank" rel="noopener noreferrer" class="apply-btn">
+                        Apply via Region H <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Job 3: Novo Nordisk (Denmark) -->
+            <article class="job-card" data-category="denmark biopharma biostat">
+                <div class="job-card-header">
+                    <h2 class="job-title">Senior Clinical Trial Biostatistician</h2>
+                    <span class="job-dept">Cardiovascular &amp; Metabolic Outcomes</span>
+                </div>
+                <div class="job-meta-row">
+                    <span><i class="fa-solid fa-building"></i> <strong>Novo Nordisk</strong></span>
+                    <span><i class="fa-solid fa-location-dot"></i> Søborg / Bagsværd · Denmark</span>
+                    <span><i class="fa-solid fa-id-card"></i> Workday: NN-310892</span>
+                </div>
+                <p class="job-summary">
+                    Statistical lead for landmark Phase 3 cardiovascular and cardiometabolic outcome trials (CVOTs). Lead author for statistical analysis plans (SAPs), FDA/EMA regulatory dossier defense, and interim safety monitoring committee (IDMC) data reviews.
+                </p>
+                <div class="req-grid">
+                    <div class="req-col-mandatory">
+                        <div class="req-col-title"><i class="fa-solid fa-circle-check"></i> Mandatory (Krav)</div>
+                        <ul class="req-list">
+                            <li>PhD or MSc in Biostatistics, Mathematical Statistics, or Data Science</li>
+                            <li>5+ years biostatistical experience in registrational Phase 3 trials</li>
+                            <li>Advanced proficiency in validated SAS and R programming environments</li>
+                        </ul>
+                    </div>
+                    <div class="req-col-desirable">
+                        <div class="req-col-title"><i class="fa-solid fa-star"></i> Desirable (Meriterande)</div>
+                        <ul class="req-list">
+                            <li>Experience with GLP-1 / GIP outcome endpoints and time-to-event survival modeling</li>
+                            <li>Participation in direct health authority advisory meetings (FDA / EMA / CHMP)</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://clinsight.pract.eu/trials/NCT03574597/" target="_blank" class="trial-link-pill">
+                    <i class="fa-solid fa-link"></i> Linked ClinSight Protocol: <strong>NCT03574597 (SELECT Trial)</strong> &rarr;
+                </a>
+                <div class="job-card-footer">
+                    <span>Novo Nordisk Global Development · Medicon Valley</span>
+                    <a href="https://www.novonordisk.com/careers.html" target="_blank" rel="noopener noreferrer" class="apply-btn">
+                        Apply via Workday <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Job 4: AstraZeneca (Sweden) -->
+            <article class="job-card" data-category="sweden biopharma biostat">
+                <div class="job-card-header">
+                    <h2 class="job-title">Director, Medical &amp; Payer Evidence Statistics</h2>
                     <span class="job-dept">Global Biometrics</span>
                 </div>
                 <div class="job-meta-row">
                     <span><i class="fa-solid fa-building"></i> <strong>AstraZeneca</strong></span>
-                    <span><i class="fa-solid fa-location-dot"></i> Gothenburg, Sweden</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Gothenburg · Sweden</span>
                     <span><i class="fa-solid fa-id-card"></i> Workday: R-261632</span>
                 </div>
                 <p class="job-summary">
@@ -475,15 +577,15 @@
                 </div>
             </article>
 
-            <!-- Job 3: Dicot Pharma -->
-            <article class="job-card" data-category="biopharma coord">
+            <!-- Job 5: Dicot Pharma (Sweden) -->
+            <article class="job-card" data-category="sweden biopharma coord">
                 <div class="job-card-header">
                     <h2 class="job-title">Director Clinical Operations</h2>
                     <span class="job-dept">Translational Biotech</span>
                 </div>
                 <div class="job-meta-row">
                     <span><i class="fa-solid fa-building"></i> <strong>Dicot Pharma AB</strong></span>
-                    <span><i class="fa-solid fa-location-dot"></i> Uppsala, Sweden</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Uppsala · Sweden</span>
                     <span><i class="fa-solid fa-id-card"></i> Teamtailor: 8268902</span>
                 </div>
                 <p class="job-summary">

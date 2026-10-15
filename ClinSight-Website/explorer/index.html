@@ -129,10 +129,23 @@
             font-size: 13.5px;
             font-weight: 500;
             transition: color 0.15s;
+            white-space: nowrap;
         }
         .nav-links a:hover, .nav-links a.active {
             color: var(--cyan);
         }
+        .nav-text-desktop { display: inline; }
+        .nav-text-mobile { display: none; }
+
+        @media (max-width: 640px) {
+            .site-nav { padding: 12px 14px; }
+            .nav-links { gap: 10px; }
+            .nav-links a { font-size: 12.5px; }
+            .nav-link-home { display: none; }
+            .nav-text-desktop { display: none; }
+            .nav-text-mobile { display: inline; }
+        }
+
         .theme-toggle-btn {
             background: transparent;
             border: 1px solid var(--border-subtle);
@@ -470,8 +483,11 @@
                 <div class="logo-tag">Clinical Trials &amp; Evidence Generation</div>
             </a>
             <div class="nav-links">
-                <a href="https://clinsight.pract.eu/">Home</a>
-                <a href="https://clinsight.pract.eu/explorer/" class="active">Trials Explorer</a>
+                <a href="https://clinsight.pract.eu/" class="nav-link-home">Home</a>
+                <a href="https://clinsight.pract.eu/explorer/" class="active">
+                    <span class="nav-text-desktop">Trials Explorer</span>
+                    <span class="nav-text-mobile">Explorer</span>
+                </a>
                 <a href="https://clinsight.pract.eu/compare/">Comparator</a>
                 <a href="https://clinsight.pract.eu/jobs/">Careers</a>
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle appearance">
@@ -672,7 +688,7 @@
                                 <span><i class="fa-solid fa-dna" style="color:var(--purple);"></i> <strong>Condition:</strong> ${condition}</span>
                                 ${regimen ? `<span><i class="fa-solid fa-pills" style="color:var(--cyan);"></i> <strong>Regimen:</strong> ${regimen}</span>` : ''}
                                 <span><i class="fa-regular fa-building"></i> <strong>Sponsor:</strong> ${t.sponsor || 'Academic/Industry'}</span>
-                                ${t.enrollment ? `<span><i class="fa-solid fa-users" style="color:var(--emerald);"></i> <strong>Enrollment:</strong> ${t.enrollment.toLocaleString()}</span>` : ''}
+                                ${t.enrollment ? `<span><i class="fa-solid fa-users" style="color:var(--emerald);"></i> <strong>Participants:</strong> ${t.enrollment.toLocaleString()}</span>` : ''}
                             </div>
                             <div class="doc-btn-row">
                                 ${docBtns.join('')}
