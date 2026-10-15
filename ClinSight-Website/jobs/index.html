@@ -185,16 +185,39 @@
             line-height: 1.6;
         }
 
-        /* Filter Controls */
         .filter-bar {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
             gap: 10px;
             margin-bottom: 28px;
             padding: 16px;
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
             border-radius: 12px;
+        }
+        .country-select {
+            padding: 7px 12px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            color: var(--text-high);
+            font-size: 13px;
+            font-weight: 500;
+            font-family: inherit;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.15s;
+        }
+        .country-select:hover, .country-select:focus {
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+        .filter-divider {
+            width: 1px;
+            height: 24px;
+            background: var(--border-subtle);
+            margin: 0 4px;
         }
         .filter-chip {
             padding: 6px 14px;
@@ -399,13 +422,17 @@
         </div>
 
         <div class="filter-bar">
-            <div class="filter-chip active" onclick="filterJobs('all')">All Positions</div>
-            <div class="filter-chip" onclick="filterJobs('denmark')">🇩🇰 Denmark &amp; Medicon Valley</div>
-            <div class="filter-chip" onclick="filterJobs('sweden')">🇸🇪 Sweden</div>
-            <div class="filter-chip" onclick="filterJobs('site')">Hospital Trial Units</div>
-            <div class="filter-chip" onclick="filterJobs('biopharma')">Biopharma Sponsors</div>
-            <div class="filter-chip" onclick="filterJobs('biostat')">Biostatistics &amp; Data</div>
-            <div class="filter-chip" onclick="filterJobs('coord')">Study Coordinators &amp; CRAs</div>
+            <select id="countryFilter" class="country-select" onchange="applyJobFilters()">
+                <option value="all">All Countries</option>
+                <option value="denmark">Denmark</option>
+                <option value="sweden">Sweden</option>
+            </select>
+            <div class="filter-divider"></div>
+            <div class="filter-chip active" onclick="setRoleFilter('all', this)">All Roles</div>
+            <div class="filter-chip" onclick="setRoleFilter('site', this)">Hospital Trial Units</div>
+            <div class="filter-chip" onclick="setRoleFilter('biopharma', this)">Biopharma Sponsors</div>
+            <div class="filter-chip" onclick="setRoleFilter('biostat', this)">Biostatistics &amp; Data</div>
+            <div class="filter-chip" onclick="setRoleFilter('coord', this)">Study Coordinators &amp; CRAs</div>
         </div>
 
         <div class="jobs-list">
@@ -738,16 +765,30 @@
             document.documentElement.setAttribute('data-theme', next);
             localStorage.setItem('clinsight_theme', next);
         }
-        function filterJobs(cat) {
+
+        let currentRole = 'all';
+
+        function setRoleFilter(role, el) {
+            currentRole = role;
             document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-            if (event && event.target) event.target.classList.add('active');
+            if (el) el.classList.add('active');
+            applyJobFilters();
+        }
+
+        function applyJobFilters() {
+            const country = document.getElementById('countryFilter').value;
             const cards = document.querySelectorAll('.job-card');
+
             cards.forEach(card => {
-                if (cat === 'all') {
+                const categories = (card.getAttribute('data-category') || '').split(' ');
+                
+                const matchCountry = (country === 'all') || categories.includes(country);
+                const matchRole = (currentRole === 'all') || categories.includes(currentRole);
+
+                if (matchCountry && matchRole) {
                     card.style.display = 'block';
                 } else {
-                    const categories = card.getAttribute('data-category') || '';
-                    card.style.display = categories.includes(cat) ? 'block' : 'none';
+                    card.style.display = 'none';
                 }
             });
         }
