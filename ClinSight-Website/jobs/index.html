@@ -81,7 +81,7 @@
         }
         .nav-brand {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             gap: 12px;
             text-decoration: none;
             color: var(--text-high);
@@ -91,11 +91,25 @@
             font-weight: 700;
             letter-spacing: -0.02em;
             color: var(--cyan);
+            display: inline-flex;
+            align-items: baseline;
         }
         .logo-text span {
-            font-size: 13px;
-            vertical-align: super;
+            font-size: 11px;
+            margin-left: 2px;
+            font-weight: 600;
+            opacity: 0.85;
         }
+        .logo-tag {
+            font-size: 13px;
+            font-weight: 450;
+            letter-spacing: -0.01em;
+            color: var(--text-med);
+            border-left: 1px solid var(--border-subtle);
+            padding-left: 12px;
+            display: none;
+        }
+        @media (min-width: 640px) { .logo-tag { display: inline-block; } }
         .nav-links {
             display: flex;
             align-items: center;
@@ -347,7 +361,7 @@
         <div class="nav-inner">
             <a href="https://clinsight.pract.eu/" class="nav-brand">
                 <div class="logo-text">ClinSight<span>™</span></div>
-                <div style="font-size:12px; color:var(--text-low); font-family:var(--font-mono);">Clinical Careers</div>
+                <div class="logo-tag">Clinical Trials &amp; Evidence</div>
             </a>
             <div class="nav-links">
                 <a href="https://clinsight.pract.eu/">Home</a>

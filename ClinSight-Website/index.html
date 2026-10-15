@@ -128,26 +128,32 @@
         }
         .nav-brand {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             gap: 12px;
             text-decoration: none;
             color: var(--text-high);
         }
         .logo-text {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.02em;
             color: var(--cyan);
+            display: inline-flex;
+            align-items: baseline;
         }
         .logo-text span {
-            font-size: 13px;
-            vertical-align: super;
-            font-weight: 400;
+            font-size: 11px;
+            margin-left: 2px;
+            font-weight: 600;
+            opacity: 0.85;
         }
         .logo-tag {
-            font-size: 11.5px;
-            font-family: var(--font-mono);
-            color: var(--text-low);
+            font-size: 13px;
+            font-weight: 450;
+            letter-spacing: -0.01em;
+            color: var(--text-med);
+            border-left: 1px solid var(--border-subtle);
+            padding-left: 12px;
             display: none;
         }
         @media (min-width: 640px) { .logo-tag { display: inline-block; } }
@@ -487,7 +493,7 @@
             </div>
             <div class="metric-box">
                 <div class="metric-num">100%</div>
-                <div class="metric-label">Verbatim Provenance</div>
+                <div class="metric-label">Verified Primary Evidence</div>
             </div>
         </div>
     </header>
