@@ -995,7 +995,7 @@ function buildSitemap(trials) {
   urls.push('  <url>\n    <loc>' + BASE_URL + '/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>');
   urls.push('  <url>\n    <loc>' + BASE_URL + '/trials/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>');
 
-  const extra = ['/compare/', '/compare/myeloma-car-t-bispecific-adc/'].filter((p) => fs.existsSync(path.join(ROOT_DIR, p.slice(1), 'index.html')));
+  const extra = ['/explorer/', '/compare/', '/jobs/', '/compare/myeloma-car-t-bispecific-adc/'].filter((p) => fs.existsSync(path.join(ROOT_DIR, p.slice(1), 'index.html')));
   for (const p of extra) {
     urls.push('  <url>\n    <loc>' + BASE_URL + p + '</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>');
   }

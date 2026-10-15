@@ -1,51 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClinSight | Clinical Trials &amp; Evidence Generation</title>
-    <meta name="description" content="Official ClinicalTrials.gov study protocols, verbatim eligibility criteria, primary endpoints, and 1-click document links across oncology, ADCs, CAR-T, and GLP-1 therapeutics.">
+    <title>ClinSight — Clinical Trials & Research Intelligence Platform</title>
+    <meta name="description" content="Direct primary-source clinical trial registry intelligence, official protocol PDFs, statistical analysis plans, and verified clinical research evidence.">
     <link rel="canonical" href="https://clinsight.pract.eu/">
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","name":"ClinSight","url":"https://clinsight.pract.eu/","description":"Clinical Trials & Evidence Generation sourced from ClinicalTrials.gov, keyed by NCT ID.","publisher":{"@type":"Organization","name":"PRACT","url":"https://pract.eu"}}
-    </script>
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="ClinSight | Clinical Trials &amp; Evidence Generation">
-    <meta property="og:description" content="Search clinical trial protocols, primary endpoints, and eligibility data.">
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:title" content="ClinSight — Clinical Trials & Research Intelligence Platform">
+    <meta property="og:description" content="Primary-source clinical trial designs, official protocol PDFs, statistical analysis plans, and verified clinical trial intelligence.">
     <meta property="og:url" content="https://clinsight.pract.eu/">
     <meta property="og:type" content="website">
 
-    <!-- High-Performance Typography & Icons (Preconnected & Non-blocking) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <!-- Theme Initializer (Instant OS/Browser preference detection) -->
-    <script>
-        (function() {
-            var saved = localStorage.getItem('clinsight_theme');
-            if (saved) {
-                document.documentElement.setAttribute('data-theme', saved);
-            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-                document.documentElement.setAttribute('data-theme', 'light');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            }
-        })();
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://clinsight.pract.eu/#website",
+          "url": "https://clinsight.pract.eu/",
+          "name": "ClinSight",
+          "description": "Clinical Trials & Research Intelligence Platform",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ClinSight",
+            "url": "https://clinsight.pract.eu/"
+          }
+        },
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://clinsight.pract.eu/#webpage",
+          "url": "https://clinsight.pract.eu/",
+          "name": "ClinSight Clinical Trials Portal",
+          "about": {
+            "@type": "MedicalCondition",
+            "name": "Clinical Trials and Drug Development"
+          }
+        }
+      ]
+    }
     </script>
 
     <style>
         :root {
-            /* Dark Theme (Default) */
             --bg-void: #07090e;
             --bg-base: #0b0f19;
             --bg-surface: #111827;
-            --bg-card: rgba(17, 24, 39, 0.75);
+            --bg-card: rgba(17, 24, 39, 0.7);
             --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(56, 189, 248, 0.35);
+            --border-hover: rgba(56, 189, 248, 0.4);
             --cyan: #38bdf8;
             --cyan-glow: rgba(56, 189, 248, 0.12);
             --emerald: #10b981;
@@ -54,52 +66,15 @@
             --purple-glow: rgba(168, 85, 247, 0.12);
             --amber: #fbbf24;
             --amber-glow: rgba(251, 191, 36, 0.12);
+            --rose: #f43f5e;
             --text-high: #f8fafc;
             --text-med: #cbd5e1;
             --text-low: #64748b;
-            --input-bg: rgba(11, 15, 25, 0.95);
-            --hero-bg: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(15, 23, 42, 0.5) 100%);
-            --chip-bg: rgba(255, 255, 255, 0.05);
-            --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-            --bg-grad-1: rgba(56, 189, 248, 0.04);
-            --bg-grad-2: rgba(168, 85, 247, 0.03);
-            --font-sans: 'Inter', sans-serif;
-            --font-mono: 'Inter', sans-serif;
-            --sidebar-width: 240px;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
             color-scheme: dark;
         }
 
-        /* Auto-adapt to OS / Browser light mode */
-        @media (prefers-color-scheme: light) {
-            :root:not([data-theme="dark"]) {
-                --bg-void: #f8fafc;
-                --bg-base: #ffffff;
-                --bg-surface: #ffffff;
-                --bg-card: #ffffff;
-                --border-subtle: #e2e8f0;
-                --border-hover: rgba(2, 132, 199, 0.4);
-                --cyan: #0284c7;
-                --cyan-glow: rgba(2, 132, 199, 0.08);
-                --emerald: #059669;
-                --emerald-glow: rgba(5, 150, 105, 0.08);
-                --purple: #7c3aed;
-                --purple-glow: rgba(124, 58, 237, 0.08);
-                --amber: #d97706;
-                --amber-glow: rgba(217, 119, 6, 0.08);
-                --text-high: #0f172a;
-                --text-med: #334155;
-                --text-low: #64748b;
-                --input-bg: #ffffff;
-                --hero-bg: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-                --chip-bg: #f1f5f9;
-                --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-                --bg-grad-1: rgba(2, 132, 199, 0.03);
-                --bg-grad-2: rgba(124, 58, 237, 0.02);
-                color-scheme: light;
-            }
-        }
-
-        /* Explicit Light Theme via Toggle */
         :root[data-theme="light"] {
             --bg-void: #f8fafc;
             --bg-base: #ffffff;
@@ -115,1638 +90,518 @@
             --purple-glow: rgba(124, 58, 237, 0.08);
             --amber: #d97706;
             --amber-glow: rgba(217, 119, 6, 0.08);
+            --rose: #e11d48;
             --text-high: #0f172a;
             --text-med: #334155;
             --text-low: #64748b;
-            --input-bg: #ffffff;
-            --hero-bg: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            --chip-bg: #f1f5f9;
-            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-            --bg-grad-1: rgba(2, 132, 199, 0.03);
-            --bg-grad-2: rgba(124, 58, 237, 0.02);
             color-scheme: light;
-        }
-
-        /* Explicit Dark Theme via Toggle */
-        :root[data-theme="dark"] {
-            --bg-void: #07090e;
-            --bg-base: #0b0f19;
-            --bg-surface: #111827;
-            --bg-card: rgba(17, 24, 39, 0.75);
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(56, 189, 248, 0.35);
-            --cyan: #38bdf8;
-            --cyan-glow: rgba(56, 189, 248, 0.12);
-            --emerald: #10b981;
-            --emerald-glow: rgba(16, 185, 129, 0.12);
-            --purple: #a855f7;
-            --purple-glow: rgba(168, 85, 247, 0.12);
-            --amber: #fbbf24;
-            --amber-glow: rgba(251, 191, 36, 0.12);
-            --text-high: #f8fafc;
-            --text-med: #cbd5e1;
-            --text-low: #64748b;
-            --input-bg: rgba(11, 15, 25, 0.95);
-            --hero-bg: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(15, 23, 42, 0.5) 100%);
-            --chip-bg: rgba(255, 255, 255, 0.05);
-            --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-            --bg-grad-1: rgba(56, 189, 248, 0.04);
-            --bg-grad-2: rgba(168, 85, 247, 0.03);
-            color-scheme: dark;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: var(--font-sans);
-            background-color: var(--bg-void);
-            background-image: radial-gradient(circle at 70% 10%, var(--bg-grad-1), transparent 40%),
-                              radial-gradient(circle at 20% 60%, var(--bg-grad-2), transparent 50%);
+            background: var(--bg-void);
             color: var(--text-high);
-            line-height: 1.6;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
             min-height: 100vh;
-            display: flex;
-            transition: background-color 0.2s, color 0.2s;
-        }
-
-        .app-layout {
-            display: flex;
-            width: 100%;
-            min-height: 100vh;
-        }
-
-        /* Left Sidebar */
-        .sidebar {
-            width: var(--sidebar-width);
-            background: var(--bg-base);
-            border-right: 1px solid var(--border-subtle);
-            padding: 24px 16px;
             display: flex;
             flex-direction: column;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 100;
-            backdrop-filter: blur(16px);
-            overflow-y: auto;
         }
 
-        /* Pure Text Logo (Font itself is the logo) */
-        .sidebar-brand {
-            padding: 4px 8px 18px;
+        /* Top Header */
+        .site-nav {
             border-bottom: 1px solid var(--border-subtle);
-            margin-bottom: 20px;
+            background: var(--bg-base);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+        .nav-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             text-decoration: none;
-            display: block;
+            color: var(--text-high);
         }
         .logo-text {
-            font-size: 24px;
-            font-weight: 400;
-            letter-spacing: -0.02em;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
             color: var(--cyan);
-            line-height: 1.15;
         }
         .logo-text span {
-            color: var(--cyan);
-            font-size: 14px;
+            font-size: 13px;
             vertical-align: super;
             font-weight: 400;
         }
-        .logo-sub {
+        .logo-tag {
             font-size: 11.5px;
-            font-weight: 400;
-            color: var(--text-med);
-            margin-top: 4px;
-            letter-spacing: -0.01em;
-            line-height: 1.35;
-        }
-
-        .sidebar-section-title {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-low);
-            padding: 10px 10px 6px;
             font-family: var(--font-mono);
+            color: var(--text-low);
+            display: none;
         }
+        @media (min-width: 640px) { .logo-tag { display: inline-block; } }
 
-        .sidebar-nav {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-bottom: 20px;
-        }
-        .sidebar-nav a {
+        .nav-links {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 8px 12px;
+            gap: 20px;
+        }
+        .nav-links a {
             color: var(--text-med);
             text-decoration: none;
             font-size: 13.5px;
             font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.15s;
+            transition: color 0.15s;
         }
-        .sidebar-nav a:hover {
-            color: var(--text-high);
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .sidebar-nav a.active {
+        .nav-links a:hover, .nav-links a.active {
             color: var(--cyan);
-            background: var(--cyan-glow);
-            border: 1px solid rgba(56, 189, 248, 0.25);
-            font-weight: 600;
         }
-        .sidebar-nav a i {
-            width: 16px;
-            text-align: center;
-            font-size: 13px;
-        }
-        .sidebar-nav .nav-badge {
-            margin-left: auto;
-            font-family: var(--font-mono);
-            font-size: 11px;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: var(--text-low);
-        }
-
-        .sidebar-footer {
-            margin-top: auto;
-            padding-top: 16px;
-            border-top: 1px solid var(--border-subtle);
-            font-size: 12px;
-            color: var(--text-low);
-        }
-        .sidebar-footer a {
-            color: var(--cyan);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: 500;
-            margin-top: 4px;
-        }
-
-        /* Elegant Segmented Pill Theme Switcher (Linear / Raycast aesthetic) */
-        .theme-segmented {
-            display: flex;
-            align-items: center;
-            background: var(--chip-bg);
+        .theme-toggle-btn {
+            background: transparent;
             border: 1px solid var(--border-subtle);
-            border-radius: 8px;
-            padding: 3px;
-            gap: 2px;
-            width: 100%;
-        }
-        .theme-seg-btn {
-            flex: 1;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
+            color: var(--text-med);
             padding: 6px 10px;
             border-radius: 6px;
-            font-size: 11.5px;
-            font-weight: 500;
-            font-family: inherit;
-            border: none;
-            background: transparent;
-            color: var(--text-low);
             cursor: pointer;
-            transition: opacity 0.18s ease, background-color 0.18s ease;
+            font-size: 13px;
+            transition: all 0.15s;
         }
-        .theme-seg-btn:hover {
+        .theme-toggle-btn:hover {
             color: var(--text-high);
-        }
-        .theme-seg-btn.active {
-            background: var(--bg-surface);
-            color: var(--text-high);
-            font-weight: 600;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-            border: 1px solid var(--border-subtle);
-        }
-        :root[data-theme="dark"] .theme-seg-btn.active {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.12);
-            color: var(--text-high);
+            border-color: var(--border-hover);
         }
 
-        /* Main Content Container */
-        .main-content {
-            margin-left: var(--sidebar-width);
-            flex: 1;
-            padding: 28px 36px 80px;
-            width: calc(100% - var(--sidebar-width));
-            min-width: 0;
-            box-sizing: border-box;
+        /* Hero Section */
+        .hero-section {
+            padding: 72px 20px 48px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
         }
-        /* Mobile Backdrop and Close Button */
-        .sidebar-backdrop {
-            display: none;
-            position: fixed;
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 14px;
+            background: var(--cyan-glow);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 999px;
+            color: var(--cyan);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .hero-title {
+            font-size: 44px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.15;
+            color: var(--text-high);
+            margin-bottom: 18px;
+        }
+        @media (max-width: 640px) { .hero-title { font-size: 32px; } }
+        .hero-subtitle {
+            font-size: 17px;
+            color: var(--text-med);
+            line-height: 1.6;
+            margin-bottom: 36px;
+            font-weight: 400;
+        }
+
+        /* Metric Counters Row */
+        .metric-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 760px;
+            margin: 0 auto 56px;
+        }
+        @media (max-width: 600px) { .metric-row { grid-template-columns: 1fr; } }
+        .metric-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .metric-num {
+            font-size: 26px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            color: var(--cyan);
+            margin-bottom: 4px;
+        }
+        .metric-label {
+            font-size: 12px;
+            color: var(--text-low);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        /* Action Gateway Cards (The 3 Core Pillars) */
+        .portal-grid {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px 64px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .portal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 32px 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+        }
+        .portal-card::before {
+            content: '';
+            position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.65);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            z-index: 99;
-            opacity: 0;
-            transition: opacity 0.25s ease;
-            pointer-events: none;
+            height: 3px;
+            background: transparent;
+            transition: background 0.2s;
         }
-        .sidebar-close-btn {
-            display: none;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-med);
-            font-size: 15px;
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            cursor: pointer;
+        .portal-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+        }
+        .portal-card.card-explorer:hover::before { background: var(--cyan); }
+        .portal-card.card-compare:hover::before { background: var(--purple); }
+        .portal-card.card-jobs:hover::before { background: var(--emerald); }
+
+        .portal-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.15s;
+            font-size: 20px;
+            margin-bottom: 20px;
         }
-        .sidebar-close-btn:hover {
-            color: var(--text-high);
-            background: var(--chip-bg);
-            border-color: var(--border-hover);
-        }
-        @media (max-width: 900px) {
-            .sidebar {
-                width: min(280px, 80vw);
-                box-shadow: 4px 0 30px rgba(0, 0, 0, 0.6);
-                transform: translateX(-100%);
-                transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-            }
-            .sidebar.open { transform: translateX(0); }
-            .sidebar-backdrop.active {
-                display: block;
-                opacity: 1;
-                pointer-events: auto;
-            }
-            .sidebar-header-row {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 16px;
-                padding-bottom: 12px;
-                border-bottom: 1px solid var(--border-subtle);
-            }
-            .sidebar-header-row .sidebar-brand {
-                border-bottom: none;
-                margin-bottom: 0;
-                padding: 0;
-            }
-            .sidebar-close-btn {
-                display: inline-flex;
-            }
-            .main-content { margin-left: 0; width: 100%; padding: 20px 16px 60px; }
-            .mobile-toggle { display: block !important; }
-        }
+        .card-explorer .portal-icon { background: var(--cyan-glow); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.3); }
+        .card-compare .portal-icon { background: var(--purple-glow); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.3); }
+        .card-jobs .portal-icon { background: var(--emerald-glow); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
 
-        .footer-portal-link {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-med) !important;
-            text-decoration: none;
-            padding: 6px 12px;
-            border-radius: 6px;
-            border: 1px solid var(--border-subtle);
-            background: var(--bg-card);
+        .portal-title {
+            font-size: 21px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+        .portal-desc {
+            font-size: 14px;
+            color: var(--text-med);
+            line-height: 1.6;
+            margin-bottom: 28px;
+            flex: 1;
+        }
+        .portal-action {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            transition: all 0.15s;
-        }
-        .footer-portal-link:hover {
-            color: var(--cyan) !important;
-            border-color: var(--border-hover);
-            background: var(--chip-bg);
-        }
-
-        /* Mobile Header */
-        .mobile-header {
-            display: none;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            padding-bottom: 14px;
-            border-bottom: 1px solid var(--border-subtle);
-        }
-        .mobile-toggle {
-            display: none;
-            background: transparent;
-            border: 1px solid var(--border-subtle);
-            color: var(--text-high);
-            padding: 8px 12px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        @media (max-width: 900px) {
-            .mobile-header { display: flex; }
-            .mobile-toggle { display: block; }
-        }
-
-        .search-box-wrap {
-            position: relative;
-            width: 100%;
-            margin-bottom: 12px;
-        }
-        .search-box-wrap i {
-            position: absolute;
-            left: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-low);
-            font-size: 14px;
-        }
-        .search-input {
-            width: 100%;
-            padding: 12px 42px 12px 38px;
-            background: var(--input-bg);
-            border: 1px solid var(--border-subtle);
-            border-radius: 8px;
-            color: var(--text-high);
+            gap: 8px;
             font-size: 13.5px;
-            font-family: inherit;
-            transition: all 0.2s;
-            box-sizing: border-box;
+            font-weight: 600;
+            transition: gap 0.15s;
         }
-        .search-input:focus {
-            outline: none;
-            border-color: var(--cyan);
-            box-shadow: 0 0 0 3px var(--cyan-glow);
+        .card-explorer .portal-action { color: var(--cyan); }
+        .card-compare .portal-action { color: var(--purple); }
+        .card-jobs .portal-action { color: var(--emerald); }
+        .portal-card:hover .portal-action { gap: 12px; }
+
+        /* Landmark Studies Semantic Section */
+        .landmarks-section {
             background: var(--bg-surface);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 64px 20px;
         }
-        .search-shortcut {
-            position: absolute;
-            right: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-family: var(--font-mono);
-            font-size: 11px;
-            color: var(--text-low);
-            background: var(--chip-bg);
-            border: 1px solid var(--border-subtle);
-            padding: 2px 6px;
-            border-radius: 4px;
+        .landmarks-inner {
+            max-width: 1140px;
+            margin: 0 auto;
         }
-
-        /* Hero Banner */
-        .clean-hero {
-            margin-bottom: 20px;
-            background: var(--hero-bg);
-            border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 16px 20px;
-            box-shadow: var(--card-shadow);
-        }
-        .clean-hero h1 {
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: -0.015em;
-            color: var(--text-high);
-            margin-bottom: 4px;
-        }
-        .clean-hero p {
-            font-size: 13.5px;
-            color: var(--text-med);
-            max-width: none;
-            line-height: 1.5;
-            margin-bottom: 0;
-        }
-
-        /* Modality Grid */
         .section-header {
+            margin-bottom: 32px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            margin-bottom: 14px;
-            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 16px;
         }
-        .section-header h3, .section-header h2 {
-            font-size: 15.5px;
+        .section-title {
+            font-size: 24px;
             font-weight: 700;
+            letter-spacing: -0.02em;
             color: var(--text-high);
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-bottom: 6px;
         }
-
-        .skip-link {
-            position: absolute;
-            top: -100px;
-            left: 16px;
-            background: var(--cyan);
-            color: #000;
-            padding: 8px 14px;
-            font-weight: 700;
-            border-radius: 6px;
-            z-index: 9999;
+        .section-subtitle {
+            font-size: 14px;
+            color: var(--text-med);
+        }
+        .see-all-link {
+            font-size: 13.5px;
+            color: var(--cyan);
             text-decoration: none;
-            transition: top 0.15s;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
-        .skip-link:focus {
-            top: 16px;
-        }
+        .see-all-link:hover { text-decoration: underline; }
 
-        .modality-grid {
+        .landmark-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            margin-bottom: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
         }
-        .modality-card {
+        .landmark-item {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
             border-radius: 10px;
-            padding: 14px 16px;
-            cursor: pointer;
-            transition: all 0.2s;
+            padding: 20px;
             text-decoration: none;
             color: inherit;
+            transition: all 0.15s;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
         }
-        .modality-card:hover {
+        .landmark-item:hover {
             border-color: var(--border-hover);
             transform: translateY(-2px);
         }
-        .modality-card h4 {
-            font-size: 13.5px;
-            font-weight: 600;
-            margin-bottom: 4px;
-            color: var(--text-high);
-        }
-        .modality-card p {
-            font-size: 12px;
-            color: var(--text-low);
-            line-height: 1.4;
-            margin-bottom: 8px;
-            flex: 1;
-        }
-        .modality-card .mod-link {
-            font-family: var(--font-mono);
+        .landmark-tag {
             font-size: 11px;
-            color: var(--cyan);
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        /* Filter Controls */
-        .controls-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 16px 18px;
-            margin-bottom: 20px;
-        }
-        .filters-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-        .filter-select {
-            background: var(--input-bg);
-            border: 1px solid var(--border-subtle);
-            border-radius: 8px;
-            padding: 7px 10px;
-            color: var(--text-high);
-            font-size: 12.5px;
-            font-family: inherit;
-        }
-        .filter-select:focus {
-            outline: none;
-            border-color: var(--cyan);
-        }
-
-        .chips-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center;
-        }
-        .chip {
-            background: var(--chip-bg);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-med);
-            padding: 4px 10px;
-            border-radius: 16px;
-            font-size: 11.5px;
+            font-weight: 700;
             font-family: var(--font-mono);
-            cursor: pointer;
-            transition: all 0.15s;
-        }
-        .chip:hover, .chip.active {
-            background: var(--cyan-glow);
             color: var(--cyan);
-            border-color: var(--border-hover);
-        }
-        .btn-clear {
-            background: transparent;
-            border: none;
-            color: var(--text-low);
-            font-size: 12px;
-            cursor: pointer;
-            margin-left: auto;
-            text-decoration: underline;
-        }
-        .btn-clear:hover { color: var(--text-med); }
-
-        /* Counter Header */
-        .results-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 14px;
-            font-size: 12.5px;
-            color: var(--text-low);
-            font-family: var(--font-mono);
-        }
-        .results-header b { color: var(--cyan); }
-
-        /* Study List View (Intuitive, Clean, Easy to Browse) */
-        .study-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            min-height: 800px;
-        }
-
-        .study-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 10px;
-            padding: 16px 20px;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            box-shadow: var(--card-shadow);
-            transition: all 0.15s ease;
-        }
-        .study-item:hover {
-            border-color: var(--border-hover);
-            background: var(--bg-surface);
-            transform: translateX(3px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        }
-
-        .study-item-main {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .study-item-header {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 8px;
             margin-bottom: 8px;
         }
-
-        .study-acronym {
-            font-size: 13.5px;
-            font-weight: 700;
-            color: var(--cyan);
-            letter-spacing: -0.01em;
-            margin-right: 4px;
-        }
-
-        .badges-wrap { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-        .badge {
-            font-family: var(--font-mono);
-            font-size: 11px;
-            font-weight: 600;
-            padding: 3px 7px;
-            border-radius: 4px;
-        }
-        .badge.nct { background: rgba(56, 189, 248, 0.12); color: #0369a1; border: 1px solid rgba(2, 132, 199, 0.35); }
-        :root[data-theme="dark"] .badge.nct { color: #38bdf8; background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.35); }
-        .badge.phase { background: rgba(168, 85, 247, 0.12); color: #6b21a8; border: 1px solid rgba(124, 58, 237, 0.35); }
-        :root[data-theme="dark"] .badge.phase { color: #c084fc; background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.35); }
-        .badge.modality { background: var(--chip-bg); color: var(--text-high); border: 1px solid var(--border-subtle); }
-        .badge.completed { background: rgba(16, 185, 129, 0.12); color: #047857; border: 1px solid rgba(5, 150, 105, 0.35); }
-        :root[data-theme="dark"] .badge.completed { color: #34d399; background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); }
-        .badge.recruiting { background: rgba(56, 189, 248, 0.12); color: #0369a1; border: 1px solid rgba(2, 132, 199, 0.35); }
-        :root[data-theme="dark"] .badge.recruiting { color: #38bdf8; background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.35); }
-        .badge.active-not-recruiting { background: rgba(245, 158, 11, 0.12); color: #92400e; border: 1px solid rgba(217, 119, 6, 0.35); }
-        :root[data-theme="dark"] .badge.active-not-recruiting { color: #fbbf24; background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.35); }
-        .badge.status { background: var(--chip-bg); color: var(--text-high); border: 1px solid var(--border-subtle); }
-        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #b91c1c; border: 1px solid rgba(220, 38, 38, 0.35); }
-        :root[data-theme="dark"] .badge.vacant { color: #f87171; background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.35); }
-
-        /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
-        .doc-actions-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 10px;
-            align-items: center;
-        }
-        .doc-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 4px 9px;
-            border-radius: 6px;
-            font-size: 11.5px;
-            font-family: var(--font-mono);
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.15s ease;
-            white-space: nowrap;
-            line-height: 1.2;
-        }
-        .doc-btn b {
-            font-weight: 700;
-        }
-        .doc-btn:hover {
-            transform: translateY(-1px);
-        }
-        .doc-btn-protocol {
-            background: rgba(56, 189, 248, 0.12);
-            color: #0369a1;
-            border: 1px solid rgba(2, 132, 199, 0.4);
-        }
-        :root[data-theme="dark"] .doc-btn-protocol {
-            color: #38bdf8;
-            background: rgba(56, 189, 248, 0.15);
-            border-color: rgba(56, 189, 248, 0.4);
-        }
-        .doc-btn-protocol:hover {
-            background: rgba(56, 189, 248, 0.25);
-            border-color: var(--cyan);
-            color: #fff;
-        }
-        .doc-btn-sap {
-            background: rgba(168, 85, 247, 0.12);
-            color: var(--purple);
-            border: 1px solid rgba(168, 85, 247, 0.3);
-        }
-        .doc-btn-sap:hover {
-            background: rgba(168, 85, 247, 0.25);
-            border-color: var(--purple);
-            color: #fff;
-        }
-        .doc-btn-results {
-            background: rgba(16, 185, 129, 0.12);
-            color: var(--emerald);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-        }
-        .doc-btn-results:hover {
-            background: rgba(16, 185, 129, 0.25);
-            border-color: var(--emerald);
-            color: #fff;
-        }
-        .doc-btn-pubmed {
-            background: rgba(245, 158, 11, 0.12);
-            color: var(--amber);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-        }
-        .doc-btn-pubmed:hover {
-            background: rgba(245, 158, 11, 0.25);
-            border-color: var(--amber);
-            color: #fff;
-        }
-        .doc-btn-registry {
-            background: var(--chip-bg);
-            color: var(--text-med);
-            border: 1px solid var(--border-subtle);
-        }
-        .doc-btn-registry:hover {
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--text-high);
-            border-color: var(--border-hover);
-        }
-        .btn-export-csv {
-            background: var(--chip-bg);
-            border: 1px solid var(--border-subtle);
-            color: var(--cyan);
-            padding: 5px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-family: var(--font-mono);
-            font-weight: 600;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.15s;
-        }
-        .btn-export-csv:hover {
-            background: var(--cyan-glow);
-            border-color: var(--cyan);
-            color: #fff;
-        }
-
-        .study-title {
+        .landmark-name {
             font-size: 14.5px;
             font-weight: 600;
             color: var(--text-high);
             margin-bottom: 8px;
-            line-height: 1.45;
+            line-height: 1.4;
         }
-
-        .study-meta-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 18px;
-            font-size: 12.5px;
-            color: var(--text-med);
-            margin-top: 5px;
-        }
-        .study-meta-pills span {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            line-height: 1.45;
-        }
-        .study-meta-pills b {
-            color: var(--text-high);
-            font-weight: 700;
-            letter-spacing: -0.01em;
-        }
-        .study-meta-pills .meta-val {
-            font-weight: 400;
-            color: var(--text-med);
-        }
-        .pmid-link {
-            color: var(--text-med);
-            text-decoration: none;
-            border-bottom: 1px dotted var(--border-hover);
-            transition: color 0.15s, border-color 0.15s;
-        }
-        .pmid-link:hover {
-            color: var(--cyan);
-            border-bottom-style: solid;
-        }
-
-        .study-item-aside {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: space-between;
-            align-self: stretch;
-            gap: 12px;
-            padding-left: 18px;
-            border-left: 1px solid var(--border-subtle);
-            min-width: 120px;
-        }
-
-        .study-year-box {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        .study-year {
-            font-family: var(--font-mono);
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--text-high);
-            letter-spacing: -0.03em;
-            line-height: 1;
-        }
-
-        .study-year-sub {
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-low);
-            margin-top: 4px;
-        }
-
-        .view-protocol-btn {
+        .landmark-meta {
             font-size: 12px;
-            font-weight: 600;
-            color: var(--cyan);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            white-space: nowrap;
-            transition: transform 0.15s;
-        }
-        .study-item:hover .view-protocol-btn {
-            transform: translateX(3px);
-        }
-
-        @media (max-width: 768px) {
-            .study-item {
-                flex-direction: column;
-                align-items: stretch;
-                padding: 16px;
-                gap: 12px;
-            }
-            .study-item-aside {
-                flex-direction: row;
-                align-items: center;
-                border-left: none;
-                border-top: 1px solid var(--border-subtle);
-                padding-left: 0;
-                padding-top: 10px;
-                min-width: 0;
-            }
+            color: var(--text-low);
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-subtle);
         }
 
         /* Footer */
-        .main-footer {
-            margin-top: 60px;
-            padding-top: 24px;
+        .site-footer {
+            margin-top: auto;
             border-top: 1px solid var(--border-subtle);
-            font-size: 12px;
+            background: var(--bg-base);
+            padding: 32px 20px;
+            font-size: 13px;
             color: var(--text-low);
+        }
+        .footer-inner {
+            max-width: 1140px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
-            font-family: var(--font-mono);
+            gap: 16px;
         }
-        .main-footer a { color: var(--cyan); text-decoration: none; }
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+        .footer-links a {
+            color: var(--text-med);
+            text-decoration: none;
+        }
+        .footer-links a:hover { color: var(--cyan); }
     </style>
 </head>
 <body>
-    <a href="#explorerSection" class="skip-link">Skip to registry explorer</a>
-    <div class="app-layout">
-        <!-- Backdrop for mobile navigation drawer -->
-        <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="closeSidebar()" aria-hidden="true"></div>
-
-        <!-- Left Sidebar Navigation -->
-        <aside class="sidebar" id="sidebar" aria-label="Primary Navigation">
-            <div class="sidebar-header-row">
-                <a href="https://clinsight.pract.eu/" class="sidebar-brand">
-                    <div class="logo-text">ClinSight<span>™</span></div>
-                    <div class="logo-sub">Clinical Trials & Evidence Generation</div>
-                </a>
-                <button type="button" class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Close navigation menu">
-                    <i class="fa-solid fa-xmark"></i>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="https://clinsight.pract.eu/" class="nav-brand">
+                <div class="logo-text">ClinSight<span>™</span></div>
+                <div class="logo-tag">Clinical Trials &amp; Evidence</div>
+            </a>
+            <div class="nav-links">
+                <a href="https://clinsight.pract.eu/" class="active">Home</a>
+                <a href="https://clinsight.pract.eu/explorer/">Trials Explorer</a>
+                <a href="https://clinsight.pract.eu/compare/">Comparator</a>
+                <a href="https://clinsight.pract.eu/jobs/">Careers</a>
+                <button type="button" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
                 </button>
             </div>
+        </div>
+    </nav>
 
-            <!-- Navigation -->
-            <div class="sidebar-section-title">Navigation</div>
-            <ul class="sidebar-nav">
-                <li><a href="#overview" class="active" onclick="switchNav('overview')"><i class="fa-solid fa-compass"></i> Overview</a></li>
-                <li><a href="#explorer" onclick="switchNav('explorer')"><i class="fa-solid fa-table-cells"></i> Registry Explorer <span class="nav-badge" id="navTotalCount">0</span></a></li>
-            </ul>
+    <header class="hero-section">
+        <div class="hero-badge">
+            <i class="fa-solid fa-database"></i> Primary Registry Fact Base
+        </div>
+        <h1 class="hero-title">Clinical Trials &amp; Research Intelligence</h1>
+        <p class="hero-subtitle">
+            Direct primary-source access to verified clinical trial designs, official study protocol PDFs, statistical analysis plans, and peer-reviewed clinical evidence.
+        </p>
 
-            <!-- Therapeutic Areas -->
-            <div class="sidebar-section-title">Therapeutic Areas</div>
-            <ul class="sidebar-nav">
-                <li><a href="#explorer" onclick="filterByCategory('Oncology')"><i class="fa-solid fa-disease" style="color:var(--purple);"></i> Oncology</a></li>
-                <li><a href="#explorer" onclick="filterByCategory('Cardiometabolic & Endocrinology')"><i class="fa-solid fa-heart-pulse" style="color:#f43f5e;"></i> Cardiometabolic</a></li>
-                <li><a href="#explorer" onclick="filterByCategory('Rare Disease & Immunology')"><i class="fa-solid fa-shield-virus" style="color:var(--emerald);"></i> Immunology &amp; Rare</a></li>
-            </ul>
-
-            <!-- Drug Modalities -->
-            <div class="sidebar-section-title">Drug Modalities</div>
-            <ul class="sidebar-nav">
-                <li><a href="#explorer" onclick="filterByModality('Antibody-Drug Conjugates (ADC)')" aria-label="Filter studies by Antibody-Drug Conjugates"><i class="fa-solid fa-dna" style="color:var(--purple);"></i> ADCs</a></li>
-                <li><a href="#explorer" onclick="filterByModality('Cell & Gene Therapy (CAR-T)')" aria-label="Filter studies by CAR-T Therapy"><i class="fa-solid fa-vial" style="color:var(--cyan);"></i> CAR-T Therapy</a></li>
-                <li><a href="#explorer" onclick="filterByModality('Bispecific Antibodies & T-Cell Engagers')" aria-label="Filter studies by Bispecific Antibodies"><i class="fa-solid fa-arrows-split-up-and-left" style="color:#f43f5e;"></i> Bispecifics</a></li>
-                <li><a href="#explorer" onclick="filterByModality('Targeted Therapy (Small Molecule / TKI)')" aria-label="Filter studies by Targeted TKIs and Small Molecules"><i class="fa-solid fa-capsules" style="color:var(--amber);"></i> Targeted TKIs</a></li>
-                <li><a href="#explorer" onclick="filterByModality('Immuno-Oncology (Checkpoint Inhibitor)')" aria-label="Filter studies by Checkpoint Inhibitors"><i class="fa-solid fa-shield-halved" style="color:#ec4899;"></i> Checkpoints</a></li>
-                <li><a href="#explorer" onclick="filterByModality('Incretin Mimetics (GLP-1 / GIP)')" aria-label="Filter studies by GLP-1 Incretin Mimetics"><i class="fa-solid fa-bolt" style="color:var(--emerald);"></i> GLP-1 / Incretins</a></li>
-            </ul>
-
-            <div class="sidebar-footer">
-                <div style="font-size:11px; font-family:var(--font-mono); color:var(--text-low); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
-                    <i class="fa-solid fa-certificate" style="color:var(--cyan);"></i> Primary Registry Fact Base
-                </div>
-                <div class="theme-segmented" role="radiogroup" aria-label="Appearance Mode">
-                    <button type="button" class="theme-seg-btn" id="themeBtnLight" onclick="setTheme('light')" aria-label="Switch to light mode">
-                        <i class="fa-regular fa-sun"></i> Light
-                    </button>
-                    <button type="button" class="theme-seg-btn" id="themeBtnDark" onclick="setTheme('dark')" aria-label="Switch to dark mode">
-                        <i class="fa-regular fa-moon"></i> Dark
-                    </button>
-                </div>
+        <div class="metric-row">
+            <div class="metric-box">
+                <div class="metric-num">604</div>
+                <div class="metric-label">Clinical Trial Dossiers</div>
             </div>
-        </aside>
+            <div class="metric-box">
+                <div class="metric-num">54</div>
+                <div class="metric-label">Disease Verticals</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-num">100%</div>
+                <div class="metric-label">Verbatim Provenance</div>
+            </div>
+        </div>
+    </header>
 
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <!-- Mobile Header (Mobile only) -->
-            <div class="mobile-header">
-                <button class="mobile-toggle" onclick="toggleSidebar()" aria-label="Open mobile navigation menu"><i class="fa-solid fa-bars"></i></button>
+    <!-- Main 3-Pillar Gateway Grid -->
+    <main class="portal-grid">
+        <!-- 1. Explorer -->
+        <a href="https://clinsight.pract.eu/explorer/" class="portal-card card-explorer">
+            <div>
+                <div class="portal-icon"><i class="fa-solid fa-table-cells"></i></div>
+                <h2 class="portal-title">Clinical Trials Explorer</h2>
+                <p class="portal-desc">
+                    Search and filter 600+ clinical trials across Oncology, Rare Diseases, and Cardiometabolic pipelines. Access official Protocol PDFs, SAPs, and verified citations with zero recruiter or marketing noise.
+                </p>
+            </div>
+            <span class="portal-action">Launch Explorer <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- 2. Comparator -->
+        <a href="https://clinsight.pract.eu/compare/" class="portal-card card-compare">
+            <div>
+                <div class="portal-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h2 class="portal-title">Comparison Engine</h2>
+                <p class="portal-desc">
+                    Conduct head-to-head clinical design, primary endpoint, and efficacy comparisons between competing drug modalities (CAR-T vs Bispecific vs ADC) in relapsed/refractory settings.
+                </p>
+            </div>
+            <span class="portal-action">Open Comparator <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- 3. Jobs -->
+        <a href="https://clinsight.pract.eu/jobs/" class="portal-card card-jobs">
+            <div>
+                <div class="portal-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h2 class="portal-title">Research &amp; Clinical Careers</h2>
+                <p class="portal-desc">
+                    Verified, direct clinical positions across Sweden and Europe. Indexed directly from hospital trial units, academic medical centers, and biopharma sponsors with full requirements analysis.
+                </p>
+            </div>
+            <span class="portal-action">Explore Positions <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+    </main>
+
+    <!-- Semantic Landmark Studies Section (High SEO crawl authority) -->
+    <section class="landmarks-section">
+        <div class="landmarks-inner">
+            <div class="section-header">
                 <div>
-                    <div class="logo-text" style="font-size:18px; line-height:1.15;">ClinSight<span>™</span></div>
-                    <div class="logo-sub" style="font-size:10px; margin-top:2px;">Clinical Trials & Evidence Generation</div>
+                    <h2 class="section-title">Featured Benchmark Clinical Studies</h2>
+                    <p class="section-subtitle">Direct dossiers with official protocol documentation and primary endpoints.</p>
                 </div>
-                <div style="margin-left:auto; display:flex; align-items:center; gap:8px;">
-                    <button id="themeToggleMobile" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light or dark appearance">
-                        <i class="fa-regular fa-sun"></i>
-                    </button>
-                </div>
+                <a href="https://clinsight.pract.eu/explorer/" class="see-all-link">Browse all 604 clinical trials <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- Overview Section -->
-            <div id="overviewSection">
-                <section class="clean-hero">
-                    <h1>Clinical Trials Protocol &amp; Evidence Explorer</h1>
-                    <p>
-                        Simplified, clutter-free clinical trial protocols, primary study designs, and patient eligibility criteria across oncology and major therapeutic areas.
-                    </p>
-                </section>
-
-                <!-- Modalities -->
-                <div class="section-header">
+            <div class="landmark-grid">
+                <a href="https://clinsight.pract.eu/trials/NCT03734029/" class="landmark-item">
                     <div>
-                        <h2>Browse by Therapeutic Class</h2>
+                        <div class="landmark-tag">DESTINY-Breast04 · ADC</div>
+                        <div class="landmark-name">Trastuzumab Deruxtecan vs Physician's Choice in HER2-Low Breast Cancer</div>
                     </div>
-                </div>
+                    <div class="landmark-meta">NCT03734029 · Daiichi Sankyo / AstraZeneca</div>
+                </a>
 
-                <div class="modality-grid">
-                    <div class="modality-card" onclick="filterByModality('ADC')">
-                        <h4>Antibody-Drug Conjugates (ADCs)</h4>
-                        <p>Targeted cytotoxic conjugates including DESTINY-Breast03/04 and related trials.</p>
-                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-
-                    <div class="modality-card" onclick="filterByModality('Checkpoint')">
-                        <h4>Checkpoint Inhibitors</h4>
-                        <p>PD-1 / PD-L1 and CTLA-4 trials across solid tumors and hematology.</p>
-                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-
-                    <div class="modality-card" onclick="filterByModality('TKI / Small Molecule')">
-                        <h4>Targeted Small Molecules</h4>
-                        <p>Genomically directed oncogene inhibitors across EGFR, KRAS, and CDK4/6.</p>
-                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-
-                    <div class="modality-card" onclick="filterByModality('CAR-T')">
-                        <h4>Cell & Gene Therapies</h4>
-                        <p>Engineered autologous T-cell immunotherapies in lymphoma and myeloma.</p>
-                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-
-                    <div class="modality-card" onclick="filterByModality('Bispecific')">
-                        <h4>Bispecific Antibodies</h4>
-                        <p>Dual-targeting T-cell engagers (BiTEs) in lymphoma and myeloma.</p>
-                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-
-                    <div class="modality-card" onclick="filterByModality('GLP-1')">
-                        <h4>Incretin Mimetics (GLP-1)</h4>
-                        <p>GLP-1 / GIP receptor agonists in cardiometabolic and diabetes trials.</p>
-                        <div class="mod-link"><span>View Studies</span> <i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Explorer Section (Search, Filters & Cards) -->
-            <div id="explorerSection">
-                <div class="section-header">
+                <a href="https://clinsight.pract.eu/trials/NCT04181827/" class="landmark-item">
                     <div>
-                        <h2>Trial Registry Explorer</h2>
+                        <div class="landmark-tag">CARTITUDE-4 · CAR-T</div>
+                        <div class="landmark-name">Ciltacabtagene Autoleucel vs Standard Regimens in Relapsed Myeloma</div>
                     </div>
-                </div>
+                    <div class="landmark-meta">NCT04181827 · Janssen R&amp;D / Legend Biotech</div>
+                </a>
 
-                <!-- Controls & Filters Card -->
-                <div class="controls-card">
-                    <!-- Search Input (Directly above filters) -->
-                    <div class="search-box-wrap">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="searchInput" class="search-input" placeholder="Search drug (e.g. Doxorubicin, Pembrolizumab), disease, or NCT..." oninput="applyFilters()">
-                        <span class="search-shortcut">/</span>
+                <a href="https://clinsight.pract.eu/trials/NCT03574597/" class="landmark-item">
+                    <div>
+                        <div class="landmark-tag">SELECT · GLP-1</div>
+                        <div class="landmark-name">Semaglutide Effects on Cardiovascular Outcomes in Overweight/Obesity</div>
                     </div>
+                    <div class="landmark-meta">NCT03574597 · Novo Nordisk A/S</div>
+                </a>
 
-                    <div class="filters-row">
-                        <select id="filterCategory" class="filter-select" onchange="applyFilters()" aria-label="Filter by Therapeutic Area">
-                            <option value="">All Therapeutic Areas</option>
-                            <option value="Oncology">Oncology</option>
-                            <option value="Cardiometabolic & Endocrinology">Cardiometabolic</option>
-                            <option value="Rare Disease & Immunology">Rare Disease & Immunology</option>
-                        </select>
-
-                        <select id="filterModality" class="filter-select" onchange="applyFilters()" aria-label="Filter by Drug Modality">
-                            <option value="">All Modalities</option>
-                            <option value="ADC">Antibody-Drug Conjugates (ADC)</option>
-                            <option value="CAR-T">Cell & Gene Therapy (CAR-T)</option>
-                            <option value="Bispecific">Bispecifics & T-Cell Engagers</option>
-                            <option value="Checkpoint">Immuno-Oncology (Checkpoint)</option>
-                            <option value="GLP-1">Incretin Mimetics (GLP-1)</option>
-                            <option value="TKI / Small Molecule">Targeted TKIs & Small Molecules</option>
-                            <option value="Monoclonal Antibody (mAb)">Monoclonal Antibodies (mAb)</option>
-                            <option value="Unclassified">Unclassified</option>
-                        </select>
-
-                        <select id="filterResultsStatus" class="filter-select" onchange="applyFilters()" aria-label="Filter by Results and Protocol Document Status">
-                            <option value="">All Results Statuses</option>
-                            <option value="has-results">Has Posted Results (Tabular)</option>
-                            <option value="has-paper">Has Peer-Reviewed Paper</option>
-                            <option value="has-protocol">Has Direct Protocol PDF</option>
-                            <option value="vacant">Results-Vacant (Completed / No Data)</option>
-                        </select>
-
-                        <select id="filterPhase" class="filter-select" onchange="applyFilters()" aria-label="Filter by Trial Phase">
-                            <option value="">All Phases</option>
-                            <option value="Phase 3">Phase 3</option>
-                            <option value="Phase 2">Phase 2</option>
-                            <option value="Phase 1">Phase 1</option>
-                        </select>
-
-                        <select id="filterStatus" class="filter-select" onchange="applyFilters()" aria-label="Filter by Recruitment Status">
-                            <option value="">All Statuses</option>
-                            <option value="completed">Completed</option>
-                            <option value="recruiting">Recruiting</option>
-                            <option value="active_not_recruiting">Active, not recruiting</option>
-                            <option value="not_yet_recruiting">Not yet recruiting</option>
-                            <option value="enrolling_by_invitation">Enrolling by invitation</option>
-                        </select>
-
-                        <select id="sortSelect" class="filter-select" onchange="applyFilters()" aria-label="Sort Trials List">
-                            <option value="relevance">Sort: Relevance (Default)</option>
-                            <option value="year-desc">Start Year: Newest First</option>
-                            <option value="year-asc">Start Year: Oldest First</option>
-                            <option value="enrollment-desc">Participants: High to Low</option>
-                            <option value="enrollment-asc">Participants: Low to High</option>
-                        </select>
+                <a href="https://clinsight.pract.eu/trials/NCT03525444/" class="landmark-item">
+                    <div>
+                        <div class="landmark-tag">TRIKAFTA · CFTR</div>
+                        <div class="landmark-name">Elexacaftor / Tezacaftor / Ivacaftor in Cystic Fibrosis Heterozygous F508del</div>
                     </div>
-
-                    <div class="chips-bar">
-                        <span style="font-size:11.5px; color:var(--text-low); font-family:var(--font-mono); text-transform:uppercase;">Quick Filters:</span>
-                        <button class="chip" onclick="quickFilter('adc')">ADCs</button>
-                        <button class="chip" onclick="quickFilter('cart')">CAR-T</button>
-                        <button class="chip" onclick="quickFilter('bispecific')">Bispecifics</button>
-                        <button class="chip" onclick="quickFilter('checkpoint')">Checkpoints</button>
-                        <button class="chip" onclick="quickFilter('glp1')">GLP-1</button>
-                        <button class="chip" onclick="quickFilter('has-results')">Has Results</button>
-                        <button class="chip" onclick="quickFilter('has-protocol')">Has Protocol PDF</button>
-                        <button class="chip" onclick="quickFilter('vacant')">Results-Vacant</button>
-                        <button class="chip" onclick="quickFilter('phase3')">Phase 3</button>
-                        <button class="chip" onclick="quickFilter('completed')">Completed</button>
-                        <button class="btn-clear" onclick="clearFilters()">Reset</button>
-                    </div>
-                </div>
-
-                <!-- Results Header & Utility Actions -->
-                <div class="results-header">
-                    <div>Showing <b id="displayedCount">0</b> of <span id="totalCount">0</span> studies</div>
-                    <button class="btn-export-csv" onclick="exportFilteredCohortCSV()" title="Export currently filtered clinical trials cohort to CSV with verified protocol, SAP, and results links">
-                        <i class="fa-solid fa-file-csv"></i> Export Cohort CSV (<span id="exportCount">0</span>)
-                    </button>
-                </div>
-
-                <!-- Trials List -->
-                <div class="study-grid" id="studyList">
-                    <!-- Injected by JavaScript -->
-                </div>
+                    <div class="landmark-meta">NCT03525444 · Vertex Pharmaceuticals</div>
+                </a>
             </div>
+        </div>
+    </section>
 
-            <!-- Footer -->
-            <footer class="main-footer">
-                <div>&copy; 2026 ClinSight · Clinical Trials &amp; Evidence Generation <span style="opacity:0.4; margin:0 6px;">|</span> Primary study records sourced directly from ClinicalTrials.gov <span style="opacity:0.4; margin:0 6px;">|</span> <a href="/trials/">All trials</a> <span style="opacity:0.4; margin:0 6px;">|</span> <a href="/sitemap.xml">Sitemap</a></div>
-                <div><a href="https://pract.eu" target="_blank" class="footer-portal-link">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a></div>
-            </footer>
-        </main>
-    </div>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <strong>ClinSight™</strong> · Primary Registry Fact Base &middot; <a href="https://pract.eu" style="color:inherit; text-decoration:underline;">PRACT</a>
+            </div>
+            <div class="footer-links">
+                <a href="https://clinsight.pract.eu/explorer/">Explorer</a>
+                <a href="https://clinsight.pract.eu/compare/">Comparator</a>
+                <a href="https://clinsight.pract.eu/jobs/">Careers</a>
+                <a href="https://clinsight.pract.eu/sitemap.xml">Sitemap</a>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Embedded Search Engine -->
     <script>
-        let ALL_TRIALS = [];
-        let CURRENT_FILTERED = [];
-
-        async function loadTrials() {
-            try {
-                const res = await fetch('./data/trials.json');
-                const data = await res.json();
-                ALL_TRIALS = data.map(d => ({
-                    id: d.nctId,
-                    acronym: (d.acronym && d.acronym !== 'undefined') ? d.acronym : d.nctId,
-                    title: d.briefTitle,
-                    officialTitle: d.officialTitle || d.briefTitle,
-                    category: d.category || '',
-                    subtype: d.subtype || '',
-                    modality: d.modality || '',
-                    phase: d.phase || '',
-                    status: d.status || '',
-                    isCompleted: d.isCompleted,
-                    year: d.year || '',
-                    enrollment: d.enrollment || 0,
-                    sponsor: d.sponsor || '',
-                    conditions: (d.conditions || []).join(' '),
-                    interventions: (d.interventions || []).join(' '),
-                    protocolUrl: d.protocolUrl || null,
-                    sapUrl: d.sapUrl || null,
-                    resultsUrl: d.resultsUrl || null,
-                    registryUrl: d.registryUrl || `https://clinicaltrials.gov/study/${d.nctId}`,
-                    primaryPmid: d.primaryPmid || null,
-                    hasResults: !!d.hasResults,
-                    hasPublication: !!d.hasPublication,
-                    isResultsVacant: !!d.isResultsVacant
-                }));
-
-                document.getElementById('totalCount').innerText = ALL_TRIALS.length;
-                document.getElementById('navTotalCount').innerText = ALL_TRIALS.length;
-                applyFilters();
-            } catch (err) {
-                console.error('Failed to load trials dataset:', err);
-            }
-        }
-
-        function formatStatus(status) {
-            if (!status) return 'Status not specified';
-            const s = String(status).trim().toUpperCase();
-            const map = {
-                'ACTIVE_NOT_RECRUITING': 'Active, not recruiting',
-                'RECRUITING': 'Recruiting',
-                'ENROLLING_BY_INVITATION': 'Enrolling by invitation',
-                'NOT_YET_RECRUITING': 'Not yet recruiting',
-                'COMPLETED': 'Completed',
-                'SUSPENDED': 'Suspended',
-                'TERMINATED': 'Terminated',
-                'WITHDRAWN': 'Withdrawn',
-                'AVAILABLE': 'Available',
-                'APPROVED_FOR_MARKETING': 'Approved for marketing'
-            };
-            if (map[s]) return map[s];
-            const clean = status.replace(/_/g, ' ').toLowerCase();
-            return clean.charAt(0).toUpperCase() + clean.slice(1);
-        }
-
-        function highlightMatch(text, query) {
-            if (!query || !text) return text || '';
-            const safeQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const regex = new RegExp(`(${safeQuery})`, 'gi');
-            return text.replace(regex, '<mark style="background:rgba(56, 189, 248, 0.22); color:inherit; padding:1px 4px; border-radius:3px;">$1</mark>');
-        }
-
-        function renderList(trials, query = '') {
-            CURRENT_FILTERED = trials;
-            const listEl = document.getElementById('studyList');
-            document.getElementById('displayedCount').innerText = trials.length;
-            const expCountEl = document.getElementById('exportCount');
-            if (expCountEl) expCountEl.innerText = trials.length;
-
-            if (trials.length === 0) {
-                listEl.innerHTML = `
-                    <div style="text-align:center; padding:48px 20px; color:var(--text-low); background:var(--bg-card); border-radius:12px; border:1px solid var(--border-subtle);">
-                        <i class="fa-solid fa-flask" style="font-size:32px; margin-bottom:12px; color:var(--cyan); opacity:0.6;"></i>
-                        <h4 style="color:var(--text-high); font-size:16px; margin-bottom:6px;">No studies matched your search</h4>
-                        <p style="font-size:13px;">Try clearing search keywords or selecting a broader category.</p>
-                        <button onclick="clearFilters()" class="btn-clear" style="margin-top:16px; text-decoration:none; color:var(--cyan); font-weight:600;">Reset All Filters</button>
-                    </div>
-                `;
-                return;
-            }
-
-            listEl.innerHTML = trials.map(t => {
-                const hasAcronym = t.acronym && t.acronym !== t.id && t.acronym !== 'undefined';
-                const displayTitle = highlightMatch(t.title, query);
-                const displayCond = highlightMatch(t.conditions || t.subtype, query);
-                const displayInterv = t.interventions ? highlightMatch(t.interventions, query) : '';
-                const displaySponsor = highlightMatch(t.sponsor, query);
-                const displayAcronym = hasAcronym ? highlightMatch(t.acronym, query) : '';
-
-                // Normalized Status
-                const rawStatus = (t.status || '').toUpperCase();
-                const formattedStatus = formatStatus(t.status);
-                let statusBadgeClass = 'status';
-                if (t.isCompleted) {
-                    statusBadgeClass = 'completed';
-                } else if (rawStatus === 'RECRUITING') {
-                    statusBadgeClass = 'recruiting';
-                } else if (rawStatus === 'ACTIVE_NOT_RECRUITING') {
-                    statusBadgeClass = 'active-not-recruiting';
-                } else if (rawStatus === 'NOT_YET_RECRUITING') {
-                    statusBadgeClass = 'not-yet-recruiting';
-                }
-
-                // 1-Click Primary Document Action Buttons (Symmetrical bold labels)
-                const docButtons = [];
-                if (t.protocolUrl) {
-                    docButtons.push(`<a href="${t.protocolUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-protocol" title="Download official Protocol PDF from ClinicalTrials.gov CDN" aria-label="Download official Protocol PDF for ${t.id}"><i class="fa-solid fa-file-pdf"></i> <b>Protocol:</b> PDF</a>`);
-                }
-                if (t.sapUrl && t.sapUrl !== t.protocolUrl) {
-                    docButtons.push(`<a href="${t.sapUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-sap" title="Download Statistical Analysis Plan (SAP) PDF" aria-label="Download Statistical Analysis Plan PDF for ${t.id}"><i class="fa-solid fa-chart-line"></i> <b>SAP:</b> PDF</a>`);
-                }
-                if (t.hasResults && t.resultsUrl) {
-                    docButtons.push(`<a href="${t.resultsUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-results" title="View statutory tabular results on ClinicalTrials.gov" aria-label="View statutory results tab for ${t.id} on ClinicalTrials.gov"><i class="fa-solid fa-square-poll-vertical"></i> <b>Results:</b> Tab</a>`);
-                }
-                if (t.primaryPmid) {
-                    docButtons.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${t.primaryPmid}/" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-pubmed" title="View peer-reviewed paper on PubMed (PMID: ${t.primaryPmid})" aria-label="View peer-reviewed trial paper on PubMed for ${t.id}"><i class="fa-solid fa-book-medical"></i> <b>PubMed:</b> ${t.primaryPmid}</a>`);
-                }
-                docButtons.push(`<a href="${t.registryUrl}" target="_blank" rel="noopener noreferrer" class="doc-btn doc-btn-registry" title="Open primary study record on ClinicalTrials.gov" aria-label="Open primary ClinicalTrials.gov study record for ${t.id}"><i class="fa-solid fa-arrow-up-right-from-square"></i> <b>Registry:</b> ${t.id}</a>`);
-
-                return `
-                <div class="study-item">
-                    <div class="study-item-main">
-                        <div class="study-item-header">
-                            ${hasAcronym ? `<span class="study-acronym">${displayAcronym}</span>` : ''}
-                            <span class="badge nct"><i class="fa-solid fa-hashtag" style="font-size:10px;"></i> ${t.id}</span>
-                            <span class="badge phase">${t.phase}</span>
-                            <span class="badge modality">${t.modality}</span>
-                            <span class="badge ${statusBadgeClass}">
-                                ${t.isCompleted ? '<i class="fa-solid fa-check" style="font-size:10px;"></i> Completed' : formattedStatus}
-                            </span>
-                            ${t.isResultsVacant ? '<span class="badge vacant" title="Completed trial with zero reported results or publications"><i class="fa-solid fa-triangle-exclamation" style="font-size:10px;"></i> Results-Vacant</span>' : ''}
-                        </div>
-
-                        <div class="study-title">
-                            <a href="./trials/${t.id}/" style="color:inherit; text-decoration:none;">${displayTitle}</a>
-                        </div>
-
-                        <div class="study-meta-pills">
-                            <span><i class="fa-solid fa-dna" style="color:var(--purple);"></i> <b>Condition:</b> <span class="meta-val">${displayCond}</span></span>
-                            ${displayInterv ? `<span><i class="fa-solid fa-pills" style="color:var(--cyan);"></i> <b>Regimen:</b> <span class="meta-val">${displayInterv}</span></span>` : ''}
-                            <span><i class="fa-regular fa-building" style="color:var(--text-low);"></i> <b>Sponsor:</b> <span class="meta-val">${displaySponsor || 'Not Disclosed'}</span></span>
-                            ${t.enrollment ? `<span><i class="fa-solid fa-users" style="color:var(--emerald);"></i> <b>Participants:</b> <span class="meta-val">${t.enrollment.toLocaleString()} individuals</span></span>` : ''}
-                        </div>
-
-                        <!-- 1-Click Primary Document Links -->
-                        <div class="doc-actions-row">
-                            ${docButtons.join('')}
-                        </div>
-                    </div>
-
-                    <div class="study-item-aside">
-                        <div class="study-year-box">
-                            <span class="study-year">${t.year || '—'}</span>
-                            <span class="study-year-sub">Start Year</span>
-                        </div>
-                        <a href="./trials/${t.id}/" class="view-protocol-btn" aria-label="View protocol profile for ${t.id}">Protocol Profile <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                `;
-            }).join('');
-        }
-
-        function applyFilters() {
-            let q = document.getElementById('searchInput').value.trim().toLowerCase();
-            const cat = document.getElementById('filterCategory').value;
-            const mod = document.getElementById('filterModality').value;
-            const resStatus = document.getElementById('filterResultsStatus') ? document.getElementById('filterResultsStatus').value : '';
-            const phase = document.getElementById('filterPhase').value;
-            const status = document.getElementById('filterStatus').value;
-            const sort = document.getElementById('sortSelect').value;
-
-            // Alias handling for common drug search terms (e.g. alvedon -> paracetamol/acetaminophen)
-            if (q === 'alvedon') q = 'paracetamol';
-
-            let filtered = ALL_TRIALS.filter(t => {
-                if (q) {
-                    const matchStr = (
-                        t.id + ' ' +
-                        t.acronym + ' ' +
-                        t.title + ' ' +
-                        t.officialTitle + ' ' +
-                        t.interventions + ' ' +
-                        t.conditions + ' ' +
-                        t.subtype + ' ' +
-                        t.modality + ' ' +
-                        t.sponsor
-                    ).toLowerCase();
-
-                    if (!matchStr.includes(q)) return false;
-                }
-                if (cat && t.category !== cat) return false;
-                if (mod && t.modality !== mod) return false;
-                if (resStatus === 'has-results' && !t.hasResults) return false;
-                if (resStatus === 'has-paper' && !t.primaryPmid) return false;
-                if (resStatus === 'has-protocol' && !t.protocolUrl) return false;
-                if (resStatus === 'vacant' && !t.isResultsVacant) return false;
-                if (phase && !t.phase.includes(phase)) return false;
-                if (status) {
-                    const rawSt = (t.status || '').toUpperCase();
-                    if (status === 'completed' && !t.isCompleted) return false;
-                    if (status === 'recruiting' && rawSt !== 'RECRUITING') return false;
-                    if (status === 'active_not_recruiting' && rawSt !== 'ACTIVE_NOT_RECRUITING') return false;
-                    if (status === 'not_yet_recruiting' && rawSt !== 'NOT_YET_RECRUITING') return false;
-                    if (status === 'enrolling_by_invitation' && rawSt !== 'ENROLLING_BY_INVITATION') return false;
-                }
-                return true;
-            });
-
-            // Multi-directional sorting (Year asc/desc, Participants asc/desc)
-            if (sort === 'year-desc') {
-                filtered.sort((a, b) => (parseInt(b.year) || 0) - (parseInt(a.year) || 0));
-            } else if (sort === 'year-asc') {
-                filtered.sort((a, b) => (parseInt(a.year) || 9999) - (parseInt(b.year) || 9999));
-            } else if (sort === 'enrollment-desc') {
-                filtered.sort((a, b) => (b.enrollment || 0) - (a.enrollment || 0));
-            } else if (sort === 'enrollment-asc') {
-                filtered.sort((a, b) => (a.enrollment || 0) - (b.enrollment || 0));
-            }
-
-            renderList(filtered, q);
-        }
-
-        function searchDrug(drugName) {
-            document.getElementById('searchInput').value = drugName;
-            applyFilters();
-            scrollToExplorer();
-        }
-
-        function filterByCategory(catName) {
-            clearFilters();
-            const map = {
-                'Oncology': 'Oncology',
-                'Cardiometabolic': 'Cardiometabolic & Endocrinology',
-                'Cardiometabolic & Endocrinology': 'Cardiometabolic & Endocrinology',
-                'Immunology & Rare': 'Rare Disease & Immunology',
-                'Rare Disease & Immunology': 'Rare Disease & Immunology'
-            };
-            const val = map[catName] || catName;
-            const el = document.getElementById('filterCategory');
-            if (el) el.value = val;
-            applyFilters();
-            scrollToExplorer();
-            if (window.innerWidth <= 900) closeSidebar();
-        }
-
-        function filterByModality(modalityName) {
-            clearFilters();
-            const map = {
-                'Antibody-Drug Conjugates (ADC)': 'ADC',
-                'ADCs': 'ADC',
-                'ADC': 'ADC',
-                'Cell & Gene Therapy (CAR-T)': 'CAR-T',
-                'CAR-T Therapy': 'CAR-T',
-                'CAR-T': 'CAR-T',
-                'Bispecific Antibodies & T-Cell Engagers': 'Bispecific',
-                'Bispecifics': 'Bispecific',
-                'Bispecific': 'Bispecific',
-                'Immuno-Oncology (Checkpoint Inhibitor)': 'Checkpoint',
-                'Checkpoint Inhibitors': 'Checkpoint',
-                'Checkpoint': 'Checkpoint',
-                'Incretin Mimetics (GLP-1 / GIP)': 'GLP-1',
-                'GLP-1 / Incretins': 'GLP-1',
-                'GLP-1': 'GLP-1',
-                'Targeted Therapy (Small Molecule / TKI)': 'TKI / Small Molecule',
-                'Targeted Small Molecules': 'TKI / Small Molecule',
-                'Targeted TKIs': 'TKI / Small Molecule',
-                'TKI / Small Molecule': 'TKI / Small Molecule',
-                'Monoclonal Antibody (mAb)': 'Monoclonal Antibody (mAb)'
-            };
-            const val = map[modalityName] || modalityName;
-            const el = document.getElementById('filterModality');
-            if (el) el.value = val;
-
-            // Sync quick filter chip highlight
-            document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-            if (val === 'ADC') {
-                const chip = document.querySelector('.chip[onclick*="adc"]');
-                if (chip) chip.classList.add('active');
-            } else if (val === 'CAR-T') {
-                const chip = document.querySelector('.chip[onclick*="cart"]');
-                if (chip) chip.classList.add('active');
-            } else if (val === 'Bispecific') {
-                const chip = document.querySelector('.chip[onclick*="bispecific"]');
-                if (chip) chip.classList.add('active');
-            } else if (val === 'Checkpoint') {
-                const chip = document.querySelector('.chip[onclick*="checkpoint"]');
-                if (chip) chip.classList.add('active');
-            } else if (val === 'GLP-1') {
-                const chip = document.querySelector('.chip[onclick*="glp1"]');
-                if (chip) chip.classList.add('active');
-            }
-
-            applyFilters();
-            scrollToExplorer();
-            if (window.innerWidth <= 900) closeSidebar();
-        }
-
-        function quickFilter(type) {
-            document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-            if (event && event.target) event.target.classList.add('active');
-
-            if (type === 'adc') {
-                clearFilters();
-                document.getElementById('filterModality').value = 'ADC';
-            } else if (type === 'cart') {
-                clearFilters();
-                document.getElementById('filterModality').value = 'CAR-T';
-            } else if (type === 'bispecific') {
-                clearFilters();
-                document.getElementById('filterModality').value = 'Bispecific';
-            } else if (type === 'checkpoint') {
-                clearFilters();
-                document.getElementById('filterModality').value = 'Checkpoint';
-            } else if (type === 'glp1') {
-                clearFilters();
-                document.getElementById('filterModality').value = 'GLP-1';
-            } else if (type === 'has-results') {
-                clearFilters();
-                if (document.getElementById('filterResultsStatus')) document.getElementById('filterResultsStatus').value = 'has-results';
-            } else if (type === 'has-protocol') {
-                clearFilters();
-                if (document.getElementById('filterResultsStatus')) document.getElementById('filterResultsStatus').value = 'has-protocol';
-            } else if (type === 'vacant') {
-                clearFilters();
-                if (document.getElementById('filterResultsStatus')) document.getElementById('filterResultsStatus').value = 'vacant';
-            } else if (type === 'phase3') {
-                document.getElementById('filterPhase').value = 'Phase 3';
-            } else if (type === 'completed') {
-                document.getElementById('filterStatus').value = 'completed';
-            }
-            applyFilters();
-        }
-
-        function clearFilters() {
-            document.getElementById('searchInput').value = '';
-            document.getElementById('filterCategory').value = '';
-            document.getElementById('filterModality').value = '';
-            if (document.getElementById('filterResultsStatus')) document.getElementById('filterResultsStatus').value = '';
-            document.getElementById('filterPhase').value = '';
-            document.getElementById('filterStatus').value = '';
-            document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-            applyFilters();
-        }
-
-        function exportFilteredCohortCSV() {
-            if (!CURRENT_FILTERED || CURRENT_FILTERED.length === 0) {
-                alert('No trials match current filters to export.');
-                return;
-            }
-
-            const headers = [
-                'nctId',
-                'acronym',
-                'briefTitle',
-                'modality',
-                'phase',
-                'status',
-                'year',
-                'enrollment',
-                'sponsor',
-                'conditions',
-                'hasResults',
-                'hasPublication',
-                'isResultsVacant',
-                'protocolUrl',
-                'sapUrl',
-                'resultsUrl',
-                'pubmedUrl',
-                'registryUrl'
-            ];
-
-            function escapeCsv(val) {
-                if (val === null || val === undefined) return '""';
-                const str = String(val).replace(/"/g, '""');
-                return '"' + str + '"';
-            }
-
-            const rows = CURRENT_FILTERED.map(t => [
-                escapeCsv(t.id),
-                escapeCsv(t.acronym !== t.id ? t.acronym : ''),
-                escapeCsv(t.title),
-                escapeCsv(t.modality),
-                escapeCsv(t.phase),
-                escapeCsv(t.status),
-                escapeCsv(t.year),
-                escapeCsv(t.enrollment),
-                escapeCsv(t.sponsor),
-                escapeCsv(t.conditions),
-                escapeCsv(t.hasResults),
-                escapeCsv(t.hasPublication),
-                escapeCsv(t.isResultsVacant),
-                escapeCsv(t.protocolUrl || ''),
-                escapeCsv(t.sapUrl || ''),
-                escapeCsv(t.resultsUrl || ''),
-                escapeCsv(t.primaryPmid ? ('https://pubmed.ncbi.nlm.nih.gov/' + t.primaryPmid + '/') : ''),
-                escapeCsv(t.registryUrl)
-            ].join(','));
-
-            const csvContent = [headers.join(','), ...rows].join('\r\n');
-            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            const timestamp = new Date().toISOString().slice(0, 10);
-            a.download = 'ClinSight_Cohort_Export_' + timestamp + '.csv';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
-
-        function switchNav(section) {
-            document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
-            if (event && event.target) {
-                const targetLink = event.target.closest('a');
-                if (targetLink) targetLink.classList.add('active');
-            }
-
-            if (section === 'overview') {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else if (section === 'explorer') {
-                scrollToExplorer();
-            }
-            if (window.innerWidth <= 900) closeSidebar();
-        }
-
-        function scrollToExplorer() {
-            const el = document.getElementById('explorerSection');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function openSidebar() {
-            const sb = document.getElementById('sidebar');
-            const bd = document.getElementById('sidebarBackdrop');
-            if (sb) sb.classList.add('open');
-            if (bd) bd.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeSidebar() {
-            const sb = document.getElementById('sidebar');
-            const bd = document.getElementById('sidebarBackdrop');
-            if (sb) sb.classList.remove('open');
-            if (bd) bd.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function toggleSidebar() {
-            const sb = document.getElementById('sidebar');
-            if (sb && sb.classList.contains('open')) {
-                closeSidebar();
-            } else {
-                openSidebar();
-            }
-        }
-
-        // Global keyboard shortcut ('/' focuses search, 'Escape' closes mobile sidebar)
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeSidebar();
-            }
-            if (e.key === '/' && document.activeElement !== document.getElementById('searchInput')) {
-                e.preventDefault();
-                document.getElementById('searchInput').focus();
-            }
-        });
-
-        function getEffectiveTheme() {
-            const saved = localStorage.getItem('clinsight_theme');
-            if (saved) return saved;
-            return (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
-        }
-
-        function applyTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-            const isLight = theme === 'light';
-
-            // Update segmented toggle buttons in sidebar
-            const btnLight = document.getElementById('themeBtnLight');
-            const btnDark = document.getElementById('themeBtnDark');
-            if (btnLight && btnDark) {
-                if (isLight) {
-                    btnLight.classList.add('active');
-                    btnDark.classList.remove('active');
-                } else {
-                    btnDark.classList.add('active');
-                    btnLight.classList.remove('active');
-                }
-            }
-
-            // Update mobile header toggle
-            const btnMobile = document.getElementById('themeToggleMobile');
-            if (btnMobile) {
-                btnMobile.innerHTML = isLight ? '<i class="fa-regular fa-moon"></i>' : '<i class="fa-regular fa-sun"></i>';
-            }
-        }
-
-        function setTheme(theme) {
-            localStorage.setItem('clinsight_theme', theme);
-            applyTheme(theme);
-        }
-
         function toggleTheme() {
-            const current = document.documentElement.getAttribute('data-theme') || getEffectiveTheme();
-            const next = current === 'light' ? 'dark' : 'light';
-            setTheme(next);
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('clinsight_theme', next);
         }
-
-        if (window.matchMedia) {
-            window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
-                if (!localStorage.getItem('clinsight_theme')) {
-                    applyTheme(e.matches ? 'light' : 'dark');
-                }
-            });
-        }
-
-        // Initialize on load
-        document.addEventListener('DOMContentLoaded', () => {
-            applyTheme(getEffectiveTheme());
-            loadTrials();
-        });
+        // Load saved theme
+        const saved = localStorage.getItem('clinsight_theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
     </script>
 </body>
 </html>
