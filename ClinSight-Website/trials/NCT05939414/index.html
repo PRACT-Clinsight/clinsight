@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT05939414 PSMA-DC — Study Protocol & Registry Profile | ClinSight</title>
+    <meta name="description" content="Official ClinicalTrials.gov study protocol, primary design, enrollment criteria, and sponsor data for NCT05939414 (PSMA-DC). Open-access research intelligence.">
+    <link rel="canonical" href="https://clinsight.pract.eu/trials/NCT05939414/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="NCT05939414 PSMA-DC — Clinical Study Protocol">
+    <meta property="og:description" content="Phase: Phase 3 · Modality: Targeted Oncology &amp; Systemic Therapy · Sponsor: Novartis Pharmaceuticals">
+    <meta property="og:url" content="https://clinsight.pract.eu/trials/NCT05939414/">
+    <meta property="og:type" content="article">
+    
+    <!-- Clean Font: Inter (Matched with vigisight.pract.eu) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Theme Initializer (Instant OS/Browser preference detection) -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('clinsight_theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <!-- Structured Data Schema -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalStudy","name":"PSMA-DC (NCT05939414): An Open-label Study Comparing Lutetium (177Lu) Vipivotide Tetraxetan Versus Observation in PSMA Positive OMPC.","url":"https://clinsight.pract.eu/trials/NCT05939414/","studySubject":{"@type":"MedicalCondition","name":"Oligometastatic Prostate Cancer (OMPC)"},"sponsor":"Novartis Pharmaceuticals","status":"Recruiting","phase":"Phase 3"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Oncology","item":"https://clinsight.pract.eu/?category=Oncology"},{"@type":"ListItem","position":3,"name":"PSMA-DC (NCT05939414)","item":"https://clinsight.pract.eu/trials/NCT05939414/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the protocol design and phase of NCT05939414 (PSMA-DC)?","acceptedAnswer":{"@type":"Answer","text":"NCT05939414 is a Phase 3 study sponsored by Novartis Pharmaceuticals evaluating Targeted Oncology &amp; Systemic Therapy in Solid Tumors."}},{"@type":"Question","name":"Where can I view the primary registry record for NCT05939414?","acceptedAnswer":{"@type":"Answer","text":"Primary study records and verified regulatory endpoints are accessible at ClinicalTrials.gov under record ID NCT05939414."}}]}]}
+    </script>
+
+    <style>
+        :root {
+            /* Dark Theme (Default) */
+            --bg-void: #07090e;
+            --bg-base: #0b0f19;
+            --bg-surface: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            --cyan: #38bdf8;
+            --cyan-glow: rgba(56, 189, 248, 0.15);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.15);
+            --purple: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.15);
+            --amber: #fbbf24;
+            --amber-glow: rgba(251, 191, 36, 0.15);
+            --text-high: #f8fafc;
+            --text-med: #cbd5e1;
+            --text-low: #64748b;
+            --chip-bg: rgba(255, 255, 255, 0.05);
+            --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            --bg-grad-1: rgba(56, 189, 248, 0.06);
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'Inter', sans-serif;
+            color-scheme: dark;
+        }
+
+        /* Auto-adapt to OS / Browser light mode */
+        @media (prefers-color-scheme: light) {
+            :root:not([data-theme="dark"]) {
+                --bg-void: #f8fafc;
+                --bg-base: #ffffff;
+                --bg-surface: #ffffff;
+                --bg-card: #ffffff;
+                --border-subtle: #e2e8f0;
+                --border-hover: rgba(2, 132, 199, 0.4);
+                --cyan: #0284c7;
+                --cyan-glow: rgba(2, 132, 199, 0.08);
+                --emerald: #059669;
+                --emerald-glow: rgba(5, 150, 105, 0.08);
+                --purple: #7c3aed;
+                --purple-glow: rgba(124, 58, 237, 0.08);
+                --amber: #d97706;
+                --amber-glow: rgba(217, 119, 6, 0.08);
+                --text-high: #0f172a;
+                --text-med: #334155;
+                --text-low: #64748b;
+                --chip-bg: #f1f5f9;
+                --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+                --bg-grad-1: rgba(2, 132, 199, 0.03);
+                color-scheme: light;
+            }
+        }
+
+        /* Explicit Light Theme */
+        :root[data-theme="light"] {
+            --bg-void: #f8fafc;
+            --bg-base: #ffffff;
+            --bg-surface: #ffffff;
+            --bg-card: #ffffff;
+            --border-subtle: #e2e8f0;
+            --border-hover: rgba(2, 132, 199, 0.4);
+            --cyan: #0284c7;
+            --cyan-glow: rgba(2, 132, 199, 0.08);
+            --emerald: #059669;
+            --emerald-glow: rgba(5, 150, 105, 0.08);
+            --purple: #7c3aed;
+            --purple-glow: rgba(124, 58, 237, 0.08);
+            --amber: #d97706;
+            --amber-glow: rgba(217, 119, 6, 0.08);
+            --text-high: #0f172a;
+            --text-med: #334155;
+            --text-low: #64748b;
+            --chip-bg: #f1f5f9;
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+            --bg-grad-1: rgba(2, 132, 199, 0.03);
+            color-scheme: light;
+        }
+
+        /* Explicit Dark Theme */
+        :root[data-theme="dark"] {
+            --bg-void: #07090e;
+            --bg-base: #0b0f19;
+            --bg-surface: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            --cyan: #38bdf8;
+            --cyan-glow: rgba(56, 189, 248, 0.15);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.15);
+            --purple: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.15);
+            --amber: #fbbf24;
+            --amber-glow: rgba(251, 191, 36, 0.15);
+            --text-high: #f8fafc;
+            --text-med: #cbd5e1;
+            --text-low: #64748b;
+            --chip-bg: rgba(255, 255, 255, 0.05);
+            --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            --bg-grad-1: rgba(56, 189, 248, 0.06);
+            color-scheme: dark;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-void);
+            background-image: radial-gradient(circle at 50% 0%, var(--bg-grad-1), transparent 45%);
+            color: var(--text-high);
+            line-height: 1.6;
+            min-height: 100vh;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        /* Topbar */
+        .topbar {
+            background: var(--bg-base);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 12px 24px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .topbar a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+        .topbar a:hover { color: #7dd3fc; }
+        .topbar-right { color: var(--text-low); font-size: 12.5px; display: flex; align-items: center; gap: 14px; }
+        .topbar-right a { color: var(--text-med); font-weight: 500; }
+
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 5px 9px;
+            border-radius: 6px;
+            font-size: 11.5px;
+            font-family: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.15s;
+        }
+        .theme-toggle:hover {
+            color: var(--text-high);
+            border-color: var(--border-hover);
+            background: var(--chip-bg);
+        }
+
+        .container { max-width: 1060px; margin: 32px auto; padding: 0 20px 80px; }
+        
+        .breadcrumb {
+            font-size: 12.5px;
+            color: var(--text-low);
+            margin-bottom: 24px;
+            font-family: var(--font-mono);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .breadcrumb a { color: var(--text-med); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--cyan); }
+        .breadcrumb span { color: var(--cyan); }
+
+        /* Badge Row */
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; align-items: center; }
+        .badge {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.02em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .badge.nct {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.phase {
+            background: var(--purple-glow);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+        .badge.status {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        .badge.status.completed {
+            background: var(--emerald-glow);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .badge.status.recruiting {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .badge.status.active-not-recruiting {
+            background: var(--amber-glow);
+            color: var(--amber);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        .badge.modality {
+            background: var(--chip-bg);
+            color: var(--text-med);
+            border: 1px solid var(--border-subtle);
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.35;
+            color: var(--text-high);
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+        .lead {
+            font-size: 14.5px;
+            color: var(--text-med);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        /* Antigravity Glass Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 22px;
+            box-shadow: var(--card-shadow);
+            backdrop-filter: blur(8px);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            border-color: var(--border-hover);
+        }
+        .card-header {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .card-header i { color: var(--cyan); }
+
+        /* Protocol Metadata Grid */
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+        .meta-item h4 {
+            font-size: 11.5px;
+            text-transform: uppercase;
+            color: var(--text-low);
+            font-family: var(--font-mono);
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+        .meta-item p {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-high);
+        }
+
+        /* Criteria Section */
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) { .criteria-grid { grid-template-columns: 1fr; } }
+        
+        .criteria-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .criteria-box h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--cyan);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .criteria-box ul {
+            padding-left: 18px;
+            font-size: 13px;
+            color: var(--text-med);
+        }
+        .criteria-box li { margin-bottom: 8px; line-height: 1.5; }
+
+        /* Action Buttons */
+        .actions-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: var(--font-sans);
+        }
+        .btn-primary {
+            background: var(--cyan-glow);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+        }
+        .btn-primary:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #FFF;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: var(--text-high);
+        }
+
+        /* Related Grid */
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 14px;
+        }
+        .related-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 14px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.2s;
+        }
+        .related-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .related-card .rel-id {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--cyan);
+        }
+        .related-card .rel-title {
+            font-size: 12.5px;
+            font-weight: 500;
+            color: var(--text-high);
+            margin: 6px 0;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+                /* 1-Click Primary Document Action Buttons (BioTransfer-style utility) */
+        .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: var(--font-mono);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            line-height: 1.2;
+        }
+        .doc-btn b {
+            font-weight: 700;
+        }
+        .doc-btn:hover {
+            transform: translateY(-1px);
+        }
+        .doc-btn-protocol {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+        .doc-btn-protocol:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+        .doc-btn-sap {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+        .doc-btn-sap:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--purple);
+            color: #fff;
+        }
+        .doc-btn-results {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .doc-btn-results:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: var(--emerald);
+            color: #fff;
+        }
+        .doc-btn-pubmed {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .doc-btn-pubmed:hover {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--amber);
+            color: #fff;
+        }
+        .badge.vacant { background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); }
+
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 26px;
+        }
+        .btn-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-med);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-action:hover {
+            color: var(--cyan);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .consulting-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 36px 0 20px;
+        }
+        [data-theme="light"] .consulting-card {
+            background: #f8fafc;
+            border-color: rgba(14, 165, 233, 0.35);
+        }
+        .consulting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+        .consulting-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+        }
+        .consulting-card p {
+            font-size: 13.5px;
+            color: var(--text-med);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            max-width: 72ch;
+        }
+        .btn-consult {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan);
+            color: #07090e;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-consult:hover { opacity: 0.9; }
+
+        footer {
+            margin-top: 60px;
+            padding: 28px 0;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-low);
+            border-top: 1px solid var(--border-subtle);
+            font-family: var(--font-mono);
+        }
+    </style>
+</head>
+<body>
+    <!-- nct=NCT05939414 source=ClinicalTrials.gov protocol_strict=true -->
+    <div class="topbar">
+        <a href="../../"><i class="fa-solid fa-arrow-left"></i> ClinSight™ Clinical Trials Explorer</a>
+        <div class="topbar-right">
+            <button id="themeToggleTopbar" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle appearance">
+                <i class="fa-regular fa-sun"></i>
+            </button>
+            <a href="https://pract.eu" target="_blank">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../../">ClinSight</a> / <a href="../../?category=Oncology">Oncology</a> / <span>NCT05939414</span>
+        </div>
+
+        <div class="badge-row">
+            <span class="badge nct"><i class="fa-solid fa-hashtag"></i> NCT05939414</span>
+            <span class="badge phase">Phase 3</span>
+            <span class="badge status recruiting">Recruiting</span>
+            <span class="badge modality">Targeted Oncology &amp; Systemic Therapy</span>
+            
+        </div>
+
+        <h1>PSMA-DC: An Open-label Study Comparing Lutetium (177Lu) Vipivotide Tetraxetan Versus Observation in PSMA Positive OMPC.</h1>
+        <p class="lead">An International, Prospective, Open-label, Multi-center, Randomized Phase III Study Comparing Lutetium (177Lu) Vipivotide Tetraxetan (AAA617) Versus Observation to Delay Castration or Disease Recurrence in Adult Male Patients With Prostate-specific Membrane Antigen (PSMA) Positive Oligometastatic Prostate Cancer (OMPC)</p>
+
+        <!-- Action Toolbar: 1-Click Document Access, Citation & Protocol JSON -->
+        <div class="action-bar">
+            
+            
+            
+            
+            <button onclick="copyCitation()" id="btnCopyCitation" class="btn-action">
+                <i class="fa-regular fa-copy"></i> Copy Citation
+            </button>
+            <button onclick="downloadJson()" class="btn-action">
+                <i class="fa-solid fa-download"></i> Protocol JSON
+            </button>
+
+        </div>
+
+        <!-- Official Registry Overview -->
+        <div class="card">
+            <div class="card-header"><i class="fa-solid fa-dna"></i> Study Design & Protocol Architecture</div>
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h4>Lead Sponsor</h4>
+                    <p>Novartis Pharmaceuticals</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Therapeutic Indication</h4>
+                    <p>Oligometastatic Prostate Cancer (OMPC)</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Intervention / Drug</h4>
+                    <p>AAA617, piflufolastat (18F), gallium (68Ga) gozetotide (25μg)</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Patient Enrollment</h4>
+                    <p>450 individuals</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Trial Phase</h4>
+                    <p>Phase 3</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Primary Completion</h4>
+                    <p>2031-10-03</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Geographic Scope</h4>
+                    <p>Global</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Registry ID</h4>
+                    <p><a href="https://clinicaltrials.gov/study/NCT05939414" target="_blank" style="color:var(--cyan); text-decoration:none; font-family:var(--font-mono);">NCT05939414 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:11px;"></i></a></p>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Verbatim Registry Eligibility Criteria (ClinicalTrials.gov eligibilityModule) -->
+        <div class="card">
+            <div class="card-header"><i class="fa-solid fa-list-check"></i> Verbatim Protocol Eligibility Criteria</div>
+            <div class="criteria-grid">
+                <div class="criteria-box">
+                    <h4><i class="fa-solid fa-circle-check" style="color:var(--emerald);"></i> Key Inclusion Criteria</h4>
+                    <ul>
+                        <li>Histologically confirmed prostate cancer prior to randomization</li><li>Participants must have biochemically recurrent disease after definitive treatment to prostate by Radical Prostatectomy ((RP), (alone or with post-operative radiation to prostate bed/pelvic nodes)) or External beam Radiation Therapy (EBRT), (prostate alone or prostate with seminal vesicle and/or pelvic nodes) and/or brachytherapy prior to randomization. Biochemical recurrence (BCR) is defined as: nadir PSA + 2 ng/mL post XRT (if participant received-radiation therapy to intact prostate) and PSA \&gt; 0.2 ng/mL and rising post RP (with or without post-operation Radiation Therapy (RT))</li><li>Participants must have OMPC with 1-5 PSMA -positive metastatic lesions on screening PSMA PET/CT scan (with either gallium (68Ga) gozetotide or piflufolastat (18F)) as visually assessed by BIRC. For definition of PSMA PET positivity, please refer to Section 8.1 and the Imaging Manual. Metastatic lesions may include regional/pelvic lymph nodes (N1), distant lymph nodes (M1a), bone (M1b), lung and others visceral (M1c) except liver and brain classified using American Joint Committee on Cancer (AJCC) 8. When counting the number of oligometastatic lesions, each lesion is counted as distinct metastasis irrespective of its anatomical location (e.g., one pelvic and one extra-pelvic lymph node will be counted as two metastatic lesions)</li><li>At least 1 PSMA-positive lesion must be a distant metastasis (M1) per AJCC8 classification at screening. For AJCC M staging, PSMA PET/CT information should be used</li><li>Participants must have a negative CI for M1 disease at screening.<br><br>   Note:<br>   * For a participant not to be eligible, CI positive M1 lesions should be unequivocal in CI scans, i.e., potentially not attributable to findings thought to represent something other than tumor (e.g., degenerative, or post-traumatic changes or Paget&#39;s disease in bone lesions). For CI assessments, bone lesions must be assessed by bone scan only and soft tissue lesions must be assessed by CT/MRI scans only at screening.<br>   * Prior knowledge of PSMA PET positivity should not influence the radiologist (reader) in determination of CI positivity. Two different readers will be involved, one reader for PSMA PET/CT scan and one reader for CI: Reader will be blinded to PSMA PET scan results while reading CI scans. Reader should not modify their assessment of CI scans (e.g. changing a lesion previously identified as equivocal in CI to unequivocal) after reading the PSMA PET scan. Similarly, biopsy positivity should not influence the reader in the assessment of CI positivity. More details on the reading paradigm will be provided in the imaging charter<br>   * MRI for radiation treatment planning may show M1 disease but this will not exclude the participant from the study if the lesion is deemed negative per baseline CT or bone scans<br>   * Participants with pelvic disease (N1) seen in CI are allowed if the local spread is below common iliac bifurcation (per AJCC 8 definition of local disease)<br>   * Distant lymph node disease (M1a) that is visible per CI and less than 10mm in the short axis is not exclusionary irrespective of PSMA PET positivity.<br>   * If a previously surgically removed lesion was unequivocal for M1 by bone scan or CT, the participant is not eligible.</li><li>All metastatic lesions detected at screening must be amenable to SBRT</li><li>Non-castration testosterone level \&gt;100 ng/dL at screening<br><br>Key</li>
+                    </ul>
+                </div>
+                
+                <div class="criteria-box">
+                    <h4><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> Key Exclusion Criteria</h4>
+                    <ul>
+                        <li>Participants with de novo OMPC at screening</li><li>Unmanageable concurrent bladder outflow obstruction or urinary incontinence at screening. Note: participants with bladder outflow obstruction or urinary incontinence, which is manageable and controlled with best available standard of care (incl. pads, drainage) are allowed</li><li>Prior therapy with:<br><br>   1. ADT (including bilateral orchiectomy) and ARPIs used for metastatic prostate cancer treatment<br><br>      * Participants who received AR-directed therapy, whether ADT or an ARPI or both, as neoadjuvant or adjuvant therapy as a component of their primary therapy, are eligible provided that they discontinued therapy ≥12 months prior to randomization for ADT (i.e., 12 months after the last day of the last injection) or ≥3 months if ARPI was given as monotherapy. ARPI&#39;s as a term includes both contemporary androgen synthesis inhibitors (e.g., abiraterone, galeterone, and orteneronel), and receptor inhibitors (enzalutamide, apalutamide and darolutamide).<br>      * Patients who biochemically relapsed after primary therapy may also have had treatment with AR directed therapy and participants who had SBRT with ADT are also eligible provided that the ARPI +/- ADT or ADT alone was terminated<br><br>        ≥12 months prior to randomization for ADT (i.e., 12 months after the last day of the last injection) or ≥3 months if ARPI was given as monotherapy.<br>      * Participants who received first generation anti-androgens (bicalutamide, flutamide, nilutamide, cyproterone) for biochemical recurrence or adjuvant/neoadjuvant therapy are eligible provided that they discontinued therapy ≥3 months prior to randomization.<br>      * Participants who have discontinued ADT due to disease progression are not eligible (i.e., Castration-Resistant Prostate Cancer (CRPC) participants)<br>   2. Other hormonal therapy. e.g.,<br><br>      •Use of estrogens, 5-α reductase inhibitors (finasteride, dutasteride), other steroidogenesis inhibitors (aminoglutethimide) if used in the context of prostate cancer treatment. Same medications are allowed if used for other indications: e.g., Benign Prostatic Hyperplasia (BPH), if stopped ≥3 months before randomization.<br>   3. Radiopharmaceutical agents (e.g., Strontium-89, PSMA-targeted radioligand therapy)<br>   4. Immunotherapy (e.g., sipuleucel-T)<br>   5. Chemotherapy, except if administered in the adjuvant/neoadjuvant setting completed \&gt; 12 months before randomization<br>   6. Any other investigational or systemic agents for metastatic disease</li><li>Radiation therapy external beam radiation therapy (EBRT) and brachytherapy within 28 days before randomization</li><li>Concurrent cytotoxic chemotherapy, immunotherapy, radioligand therapy, hormonal therapy (see ADT initiation guidance in Section 6.8.2), Poly Adenosine Diphosphate-Ribose Polymerase (PARP) inhibitor, biological therapy or investigational therapy</li><li>Diagnosed at screening with other malignancies that are expected to alter life expectancy or may interfere with disease assessment. However, participants with a prior history of malignancy that has been adequately treated and who have been disease/treatment free for more than 3 years are eligible, as are participants with adequately treated non-melanoma skin cancer and superficial bladder cancer.</li><li>History or current diagnosis of ECG abnormalities indicating significant risk of safety for participants participating in the study such as:<br><br>   * Concomitant clinically significant cardiac arrhythmias, e.g. sustained ventricular tachycardia, and clinically significant second or third degree Atrioventricular (AV) block without a pacemaker<br>   * History of familial long QT syndrome or known family history of Torsades de Pointe</li><li>Participants in immediate need of ADT or other systemic therapy as assessed by the investigator. In addition, investigators should only enroll participants who are committed to delay castration in accordance with the scope of the study and are willing to wait to start systemic therapy until distant progression (MFS event) as assessed by CI (consisting with existing treatment guidelines) and confirmed by BIRC is reached. This must be discussed with the participants before ICF is signed.<br><br>Other protocol defined Inclusion/Exclusion may apply.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Direct Primary Source Actions -->
+        <div class="card">
+            <div class="card-header"><i class="fa-solid fa-file-contract"></i> Primary Sources & Statutory Registries</div>
+            <p style="font-size:13.5px; color:var(--text-med); margin-bottom:16px;">Access the verbatim statutory protocol records, regulatory postings, and peer-reviewed literature across statutory repositories:</p>
+            <div class="actions-row">
+                <a href="https://clinicaltrials.gov/study/NCT05939414" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Open ClinicalTrials.gov Record
+                </a>
+                
+                
+                
+                
+                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NCT05939414" target="_blank" class="btn btn-outline">
+                    <i class="fa-solid fa-book-medical"></i> Search PubMed Literature (NCT05939414)
+                </a>
+                <a href="https://scholar.google.com/scholar?q=NCT05939414" target="_blank" class="btn btn-outline">
+                    <i class="fa-solid fa-graduation-cap"></i> Google Scholar Citations
+                </a>
+            </div>
+        </div>
+
+        
+
+        <!-- PRACT Clinical Methodology & Consulting CTA -->
+        <div class="consulting-card">
+            <div class="consulting-tag"><i class="fa-solid fa-user-doctor"></i> Target Trial Emulation (TTE) & CER Evidence</div>
+            <h3>Translating this protocol into Real-World Evidence?</h3>
+            <p>Designing a Target Trial Emulation (TTE) with observational cohorts, preparing Clinical Evaluation Reports (CER/PMCF), or benchmarking clinical outcomes against this registry protocol? Connect with the PRACT clinical methodology and biostatistics team.</p>
+            <a href="mailto:contact@pract.eu?subject=Consulting%20Inquiry%20regarding%20NCT05939414%20(PSMA-DC)" class="btn-consult">
+                Consult PRACT Clinical Team &rarr; contact@pract.eu
+            </a>
+        </div>
+
+        <footer>
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                <div>&copy; 2026 ClinSight · Primary study records from ClinicalTrials.gov</div>
+                <div><a href="https://pract.eu" target="_blank" style="color:var(--text-med); text-decoration:none;">pract.eu <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a></div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const studyData = {"nctId":"NCT05939414","acronym":"PSMA-DC","briefTitle":"An Open-label Study Comparing Lutetium (177Lu) Vipivotide Tetraxetan Versus Observation in PSMA Positive OMPC.","officialTitle":"An International, Prospective, Open-label, Multi-center, Randomized Phase III Study Comparing Lutetium (177Lu) Vipivotide Tetraxetan (AAA617) Versus Observation to Delay Castration or Disease Recurrence in Adult Male Patients With Prostate-specific Membrane Antigen (PSMA) Positive Oligometastatic Prostate Cancer (OMPC)","sponsor":"Novartis Pharmaceuticals","phase":"Phase 3","status":"RECRUITING","modality":"Targeted Oncology & Systemic Therapy","conditions":["Oligometastatic Prostate Cancer (OMPC)"],"interventions":["AAA617","piflufolastat (18F)","gallium (68Ga) gozetotide (25μg)"],"primaryOutcomes":[{"measure":"Blinded Independent Review Committee (BIRC) assessed Metastasis Free Survival (MFS)","description":"Blinded Independent Review Committee (BIRC) assessed Metastasis Free Survival (MFS) is defined as the time from randomization to first evidence of radiographically detectable bone or soft tissue distant metastasis by conventional imaging (i.e., Computed Tomography (CT)/Magnetic Resonance Imaging (MRI) and bone scans) as assessed by BIRC using RECIST 1.1 or death due to any cause, whichever occurs first.\n\nParticipants who are alive without distant metastasis at the analysis data cut-off or are lost to follow-up at the time of analysis will be censored for MFS at the time of their last adequate radiographic assessment. Clinical deterioration without objective radiographic evidence will not be considered as documented distant metastasis.","timeFrame":"From date of randomization until first evidence of radiographically detectable bone or soft tissue distant metastasis or death due to any cause, whichever occurs first, assessed up to approximately 30 months"}],"completionDate":"2031-10-03","source":"ClinicalTrials.gov API v2"};
+
+        function copyCitation() {
+            const text = "PSMA-DC. An Open-label Study Comparing Lutetium (177Lu) Vipivotide Tetraxetan Versus Observation in PSMA Positive OMPC.. ClinicalTrials.gov Identifier: NCT05939414. Primary Sponsor: Novartis Pharmaceuticals. Available at: https://clinsight.pract.eu/trials/NCT05939414/";
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('btnCopyCitation');
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-check" style="color:var(--emerald);"></i> Copied to Clipboard!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Citation';
+                    }, 2500);
+                }
+            });
+        }
+
+        function downloadJson() {
+            const blob = new Blob([JSON.stringify(studyData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NCT05939414-protocol.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const isLight = theme === 'light';
+            const btn = document.getElementById('themeToggleTopbar');
+            if (btn) btn.innerHTML = isLight ? '<i class="fa-regular fa-moon"></i>' : '<i class="fa-regular fa-sun"></i>';
+        }
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            const next = current === 'light' ? 'dark' : 'light';
+            localStorage.setItem('clinsight_theme', next);
+            applyTheme(next);
+        }
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('clinsight_theme')) {
+                    applyTheme(e.matches ? 'light' : 'dark');
+                }
+            });
+        }
+        const saved = localStorage.getItem('clinsight_theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        applyTheme(saved);
+    </script>
+</body>
+</html>
