@@ -214,5 +214,113 @@
     "footerLocation": "Dicot Pharma AB · Uppsala Hub",
     "applyText": "Apply via Teamtailor",
     "applyUrl": "https://winrowrekrytering.teamtailor.com/jobs/8268902-director-clinical-operations-till-dicot-pharma-i-uppsala/applications/new"
+  },
+  {
+    "id": "se_atos_cra14155",
+    "title": "Clinical Research Associate (CRA) – Medical Devices",
+    "dept": "Clinical Affairs (ISO 14155)",
+    "organization": "Atos Medical (Coloplast Group)",
+    "location": "Malmö / Hörby · Sweden",
+    "ats": "Coloplast Careers: AM-9021",
+    "category": "sweden medtech coord",
+    "country": "Sweden",
+    "summary": "Conduct prospective clinical investigations and post-market clinical follow-up (PMCF) studies for pulmonary and ENT medical device systems. Manage clinical site initiation, source data verification, and adverse device effect (ADE) reporting under ISO 14155 and EU MDR 2017/745.",
+    "mandatory": [
+      "BSc/MSc in Life Science, Biomedical Engineering, or Nursing",
+      "2+ years CRA experience monitoring clinical investigations",
+      "Demonstrated knowledge of ISO 14155 & EU MDR Article 62 requirements"
+    ],
+    "desirable": [
+      "Experience with Electronic Data Capture (EDC) in medical device registries",
+      "Fluent communication in Swedish and English with hospital investigators"
+    ],
+    "linkedProtocol": {
+      "nct": "NCT03734029",
+      "name": "ISO 14155 Medical Devices"
+    },
+    "footerLocation": "Atos Medical AB · Malmö Innovation Hub",
+    "applyText": "Apply via Coloplast",
+    "applyUrl": "https://www.atosmedical.com/career"
+  },
+  {
+    "id": "se_ctc_leadcra",
+    "title": "Clinical Research Associate (CRA) / Lead Monitor",
+    "dept": "Early Phase Clinical & Device Trials",
+    "organization": "CTC Clinical Trial Consultants AB",
+    "location": "Uppsala / Gothenburg · Sweden",
+    "ats": "CTC ATS: CTC-4109",
+    "category": "sweden medtech site coord",
+    "country": "Sweden",
+    "summary": "Lead clinical trial monitoring across early-phase hospital clinics in Sweden. Oversee both medicinal product trials and medical device clinical investigations, managing site relationships, ethical submissions to Etikprövningsmyndigheten, and Läkemedelsverket documentation.",
+    "mandatory": [
+      "Life Science degree or Registered Nurse authorization",
+      "3+ years independent clinical monitoring experience across Sweden",
+      "Certified in ICH-GCP and ISO 14155 standards"
+    ],
+    "desirable": [
+      "Experience conducting site qualification and close-out visits in Swedish university clinics",
+      "Knowledge of eTMF systems and clinical trial agreements (CTAs)"
+    ],
+    "linkedProtocol": {
+      "nct": "NCT04181827",
+      "name": "Swedish Hospital Early Phase"
+    },
+    "footerLocation": "CTC Clinical Trial Consultants AB · Uppsala Science Park",
+    "applyText": "Apply via CTC",
+    "applyUrl": "https://ctc-ab.se/careers/"
+  },
+  {
+    "id": "dk_coloplast_cpm",
+    "title": "Clinical Study Manager / Clinical Project Lead",
+    "dept": "Global Clinical Affairs & Evidence",
+    "organization": "Coloplast A/S",
+    "location": "Humlebæk, Copenhagen · Denmark",
+    "ats": "Coloplast Workday: CP-81023",
+    "category": "denmark medtech coord",
+    "country": "Denmark",
+    "summary": "Lead global clinical investigations and Patient-Reported Outcome (PRO) studies across ostomy, continence, and interventional urology medical devices. Accountable for clinical investigation plans (CIP), ethics submissions, and Notified Body clinical evaluation files.",
+    "mandatory": [
+      "Master's degree in Life Science, Health Science, or Biomedical Engineering",
+      "5+ years clinical trial or investigation management experience",
+      "Extensive experience working under EU MDR 2017/745 and ISO 14155"
+    ],
+    "desirable": [
+      "Experience designing decentralised or registry-based clinical studies",
+      "Direct engagement with clinical key opinion leaders (KOLs) across Europe"
+    ],
+    "linkedProtocol": {
+      "nct": "NCT03574597",
+      "name": "Global Medical Devices"
+    },
+    "footerLocation": "Coloplast Global HQ · Humlebæk / Medicon Valley",
+    "applyText": "Apply via Coloplast",
+    "applyUrl": "https://www.coloplast.com/about-coloplast/vacancies-list/"
+  },
+  {
+    "id": "dk_ambu_endoscopy",
+    "title": "Clinical Evidence Project Manager – Endoscopy",
+    "dept": "Single-Use Endoscopy Clinical Trials",
+    "organization": "Ambu A/S",
+    "location": "Ballerup, Copenhagen · Denmark",
+    "ats": "Ambu Careers: AMB-6421",
+    "category": "denmark medtech coord",
+    "country": "Denmark",
+    "summary": "Plan and manage prospective hospital clinical trials evaluating single-use endoscopy devices in pulmonology, ENT, and gastroenterology suites. Coordinate clinical data collection with hospital surgeons, analyze infection-reduction endpoints, and compile Clinical Evaluation Reports (CER).",
+    "mandatory": [
+      "MSc or PhD in Biomedical Engineering, Natural Sciences, or Medicine",
+      "4+ years managing clinical evidence generation in hospital or MedTech sponsor settings",
+      "Strong understanding of ISO 14155 good clinical practice for medical devices"
+    ],
+    "desirable": [
+      "Direct experience working in operating rooms, ICU, or bronchoscopy units",
+      "Demonstrated scientific manuscript publication experience"
+    ],
+    "linkedProtocol": {
+      "nct": "NCT03734029",
+      "name": "Hospital Clinical Devices"
+    },
+    "footerLocation": "Ambu A/S Global HQ · Ballerup / Medicon Valley",
+    "applyText": "Apply via Ambu",
+    "applyUrl": "https://www.ambu.com/about-us/career"
   }
 ]
