@@ -1,7 +1,6 @@
 [build]
   publish = "."
   command = ""
-  ignore = "exit 0" # Staging on Cloudflare: pause Netlify builds to preserve monthly credits
 
 [[headers]]
   for = "/*"
