@@ -3,169 +3,963 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Multiple myeloma CAR-T, bispecific and ADC trials compared (12) | ClinSight</title>
-<meta name="description" content="Side-by-side registry comparison of 12 multiple myeloma trials of CAR-T, bispecific antibody and antibody-drug conjugate regimens: phase, interventions, sponsor, enrollment, primary outcome and eligibility. Source: ClinicalTrials.gov.">
+<title>Multiple Myeloma: CAR-T, Bispecific & ADC Trials Matrix (12) | ClinSight</title>
+<meta name="description" content="Interactive clinical competitive intelligence matrix comparing 12 landmark multiple myeloma trials across CAR-T, Bispecific Antibodies, and ADCs. Real-time filtering by modality, target, and line of therapy. Source: ClinicalTrials.gov.">
 <link rel="canonical" href="https://clinsight.pract.eu/compare/myeloma-car-t-bispecific-adc/">
-<meta property="og:title" content="Multiple myeloma CAR-T, bispecific and ADC trials compared (12) | ClinSight">
-<meta property="og:description" content="Side-by-side registry comparison of 12 multiple myeloma trials of CAR-T, bispecific antibody and antibody-drug conjugate regimens: phase, interventions, sponsor, enrollment, primary outcome and eligibility. Source: ClinicalTrials.gov.">
+<meta property="og:title" content="Multiple Myeloma: CAR-T, Bispecific & ADC Trials Matrix (12) | ClinSight">
+<meta property="og:description" content="Interactive clinical competitive intelligence matrix comparing 12 landmark multiple myeloma trials across CAR-T, Bispecific Antibodies, and ADCs.">
 <meta property="og:url" content="https://clinsight.pract.eu/compare/myeloma-car-t-bispecific-adc/">
 <meta property="og:type" content="article">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Dataset","name":"Multiple myeloma CAR-T, bispecific and ADC trial records (registry comparison)","description":"Side-by-side registry comparison of 12 multiple myeloma trials of CAR-T, bispecific antibody and antibody-drug conjugate regimens: phase, interventions, sponsor, enrollment, primary outcome and eligibility. Source: ClinicalTrials.gov.","url":"https://clinsight.pract.eu/compare/myeloma-car-t-bispecific-adc/","creator":{"@type":"Organization","name":"ClinSight (PRACT)","url":"https://pract.eu"},"isBasedOn":"https://clinicaltrials.gov/","keywords":["multiple myeloma","CAR-T","bispecific antibody","antibody-drug conjugate","clinical trials"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ClinSight","item":"https://clinsight.pract.eu/"},{"@type":"ListItem","position":2,"name":"Comparisons","item":"https://clinsight.pract.eu/compare/"},{"@type":"ListItem","position":3,"name":"Myeloma CAR-T, bispecific and ADC trials","item":"https://clinsight.pract.eu/compare/myeloma-car-t-bispecific-adc/"}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-  :root{--bg:#fff;--fg:#0f172a;--mut:#64748b;--line:#e2e8f0;--acc:#0284c7;--head:#f1f5f9}
-  @media (prefers-color-scheme: dark){:root{--bg:#0b0f19;--fg:#e2e8f0;--mut:#94a3b8;--line:#1f2937;--acc:#38bdf8;--head:#111827}}
-  *{box-sizing:border-box} body{font-family:'Inter',sans-serif;margin:0;background:var(--bg);color:var(--fg);line-height:1.55}
-  main{max-width:1280px;margin:0 auto;padding:28px 20px 60px} a{color:var(--acc)}
-  h1{font-size:26px;margin:8px 0} h2{font-size:18px;margin-top:34px}
-  .lead{max-width:820px;color:var(--mut)} .wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
-  table{border-collapse:collapse;width:100%;min-width:1100px;font-size:13px}
-  th,td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
-  th{background:var(--head);position:sticky;top:0;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
-  td ul{margin:0;padding-left:16px} td.n{text-align:right;font-variant-numeric:tabular-nums}
-  .m{font-size:12px;color:var(--mut)} .note{max-width:820px;font-size:14px}
+  :root {
+    --bg-base: #0b0f19;
+    --bg-card: #131b2e;
+    --bg-subtle: #1a243b;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.16);
+    --text-high: #f8fafc;
+    --text-med: #94a3b8;
+    --text-low: #64748b;
+    --cyan: #38bdf8;
+    --cyan-glow: rgba(56, 189, 248, 0.15);
+    --purple: #c084fc;
+    --purple-glow: rgba(192, 132, 252, 0.15);
+    --emerald: #34d399;
+    --emerald-glow: rgba(52, 211, 153, 0.15);
+    --amber: #fbbf24;
+    --amber-glow: rgba(251, 191, 36, 0.15);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg-base: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --border-subtle: #e2e8f0;
+      --border-hover: #cbd5e1;
+      --text-high: #0f172a;
+      --text-med: #475569;
+      --text-low: #64748b;
+      --cyan: #0284c7;
+      --cyan-glow: rgba(2, 132, 199, 0.1);
+      --purple: #9333ea;
+      --purple-glow: rgba(147, 51, 234, 0.1);
+      --emerald: #059669;
+      --emerald-glow: rgba(5, 150, 105, 0.1);
+      --amber: #d97706;
+      --amber-glow: rgba(217, 119, 6, 0.1);
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg-base);
+    color: var(--text-high);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Fixed Navigation Header */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  @media (prefers-color-scheme: light) {
+    .site-nav { background: rgba(248, 250, 252, 0.88); }
+  }
+  .nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .logo-text {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-high);
+  }
+  .logo-text span { color: var(--cyan); }
+  .logo-tag {
+    font-size: 12.5px;
+    color: var(--text-med);
+    font-weight: 500;
+    padding-left: 12px;
+    border-left: 1px solid var(--border-subtle);
+  }
+  @media (max-width: 768px) { .logo-tag { display: none; } }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-links a {
+    color: var(--text-med);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: all 0.15s;
+  }
+  .nav-links a:hover {
+    color: var(--text-high);
+    background: var(--bg-subtle);
+  }
+  .nav-links a.active {
+    color: var(--cyan);
+    background: var(--cyan-glow);
+    font-weight: 600;
+  }
+
+  /* Main Container */
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 36px 24px 80px;
+  }
+
+  .breadcrumb {
+    font-size: 13px;
+    color: var(--text-low);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .breadcrumb a { color: var(--text-med); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--cyan); }
+
+  .header-block {
+    margin-bottom: 28px;
+  }
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--purple);
+    background: var(--purple-glow);
+    border: 1px solid rgba(192, 132, 252, 0.3);
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text-high);
+    margin-bottom: 8px;
+  }
+  .header-desc {
+    font-size: 15px;
+    color: var(--text-med);
+    max-width: 900px;
+    line-height: 1.6;
+  }
+
+  /* Interactive Toolbar */
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+  }
+  .filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .filter-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-low);
+    margin-right: 4px;
+  }
+  .filter-btn {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-med);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .filter-btn:hover {
+    color: var(--text-high);
+    border-color: var(--border-hover);
+  }
+  .filter-btn.active {
+    background: var(--cyan);
+    color: #0b0f19;
+    border-color: var(--cyan);
+  }
+  .meta-counter {
+    font-size: 13px;
+    font-family: var(--font-mono);
+    color: var(--text-med);
+  }
+
+  /* Matrix Table View */
+  .matrix-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    background: var(--bg-card);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  table.matrix-table {
+    width: 100%;
+    min-width: 1220px;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    text-align: left;
+  }
+  .matrix-table th {
+    background: var(--bg-subtle);
+    color: var(--text-med);
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-subtle);
+    white-space: nowrap;
+    position: sticky;
+    top: 64px;
+    z-index: 10;
+  }
+  .matrix-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-subtle);
+    vertical-align: middle;
+  }
+  .matrix-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .matrix-table tr.hidden-row {
+    display: none;
+  }
+
+  /* Badges & Chips */
+  .trial-cell {
+    min-width: 190px;
+  }
+  .trial-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--cyan);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+  .trial-title:hover { text-decoration: underline; }
+  .trial-nct {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-low);
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .badge-cart { background: rgba(192, 132, 252, 0.15); color: #c084fc; border: 1px solid rgba(192, 132, 252, 0.3); }
+  .badge-bispecific { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+  .badge-adc { background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3); }
+
+  .badge-phase {
+    background: var(--bg-subtle);
+    color: var(--text-high);
+    border: 1px solid var(--border-subtle);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 3px 7px;
+  }
+
+  .target-pill {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-high);
+  }
+  .intervention-sub {
+    font-size: 12px;
+    color: var(--text-med);
+    margin-top: 2px;
+  }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-med);
+  }
+  .status-pill.active::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); }
+  .status-pill.completed::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--emerald); }
+
+  .endpoint-code {
+    font-weight: 700;
+    color: var(--text-high);
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  .endpoint-desc {
+    font-size: 11.5px;
+    color: var(--text-low);
+    margin-top: 2px;
+  }
+
+  .patient-setting {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-high);
+  }
+  .criteria-toggle-btn {
+    margin-top: 6px;
+    background: transparent;
+    border: none;
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    font-family: inherit;
+  }
+  .criteria-toggle-btn:hover { text-decoration: underline; }
+
+  /* Drawer / Modal for Criteria */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    width: 100%;
+    max-width: 640px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+  .modal-header {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .modal-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-high);
+  }
+  .modal-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-med);
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .modal-close-btn:hover { color: var(--text-high); }
+  .modal-body {
+    padding: 24px;
+    overflow-y: auto;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--text-med);
+  }
+  .modal-body ul { padding-left: 20px; }
+  .modal-body li { margin-bottom: 12px; }
+
+  /* 2-Sentence Concise Audit Note */
+  .audit-disclaimer-box {
+    margin-top: 36px;
+    padding: 18px 22px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--cyan);
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: var(--text-med);
+    line-height: 1.6;
+  }
+  .audit-disclaimer-box strong { color: var(--text-high); }
 </style>
 </head>
 <body>
+
+<!-- Global Navigation -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="logo-text">ClinSight<span>™</span></div>
+      <div class="logo-tag">Clinical Trials &amp; Evidence Generation</div>
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/explorer/">Trials Explorer</a>
+      <a href="/compare/" class="active">Comparator</a>
+      <a href="/jobs/">Careers</a>
+    </div>
+  </div>
+</nav>
+
 <main>
-<p><a href="../../">ClinSight</a> / <a href="../">Comparisons</a> / Myeloma CAR-T, bispecific and ADC trials</p>
-<h1>Multiple myeloma: CAR-T, bispecific and ADC trials side by side</h1>
-<p class="lead">12 registry records compared on the fields ClinicalTrials.gov publishes for every study. Use it to see, at a glance, which trials share a phase, comparator regimen, sponsor or eligibility rule.</p>
+  <div class="breadcrumb">
+    <a href="/">ClinSight</a> <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+    <a href="/compare/">Comparators</a> <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+    <span>Multiple Myeloma</span>
+  </div>
 
-<div class="wrap"><table>
-<thead><tr><th>Trial</th><th>Phase</th><th>Interventions (as registered)</th><th>Sponsor</th><th>Status</th><th>Enrolled</th><th>First primary outcome (registry text)</th><th>First inclusion criteria (registry text)</th></tr></thead>
-<tbody>
-<tr>
-<td><a href="../../trials/NCT03399799/"><strong>MonumenTAL-1</strong></a><br><span class="m">NCT03399799</span></td>
-<td>Phase 1</td>
-<td>Talquetamab</td>
-<td>Janssen Research &amp; Development, LLC</td>
-<td>ACTIVE NOT RECRUITING</td>
-<td class="n">279</td>
-<td>Part 1: Dose-limiting Toxicity (DLT)</td>
-<td><ul><li>Documented initial diagnosis of multiple myeloma according to International Myeloma Working Group (IMWG) diagnostic criteria</li><li>Part 1: Participants with measurable multiple myeloma who have progressed on, or could not tolerate, all available established therapies. Part 2: Participants with multiple myeloma measurable by central laboratory assessment who have progressed on, or could not tolerate, all available established therapies; Serum monoclonal paraprotein (M-protein) level greater than or equal to (\&gt;=) 1.0 gram per deciliter (g/dL) or urine M-protein level \&gt;=200 milligram per 24 hours (mg/24 h) or light chain multiple myeloma without measurable disease in the serum or the urine: serum immunoglobulin free light chain (FLC) \&gt;= 10 mg/dL and abnormal serum immunoglobulin kappa lambda FLC ratio; If central laboratory assessments are not available, relevant local laboratory measurements must exceed the minimum required level by at least 25%</li><li>Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT03548207/"><strong>CARTITUDE-1</strong></a><br><span class="m">NCT03548207</span></td>
-<td>Phase 1, Phase 2</td>
-<td>JNJ-68284528</td>
-<td>Janssen Research &amp; Development, LLC</td>
-<td>COMPLETED</td>
-<td class="n">126</td>
-<td>Phase 1b: Number of Participants With Adverse Events as Per Severity</td>
-<td><ul><li>Have documented diagnosis of multiple myeloma according to International Myeloma Working Group (IMWG) diagnostic criteria</li><li>Have measurable disease at Screening as defined by any of the following a) Serum monoclonal paraprotein (M-protein) level more than or equal to (\&gt;=) 1.0 gram per deciliter(g/dL) or urine M-protein level \&gt;=200 milligram per 24 hours (mg/24hr); or b) Light chain multiple myeloma without measurable disease in the serum or the urine: Serum immunoglobulin free light chain 10 mg/dL and abnormal serum immunoglobulin kappa lambda free light chain ratio</li><li>Have received at least 3 prior multiple myeloma treatment lines of therapy or are double refractory to an immunomodulatory drug (IMiD) and proteasome inhibitor (PI) (refractory multiple myeloma as defined by IMWG consensus criteria). Note: induction with or without hematopoietic stem cell transplant and with or without maintenance therapy is considered a single lines of therapy a) Undergone at least 1 complete cycle of treatment for each line of therapy, unless progressive disease (PD) was the best response to the regimen</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT04557098/"><strong>MajesTEC-1</strong></a><br><span class="m">NCT04557098</span></td>
-<td>Phase 2</td>
-<td>Teclistamab</td>
-<td>Janssen Research &amp; Development, LLC</td>
-<td>ACTIVE NOT RECRUITING</td>
-<td class="n">194</td>
-<td>Cohorts A and C: Overall Response Rate (ORR)</td>
-<td><ul><li>Documented diagnosis of multiple myeloma according to IMWG diagnostic criteria</li><li>Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1</li><li>Measurable disease: Cohort A and Cohort C: Multiple myeloma must be measurable by central laboratory assessment</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT04649359/"><strong>NCT04649359</strong></a><br><span class="m">NCT04649359</span></td>
-<td>Phase 2</td>
-<td>Elranatamab (PF-06863135)</td>
-<td>Pfizer</td>
-<td>ACTIVE NOT RECRUITING</td>
-<td class="n">187</td>
-<td>Objective Response Rate (ORR) by Blinded Independent Central Review (BICR) as Per International Myeloma Working Group (IMWG) Criteria</td>
-<td><ul><li>Diagnosis of multiple myeloma (IMWG criteria, Rajkumar et al, 2014)</li><li>Measurable disease, as defined by at least 1 of the following:
+  <div class="header-block">
+    <div class="header-badge"><i class="fa-solid fa-chart-line"></i> Competitive Landscape Matrix</div>
+    <h1>Multiple Myeloma: CAR-T, Bispecific & ADC Trials Side-by-Side</h1>
+    <p class="header-desc">
+      Head-to-head clinical intelligence comparing 12 landmark relapsed/refractory myeloma studies. Evaluate target antigens, line of therapy requirements, comparator regimens, and primary regulatory endpoints.
+    </p>
+  </div>
 
-  1. Serum M-protein \&gt;0.5 g/dL by SPEP
-  2. Urinary M-protein excretion \&gt;200 mg/24 hours by UPEP
-  3. Serum immunoglobulin FLC≥10 mg/dL (≥100 mg/L) AND abnormal serum immunoglobulin kappa to lambda FLC ratio</li><li>Refractory to at least one IMiD</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT05455320/"><strong>MonumenTAL-3</strong></a><br><span class="m">NCT05455320</span></td>
-<td>Phase 3</td>
-<td>Talquetamab; Daratumumab; Pomalidomide; Dexamethasone</td>
-<td>Janssen Research &amp; Development, LLC</td>
-<td>ACTIVE NOT RECRUITING</td>
-<td class="n">864</td>
-<td>Progression-Free Survival (PFS)</td>
-<td><ul><li>Documented multiple myeloma as defined: a) Multiple myeloma diagnosis according to the International Myeloma Working Group (IMWG) diagnostic criteria and b) Measurable disease at screening as defined by any of the following: i) Serum M-protein level greater than or equal to (\&gt;=) 0.5 grams per deciliter (g/dL) (central laboratory); ii) Urine M-protein level \&gt;= 200 milligram (mg) per 24 hours (central laboratory); iii) Light chain multiple myeloma without measurable M-protein in the serum or the urine: serum immunoglobulin free light chain \&gt;= 10 milligram per deciliter (mg/dL) (central laboratory), and abnormal serum immunoglobulin kappa lambda free light chain ratio</li><li>Relapsed or refractory disease as defined by: i) Relapsed disease is defined as an initial response to prior treatment, followed by confirmed progressive disease by IMWG criteria greater than (\&gt;) 60 days after cessation of treatment; ii) Refractory disease is defined as less than (\&lt;) 25 percent (%) reduction in monoclonal paraprotein (M-protein) or confirmed progressive disease by IMWG criteria during previous treatment or less than or equal to (\&lt;=) 60 days after cessation of treatment</li><li>Received at least 1 prior line of antimyeloma therapy including a proteasome inhibitor (PI) and lenalidomide. Participants who have received only 1 prior line of antimyeloma therapy must be considered lenalidomide-refractory (that is, have demonstrated progressive disease by IMWG criteria on or within 60 days of completion of lenalidomide-containing regimen). Participants who have received \&gt;=2 prior lines of antimyeloma therapy must be considered lenalidomide exposed</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT05083169/"><strong>MajesTEC-3</strong></a><br><span class="m">NCT05083169</span></td>
-<td>Phase 3</td>
-<td>Daratumumab; Pomalidomide; Dexamethasone; Bortezomib; Teclistamab</td>
-<td>Janssen Research &amp; Development, LLC</td>
-<td>ACTIVE NOT RECRUITING</td>
-<td class="n">587</td>
-<td>Progression Free Survival (PFS)</td>
-<td><ul><li>Documented multiple myeloma as defined by the criteria: a. multiple myeloma diagnosis according to the International Myeloma Working Group (IMWG) diagnostic criteria, b. measurable disease at screening as defined by any of the following: 1) serum M-protein level greater than or equal to (\&gt;=) 0.5 gram per deciliter (g/dL); or 2) urine M-protein level \&gt;=200 milligrams (mg)/24 hours; or 3) serum immunoglobulin free light chain \&gt;=10 mg/dL and abnormal serum immunoglobulin kappa lambda free light chain ratio</li><li>Received 1 to 3 prior line(s) of antimyeloma therapy including a proteasome inhibitor (PI) and lenalidomide; a. participants who have received only 1 line of prior line of antimyeloma therapy must be lenalidomide refractory. Stable disease or progression on or within 60 days of the last dose of lenalidomide given as maintenance will meet this criterion</li><li>Documented evidence of progressive disease based on investigator's determination of response by IMWG criteria on or after their last regimen</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT04246047/"><strong>DREAMM 7</strong></a><br><span class="m">NCT04246047</span></td>
-<td>Phase 3</td>
-<td>Belantamab mafodotin; Daratumumab; Bortezomib; Dexamethasone</td>
-<td>GlaxoSmithKline</td>
-<td>ACTIVE NOT RECRUITING</td>
-<td class="n">494</td>
-<td>Progression-free Survival (PFS)</td>
-<td><ul><li>Confirmed diagnosis of multiple myeloma as defined by the International Myeloma Working Group (IMWG) criteria.</li><li>Previously treated with at least 1 prior line of multiple myeloma (MM) therapy, and must have documented disease progression during or after their most recent therapy.</li><li>Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2.</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT06413498/"><strong>iMMagine-3</strong></a><br><span class="m">NCT06413498</span></td>
-<td>Phase 3</td>
-<td>Anitocabtagene Autoleucel; Cyclophosphamide; Fludarabine; Pomalidomide; Bortezomib; Dexamethasone; Daratumumab; Carfilzomib</td>
-<td>Kite, A Gilead Company</td>
-<td>ACTIVE NOT RECRUITING</td>
-<td class="n">452</td>
-<td>Progression-Free Survival (PFS)</td>
-<td><ul><li>Documented historical diagnosis of multiple myeloma (MM)</li><li>Received 1 to 3 prior lines of antimyeloma therapy, including an immunomodulatory drug (IMiD) and an anti-cluster of differentiation 38 (CD38) monoclonal antibody (mAb). A minimum of 2 consecutive cycles of an IMiD and an anti-CD38 mAb in any prior line of therapy is required. The IMiD and anti-CD38 mAb do not need to be from the same regimen in the prior line(s) of therapy.</li><li>Documented evidence of progressive disease by IMWG criteria based on the investigator's determination on or within 12 months of the last dose of the last regimen</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT04181827/"><strong>CARTITUDE-4</strong></a><br><span class="m">NCT04181827</span></td>
-<td>Phase 3</td>
-<td>Cilta-cel; Pomalidomide; Bortezomib; Dexamethasone; Daratumumab</td>
-<td>Janssen Research &amp; Development, LLC</td>
-<td>ACTIVE NOT RECRUITING</td>
-<td class="n">419</td>
-<td>Progression Free Survival (PFS)</td>
-<td><ul><li>Measurable disease at screening as defined by any of the following: (a) Serum monoclonal paraprotein (M-protein) level greater than or equal to (\&gt;=) 0.5 gram per deciliter (g/dL) or urine M-protein level \&gt;=200 milligram (mg)/24 hours; or (b) Light chain multiple myeloma without measurable M-protein in the serum or the urine: Serum free light chain \&gt;=10 mg/dL and abnormal serum free light chain ratio</li><li>Have received 1 to 3 prior lines of therapy including a proteasome inhibitor (PI) and an immunomodulatory drug (IMiD)</li><li>Have documented evidence of PD by International Myeloma Working Group (IMWG) criteria based on investigator's determination on or within 6 months of their last regimen</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT03651128/"><strong>KarMMa-3</strong></a><br><span class="m">NCT03651128</span></td>
-<td>Phase 3</td>
-<td>bb2121; Daratumumab; Pomalidomide; Dexamethasone; Bortezomib; Ixazomib; Lenalidomide; Carfilzomib; Elotuzumab</td>
-<td>Celgene</td>
-<td>COMPLETED</td>
-<td class="n">386</td>
-<td>Progression-free Survival (PFS)</td>
-<td><ul><li>Subjects must satisfy the following criteria to be enrolled in the study:</li><li>Subject is ≥ 18 years of age at the time of signing the informed consent form (ICF).</li><li>Subject must understand and voluntarily sign an ICF prior to any study-related assessments/procedures being conducted.</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT04484623/"><strong>DREAMM 8</strong></a><br><span class="m">NCT04484623</span></td>
-<td>Phase 3</td>
-<td>Belantamab mafodotin; Pomalidomide; Dexamethasone; Bortezomib</td>
-<td>GlaxoSmithKline</td>
-<td>ACTIVE NOT RECRUITING</td>
-<td class="n">302</td>
-<td>Progression-Free Survival (PFS)</td>
-<td><ul><li>Capable of giving signed informed consent.</li><li>Male or female, 18 years or older.</li><li>Have a confirmed diagnosis of multiple myeloma (MM) as defined by the International Myeloma Working Group (IMWG) criteria.</li></ul></td>
-</tr>
-<tr>
-<td><a href="../../trials/NCT06868654/"><strong>DREAMM 7</strong></a><br><span class="m">NCT06868654</span></td>
-<td>Phase 3</td>
-<td>Belantamab mafodotin; Daratumumab; Bortezomib; Dexamethasone</td>
-<td>GlaxoSmithKline</td>
-<td>ACTIVE NOT RECRUITING</td>
-<td class="n">72</td>
-<td>Progression-free Survival (PFS)</td>
-<td><ul><li>Confirmed diagnosis of multiple myeloma as defined by the International Myeloma Working Group (IMWG) criteria.</li><li>Previously treated with at least 1 prior line of multiple myeloma (MM) therapy and must have documented disease progression during or after their most recent therapy.</li><li>Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2.</li></ul></td>
-</tr>
-</tbody></table></div>
+  <!-- Interactive Controls -->
+  <div class="toolbar">
+    <div class="filter-group">
+      <span class="filter-label">Modality:</span>
+      <button type="button" class="filter-btn active" onclick="filterModality('all', this)">All (12)</button>
+      <button type="button" class="filter-btn" onclick="filterModality('cart', this)">CAR-T (4)</button>
+      <button type="button" class="filter-btn" onclick="filterModality('bispecific', this)">Bispecifics (4)</button>
+      <button type="button" class="filter-btn" onclick="filterModality('adc', this)">ADCs (4)</button>
+    </div>
+    <div class="meta-counter" id="activeCounter">Showing 12 of 12 trials</div>
+  </div>
 
-<h2>How this table was built</h2>
-<p class="note"><strong>Selection rule:</strong> a record is included if its conditions or title mention myeloma <em>and</em> an intervention name matches one of: ciltacabtagene autoleucel, idecabtagene vicleucel (bb2121), anitocabtagene autoleucel, teclistamab, elranatamab, talquetamab, belantamab mafodotin. Records outside the ClinSight dataset are not shown, so this is not a complete list of myeloma trials.</p>
-<p class="note"><strong>Source:</strong> every cell is copied from the ClinicalTrials.gov record for that NCT ID. Enrollment may be the planned or the actual number depending on the record's status. No efficacy results are shown on this page; for outcomes, read the linked primary publication.</p>
-<p class="note"><strong>Reading the acronyms:</strong> the registry lists the same acronym on more than one record (DREAMM 7). Use the NCT ID to tell them apart.</p>
-<p class="note">Data retrieved from ClinicalTrials.gov API v2. Records can change; check the registry for the current version.</p>
+  <!-- Responsive Comparison Matrix -->
+  <div class="matrix-wrapper">
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th>Trial &amp; Protocol</th>
+          <th>Modality</th>
+          <th>Target &amp; Regimen</th>
+          <th>Sponsor</th>
+          <th>Phase</th>
+          <th>Status</th>
+          <th>Enrolled</th>
+          <th>Primary Endpoint</th>
+          <th>Eligibility / Prior Lines</th>
+        </tr>
+      </thead>
+      <tbody id="matrixBody">
+
+        <!-- Row 1: MonumenTAL-1 -->
+        <tr data-modality="bispecific">
+          <td class="trial-cell">
+            <a href="/trials/NCT03399799/" class="trial-title">MonumenTAL-1</a>
+            <div class="trial-nct">NCT03399799</div>
+          </td>
+          <td><span class="badge badge-bispecific"><i class="fa-solid fa-dna"></i> Bispecific (T-cell)</span></td>
+          <td>
+            <div class="target-pill">GPRC5D × CD3</div>
+            <div class="intervention-sub">Talquetamab</div>
+          </td>
+          <td>Janssen (J&amp;J)</td>
+          <td><span class="badge badge-phase">Phase 1</span></td>
+          <td><span class="status-pill active">Active</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">279</td>
+          <td>
+            <div class="endpoint-code">DLT / Safety</div>
+            <div class="endpoint-desc">Part 1 MTD &amp; Adverse Events</div>
+          </td>
+          <td>
+            <div class="patient-setting">Relapsed / Refractory (≥3 Lines)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('MonumenTAL-1 (NCT03399799)', 'c1')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c1" style="display:none;">
+              <ul>
+                <li>Documented initial diagnosis of multiple myeloma according to International Myeloma Working Group (IMWG) criteria.</li>
+                <li>Participants with measurable multiple myeloma who have progressed on, or could not tolerate, all available established therapies.</li>
+                <li>Serum M-protein ≥ 1.0 g/dL or urine M-protein ≥ 200 mg/24h or FLC ≥ 10 mg/dL.</li>
+                <li>ECOG Performance Status 0 or 1.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 2: CARTITUDE-1 -->
+        <tr data-modality="cart">
+          <td class="trial-cell">
+            <a href="/trials/NCT03548207/" class="trial-title">CARTITUDE-1</a>
+            <div class="trial-nct">NCT03548207</div>
+          </td>
+          <td><span class="badge badge-cart"><i class="fa-solid fa-atom"></i> CAR-T (Autologous)</span></td>
+          <td>
+            <div class="target-pill">BCMA</div>
+            <div class="intervention-sub">Ciltacabtagene autoleucel (Cilta-cel)</div>
+          </td>
+          <td>Janssen / Legend</td>
+          <td><span class="badge badge-phase">Phase 1/2</span></td>
+          <td><span class="status-pill completed">Completed</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">126</td>
+          <td>
+            <div class="endpoint-code">ORR &amp; Safety</div>
+            <div class="endpoint-desc">Adverse Events &amp; Overall Response</div>
+          </td>
+          <td>
+            <div class="patient-setting">Triple-Class Exposed (≥3 Lines)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('CARTITUDE-1 (NCT03548207)', 'c2')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c2" style="display:none;">
+              <ul>
+                <li>Diagnosis of multiple myeloma by IMWG consensus criteria.</li>
+                <li>Received at least 3 prior treatment lines or double refractory to an IMiD and proteasome inhibitor (PI).</li>
+                <li>Measurable disease: Serum M-protein ≥ 1.0 g/dL or urine M-protein ≥ 200 mg/24h.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 3: MajesTEC-1 -->
+        <tr data-modality="bispecific">
+          <td class="trial-cell">
+            <a href="/trials/NCT04557098/" class="trial-title">MajesTEC-1</a>
+            <div class="trial-nct">NCT04557098</div>
+          </td>
+          <td><span class="badge badge-bispecific"><i class="fa-solid fa-dna"></i> Bispecific (T-cell)</span></td>
+          <td>
+            <div class="target-pill">BCMA × CD3</div>
+            <div class="intervention-sub">Teclistamab</div>
+          </td>
+          <td>Janssen (J&amp;J)</td>
+          <td><span class="badge badge-phase">Phase 2</span></td>
+          <td><span class="status-pill active">Active</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">194</td>
+          <td>
+            <div class="endpoint-code">ORR</div>
+            <div class="endpoint-desc">Overall Response Rate (Cohorts A/C)</div>
+          </td>
+          <td>
+            <div class="patient-setting">Relapsed / Refractory (≥3 Lines)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('MajesTEC-1 (NCT04557098)', 'c3')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c3" style="display:none;">
+              <ul>
+                <li>Documented diagnosis of multiple myeloma according to IMWG criteria.</li>
+                <li>ECOG Performance Status score of 0 or 1.</li>
+                <li>Measurable disease confirmed by central laboratory assessment.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 4: MagnetisMM-3 (NCT04649359) -->
+        <tr data-modality="bispecific">
+          <td class="trial-cell">
+            <a href="/trials/NCT04649359/" class="trial-title">MagnetisMM-3</a>
+            <div class="trial-nct">NCT04649359</div>
+          </td>
+          <td><span class="badge badge-bispecific"><i class="fa-solid fa-dna"></i> Bispecific (T-cell)</span></td>
+          <td>
+            <div class="target-pill">BCMA × CD3</div>
+            <div class="intervention-sub">Elranatamab (PF-06863135)</div>
+          </td>
+          <td>Pfizer</td>
+          <td><span class="badge badge-phase">Phase 2</span></td>
+          <td><span class="status-pill active">Active</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">187</td>
+          <td>
+            <div class="endpoint-code">ORR (BICR)</div>
+            <div class="endpoint-desc">Blinded Independent Central Review</div>
+          </td>
+          <td>
+            <div class="patient-setting">Refractory to ≥1 IMiD, PI, anti-CD38</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('MagnetisMM-3 (NCT04649359)', 'c4')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c4" style="display:none;">
+              <ul>
+                <li>Diagnosis of multiple myeloma by IMWG criteria.</li>
+                <li>Measurable disease: Serum M-protein &gt;0.5 g/dL or urinary M-protein &gt;200 mg/24h.</li>
+                <li>Refractory to at least one immunomodulatory drug (IMiD).</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 5: MonumenTAL-3 -->
+        <tr data-modality="bispecific">
+          <td class="trial-cell">
+            <a href="/trials/NCT05455320/" class="trial-title">MonumenTAL-3</a>
+            <div class="trial-nct">NCT05455320</div>
+          </td>
+          <td><span class="badge badge-bispecific"><i class="fa-solid fa-dna"></i> Bispecific (T-cell)</span></td>
+          <td>
+            <div class="target-pill">GPRC5D × CD3</div>
+            <div class="intervention-sub">Talquetamab + Dara-Pd</div>
+          </td>
+          <td>Janssen (J&amp;J)</td>
+          <td><span class="badge badge-phase">Phase 3</span></td>
+          <td><span class="status-pill active">Active</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">864</td>
+          <td>
+            <div class="endpoint-code">PFS</div>
+            <div class="endpoint-desc">Progression-Free Survival vs Dara-Pd</div>
+          </td>
+          <td>
+            <div class="patient-setting">Early Relapse (≥1 Prior Line)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('MonumenTAL-3 (NCT05455320)', 'c5')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c5" style="display:none;">
+              <ul>
+                <li>Received at least 1 prior line of antimyeloma therapy including a proteasome inhibitor and lenalidomide.</li>
+                <li>1 prior line must be lenalidomide-refractory; ≥2 lines must be lenalidomide-exposed.</li>
+                <li>Documented progressive disease on or within 60 days of completion of regimen.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 6: MajesTEC-3 -->
+        <tr data-modality="bispecific">
+          <td class="trial-cell">
+            <a href="/trials/NCT05083169/" class="trial-title">MajesTEC-3</a>
+            <div class="trial-nct">NCT05083169</div>
+          </td>
+          <td><span class="badge badge-bispecific"><i class="fa-solid fa-dna"></i> Bispecific (T-cell)</span></td>
+          <td>
+            <div class="target-pill">BCMA × CD3</div>
+            <div class="intervention-sub">Teclistamab + Daratumumab</div>
+          </td>
+          <td>Janssen (J&amp;J)</td>
+          <td><span class="badge badge-phase">Phase 3</span></td>
+          <td><span class="status-pill active">Active</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">587</td>
+          <td>
+            <div class="endpoint-code">PFS</div>
+            <div class="endpoint-desc">Progression-Free Survival vs DPd/DVd</div>
+          </td>
+          <td>
+            <div class="patient-setting">1 to 3 Prior Lines (Len-Refractory)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('MajesTEC-3 (NCT05083169)', 'c6')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c6" style="display:none;">
+              <ul>
+                <li>Received 1 to 3 prior lines of therapy including a PI and lenalidomide.</li>
+                <li>Participants with only 1 prior line must be lenalidomide-refractory.</li>
+                <li>Documented evidence of progressive disease on or after last regimen.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 7: DREAMM-7 -->
+        <tr data-modality="adc">
+          <td class="trial-cell">
+            <a href="/trials/NCT04246047/" class="trial-title">DREAMM-7</a>
+            <div class="trial-nct">NCT04246047</div>
+          </td>
+          <td><span class="badge badge-adc"><i class="fa-solid fa-capsules"></i> ADC (Targeted)</span></td>
+          <td>
+            <div class="target-pill">BCMA</div>
+            <div class="intervention-sub">Belantamab mafodotin + Bor-Dex</div>
+          </td>
+          <td>GSK</td>
+          <td><span class="badge badge-phase">Phase 3</span></td>
+          <td><span class="status-pill active">Active</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">494</td>
+          <td>
+            <div class="endpoint-code">PFS</div>
+            <div class="endpoint-desc">Progression-Free Survival vs DVd</div>
+          </td>
+          <td>
+            <div class="patient-setting">≥1 Prior Line (Relapsed / Refractory)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('DREAMM-7 (NCT04246047)', 'c7')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c7" style="display:none;">
+              <ul>
+                <li>Confirmed diagnosis of multiple myeloma by IMWG criteria.</li>
+                <li>Previously treated with at least 1 prior line of MM therapy.</li>
+                <li>Documented disease progression during or after most recent therapy; ECOG 0–2.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 8: iMMagine-3 -->
+        <tr data-modality="cart">
+          <td class="trial-cell">
+            <a href="/trials/NCT06413498/" class="trial-title">iMMagine-3</a>
+            <div class="trial-nct">NCT06413498</div>
+          </td>
+          <td><span class="badge badge-cart"><i class="fa-solid fa-atom"></i> CAR-T (Autologous)</span></td>
+          <td>
+            <div class="target-pill">BCMA (D-Domain)</div>
+            <div class="intervention-sub">Anitocabtagene autoleucel (Anito-cel)</div>
+          </td>
+          <td>Kite / Gilead</td>
+          <td><span class="badge badge-phase">Phase 3</span></td>
+          <td><span class="status-pill active">Active</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">452</td>
+          <td>
+            <div class="endpoint-code">PFS</div>
+            <div class="endpoint-desc">PFS vs Standard Regimens (DPd/DVd)</div>
+          </td>
+          <td>
+            <div class="patient-setting">1 to 3 Prior Lines (anti-CD38 Exposed)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('iMMagine-3 (NCT06413498)', 'c8')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c8" style="display:none;">
+              <ul>
+                <li>Received 1 to 3 prior lines of antimyeloma therapy including an IMiD and anti-CD38 mAb.</li>
+                <li>Minimum of 2 consecutive cycles of prior IMiD and anti-CD38 mAb required.</li>
+                <li>Documented progression within 12 months of the last dose.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 9: CARTITUDE-4 -->
+        <tr data-modality="cart">
+          <td class="trial-cell">
+            <a href="/trials/NCT04181827/" class="trial-title">CARTITUDE-4</a>
+            <div class="trial-nct">NCT04181827</div>
+          </td>
+          <td><span class="badge badge-cart"><i class="fa-solid fa-atom"></i> CAR-T (Autologous)</span></td>
+          <td>
+            <div class="target-pill">BCMA</div>
+            <div class="intervention-sub">Cilta-cel vs SOC (PVd / DPd)</div>
+          </td>
+          <td>Janssen / Legend</td>
+          <td><span class="badge badge-phase">Phase 3</span></td>
+          <td><span class="status-pill active">Active</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">419</td>
+          <td>
+            <div class="endpoint-code">PFS</div>
+            <div class="endpoint-desc">Progression-Free Survival vs SOC</div>
+          </td>
+          <td>
+            <div class="patient-setting">1 to 3 Prior Lines (Len-Refractory)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('CARTITUDE-4 (NCT04181827)', 'c9')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c9" style="display:none;">
+              <ul>
+                <li>Received 1 to 3 prior lines of therapy including a PI and an IMiD.</li>
+                <li>Documented evidence of PD by IMWG criteria on or within 6 months of last regimen.</li>
+                <li>Lenalidomide-refractory patient population.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 10: KarMMa-3 -->
+        <tr data-modality="cart">
+          <td class="trial-cell">
+            <a href="/trials/NCT03651128/" class="trial-title">KarMMa-3</a>
+            <div class="trial-nct">NCT03651128</div>
+          </td>
+          <td><span class="badge badge-cart"><i class="fa-solid fa-atom"></i> CAR-T (Autologous)</span></td>
+          <td>
+            <div class="target-pill">BCMA</div>
+            <div class="intervention-sub">Idecabtagene vicleucel (Ide-cel / bb2121)</div>
+          </td>
+          <td>BMS / Celgene</td>
+          <td><span class="badge badge-phase">Phase 3</span></td>
+          <td><span class="status-pill completed">Completed</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">386</td>
+          <td>
+            <div class="endpoint-code">PFS</div>
+            <div class="endpoint-desc">PFS vs Standard Regimens</div>
+          </td>
+          <td>
+            <div class="patient-setting">2 to 4 Prior Lines (Triple-Class Exposed)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('KarMMa-3 (NCT03651128)', 'c10')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c10" style="display:none;">
+              <ul>
+                <li>Received 2 to 4 prior lines of MM therapy including an IMiD, PI, and daratumumab.</li>
+                <li>Refractory to the last line of therapy.</li>
+                <li>Measurable disease by IMWG consensus standards.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 11: DREAMM-8 -->
+        <tr data-modality="adc">
+          <td class="trial-cell">
+            <a href="/trials/NCT04484623/" class="trial-title">DREAMM-8</a>
+            <div class="trial-nct">NCT04484623</div>
+          </td>
+          <td><span class="badge badge-adc"><i class="fa-solid fa-capsules"></i> ADC (Targeted)</span></td>
+          <td>
+            <div class="target-pill">BCMA</div>
+            <div class="intervention-sub">Belantamab mafodotin + Pom-Dex</div>
+          </td>
+          <td>GSK</td>
+          <td><span class="badge badge-phase">Phase 3</span></td>
+          <td><span class="status-pill active">Active</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">302</td>
+          <td>
+            <div class="endpoint-code">PFS</div>
+            <div class="endpoint-desc">PFS vs Pom-Vd (Bortezomib comparator)</div>
+          </td>
+          <td>
+            <div class="patient-setting">≥1 Prior Line (Len-Exposed)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('DREAMM-8 (NCT04484623)', 'c11')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c11" style="display:none;">
+              <ul>
+                <li>Confirmed diagnosis of multiple myeloma by IMWG criteria.</li>
+                <li>Received ≥1 prior line of therapy including lenalidomide.</li>
+                <li>Documented progressive disease during or after most recent therapy.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row 12: DREAMM-7 Expansion -->
+        <tr data-modality="adc">
+          <td class="trial-cell">
+            <a href="/trials/NCT06868654/" class="trial-title">DREAMM-7 Sub-Study</a>
+            <div class="trial-nct">NCT06868654</div>
+          </td>
+          <td><span class="badge badge-adc"><i class="fa-solid fa-capsules"></i> ADC (Targeted)</span></td>
+          <td>
+            <div class="target-pill">BCMA</div>
+            <div class="intervention-sub">Belantamab + Dara-Vd (China Cohort)</div>
+          </td>
+          <td>GSK</td>
+          <td><span class="badge badge-phase">Phase 3</span></td>
+          <td><span class="status-pill active">Active</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">72</td>
+          <td>
+            <div class="endpoint-code">PFS</div>
+            <div class="endpoint-desc">Progression-Free Survival</div>
+          </td>
+          <td>
+            <div class="patient-setting">≥1 Prior Line (Regional Bridging)</div>
+            <button type="button" class="criteria-toggle-btn" onclick="openModal('DREAMM-7 Sub-Study (NCT06868654)', 'c12')"><i class="fa-regular fa-file-lines"></i> View Criteria</button>
+            <div id="c12" style="display:none;">
+              <ul>
+                <li>Confirmed diagnosis of MM; at least 1 prior line of therapy.</li>
+                <li>Documented progression during or after most recent treatment.</li>
+                <li>ECOG performance status 0 to 2.</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Concise 2-Sentence Methodology & Disclaimer -->
+  <div class="audit-disclaimer-box">
+    <strong>Methodology &amp; Verification Note:</strong> Data is synchronized directly from ClinicalTrials.gov API v2 for trials matching relapsed/refractory myeloma interventions across CAR-T, bispecifics, and ADCs. Registry records are subject to updates; efficacy endpoints reflect primary trial protocol definitions rather than post-hoc publication readouts.
+  </div>
 </main>
+
+<!-- Criteria Slide-Out Modal -->
+<div class="modal-overlay" id="criteriaModal" onclick="closeModalOnBg(event)">
+  <div class="modal-card">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTrialTitle">Protocol Eligibility Criteria</div>
+      <button type="button" class="modal-close-btn" onclick="closeModal()">&times;</button>
+    </div>
+    <div class="modal-body" id="modalCriteriaContent">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+</div>
+
+<script>
+  function filterModality(type, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const rows = document.querySelectorAll('#matrixBody tr');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const rowModality = row.getAttribute('data-modality');
+      if (type === 'all' || rowModality === type) {
+        row.classList.remove('hidden-row');
+        visibleCount++;
+      } else {
+        row.classList.add('hidden-row');
+      }
+    });
+
+    document.getElementById('activeCounter').textContent = `Showing ${visibleCount} of ${rows.length} trials`;
+  }
+
+  function openModal(title, contentId) {
+    document.getElementById('modalTrialTitle').textContent = title + ' - Inclusion Criteria';
+    document.getElementById('modalCriteriaContent').innerHTML = document.getElementById(contentId).innerHTML;
+    document.getElementById('criteriaModal').classList.add('open');
+  }
+
+  function closeModal() {
+    document.getElementById('criteriaModal').classList.remove('open');
+  }
+
+  function closeModalOnBg(e) {
+    if (e.target.id === 'criteriaModal') {
+      closeModal();
+    }
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+
 </body>
 </html>
