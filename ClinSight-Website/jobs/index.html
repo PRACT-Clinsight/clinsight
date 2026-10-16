@@ -414,21 +414,36 @@
 
     <div class="page-wrap">
         <div class="hero-banner">
-            <div class="hero-badge"><i class="fa-solid fa-hospital-user"></i> Hospital &amp; Biopharma Openings</div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:12px;">
+                <div class="hero-badge"><i class="fa-solid fa-hospital-user"></i> Hospital &amp; Biopharma Openings</div>
+                <div style="display:inline-flex; align-items:center; gap:6px; padding:4px 10px; background:var(--emerald-glow); border:1px solid rgba(16, 185, 129, 0.3); border-radius:999px; color:var(--emerald); font-size:11px; font-weight:600; letter-spacing:0.04em;">
+                    <i class="fa-solid fa-circle-check"></i> Verified Direct ATS Links · No Aggregators · October 2026
+                </div>
+            </div>
             <h1 class="hero-title">Clinical Trials &amp; Research Careers</h1>
             <p class="hero-desc">
-                Verified clinical positions across Sweden and Europe, sourced directly from hospital trial units, academic centers, and biopharma sponsors.
+                Curated clinical research positions across Sweden and Denmark. Sourced directly from hospital trial units, academic medical centers, and biopharma sponsors with clear entry-level criteria, language requirements, and linked study protocols.
             </p>
         </div>
 
         <div class="filter-bar">
+            <input type="text" id="jobSearchInput" placeholder="Search by role, hospital, company, or city..." oninput="applyJobFilters()" style="flex:1; min-width:220px; padding:8px 14px; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:8px; color:var(--text-high); font-size:13px; outline:none;">
+            
             <select id="countryFilter" class="country-select" onchange="applyJobFilters()">
-                <option value="all">All Countries</option>
-                <option value="denmark">Denmark</option>
-                <option value="sweden">Sweden</option>
+                <option value="all">All Locations</option>
+                <option value="sweden">Sweden (SE)</option>
+                <option value="denmark">Denmark (DK)</option>
             </select>
+
+            <select id="langFilter" class="country-select" onchange="applyJobFilters()">
+                <option value="all">All Languages</option>
+                <option value="english">English Working Environment</option>
+                <option value="scandi">Scandinavian License / Language</option>
+            </select>
+
             <div class="filter-divider"></div>
             <div class="filter-chip active" onclick="setRoleFilter('all', this)">All Roles</div>
+            <div class="filter-chip" onclick="setRoleFilter('entry', this)" style="border-color:rgba(16, 185, 129, 0.4); color:var(--emerald);"><i class="fa-solid fa-seedling"></i> Entry / Transition Friendly</div>
             <div class="filter-chip" onclick="setRoleFilter('site', this)">Hospital Trial Units</div>
             <div class="filter-chip" onclick="setRoleFilter('biopharma', this)">Biopharma Sponsors</div>
             <div class="filter-chip" onclick="setRoleFilter('medtech', this)">MedTech &amp; Devices</div>
@@ -937,16 +952,28 @@
         }
 
         function applyJobFilters() {
+            const query = (document.getElementById('jobSearchInput')?.value || '').toLowerCase().trim();
             const country = document.getElementById('countryFilter').value;
+            const lang = document.getElementById('langFilter').value;
             const cards = document.querySelectorAll('.job-card');
 
             cards.forEach(card => {
                 const categories = (card.getAttribute('data-category') || '').split(' ');
+                const textContent = card.textContent.toLowerCase();
                 
                 const matchCountry = (country === 'all') || categories.includes(country);
                 const matchRole = (currentRole === 'all') || categories.includes(currentRole);
+                
+                let matchLang = true;
+                if (lang === 'english') {
+                    matchLang = categories.includes('english') || !categories.includes('scandi-req');
+                } else if (lang === 'scandi') {
+                    matchLang = categories.includes('scandi-req') || textContent.includes('legitimerad') || textContent.includes('autoriseret');
+                }
 
-                if (matchCountry && matchRole) {
+                const matchQuery = !query || textContent.includes(query);
+
+                if (matchCountry && matchRole && matchLang && matchQuery) {
                     card.style.display = 'block';
                 } else {
                     card.style.display = 'none';
