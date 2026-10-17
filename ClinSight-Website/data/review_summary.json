@@ -1,0 +1,373 @@
+{
+ "rest": {
+  "rows": 9171,
+  "flags": {
+   "Oncology supportive care (conditions)": 85,
+   "Pharmacokinetic / safety study": 108,
+   "Biosimilar / equivalence comparison": 127,
+   "Extension / rollover / follow-on": 566,
+   "Long-term study (title)": 466,
+   "Regional sub-cohort": 29,
+   "Expanded access": 15,
+   "Stem-cell mobilisation": 6,
+   "Peri-procedural": 5
+  },
+  "support": {
+   "First listed condition": 8297,
+   "Later listed condition": 410,
+   "First listed condition + other label": 352,
+   "Not in listed conditions": 33,
+   "Generic label (no specific disease)": 79
+  },
+  "needsReading": 522,
+  "review": {
+   "Rule-checked (first listed condition)": 8375,
+   "Read": 423,
+   "Doubtful": 326,
+   "Relabelled after read-through": 47
+  }
+ },
+ "pub": {
+  "Breast Cancer": {
+   "area": "Oncology & Hematology",
+   "total": 351,
+   "hold": 28,
+   "publish": 323
+  },
+  "CNS & Neuro-oncology": {
+   "area": "Oncology & Hematology",
+   "total": 32,
+   "hold": 2,
+   "publish": 30
+  },
+  "Colorectal & Anal Cancer": {
+   "area": "Oncology & Hematology",
+   "total": 104,
+   "hold": 6,
+   "publish": 98
+  },
+  "Upper GI & Hepatobiliary": {
+   "area": "Oncology & Hematology",
+   "total": 277,
+   "hold": 8,
+   "publish": 269
+  },
+  "Genitourinary Cancers": {
+   "area": "Oncology & Hematology",
+   "total": 125,
+   "hold": 6,
+   "publish": 119
+  },
+  "Gynecologic Cancers": {
+   "area": "Oncology & Hematology",
+   "total": 118,
+   "hold": 4,
+   "publish": 114
+  },
+  "Head, Neck & Thyroid": {
+   "area": "Oncology & Hematology",
+   "total": 74,
+   "hold": 11,
+   "publish": 63
+  },
+  "Leukemia, MDS & MPN": {
+   "area": "Oncology & Hematology",
+   "total": 187,
+   "hold": 11,
+   "publish": 176
+  },
+  "Lymphoma": {
+   "area": "Oncology & Hematology",
+   "total": 138,
+   "hold": 6,
+   "publish": 132
+  },
+  "Multiple Myeloma": {
+   "area": "Oncology & Hematology",
+   "total": 124,
+   "hold": 9,
+   "publish": 115
+  },
+  "Melanoma & Skin Cancer": {
+   "area": "Oncology & Hematology",
+   "total": 91,
+   "hold": 3,
+   "publish": 88
+  },
+  "Other / Unspecified Solid Tumors": {
+   "area": "Oncology & Hematology",
+   "total": 73,
+   "hold": 69,
+   "publish": 4
+  },
+  "Multiple Tumor Types": {
+   "area": "Oncology & Hematology",
+   "total": 6,
+   "hold": 6,
+   "publish": 0
+  },
+  "Prostate Cancer": {
+   "area": "Oncology & Hematology",
+   "total": 161,
+   "hold": 19,
+   "publish": 142
+  },
+  "Thoracic & Lung Cancer": {
+   "area": "Oncology & Hematology",
+   "total": 471,
+   "hold": 23,
+   "publish": 448
+  },
+  "Sarcoma & Bone": {
+   "area": "Oncology & Hematology",
+   "total": 25,
+   "hold": 2,
+   "publish": 23
+  },
+  "Atherosclerosis & Coronary Disease": {
+   "area": "Cardiometabolic",
+   "total": 124,
+   "hold": 12,
+   "publish": 112
+  },
+  "Chronic Kidney Disease": {
+   "area": "Cardiometabolic",
+   "total": 156,
+   "hold": 17,
+   "publish": 139
+  },
+  "Dyslipidemia & Lipid Disorders": {
+   "area": "Cardiometabolic",
+   "total": 374,
+   "hold": 43,
+   "publish": 331
+  },
+  "Essential Hypertension": {
+   "area": "Cardiometabolic",
+   "total": 350,
+   "hold": 30,
+   "publish": 320
+  },
+  "Heart Failure & Cardiomyopathy": {
+   "area": "Cardiometabolic",
+   "total": 117,
+   "hold": 9,
+   "publish": 108
+  },
+  "MASH / Metabolic Liver Disease": {
+   "area": "Cardiometabolic",
+   "total": 24,
+   "hold": 1,
+   "publish": 23
+  },
+  "Obesity & Weight Management": {
+   "area": "Cardiometabolic",
+   "total": 196,
+   "hold": 7,
+   "publish": 189
+  },
+  "Thrombosis, Arrhythmia & Stroke": {
+   "area": "Cardiometabolic",
+   "total": 131,
+   "hold": 24,
+   "publish": 107
+  },
+  "Pulmonary Arterial Hypertension": {
+   "area": "Pulmonology",
+   "total": 88,
+   "hold": 23,
+   "publish": 65
+  },
+  "Type 2 Diabetes Mellitus": {
+   "area": "Cardiometabolic",
+   "total": 817,
+   "hold": 42,
+   "publish": 775
+  },
+  "Retinal Diseases (AMD/DME/GA)": {
+   "area": "Ophthalmology",
+   "total": 187,
+   "hold": 13,
+   "publish": 174
+  },
+  "Inflammatory Bowel Disease (IBD)": {
+   "area": "Gastroenterology (IBD)",
+   "total": 226,
+   "hold": 29,
+   "publish": 197
+  },
+  "Iron Deficiency & Anemia": {
+   "area": "Hematology (Non-Malignant)",
+   "total": 134,
+   "hold": 2,
+   "publish": 132
+  },
+  "Ankylosing Spondylitis & Axial SpA": {
+   "area": "Immunology",
+   "total": 69,
+   "hold": 5,
+   "publish": 64
+  },
+  "Rheumatoid Arthritis": {
+   "area": "Immunology",
+   "total": 293,
+   "hold": 53,
+   "publish": 240
+  },
+  "Systemic Lupus Erythematosus": {
+   "area": "Immunology",
+   "total": 68,
+   "hold": 13,
+   "publish": 55
+  },
+  "Atopic Dermatitis & Eczema": {
+   "area": "Immunology & Dermatology",
+   "total": 176,
+   "hold": 21,
+   "publish": 155
+  },
+  "Psoriasis & Psoriatic Arthritis": {
+   "area": "Immunology & Dermatology",
+   "total": 397,
+   "hold": 32,
+   "publish": 365
+  },
+  "Hepatitis C (HCV)": {
+   "area": "Infectious Diseases",
+   "total": 220,
+   "hold": 6,
+   "publish": 214
+  },
+  "HIV-1 Infection": {
+   "area": "Infectious Diseases",
+   "total": 183,
+   "hold": 22,
+   "publish": 161
+  },
+  "RSV": {
+   "area": "Infectious Diseases",
+   "total": 5,
+   "hold": 0,
+   "publish": 5
+  },
+  "ALS": {
+   "area": "Neurology",
+   "total": 25,
+   "hold": 6,
+   "publish": 19
+  },
+  "Alzheimer's Disease": {
+   "area": "Neurology",
+   "total": 115,
+   "hold": 11,
+   "publish": 104
+  },
+  "Migraine": {
+   "area": "Neurology",
+   "total": 153,
+   "hold": 20,
+   "publish": 133
+  },
+  "Multiple Sclerosis": {
+   "area": "Neurology",
+   "total": 165,
+   "hold": 31,
+   "publish": 134
+  },
+  "Parkinson's Disease": {
+   "area": "Neurology",
+   "total": 141,
+   "hold": 37,
+   "publish": 104
+  },
+  "Glaucoma & Ocular Hypertension": {
+   "area": "Ophthalmology",
+   "total": 143,
+   "hold": 10,
+   "publish": 133
+  },
+  "Bipolar Disorder": {
+   "area": "Psychiatry & CNS",
+   "total": 128,
+   "hold": 16,
+   "publish": 112
+  },
+  "Major Depressive Disorder": {
+   "area": "Psychiatry & CNS",
+   "total": 274,
+   "hold": 42,
+   "publish": 232
+  },
+  "Schizophrenia & Psychosis": {
+   "area": "Psychiatry & CNS",
+   "total": 275,
+   "hold": 57,
+   "publish": 218
+  },
+  "Asthma": {
+   "area": "Pulmonology",
+   "total": 383,
+   "hold": 48,
+   "publish": 335
+  },
+  "COPD": {
+   "area": "Pulmonology",
+   "total": 311,
+   "hold": 18,
+   "publish": 293
+  },
+  "Idiopathic Pulmonary Fibrosis": {
+   "area": "Pulmonology",
+   "total": 31,
+   "hold": 5,
+   "publish": 26
+  },
+  "Cystic Fibrosis": {
+   "area": "Rare Diseases & Genetics",
+   "total": 104,
+   "hold": 26,
+   "publish": 78
+  },
+  "Duchenne Muscular Dystrophy": {
+   "area": "Rare Diseases & Genetics",
+   "total": 19,
+   "hold": 2,
+   "publish": 17
+  },
+  "Spinal Muscular Atrophy": {
+   "area": "Rare Diseases & Genetics",
+   "total": 20,
+   "hold": 5,
+   "publish": 15
+  },
+  "Hemophilia": {
+   "area": "Rare Diseases & Hematology",
+   "total": 117,
+   "hold": 12,
+   "publish": 105
+  },
+  "Paroxysmal Nocturnal Hemoglobinuria (PNH)": {
+   "area": "Rare Diseases & Hematology",
+   "total": 36,
+   "hold": 4,
+   "publish": 32
+  },
+  "Sickle Cell & Thalassemia": {
+   "area": "Rare Diseases & Hematology",
+   "total": 27,
+   "hold": 4,
+   "publish": 23
+  },
+  "Systemic Amyloidosis": {
+   "area": "Rare Diseases & Hematology",
+   "total": 12,
+   "hold": 1,
+   "publish": 11
+  }
+ },
+ "tot": {
+  "total": 9171,
+  "hold": 972,
+  "publish": 8199
+ }
+}

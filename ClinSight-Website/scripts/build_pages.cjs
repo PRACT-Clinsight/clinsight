@@ -992,16 +992,33 @@ function renderTrialPage(trial, allTrials) {
 function buildSitemap(trials) {
   const today = new Date().toISOString().slice(0, 10);
   const urls = [];
-  urls.push('  <url>\n    <loc>' + BASE_URL + '/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>');
-  urls.push('  <url>\n    <loc>' + BASE_URL + '/trials/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>');
 
-  const extra = ['/explorer/', '/compare/', '/jobs/', '/compare/myeloma-car-t-bispecific-adc/'].filter((p) => fs.existsSync(path.join(ROOT_DIR, p.slice(1), 'index.html')));
-  for (const p of extra) {
-    urls.push('  <url>\n    <loc>' + BASE_URL + p + '</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>');
-  }
+  // Core high-authority landers (Tier 1)
+  urls.push('  <url>\n    <loc>' + BASE_URL + '/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>');
+  urls.push('  <url>\n    <loc>' + BASE_URL + '/explorer/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>');
+  urls.push('  <url>\n    <loc>' + BASE_URL + '/compare/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>');
+  urls.push('  <url>\n    <loc>' + BASE_URL + '/compare/myeloma-car-t-bispecific-adc/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>');
+  urls.push('  <url>\n    <loc>' + BASE_URL + '/jobs/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.9</priority>\n  </url>');
+
+  // The Top Curated Landmark Studies (Primary Clinical Evidentiary Anchors)
+  const landmarkNcts = new Set([
+    'NCT03734029', // DESTINY-Breast04 (T-DXd)
+    'NCT04181827', // CARTITUDE-4 (Cilta-cel)
+    'NCT03574597', // SELECT (Semaglutide CVOT)
+    'NCT03525444', // TRIKAFTA (CFTR)
+    'NCT03548207', // CARTITUDE-1
+    'NCT03399799', // MonumenTAL-1 (Talquetamab)
+    'NCT04526691', // MajesTEC-1 (Teclistamab)
+    'NCT03529110', // Keynote Landmark
+    'NCT03971409', // MagnetisMM-1 (Elranatamab)
+    'NCT02142738', // CheckMate 067
+    'NCT02578680'  // CASSIOPEIA
+  ]);
 
   for (const trial of trials) {
-    urls.push('  <url>\n    <loc>' + BASE_URL + '/trials/' + trial.nctId + '/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>');
+    if (landmarkNcts.has(trial.nctId)) {
+      urls.push('  <url>\n    <loc>' + BASE_URL + '/trials/' + trial.nctId + '/</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.85</priority>\n  </url>');
+    }
   }
 
   return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.join('\n') + '\n</urlset>';

@@ -118,7 +118,7 @@ def build_ledger():
             "pubmed_pmids": "; ".join(mod4["pmids"]) if mod4["pmids"] else "None",
             "module1_3_density_gate_18_fields": f"{pop_13}/18 ({pct_13}) PASS",
             "statutory_api_source_url": mod4["nct_url"],
-            "archived_raw_api_v2_json": f"https://clinsight.pract.eu/data/raw_api_v2/{nct}.json",
+            "archived_raw_api_v2_json": f"https://clinsight.ket-thm4u.workers.dev/data/raw_api_v2/{nct}.json",
             "build_consistency_status": "BUILD_STRING_MATCH_PASSED",
             "external_registry_audit_status": external_verified.get(nct, "PENDING_EXTERNAL_SPOT_CHECK"),
             "audit_timestamp": "2026-10-17T11:32:00Z"

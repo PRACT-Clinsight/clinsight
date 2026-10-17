@@ -5,7 +5,7 @@ import html
 TRIALS_DIR = "ClinSight-Website/trials"
 TARGETS_DIR = "ClinSight-Website/targets/mettl3-inhibitors"
 DATA_FILE = "ClinSight-Website/data/phase1_2_mettl3_extracted.json"
-BASE_URL = "https://clinsight.pract.eu"
+BASE_URL = "https://clinsight.ket-thm4u.workers.dev"
 
 # Strict Gate ("Verify before you aggregate"):
 # All three interventional METTL3 inhibitor trials are confirmed and verified.

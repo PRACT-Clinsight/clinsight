@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClinSight - Clinical Trials &amp; Evidence Generation</title>
-    <meta name="description" content="Primary-source clinical trial registry intelligence, official protocol PDFs, statistical analysis plans, and verified clinical research evidence.">
-    <link rel="canonical" href="https://clinsight.pract.eu/">
+    <title>ClinSight — Phase 1 &amp; 2 Protocol &amp; Regulatory Intelligence Workbench</title>
+    <meta name="description" content="Primary-source Phase 1 and Phase 2 clinical trial protocol architecture, dose-escalation designs, DLT windows, organ eligibility cutoffs, and provenance-tagged statutory registry records.">
+    <link rel="canonical" href="https://clinsight.ket-thm4u.workers.dev/">
     
     <!-- Open Graph & Social Cards -->
-    <meta property="og:title" content="ClinSight - Clinical Trials &amp; Evidence Generation">
-    <meta property="og:description" content="Primary-source clinical trial designs, official protocol PDFs, statistical analysis plans, and verified clinical trial intelligence.">
-    <meta property="og:url" content="https://clinsight.pract.eu/">
+    <meta property="og:title" content="ClinSight — Phase 1 &amp; 2 Protocol &amp; Regulatory Intelligence Workbench">
+    <meta property="og:description" content="Provenance-verified Phase 1/2 protocol dossiers, cross-trial target matrices, and archived ClinicalTrials.gov API v2 records for Clinical Trial Affairs and Medical Writers.">
+    <meta property="og:url" content="https://clinsight.ket-thm4u.workers.dev/">
     <meta property="og:type" content="website">
 
     <!-- Fonts -->
@@ -27,24 +27,24 @@
       "@graph": [
         {
           "@type": "WebSite",
-          "@id": "https://clinsight.pract.eu/#website",
-          "url": "https://clinsight.pract.eu/",
+          "@id": "https://clinsight.ket-thm4u.workers.dev/#website",
+          "url": "https://clinsight.ket-thm4u.workers.dev/",
           "name": "ClinSight",
-          "description": "Clinical Trials & Research Intelligence Platform",
+          "description": "Phase 1 & 2 Protocol & Regulatory Intelligence Workbench",
           "publisher": {
             "@type": "Organization",
             "name": "ClinSight",
-            "url": "https://clinsight.pract.eu/"
+            "url": "https://clinsight.ket-thm4u.workers.dev/"
           }
         },
         {
           "@type": "MedicalWebPage",
-          "@id": "https://clinsight.pract.eu/#webpage",
-          "url": "https://clinsight.pract.eu/",
-          "name": "ClinSight Clinical Trials Portal",
+          "@id": "https://clinsight.ket-thm4u.workers.dev/#webpage",
+          "url": "https://clinsight.ket-thm4u.workers.dev/",
+          "name": "ClinSight Phase 1 & 2 Protocol & Regulatory Intelligence Workbench",
           "about": {
             "@type": "MedicalCondition",
-            "name": "Clinical Trials and Drug Development"
+            "name": "Early-Phase Clinical Trial Protocol Design and Regulatory Intelligence"
           }
         }
       ]
@@ -471,18 +471,22 @@
 <body>
     <nav class="site-nav">
         <div class="nav-inner">
-            <a href="https://clinsight.pract.eu/" class="nav-brand">
+            <a href="/" class="nav-brand">
                 <div class="logo-text">ClinSight<span>™</span></div>
-                <div class="logo-tag">Clinical Trials &amp; Evidence Generation</div>
+                <div class="logo-tag">Phase 1 &amp; 2 Protocol &amp; Regulatory Intelligence</div>
             </a>
             <div class="nav-links">
-                <a href="https://clinsight.pract.eu/" class="active nav-link-home">Home</a>
-                <a href="https://clinsight.pract.eu/explorer/">
+                <a href="/" class="active nav-link-home">Workbench</a>
+                <a href="/targets/mettl3-inhibitors/">
+                    <span class="nav-text-desktop">METTL3 Target Hub</span>
+                    <span class="nav-text-mobile">Target Hub</span>
+                </a>
+                <a href="/explorer/">
                     <span class="nav-text-desktop">Trials Explorer</span>
                     <span class="nav-text-mobile">Explorer</span>
                 </a>
-                <a href="https://clinsight.pract.eu/compare/">Comparator</a>
-                <a href="https://clinsight.pract.eu/jobs/">Careers</a>
+                <a href="/compare/">Comparator</a>
+                <a href="/jobs/">Careers</a>
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
                     <i class="fa-solid fa-circle-half-stroke"></i>
                 </button>
@@ -492,81 +496,131 @@
 
     <header class="hero-section">
         <div class="hero-badge">
-            <i class="fa-solid fa-database"></i> Official Registry Fact Base
+            <i class="fa-solid fa-shield-halved"></i> Provenance-Enforced Registry Intelligence
         </div>
-        <h1 class="hero-title">Clinical Trials &amp; Evidence Generation</h1>
+        <h1 class="hero-title">Phase 1 &amp; 2 Protocol &amp; Regulatory Workbench</h1>
         <p class="hero-subtitle">
-            Direct access to official study protocol PDFs, statistical analysis plans, and peer-reviewed clinical trial data.
+            Structured early-phase protocol extraction for Clinical Trial Affairs, Medical Writers (IB / CSR / Protocol drafters), and Regulatory Intelligence teams. Every parameter carries its build-time string-matched provenance state (<code>STATED</code> · <code>INFERRED</code> · <code>NOT_REPORTED</code>) anchored to archived ClinicalTrials.gov API v2 records.
         </p>
 
         <div class="metric-row">
             <div class="metric-box">
-                <div class="metric-num">8,195</div>
-                <div class="metric-label">Clinical Trial Dossiers</div>
+                <div class="metric-num">3-State</div>
+                <div class="metric-label">Provenance Contract (✓ / ~ / —)</div>
             </div>
             <div class="metric-box">
-                <div class="metric-num">54</div>
-                <div class="metric-label">Disease Areas</div>
+                <div class="metric-num">&ge;50.0%</div>
+                <div class="metric-label">Module 1–3 Density Gate (&ge;9/18 Fields)</div>
             </div>
             <div class="metric-box">
-                <div class="metric-num">100%</div>
-                <div class="metric-label">Evidence Linked</div>
+                <div class="metric-num">SHA-256</div>
+                <div class="metric-label">Archived Raw API v2 Payloads</div>
             </div>
         </div>
     </header>
 
     <!-- Main 3-Pillar Gateway Grid -->
     <main class="portal-grid">
-        <!-- 1. Explorer -->
-        <a href="/explorer/" class="portal-card card-explorer">
+        <!-- 1. Target-Class Protocol Hub -->
+        <a href="/targets/mettl3-inhibitors/" class="portal-card card-explorer">
             <div>
-                <div class="portal-icon"><i class="fa-solid fa-table-cells"></i></div>
-                <h2 class="portal-title">Clinical Trials Explorer</h2>
+                <div class="portal-icon"><i class="fa-solid fa-dna"></i></div>
+                <h2 class="portal-title">METTL3 Inhibitor Target Hub</h2>
                 <p class="portal-desc">
-                    Search and filter 8,100+ clinical trials across Oncology, Rare Diseases, and Cardiometabolic pipelines. Access official Protocol PDFs, SAPs, and verified citations.
+                    Cross-trial Phase 1/2 protocol matrix comparing clinical-stage METTL3 RNA methyltransferase inhibitors (STC-15 and EP102) across dose-escalation designs (BOIN vs 3+3 + Simon's two-stage vs 3+3 + Dose Expansion), DLT windows, RP2D/MTD definitions, and organ eligibility cutoffs.
                 </p>
             </div>
-            <span class="portal-action">Launch Explorer <i class="fa-solid fa-arrow-right"></i></span>
+            <span class="portal-action">Open Target Class Matrix <i class="fa-solid fa-arrow-right"></i></span>
         </a>
 
-        <!-- 2. Comparator -->
-        <a href="/compare/" class="portal-card card-compare">
+        <!-- 2. Comparator & Verification Ledger -->
+        <a href="/compare/myeloma-car-t-bispecific-adc/" class="portal-card card-compare">
             <div>
                 <div class="portal-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-                <h2 class="portal-title">Comparison Engine</h2>
+                <h2 class="portal-title">Modality &amp; Endpoint Comparator</h2>
                 <p class="portal-desc">
-                    Conduct head-to-head clinical design, primary endpoint, and eligibility comparisons between competing drug modalities (CAR-T vs Bispecific vs ADC) in relapsed/refractory settings.
+                    Side-by-side trial design, primary endpoint, and eligibility comparisons between competing drug modalities (CAR-T vs Bispecific vs ADC in Relapsed/Refractory Multiple Myeloma) and indexed clinical trial records.
                 </p>
             </div>
-            <span class="portal-action">Open Comparator <i class="fa-solid fa-arrow-right"></i></span>
+            <span class="portal-action">Open Modality Comparator <i class="fa-solid fa-arrow-right"></i></span>
         </a>
 
         <!-- 3. Jobs -->
-        <a href="https://clinsight.pract.eu/jobs/" class="portal-card card-jobs">
+        <a href="/jobs/" class="portal-card card-jobs">
             <div>
                 <div class="portal-icon"><i class="fa-solid fa-briefcase"></i></div>
-                <h2 class="portal-title">Research &amp; Clinical Careers</h2>
+                <h2 class="portal-title">Clinical &amp; Regulatory Careers</h2>
                 <p class="portal-desc">
-                    Verified clinical positions across Sweden and Europe. Indexed from hospital trial units, academic medical centers, and biopharma sponsors with full requirements analysis.
+                    Verified clinical research and regulatory positions across Sweden and Europe. Indexed from hospital trial units, academic medical centers, and biopharma sponsors with live link verification.
                 </p>
             </div>
-            <span class="portal-action">Explore Positions <i class="fa-solid fa-arrow-right"></i></span>
+            <span class="portal-action">Explore Verified Positions <i class="fa-solid fa-arrow-right"></i></span>
         </a>
     </main>
 
-    <!-- Semantic Landmark Studies Section (High SEO crawl authority) -->
+    <!-- Section 1: Externally Verified Phase 1/2 Protocol Dossiers -->
     <section class="landmarks-section">
         <div class="landmarks-inner">
             <div class="section-header">
                 <div>
-                    <h2 class="section-title">Featured Benchmark Clinical Studies</h2>
-                    <p class="section-subtitle">Direct dossiers with official protocol documentation and primary endpoints.</p>
+                    <h2 class="section-title">Phase 1 &amp; 2 METTL3 Inhibitor Protocol Dossiers</h2>
+                    <p class="section-subtitle">4-Module early-phase dossiers passing the &ge;50.0% (&ge;9/18) Module 1–3 Protocol Density Gate, backed by SHA-256 archived API v2 snapshots.</p>
                 </div>
-                <a href="/explorer/" class="see-all-link">Browse all 8,195 clinical trials <i class="fa-solid fa-arrow-right"></i></a>
+                <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                    <a href="/data/ClinSight_Phase1_2_Master_Verification_Ledger.csv" download class="see-all-link"><i class="fa-solid fa-file-csv"></i> Download Master Verification Ledger (.csv)</a>
+                    <a href="/targets/mettl3-inhibitors/" class="see-all-link">Open Full Class Hub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
 
             <div class="landmark-grid">
-                <a href="https://clinsight.pract.eu/trials/NCT03734029/" class="landmark-item">
+                <a href="/trials/NCT06975293/" class="landmark-item">
+                    <div>
+                        <div class="landmark-tag">NCT06975293 · PHASE 1B / PHASE 2 · 9/18 (50.0%)</div>
+                        <div class="landmark-name">STC-15 in Combination With Toripalimab in Advanced Malignancies (3+3 + Simon's Two-Stage)</div>
+                    </div>
+                    <div class="landmark-meta">STORM Therapeutics · Independent Live Fetch Verified · SHA-256: 473367ad0d2cb4ad</div>
+                </a>
+
+                <a href="/trials/NCT07163325/" class="landmark-item">
+                    <div>
+                        <div class="landmark-tag">NCT07163325 · PHASE 1 · 11/18 (61.1%)</div>
+                        <div class="landmark-name">EP102 Monotherapy &amp; Combination in Advanced Solid Malignancies (BOIN Design · 21-Day DLT Window)</div>
+                    </div>
+                    <div class="landmark-meta">Epics Therapeutics · Archived API v2 Verified · SHA-256: 7013791775f784c1</div>
+                </a>
+
+                <a href="/trials/NCT05584111/" class="landmark-item">
+                    <div>
+                        <div class="landmark-tag">NCT05584111 · PHASE 1 FIH · 10/18 (55.6%)</div>
+                        <div class="landmark-name">First-in-Human Study of Oral METTL3 Inhibitor STC-15 (3+3 + Dose Expansion · Modified Fibonacci)</div>
+                    </div>
+                    <div class="landmark-meta">STORM Therapeutics · Archived API v2 Verified · SHA-256: 4e47750f7f5f1c48</div>
+                </a>
+
+                <a href="/targets/mettl3-inhibitors/" class="landmark-item" style="border-style:dashed;">
+                    <div>
+                        <div class="landmark-tag" style="color:var(--amber);">CLASS GATE AUDIT · EXCLUDED RECORD</div>
+                        <div class="landmark-name">NCT06762925 — Excluded from Interventional Class Matrix (Observational Biomarker Registry)</div>
+                    </div>
+                    <div class="landmark-meta">Xijing Hospital · studyType: OBSERVATIONAL · No Interventions</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Curated Registrational Benchmark Studies -->
+    <section class="landmarks-section" style="border-top:none; padding-top:0;">
+        <div class="landmarks-inner">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Curated Registrational Benchmark Dossiers</h2>
+                    <p class="section-subtitle">Late-phase registrational trials with linked protocol documentation, statistical analysis plans, and primary endpoint tables.</p>
+                </div>
+                <a href="/explorer/" class="see-all-link">Open Clinical Trials Explorer <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="landmark-grid">
+                <a href="/trials/NCT03734029/" class="landmark-item">
                     <div>
                         <div class="landmark-tag">DESTINY-Breast04 · ADC</div>
                         <div class="landmark-name">Trastuzumab Deruxtecan vs Physician's Choice in HER2-Low Breast Cancer</div>
@@ -574,7 +628,7 @@
                     <div class="landmark-meta">NCT03734029 · Daiichi Sankyo / AstraZeneca</div>
                 </a>
 
-                <a href="https://clinsight.pract.eu/trials/NCT04181827/" class="landmark-item">
+                <a href="/trials/NCT04181827/" class="landmark-item">
                     <div>
                         <div class="landmark-tag">CARTITUDE-4 · CAR-T</div>
                         <div class="landmark-name">Ciltacabtagene Autoleucel vs Standard Regimens in Relapsed Myeloma</div>
@@ -582,7 +636,7 @@
                     <div class="landmark-meta">NCT04181827 · Janssen R&amp;D / Legend Biotech</div>
                 </a>
 
-                <a href="https://clinsight.pract.eu/trials/NCT03574597/" class="landmark-item">
+                <a href="/trials/NCT03574597/" class="landmark-item">
                     <div>
                         <div class="landmark-tag">SELECT · GLP-1</div>
                         <div class="landmark-name">Semaglutide Effects on Cardiovascular Outcomes in Overweight/Obesity</div>
@@ -590,7 +644,7 @@
                     <div class="landmark-meta">NCT03574597 · Novo Nordisk A/S</div>
                 </a>
 
-                <a href="https://clinsight.pract.eu/trials/NCT03525444/" class="landmark-item">
+                <a href="/trials/NCT03525444/" class="landmark-item">
                     <div>
                         <div class="landmark-tag">TRIKAFTA · CFTR</div>
                         <div class="landmark-name">Elexacaftor / Tezacaftor / Ivacaftor in Cystic Fibrosis Heterozygous F508del</div>
@@ -604,13 +658,16 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <div>
-                <strong>ClinSight™</strong> · Primary Registry Fact Base &middot; <a href="https://pract.eu" style="color:inherit; text-decoration:underline;">PRACT</a>
+                <strong>ClinSight™</strong> · Phase 1 &amp; 2 Protocol &amp; Regulatory Intelligence Workbench · Enforced under Unified Integrity Contract
             </div>
             <div class="footer-links">
-                <a href="https://clinsight.pract.eu/explorer/">Explorer</a>
-                <a href="https://clinsight.pract.eu/compare/">Comparator</a>
-                <a href="https://clinsight.pract.eu/jobs/">Careers</a>
-                <a href="https://clinsight.pract.eu/sitemap.xml">Sitemap</a>
+                <a href="/targets/mettl3-inhibitors/">METTL3 Hub</a>
+                <a href="/data/ClinSight_Phase1_2_Master_Verification_Ledger.csv">Verification Ledger (.csv)</a>
+                <a href="/data/registry_drift_report.json">Drift Monitor (.json)</a>
+                <a href="/explorer/">Explorer</a>
+                <a href="/compare/">Comparator</a>
+                <a href="/jobs/">Careers</a>
+                <a href="/sitemap.xml">Sitemap</a>
             </div>
         </div>
     </footer>

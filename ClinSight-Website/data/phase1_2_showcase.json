@@ -1,0 +1,166 @@
+[
+  {
+    "nctId": "NCT06975293",
+    "acronym": null,
+    "briefTitle": "STC-15 as a Part of Combination Therapy With Toripalimab in Selected Advanced Cancers and as Monotherapy in Participants With Selected Sarcomas",
+    "officialTitle": "Open-label, Non-randomized, Multi-cohort, Phase 1b/2 Trial Investigating the Safety, Tolerability, and Antitumor Activity of STC-15 (a METTL3 Inhibitor) as a Part of Combination Therapy With Toripalimab in Participants With Selected Advanced Cancers and as Monotherapy in Participants With Selected Sarcomas",
+    "phase": "PHASE1/PHASE2",
+    "status": "RECRUITING",
+    "isCompleted": false,
+    "sponsor": "STORM Therapeutics LTD",
+    "conditions": [
+      "Solid Tumor",
+      "Sarcoma",
+      "Leiomyosarcoma",
+      "Dedifferentiated Liposarcoma"
+    ],
+    "interventions": [
+      "STC-15 in combination with toripalimab",
+      "STC-15 monotherapy"
+    ],
+    "category": "Translational Oncology & Early Phase",
+    "modality": "RNA Epigenetics / METTL3 Inhibitor",
+    "subtype": "Phase 1/2 Targeted Therapeutics",
+    "year": 2025,
+    "enrollment": 107,
+    "primaryOutcomes": [
+      "Combination Cohorts: Safety and tolerability of STC-15 in combination with toripalimab (Time Frame: 6 months)",
+      "Phase 2 Monotherapy Cohorts: Antitumor activity of STC-15 monotherapy (Time Frame: 6 months)"
+    ],
+    "secondaryOutcomes": [
+      "Combination Cohorts: Anti-tumor activity (Time Frame: 6 months)",
+      "Combination and Phase 2 Monotherapy Cohorts: Maximum observed plasma concentration of STC-15 (Cmax) (Time Frame: 22 days)",
+      "Combination and Phase 2 Monotherapy Cohorts: Calculated time to reach maximum observed plasma concentration (Tmax) (Time Frame: 22 days)",
+      "Combination and Phase 2 Monotherapy Cohorts: Calculated area under the plasma concentration-time curve of STC-15 (AUC0-t) (Time Frame: 22 days)",
+      "Phase 2 Monotherapy Cohorts: Safety and tolerability of STC-15 (Time Frame: 6 months)"
+    ],
+    "inclusionCriteria": [
+      "Key",
+      "Estimated life expectancy \u2265 3 months.\n* ECOG performance status 0 or 1.\n* Measurable disease according to RECIST v1.1 as assessed by the local site investigator/radiology.\n* Documented radiologic assessment of progression on the prior therapy before study entry.\n* Have adequate organ function.\n* Have the ability to swallow, retain, and absorb oral medication.",
+      "Inclusion Criteria (Phase 2 Monotherapy Cohorts):",
+      "Have histologic or cytologic confirmation of advanced sarcoma of the selected histologic subtype that is not amenable to local curative therapy. Participant must have received at least 2, but no more than 4 prior lines of systemic therapy.\n* Pre-treatment and on-treatment biopsy if medically feasible.",
+      "Key"
+    ],
+    "exclusionCriteria": [
+      "Pregnant and lactating women.\n* Received prior systemic anticancer therapy including investigational agents within 4 weeks or 5 half-lives, whichever is shorter, prior to first IMP administration.\n* Participants who have not recovered from all AEs due to previous therapies to Grade \u2264 1 or baseline, according to NCI-CTCAE v5.0. Exceptions include: alopecia, Grade \u2264 2 neuropathy, and endocrine-related AEs Grade \u2264 2 who are stable on treatment or hormone replacement.\n* History of (non-infectious) pneumonitis/interstitial lung disease that required steroids or the presence of ongoing pneumonitis/interstitial lung disease).\n* Clinically significant cardiovascular disease or condition.\n* Known active CNS metastases and/or leptomeningeal disease."
+    ],
+    "allocation": "NON_RANDOMIZED",
+    "interventionModel": "SEQUENTIAL",
+    "masking": "NONE",
+    "protocolUrl": "https://clinicaltrials.gov/study/NCT06975293",
+    "resultsUrl": "https://clinicaltrials.gov/study/NCT06975293?tab=results",
+    "primaryPmid": null,
+    "hasResults": false,
+    "isResultsVacant": false,
+    "completionDate": "2028-06-29"
+  },
+  {
+    "nctId": "NCT07163325",
+    "acronym": null,
+    "briefTitle": "EP102 Safety and Efficacy in METTL3 Modulation in Advanced Solid Tumors",
+    "officialTitle": "A Phase 1 Multicenter, Open-Label, Dose-Escalation, Safety, Pharmacokinetic, Pharmacodynamic, and Clinical Activity Study of Orally Administered EP102 Monotherapy in Participants With Advanced Solid Tumors",
+    "phase": "PHASE1",
+    "status": "RECRUITING",
+    "isCompleted": false,
+    "sponsor": "Epics Therapeutics",
+    "conditions": [
+      "Advanced Solid Tumor (Phase 1)"
+    ],
+    "interventions": [
+      "EP102"
+    ],
+    "category": "Translational Oncology & Early Phase",
+    "modality": "RNA Epigenetics / METTL3 Inhibitor",
+    "subtype": "Phase 1/2 Targeted Therapeutics",
+    "year": 2025,
+    "enrollment": 48,
+    "primaryOutcomes": [
+      "To assess the safety and tolerability of EP102 monotherapy (Time Frame: Up to 21 Days after first administration)",
+      "To assess the safety and tolerability of EP102 monotherapy (Time Frame: Up to 21 Days after first administration)",
+      "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie (Time Frame: Up to 21 Days after first administration)"
+    ],
+    "secondaryOutcomes": [
+      "To characterize the pharmacokinetic (PK) profile of EP102 (Time Frame: Up to 21 days after first administration)",
+      "To characterize the pharmacokinetic (PK) profile of EP102 (Time Frame: Up to 21 Days after first administration)",
+      "To characterize the pharmacokinetic (PK) profile of EP102 (Time Frame: Up to 21 Days after first administration)",
+      "To characterize the pharmacokinetic (PK) profile of EP102 (Time Frame: Up to 21 Days after first administration)",
+      "To characterize the pharmacokinetic (PK) profile of EP102 (Time Frame: Up to 21 Days after first administration)",
+      "To preliminarily evaluate the anti-tumor activity pharmacodynamic (PD) of EP102 monotherapy (Time Frame: Up to 21 days after administration and up until study end)"
+    ],
+    "inclusionCriteria": [
+      "Participants must have a histological diagnosis of locally advanced or metastatic malignant solid tumors of one of the following cancer types:",
+      "ovarian cancer\n  * cervical cancer\n  * endometrial cancer\n  * testicular cancer\n  * cholangiocarcinoma\n  * thyroid cancer\n  * parathyroid cancer\n  * adrenal cancer\n  * pancreatic cancer\n  * non-small-cell lung cancer (NSCLC)\n  * head-and neck cancer\n  * renal cell cancer\n  * urethral cancer\n  * bladder cancer\n  * colorectal cancer\n  * gastric cancer\n  * esophageal cancer\n  * triple-negative breast cancer\n  * thymoma\n  * soft tissue sarcoma\n* Participants must have failed (i.e. progressed on, or been intolerant to standard treatment), or no standard treatment must exist, or they must have refused standard treatment. All participants must have received at least one prior line of systemic therapy.\n* Participants must have at least one measurable lesion per RECIST v1.1.\n* Participant must have a life expectancy of at least 12 weeks."
+    ],
+    "exclusionCriteria": [
+      "Participants with an active severe infection or unexplained fever \\> 38.5\u00b0C during screening or on the first day of study drug administration are excluded. However, at the Investigator's discretion, participants with tumor-related fever may be enrolled.\n* Participants with known human immunodeficiency virus (HIV) infection, active hepatitis B virus (HBV) infection (hepatitis B surface antigen (HBsAg) positive in serum), or active hepatitis C virus (HCV) infection (HCV RNA positive in serum).\n* Participants with known dysphagia, short-bowel syndrome, gastroparesis, or any condition that may impair the ingestion or gastrointestinal absorption of orally administered drugs.\n* Pregnant or breastfeeding participants.\n* Participants who have received IMP or devices in other clinical trials within four weeks before the first dose.\n* Participants with prior exposure to selective METTL3 inhibitor therapy."
+    ],
+    "allocation": "NON_RANDOMIZED",
+    "interventionModel": "SEQUENTIAL",
+    "masking": "NONE",
+    "protocolUrl": "https://clinicaltrials.gov/study/NCT07163325",
+    "resultsUrl": "https://clinicaltrials.gov/study/NCT07163325?tab=results",
+    "primaryPmid": null,
+    "hasResults": false,
+    "isResultsVacant": false,
+    "completionDate": "2028-11"
+  },
+  {
+    "nctId": "NCT05584111",
+    "acronym": null,
+    "briefTitle": "Oral Administration of STC-15 in Subjects With Advanced Malignancies",
+    "officialTitle": "Phase 1 Study to Evaluate the Safety, PK, PD, and Clinical Activity of STC-15, a METTL-3 Inhibitor, in Subjects With Advanced Malignancies",
+    "phase": "PHASE1",
+    "status": "COMPLETED",
+    "isCompleted": true,
+    "sponsor": "STORM Therapeutics LTD",
+    "conditions": [
+      "Advanced Cancer",
+      "Advanced Solid Tumor",
+      "Cancer"
+    ],
+    "interventions": [
+      "STC-15"
+    ],
+    "category": "Translational Oncology & Early Phase",
+    "modality": "RNA Epigenetics / METTL3 Inhibitor",
+    "subtype": "Phase 1/2 Targeted Therapeutics",
+    "year": 2022,
+    "enrollment": 42,
+    "primaryOutcomes": [
+      "Number of participants with adverse events (Time Frame: Screening through end of treatment, approximately 6 months)",
+      "Cmax (PK) (Time Frame: Screening through Cycle 2 (each cycle is 21 days))",
+      "Tmax (PK) (Time Frame: Screening through Cycle 2 (each cycle is 21 days))",
+      "Ctrough (PK) (Time Frame: Screening through end of treatment, approximately 6 months)",
+      "Terminal elimination half life (PK) (Time Frame: Screening through Cycle 2 (each cycle is 21 days))",
+      "AUC (PK) (Time Frame: Screening through Cycle 2 (each cycle is 21 days))",
+      "Average concentration (PK) (Time Frame: Screening through Cycle 2 (each cycle is 21 days))",
+      "Systemic Clearance (PK) (Time Frame: Screening through Cycle 2 (each cycle is 21 days))",
+      "Volume of distribution at steady-state (PK) (Time Frame: Screening through Cycle 2 (each cycle is 21 days))",
+      "Accumulation ratio from first dose to steady-state (PK) (Time Frame: Screening through end of treatment, approximately 6 months)"
+    ],
+    "secondaryOutcomes": [
+      "Efficacy as measured by RECIST 1.1 (DoR) (Time Frame: Screening through disease progression, approximately 6 months)",
+      "Efficacy as measured by RECIST 1.1 (PFS) (Time Frame: Screening through disease progression, approximately 6 months)",
+      "Efficacy as measured by RECIST 1.1 (DCR) (Time Frame: Screening through disease progression, approximately 6 months)",
+      "Efficacy as measured by RECIST 1.1 (ORR) (Time Frame: Screening through disease progression, approximately 6 months)",
+      "Recommended Phase 2 Dose (RP2D) (Time Frame: Screening through 90 days after the last dose of STC-15, approximately 9 months)"
+    ],
+    "inclusionCriteria": [
+      "Key",
+      "\\> 18 years of age\n* Histologic or cytologic confirmation of advanced malignancy that has failed standard of care (SOC) therapy and no further SOC therapy is available or the subject has declined additional SOC therapy\n* Adequate organ and marrow function\n* ECOG PS of 0 or 1",
+      "Key"
+    ],
+    "exclusionCriteria": [
+      "Treatment with any local or systemic antineoplastic therapy within 3 weeks prior to first dose of STC-15\n* Major surgery or radiation within the 3 weeks\n* Immune-related AEs from immunotherapy that required permanent discontinuation\n* Central nervous system (CNS) disease involvement, or prior history of Grade \u22653 drug-related CNS toxicity.\n* Active autoimmune disease that has required systemic treatment in the 2 years prior to Screening"
+    ],
+    "allocation": "NON_RANDOMIZED",
+    "interventionModel": "SEQUENTIAL",
+    "masking": "NONE",
+    "protocolUrl": "https://clinicaltrials.gov/study/NCT05584111",
+    "resultsUrl": "https://clinicaltrials.gov/study/NCT05584111?tab=results",
+    "primaryPmid": null,
+    "hasResults": false,
+    "isResultsVacant": false,
+    "completionDate": "2024-12-22"
+  }
+]

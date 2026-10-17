@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinSight — Clinical Trials & MedTech Directory (A to Z Master Index)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Cancer Research UK Production Design System Tokens */
+            --cruk-navy: #2E008B;
+            --cruk-magenta: #E40087;
+            --cruk-magenta-hover: #CC006C;
+            --cruk-magenta-light: #FFF0F8;
+            --cruk-cyan: #009CEE;
+            --cruk-cyan-light: #E2F4FD;
+            --cruk-black: #000000;
+            --cruk-white: #FFFFFF;
+            --cruk-grey-100: #F2F2F2;
+            --cruk-grey-200: #E6E6E6;
+            --cruk-grey-600: #666666;
+            --cruk-grey-700: #52627A;
+            --cruk-border-black: #000000;
+            
+            --font-main: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-main);
+            background-color: var(--cruk-white);
+            color: var(--cruk-black);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 1. CRUK Exact Top Navigation Header (from screenshot) */
+        .cruk-global-header {
+            background: var(--cruk-white);
+            border-bottom: 1px solid var(--cruk-grey-200);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-top-row {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .brand-logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        /* CRUK Iconic Multi-color dotted circle logo representation */
+        .cruk-dots-circle {
+            width: 38px;
+            height: 38px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
+            padding: 3px;
+        }
+        .cruk-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .dot-1 { background: var(--cruk-navy); }
+        .dot-2 { background: var(--cruk-magenta); }
+        .dot-3 { background: var(--cruk-cyan); }
+
+        .brand-title-stacked {
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--cruk-navy);
+            text-transform: uppercase;
+        }
+        .brand-title-stacked span {
+            color: var(--cruk-magenta);
+            display: block;
+        }
+
+        .header-action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        /* Search button with magenta outline */
+        .btn-cruk-search-outline {
+            background: var(--cruk-white);
+            color: var(--cruk-magenta);
+            border: 2px solid var(--cruk-magenta);
+            padding: 8px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: all 0.1s;
+        }
+        .btn-cruk-search-outline:hover {
+            background: var(--cruk-magenta-light);
+        }
+        /* Donate / Access solid magenta button */
+        .btn-cruk-solid-magenta {
+            background: var(--cruk-magenta);
+            color: var(--cruk-white);
+            border: 2px solid var(--cruk-magenta);
+            padding: 8px 20px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: all 0.1s;
+        }
+        .btn-cruk-solid-magenta:hover {
+            background: var(--cruk-magenta-hover);
+        }
+        .btn-switch-style {
+            background: var(--cruk-grey-100);
+            color: var(--cruk-black);
+            border: 1px solid var(--cruk-grey-200);
+            padding: 8px 12px;
+            font-size: 11.5px;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: var(--font-mono);
+            border-radius: 2px;
+        }
+
+        /* Primary Menu Bar with down-chevrons (from screenshot: About cancer v, Get involved v, Our research v...) */
+        .cruk-nav-menu-bar {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-top: 10px;
+            border-top: 1px solid var(--cruk-grey-200);
+            font-size: 13.5px;
+            font-weight: 700;
+        }
+        .nav-menu-item {
+            color: var(--cruk-magenta);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+        .nav-menu-item.active {
+            color: var(--cruk-magenta);
+            text-decoration: underline;
+        }
+        .nav-menu-item span.chevron {
+            font-size: 10px;
+        }
+
+        /* 2. Mega-menu sub-links row (from screenshot: Cancer types, Cancer in general, Causes, Coping...) */
+        .cruk-subnav-strip {
+            background: var(--cruk-grey-100);
+            border-bottom: 2px solid var(--cruk-border-black);
+            padding: 16px 24px;
+        }
+        .subnav-columns-grid {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            font-size: 12px;
+        }
+        @media (max-width: 800px) {
+            .subnav-columns-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .subnav-col-title {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--cruk-navy);
+            margin-bottom: 8px;
+            text-transform: capitalize;
+        }
+        .subnav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .subnav-list a {
+            color: var(--cruk-black);
+            text-decoration: none;
+            transition: color 0.1s;
+        }
+        .subnav-list a:hover {
+            color: var(--cruk-magenta);
+            text-decoration: underline;
+        }
+
+        /* 3. Main Directory Container */
+        .main-container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 32px 24px 80px;
+        }
+
+        /* Section Intro (from screenshot: "...detailed information about symptoms, diagnosis, treatment, research and clinical trials") */
+        .section-intro-text {
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.35;
+            color: var(--cruk-black);
+            margin-bottom: 12px;
+        }
+        /* The signature thick black divider bar from the screenshot */
+        .cruk-thick-bar {
+            width: 48px;
+            height: 4px;
+            background: var(--cruk-black);
+            margin-bottom: 24px;
+        }
+
+        .guide-text {
+            font-size: 14px;
+            color: var(--cruk-grey-700);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .guide-action-link {
+            color: var(--cruk-magenta);
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: underline;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        /* Filter Tabs */
+        .index-filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 14px 18px;
+            background: var(--cruk-grey-100);
+            border: 2px solid var(--cruk-border-black);
+        }
+        .filter-label-tag {
+            font-size: 11.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-right: 6px;
+        }
+        .cruk-tab-chip {
+            background: var(--cruk-white);
+            border: 2px solid var(--cruk-border-black);
+            color: var(--cruk-black);
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 5px 14px;
+            cursor: pointer;
+            border-radius: 0;
+            transition: all 0.1s;
+        }
+        .cruk-tab-chip:hover {
+            background: var(--cruk-magenta-light);
+            border-color: var(--cruk-magenta);
+            color: var(--cruk-magenta);
+        }
+        .cruk-tab-chip.active {
+            background: var(--cruk-navy);
+            color: var(--cruk-white);
+            border-color: var(--cruk-navy);
+        }
+
+        /* A to Z Search Input Box (from screenshot: "A to Z list of cancer types / [ Start typing... ]") */
+        .atoz-search-section {
+            margin-bottom: 40px;
+        }
+        .atoz-search-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--cruk-black);
+            margin-bottom: 6px;
+            display: block;
+        }
+        .atoz-input {
+            width: 100%;
+            max-width: 460px;
+            padding: 10px 14px;
+            border: 2px solid var(--cruk-border-black);
+            border-radius: 0;
+            font-family: var(--font-main);
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.1s;
+        }
+        .atoz-input:focus {
+            border-color: var(--cruk-magenta);
+            box-shadow: 3px 3px 0 0 var(--cruk-grey-200);
+        }
+
+        /* 4. EXACT A TO Z MULTI-COLUMN ARCHITECTURE (from screenshot) */
+        .atoz-columns-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px 64px;
+        }
+        @media (max-width: 720px) {
+            .atoz-columns-container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        .letter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            break-inside: avoid;
+        }
+        /* Huge bold black letters A, B, C, M, N, O... */
+        .letter-heading {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--cruk-black);
+            line-height: 1.1;
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--cruk-black);
+            padding-bottom: 4px;
+        }
+
+        /* Magenta Underlined Links (CRUK Signature Link Styling) */
+        .atoz-entry-link {
+            color: var(--cruk-magenta);
+            text-decoration: underline;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.45;
+            cursor: pointer;
+            transition: color 0.1s;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 3px 0;
+        }
+        .atoz-entry-link:hover {
+            color: var(--cruk-magenta-hover);
+            background: var(--cruk-magenta-light);
+        }
+        .entry-count-tag {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--cruk-navy);
+            background: var(--cruk-cyan-light);
+            padding: 1px 6px;
+            border-radius: 2px;
+            border: 1px solid var(--cruk-cyan);
+            text-decoration: none;
+        }
+
+        /* Position Details Modal Drawer */
+        .active-job-spotlight {
+            background: var(--cruk-white);
+            border: 2px solid var(--cruk-border-black);
+            box-shadow: 8px 8px 0 0 var(--cruk-grey-200);
+            padding: 24px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: none;
+        }
+        .spotlight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .spotlight-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--cruk-navy);
+        }
+        .spotlight-reqs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 2px solid var(--cruk-border-black);
+            margin: 16px 0;
+            padding: 14px;
+            gap: 16px;
+            background: var(--cruk-grey-100);
+        }
+        @media (max-width: 600px) {
+            .spotlight-reqs { grid-template-columns: 1fr; }
+        }
+
+        footer {
+            margin-top: 60px;
+            border-top: 4px solid var(--cruk-black);
+            padding-top: 24px;
+            font-size: 12px;
+            color: var(--cruk-grey-700);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Global Navigation Bar -->
+    <header class="cruk-global-header">
+        <div class="header-top-row">
+            <a href="https://clinsight.pract.eu/" class="brand-logo-area">
+                <div class="cruk-dots-circle">
+                    <span class="cruk-dot dot-1"></span>
+                    <span class="cruk-dot dot-2"></span>
+                    <span class="cruk-dot dot-3"></span>
+                    <span class="cruk-dot dot-3"></span>
+                    <span class="cruk-dot dot-1"></span>
+                    <span class="cruk-dot dot-2"></span>
+                    <span class="cruk-dot dot-2"></span>
+                    <span class="cruk-dot dot-3"></span>
+                    <span class="cruk-dot dot-1"></span>
+                </div>
+                <div class="brand-title-stacked">
+                    ClinSight
+                    <span>Trials &amp; MedTech</span>
+                </div>
+            </a>
+            <div class="header-action-buttons">
+                <a href="#search" class="btn-cruk-search-outline">Search</a>
+                <a href="https://clinsight.pract.eu/" class="btn-cruk-solid-magenta">ATS Direct</a>
+                <a href="http://192.168.0.135:8082/" class="btn-switch-style">Switch to Codecademy Dark →</a>
+            </div>
+        </div>
+
+        <!-- Primary Navigation Menu -->
+        <nav class="cruk-nav-menu-bar">
+            <a class="nav-menu-item active">About Clinical Trials <span class="chevron">▼</span></a>
+            <a class="nav-menu-item">MedTech Investigations <span class="chevron">▼</span></a>
+            <a class="nav-menu-item">Academic CTUs <span class="chevron">▼</span></a>
+            <a class="nav-menu-item">EU Regulations (CTR/MDR) <span class="chevron">▼</span></a>
+            <a class="nav-menu-item">Nordic Sponsors <span class="chevron">▼</span></a>
+        </nav>
+    </header>
+
+    <!-- 2. Mega-menu Category Strip (From screenshot) -->
+    <div class="cruk-subnav-strip">
+        <div class="subnav-columns-grid">
+            <div>
+                <div class="subnav-col-title">Therapeutic Areas</div>
+                <ul class="subnav-list">
+                    <li><a href="#" onclick="filterByKeyword('Oncology')">Oncology Trials</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Cardiology')">Cardiovascular Studies</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Neurology')">Neurology &amp; CNS</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Respiratory')">Respiratory &amp; ENT</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Metabolic')">Metabolic &amp; Diabetes</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="subnav-col-title">Role Tracks</div>
+                <ul class="subnav-list">
+                    <li><a href="#" onclick="filterByRole('ctm')">Trial Manager (CTM/CPM)</a></li>
+                    <li><a href="#" onclick="filterByRole('cra')">Clinical Monitor (CRA)</a></li>
+                    <li><a href="#" onclick="filterByRole('coord')">Study Coordinator (CTC)</a></li>
+                    <li><a href="#" onclick="filterByRole('data')">Biostatistics &amp; Data</a></li>
+                    <li><a href="#" onclick="filterByRole('qa')">GCP / QA Auditing</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="subnav-col-title">Regulatory Frameworks</div>
+                <ul class="subnav-list">
+                    <li><a href="#" onclick="filterBySector('pharma')">EU CTR 536/2014</a></li>
+                    <li><a href="#" onclick="filterBySector('medtech')">ISO 14155:2020</a></li>
+                    <li><a href="#" onclick="filterBySector('medtech')">EU MDR 2017/745</a></li>
+                    <li><a href="#" onclick="filterByKeyword('PMCF')">Post-Market Follow-Up</a></li>
+                    <li><a href="#" onclick="filterByKeyword('CTIS')">CTIS Submissions</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="subnav-col-title">Hospital Units (CTUs)</div>
+                <ul class="subnav-list">
+                    <li><a href="#" onclick="filterByKeyword('Sahlgrenska')">Sahlgrenska Onkologi</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Rigshospitalet')">Rigshospitalet Phase 1</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Karolinska')">Karolinska Trial Alliance</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Uppsala')">Uppsala Akademiska</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Aarhus')">Aarhus Universitetshospital</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="subnav-col-title">Verified Nordic ATS</div>
+                <ul class="subnav-list">
+                    <li><a href="#" onclick="filterByKeyword('Getinge')">Getinge Corporate ATS</a></li>
+                    <li><a href="#" onclick="filterByKeyword('AstraZeneca')">AstraZeneca Workday</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Coloplast')">Coloplast / Atos ATS</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Genmab')">Genmab Direct Workday</a></li>
+                    <li><a href="#" onclick="filterByKeyword('Dicot')">Dicot Teamtailor</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Main Directory Body -->
+    <div class="main-container">
+        
+        <p class="section-intro-text">
+            This section has detailed information about clinical trial protocols, hospital CTU requirements, MedTech investigations (ISO 14155), and verified positions across Sweden and Denmark.
+        </p>
+        <div class="cruk-thick-bar"></div>
+
+        <p class="guide-text">
+            If you are looking for a specific therapeutic indication or medical device category, browse the direct A to Z index below, or filter by regulatory framework.
+        </p>
+        <a href="#spotlight" class="guide-action-link">View all 6 active verified clinical trial vacancies ↓</a>
+
+        <!-- Filter Tabs Row -->
+        <div class="index-filter-row">
+            <span class="filter-label-tag">Filter Index:</span>
+            <button class="cruk-tab-chip active" onclick="setSectorTab('all', this)">All Clinical Sectors</button>
+            <button class="cruk-tab-chip" onclick="setSectorTab('pharma', this)">Pharma &amp; Biologics (ICH-GCP)</button>
+            <button class="cruk-tab-chip" onclick="setSectorTab('medtech', this)">MedTech &amp; Devices (ISO 14155 / MDR)</button>
+        </div>
+
+        <!-- A to Z Search Bar (Exactly from screenshot) -->
+        <div class="atoz-search-section">
+            <label class="atoz-search-label" for="atozInput">A to Z list of clinical trials &amp; positions</label>
+            <input type="text" id="atozInput" class="atoz-input" placeholder="Start typing (e.g. Oncology, Getinge, Phase 3, CRA)...">
+        </div>
+
+        <!-- 4. EXACT A TO Z MULTI-COLUMN DIRECTORY (Directly from screenshot) -->
+        <div id="atozGrid" class="atoz-columns-container">
+            <!-- Dynamically populated alphabetically -->
+        </div>
+
+        <!-- Position Spotlight Card (Expands when an A-Z link is clicked) -->
+        <div id="spotlightCard" class="active-job-spotlight">
+            <div class="spotlight-header">
+                <div>
+                    <h3 id="spotlightTitle" class="spotlight-title">Position Title</h3>
+                    <div id="spotlightMeta" style="font-size: 13px; color: var(--cruk-grey-700); margin-top: 4px;">Employer · Location</div>
+                </div>
+                <button onclick="closeSpotlight()" style="border: 2px solid black; background: white; padding: 4px 10px; cursor: pointer; font-weight: bold;">✕ Close</button>
+            </div>
+            <p id="spotlightSummary" style="font-size: 14px; margin-top: 10px; line-height: 1.6;"></p>
+            <div class="spotlight-reqs">
+                <div>
+                    <strong style="color: #9C0006; text-transform: uppercase; font-size: 11px;">Mandatory (Krav):</strong>
+                    <ul id="spotlightMandatory" style="font-size: 12.5px; margin-top: 6px; padding-left: 14px;"></ul>
+                </div>
+                <div>
+                    <strong style="color: #006100; text-transform: uppercase; font-size: 11px;">Desirable (Meriterande):</strong>
+                    <ul id="spotlightDesirable" style="font-size: 12.5px; margin-top: 6px; padding-left: 14px;"></ul>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
+                <span id="spotlightSource" style="font-family: var(--font-mono); font-size: 11.5px; color: var(--cruk-grey-700);"></span>
+                <a id="spotlightApply" href="#" target="_blank" class="btn-cruk-solid-magenta">Apply Direct →</a>
+            </div>
+        </div>
+
+        <footer>
+            <span>ClinSight · PRACT Ecosystem</span>
+            <span>Exact Cancer Research UK A to Z Directory Architecture</span>
+        </footer>
+    </div>
+
+    <script>
+        const MASTER_ENTRIES = [
+            {
+                letter: "A",
+                entries: [
+                    { name: "Academic Clinical Trial Units (CTUs)", meta: "Phase 1–3 Hospital Centers", count: "2 Active", jobId: "job-1" },
+                    { name: "Acute Care & Surgical Device Investigations", meta: "Getinge AB (ISO 14155)", count: "1 Active", jobId: "job-4" },
+                    { name: "Antibody Oncology Trials (Genmab A/S)", meta: "Rigshospitalet & AUH", count: "1 Active", jobId: "job-6" },
+                    { name: "AstraZeneca Medical Evidence Statistics", meta: "Gothenburg R&D Hub", count: "1 Active", jobId: "job-2" },
+                    { name: "Atos Medical (Coloplast Group) CRA", meta: "Malmö (ISO 14155 / MDR)", count: "1 Active", jobId: "job-5" }
+                ]
+            },
+            {
+                letter: "B",
+                entries: [
+                    { name: "Biostatistics & Late-Stage Evidence Dossiers", meta: "AstraZeneca Global Submissions", count: "1 Active", jobId: "job-2" },
+                    { name: "Bispecific Antibody Clinical Protocols", meta: "Genmab Copenhagen", count: "1 Active", jobId: "job-6" },
+                    { name: "Biobank Sample Logistics in Oncology", meta: "Sahlgrenska Universitetssjukhuset", count: "1 Active", jobId: "job-1" }
+                ]
+            },
+            {
+                letter: "C",
+                entries: [
+                    { name: "Cardiopulmonary & ECMO Medical Device Trials", meta: "Getinge AB Critical Care", count: "1 Active", jobId: "job-4" },
+                    { name: "Clinical Project Manager – Medical Devices", meta: "EU MDR 2017/745", count: "1 Active", jobId: "job-4" },
+                    { name: "Clinical Research Associate (CRA) – Oncology", meta: "Nordic Trial Sites (Denmark)", count: "1 Active", jobId: "job-6" },
+                    { name: "Clinical Research Associate (CRA) – MedTech", meta: "Atos Medical / Coloplast", count: "1 Active", jobId: "job-5" },
+                    { name: "CTIS Workflow & EU CTR 536/2014 Oversight", meta: "Dicot Pharma Uppsala", count: "1 Active", jobId: "job-3" }
+                ]
+            },
+            {
+                letter: "D",
+                entries: [
+                    { name: "Dicot Pharma AB – LIB-01 Phase 1/2 Program", meta: "Uppsala Life Science Hub", count: "1 Active", jobId: "job-3" },
+                    { name: "Director Clinical Operations – Early Phase", meta: "First-in-Human to Phase 2a", count: "1 Active", jobId: "job-3" },
+                    { name: "Director Medical & Payer Evidence Statistics", meta: "ICH E9 & FDA/EMA Dossiers", count: "1 Active", jobId: "job-2" }
+                ]
+            },
+            {
+                letter: "E",
+                entries: [
+                    { name: "EU MDR 2017/745 Clinical Evaluation & PMCF", meta: "Getinge AB Cardiopulmonary", count: "1 Active", jobId: "job-4" },
+                    { name: "ENT & Pulmonary Medical Device Studies", meta: "Coloplast / Atos Medical", count: "1 Active", jobId: "job-5" }
+                ]
+            },
+            {
+                letter: "G",
+                entries: [
+                    { name: "Genmab A/S Nordic Clinical Trial Sites", meta: "Copenhagen Hub (Phase 2/3)", count: "1 Active", jobId: "job-6" },
+                    { name: "Getinge AB Medical Device Investigations", meta: "Gothenburg Headquarters", count: "1 Active", jobId: "job-4" }
+                ]
+            },
+            {
+                letter: "I",
+                entries: [
+                    { name: "ISO 14155 Certified Medical Device Monitoring", meta: "Atos Medical & Getinge", count: "2 Active", jobId: "job-5" },
+                    { name: "Immuno-Oncology Phase 1–3 Clinical Trials", meta: "Sahlgrenska & Genmab", count: "2 Active", jobId: "job-1" }
+                ]
+            },
+            {
+                letter: "M",
+                entries: [
+                    { name: "Medical Device Investigations (ISO 14155)", meta: "Sweden & Denmark Hubs", count: "2 Active", jobId: "job-4" },
+                    { name: "Monitor / CRA – Academic Hospital CTU", meta: "Sahlgrenska Universitetssjukhuset", count: "1 Active", jobId: "job-1" }
+                ]
+            },
+            {
+                letter: "O",
+                entries: [
+                    { name: "Oncology Clinical Drug Trials (Fas I–III)", meta: "Sahlgrenska Onkologi (VGR)", count: "1 Active", jobId: "job-1" }
+                ]
+            },
+            {
+                letter: "P",
+                entries: [
+                    { name: "Phase 1 Safety & First-in-Human Trials", meta: "Dicot Pharma LIB-01", count: "1 Active", jobId: "job-3" },
+                    { name: "Phase 3 Solid Tumor Protocol (NCT03734029)", meta: "Sahlgrenska Onkologi CTU", count: "1 Active", jobId: "job-1" },
+                    { name: "Post-Market Clinical Follow-Up (PMCF) Trials", meta: "EU MDR 2017/745 Medical Devices", count: "2 Active", jobId: "job-4" },
+                    { name: "Projektledare – Kliniska Prövningar Onkologi", meta: "Västra Götalandsregionen (VGR)", count: "1 Active", jobId: "job-1" }
+                ]
+            },
+            {
+                letter: "S",
+                entries: [
+                    { name: "Sahlgrenska Universitetssjukhuset Onkologi", meta: "Gothenburg Hospital CTU", count: "1 Active", jobId: "job-1" },
+                    { name: "Senior Clinical Research Associate (CRA)", meta: "Genmab A/S Copenhagen", count: "1 Active", jobId: "job-6" }
+                ]
+            }
+        ];
+
+        const JOBS_DATA = {
+            "job-1": {
+                title: "Projektledare / Monitor – Kliniska Prövningar Onkologi",
+                employer: "Sahlgrenska University Hospital / VGR",
+                location: "Gothenburg, Sweden · Deadline: 23 Oct 2026",
+                summary: "Verksamhetsområde Onkologi vid Sahlgrenska Universitetssjukhuset bedriver ett stort antal kliniska läkemedelsprövningar (Fas I–III). Du leder och monitorerar studier i enlighet med ICH-GCP och svensk lagstiftning.",
+                mandatory: ["University degree in Life Science/Nursing", "Certified ICH-GCP competence", "Documented Phase 1–3 trial monitoring"],
+                desirable: ["Academic CTU lead experience", "Medidata RAVE / Viedoc EDC", "Biobank handling competence"],
+                source: "Västra Götalandsregionen (VGR) · Varbi Req 976098",
+                applyUrl: "https://vgregion.varbi.com/se/what:job/jobID:976098/type:job/where:125/apply:1"
+            },
+            "job-2": {
+                title: "Director – Medical & Payer Evidence Statistics",
+                employer: "AstraZeneca AB",
+                location: "Gothenburg, Sweden (R&D Hub) · Deadline: 02 Nov 2026",
+                summary: "Lead strategic biostatistical deliverables for late-stage clinical development programs and real-world payer evidence packages across global oncology filings in compliance with ICH E9.",
+                mandatory: ["PhD/Master's in Biostatistics/Mathematics", "7+ years Phase 2/3 clinical drug development", "Validated SAS/R statistical programming"],
+                desirable: ["FDA/EMA briefing dossier contributions", "Payer evidence & indirect treatment comparisons (ITC)"],
+                source: "AstraZeneca Career Portal · Workday R-261632",
+                applyUrl: "https://astrazeneca.wd3.myworkdayjobs.com/en-US/Careers/job/Sweden---Gothenburg/Director--Medical---Payer-Evidence-Statistics_R-261632-2"
+            },
+            "job-3": {
+                title: "Director Clinical Operations – Early Phase Development",
+                employer: "Dicot Pharma AB",
+                location: "Uppsala, Sweden · Deadline: 28 Oct 2026",
+                summary: "Overall operational accountability for ongoing Phase 1 clinical safety trials and planning the international Phase 2a trial program for LIB-01 under EU CTR 536/2014.",
+                mandatory: ["University degree in Life Science/Medicine", "8+ years clinical operations lead experience", "EU CTR 536/2014 & CTIS workflow"],
+                desirable: ["First-in-Human (FIH) transition experience", "Etikprövningsmyndigheten submission workflow"],
+                source: "Dicot Pharma AB · Uppsala Hub (Teamtailor)",
+                applyUrl: "https://winrowrekrytering.teamtailor.com/jobs/8268902-director-clinical-operations-till-dicot-pharma-i-uppsala/applications/new"
+            },
+            "job-4": {
+                title: "Clinical Project Manager – Medical Device Investigations",
+                employer: "Getinge AB",
+                location: "Gothenburg, Sweden · Deadline: 30 Oct 2026",
+                summary: "Lead pre-market clinical investigations and post-market clinical follow-up (PMCF) studies for acute care and cardiopulmonary devices under ISO 14155 and EU MDR.",
+                mandatory: ["Degree in Biomedical Engineering / Nursing", "Certified ISO 14155 clinical investigations", "In-depth knowledge of EU MDR 2017/745"],
+                desirable: ["Class III / implantable surgical device experience", "Notified Body interactions (TÜV, BSI, DNV)"],
+                source: "Getinge Career Hub · Direct Corporate ATS",
+                applyUrl: "https://www.getinge.com/careers/"
+            },
+            "job-5": {
+                title: "Clinical Research Associate (CRA) – Medical Devices",
+                employer: "Atos Medical (Coloplast Group)",
+                location: "Malmö, Sweden (Hybrid) · Deadline: 05 Nov 2026",
+                summary: "Manage the end-to-end operational execution of clinical investigations and Post-Market Clinical Follow-Up (PMCF) studies under ISO 14155 across Nordic hospital sites.",
+                mandatory: ["Degree in Life Sciences / Biomedicine", "ISO 14155 site monitoring experience", "Knowledge of EU MDR 2017/745 evidence standards"],
+                desirable: ["ENT, pulmonary, or respiratory device background", "Clinical Evaluation Plan (CEP) drafting"],
+                source: "Coloplast Group / Atos Medical ATS",
+                applyUrl: "https://www.atosmedical.com/career"
+            },
+            "job-6": {
+                title: "Senior Clinical Research Associate (CRA) – Nordic Trial Sites",
+                employer: "Genmab A/S",
+                location: "Copenhagen, Denmark · Deadline: 12 Nov 2026",
+                summary: "Independent hospital site qualification and monitoring for international antibody-based oncology trials across Rigshospitalet and Aarhus Universitetshospital.",
+                mandatory: ["Degree in Life Sciences / Medicine / Pharmacy", "3+ years independent onsite CRA in Oncology", "ICH-GCP E6(R2) and EU CTR 536/2014"],
+                desirable: ["Bispecific antibody monitoring", "Interactions with Trial Nation Denmark"],
+                source: "Genmab Careers · Workday Direct ATS",
+                applyUrl: "https://genmab.wd3.myworkdayjobs.com/en-US/Genmab_Careers"
+            }
+        };
+
+        let filterQuery = '';
+        let sectorTab = 'all';
+
+        function renderAtoZ() {
+            const container = document.getElementById('atozGrid');
+            
+            const filteredGroups = MASTER_ENTRIES.map(grp => {
+                const matchingEntries = grp.entries.filter(e => {
+                    const matchesSearch = !filterQuery || e.name.toLowerCase().includes(filterQuery.toLowerCase()) || e.meta.toLowerCase().includes(filterQuery.toLowerCase());
+                    const job = JOBS_DATA[e.jobId];
+                    let matchesTab = true;
+                    if (sectorTab === 'pharma') {
+                        matchesTab = job && (job.title.includes('Onkologi') || job.title.includes('Statistics') || job.title.includes('Genmab') || job.title.includes('Dicot'));
+                    } else if (sectorTab === 'medtech') {
+                        matchesTab = job && (job.title.includes('Medical Device') || job.title.includes('EU MDR') || job.title.includes('Atos') || job.title.includes('Getinge'));
+                    }
+                    return matchesSearch && matchesTab;
+                });
+                return { letter: grp.letter, entries: matchingEntries };
+            }).filter(g => g.entries.length > 0);
+
+            if (filteredGroups.length === 0) {
+                container.innerHTML = '<div style="grid-column: 1 / -1; padding: 30px; text-align: center; color: var(--cruk-grey-700); border: 2px dashed black;">No matching clinical trials or vacancies found in the A to Z directory.</div>';
+                return;
+            }
+
+            container.innerHTML = filteredGroups.map(grp => `
+                <div class="letter-group">
+                    <div class="letter-heading">${grp.letter}</div>
+                    ${grp.entries.map(e => `
+                        <div class="atoz-entry-link" onclick="openSpotlight('${e.jobId}')">
+                            <span>${e.name}</span>
+                            <span class="entry-count-tag">${e.count}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `).join('');
+        }
+
+        function openSpotlight(jobId) {
+            const j = JOBS_DATA[jobId];
+            if (!j) return;
+
+            document.getElementById('spotlightTitle').innerText = j.title;
+            document.getElementById('spotlightMeta').innerText = j.employer + ' · ' + j.location;
+            document.getElementById('spotlightSummary').innerText = j.summary;
+            document.getElementById('spotlightMandatory').innerHTML = j.mandatory.map(m => `<li>${m}</li>`).join('');
+            document.getElementById('spotlightDesirable').innerHTML = j.desirable.map(d => `<li>${d}</li>`).join('');
+            document.getElementById('spotlightSource').innerText = j.source;
+            document.getElementById('spotlightApply').href = j.applyUrl;
+
+            const card = document.getElementById('spotlightCard');
+            card.style.display = 'block';
+            card.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closeSpotlight() {
+            document.getElementById('spotlightCard').style.display = 'none';
+        }
+
+        function filterByKeyword(kw) {
+            document.getElementById('atozInput').value = kw;
+            filterQuery = kw;
+            renderAtoZ();
+        }
+
+        function filterBySector(sec) {
+            sectorTab = sec;
+            document.querySelectorAll('.cruk-tab-chip').forEach(b => b.classList.remove('active'));
+            if (sec === 'pharma') document.querySelectorAll('.cruk-tab-chip')[1].classList.add('active');
+            else if (sec === 'medtech') document.querySelectorAll('.cruk-tab-chip')[2].classList.add('active');
+            renderAtoZ();
+        }
+
+        function setSectorTab(val, btn) {
+            sectorTab = val;
+            document.querySelectorAll('.cruk-tab-chip').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderAtoZ();
+        }
+
+        document.getElementById('atozInput').addEventListener('input', (e) => {
+            filterQuery = e.target.value.trim();
+            renderAtoZ();
+        });
+
+        // Initialize A to Z Directory
+        renderAtoZ();
+    </script>
+</body>
+</html>

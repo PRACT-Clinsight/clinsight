@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinSight — Clinical Trials & MedTech Engine (Codecademy Dark Card Architecture)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Exact Colors from Codecademy Screenshot */
+            --cc-bg-page: #000000;
+            --cc-bg-header: #10162F;
+            --cc-card-bg: #10162F;
+            --cc-card-border: #1E2749;
+            --cc-card-border-active: #3388FF;
+            --cc-card-bg-hover: #151C3B;
+            
+            /* Pill Badges */
+            --pill-career-bg: #FFD300;
+            --pill-career-text: #000000;
+            --pill-course-bg: #24E564;
+            --pill-course-text: #000000;
+            --pill-cert-bg: #00D1FF;
+            --pill-cert-text: #000000;
+            --pill-skill-bg: #FF7B90;
+            --pill-skill-text: #000000;
+
+            --cc-yellow: #FFD300;
+            --cc-yellow-hover: #FFE033;
+            --cc-blue-cta: #3388FF;
+            
+            --cc-text-white: #FFFFFF;
+            --cc-text-muted: #9BA3BF;
+            --cc-text-subtle: #6D7596;
+            
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--cc-bg-page);
+            color: var(--cc-text-white);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+
+        /* 1. Header (Exact Codecademy Nav) */
+        .cc-navbar {
+            background-color: var(--cc-bg-header);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 14px 28px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-cluster {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .brand-logo {
+            font-size: 19px;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--cc-text-white);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .brand-logo span.dot {
+            color: var(--cc-yellow);
+        }
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--cc-text-muted);
+        }
+        .nav-links a {
+            color: var(--cc-text-muted);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+        .nav-links a:hover { color: var(--cc-text-white); }
+        .nav-links span.chevron { font-size: 10px; margin-left: 2px; }
+
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .style-switch-btn {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            font-weight: 700;
+            background: transparent;
+            color: var(--cc-text-white);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 6px 14px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .style-switch-btn:hover {
+            border-color: var(--cc-yellow);
+            color: var(--cc-yellow);
+        }
+        .btn-yellow-cta {
+            background-color: var(--cc-yellow);
+            color: #000000;
+            font-weight: 800;
+            font-size: 13.5px;
+            padding: 8px 18px;
+            border-radius: 4px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .btn-yellow-cta:hover { background-color: var(--cc-yellow-hover); }
+
+        /* Sub-banner ribbon (from screenshot: "Not sure? Take our quiz to find what's best for you") */
+        .sub-header-quiz-bar {
+            background: #000000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px 24px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--cc-text-muted);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .sub-header-quiz-bar strong { color: var(--cc-text-white); }
+        .quiz-link {
+            color: var(--cc-blue-cta);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .quiz-link:hover { text-decoration: underline; }
+
+        /* Container */
+        .main-container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 44px 24px 80px;
+        }
+
+        /* Section Header (from screenshot: "Top courses" / "Go to the catalog") */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 24px;
+        }
+        .section-title {
+            font-size: clamp(24px, 3.5vw, 32px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--cc-text-white);
+        }
+        .catalog-link {
+            font-family: var(--font-mono);
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--cc-text-white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.15s;
+        }
+        .catalog-link:hover { color: var(--cc-yellow); }
+
+        /* Filter Tabs Row */
+        .filter-tabs-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 32px;
+            align-items: center;
+        }
+        .tab-btn {
+            background: var(--cc-card-bg);
+            border: 1px solid var(--cc-card-border);
+            color: var(--cc-text-muted);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.12s;
+            user-select: none;
+        }
+        .tab-btn:hover {
+            border-color: rgba(255, 255, 255, 0.4);
+            color: var(--cc-text-white);
+        }
+        .tab-btn.active {
+            background: var(--cc-blue-cta);
+            color: var(--cc-text-white);
+            border-color: var(--cc-blue-cta);
+            font-weight: 700;
+        }
+
+        /* 2. EXACT 4-COLUMN CARD GRID FROM CODECADEMY SCREENSHOT */
+        .course-card-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 1200px) {
+            .course-card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 680px) {
+            .course-card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 3. EXACT CODECADEMY CARD DESIGN (from screenshot) */
+        .cc-course-card {
+            background-color: var(--cc-card-bg);
+            border: 1px solid var(--cc-card-border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 480px;
+            transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+            position: relative;
+        }
+        .cc-course-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+        }
+        .cc-course-card.highlighted {
+            border: 2px solid var(--cc-card-border-active);
+            box-shadow: 0 0 20px rgba(51, 136, 255, 0.2);
+        }
+
+        .card-top-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Pill Tag at Top (Career Path, Course, Cert, Skill Path) */
+        .pill-badge {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            font-family: var(--font-sans);
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            text-transform: capitalize;
+        }
+        .pill-career {
+            background-color: var(--pill-career-bg);
+            color: var(--pill-career-text);
+        }
+        .pill-course {
+            background-color: var(--pill-course-bg);
+            color: var(--pill-course-text);
+        }
+        .pill-cert {
+            background-color: var(--pill-cert-bg);
+            color: var(--pill-cert-text);
+        }
+        .pill-skill {
+            background-color: var(--pill-skill-bg);
+            color: var(--pill-skill-text);
+        }
+
+        /* Card Title */
+        .card-course-title {
+            font-size: 19px;
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -0.015em;
+            color: var(--cc-text-white);
+            margin-bottom: 8px;
+        }
+
+        /* Employer & Geo line */
+        .card-employer-sub {
+            font-size: 12.5px;
+            color: var(--cc-yellow);
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .card-employer-sub span.loc {
+            color: var(--cc-text-muted);
+            font-weight: 400;
+        }
+
+        /* Description Paragraph */
+        .card-course-desc {
+            font-size: 13.5px;
+            color: var(--cc-text-muted);
+            line-height: 1.55;
+            margin-bottom: 18px;
+        }
+
+        /* Compact Requirements Drawer */
+        .card-req-box {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+            padding: 12px 14px;
+            margin-bottom: 18px;
+            font-size: 11.5px;
+        }
+        .req-box-header {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--cc-text-subtle);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 6px;
+        }
+        .req-bullet-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .req-bullet-list li {
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.4;
+            color: #C5CBDD;
+        }
+        .req-bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--cc-yellow);
+            font-weight: bold;
+        }
+
+        /* 4. EXACT FOOTER STRIP OF CARD (from screenshot: level icon + hours / apply) */
+        .card-footer-strip {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12.5px;
+            color: var(--cc-text-muted);
+        }
+        .level-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12.5px;
+        }
+        .level-bars-svg {
+            width: 14px;
+            height: 14px;
+            color: var(--cc-text-muted);
+        }
+        .apply-btn-pill {
+            background: transparent;
+            color: var(--cc-text-white);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 11.5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.12s;
+        }
+        .apply-btn-pill:hover {
+            background: var(--cc-yellow);
+            color: #000000;
+            border-color: var(--cc-yellow);
+        }
+
+        /* 5. Lower Highlight Box (from screenshot: "Want help figuring out what to learn?") */
+        .discovery-quiz-card {
+            background-color: var(--cc-card-bg);
+            border: 1px solid var(--cc-card-border);
+            border-radius: 12px;
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 60px;
+            transition: border-color 0.15s;
+        }
+        .discovery-quiz-card:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        .quiz-card-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .flag-icon {
+            color: var(--pill-course-bg);
+            width: 24px;
+            height: 24px;
+        }
+        .quiz-card-text h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--cc-text-white);
+            margin-bottom: 2px;
+        }
+        .quiz-card-text p {
+            font-size: 13.5px;
+            color: var(--cc-text-muted);
+        }
+        .quiz-card-arrow {
+            color: var(--pill-course-bg);
+            font-size: 24px;
+        }
+
+        /* 6. Lower Editorial Section (from screenshot: "The experience / Designed for progress") */
+        .editorial-section {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 48px;
+        }
+        .editorial-pretitle {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--cc-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .editorial-headline {
+            font-size: clamp(32px, 4vw, 44px);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+        .editorial-bar {
+            width: 60px;
+            height: 3px;
+            background: var(--cc-text-white);
+            margin-bottom: 32px;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 24px;
+            font-size: 12px;
+            color: var(--cc-text-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Exact Codecademy Header Bar -->
+    <header class="cc-navbar">
+        <div class="navbar-inner">
+            <div class="brand-cluster">
+                <a href="https://clinsight.pract.eu/" class="brand-logo">
+                    codecademy<span class="dot">.</span>clinsight
+                </a>
+                <nav class="nav-links">
+                    <a href="#">Catalog <span class="chevron">▼</span></a>
+                    <a href="#">Sectors <span class="chevron">▼</span></a>
+                    <a href="#">Regulations <span class="chevron">▼</span></a>
+                    <a href="#">ATS Direct</a>
+                </nav>
+            </div>
+            <div class="navbar-actions">
+                <a href="http://192.168.0.135:8081/" class="style-switch-btn">Switch to CRUK Style →</a>
+                <a href="#feed" class="btn-yellow-cta">View All Positions</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub-banner Quiz Bar -->
+    <div class="sub-header-quiz-bar">
+        <span>Looking for a clinical trial path?</span>
+        <a href="#feed" class="quiz-link">Explore the direct Nordic positions below →</a>
+    </div>
+
+    <div class="main-container">
+        
+        <!-- Section Header (from screenshot: "Top courses" / "Go to the catalog") -->
+        <div class="section-header">
+            <h1 class="section-title">Verified positions</h1>
+            <a href="https://clinsight.pract.eu/" class="catalog-link">
+                Go to the primary database <span>→</span>
+            </a>
+        </div>
+
+        <!-- Filter Row -->
+        <div class="filter-tabs-row">
+            <button class="tab-btn active" onclick="setSector('all', this)">All Sectors (6)</button>
+            <button class="tab-btn" onclick="setSector('pharma', this)">Pharma &amp; Biologics (ICH-GCP)</button>
+            <button class="tab-btn" onclick="setSector('medtech', this)">MedTech &amp; Devices (ISO 14155 / MDR)</button>
+            <button class="tab-btn" onclick="setRole('ctm', this)">Trial Managers</button>
+            <button class="tab-btn" onclick="setRole('cra', this)">CRA Monitors</button>
+        </div>
+
+        <!-- 4-Column Codecademy Card Grid (Directly from screenshot) -->
+        <main id="cardGrid" class="course-card-grid">
+            <!-- Dynamically populated via JS -->
+        </main>
+
+        <!-- Discovery Quiz Callout Card (Directly from screenshot) -->
+        <div class="discovery-quiz-card">
+            <div class="quiz-card-left">
+                <svg class="flag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                    <line x1="4" y1="22" x2="4" y2="15"></line>
+                </svg>
+                <div class="quiz-card-text">
+                    <h3>Want help matching your clinical background to EU regulations?</h3>
+                    <p>Compare your ICH-GCP or ISO 14155 experience directly against active hospital CTUs and sponsors.</p>
+                </div>
+            </div>
+            <span class="quiz-card-arrow">→</span>
+        </div>
+
+        <!-- Editorial Section (from screenshot: "The experience / Designed for progress") -->
+        <section class="editorial-section">
+            <div class="editorial-pretitle">The experience</div>
+            <h2 class="editorial-headline">Designed for progress</h2>
+            <div class="editorial-bar"></div>
+        </section>
+
+        <footer>
+            <span>ClinSight · PRACT Ecosystem</span>
+            <span>Exact Codecademy Dark Card Architecture (4-Column Modular Grid)</span>
+        </footer>
+    </div>
+
+    <script>
+        const POSITIONS = [
+            {
+                id: "pos-1",
+                typeTag: "Career path",
+                tagStyle: "pill-career",
+                title: "Projektledare / Monitor – Onkologi",
+                employer: "Sahlgrenska University Hospital / VGR",
+                location: "Gothenburg, Sweden",
+                sector: "pharma",
+                roleTrack: "coord",
+                desc: "Lead and monitor Phase 1–3 oncology drug trials within an academic CTU in accordance with ICH-GCP and Swedish national clinical regulations.",
+                mandatory: [
+                    "Degree in Life Science, Biomedicine, or Nursing",
+                    "Certified ICH-GCP competence",
+                    "Documented Phase 1–3 trial experience"
+                ],
+                difficulty: "Intermediate",
+                protocol: "NCT03734029",
+                applyUrl: "https://vgregion.varbi.com/se/what:job/jobID:976098/type:job/where:125/apply:1",
+                highlighted: false
+            },
+            {
+                id: "pos-2",
+                typeTag: "Course",
+                tagStyle: "pill-course",
+                title: "Director – Medical Evidence Statistics",
+                employer: "AstraZeneca AB",
+                location: "Gothenburg, Sweden (R&D)",
+                sector: "pharma",
+                roleTrack: "data",
+                desc: "Lead biostatistical deliverables for late-stage clinical programs and real-world payer evidence packages across global oncology filings.",
+                mandatory: [
+                    "PhD/Master's in Biostatistics / Mathematics",
+                    "7+ years Phase 2/3 clinical drug development",
+                    "Validated SAS / R statistical environments"
+                ],
+                difficulty: "Advanced",
+                protocol: "NCT04526990",
+                applyUrl: "https://astrazeneca.wd3.myworkdayjobs.com/en-US/Careers/job/Sweden---Gothenburg/Director--Medical---Payer-Evidence-Statistics_R-261632-2",
+                highlighted: false
+            },
+            {
+                id: "pos-3",
+                typeTag: "Certification path",
+                tagStyle: "pill-cert",
+                title: "Clinical Project Manager – EU MDR",
+                employer: "Getinge AB",
+                location: "Gothenburg, Sweden",
+                sector: "medtech",
+                roleTrack: "ctm",
+                desc: "Drive pre-market clinical investigations and post-market PMCF studies for Class IIb/III critical care & cardiovascular devices.",
+                mandatory: [
+                    "Degree in Biomedical Engineering / Nursing",
+                    "Certified ISO 14155 clinical investigations",
+                    "In-depth knowledge of EU MDR 2017/745"
+                ],
+                difficulty: "Class IIb / III",
+                protocol: "MDR-2017/745",
+                applyUrl: "https://www.getinge.com/careers/",
+                highlighted: true /* Exactly matching the blue highlighted card from screenshot */
+            },
+            {
+                id: "pos-4",
+                typeTag: "Skill path",
+                tagStyle: "pill-skill",
+                title: "Clinical Research Associate (CRA)",
+                employer: "Atos Medical (Coloplast)",
+                location: "Malmö, Sweden (Hybrid)",
+                sector: "medtech",
+                roleTrack: "cra",
+                desc: "Manage hospital site monitoring across Nordic clinical centers and author Clinical Investigation Reports under ISO 14155 and EU MDR.",
+                mandatory: [
+                    "Master's or Bachelor's in Life Sciences",
+                    "ISO 14155 site monitoring experience",
+                    "Fluency in English and Swedish/Danish"
+                ],
+                difficulty: "Intermediate",
+                protocol: "ISO-14155",
+                applyUrl: "https://www.atosmedical.com/career",
+                highlighted: false
+            },
+            {
+                id: "pos-5",
+                typeTag: "Career path",
+                tagStyle: "pill-career",
+                title: "Director Clinical Operations",
+                employer: "Dicot Pharma AB",
+                location: "Uppsala, Sweden",
+                sector: "pharma",
+                roleTrack: "ctm",
+                desc: "Overall operational accountability for Phase 1 clinical safety trials and planning the international Phase 2a trial program for LIB-01.",
+                mandatory: [
+                    "Degree in Life Science, Pharmacy, or Medicine",
+                    "8+ years clinical operations lead experience",
+                    "EU CTR 536/2014 & CTIS workflow"
+                ],
+                difficulty: "Phase 1/2",
+                protocol: "EU-CT-2023",
+                applyUrl: "https://winrowrekrytering.teamtailor.com/jobs/8268902-director-clinical-operations-till-dicot-pharma-i-uppsala/applications/new",
+                highlighted: false
+            },
+            {
+                id: "pos-6",
+                typeTag: "Certification path",
+                tagStyle: "pill-cert",
+                title: "Senior Clinical Research Associate",
+                employer: "Genmab A/S",
+                location: "Copenhagen, Denmark",
+                sector: "pharma",
+                roleTrack: "cra",
+                desc: "Independent hospital site qualification and monitoring for international antibody-based oncology trials across Rigshospitalet and AUH.",
+                mandatory: [
+                    "Degree in Life Sciences or Pharmacy",
+                    "3+ years independent onsite CRA in Oncology",
+                    "ICH-GCP E6(R2) & EU CTR 536/2014"
+                ],
+                difficulty: "Phase 2/3",
+                protocol: "NCT04826094",
+                applyUrl: "https://genmab.wd3.myworkdayjobs.com/en-US/Genmab_Careers",
+                highlighted: false
+            }
+        ];
+
+        let selectedSector = 'all';
+        let selectedRole = 'all';
+
+        function renderCards() {
+            const container = document.getElementById('cardGrid');
+            const filtered = POSITIONS.filter(p => {
+                const matchSec = selectedSector === 'all' || p.sector === selectedSector;
+                const matchRol = selectedRole === 'all' || p.roleTrack === selectedRole;
+                return matchSec && matchRol;
+            });
+
+            container.innerHTML = filtered.map(p => `
+                <article class="cc-course-card ${p.highlighted ? 'highlighted' : ''}">
+                    <div class="card-top-content">
+                        <span class="pill-badge ${p.tagStyle}">${p.typeTag}</span>
+                        <h2 class="card-course-title">${p.title}</h2>
+                        <div class="card-employer-sub">
+                            ${p.employer} <span class="loc">· ${p.location}</span>
+                        </div>
+                        <p class="card-course-desc">${p.desc}</p>
+                        
+                        <div class="card-req-box">
+                            <div class="req-box-header">Key Requirements (Krav)</div>
+                            <ul class="req-bullet-list">
+                                ${p.mandatory.map(m => `<li>${m}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card-footer-strip">
+                        <div class="level-indicator">
+                            <svg class="level-bars-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="3" y="14" width="4" height="7" rx="1"></rect>
+                                <rect x="10" y="8" width="4" height="13" rx="1"></rect>
+                                <rect x="17" y="3" width="4" height="18" rx="1"></rect>
+                            </svg>
+                            <span>${p.difficulty}</span>
+                        </div>
+                        <a href="${p.applyUrl}" target="_blank" rel="noopener" class="apply-btn-pill">Apply Direct →</a>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function setSector(val, btn) {
+            selectedSector = val;
+            selectedRole = 'all';
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderCards();
+        }
+
+        function setRole(val, btn) {
+            selectedRole = val;
+            selectedSector = 'all';
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderCards();
+        }
+
+        // Initialize render
+        renderCards();
+    </script>
+</body>
+</html>
