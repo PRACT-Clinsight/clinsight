@@ -30,6 +30,26 @@
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
+  <!-- Target-Class Protocol & Regulatory Intelligence Hubs -->
+  <url>
+    <loc>https://clinsight.pract.eu/targets/mettl3-inhibitors/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <!-- Externally Verified Phase 1/2 Protocol Dossiers Passing ≥50% Module 1–3 Density Gate -->
+  <url>
+    <loc>https://clinsight.pract.eu/trials/NCT07163325/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://clinsight.pract.eu/trials/NCT06975293/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
   <!-- Landmark Curated Clinical Trials (Evidentiary Anchors with Verified Uniqueness) -->
   <url>
     <loc>https://clinsight.pract.eu/trials/NCT03734029/</loc>

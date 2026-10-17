@@ -408,10 +408,11 @@ def extract_dossier_data(raw, downgrades_log, unmatched_elig_log, dlt_rejections
         elif "recommended dose" in norm_m and rp2d_result["state"] == "NOT_REPORTED":
             rp2d_result = {
                 "state": "INFERRED",
+                "candidate": "RP2D",
                 "source_field": f"protocolSection.outcomesModule.primaryOutcomes[{idx}].measure",
                 "verbatim": meas,
                 "checked_at_build": True,
-                "render": f'Not stated as "RP2D". Protocol primary measure states "{meas}" — consistent with dose-selection for subsequent phase; specific term "RP2D" not named.'
+                "render": f"States a goal of '{meas}'; consistent with an RP2D objective, term not used."
             }
         if any(t in norm_m for t in ["maximum tolerated dose", "mtd"]):
             mtd_result = {

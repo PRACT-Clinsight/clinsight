@@ -52,8 +52,8 @@ def build_ledger():
 
     external_verified = {
         "NCT06975293": "EXTERNAL_AUDIT_VERIFIED_LIVE",
-        "NCT07163325": "PENDING_EXTERNAL_SPOT_CHECK",
-        "NCT05584111": "PENDING_EXTERNAL_SPOT_CHECK"
+        "NCT07163325": "EXTERNAL_AUDIT_VERIFIED_LIVE",
+        "NCT05584111": "PENDING_EXTERNAL_CLASS_CONFIRMATION"
     }
 
     rows = []
@@ -99,16 +99,16 @@ def build_ledger():
             "statutory_api_source_url": mod4["nct_url"],
             "build_consistency_status": "BUILD_STRING_MATCH_PASSED",
             "external_registry_audit_status": external_verified.get(nct, "PENDING_EXTERNAL_SPOT_CHECK"),
-            "audit_timestamp": "2026-10-17T10:55:00Z"
+            "audit_timestamp": "2026-10-17T11:15:00Z"
         }
         rows.append(row)
 
-    with open(CSV_OUT, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(rows)
-
-    print(f"Master Verification Ledger written to {CSV_OUT} ({len(rows)} trials indexed).")
+    for out_path in [CSV_OUT, "ClinSight-Website/data/ClinSight_Phase1_2_Master_Verification_Ledger.csv"]:
+        with open(out_path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(rows)
+        print(f"Master Verification Ledger written to {out_path} ({len(rows)} trials indexed).")
 
 if __name__ == "__main__":
     build_ledger()

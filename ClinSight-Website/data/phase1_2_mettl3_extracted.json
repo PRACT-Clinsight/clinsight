@@ -304,10 +304,11 @@
       },
       "rp2d": {
         "state": "INFERRED",
+        "candidate": "RP2D",
         "source_field": "protocolSection.outcomesModule.primaryOutcomes[2].measure",
         "verbatim": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie",
         "checked_at_build": true,
-        "render": "Not stated as \"RP2D\". Protocol primary measure states \"Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie\" \u2014 consistent with dose-selection for subsequent phase; specific term \"RP2D\" not named."
+        "render": "States a goal of 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie'; consistent with an RP2D objective, term not used."
       },
       "mtd": {
         "state": "STATED",

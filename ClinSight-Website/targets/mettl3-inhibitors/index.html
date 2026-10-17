@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>METTL3 RNA Methyltransferase Inhibitors — Phase 1 &amp; 2 Protocol &amp; Regulatory Intelligence Hub | ClinSight</title>
+  <meta name="description" content="Comparative Phase 1/2 protocol architecture, dose-escalation designs (BOIN vs 3+3 + Simon's 2-stage), DLT windows, RP2D/MTD definitions, and statutory record gaps across clinical-stage METTL3 inhibitors (STC-15, EP102).">
+  <link rel="canonical" href="https://clinsight.pract.eu/targets/mettl3-inhibitors/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-void: #07090e;
+      --bg-base: #0b0f19;
+      --bg-surface: #111827;
+      --bg-card: rgba(17, 24, 39, 0.85);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(56, 189, 248, 0.35);
+      
+      --teal-fact: #14b8a6;
+      --teal-glow: rgba(20, 184, 166, 0.12);
+      --amber-inferred: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.12);
+      --grey-silent: #64748b;
+      --grey-bg: rgba(100, 116, 139, 0.08);
+      
+      --text-high: #f8fafc;
+      --text-med: #cbd5e1;
+      --text-low: #64748b;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      color-scheme: dark;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-void);
+      color: var(--text-med);
+      font-family: var(--font-sans);
+      line-height: 1.55;
+      padding: 0 0 60px;
+    }
+    
+    .topbar {
+      border-bottom: 1px solid var(--border-subtle);
+      background: var(--bg-base);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .topbar a { color: var(--text-high); text-decoration: none; font-weight: 500; }
+    .topbar a:hover { color: #38bdf8; }
+    
+    .container {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 28px 20px;
+    }
+    
+    .identity-band {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; align-items: center; }
+    .badge {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .badge-nct { background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .badge-phase { background: rgba(168, 85, 247, 0.12); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+    .badge-status { background: rgba(34, 197, 94, 0.12); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
+    .badge-class { background: rgba(20, 184, 166, 0.12); color: #2dd4bf; border: 1px solid rgba(20, 184, 166, 0.3); text-decoration: none; }
+    
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-high);
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+    .official-title {
+      font-size: 13px;
+      color: var(--text-low);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .sponsor-line {
+      font-size: 13px;
+      color: var(--text-med);
+    }
+    .sponsor-line strong { color: var(--text-high); }
+    
+    .summary-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .summary-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .toolbar-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .stacked-bar {
+      height: 10px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 5px;
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .bar-seg { height: 100%; }
+    .seg-stated { background: var(--teal-fact); }
+    .seg-inferred { background: var(--amber-inferred); }
+    .seg-not-reported { background: var(--grey-silent); }
+    
+    .legend-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12px;
+      color: var(--text-low);
+    }
+    .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+    
+    .btn-audit, .btn-export {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-med);
+      padding: 5px 11px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      transition: all 0.15s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-audit:hover, .btn-export:hover {
+      border-color: #38bdf8;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.08);
+    }
+    
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+    .module-header-wrap {
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+    .module-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-high);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .module-title i { color: #38bdf8; font-size: 14px; }
+    .mod-prov-strip {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .mod-strip-bar {
+      height: 5px;
+      width: 140px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 3px;
+      display: flex;
+      overflow: hidden;
+    }
+    .mod-strip-text {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-low);
+    }
+    
+    .field-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.02);
+      font-size: 13.5px;
+    }
+    
+    .row-stated { border-left: 3.5px solid var(--teal-fact); }
+    .row-inferred { border-left: 3.5px dashed var(--amber-inferred); }
+    .row-not-reported {
+      border-left: 3.5px dotted var(--grey-silent);
+      background: var(--grey-bg);
+    }
+    
+    /* Audit mode expansion for individual NOT REPORTED rows (§6) */
+    .audit-gap-detail { display: none; }
+    body.audit-active .audit-gap-detail { display: flex; }
+    
+    .field-main { flex: 1; }
+    .field-label {
+      display: block;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-low);
+      margin-bottom: 4px;
+    }
+    
+    .val-stated { color: var(--text-high); font-weight: 500; }
+    .val-inferred {
+      color: var(--text-med);
+      border-bottom: 1px dotted var(--amber-inferred);
+    }
+    .val-not-reported { color: var(--text-low); font-style: italic; }
+    
+    .prov-chip {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .prov-stated { background: var(--teal-glow); color: var(--teal-fact); border: 1px solid rgba(20, 184, 166, 0.3); }
+    .prov-inferred { background: var(--amber-glow); color: var(--amber-inferred); border: 1px solid rgba(245, 158, 11, 0.3); }
+    .prov-not-reported { background: var(--grey-bg); color: var(--grey-silent); border: 1px solid rgba(100, 116, 139, 0.25); }
+    
+    .source-anchor { margin-top: 6px; font-size: 11.5px; }
+    .source-toggle {
+      color: #38bdf8;
+      font-family: var(--font-mono);
+      cursor: pointer;
+    }
+    .source-payload {
+      display: none;
+      margin-top: 6px;
+      padding: 8px 10px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+    .source-payload.open, body.audit-active .source-payload { display: block; }
+    .source-field { color: var(--text-low); display: block; margin-bottom: 2px; }
+    .source-quote { color: var(--teal-fact); display: block; margin-bottom: 2px; }
+    .source-verified { color: #34d399; font-weight: 600; font-size: 10px; }
+    
+    .inline-evidence {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--amber-inferred);
+      font-style: italic;
+    }
+    .evidence-label { font-weight: 600; font-style: normal; }
+    .evidence-source { color: var(--text-low); font-style: normal; font-family: var(--font-mono); font-size: 11px; }
+    
+    .doc-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #38bdf8;
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+    .doc-link:hover { text-decoration: underline; }
+
+    /* Cross-Trial Class Matrix (Step 4) */
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin-top: 8px;
+    }
+    .matrix-th {
+      text-align: left;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    .matrix-param {
+      padding: 12px;
+      border: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--text-med);
+      background: rgba(255, 255, 255, 0.015);
+      vertical-align: top;
+      font-weight: 600;
+    }
+    .matrix-td {
+      padding: 12px;
+      border: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    .cell-stated { border-left: 3px solid var(--teal-fact); color: var(--text-high); }
+    .cell-inferred { border-left: 3px dashed var(--amber-inferred); color: var(--text-med); }
+    .cell-not-reported { border-left: 3px dotted var(--grey-silent); color: var(--text-low); background: var(--grey-bg); font-style: italic; }
+    
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12px;
+      font-family: var(--font-mono);
+      color: var(--text-low);
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="../../">&larr; ClinSight Regulatory Intelligence Workbench</a>
+    <span style="font-family:var(--font-mono); font-size:11px; color:var(--text-low);">Target-Class Protocol &amp; Regulatory Hub</span>
+  </div>
+
+  <div class="container">
+    <div class="identity-band">
+      <div class="badge-row">
+        <span class="badge badge-class">TARGET CLASS HUB</span>
+        <span class="badge badge-phase">PHASE 1 / PHASE 1B / PHASE 2</span>
+        <span class="badge badge-nct">2 EXTERNALLY VERIFIED TRIALS IN MATRIX</span>
+      </div>
+      <h1>METTL3 RNA Methyltransferase Inhibitors — Early-Phase Protocol &amp; Regulatory Architecture</h1>
+      <p class="official-title">
+        Cross-trial regulatory and methodological comparison of clinical-stage small-molecule METTL3 (N6-adenosine-methyltransferase 70 kDa subunit) inhibitors in oncology. Built for Clinical Trial Affairs, Medical Writers (IB / CSR / Protocol drafters), and Regulatory Intelligence teams. Every parameter carries its build-time string-matched provenance state against ClinicalTrials.gov API v2.
+      </p>
+    </div>
+
+    <div class="summary-card">
+      <div class="summary-header">
+        <span>Verified Class Matrix Provenance (2 Trials): <strong>23 stated</strong> · <strong>1 inferred</strong> · <strong>20 not reported</strong></span>
+        <div class="toolbar-group">
+          <button class="btn-export" id="btnCopyClassMd" onclick="copyClassMarkdown()"><i class="fa-regular fa-copy"></i> [Copy Class IB/CSR Table (w/ Provenance)]</button>
+          <a href="../../data/ClinSight_Phase1_2_Master_Verification_Ledger.csv" download class="btn-export"><i class="fa-solid fa-file-csv"></i> [Download Master Verification Ledger (.csv)]</a>
+        </div>
+      </div>
+      <div class="stacked-bar">
+        <div class="bar-seg seg-stated" style="width: 52.3%" title="52.3% Stated"></div>
+        <div class="bar-seg seg-inferred" style="width: 2.3%" title="2.3% Inferred"></div>
+        <div class="bar-seg seg-not-reported" style="width: 45.5%" title="45.5% Not Reported"></div>
+      </div>
+      <div class="legend-row">
+        <span class="legend-item"><span class="prov-chip prov-stated">✓ stated</span> Verbatim fact from statutory record</span>
+        <span class="legend-item"><span class="prov-chip prov-inferred">~ inferred</span> Protocol mechanism described; archetype not named</span>
+        <span class="legend-item"><span class="prov-chip prov-not-reported">— not reported</span> Not stated in statutory registry record</span>
+      </div>
+    </div>
+
+    <!-- CROSS-TRIAL CLASS COMPARISON MATRIX -->
+    <div class="module-card">
+      <div class="module-header-wrap">
+        <div class="module-title"><i class="fa-solid fa-table-columns"></i> Section 1 — Cross-Trial Protocol &amp; Regulatory Matrix (Verified Interventional Class)</div>
+        <span class="mod-strip-text">Compares STC-15 (NCT06975293, STORM Therapeutics) and EP102 (NCT07163325, Epics Therapeutics) across 12 early-phase protocol dimensions</span>
+      </div>
+      
+    <div style="overflow-x:auto;">
+      <table class="matrix-table">
+        <thead>
+          <tr><th class="matrix-th" style="width:220px;">Protocol Parameter</th>
+        <th class="matrix-th" style="">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:6px; margin-bottom:4px;">
+            <a href="../../trials/NCT06975293/" style="color:#38bdf8; font-family:var(--font-mono); font-size:12.5px; text-decoration:none; font-weight:700;">NCT06975293</a>
+            <span class="badge badge-phase" style="font-size:10px; padding:2px 6px;">PHASE1/PHASE2</span>
+          </div>
+          <div style="font-size:12px; color:var(--text-high); font-weight:600;">STC-15 in combination with toripalimab, STC-15 monotherapy</div>
+          <div style="font-size:11px; color:var(--text-low); font-weight:400;">STORM Therapeutics LTD</div>
+        </th>
+        <th class="matrix-th" style="">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:6px; margin-bottom:4px;">
+            <a href="../../trials/NCT07163325/" style="color:#38bdf8; font-family:var(--font-mono); font-size:12.5px; text-decoration:none; font-weight:700;">NCT07163325</a>
+            <span class="badge badge-phase" style="font-size:10px; padding:2px 6px;">PHASE1</span>
+          </div>
+          <div style="font-size:12px; color:var(--text-high); font-weight:600;">EP102</div>
+          <div style="font-size:11px; color:var(--text-low); font-weight:400;">Epics Therapeutics</div>
+        </th></tr>
+        </thead>
+        <tbody>
+          
+        <tr>
+          <td class="matrix-param">Recruitment Status</td>
+          <td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">RECRUITING</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.statusModule.overallStatus</div>
+    </td><td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">RECRUITING</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.statusModule.overallStatus</div>
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">Dose-Escalation / Phase 2 Design</td>
+          <td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">3+3 + Simon&#x27;s 2-stage</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.armsInterventionsModule.armGroups[0].description; protocolSection.descriptionModule.briefSummary</div>
+    </td><td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">BOIN</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.designModule.designInfo.interventionModelDescription</div>
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">Primary Safety / DLT Endpoint</td>
+          <td class="matrix-td cell-not-reported">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-not-reported">— not reported</span></div>
+      <div class="matrix-val">Not reported in primary outcomes.</div>
+      
+    </td><td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie — [description: Incidence of Dose Limiting Toxicities (DLT)]</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: &#x27;Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie&#x27;)</div>
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">DLT Assessment Window</td>
+          <td class="matrix-td cell-not-reported">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-not-reported">— not reported</span></div>
+      <div class="matrix-val">Not reported separately from study duration.</div>
+      
+    </td><td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">Up to 21 Days after first administration</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: &#x27;Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie&#x27;) + .timeFrame</div>
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">Maximum Tolerated Dose (MTD)</td>
+          <td class="matrix-td cell-not-reported">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-not-reported">— not reported</span></div>
+      <div class="matrix-val">Not reported as a designated primary outcome measure.</div>
+      
+    </td><td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.outcomesModule.primaryOutcomes[2].measure</div>
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">Recommended Phase 2 Dose (RP2D)</td>
+          <td class="matrix-td cell-not-reported">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-not-reported">— not reported</span></div>
+      <div class="matrix-val">Not reported as a designated primary outcome measure.</div>
+      
+    </td><td class="matrix-td cell-inferred">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-inferred">~ inferred</span></div>
+      <div class="matrix-val">States a goal of &#x27;Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie&#x27;; consistent with an RP2D objective, term not used.</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.outcomesModule.primaryOutcomes[2].measure</div>
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">Toxicity Grading Framework</td>
+          <td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">CTCAE (CTCAE (v5.0))</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.eligibilityModule.eligibilityCriteria</div>
+    </td><td class="matrix-td cell-not-reported">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-not-reported">— not reported</span></div>
+      <div class="matrix-val">Toxicity grading framework not stated in registry record.</div>
+      
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">Prior Therapy Washout</td>
+          <td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">Received prior systemic anticancer therapy including investigational agents within 4 weeks or 5 half-lives, whichever is shorter, prior to first IMP administration.</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.eligibilityModule.eligibilityCriteria</div>
+    </td><td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">Participants who have received IMP or devices in other clinical trials within four weeks before the first dose.</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.eligibilityModule.eligibilityCriteria</div>
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">Organ-Function Cutoffs (Heme/Renal/Hepatic/Cardiac)</td>
+          <td class="matrix-td cell-not-reported">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-not-reported">— not reported</span></div>
+      <div class="matrix-val">4 statutory gaps (Hematologic, Renal, Hepatic, Cardiac not specified)</div>
+      
+    </td><td class="matrix-td cell-not-reported">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-not-reported">— not reported</span></div>
+      <div class="matrix-val">4 statutory gaps (Hematologic, Renal, Hepatic, Cardiac not specified)</div>
+      
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">Participating Countries &amp; Sites</td>
+          <td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">1 participating country (United States) across 14 clinical trial sites.</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.contactsLocationsModule.locations</div>
+    </td><td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">4 participating countries (Belgium, Czechia, Netherlands, Spain) across 11 clinical trial sites.</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.contactsLocationsModule.locations</div>
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">Designated Arms / Cohorts</td>
+          <td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">3 arms (Phase 1 dose escalation; Phase 2 Stage 1 Monotherapy; Phase 2 Stage 2 Monotherapy)</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.armsInterventionsModule.armGroups</div>
+    </td><td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">5 arms (EP102 Dose level 1; EP102 Dose level 2; EP102 Dose level 3; EP102 Dose level 4; EP102 Dose level 5)</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.armsInterventionsModule.armGroups</div>
+    </td>
+        </tr>
+        <tr>
+          <td class="matrix-param">Linked PubMed Literature</td>
+          <td class="matrix-td cell-not-reported">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-not-reported">— not reported</span></div>
+      <div class="matrix-val">No linked publication in registry</div>
+      
+    </td><td class="matrix-td cell-stated">
+      <div style="margin-bottom:6px;"><span class="prov-chip prov-stated">✓ stated</span></div>
+      <div class="matrix-val">PMID: 39883878, PMID: 42210870</div>
+      <div style="font-size:11px; color:var(--text-low); margin-top:4px; font-family:var(--font-mono);">protocolSection.referencesModule</div>
+    </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+    <!-- INDIVIDUAL VERIFIED DOSSIER SUMMARIES -->
+    <div class="module-card">
+      <div class="module-header-wrap">
+        <div class="module-title"><i class="fa-solid fa-folder-tree"></i> Section 2 — Verified Interventional Trial Dossiers</div>
+      </div>
+      
+        <div class="module-card" style="margin-bottom:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:10px;">
+            <div>
+              <div class="badge-row" style="margin-bottom:6px;">
+                <span class="badge badge-nct">NCT06975293</span>
+                <span class="badge badge-phase">PHASE1/PHASE2</span>
+                <span class="badge badge-status">RECRUITING</span>
+                <span class="prov-chip prov-stated">✓ EXTERNAL_AUDIT_VERIFIED_LIVE</span>
+              </div>
+              <h2 style="font-size:16.5px; color:var(--text-high); font-weight:700; margin-bottom:4px;">STC-15 as a Part of Combination Therapy With Toripalimab in Selected Advanced Cancers and as Monotherapy in Participants With Selected Sarcomas</h2>
+              <div style="font-size:12.5px; color:var(--text-low);">Sponsor: <strong style="color:var(--text-med);">STORM Therapeutics LTD</strong> · Intervention: <strong style="color:var(--text-med);">STC-15 in combination with toripalimab, STC-15 monotherapy</strong></div>
+            </div>
+            <a href="../../trials/NCT06975293/" class="btn-export" style="padding:7px 14px; font-size:12px;">Open 4-Module Protocol Dossier &rarr;</a>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:10px; margin-top:12px; font-size:12.5px;">
+            <div style="padding:10px; background:rgba(255,255,255,0.02); border-radius:6px; border-left:3px solid var(--teal-fact);">
+              <span class="field-label">Design Archetype</span>
+              <span class="val-stated">Uses a 3+3 + Simon&#x27;s 2-stage design.</span>
+            </div>
+            <div style="padding:10px; background:rgba(255,255,255,0.02); border-radius:6px; border-left:3px dotted var(--grey-silent);">
+              <span class="field-label">DLT Assessment Window</span>
+              <span class="val-not-reported">Not reported separately from study duration.</span>
+            </div>
+            <div style="padding:10px; background:rgba(255,255,255,0.02); border-radius:6px; border-left:3px dotted var(--grey-silent);">
+              <span class="field-label">RP2D Objective</span>
+              <span class="val-not-reported">Not reported as a designated primary outcome measure.</span>
+            </div>
+            <div style="padding:10px; background:rgba(255,255,255,0.02); border-radius:6px; border-left:3px solid var(--teal-fact);">
+              <span class="field-label">Geography &amp; Sites</span>
+              <span class="val-stated">1 participating country (United States) across 14 clinical trial sites.</span>
+            </div>
+          </div>
+        </div>
+        <div class="module-card" style="margin-bottom:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:10px;">
+            <div>
+              <div class="badge-row" style="margin-bottom:6px;">
+                <span class="badge badge-nct">NCT07163325</span>
+                <span class="badge badge-phase">PHASE1</span>
+                <span class="badge badge-status">RECRUITING</span>
+                <span class="prov-chip prov-stated">✓ EXTERNAL_AUDIT_VERIFIED_LIVE</span>
+              </div>
+              <h2 style="font-size:16.5px; color:var(--text-high); font-weight:700; margin-bottom:4px;">EP102 Safety and Efficacy in METTL3 Modulation in Advanced Solid Tumors</h2>
+              <div style="font-size:12.5px; color:var(--text-low);">Sponsor: <strong style="color:var(--text-med);">Epics Therapeutics</strong> · Intervention: <strong style="color:var(--text-med);">EP102</strong></div>
+            </div>
+            <a href="../../trials/NCT07163325/" class="btn-export" style="padding:7px 14px; font-size:12px;">Open 4-Module Protocol Dossier &rarr;</a>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:10px; margin-top:12px; font-size:12.5px;">
+            <div style="padding:10px; background:rgba(255,255,255,0.02); border-radius:6px; border-left:3px solid var(--teal-fact);">
+              <span class="field-label">Design Archetype</span>
+              <span class="val-stated">Uses a BOIN design.</span>
+            </div>
+            <div style="padding:10px; background:rgba(255,255,255,0.02); border-radius:6px; border-left:3px solid var(--teal-fact);">
+              <span class="field-label">DLT Assessment Window</span>
+              <span class="val-stated">DLT assessment window specified as: Up to 21 Days after first administration</span>
+            </div>
+            <div style="padding:10px; background:rgba(255,255,255,0.02); border-radius:6px; border-left:3px dashed var(--amber-inferred);">
+              <span class="field-label">RP2D Objective</span>
+              <span class="val-inferred">States a goal of &#x27;Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie&#x27;; consistent with an RP2D objective, term not used.</span>
+            </div>
+            <div style="padding:10px; background:rgba(255,255,255,0.02); border-radius:6px; border-left:3px solid var(--teal-fact);">
+              <span class="field-label">Geography &amp; Sites</span>
+              <span class="val-stated">4 participating countries (Belgium, Czechia, Netherlands, Spain) across 11 clinical trial sites.</span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- CLASS MEMBERSHIP AUDIT & EXCLUSION LOG -->
+    <div class="module-card">
+      <div class="module-header-wrap">
+        <div class="module-title"><i class="fa-solid fa-clipboard-check"></i> Section 3 — Class-Membership Verification Gate &amp; Excluded Registry Records</div>
+        <span class="mod-strip-text">Enforces the "Verify Before You Aggregate" rule: trials with pending target confirmation or non-interventional designs are held out of the comparison matrix</span>
+      </div>
+      
+        <div class="field-row row-inferred">
+          <div class="field-main">
+            <span class="field-label">NCT05584111 — Held Out of Class Matrix Pending External Target Sign-Off</span>
+            <div class="field-content">
+              <span class="val-stated">Phase 1 Study to Evaluate the Safety, PK, PD, and Clinical Activity of STC-15, a METTL-3 Inhibitor, in Subjects With Advanced Malignancies</span>
+              <div style="font-size:12px; color:var(--text-low); margin-top:4px;">
+                Sponsor: STORM Therapeutics LTD · Phase: PHASE1 · Status: COMPLETED · <a href="../../trials/NCT05584111/" style="color:#38bdf8;">View Standalone Dossier &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <div class="field-chip-col">
+            <span class="prov-chip prov-inferred">~ pending class gate</span>
+          </div>
+        </div>
+      <div class="field-row row-not-reported">
+        <div class="field-main">
+          <span class="field-label">NCT06762925 — Excluded from Interventional Class (Observational Biomarker Registry)</span>
+          <div class="field-content">
+            <span class="val-not-reported">Official Title: "Study on the Efficacy and Mechanism of METTL3 Peptide Inhibitors in Enhancing Anti-tumor Immune Response by Reshaping the Tumor Microenvironment" (Sponsor: Xijing Hospital). Excluded after live API v2 audit confirmed <code>designModule.studyType = "OBSERVATIONAL"</code> (cross-sectional patient registry), <code>interventions = ["No Interventions"]</code>, and <code>briefSummary</code> evaluating METTL3 strictly as an observational biomarker in urinary tract tumors.</span>
+          </div>
+        </div>
+        <div class="field-chip-col">
+          <span class="prov-chip prov-not-reported">— excluded (observational)</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2026 ClinSight · Protocol facts from ClinicalTrials.gov API v2 · Enforced under ClinSight Unified Integrity Contract
+    </footer>
+  </div>
+
+  <script>
+    const CLASS_EXPORT_ROWS = [["NCT06975293", "Module 1", "Design Archetype", "STATED", "Uses a 3+3 + Simon's 2-stage design.", "protocolSection.armsInterventionsModule.armGroups[0].description; protocolSection.descriptionModule.briefSummary"], ["NCT06975293", "Module 1", "Allocation Mode", "STATED", "NON_RANDOMIZED", "protocolSection.designModule.designInfo.allocation"], ["NCT06975293", "Module 1", "Masking", "STATED", "NONE", "protocolSection.designModule.designInfo.maskingInfo.masking"], ["NCT06975293", "Module 1", "Intervention Model", "STATED", "SEQUENTIAL", "protocolSection.designModule.designInfo.interventionModel"], ["NCT06975293", "Module 1", "Primary Purpose", "STATED", "TREATMENT", "protocolSection.designModule.designInfo.primaryPurpose"], ["NCT06975293", "Module 1", "Participating Countries", "STATED-structural", "1 participating country (United States) across 14 clinical trial sites.", "protocolSection.contactsLocationsModule.locations"], ["NCT06975293", "Module 1", "Study Arms / Cohorts", "STATED-structural", "3 designated study arms / cohorts (Phase 1 dose escalation; Phase 2 Stage 1 Monotherapy; Phase 2 Stage 2 Monotherapy).", "protocolSection.armsInterventionsModule.armGroups"], ["NCT06975293", "Module 2", "Hematologic Function", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT06975293", "Module 2", "Renal Clearance", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT06975293", "Module 2", "Hepatic Function", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT06975293", "Module 2", "Cardiac Parameters", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT06975293", "Module 2", "Prior Therapy & Washout", "STATED", "[numeric] Received prior systemic anticancer therapy including investigational agents within 4 weeks or 5 half-lives, whichever is shorter, prior to first IMP administration. | [qualitative] Participants who have not recovered from all AEs due to previous therapies to Grade \u2264 1 or baseline, according to NCI-CTCAE v5.0. Exceptions include: alopecia, Grade \u2264 2 neuropathy, and endocrine-related AEs Grade \u2264 2 who are stable on treatment or hormone replacement.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT06975293", "Module 3", "Primary Safety / DLT Endpoint", "NOT_REPORTED", "Not reported in primary outcomes.", "N/A"], ["NCT06975293", "Module 3", "DLT Assessment Window", "NOT_REPORTED", "Not reported separately from study duration.", "N/A"], ["NCT06975293", "Module 3", "Recommended Phase 2 Dose (RP2D)", "NOT_REPORTED", "Not reported as a designated primary outcome measure.", "N/A"], ["NCT06975293", "Module 3", "Maximum Tolerated Dose (MTD)", "NOT_REPORTED", "Not reported as a designated primary outcome measure.", "N/A"], ["NCT06975293", "Module 3", "Toxicity Grading Framework", "STATED", "Adverse events graded according to CTCAE (v5.0).", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT06975293", "Module 3", "Dose Modification Rules", "NOT_REPORTED", "Dose-modification rules not described in the registry record.", "N/A"], ["NCT06975293", "Module 4", "Primary Statutory Record", "STATED", "https://clinicaltrials.gov/study/NCT06975293", "protocolSection.identificationModule.nctId"], ["NCT06975293", "Module 4", "Linked Literature (PMID)", "NOT_REPORTED", "No linked publication in registry", "protocolSection.referencesModule"], ["NCT07163325", "Module 1", "Design Archetype", "STATED", "Uses a BOIN design.", "protocolSection.designModule.designInfo.interventionModelDescription"], ["NCT07163325", "Module 1", "Allocation Mode", "STATED", "NON_RANDOMIZED", "protocolSection.designModule.designInfo.allocation"], ["NCT07163325", "Module 1", "Masking", "STATED", "NONE", "protocolSection.designModule.designInfo.maskingInfo.masking"], ["NCT07163325", "Module 1", "Intervention Model", "STATED", "SEQUENTIAL", "protocolSection.designModule.designInfo.interventionModel"], ["NCT07163325", "Module 1", "Primary Purpose", "STATED", "TREATMENT", "protocolSection.designModule.designInfo.primaryPurpose"], ["NCT07163325", "Module 1", "Participating Countries", "STATED-structural", "4 participating countries (Belgium, Czechia, Netherlands, Spain) across 11 clinical trial sites.", "protocolSection.contactsLocationsModule.locations"], ["NCT07163325", "Module 1", "Study Arms / Cohorts", "STATED-structural", "5 designated study arms / cohorts (EP102 Dose level 1; EP102 Dose level 2; EP102 Dose level 3; EP102 Dose level 4; EP102 Dose level 5).", "protocolSection.armsInterventionsModule.armGroups"], ["NCT07163325", "Module 2", "Hematologic Function", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT07163325", "Module 2", "Renal Clearance", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT07163325", "Module 2", "Hepatic Function", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT07163325", "Module 2", "Cardiac Parameters", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT07163325", "Module 2", "Prior Therapy & Washout", "STATED", "[numeric] Participants who have received IMP or devices in other clinical trials within four weeks before the first dose.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["NCT07163325", "Module 3", "Primary Safety / DLT Endpoint", "STATED", "Primary outcome evaluates: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie \u2014 [description: Incidence of Dose Limiting Toxicities (DLT)]", "protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie')"], ["NCT07163325", "Module 3", "DLT Assessment Window", "STATED", "DLT assessment window specified as: Up to 21 Days after first administration", "protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie') + .timeFrame"], ["NCT07163325", "Module 3", "Recommended Phase 2 Dose (RP2D)", "INFERRED", "States a goal of 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie'; consistent with an RP2D objective, term not used.", "protocolSection.outcomesModule.primaryOutcomes[2].measure"], ["NCT07163325", "Module 3", "Maximum Tolerated Dose (MTD)", "STATED", "Designated primary measure: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie", "protocolSection.outcomesModule.primaryOutcomes[2].measure"], ["NCT07163325", "Module 3", "Toxicity Grading Framework", "NOT_REPORTED", "Toxicity grading framework not stated in registry record.", "N/A"], ["NCT07163325", "Module 3", "Dose Modification Rules", "NOT_REPORTED", "Dose-modification rules not described in the registry record.", "N/A"], ["NCT07163325", "Module 4", "Primary Statutory Record", "STATED", "https://clinicaltrials.gov/study/NCT07163325", "protocolSection.identificationModule.nctId"], ["NCT07163325", "Module 4", "Linked Literature (PMID)", "STATED", "39883878, 42210870", "protocolSection.referencesModule"]];
+    function copyClassMarkdown() {
+      let lines = [
+        `### METTL3 Inhibitor Class — Provenance-Tagged Protocol Extract`,
+        `| NCT ID | Module | Field | Provenance State | Value / Verbatim Statement | Registry Source Field |`,
+        `|---|---|---|---|---|---|`
+      ];
+      for (const r of CLASS_EXPORT_ROWS) {
+        const cleanVal = String(r[4] || '').replace(/\|/g, '\\|');
+        lines.push(`| ${r[0]} | ${r[1]} | ${r[2]} | **[${r[3]}]** | ${cleanVal} | \`${r[5]}\` |`);
+      }
+      navigator.clipboard.writeText(lines.join('\n')).then(() => {
+        const btn = document.getElementById('btnCopyClassMd');
+        const oldHtml = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check" style="color:#34d399;"></i> [Copied Class Table w/ Provenance!]';
+        setTimeout(() => { btn.innerHTML = oldHtml; }, 2200);
+      });
+    }
+  </script>
+</body>
+</html>

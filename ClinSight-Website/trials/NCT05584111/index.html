@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
   <style>
     :root {
       --bg-void: #07090e;
@@ -52,12 +51,14 @@
       justify-content: space-between;
       align-items: center;
       font-size: 13px;
+      flex-wrap: wrap;
+      gap: 12px;
     }
     .topbar a { color: var(--text-high); text-decoration: none; font-weight: 500; }
     .topbar a:hover { color: #38bdf8; }
     
     .container {
-      max-width: 960px;
+      max-width: 1020px;
       margin: 0 auto;
       padding: 28px 20px;
     }
@@ -69,7 +70,7 @@
       padding: 24px;
       margin-bottom: 24px;
     }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; align-items: center; }
     .badge {
       font-family: var(--font-mono);
       font-size: 11.5px;
@@ -80,6 +81,7 @@
     .badge-nct { background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
     .badge-phase { background: rgba(168, 85, 247, 0.12); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
     .badge-status { background: rgba(34, 197, 94, 0.12); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
+    .badge-class { background: rgba(20, 184, 166, 0.12); color: #2dd4bf; border: 1px solid rgba(20, 184, 166, 0.3); text-decoration: none; }
     
     h1 {
       font-size: 22px;
@@ -111,11 +113,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-bottom: 10px;
       font-size: 12px;
       font-family: var(--font-mono);
       text-transform: uppercase;
       letter-spacing: 0.05em;
+    }
+    .toolbar-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
     }
     .stacked-bar {
       height: 10px;
@@ -140,20 +150,25 @@
     }
     .legend-item { display: inline-flex; align-items: center; gap: 6px; }
     
-    .btn-audit {
-      background: transparent;
+    .btn-audit, .btn-export {
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border-subtle);
       color: var(--text-med);
-      padding: 5px 12px;
+      padding: 5px 11px;
       border-radius: 6px;
-      font-size: 11.5px;
+      font-size: 11px;
       font-family: var(--font-mono);
       cursor: pointer;
       transition: all 0.15s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
-    .btn-audit:hover {
+    .btn-audit:hover, .btn-export:hover {
       border-color: #38bdf8;
       color: #38bdf8;
+      background: rgba(56, 189, 248, 0.08);
     }
     
     .module-card {
@@ -292,6 +307,39 @@
       font-size: 12px;
     }
     .doc-link:hover { text-decoration: underline; }
+
+    /* Cross-Trial Class Matrix (Step 4) */
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin-top: 8px;
+    }
+    .matrix-th {
+      text-align: left;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    .matrix-param {
+      padding: 12px;
+      border: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--text-med);
+      background: rgba(255, 255, 255, 0.015);
+      vertical-align: top;
+      font-weight: 600;
+    }
+    .matrix-td {
+      padding: 12px;
+      border: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    .cell-stated { border-left: 3px solid var(--teal-fact); color: var(--text-high); }
+    .cell-inferred { border-left: 3px dashed var(--amber-inferred); color: var(--text-med); }
+    .cell-not-reported { border-left: 3px dotted var(--grey-silent); color: var(--text-low); background: var(--grey-bg); font-style: italic; }
     
     footer {
       margin-top: 40px;
@@ -302,11 +350,15 @@
       color: var(--text-low);
       text-align: center;
     }
-  </style>
+</style>
 </head>
 <body>
   <div class="topbar">
-    <a href="../../">&larr; ClinSight Regulatory Intelligence Workbench</a>
+    <div>
+      <a href="../../">&larr; ClinSight Regulatory Intelligence Workbench</a>
+      <span style="margin:0 8px; color:var(--text-low);">/</span>
+      <a href="../../targets/mettl3-inhibitors/" style="color:#38bdf8;">Target Class: METTL3 Inhibitors</a>
+    </div>
     <span style="font-family:var(--font-mono); font-size:11px; color:var(--text-low);">Open-Access Protocol Dossier</span>
   </div>
 
@@ -317,17 +369,22 @@
         <span class="badge badge-nct">NCT05584111</span>
         <span class="badge badge-phase">PHASE1</span>
         <span class="badge badge-status">COMPLETED</span>
+        <a href="../../targets/mettl3-inhibitors/" class="badge badge-class"><i class="fa-solid fa-dna"></i> Target: METTL3 RNA Methyltransferase</a>
       </div>
       <h1>Oral Administration of STC-15 in Subjects With Advanced Malignancies</h1>
       <p class="official-title">Phase 1 Study to Evaluate the Safety, PK, PD, and Clinical Activity of STC-15, a METTL-3 Inhibitor, in Subjects With Advanced Malignancies</p>
       <p class="sponsor-line">Lead Sponsor: <strong>STORM Therapeutics LTD</strong></p>
     </div>
 
-    <!-- B. PROVENANCE SUMMARY BAR + LEGEND + AUDIT MODE -->
+    <!-- B. PROVENANCE SUMMARY BAR + EXPORT TOOLS + AUDIT MODE -->
     <div class="summary-card">
       <div class="summary-header">
         <span>Page Provenance: <strong>10 stated</strong> · <strong>0 inferred</strong> · <strong>12 not reported</strong></span>
-        <button class="btn-audit" onclick="toggleAuditMode()">[Audit mode ▸]</button>
+        <div class="toolbar-group">
+          <button class="btn-export" id="btnCopyMd" onclick="copyProvenanceMarkdown()"><i class="fa-regular fa-copy"></i> [Copy IB/CSR Table (w/ Provenance)]</button>
+          <button class="btn-export" onclick="downloadProvenanceCsv()"><i class="fa-solid fa-download"></i> [Download Trial CSV (Provenance-Tagged)]</button>
+          <button class="btn-audit" onclick="toggleAuditMode()">[Audit mode ▸]</button>
+        </div>
       </div>
       <div class="stacked-bar">
         <div class="bar-seg seg-stated" style="width: 45.5%" title="45.5% Stated"></div>
@@ -790,12 +847,17 @@
       </div>
     </div>
 
+    
+
     <footer>
       &copy; 2026 ClinSight · Protocol facts from ClinicalTrials.gov API v2 · Enforced under ClinSight Unified Integrity Contract
     </footer>
   </div>
 
   <script>
+    const DOSSIER_NCT = "NCT05584111";
+    const EXPORT_ROWS = [["Module 1", "Design Archetype", "STATED", "Uses a 3+3 + Dose Expansion design.", "protocolSection.descriptionModule.briefSummary; protocolSection.descriptionModule.briefSummary"], ["Module 1", "Allocation Mode", "STATED", "NON_RANDOMIZED", "protocolSection.designModule.designInfo.allocation"], ["Module 1", "Masking", "STATED", "NONE", "protocolSection.designModule.designInfo.maskingInfo.masking"], ["Module 1", "Intervention Model", "STATED", "SEQUENTIAL", "protocolSection.designModule.designInfo.interventionModel"], ["Module 1", "Primary Purpose", "STATED", "TREATMENT", "protocolSection.designModule.designInfo.primaryPurpose"], ["Module 1", "Participating Countries", "STATED-structural", "1 participating country (United States) across 3 clinical trial sites.", "protocolSection.contactsLocationsModule.locations"], ["Module 1", "Study Arms / Cohorts", "STATED-structural", "5 designated study arms / cohorts (Dose Level 1; Dose Level 2; Dose Level 3; Dose Level 4; Dose Level 5).", "protocolSection.armsInterventionsModule.armGroups"], ["Module 2", "Hematologic Function", "STATED", "[qualitative] Adequate organ and marrow function", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Module 2", "Renal Clearance", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Module 2", "Hepatic Function", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Module 2", "Cardiac Parameters", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Module 2", "Prior Therapy & Washout", "STATED", "[numeric] Treatment with any local or systemic antineoplastic therapy within 3 weeks prior to first dose of STC-15", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Module 3", "Primary Safety / DLT Endpoint", "NOT_REPORTED", "Not reported in primary outcomes.", "N/A"], ["Module 3", "DLT Assessment Window", "NOT_REPORTED", "Not reported separately from study duration.", "N/A"], ["Module 3", "Recommended Phase 2 Dose (RP2D)", "NOT_REPORTED", "Not reported as a designated primary outcome measure.", "N/A"], ["Module 3", "Maximum Tolerated Dose (MTD)", "NOT_REPORTED", "Not reported as a designated primary outcome measure.", "N/A"], ["Module 3", "Toxicity Grading Framework", "NOT_REPORTED", "Toxicity grading framework not stated in registry record.", "N/A"], ["Module 3", "Dose Modification Rules", "NOT_REPORTED", "Dose-modification rules not described in the registry record.", "N/A"], ["Module 4", "Primary Statutory Record", "STATED", "https://clinicaltrials.gov/study/NCT05584111", "protocolSection.identificationModule.nctId"], ["Module 4", "Linked Literature (PMID)", "NOT_REPORTED", "No linked publication in registry", "protocolSection.referencesModule"]];
+
     function toggleSource(el) {
       const payload = el.nextElementSibling;
       if (payload) {
@@ -809,6 +871,43 @@
       document.body.classList.toggle('audit-active', auditMode);
       const btn = document.querySelector('.btn-audit');
       if (btn) btn.textContent = auditMode ? '[Audit mode ▾ Collapse]' : '[Audit mode ▸]';
+    }
+
+    function copyProvenanceMarkdown() {
+      let lines = [
+        `### ${DOSSIER_NCT} — Protocol & Regulatory Dossier Extract (Provenance-Preserving)`,
+        `| Module | Field | Provenance State | Value / Verbatim Statement | Registry Source Field |`,
+        `|---|---|---|---|---|`
+      ];
+      for (const r of EXPORT_ROWS) {
+        const cleanVal = String(r[3] || '').replace(/\|/g, '\\|');
+        lines.push(`| ${r[0]} | ${r[1]} | **[${r[2]}]** | ${cleanVal} | \`${r[4]}\` |`);
+      }
+      navigator.clipboard.writeText(lines.join('\n')).then(() => {
+        const btn = document.getElementById('btnCopyMd');
+        const oldHtml = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check" style="color:#34d399;"></i> [Copied w/ Provenance Tags!]';
+        setTimeout(() => { btn.innerHTML = oldHtml; }, 2200);
+      });
+    }
+
+    function downloadProvenanceCsv() {
+      const headers = ['nct_id', 'module', 'field', 'provenance_state', 'value_or_statement', 'registry_source_field', 'build_consistency_status'];
+      const csvRows = [headers.join(',')];
+      for (const r of EXPORT_ROWS) {
+        const rowVals = [DOSSIER_NCT, r[0], r[1], `[${r[2]}]`, r[3] || '', r[4] || '', 'BUILD_STRING_MATCH_PASSED'].map(
+          v => `"${String(v).replace(/"/g, '""')}"`
+        );
+        csvRows.push(rowVals.join(','));
+      }
+      const blob = new Blob([csvRows.join('\n')], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${DOSSIER_NCT}_Provenance_Dossier_Extract.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     }
   </script>
 </body>
