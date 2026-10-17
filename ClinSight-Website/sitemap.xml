@@ -37,7 +37,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
-  <!-- Externally Verified Phase 1/2 Protocol Dossiers Passing ≥50% Module 1–3 Density Gate -->
+  <!-- Externally Verified Phase 1/2 Protocol Dossiers Passing ≥50% (≥9/18) Module 1–3 Density Gate -->
   <url>
     <loc>https://clinsight.pract.eu/trials/NCT07163325/</loc>
     <lastmod>2026-10-17</lastmod>
@@ -46,6 +46,12 @@
   </url>
   <url>
     <loc>https://clinsight.pract.eu/trials/NCT06975293/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://clinsight.pract.eu/trials/NCT05584111/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>

@@ -160,19 +160,27 @@ def extract_dossier_data(raw, downgrades_log, unmatched_elig_log, dlt_rejections
                         seen_arch_names.add(arch_name)
                     break
                     
+    design_detail = None
+    for s_field, s_text in search_corpus:
+        if "modified fibonacci" in normalize(s_text):
+            design_detail = "modified Fibonacci"
+            break
+
     if matched_archetypes:
         arch_names_joined = " + ".join([m["value"] for m in matched_archetypes])
         sources_joined = "; ".join([m["source_field"] for m in matched_archetypes])
         verbatims_joined = " | ".join([f'{m["verbatim"]} ({m["source_field"]})' for m in matched_archetypes])
+        detail_suffix = f" (with {design_detail} dose increments)" if design_detail else ""
         design_archetype = {
             "value": arch_names_joined,
+            "design_detail": design_detail,
             "state": "STATED",
             "source_field": sources_joined,
             "verbatim_trigger": matched_archetypes[0]["verbatim_trigger"],
             "verbatim": verbatims_joined,
             "checked_at_build": True,
             "matches": matched_archetypes,
-            "render": f"Uses a {arch_names_joined} design."
+            "render": f"Uses a {arch_names_joined} design{detail_suffix}."
         }
     else:
         design_archetype = {
@@ -324,9 +332,16 @@ def extract_dossier_data(raw, downgrades_log, unmatched_elig_log, dlt_rejections
             unmatched_elig_log.append({"nct": nct_id, "line": line})
 
     # -------------------------------------------------------------
-    # MODULE 3: Safety, DLT & RP2D Blueprint
+    # MODULE 3: Safety, DLT & RP2D Blueprint (Multi-Tier Scan per §3.1/§3.2 Patch)
     # -------------------------------------------------------------
     primary_outcomes = outcomes_m.get("primaryOutcomes", [])
+    secondary_outcomes = outcomes_m.get("secondaryOutcomes", [])
+    other_outcomes = outcomes_m.get("otherOutcomes", [])
+    outcome_tiers = [
+        ("primary", "primaryOutcomes", primary_outcomes),
+        ("secondary", "secondaryOutcomes", secondary_outcomes),
+        ("other", "otherOutcomes", other_outcomes)
+    ]
     
     dlt_window_result = {
         "state": "NOT_REPORTED",
@@ -335,94 +350,112 @@ def extract_dossier_data(raw, downgrades_log, unmatched_elig_log, dlt_rejections
     }
     dlt_endpoint_result = {
         "state": "NOT_REPORTED",
-        "render": "Not reported in primary outcomes."
+        "render": "Not reported in outcome measures."
     }
     
     dlt_time_patterns = ["cycle 1", "first cycle", "days 1 to 2", "days 1-2", "first 21 days", "first 28 days", "21-day", "28-day", "4 weeks", "6 weeks", "8 weeks", "28 days", "21 days", "21 days after"]
     duration_disqualifiers = ["up to 24 months", "up to 2 years", "up to 3 years", "through study completion", "study completion", "until disease progression", "until progression", "overall survival", "24 months", "2 years"]
     
-    for idx, po in enumerate(primary_outcomes):
-        meas = po.get("measure", "")
-        desc = po.get("description", "")
-        tf = po.get("timeFrame", "")
-        norm_meas = normalize(meas)
-        norm_desc = normalize(desc)
-        norm_tf = normalize(tf)
-        
-        dlt_triggers = ["dose-limiting toxicit", "dose limiting toxicit", " dlt", "dlts", "(dlt)"]
-        in_meas = any(t in norm_meas for t in dlt_triggers)
-        in_desc = any(t in norm_desc for t in dlt_triggers)
-        
-        if in_meas or in_desc:
-            where_matched = f"protocolSection.outcomesModule.primaryOutcomes[{idx}].measure" if in_meas else f"protocolSection.outcomesModule.primaryOutcomes[{idx}].description (under measure: '{meas}')"
-            full_meas_text = meas if not desc else f"{meas} — [description: {desc}]"
-            dlt_endpoint_result = {
-                "state": "STATED",
-                "value": full_meas_text,
-                "source_field": where_matched,
-                "verbatim": full_meas_text,
-                "checked_at_build": True,
-                "render": f"Primary outcome evaluates: {full_meas_text}"
-            }
-            is_bounded = any(p in norm_tf for p in dlt_time_patterns)
-            is_disqualified = any(d in norm_tf for d in duration_disqualifiers)
-            if is_bounded and not is_disqualified:
-                dlt_window_result = {
+    for tier_label, tier_key, tier_list in outcome_tiers:
+        for idx, po in enumerate(tier_list):
+            meas = po.get("measure", "")
+            desc = po.get("description", "")
+            tf = po.get("timeFrame", "")
+            norm_meas = normalize(meas)
+            norm_desc = normalize(desc)
+            norm_tf = normalize(tf)
+            
+            dlt_triggers = ["dose-limiting toxicit", "dose limiting toxicit", " dlt", "dlts", "(dlt)"]
+            in_meas = any(t in norm_meas for t in dlt_triggers)
+            in_desc = any(t in norm_desc for t in dlt_triggers)
+            
+            if (in_meas or in_desc) and dlt_endpoint_result["state"] == "NOT_REPORTED":
+                where_matched = f"protocolSection.outcomesModule.{tier_key}[{idx}].measure" if in_meas else f"protocolSection.outcomesModule.{tier_key}[{idx}].description (under measure: '{meas}')"
+                full_meas_text = meas if not desc else f"{meas} — [description: {desc}]"
+                tier_qual = "" if tier_label == "primary" else f" — stated as a {tier_label} outcome"
+                dlt_endpoint_result = {
                     "state": "STATED",
-                    "value": tf,
-                    "source_field": f"{where_matched} + .timeFrame",
-                    "verbatim": f"measure: \"{meas}\" | description: \"{desc}\" | timeFrame: \"{tf}\"",
+                    "value": full_meas_text,
+                    "outcome_tier": tier_label,
+                    "source_field": where_matched,
+                    "verbatim": full_meas_text,
                     "checked_at_build": True,
-                    "render": f"DLT assessment window specified as: {tf}"
+                    "render": f"{'Primary outcome evaluates' if tier_label == 'primary' else 'Outcome evaluates'}: {full_meas_text}{tier_qual}"
                 }
-            else:
-                dlt_rejections_log.append({
-                    "nct": nct_id,
-                    "measure": meas,
-                    "description": desc,
-                    "disqualified_timeFrame": tf
-                })
-                dlt_window_result = {
-                    "state": "NOT_REPORTED",
-                    "render": "DLTs assessed; no bounded early window stated separately from study duration.",
-                    "disqualified_timeframe": tf
-                }
+                is_bounded = any(p in norm_tf for p in dlt_time_patterns)
+                is_disqualified = any(d in norm_tf for d in duration_disqualifiers)
+                if is_bounded and not is_disqualified:
+                    dlt_window_result = {
+                        "state": "STATED",
+                        "value": tf,
+                        "outcome_tier": tier_label,
+                        "source_field": f"{where_matched} + .timeFrame",
+                        "verbatim": f"measure: \"{meas}\" | description: \"{desc}\" | timeFrame: \"{tf}\"",
+                        "checked_at_build": True,
+                        "render": f"DLT assessment window specified as: {tf}{tier_qual}"
+                    }
+                else:
+                    dlt_rejections_log.append({
+                        "nct": nct_id,
+                        "outcome_tier": tier_label,
+                        "measure": meas,
+                        "description": desc,
+                        "disqualified_timeFrame": tf
+                    })
+                    dlt_window_result = {
+                        "state": "NOT_REPORTED",
+                        "render": "DLTs assessed; no bounded early window stated separately from study duration.",
+                        "disqualified_timeframe": tf
+                    }
                 
-    # §3.2 RP2D and MTD — strict trigger strings only ("recommended phase 2 dose", "recommended phase ii dose", "rp2d")
-    rp2d_result = {"state": "NOT_REPORTED", "render": "Not reported as a designated primary outcome measure."}
-    mtd_result = {"state": "NOT_REPORTED", "render": "Not reported as a designated primary outcome measure."}
+    # §3.2 RP2D and MTD — multi-tier outcome scan (primary -> secondary -> other)
+    rp2d_result = {"state": "NOT_REPORTED", "render": "Not reported as a designated outcome measure."}
+    mtd_result = {"state": "NOT_REPORTED", "render": "Not reported as a designated outcome measure."}
     
-    for idx, po in enumerate(primary_outcomes):
-        meas = po.get("measure", "")
-        desc = po.get("description", "")
-        norm_m = normalize(meas + " " + desc)
-        if any(t in norm_m for t in ["recommended phase 2 dose", "recommended phase ii dose", "rp2d"]):
-            rp2d_result = {
-                "state": "STATED",
-                "value": meas,
-                "source_field": f"protocolSection.outcomesModule.primaryOutcomes[{idx}].measure",
-                "verbatim": meas,
-                "checked_at_build": True,
-                "render": f"Designated primary measure: {meas}"
-            }
-        elif "recommended dose" in norm_m and rp2d_result["state"] == "NOT_REPORTED":
-            rp2d_result = {
-                "state": "INFERRED",
-                "candidate": "RP2D",
-                "source_field": f"protocolSection.outcomesModule.primaryOutcomes[{idx}].measure",
-                "verbatim": meas,
-                "checked_at_build": True,
-                "render": f"States a goal of '{meas}'; consistent with an RP2D objective, term not used."
-            }
-        if any(t in norm_m for t in ["maximum tolerated dose", "mtd"]):
-            mtd_result = {
-                "state": "STATED",
-                "value": meas,
-                "source_field": f"protocolSection.outcomesModule.primaryOutcomes[{idx}].measure",
-                "verbatim": meas,
-                "checked_at_build": True,
-                "render": f"Designated primary measure: {meas}"
-            }
+    for tier_label, tier_key, tier_list in outcome_tiers:
+        for idx, po in enumerate(tier_list):
+            meas = po.get("measure", "")
+            desc = po.get("description", "")
+            norm_m = normalize(meas + " " + desc)
+            in_meas_rp2d = any(t in normalize(meas) for t in ["recommended phase 2 dose", "recommended phase ii dose", "rp2d"])
+            in_desc_rp2d = any(t in normalize(desc) for t in ["recommended phase 2 dose", "recommended phase ii dose", "rp2d"])
+            if (in_meas_rp2d or in_desc_rp2d) and rp2d_result["state"] != "STATED":
+                sub_f = "measure" if in_meas_rp2d else "description"
+                tier_render = f"Designated primary measure: {meas}" if tier_label == "primary" else f"{meas} — stated as a {tier_label} outcome."
+                rp2d_result = {
+                    "state": "STATED",
+                    "value": meas,
+                    "outcome_tier": tier_label,
+                    "source_field": f"protocolSection.outcomesModule.{tier_key}[{idx}].{sub_f}",
+                    "verbatim": meas if in_meas_rp2d else f"{meas} ({desc})",
+                    "checked_at_build": True,
+                    "render": tier_render
+                }
+            elif "recommended dose" in norm_m and rp2d_result["state"] == "NOT_REPORTED":
+                rp2d_result = {
+                    "state": "INFERRED",
+                    "candidate": "RP2D",
+                    "outcome_tier": tier_label,
+                    "source_field": f"protocolSection.outcomesModule.{tier_key}[{idx}].measure",
+                    "verbatim": meas,
+                    "checked_at_build": True,
+                    "render": f"States a goal of '{meas}'; consistent with an RP2D objective, term not used."
+                }
+
+            in_meas_mtd = any(t in normalize(meas) for t in ["maximum tolerated dose", "mtd"])
+            in_desc_mtd = any(t in normalize(desc) for t in ["maximum tolerated dose", "mtd"])
+            if (in_meas_mtd or in_desc_mtd) and mtd_result["state"] != "STATED":
+                sub_f = "measure" if in_meas_mtd else "description"
+                tier_render = f"Designated primary measure: {meas}" if tier_label == "primary" else f"{meas} — stated as a {tier_label} outcome."
+                mtd_result = {
+                    "state": "STATED",
+                    "value": meas,
+                    "outcome_tier": tier_label,
+                    "source_field": f"protocolSection.outcomesModule.{tier_key}[{idx}].{sub_f}",
+                    "verbatim": meas if in_meas_mtd else f"{meas} ({desc})",
+                    "checked_at_build": True,
+                    "render": tier_render
+                }
 
     # §3.3 Toxicity Grading
     ctcae_result = {"state": "NOT_REPORTED", "render": "Toxicity grading framework not stated in registry record."}

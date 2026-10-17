@@ -22,6 +22,7 @@
     "module1": {
       "design_archetype": {
         "value": "3+3 + Simon's 2-stage",
+        "design_detail": null,
         "state": "STATED",
         "source_field": "protocolSection.armsInterventionsModule.armGroups[0].description; protocolSection.descriptionModule.briefSummary",
         "verbatim_trigger": "3+3",
@@ -132,7 +133,7 @@
     "module3": {
       "dlt_endpoint": {
         "state": "NOT_REPORTED",
-        "render": "Not reported in primary outcomes."
+        "render": "Not reported in outcome measures."
       },
       "dlt_window": {
         "state": "NOT_REPORTED",
@@ -141,11 +142,11 @@
       },
       "rp2d": {
         "state": "NOT_REPORTED",
-        "render": "Not reported as a designated primary outcome measure."
+        "render": "Not reported as a designated outcome measure."
       },
       "mtd": {
         "state": "NOT_REPORTED",
-        "render": "Not reported as a designated primary outcome measure."
+        "render": "Not reported as a designated outcome measure."
       },
       "ctcae": {
         "state": "STATED",
@@ -188,6 +189,7 @@
     "module1": {
       "design_archetype": {
         "value": "BOIN",
+        "design_detail": null,
         "state": "STATED",
         "source_field": "protocolSection.designModule.designInfo.interventionModelDescription",
         "verbatim_trigger": "boin",
@@ -289,6 +291,7 @@
       "dlt_endpoint": {
         "state": "STATED",
         "value": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie \u2014 [description: Incidence of Dose Limiting Toxicities (DLT)]",
+        "outcome_tier": "primary",
         "source_field": "protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie')",
         "verbatim": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie \u2014 [description: Incidence of Dose Limiting Toxicities (DLT)]",
         "checked_at_build": true,
@@ -297,6 +300,7 @@
       "dlt_window": {
         "state": "STATED",
         "value": "Up to 21 Days after first administration",
+        "outcome_tier": "primary",
         "source_field": "protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie') + .timeFrame",
         "verbatim": "measure: \"Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie\" | description: \"Incidence of Dose Limiting Toxicities (DLT)\" | timeFrame: \"Up to 21 Days after first administration\"",
         "checked_at_build": true,
@@ -305,6 +309,7 @@
       "rp2d": {
         "state": "INFERRED",
         "candidate": "RP2D",
+        "outcome_tier": "primary",
         "source_field": "protocolSection.outcomesModule.primaryOutcomes[2].measure",
         "verbatim": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie",
         "checked_at_build": true,
@@ -313,6 +318,7 @@
       "mtd": {
         "state": "STATED",
         "value": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie",
+        "outcome_tier": "primary",
         "source_field": "protocolSection.outcomesModule.primaryOutcomes[2].measure",
         "verbatim": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie",
         "checked_at_build": true,
@@ -360,6 +366,7 @@
     "module1": {
       "design_archetype": {
         "value": "3+3 + Dose Expansion",
+        "design_detail": "modified Fibonacci",
         "state": "STATED",
         "source_field": "protocolSection.descriptionModule.briefSummary; protocolSection.descriptionModule.briefSummary",
         "verbatim_trigger": "3+3",
@@ -381,7 +388,7 @@
             "checked_at_build": true
           }
         ],
-        "render": "Uses a 3+3 + Dose Expansion design."
+        "render": "Uses a 3+3 + Dose Expansion design (with modified Fibonacci dose increments)."
       },
       "allocation": {
         "state": "STATED",
@@ -471,7 +478,7 @@
     "module3": {
       "dlt_endpoint": {
         "state": "NOT_REPORTED",
-        "render": "Not reported in primary outcomes."
+        "render": "Not reported in outcome measures."
       },
       "dlt_window": {
         "state": "NOT_REPORTED",
@@ -479,12 +486,17 @@
         "verbatim": null
       },
       "rp2d": {
-        "state": "NOT_REPORTED",
-        "render": "Not reported as a designated primary outcome measure."
+        "state": "STATED",
+        "value": "Recommended Phase 2 Dose (RP2D)",
+        "outcome_tier": "secondary",
+        "source_field": "protocolSection.outcomesModule.secondaryOutcomes[4].measure",
+        "verbatim": "Recommended Phase 2 Dose (RP2D)",
+        "checked_at_build": true,
+        "render": "Recommended Phase 2 Dose (RP2D) \u2014 stated as a secondary outcome."
       },
       "mtd": {
         "state": "NOT_REPORTED",
-        "render": "Not reported as a designated primary outcome measure."
+        "render": "Not reported as a designated outcome measure."
       },
       "ctcae": {
         "state": "NOT_REPORTED",
