@@ -309,13 +309,13 @@
     <!-- PROVENANCE SUMMARY BAR + LEGEND + AUDIT MODE -->
     <div class="summary-card">
       <div class="summary-header">
-        <span>Trial Dossier Provenance: <strong>8 stated</strong> · <strong>0 inferred</strong> · <strong>10 not reported</strong></span>
+        <span>Trial Dossier Provenance: <strong>9 stated</strong> · <strong>0 inferred</strong> · <strong>9 not reported</strong></span>
         <button class="btn-audit" onclick="toggleAuditMode()">[Audit mode ▸]</button>
       </div>
       <div class="stacked-bar">
-        <div class="bar-seg seg-stated" style="width: 44.4%" title="44.4% Stated"></div>
+        <div class="bar-seg seg-stated" style="width: 50.0%" title="50.0% Stated"></div>
         <div class="bar-seg seg-inferred" style="width: 0.0%" title="0.0% Inferred"></div>
-        <div class="bar-seg seg-not-reported" style="width: 55.6%" title="55.6% Not Reported"></div>
+        <div class="bar-seg seg-not-reported" style="width: 50.0%" title="50.0% Not Reported"></div>
       </div>
       <div class="legend-row">
         <span class="legend-item"><span class="prov-chip prov-stated">✓ stated</span> Verbatim fact from statutory record</span>
@@ -328,16 +328,24 @@
     <div class="module-card">
       <div class="module-title"><i class="fa-solid fa-network-wired"></i> Module 1 — Protocol & Escalation Architecture</div>
       
-    <div class="field-row row-not-reported">
+    <div class="field-row row-stated">
       <div class="field-main">
         <span class="field-label">Design Archetype</span>
         <div class="field-content">
-          <span class="val-not-reported">Not reported in the statutory record.</span>
+          <span class="val-stated">Uses a 3+3 + Simon&#x27;s 2-stage design.</span>
           
+        <div class="source-anchor">
+          <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
+          <div class="source-payload">
+            <span class="source-field">protocolSection.armsInterventionsModule.armGroups[0].description; protocolSection.descriptionModule.briefSummary</span>
+            <span class="source-quote">"Phase 1b 3+3 trial design of dose escalation of STC-15 in combination with toripalimab (protocolSection.armsInterventionsModule.armGroups[0].description) | The Phase 2 Monotherapy part is an open-label, non-randomized, multicenter Simon&#x27;s 2-stage design that investigates the safety, tolerability, and antitumor activity of STC-15 in participants with selected, relapsed sarcomas subtypes, dedifferentiated (DD) liposarcoma and leiomyosarcoma (uterine and non-uterine) (protocolSection.descriptionModule.briefSummary)"</span>
+            <span class="source-verified">✓ checked_at_build: true</span>
+          </div>
+        </div>
         </div>
       </div>
       <div class="field-chip-col">
-        <span class="prov-chip prov-not-reported">— not reported</span>
+        <span class="prov-chip prov-stated">✓ stated</span>
       </div>
     </div>
       
@@ -371,7 +379,7 @@
         <div class="source-anchor">
           <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
           <div class="source-payload">
-            <span class="source-field">protocolSection.designModule.designInfo.masking</span>
+            <span class="source-field">protocolSection.designModule.designInfo.maskingInfo.masking</span>
             <span class="source-quote">"NONE"</span>
             <span class="source-verified">✓ checked_at_build: true</span>
           </div>
@@ -425,16 +433,24 @@
       </div>
     </div>
       
-    <div class="field-row row-not-reported">
+    <div class="field-row row-stated">
       <div class="field-main">
         <span class="field-label">Participating Countries</span>
         <div class="field-content">
-          <span class="val-not-reported">Participating site locations not reported in the public registry record.</span>
+          <span class="val-stated">1 participating country (United States) across 14 clinical trial sites.</span>
           
+        <div class="source-anchor">
+          <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
+          <div class="source-payload">
+            <span class="source-field">protocolSection.contactsLocationsModule.locations</span>
+            <span class="source-quote">"1 countries (United States) across 14 sites"</span>
+            <span class="source-verified">✓ checked_at_build: true</span>
+          </div>
+        </div>
         </div>
       </div>
       <div class="field-chip-col">
-        <span class="prov-chip prov-not-reported">— not reported</span>
+        <span class="prov-chip prov-stated">✓ stated</span>
       </div>
     </div>
       
@@ -442,13 +458,13 @@
       <div class="field-main">
         <span class="field-label">Study Arms / Cohorts</span>
         <div class="field-content">
-          <span class="val-stated">3 designated study arms / cohorts.</span>
+          <span class="val-stated">3 designated study arms / cohorts (Phase 1 dose escalation; Phase 2 Stage 1 Monotherapy; Phase 2 Stage 2 Monotherapy).</span>
           
         <div class="source-anchor">
           <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
           <div class="source-payload">
             <span class="source-field">protocolSection.armsInterventionsModule.armGroups</span>
-            <span class="source-quote">"3 designated study arms / cohorts."</span>
+            <span class="source-quote">"Phase 1 dose escalation; Phase 2 Stage 1 Monotherapy; Phase 2 Stage 2 Monotherapy"</span>
             <span class="source-verified">✓ checked_at_build: true</span>
           </div>
         </div>
@@ -503,21 +519,16 @@
       </div>
     </div>
       
-    <div class="field-row row-stated">
+    <div class="field-row row-not-reported">
       <div class="field-main">
         <span class="field-label">Cardiac Parameters (LVEF / QTc)</span>
-        <ul style="padding-left:18px; font-size:13px; color:var(--text-high); margin-top:4px;">
+        <div class="field-content">
+          <span class="val-not-reported">Not specified in the eligibility criteria.</span>
           
-    <li style="margin-bottom:6px; line-height:1.45;">
-      Clinically significant cardiovascular disease or condition.
-      <span style="font-family:var(--font-mono); font-size:10px; color:#94a3b8; margin-left:6px;">
-        [qualitative]
-      </span>
-    </li>
-        </ul>
+        </div>
       </div>
       <div class="field-chip-col">
-        <span class="prov-chip prov-stated">✓ stated</span>
+        <span class="prov-chip prov-not-reported">— not reported</span>
       </div>
     </div>
       
@@ -526,12 +537,6 @@
         <span class="field-label">Prior Therapy &amp; Washout Rules</span>
         <ul style="padding-left:18px; font-size:13px; color:var(--text-high); margin-top:4px;">
           
-    <li style="margin-bottom:6px; line-height:1.45;">
-      Documented radiologic assessment of progression on the prior therapy before study entry.
-      <span style="font-family:var(--font-mono); font-size:10px; color:#94a3b8; margin-left:6px;">
-        [qualitative]
-      </span>
-    </li>
     <li style="margin-bottom:6px; line-height:1.45;">
       Received prior systemic anticancer therapy including investigational agents within 4 weeks or 5 half-lives, whichever is shorter, prior to first IMP administration.
       <span style="font-family:var(--font-mono); font-size:10px; color:#38bdf8; margin-left:6px;">
@@ -618,7 +623,7 @@
           <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
           <div class="source-payload">
             <span class="source-field">protocolSection.eligibilityModule.eligibilityCriteria</span>
-            <span class="source-quote">"CTCAE (v5.0)"</span>
+            <span class="source-quote">"* Participants who have not recovered from all AEs due to previous therapies to Grade ≤ 1 or baseline, according to NCI-CTCAE v5"</span>
             <span class="source-verified">✓ checked_at_build: true</span>
           </div>
         </div>

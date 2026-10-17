@@ -21,38 +21,77 @@
     },
     "module1": {
       "design_archetype": {
-        "value": null,
-        "state": "NOT_REPORTED",
-        "source_field": null,
-        "verbatim": null,
-        "render": "Not reported in the statutory record."
+        "value": "3+3 + Simon's 2-stage",
+        "state": "STATED",
+        "source_field": "protocolSection.armsInterventionsModule.armGroups[0].description; protocolSection.descriptionModule.briefSummary",
+        "verbatim_trigger": "3+3",
+        "verbatim": "Phase 1b 3+3 trial design of dose escalation of STC-15 in combination with toripalimab (protocolSection.armsInterventionsModule.armGroups[0].description) | The Phase 2 Monotherapy part is an open-label, non-randomized, multicenter Simon's 2-stage design that investigates the safety, tolerability, and antitumor activity of STC-15 in participants with selected, relapsed sarcomas subtypes, dedifferentiated (DD) liposarcoma and leiomyosarcoma (uterine and non-uterine) (protocolSection.descriptionModule.briefSummary)",
+        "checked_at_build": true,
+        "matches": [
+          {
+            "value": "3+3",
+            "source_field": "protocolSection.armsInterventionsModule.armGroups[0].description",
+            "verbatim_trigger": "3+3",
+            "verbatim": "Phase 1b 3+3 trial design of dose escalation of STC-15 in combination with toripalimab",
+            "checked_at_build": true
+          },
+          {
+            "value": "Simon's 2-stage",
+            "source_field": "protocolSection.descriptionModule.briefSummary",
+            "verbatim_trigger": "simon's 2-stage",
+            "verbatim": "The Phase 2 Monotherapy part is an open-label, non-randomized, multicenter Simon's 2-stage design that investigates the safety, tolerability, and antitumor activity of STC-15 in participants with selected, relapsed sarcomas subtypes, dedifferentiated (DD) liposarcoma and leiomyosarcoma (uterine and non-uterine)",
+            "checked_at_build": true
+          }
+        ],
+        "render": "Uses a 3+3 + Simon's 2-stage design."
       },
       "allocation": {
         "state": "STATED",
-        "value": "NON_RANDOMIZED"
+        "value": "NON_RANDOMIZED",
+        "source_field": "protocolSection.designModule.designInfo.allocation",
+        "verbatim": "NON_RANDOMIZED",
+        "checked_at_build": true
       },
       "masking": {
         "state": "STATED",
-        "value": "NONE"
+        "value": "NONE",
+        "source_field": "protocolSection.designModule.designInfo.maskingInfo.masking",
+        "verbatim": "NONE",
+        "checked_at_build": true
       },
       "intervention_model": {
         "state": "STATED",
-        "value": "SEQUENTIAL"
+        "value": "SEQUENTIAL",
+        "source_field": "protocolSection.designModule.designInfo.interventionModel",
+        "verbatim": "SEQUENTIAL",
+        "checked_at_build": true
       },
       "primary_purpose": {
         "state": "STATED",
-        "value": "TREATMENT"
+        "value": "TREATMENT",
+        "source_field": "protocolSection.designModule.designInfo.primaryPurpose",
+        "verbatim": "TREATMENT",
+        "checked_at_build": true
       },
       "participating_countries": {
-        "state": "NOT_REPORTED",
-        "count": 0,
-        "countries": [],
-        "render": "Participating site locations not reported in the public registry record."
+        "state": "STATED-structural",
+        "count": 1,
+        "site_count": 14,
+        "countries": [
+          "United States"
+        ],
+        "source_field": "protocolSection.contactsLocationsModule.locations",
+        "verbatim": "1 countries (United States) across 14 sites",
+        "checked_at_build": true,
+        "render": "1 participating country (United States) across 14 clinical trial sites."
       },
       "arms_cohorts": {
         "state": "STATED-structural",
         "count": 3,
-        "render": "3 designated study arms / cohorts."
+        "source_field": "protocolSection.armsInterventionsModule.armGroups",
+        "verbatim": "Phase 1 dose escalation; Phase 2 Stage 1 Monotherapy; Phase 2 Stage 2 Monotherapy",
+        "checked_at_build": true,
+        "render": "3 designated study arms / cohorts (Phase 1 dose escalation; Phase 2 Stage 1 Monotherapy; Phase 2 Stage 2 Monotherapy)."
       }
     },
     "module2": {
@@ -69,28 +108,23 @@
         "render": "Not specified in the eligibility criteria."
       },
       "cardiac": {
-        "state": "STATED",
-        "items": [
-          {
-            "verbatim": "Clinically significant cardiovascular disease or condition.",
-            "tag": "qualitative"
-          }
-        ]
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
       },
       "washout": {
         "state": "STATED",
         "items": [
           {
-            "verbatim": "Documented radiologic assessment of progression on the prior therapy before study entry.",
-            "tag": "qualitative"
-          },
-          {
             "verbatim": "Received prior systemic anticancer therapy including investigational agents within 4 weeks or 5 half-lives, whichever is shorter, prior to first IMP administration.",
-            "tag": "numeric"
+            "tag": "numeric",
+            "source_field": "protocolSection.eligibilityModule.eligibilityCriteria",
+            "checked_at_build": true
           },
           {
             "verbatim": "Participants who have not recovered from all AEs due to previous therapies to Grade \u2264 1 or baseline, according to NCI-CTCAE v5.0. Exceptions include: alopecia, Grade \u2264 2 neuropathy, and endocrine-related AEs Grade \u2264 2 who are stable on treatment or hormone replacement.",
-            "tag": "qualitative"
+            "tag": "qualitative",
+            "source_field": "protocolSection.eligibilityModule.eligibilityCriteria",
+            "checked_at_build": true
           }
         ]
       }
@@ -116,6 +150,9 @@
       "ctcae": {
         "state": "STATED",
         "value": "CTCAE (v5.0)",
+        "source_field": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "verbatim": "* Participants who have not recovered from all AEs due to previous therapies to Grade \u2264 1 or baseline, according to NCI-CTCAE v5",
+        "checked_at_build": true,
         "render": "Adverse events graded according to CTCAE (v5.0)."
       },
       "dose_modification": {
@@ -152,37 +189,71 @@
       "design_archetype": {
         "value": "BOIN",
         "state": "STATED",
-        "source_field": "protocolSection.designModule.designInfo",
+        "source_field": "protocolSection.designModule.designInfo.interventionModelDescription",
         "verbatim_trigger": "boin",
-        "verbatim": "n optimal interval (BOIN) design., primaryPurpose: TREA",
+        "verbatim": "The study will follow a Bayesian optimal interval (BOIN) design (protocolSection.designModule.designInfo.interventionModelDescription)",
+        "checked_at_build": true,
+        "matches": [
+          {
+            "value": "BOIN",
+            "source_field": "protocolSection.designModule.designInfo.interventionModelDescription",
+            "verbatim_trigger": "boin",
+            "verbatim": "The study will follow a Bayesian optimal interval (BOIN) design",
+            "checked_at_build": true
+          }
+        ],
         "render": "Uses a BOIN design."
       },
       "allocation": {
         "state": "STATED",
-        "value": "NON_RANDOMIZED"
+        "value": "NON_RANDOMIZED",
+        "source_field": "protocolSection.designModule.designInfo.allocation",
+        "verbatim": "NON_RANDOMIZED",
+        "checked_at_build": true
       },
       "masking": {
         "state": "STATED",
-        "value": "NONE"
+        "value": "NONE",
+        "source_field": "protocolSection.designModule.designInfo.maskingInfo.masking",
+        "verbatim": "NONE",
+        "checked_at_build": true
       },
       "intervention_model": {
         "state": "STATED",
-        "value": "SEQUENTIAL"
+        "value": "SEQUENTIAL",
+        "source_field": "protocolSection.designModule.designInfo.interventionModel",
+        "verbatim": "SEQUENTIAL",
+        "checked_at_build": true
       },
       "primary_purpose": {
         "state": "STATED",
-        "value": "TREATMENT"
+        "value": "TREATMENT",
+        "source_field": "protocolSection.designModule.designInfo.primaryPurpose",
+        "verbatim": "TREATMENT",
+        "checked_at_build": true
       },
       "participating_countries": {
-        "state": "NOT_REPORTED",
-        "count": 0,
-        "countries": [],
-        "render": "Participating site locations not reported in the public registry record."
+        "state": "STATED-structural",
+        "count": 4,
+        "site_count": 11,
+        "countries": [
+          "Belgium",
+          "Czechia",
+          "Netherlands",
+          "Spain"
+        ],
+        "source_field": "protocolSection.contactsLocationsModule.locations",
+        "verbatim": "4 countries (Belgium, Czechia, Netherlands, Spain) across 11 sites",
+        "checked_at_build": true,
+        "render": "4 participating countries (Belgium, Czechia, Netherlands, Spain) across 11 clinical trial sites."
       },
       "arms_cohorts": {
         "state": "STATED-structural",
         "count": 5,
-        "render": "5 designated study arms / cohorts."
+        "source_field": "protocolSection.armsInterventionsModule.armGroups",
+        "verbatim": "EP102 Dose level 1; EP102 Dose level 2; EP102 Dose level 3; EP102 Dose level 4; EP102 Dose level 5",
+        "checked_at_build": true,
+        "render": "5 designated study arms / cohorts (EP102 Dose level 1; EP102 Dose level 2; EP102 Dose level 3; EP102 Dose level 4; EP102 Dose level 5)."
       }
     },
     "module2": {
@@ -207,7 +278,9 @@
         "items": [
           {
             "verbatim": "Participants who have received IMP or devices in other clinical trials within four weeks before the first dose.",
-            "tag": "numeric"
+            "tag": "numeric",
+            "source_field": "protocolSection.eligibilityModule.eligibilityCriteria",
+            "checked_at_build": true
           }
         ]
       }
@@ -215,23 +288,33 @@
     "module3": {
       "dlt_endpoint": {
         "state": "STATED",
-        "value": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie: Incidence of Dose Limiting Toxicities (DLT)",
-        "render": "Primary safety endpoint evaluates: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie: Incidence of Dose Limiting Toxicities (DLT)"
+        "value": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie \u2014 [description: Incidence of Dose Limiting Toxicities (DLT)]",
+        "source_field": "protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie')",
+        "verbatim": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie \u2014 [description: Incidence of Dose Limiting Toxicities (DLT)]",
+        "checked_at_build": true,
+        "render": "Primary outcome evaluates: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie \u2014 [description: Incidence of Dose Limiting Toxicities (DLT)]"
       },
       "dlt_window": {
         "state": "STATED",
         "value": "Up to 21 Days after first administration",
-        "verbatim": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie | Time Frame: Up to 21 Days after first administration",
+        "source_field": "protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie') + .timeFrame",
+        "verbatim": "measure: \"Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie\" | description: \"Incidence of Dose Limiting Toxicities (DLT)\" | timeFrame: \"Up to 21 Days after first administration\"",
+        "checked_at_build": true,
         "render": "DLT assessment window specified as: Up to 21 Days after first administration"
       },
       "rp2d": {
-        "state": "STATED",
-        "value": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie",
-        "render": "Designated primary measure: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie"
+        "state": "INFERRED",
+        "source_field": "protocolSection.outcomesModule.primaryOutcomes[2].measure",
+        "verbatim": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie",
+        "checked_at_build": true,
+        "render": "Not stated as \"RP2D\". Protocol primary measure states \"Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie\" \u2014 consistent with dose-selection for subsequent phase; specific term \"RP2D\" not named."
       },
       "mtd": {
         "state": "STATED",
         "value": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie",
+        "source_field": "protocolSection.outcomesModule.primaryOutcomes[2].measure",
+        "verbatim": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie",
+        "checked_at_build": true,
         "render": "Designated primary measure: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie"
       },
       "ctcae": {
@@ -251,6 +334,171 @@
         "39883878",
         "42210870"
       ],
+      "ctis_id": null,
+      "protocol_pdf": null
+    }
+  },
+  {
+    "identity": {
+      "nctId": "NCT05584111",
+      "briefTitle": "Oral Administration of STC-15 in Subjects With Advanced Malignancies",
+      "officialTitle": "Phase 1 Study to Evaluate the Safety, PK, PD, and Clinical Activity of STC-15, a METTL-3 Inhibitor, in Subjects With Advanced Malignancies",
+      "acronym": null,
+      "phase": "PHASE1",
+      "status": "COMPLETED",
+      "leadSponsor": "STORM Therapeutics LTD",
+      "conditions": [
+        "Advanced Cancer",
+        "Advanced Solid Tumor",
+        "Cancer"
+      ],
+      "interventions": [
+        "STC-15"
+      ]
+    },
+    "module1": {
+      "design_archetype": {
+        "value": "3+3 + Dose Expansion",
+        "state": "STATED",
+        "source_field": "protocolSection.descriptionModule.briefSummary; protocolSection.descriptionModule.briefSummary",
+        "verbatim_trigger": "3+3",
+        "verbatim": "This Phase 1, multi-center, open-label, first-in-human study evaluates multiple ascending daily oral doses of STC-15 in Q3W treatment cycles in a 3+3 cohort design with dose levels determined by a modified Fibonacci algorithm (protocolSection.descriptionModule.briefSummary) | Dose levels for further evaluation in expansion cohorts will be selected based on all available PK, pharmacodynamic, target engagement, efficacy, safety, and tolerability data including long-term safety data beyond dose limiting toxicities (DLTs) (protocolSection.descriptionModule.briefSummary)",
+        "checked_at_build": true,
+        "matches": [
+          {
+            "value": "3+3",
+            "source_field": "protocolSection.descriptionModule.briefSummary",
+            "verbatim_trigger": "3+3",
+            "verbatim": "This Phase 1, multi-center, open-label, first-in-human study evaluates multiple ascending daily oral doses of STC-15 in Q3W treatment cycles in a 3+3 cohort design with dose levels determined by a modified Fibonacci algorithm",
+            "checked_at_build": true
+          },
+          {
+            "value": "Dose Expansion",
+            "source_field": "protocolSection.descriptionModule.briefSummary",
+            "verbatim_trigger": "expansion cohort",
+            "verbatim": "Dose levels for further evaluation in expansion cohorts will be selected based on all available PK, pharmacodynamic, target engagement, efficacy, safety, and tolerability data including long-term safety data beyond dose limiting toxicities (DLTs)",
+            "checked_at_build": true
+          }
+        ],
+        "render": "Uses a 3+3 + Dose Expansion design."
+      },
+      "allocation": {
+        "state": "STATED",
+        "value": "NON_RANDOMIZED",
+        "source_field": "protocolSection.designModule.designInfo.allocation",
+        "verbatim": "NON_RANDOMIZED",
+        "checked_at_build": true
+      },
+      "masking": {
+        "state": "STATED",
+        "value": "NONE",
+        "source_field": "protocolSection.designModule.designInfo.maskingInfo.masking",
+        "verbatim": "NONE",
+        "checked_at_build": true
+      },
+      "intervention_model": {
+        "state": "STATED",
+        "value": "SEQUENTIAL",
+        "source_field": "protocolSection.designModule.designInfo.interventionModel",
+        "verbatim": "SEQUENTIAL",
+        "checked_at_build": true
+      },
+      "primary_purpose": {
+        "state": "STATED",
+        "value": "TREATMENT",
+        "source_field": "protocolSection.designModule.designInfo.primaryPurpose",
+        "verbatim": "TREATMENT",
+        "checked_at_build": true
+      },
+      "participating_countries": {
+        "state": "STATED-structural",
+        "count": 1,
+        "site_count": 3,
+        "countries": [
+          "United States"
+        ],
+        "source_field": "protocolSection.contactsLocationsModule.locations",
+        "verbatim": "1 countries (United States) across 3 sites",
+        "checked_at_build": true,
+        "render": "1 participating country (United States) across 3 clinical trial sites."
+      },
+      "arms_cohorts": {
+        "state": "STATED-structural",
+        "count": 5,
+        "source_field": "protocolSection.armsInterventionsModule.armGroups",
+        "verbatim": "Dose Level 1; Dose Level 2; Dose Level 3; Dose Level 4; Dose Level 5",
+        "checked_at_build": true,
+        "render": "5 designated study arms / cohorts (Dose Level 1; Dose Level 2; Dose Level 3; Dose Level 4; Dose Level 5)."
+      }
+    },
+    "module2": {
+      "hematologic": {
+        "state": "STATED",
+        "items": [
+          {
+            "verbatim": "Adequate organ and marrow function",
+            "tag": "qualitative",
+            "source_field": "protocolSection.eligibilityModule.eligibilityCriteria",
+            "checked_at_build": true
+          }
+        ]
+      },
+      "renal": {
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
+      },
+      "hepatic": {
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
+      },
+      "cardiac": {
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
+      },
+      "washout": {
+        "state": "STATED",
+        "items": [
+          {
+            "verbatim": "Treatment with any local or systemic antineoplastic therapy within 3 weeks prior to first dose of STC-15",
+            "tag": "numeric",
+            "source_field": "protocolSection.eligibilityModule.eligibilityCriteria",
+            "checked_at_build": true
+          }
+        ]
+      }
+    },
+    "module3": {
+      "dlt_endpoint": {
+        "state": "NOT_REPORTED",
+        "render": "Not reported in primary outcomes."
+      },
+      "dlt_window": {
+        "state": "NOT_REPORTED",
+        "render": "Not reported separately from study duration.",
+        "verbatim": null
+      },
+      "rp2d": {
+        "state": "NOT_REPORTED",
+        "render": "Not reported as a designated primary outcome measure."
+      },
+      "mtd": {
+        "state": "NOT_REPORTED",
+        "render": "Not reported as a designated primary outcome measure."
+      },
+      "ctcae": {
+        "state": "NOT_REPORTED",
+        "render": "Toxicity grading framework not stated in registry record."
+      },
+      "dose_modification": {
+        "state": "NOT_REPORTED",
+        "render": "Dose-modification rules not described in the registry record."
+      }
+    },
+    "module4": {
+      "nct_url": "https://clinicaltrials.gov/study/NCT05584111",
+      "has_results": false,
+      "results_url": null,
+      "pmids": [],
       "ctis_id": null,
       "protocol_pdf": null
     }

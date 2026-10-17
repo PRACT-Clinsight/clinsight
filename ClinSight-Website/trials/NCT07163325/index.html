@@ -309,13 +309,13 @@
     <!-- PROVENANCE SUMMARY BAR + LEGEND + AUDIT MODE -->
     <div class="summary-card">
       <div class="summary-header">
-        <span>Trial Dossier Provenance: <strong>11 stated</strong> · <strong>0 inferred</strong> · <strong>7 not reported</strong></span>
+        <span>Trial Dossier Provenance: <strong>11 stated</strong> · <strong>1 inferred</strong> · <strong>6 not reported</strong></span>
         <button class="btn-audit" onclick="toggleAuditMode()">[Audit mode ▸]</button>
       </div>
       <div class="stacked-bar">
         <div class="bar-seg seg-stated" style="width: 61.1%" title="61.1% Stated"></div>
-        <div class="bar-seg seg-inferred" style="width: 0.0%" title="0.0% Inferred"></div>
-        <div class="bar-seg seg-not-reported" style="width: 38.9%" title="38.9% Not Reported"></div>
+        <div class="bar-seg seg-inferred" style="width: 5.6%" title="5.6% Inferred"></div>
+        <div class="bar-seg seg-not-reported" style="width: 33.3%" title="33.3% Not Reported"></div>
       </div>
       <div class="legend-row">
         <span class="legend-item"><span class="prov-chip prov-stated">✓ stated</span> Verbatim fact from statutory record</span>
@@ -337,8 +337,8 @@
         <div class="source-anchor">
           <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
           <div class="source-payload">
-            <span class="source-field">protocolSection.designModule.designInfo</span>
-            <span class="source-quote">"n optimal interval (BOIN) design., primaryPurpose: TREA"</span>
+            <span class="source-field">protocolSection.designModule.designInfo.interventionModelDescription</span>
+            <span class="source-quote">"The study will follow a Bayesian optimal interval (BOIN) design (protocolSection.designModule.designInfo.interventionModelDescription)"</span>
             <span class="source-verified">✓ checked_at_build: true</span>
           </div>
         </div>
@@ -379,7 +379,7 @@
         <div class="source-anchor">
           <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
           <div class="source-payload">
-            <span class="source-field">protocolSection.designModule.designInfo.masking</span>
+            <span class="source-field">protocolSection.designModule.designInfo.maskingInfo.masking</span>
             <span class="source-quote">"NONE"</span>
             <span class="source-verified">✓ checked_at_build: true</span>
           </div>
@@ -433,16 +433,24 @@
       </div>
     </div>
       
-    <div class="field-row row-not-reported">
+    <div class="field-row row-stated">
       <div class="field-main">
         <span class="field-label">Participating Countries</span>
         <div class="field-content">
-          <span class="val-not-reported">Participating site locations not reported in the public registry record.</span>
+          <span class="val-stated">4 participating countries (Belgium, Czechia, Netherlands, Spain) across 11 clinical trial sites.</span>
           
+        <div class="source-anchor">
+          <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
+          <div class="source-payload">
+            <span class="source-field">protocolSection.contactsLocationsModule.locations</span>
+            <span class="source-quote">"4 countries (Belgium, Czechia, Netherlands, Spain) across 11 sites"</span>
+            <span class="source-verified">✓ checked_at_build: true</span>
+          </div>
+        </div>
         </div>
       </div>
       <div class="field-chip-col">
-        <span class="prov-chip prov-not-reported">— not reported</span>
+        <span class="prov-chip prov-stated">✓ stated</span>
       </div>
     </div>
       
@@ -450,13 +458,13 @@
       <div class="field-main">
         <span class="field-label">Study Arms / Cohorts</span>
         <div class="field-content">
-          <span class="val-stated">5 designated study arms / cohorts.</span>
+          <span class="val-stated">5 designated study arms / cohorts (EP102 Dose level 1; EP102 Dose level 2; EP102 Dose level 3; EP102 Dose level 4; EP102 Dose level 5).</span>
           
         <div class="source-anchor">
           <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
           <div class="source-payload">
             <span class="source-field">protocolSection.armsInterventionsModule.armGroups</span>
-            <span class="source-quote">"5 designated study arms / cohorts."</span>
+            <span class="source-quote">"EP102 Dose level 1; EP102 Dose level 2; EP102 Dose level 3; EP102 Dose level 4; EP102 Dose level 5"</span>
             <span class="source-verified">✓ checked_at_build: true</span>
           </div>
         </div>
@@ -551,13 +559,13 @@
       <div class="field-main">
         <span class="field-label">Primary Safety Endpoint</span>
         <div class="field-content">
-          <span class="val-stated">Primary safety endpoint evaluates: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie: Incidence of Dose Limiting Toxicities (DLT)</span>
+          <span class="val-stated">Primary outcome evaluates: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie — [description: Incidence of Dose Limiting Toxicities (DLT)]</span>
           
         <div class="source-anchor">
           <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
           <div class="source-payload">
-            <span class="source-field">protocolSection.outcomesModule.primaryOutcomes</span>
-            <span class="source-quote">"Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie: Incidence of Dose Limiting Toxicities (DLT)"</span>
+            <span class="source-field">protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: &#x27;Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie&#x27;)</span>
+            <span class="source-quote">"Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie — [description: Incidence of Dose Limiting Toxicities (DLT)]"</span>
             <span class="source-verified">✓ checked_at_build: true</span>
           </div>
         </div>
@@ -577,8 +585,8 @@
         <div class="source-anchor">
           <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
           <div class="source-payload">
-            <span class="source-field">protocolSection.outcomesModule.primaryOutcomes.timeFrame</span>
-            <span class="source-quote">"Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie | Time Frame: Up to 21 Days after first administration"</span>
+            <span class="source-field">protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: &#x27;Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie&#x27;) + .timeFrame</span>
+            <span class="source-quote">"measure: &quot;Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie&quot; | description: &quot;Incidence of Dose Limiting Toxicities (DLT)&quot; | timeFrame: &quot;Up to 21 Days after first administration&quot;"</span>
             <span class="source-verified">✓ checked_at_build: true</span>
           </div>
         </div>
@@ -589,24 +597,20 @@
       </div>
     </div>
       
-    <div class="field-row row-stated">
+    <div class="field-row row-inferred">
       <div class="field-main">
         <span class="field-label">Recommended Phase 2 Dose (RP2D)</span>
         <div class="field-content">
-          <span class="val-stated">Designated primary measure: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie</span>
+          <span class="val-inferred">Not stated as &quot;RP2D&quot;. Protocol primary measure states &quot;Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie&quot; — consistent with dose-selection for subsequent phase; specific term &quot;RP2D&quot; not named.</span>
           
-        <div class="source-anchor">
-          <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
-          <div class="source-payload">
-            <span class="source-field">protocolSection.outcomesModule.primaryOutcomes</span>
-            <span class="source-quote">"Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie"</span>
-            <span class="source-verified">✓ checked_at_build: true</span>
-          </div>
+        <div class="inline-evidence">
+          <span class="evidence-label">Verbatim Evidence:</span> "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie" 
+          <span class="evidence-source">(protocolSection.outcomesModule.primaryOutcomes[2].measure)</span>
         </div>
         </div>
       </div>
       <div class="field-chip-col">
-        <span class="prov-chip prov-stated">✓ stated</span>
+        <span class="prov-chip prov-inferred">~ inferred</span>
       </div>
     </div>
       
@@ -619,7 +623,7 @@
         <div class="source-anchor">
           <span class="source-toggle" onclick="toggleSource(this)">⟨source⟩</span>
           <div class="source-payload">
-            <span class="source-field">protocolSection.outcomesModule.primaryOutcomes</span>
+            <span class="source-field">protocolSection.outcomesModule.primaryOutcomes[2].measure</span>
             <span class="source-quote">"Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie"</span>
             <span class="source-verified">✓ checked_at_build: true</span>
           </div>
