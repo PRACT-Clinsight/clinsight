@@ -1,0 +1,182 @@
+[
+  {
+    "id": "se-sahlgrenska-monitor-976098",
+    "title": "Projektledare / Klinisk Monitor (Clinical Research Associate - Oncology)",
+    "employer": "Sahlgrenska University Hospital / VGR",
+    "employer_type": "hospital",
+    "location": "Gothenburg",
+    "country": "SE",
+    "posted_date": "2026-10-14",
+    "deadline": "2026-10-23",
+    "apply_url": "https://vgregion.varbi.com/en/what:job/jobID:976098/",
+    "ats_platform": "Varbi",
+    "last_checked": "2026-10-17T06:00:00Z",
+    "status": "closing-soon",
+    "function": "CRA",
+    "function_label": "Clinical Research Associate (Monitor) — monitors clinical trial sites for GCP compliance and protocol adherence",
+    "seniority": "mid",
+    "language_requirement": "scandinavian_required",
+    "language_evidence": "Mycket god förmåga att uttrycka dig i tal och skrift på svenska och engelska",
+    "requirements_mandatory": [
+      "Naturvetenskaplig eller vårdrelaterad högskoleexamen (biomedicin, farmaci, sjuksköterska)",
+      "Dokumenterad erfarenhet som monitor eller projektledare inom kliniska prövningar",
+      "Goda kunskaper i ICH-GCP och svensk lagstiftning för klinisk forskning"
+    ],
+    "requirements_desirable": [
+      "Erfarenhet av akademiska prövningar och prövarinitierade studier (IIT)",
+      "Erfarenhet från onkologi eller hematologi"
+    ],
+    "clinsight_note": "ClinSight Read: Ideal transition point for academic scientists (biomedicine/pharmacy) moving into professional CRA monitoring within Western Sweden's largest healthcare region.",
+    "linked_trials": ["NCT03548207"]
+  },
+  {
+    "id": "se-az-biometrics-r261632",
+    "title": "Director, Medical & Payer Evidence Statistics",
+    "employer": "AstraZeneca",
+    "employer_type": "biopharma",
+    "location": "Gothenburg R&D Hub",
+    "country": "SE",
+    "posted_date": "2026-10-09",
+    "deadline": "2026-10-28",
+    "apply_url": "https://astrazeneca.wd3.myworkdayjobs.com/en-US/Careers/job/Sweden---Gothenburg/Director--Medical---Payer-Evidence-Statistics_R-261632-2",
+    "ats_platform": "Workday",
+    "last_checked": "2026-10-17T06:00:00Z",
+    "status": "open",
+    "function": "BIOSTAT",
+    "function_label": "Biostatistician / Evidence Director — leads global HTA and payer statistical strategy",
+    "seniority": "lead",
+    "language_requirement": "english_ok",
+    "language_evidence": "Global biometrics site; English working language, Swedish not required",
+    "requirements_mandatory": [
+      "PhD or MSc in Biostatistics, Statistics, or Mathematical Sciences",
+      "7+ years biostatistics experience in late-phase clinical drug development",
+      "Demonstrated FDA/EMA health authority interaction experience"
+    ],
+    "requirements_desirable": [
+      "Real-world evidence (RWE) modeling and causal inference",
+      "Statistical programming in validated SAS & R environments"
+    ],
+    "clinsight_note": "ClinSight Read: Strategic leadership role at AstraZeneca's global R&D site in Mölndal/Gothenburg. Integrates clinical trial statistical outputs with global payer reimbursement evidence.",
+    "linked_trials": ["NCT03734029"]
+  },
+  {
+    "id": "dk-rigshospitalet-fase1-254890",
+    "title": "Klinisk Forskningssygeplejerske / Study Coordinator (Early Phase Unit)",
+    "employer": "Rigshospitalet (Trial Nation)",
+    "employer_type": "hospital",
+    "location": "Blegdamsvej, Copenhagen",
+    "country": "DK",
+    "posted_date": "2026-10-12",
+    "deadline": "2026-10-31",
+    "apply_url": "https://www.rigshospitalet.dk/job",
+    "ats_platform": "Region H",
+    "last_checked": "2026-10-17T06:00:00Z",
+    "status": "open",
+    "function": "CRC",
+    "function_label": "Clinical Research Coordinator — runs early-phase first-in-human trials at the clinic",
+    "seniority": "entry",
+    "language_requirement": "scandinavian_required",
+    "language_evidence": "Dansk sygeplejeautorisation, flydende dansk",
+    "requirements_mandatory": [
+      "Dansk sygeplejeautorisation",
+      "Dokumenteret erfaring med klinisk onkologi eller hæmatologi",
+      "ICH-GCP certifikat"
+    ],
+    "requirements_desirable": [
+      "Kendskab til Sundhedsplatformen",
+      "Erfaring med tidlig-fase basket- eller umbrella-protokoller"
+    ],
+    "clinsight_note": "ClinSight Read: Academic clinical trials unit embedded at Rigshospitalet. Excellent gateway for hospital clinicians into Medicon Valley biotech and pharma sponsor trials.",
+    "linked_trials": ["NCT03734029"]
+  },
+  {
+    "id": "dk-novo-biostat-nn310892",
+    "title": "Senior Clinical Trial Biostatistician (Cardiovascular & Metabolic)",
+    "employer": "Novo Nordisk",
+    "employer_type": "biopharma",
+    "location": "Søborg / Bagsværd, Copenhagen",
+    "country": "DK",
+    "posted_date": "2026-10-15",
+    "deadline": "2026-11-12",
+    "apply_url": "https://www.novonordisk.com/careers.html",
+    "ats_platform": "Workday",
+    "last_checked": "2026-10-17T06:00:00Z",
+    "status": "open",
+    "function": "BIOSTAT",
+    "function_label": "Biostatistician — designs statistical analysis plans (SAP) and defends trial evidence",
+    "seniority": "senior",
+    "language_requirement": "english_ok",
+    "language_evidence": "Global R&D team; working language is English with no Scandinavian language requirement",
+    "requirements_mandatory": [
+      "PhD or MSc in Biostatistics, Mathematical Statistics, or Data Science",
+      "5+ years biostatistical experience in registrational Phase 3 clinical trials",
+      "Advanced proficiency in validated SAS and R programming environments"
+    ],
+    "requirements_desirable": [
+      "Experience with GLP-1 / GIP outcome endpoints and time-to-event survival modeling",
+      "Participation in health authority advisory meetings (FDA / EMA / CHMP)"
+    ],
+    "clinsight_note": "ClinSight Read: High-level sponsor biometrics role leading registrational CVOT pipeline trials. 100% English working environment.",
+    "linked_trials": ["NCT03574597"]
+  },
+  {
+    "id": "dk-genmab-crs-gm7841",
+    "title": "Clinical Research Scientist / Medical Monitor (Bispecific Immuno-Oncology)",
+    "employer": "Genmab",
+    "employer_type": "biopharma",
+    "location": "Copenhagen (Medicon Valley)",
+    "country": "DK",
+    "posted_date": "2026-10-11",
+    "deadline": "2026-11-08",
+    "apply_url": "https://www.genmab.com/careers/",
+    "ats_platform": "Workday",
+    "last_checked": "2026-10-17T06:00:00Z",
+    "status": "open",
+    "function": "CPM",
+    "function_label": "Clinical Project / Study Scientist — leads trial execution and clinical scientific oversight",
+    "seniority": "mid",
+    "language_requirement": "english_ok",
+    "language_evidence": "International R&D headquarters; English fluency required, Scandinavian not required",
+    "requirements_mandatory": [
+      "MD, PharmD, or PhD in Immunology / Oncology Life Sciences",
+      "4+ years sponsor-side clinical trial monitoring and protocol execution",
+      "Working knowledge of EU CTR 536/2014 & CTIS submissions"
+    ],
+    "requirements_desirable": [
+      "Hands-on experience with T-cell engaging bispecific antibody trials",
+      "Safety review committee (SRC) dose-escalation experience"
+    ],
+    "clinsight_note": "ClinSight Read: Target role for PhD postdocs or industry research associates with immunology backgrounds transitioning into full sponsor-side clinical trial development.",
+    "linked_trials": ["NCT04181827"]
+  },
+  {
+    "id": "se-uppsala-pv-specialist-01",
+    "title": "Pharmacovigilance & Drug Safety Specialist",
+    "employer": "Academic Medical Center / Uppsala Bio",
+    "employer_type": "academic",
+    "location": "Uppsala Science Park",
+    "country": "SE",
+    "posted_date": "2026-10-15",
+    "deadline": "2026-11-20",
+    "apply_url": "https://www.uu.se/om-uu/jobba-hos-oss/",
+    "ats_platform": "Varbi",
+    "last_checked": "2026-10-17T06:00:00Z",
+    "status": "open",
+    "function": "PV",
+    "function_label": "Pharmacovigilance Specialist — assesses adverse events, safety signal detection, and regulatory reporting",
+    "seniority": "entry",
+    "language_requirement": "english_ok",
+    "language_evidence": "Research group working language is English; international applicants welcome",
+    "requirements_mandatory": [
+      "Degree in Pharmacy, Biomedicine, Medicine, or Pharmacology",
+      "Understanding of CIOMS, MedDRA coding, and ICSR processing principles",
+      "Scientific analytical ability and fluent scientific English"
+    ],
+    "requirements_desirable": [
+      "Prior exposure to EudraVigilance or Argus safety databases",
+      "Knowledge of EU GVP (Good Pharmacovigilance Practices) modules"
+    ],
+    "clinsight_note": "ClinSight Read: Rare entry-level PV opportunity. Perfect gateway for life science graduates, pharmacists, or postdocs transitioning into pharmaceutical drug safety and regulatory intelligence.",
+    "linked_trials": ["NCT04181827"]
+  }
+]
