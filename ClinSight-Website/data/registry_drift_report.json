@@ -1,0 +1,34 @@
+{
+  "checked_at_utc": "2026-10-17T09:44:36Z",
+  "total_trials_monitored": 3,
+  "drift_detected_count": 0,
+  "trials": [
+    {
+      "nct_id": "NCT05584111",
+      "drift_status": "NO_DRIFT_BYTE_IDENTICAL",
+      "archived_sha256": "4e47750f7f5f1c4857a3296255277a380ba85c326807bec224e24dedf1387738",
+      "live_sha256": "4e47750f7f5f1c4857a3296255277a380ba85c326807bec224e24dedf1387738",
+      "archived_last_update_post_date": "2025-03-26",
+      "live_last_update_post_date": "2025-03-26",
+      "drifted_protocol_modules": []
+    },
+    {
+      "nct_id": "NCT06975293",
+      "drift_status": "NO_DRIFT_BYTE_IDENTICAL",
+      "archived_sha256": "473367ad0d2cb4ad91d627b057f8f3243300e081c7b4ff13c25e13bb4017a93e",
+      "live_sha256": "473367ad0d2cb4ad91d627b057f8f3243300e081c7b4ff13c25e13bb4017a93e",
+      "archived_last_update_post_date": "2026-10-07",
+      "live_last_update_post_date": "2026-10-07",
+      "drifted_protocol_modules": []
+    },
+    {
+      "nct_id": "NCT07163325",
+      "drift_status": "NO_DRIFT_BYTE_IDENTICAL",
+      "archived_sha256": "7013791775f784c1534e1f2ad2bb8604941d03ed62608d45334ae99b9a153437",
+      "live_sha256": "7013791775f784c1534e1f2ad2bb8604941d03ed62608d45334ae99b9a153437",
+      "archived_last_update_post_date": "2026-06-11",
+      "live_last_update_post_date": "2026-06-11",
+      "drifted_protocol_modules": []
+    }
+  ]
+}
