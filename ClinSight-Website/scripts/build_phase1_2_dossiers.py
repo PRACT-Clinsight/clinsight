@@ -111,7 +111,7 @@ def build_verified_model(dossier):
         design_short = "—"
 
     dlt_win_obj = dossier["module3"]["dlt_window"]
-    dlt_window_short = (dlt_win_obj.get("verbatim") or dlt_win_obj.get("value") or "—") if dlt_win_obj["state"] == "STATED" else "—"
+    dlt_window_short = (dlt_win_obj.get("value") or dlt_win_obj.get("verbatim") or "—") if dlt_win_obj["state"] == "STATED" else "—"
 
     mtd_obj = dossier["module3"]["mtd"]
     mtd_short = "Primary outcome" if mtd_obj["state"] == "STATED" else "—"
