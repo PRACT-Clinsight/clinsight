@@ -13,12 +13,7 @@
     <meta property="og:url" content="https://clinsight.ket-thm4u.workers.dev/">
     <meta property="og:type" content="website">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <!-- Zero external render-blocking CSS or webfont chains (Native System UI + Inline SVGs) -->
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -466,10 +461,18 @@
             text-decoration: none;
         }
         .footer-links a:hover { color: var(--cyan); }
+        .ic {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.125em;
+            fill: currentColor;
+            display: inline-block;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Primary Navigation">
         <div class="nav-inner">
             <a href="/" class="nav-brand">
                 <div class="logo-text">ClinSight<span>™</span></div>
@@ -488,15 +491,17 @@
                 <a href="/compare/">Comparator</a>
                 <a href="/jobs/">Careers</a>
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
-                    <i class="fa-solid fa-circle-half-stroke"></i>
+                    <svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18V4a8 8 0 0 1 0 16z"/></svg>
                 </button>
             </div>
         </div>
     </nav>
 
+    <main id="main-content">
     <header class="hero-section">
         <div class="hero-badge">
-            <i class="fa-solid fa-shield-halved"></i> Provenance-Enforced Registry Intelligence
+            <svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.67-3.13 9.06-7 10.18V3.18z"/></svg>
+            Provenance-Enforced Registry Intelligence
         </div>
         <h1 class="hero-title">Phase 1 &amp; 2 Protocol &amp; Regulatory Workbench</h1>
         <p class="hero-subtitle">
@@ -520,43 +525,43 @@
     </header>
 
     <!-- Main 3-Pillar Gateway Grid -->
-    <main class="portal-grid">
+    <div class="portal-grid">
         <!-- 1. Target-Class Protocol Hub -->
         <a href="/targets/mettl3-inhibitors/" class="portal-card card-explorer">
             <div>
-                <div class="portal-icon"><i class="fa-solid fa-dna"></i></div>
+                <div class="portal-icon"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg></div>
                 <h2 class="portal-title">METTL3 Inhibitor Target Hub</h2>
                 <p class="portal-desc">
                     Cross-trial Phase 1/2 protocol matrix comparing clinical-stage METTL3 RNA methyltransferase inhibitors (STC-15 and EP102) across dose-escalation designs (BOIN vs 3+3 + Simon's two-stage vs 3+3 + Dose Expansion), DLT windows, RP2D/MTD definitions, and organ eligibility cutoffs.
                 </p>
             </div>
-            <span class="portal-action">Open Target Class Matrix <i class="fa-solid fa-arrow-right"></i></span>
+            <span class="portal-action">Open Target Class Matrix <span aria-hidden="true">&rarr;</span></span>
         </a>
 
         <!-- 2. Comparator & Verification Ledger -->
         <a href="/compare/myeloma-car-t-bispecific-adc/" class="portal-card card-compare">
             <div>
-                <div class="portal-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="portal-icon"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3L4 7v2h16V7l-8-4zm-6 8v7H4v2h16v-2h-2v-7h-2v7h-3v-7h-2v7H8v-7H6z"/></svg></div>
                 <h2 class="portal-title">Modality &amp; Endpoint Comparator</h2>
                 <p class="portal-desc">
                     Side-by-side trial design, primary endpoint, and eligibility comparisons between competing drug modalities (CAR-T vs Bispecific vs ADC in Relapsed/Refractory Multiple Myeloma) and indexed clinical trial records.
                 </p>
             </div>
-            <span class="portal-action">Open Modality Comparator <i class="fa-solid fa-arrow-right"></i></span>
+            <span class="portal-action">Open Modality Comparator <span aria-hidden="true">&rarr;</span></span>
         </a>
 
         <!-- 3. Jobs -->
         <a href="/jobs/" class="portal-card card-jobs">
             <div>
-                <div class="portal-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="portal-icon"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M10 4h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h4V6a2 2 0 0 1 2-2zm0 4h4V6h-4v2z"/></svg></div>
                 <h2 class="portal-title">Clinical &amp; Regulatory Careers</h2>
                 <p class="portal-desc">
                     Verified clinical research and regulatory positions across Sweden and Europe. Indexed from hospital trial units, academic medical centers, and biopharma sponsors with live link verification.
                 </p>
             </div>
-            <span class="portal-action">Explore Verified Positions <i class="fa-solid fa-arrow-right"></i></span>
+            <span class="portal-action">Explore Verified Positions <span aria-hidden="true">&rarr;</span></span>
         </a>
-    </main>
+    </div>
 
     <!-- Section 1: Externally Verified Phase 1/2 Protocol Dossiers -->
     <section class="landmarks-section">
@@ -567,8 +572,8 @@
                     <p class="section-subtitle">4-Module early-phase dossiers passing the &ge;50.0% (&ge;9/18) Module 1–3 Protocol Density Gate, backed by SHA-256 archived API v2 snapshots.</p>
                 </div>
                 <div style="display:flex; gap:16px; flex-wrap:wrap;">
-                    <a href="/data/ClinSight_Phase1_2_Master_Verification_Ledger.csv" download class="see-all-link"><i class="fa-solid fa-file-csv"></i> Download Master Verification Ledger (.csv)</a>
-                    <a href="/targets/mettl3-inhibitors/" class="see-all-link">Open Full Class Hub <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/data/ClinSight_Phase1_2_Master_Verification_Ledger.csv" download class="see-all-link">Download Master Verification Ledger (.csv) <span aria-hidden="true">&darr;</span></a>
+                    <a href="/targets/mettl3-inhibitors/" class="see-all-link">Open Full Class Hub <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </div>
 
@@ -616,7 +621,7 @@
                     <h2 class="section-title">Curated Registrational Benchmark Dossiers</h2>
                     <p class="section-subtitle">Late-phase registrational trials with linked protocol documentation, statistical analysis plans, and primary endpoint tables.</p>
                 </div>
-                <a href="/explorer/" class="see-all-link">Open Clinical Trials Explorer <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/explorer/" class="see-all-link">Open Clinical Trials Explorer <span aria-hidden="true">&rarr;</span></a>
             </div>
 
             <div class="landmark-grid">
@@ -654,6 +659,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <footer class="site-footer">
         <div class="footer-inner">

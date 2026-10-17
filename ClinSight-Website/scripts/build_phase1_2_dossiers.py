@@ -375,14 +375,14 @@ SHARED_CSS = '''
       --teal-glow: rgba(20, 184, 166, 0.12);
       --amber-inferred: #f59e0b;
       --amber-glow: rgba(245, 158, 11, 0.12);
-      --grey-silent: #64748b;
-      --grey-bg: rgba(100, 116, 139, 0.08);
+      --grey-silent: #94a3b8;
+      --grey-bg: rgba(148, 163, 184, 0.08);
       
       --text-high: #f8fafc;
       --text-med: #cbd5e1;
-      --text-low: #64748b;
-      --font-sans: 'Inter', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
+      --text-low: #94a3b8;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       color-scheme: dark;
     }
     
@@ -797,23 +797,19 @@ def render_dossier_html(dossier, verified_dossiers):
   <title>{escape_html(nct_id)} — {escape_html(phase)} Protocol &amp; Regulatory Dossier | ClinSight</title>
   <meta name="description" content="{escape_html(nct_id)} ({escape_html(phase)}): {escape_html(title)}. Sponsor: {escape_html(sponsor)}. Protocol design, DLT window, and eligibility cutoffs.">
   <link rel="canonical" href="{BASE_URL}/trials/{escape_html(nct_id)}/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>{SHARED_CSS}</style>
 </head>
 <body>
-  <div class="topbar">
+  <nav class="topbar" aria-label="Breadcrumb Navigation">
     <div>
       <a href="../../">&larr; ClinSight Regulatory Intelligence Workbench</a>
       <span style="margin:0 8px; color:var(--text-low);">/</span>
       <a href="../../targets/mettl3-inhibitors/" style="color:#38bdf8;">Target Class: METTL3 Inhibitors</a>
     </div>
     <span style="font-family:var(--font-mono); font-size:11px; color:var(--text-low);">Open-Access Protocol Dossier</span>
-  </div>
+  </nav>
 
-  <div class="container">
+  <main class="container">
     <!-- A. TRIAL IDENTITY BAND -->
     <div class="identity-band">
       <div class="badge-row">
@@ -944,7 +940,7 @@ def render_dossier_html(dossier, verified_dossiers):
     <footer>
       &copy; 2026 ClinSight · Protocol facts from ClinicalTrials.gov API v2 · Enforced under ClinSight Unified Integrity Contract
     </footer>
-  </div>
+  </main>
 
   <script>
     const DOSSIER_NCT = {json.dumps(nct_id)};
@@ -1107,19 +1103,15 @@ def render_target_hub_html(verified_dossiers, pending_dossiers):
   <title>METTL3 RNA Methyltransferase Inhibitors — Phase 1 &amp; 2 Protocol &amp; Regulatory Intelligence Hub | ClinSight</title>
   <meta name="description" content="Comparative Phase 1/2 protocol architecture, dose-escalation designs (BOIN vs 3+3 + Simon's 2-stage vs 3+3 + Dose Expansion), DLT windows, RP2D/MTD definitions, and statutory record gaps across clinical-stage METTL3 inhibitors (STC-15, EP102).">
   <link rel="canonical" href="{BASE_URL}/targets/mettl3-inhibitors/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>{SHARED_CSS}</style>
 </head>
 <body>
-  <div class="topbar">
+  <nav class="topbar" aria-label="Breadcrumb Navigation">
     <a href="../../">&larr; ClinSight Regulatory Intelligence Workbench</a>
     <span style="font-family:var(--font-mono); font-size:11px; color:var(--text-low);">Target-Class Protocol &amp; Regulatory Hub</span>
-  </div>
+  </nav>
 
-  <div class="container">
+  <main class="container">
     <div class="identity-band">
       <div class="badge-row">
         <span class="badge badge-class">TARGET CLASS HUB</span>
@@ -1192,7 +1184,7 @@ def render_target_hub_html(verified_dossiers, pending_dossiers):
     <footer>
       &copy; 2026 ClinSight · Protocol facts from ClinicalTrials.gov API v2 · Enforced under ClinSight Unified Integrity Contract
     </footer>
-  </div>
+  </main>
 
   <script>
     const CLASS_EXPORT_ROWS = {class_export_json};
