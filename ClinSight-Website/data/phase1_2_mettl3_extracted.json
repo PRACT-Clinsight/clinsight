@@ -1,0 +1,258 @@
+[
+  {
+    "identity": {
+      "nctId": "NCT06975293",
+      "briefTitle": "STC-15 as a Part of Combination Therapy With Toripalimab in Selected Advanced Cancers and as Monotherapy in Participants With Selected Sarcomas",
+      "officialTitle": "Open-label, Non-randomized, Multi-cohort, Phase 1b/2 Trial Investigating the Safety, Tolerability, and Antitumor Activity of STC-15 (a METTL3 Inhibitor) as a Part of Combination Therapy With Toripalimab in Participants With Selected Advanced Cancers and as Monotherapy in Participants With Selected Sarcomas",
+      "acronym": null,
+      "phase": "PHASE1/PHASE2",
+      "status": "RECRUITING",
+      "leadSponsor": "STORM Therapeutics LTD",
+      "conditions": [
+        "Solid Tumor",
+        "Sarcoma",
+        "Leiomyosarcoma",
+        "Dedifferentiated Liposarcoma"
+      ],
+      "interventions": [
+        "STC-15 in combination with toripalimab",
+        "STC-15 monotherapy"
+      ]
+    },
+    "module1": {
+      "design_archetype": {
+        "value": null,
+        "state": "NOT_REPORTED",
+        "source_field": null,
+        "verbatim": null,
+        "render": "Not reported in the statutory record."
+      },
+      "allocation": {
+        "state": "STATED",
+        "value": "NON_RANDOMIZED"
+      },
+      "masking": {
+        "state": "STATED",
+        "value": "NONE"
+      },
+      "intervention_model": {
+        "state": "STATED",
+        "value": "SEQUENTIAL"
+      },
+      "primary_purpose": {
+        "state": "STATED",
+        "value": "TREATMENT"
+      },
+      "participating_countries": {
+        "state": "NOT_REPORTED",
+        "count": 0,
+        "countries": [],
+        "render": "Participating site locations not reported in the public registry record."
+      },
+      "arms_cohorts": {
+        "state": "STATED-structural",
+        "count": 3,
+        "render": "3 designated study arms / cohorts."
+      }
+    },
+    "module2": {
+      "hematologic": {
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
+      },
+      "renal": {
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
+      },
+      "hepatic": {
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
+      },
+      "cardiac": {
+        "state": "STATED",
+        "items": [
+          {
+            "verbatim": "Clinically significant cardiovascular disease or condition.",
+            "tag": "qualitative"
+          }
+        ]
+      },
+      "washout": {
+        "state": "STATED",
+        "items": [
+          {
+            "verbatim": "Documented radiologic assessment of progression on the prior therapy before study entry.",
+            "tag": "qualitative"
+          },
+          {
+            "verbatim": "Received prior systemic anticancer therapy including investigational agents within 4 weeks or 5 half-lives, whichever is shorter, prior to first IMP administration.",
+            "tag": "numeric"
+          },
+          {
+            "verbatim": "Participants who have not recovered from all AEs due to previous therapies to Grade \u2264 1 or baseline, according to NCI-CTCAE v5.0. Exceptions include: alopecia, Grade \u2264 2 neuropathy, and endocrine-related AEs Grade \u2264 2 who are stable on treatment or hormone replacement.",
+            "tag": "qualitative"
+          }
+        ]
+      }
+    },
+    "module3": {
+      "dlt_endpoint": {
+        "state": "NOT_REPORTED",
+        "render": "Not reported in primary outcomes."
+      },
+      "dlt_window": {
+        "state": "NOT_REPORTED",
+        "render": "Not reported separately from study duration.",
+        "verbatim": null
+      },
+      "rp2d": {
+        "state": "NOT_REPORTED",
+        "render": "Not reported as a designated primary outcome measure."
+      },
+      "mtd": {
+        "state": "NOT_REPORTED",
+        "render": "Not reported as a designated primary outcome measure."
+      },
+      "ctcae": {
+        "state": "STATED",
+        "value": "CTCAE (v5.0)",
+        "render": "Adverse events graded according to CTCAE (v5.0)."
+      },
+      "dose_modification": {
+        "state": "NOT_REPORTED",
+        "render": "Dose-modification rules not described in the registry record."
+      }
+    },
+    "module4": {
+      "nct_url": "https://clinicaltrials.gov/study/NCT06975293",
+      "has_results": false,
+      "results_url": null,
+      "pmids": [],
+      "ctis_id": null,
+      "protocol_pdf": null
+    }
+  },
+  {
+    "identity": {
+      "nctId": "NCT07163325",
+      "briefTitle": "EP102 Safety and Efficacy in METTL3 Modulation in Advanced Solid Tumors",
+      "officialTitle": "A Phase 1 Multicenter, Open-Label, Dose-Escalation, Safety, Pharmacokinetic, Pharmacodynamic, and Clinical Activity Study of Orally Administered EP102 Monotherapy in Participants With Advanced Solid Tumors",
+      "acronym": null,
+      "phase": "PHASE1",
+      "status": "RECRUITING",
+      "leadSponsor": "Epics Therapeutics",
+      "conditions": [
+        "Advanced Solid Tumor (Phase 1)"
+      ],
+      "interventions": [
+        "EP102"
+      ]
+    },
+    "module1": {
+      "design_archetype": {
+        "value": "BOIN",
+        "state": "STATED",
+        "source_field": "protocolSection.designModule.designInfo",
+        "verbatim_trigger": "boin",
+        "verbatim": "n optimal interval (BOIN) design., primaryPurpose: TREA",
+        "render": "Uses a BOIN design."
+      },
+      "allocation": {
+        "state": "STATED",
+        "value": "NON_RANDOMIZED"
+      },
+      "masking": {
+        "state": "STATED",
+        "value": "NONE"
+      },
+      "intervention_model": {
+        "state": "STATED",
+        "value": "SEQUENTIAL"
+      },
+      "primary_purpose": {
+        "state": "STATED",
+        "value": "TREATMENT"
+      },
+      "participating_countries": {
+        "state": "NOT_REPORTED",
+        "count": 0,
+        "countries": [],
+        "render": "Participating site locations not reported in the public registry record."
+      },
+      "arms_cohorts": {
+        "state": "STATED-structural",
+        "count": 5,
+        "render": "5 designated study arms / cohorts."
+      }
+    },
+    "module2": {
+      "hematologic": {
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
+      },
+      "renal": {
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
+      },
+      "hepatic": {
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
+      },
+      "cardiac": {
+        "state": "NOT_REPORTED",
+        "render": "Not specified in the eligibility criteria."
+      },
+      "washout": {
+        "state": "STATED",
+        "items": [
+          {
+            "verbatim": "Participants who have received IMP or devices in other clinical trials within four weeks before the first dose.",
+            "tag": "numeric"
+          }
+        ]
+      }
+    },
+    "module3": {
+      "dlt_endpoint": {
+        "state": "STATED",
+        "value": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie: Incidence of Dose Limiting Toxicities (DLT)",
+        "render": "Primary safety endpoint evaluates: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie: Incidence of Dose Limiting Toxicities (DLT)"
+      },
+      "dlt_window": {
+        "state": "STATED",
+        "value": "Up to 21 Days after first administration",
+        "verbatim": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie | Time Frame: Up to 21 Days after first administration",
+        "render": "DLT assessment window specified as: Up to 21 Days after first administration"
+      },
+      "rp2d": {
+        "state": "STATED",
+        "value": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie",
+        "render": "Designated primary measure: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie"
+      },
+      "mtd": {
+        "state": "STATED",
+        "value": "Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie",
+        "render": "Designated primary measure: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie"
+      },
+      "ctcae": {
+        "state": "NOT_REPORTED",
+        "render": "Toxicity grading framework not stated in registry record."
+      },
+      "dose_modification": {
+        "state": "NOT_REPORTED",
+        "render": "Dose-modification rules not described in the registry record."
+      }
+    },
+    "module4": {
+      "nct_url": "https://clinicaltrials.gov/study/NCT07163325",
+      "has_results": false,
+      "results_url": null,
+      "pmids": [
+        "39883878",
+        "42210870"
+      ],
+      "ctis_id": null,
+      "protocol_pdf": null
+    }
+  }
+]
