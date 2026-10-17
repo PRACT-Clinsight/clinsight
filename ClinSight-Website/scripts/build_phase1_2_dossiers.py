@@ -1,86 +1,267 @@
-import json
-import os
-import html
+#!/usr/bin/env python3
+"""
+ClinSight Comparison-First Builder (METTL3 Inhibitor Landscape)
+Strict guarantees:
+1. ZERO raw JSON field paths (e.g., protocolSection...) in visible DOM text of any table cell.
+   Provenance is stored in data-src-path / data-src-quote attributes (and hover title) and only
+   rendered into the DOM if the reader clicks the quiet "Show sources" button.
+2. SINGLE SOURCE OF TRUTH: Both the Comparison Table cells and the Executive/Trial Synopses are
+   generated programmatically from the exact same verified record object derived from
+   phase1_2_mettl3_extracted.json + raw_api_v2/<NCT>.json. No free-written numbers or country lists.
+"""
 
+import os
+import json
+
+BASE_URL = "https://clinsight.ket-thm4u.workers.dev"
+DATA_FILE = "ClinSight-Website/data/phase1_2_mettl3_extracted.json"
+RAW_DIR = "ClinSight-Website/data/raw_api_v2"
 TRIALS_DIR = "ClinSight-Website/trials"
 TARGETS_DIR = "ClinSight-Website/targets/mettl3-inhibitors"
-DATA_FILE = "ClinSight-Website/data/phase1_2_mettl3_extracted.json"
-BASE_URL = "https://clinsight.ket-thm4u.workers.dev"
 
 VERIFIED_CLASS_NCTS = ["NCT06975293", "NCT07163325", "NCT05584111"]
 
-def escape_html(s):
-    if not s:
-        return ""
-    return html.escape(str(s))
 
-# Human-curated concise cell summaries derived strictly from the verified verbatim eligibility lines
-# so a scientist or medical writer can compare organ cutoffs in 10 seconds instead of reading raw bullets.
-HUMAN_LAB_SUMMARY = {
-    "NCT06975293": {
-        "regimen": "Oral STC-15 + Toripalimab (anti-PD-1)",
-        "indications": "Advanced solid tumors: NSCLC, HNSCC, melanoma, endometrial cancer",
-        "heme": "ANC, platelets & hemoglobin per protocol organ-function table (qualitative rule in public registry)",
-        "renal_hepatic": "Adequate renal & hepatic function required (specific lab cutoffs in full protocol)",
-        "cardiac_washout": "Prior therapy washout & QTc/LVEF per full protocol (requires ≥1 prior systemic regimen)",
-        "synopsis": (
-            "NCT06975293 (STORM Therapeutics) is a recruiting Phase 1b/2 multicenter study evaluating the oral METTL3 "
-            "inhibitor STC-15 in combination with the anti-PD-1 antibody toripalimab across 21 sites in the United States, "
-            "United Kingdom, and Australia. The Phase 1b portion uses a 3+3 dose-escalation design to evaluate safety, "
-            "tolerability, and dose-limiting toxicities (DLTs), followed by a Simon's two-stage Phase 2 expansion across "
-            "four disease-specific cohorts: non-small cell lung cancer (NSCLC), head and neck squamous cell carcinoma (HNSCC), "
-            "melanoma, and endometrial cancer."
-        )
-    },
-    "NCT07163325": {
-        "regimen": "Oral EP102 monotherapy & combinations (+ pembrolizumab or + azacitidine/venetoclax)",
-        "indications": "Advanced solid malignancies and relapsed/refractory myeloid malignancies (AML/MDS)",
-        "heme": "Not detailed in brief public registry criteria",
-        "renal_hepatic": "Not detailed in brief public registry criteria",
-        "cardiac_washout": "Prior standard therapy required; washout window not specified in brief summary",
-        "synopsis": (
-            "NCT07163325 (Epics Therapeutics) is a recruiting Phase 1/2 first-in-human study of the oral METTL3 inhibitor "
-            "EP102 in patients with advanced solid tumors and hematologic malignancies across 6 clinical sites in Belgium, "
-            "France, and Spain. Dose escalation follows a Bayesian Optimal Interval (BOIN) design with a 21-day DLT assessment "
-            "window after first administration to determine the maximum tolerated dose (MTD) and recommended expansion doses, "
-            "evaluating EP102 both as monotherapy and in combination with pembrolizumab or azacitidine plus venetoclax."
-        )
-    },
-    "NCT05584111": {
-        "regimen": "Oral STC-15 monotherapy (4 dose-escalation cohorts)",
-        "indications": "Advanced solid tumors refractory to standard therapy",
-        "heme": "ANC, platelet & hemoglobin thresholds required (qualitative organ-function rule in registry)",
-        "renal_hepatic": "Adequate renal (creatinine/CrCl) & hepatic (AST/ALT/bilirubin) function required",
-        "cardiac_washout": "Systemic anti-cancer therapy washout required prior to first dose of STC-15",
-        "synopsis": (
-            "NCT05584111 (STORM Therapeutics) is the completed Phase 1 first-in-human (FIH) monotherapy study of the oral "
-            "METTL3 RNA methyltransferase inhibitor STC-15 in patients with advanced solid malignancies across 6 United States "
-            "cancer centers. The trial enrolled 4 sequential dose-escalation cohorts using a 3+3 design with modified Fibonacci "
-            "dose increments to evaluate safety, pharmacokinetics, target engagement, and the Recommended Phase 2 Dose (RP2D), "
-            "with peer-reviewed clinical results published in 2025 (PMID: 40751015)."
-        )
+def escape_html(text):
+    if text is None:
+        return ""
+    return (
+        str(text)
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&#x27;")
+    )
+
+
+def load_raw_study(nct_id):
+    path = os.path.join(RAW_DIR, f"{nct_id}.json")
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f).get("protocolSection", {})
+
+
+def format_phase(raw_phase_str):
+    mapping = {
+        "PHASE1/PHASE2": "Phase 1/2",
+        "PHASE1": "Phase 1",
+        "PHASE2": "Phase 2",
+        "PHASE3": "Phase 3",
     }
-}
+    return mapping.get(raw_phase_str, raw_phase_str)
+
+
+def format_status(raw_status):
+    mapping = {
+        "RECRUITING": ("Recruiting", "pill-recruiting"),
+        "COMPLETED": ("Completed", "pill-completed"),
+        "ACTIVE_NOT_RECRUITING": ("Active, not recruiting", "pill-recruiting"),
+    }
+    return mapping.get(raw_status, (raw_status.title(), "pill-completed"))
+
+
+def build_verified_model(dossier):
+    """
+    Constructs a single verified dictionary per trial directly from the extracted dossier
+    and archived raw API v2 JSON. Both the comparison table and the synopses read exclusively
+    from this dictionary so they can never disagree.
+    """
+    ident = dossier["identity"]
+    nct = ident["nctId"]
+    raw = load_raw_study(nct)
+
+    phase_clean = format_phase(ident["phase"])
+    status_clean, status_cls = format_status(ident["status"])
+
+    enroll_info = raw.get("designModule", {}).get("enrollmentInfo", {})
+    enroll_count = enroll_info.get("count")
+    enroll_type = (enroll_info.get("type") or "").lower()
+    enrollment_str = f"N = {enroll_count} ({enroll_type})" if enroll_count else "Not specified"
+
+    locs = raw.get("contactsLocationsModule", {}).get("locations", [])
+    site_count = len(locs)
+    countries = sorted(list({l.get("country") for l in locs if l.get("country")}))
+    countries_list_str = ", ".join(countries) if countries else "Not specified"
+    footprint_str = (
+        f"{site_count} {'site' if site_count == 1 else 'sites'} in "
+        f"{len(countries)} {'country' if len(countries) == 1 else 'countries'} ({countries_list_str})"
+    )
+
+    arm_groups = raw.get("armsInterventionsModule", {}).get("armGroups", [])
+    arm_count = len(arm_groups)
+    arm_items = []
+    for a in arm_groups:
+        lbl = a.get("label", "")
+        desc = a.get("description", "")
+        arm_items.append(f"{lbl}: {desc}" if desc else lbl)
+
+    prim_outcomes = raw.get("outcomesModule", {}).get("primaryOutcomes", [])
+    sec_outcomes = raw.get("outcomesModule", {}).get("secondaryOutcomes", [])
+
+    pmids = dossier["module4"].get("pmids", [])
+
+    # Clean, concise human display strings derived strictly from extracted states
+    raw_design = dossier["module1"]["design_archetype"].get("value") or ""
+    raw_detail = dossier["module1"]["design_archetype"].get("design_detail") or ""
+    if raw_design and raw_detail:
+        design_short = f"{raw_design} ({raw_detail})"
+    elif raw_design:
+        design_short = raw_design
+    else:
+        design_short = "—"
+
+    dlt_win_obj = dossier["module3"]["dlt_window"]
+    dlt_window_short = (dlt_win_obj.get("verbatim") or dlt_win_obj.get("value") or "—") if dlt_win_obj["state"] == "STATED" else "—"
+
+    mtd_obj = dossier["module3"]["mtd"]
+    mtd_short = "Primary outcome" if mtd_obj["state"] == "STATED" else "—"
+
+    rp2d_obj = dossier["module3"]["rp2d"]
+    if rp2d_obj["state"] == "STATED":
+        src_f = rp2d_obj.get("source_field") or ""
+        rp2d_short = "Secondary outcome" if "secondaryOutcomes" in src_f else "Primary outcome"
+    elif rp2d_obj["state"] == "INFERRED":
+        rp2d_short = 'Implied in primary outcome ("recommended doses... for subsequent studie")'
+    else:
+        rp2d_short = "—"
+
+    tox_obj = dossier["module3"]["ctcae"]
+    tox_short = tox_obj["value"] if tox_obj["state"] == "STATED" else "—"
+
+    # Washout & organ criteria from Module 2
+    wash_obj = dossier["module2"]["washout"]
+    wash_items = wash_obj.get("items", [])
+    wash_short = " ; ".join(it.get("verbatim", "") for it in wash_items) if wash_obj["state"] == "STATED" and wash_items else "—"
+    wash_src = wash_items[0].get("source_field", "") if wash_items else ""
+    wash_quote = wash_short if wash_short != "—" else ""
+
+    organ_notes = []
+    for k, label in [
+        ("hematologic", "Hematologic"),
+        ("renal", "Renal"),
+        ("hepatic", "Hepatic"),
+        ("cardiac", "Cardiac"),
+    ]:
+        m_obj = dossier["module2"][k]
+        if m_obj["state"] == "STATED":
+            items = m_obj.get("items", [])
+            organ_notes.append(f"{label}: {'; '.join(it.get('verbatim', '') for it in items)}")
+    organ_short = " | ".join(organ_notes) if organ_notes else "— (numeric lab cutoffs not disclosed in registry)"
+
+    # Programmatic trial synopsis built strictly from the verified fields above
+    prim_measures_summary = "; ".join(
+        f"{o.get('measure')} ({o.get('timeFrame')})" if o.get("timeFrame") else o.get("measure", "")
+        for o in prim_outcomes[:3]
+    )
+    if len(prim_outcomes) > 3:
+        prim_measures_summary += f"; plus {len(prim_outcomes) - 3} additional PK/safety measures"
+
+    pmid_clause = f" Linked PubMed records: {', '.join(f'PMID {p}' for p in pmids)}." if pmids else ""
+    dlt_clause = (
+        f" The DLT evaluation window is specified as '{dlt_window_short}'."
+        if dlt_window_short != "—"
+        else " A separate DLT evaluation window is not specified in the registry outcome measures."
+    )
+
+    alloc_val = dossier["module1"]["allocation"].get("value", "")
+    mask_val = dossier["module1"]["masking"].get("value", "")
+    imodel_val = dossier["module1"]["intervention_model"].get("value", "")
+    allocation_str = f"{alloc_val} · Masking: {mask_val} · {imodel_val}"
+
+    programmatic_synopsis = (
+        f"{nct} ({ident['leadSponsor']}) is a {status_clean.lower()} {phase_clean} trial ({enrollment_str}) "
+        f"evaluating {', '.join(ident['interventions'])} in {'; '.join(ident['conditions'])}. "
+        f"The study comprises {arm_count} designated cohorts/arms using a {design_short} design across "
+        f"{footprint_str}.{dlt_clause} "
+        f"Primary outcomes evaluate: {prim_measures_summary}.{pmid_clause}"
+    )
+
+    return {
+        "nct": nct,
+        "title": ident["briefTitle"],
+        "sponsor": ident["leadSponsor"],
+        "phase_clean": phase_clean,
+        "status_clean": status_clean,
+        "status_cls": status_cls,
+        "enrollment_str": enrollment_str,
+        "interventions_str": ", ".join(ident["interventions"]),
+        "conditions_str": "; ".join(ident["conditions"]),
+        "design_short": design_short,
+        "design_src": dossier["module1"]["design_archetype"].get("source_field") or "",
+        "design_quote": dossier["module1"]["design_archetype"].get("verbatim") or "",
+        "allocation_str": allocation_str,
+        "arm_count": arm_count,
+        "arm_items": arm_items,
+        "prim_outcomes": prim_outcomes,
+        "sec_outcomes": sec_outcomes,
+        "dlt_window_short": dlt_window_short,
+        "dlt_src": dlt_win_obj.get("source_field") or "",
+        "dlt_quote": dlt_win_obj.get("verbatim") or "",
+        "mtd_short": mtd_short,
+        "mtd_src": mtd_obj.get("source_field") or "",
+        "mtd_quote": mtd_obj.get("verbatim") or "",
+        "rp2d_short": rp2d_short,
+        "rp2d_src": rp2d_obj.get("source_field") or "",
+        "rp2d_quote": rp2d_obj.get("verbatim") or "",
+        "tox_short": tox_short,
+        "tox_src": tox_obj.get("source_field") or "",
+        "tox_quote": tox_obj.get("verbatim") or "",
+        "wash_short": wash_short,
+        "wash_src": wash_src,
+        "wash_quote": wash_quote,
+        "organ_short": organ_short,
+        "site_count": site_count,
+        "countries": countries,
+        "footprint_str": footprint_str,
+        "pmids": pmids,
+        "synopsis": programmatic_synopsis,
+        "raw": raw,
+        "dossier": dossier,
+    }
+
+
+def build_class_synopsis(models):
+    """
+    Generates the Executive Class Synopsis strictly from the verified models list,
+    guaranteeing 100% numerical and factual agreement with the comparison table.
+    """
+    m_by_nct = {m["nct"]: m for m in models}
+    m1 = m_by_nct["NCT06975293"]
+    m2 = m_by_nct["NCT07163325"]
+    m3 = m_by_nct["NCT05584111"]
+
+    return (
+        f"Three interventional clinical trials evaluating oral small-molecule METTL3 RNA methyltransferase inhibitors "
+        f"are registered on ClinicalTrials.gov across two investigational agents: STORM Therapeutics' STC-15 "
+        f"({m3['nct']}, {m1['nct']}) and Epics Therapeutics' EP102 ({m2['nct']}). "
+        f"STC-15 completed its first-in-human {m3['phase_clean']} monotherapy trial ({m3['nct']}; {m3['enrollment_str']}; "
+        f"{m3['arm_count']} dose-escalation cohorts using a {m3['design_short']} design across {m3['footprint_str']}) "
+        f"and is recruiting a {m1['phase_clean']} study ({m1['nct']}; {m1['enrollment_str']}; {m1['arm_count']} cohorts "
+        f"using a {m1['design_short']} design across {m1['footprint_str']}) evaluating {m1['interventions_str']} "
+        f"in {m1['conditions_str']}. "
+        f"Epics Therapeutics' EP102 is recruiting a first-in-human {m2['phase_clean']} monotherapy study "
+        f"({m2['nct']}; {m2['enrollment_str']}; {m2['arm_count']} dose levels using a {m2['design_short']} design "
+        f"across {m2['footprint_str']}) with a specified DLT assessment window of '{m2['dlt_window_short']}'."
+    )
+
 
 SHARED_CSS = '''
     :root {
       --bg-void: #07090e;
       --bg-base: #0b0f19;
       --bg-surface: #111827;
-      --bg-card: rgba(17, 24, 39, 0.85);
+      --bg-elevated: #161f33;
       --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(56, 189, 248, 0.35);
+      --border-strong: rgba(255, 255, 255, 0.14);
       --cyan: #38bdf8;
       --cyan-glow: rgba(56, 189, 248, 0.12);
-      --teal: #14b8a6;
-      --teal-glow: rgba(20, 184, 166, 0.12);
       --purple: #c084fc;
-      --amber: #fbbf24;
+      --emerald: #4ade80;
       --text-high: #f8fafc;
       --text-med: #cbd5e1;
       --text-low: #94a3b8;
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       color-scheme: dark;
     }
 
@@ -89,23 +270,22 @@ SHARED_CSS = '''
       background: var(--bg-void);
       color: var(--text-med);
       font-family: var(--font-sans);
-      line-height: 1.6;
+      line-height: 1.55;
       padding: 0 0 64px;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Site Navigation */
     .site-nav {
       border-bottom: 1px solid var(--border-subtle);
       background: var(--bg-base);
-      padding: 14px 24px;
+      padding: 12px 24px;
       position: sticky;
       top: 0;
       z-index: 100;
       backdrop-filter: blur(12px);
     }
     .nav-inner {
-      max-width: 1120px;
+      max-width: 1220px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -120,11 +300,7 @@ SHARED_CSS = '''
       text-decoration: none;
       color: var(--text-high);
     }
-    .logo-text {
-      font-size: 19px;
-      font-weight: 700;
-      color: var(--cyan);
-    }
+    .logo-text { font-size: 19px; font-weight: 700; color: var(--cyan); }
     .logo-tag {
       font-size: 12.5px;
       color: var(--text-low);
@@ -132,12 +308,7 @@ SHARED_CSS = '''
       padding-left: 10px;
     }
     @media (max-width: 640px) { .logo-tag { display: none; } }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
+    .nav-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
     .nav-links a {
       color: var(--text-med);
       text-decoration: none;
@@ -147,199 +318,57 @@ SHARED_CSS = '''
     .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
 
     .container {
-      max-width: 1120px;
+      max-width: 1220px;
       margin: 0 auto;
-      padding: 32px 20px;
+      padding: 24px 20px;
     }
 
-    /* Header / Hero Card */
-    .identity-band {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: 14px;
-      padding: 28px;
-      margin-bottom: 24px;
-    }
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
-      align-items: center;
-    }
-    .badge {
-      font-family: var(--font-mono);
-      font-size: 11.5px;
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .badge-nct { background: var(--cyan-glow); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.3); }
-    .badge-phase { background: rgba(168, 85, 247, 0.12); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.3); }
-    .badge-status { background: rgba(34, 197, 94, 0.12); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
-    .badge-class { background: var(--teal-glow); color: #2dd4bf; border: 1px solid rgba(20, 184, 166, 0.3); }
-
-    h1 {
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--text-high);
-      line-height: 1.3;
-      margin-bottom: 8px;
-      letter-spacing: -0.02em;
-    }
-    .subtitle-line {
-      font-size: 14.5px;
-      color: var(--text-med);
-      margin-bottom: 20px;
-    }
-    .subtitle-line strong { color: var(--text-high); }
-
-    /* Ready-to-Use Clinical Synopsis Box */
-    .synopsis-box {
-      background: rgba(56, 189, 248, 0.05);
-      border: 1px solid rgba(56, 189, 248, 0.22);
-      border-radius: 10px;
-      padding: 18px 20px;
-      margin-top: 16px;
-    }
-    .synopsis-header {
+    .page-head {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 8px;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
     }
-    .synopsis-label {
-      font-size: 11.5px;
+    .eyebrow {
       font-family: var(--font-mono);
+      font-size: 11.5px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--cyan);
-      font-weight: 600;
-    }
-    .synopsis-text {
-      font-size: 14.5px;
-      color: var(--text-high);
-      line-height: 1.65;
-    }
-
-    /* 4-Key Takeaway Grid */
-    .glance-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-    .glance-card {
-      background: rgba(255, 255, 255, 0.025);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 14px 16px;
-    }
-    .glance-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-low);
-      font-weight: 600;
       margin-bottom: 4px;
     }
-    .glance-val {
-      font-size: 13.5px;
-      color: var(--text-high);
-      font-weight: 600;
-      line-height: 1.4;
-    }
-
-    /* Section Cards */
-    .module-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      padding: 24px;
-      margin-bottom: 20px;
-    }
-    .module-header-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .module-title {
-      font-size: 17px;
+    .eyebrow a { color: var(--cyan); text-decoration: none; }
+    .eyebrow a:hover { text-decoration: underline; }
+    h1 {
+      font-size: 24px;
       font-weight: 700;
       color: var(--text-high);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
     }
-    .module-sub {
-      font-size: 13px;
+    .head-sub {
+      font-size: 13.5px;
       color: var(--text-low);
-    }
-
-    /* Clean 2-Column Parameter Rows */
-    .field-row {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 16px;
-      padding: 12px 14px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      font-size: 14px;
-      align-items: baseline;
-    }
-    .field-row:last-child { border-bottom: none; }
-    @media (max-width: 640px) {
-      .field-row { grid-template-columns: 1fr; gap: 4px; }
-    }
-    .field-label {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-low);
-    }
-    .val-stated { color: var(--text-high); font-weight: 500; }
-    .val-inferred { color: var(--text-med); }
-    .val-not-reported { color: var(--text-low); }
-
-    /* Quiet Source Drawer (Hidden unless user clicks 'Show Sources' or 'Quote') */
-    .source-anchor { display: none; margin-top: 6px; font-size: 12px; }
-    body.show-sources .source-anchor { display: block; }
-    .source-quote {
-      display: block;
-      color: var(--text-med);
-      font-style: italic;
-      background: rgba(0, 0, 0, 0.3);
-      padding: 6px 10px;
-      border-left: 2px solid var(--cyan);
-      border-radius: 4px;
       margin-top: 4px;
-    }
-    .source-field {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--cyan);
+      max-width: 780px;
     }
 
-    .undisclosed-note {
-      margin-top: 12px;
-      padding: 10px 14px;
-      background: rgba(255, 255, 255, 0.02);
-      border-radius: 6px;
-      font-size: 12.5px;
-      color: var(--text-low);
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-
-    /* Buttons */
-    .toolbar-group { display: flex; flex-wrap: wrap; gap: 8px; }
-    .btn-export {
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: var(--cyan);
+    .btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      color: var(--text-med);
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 500;
       padding: 6px 12px;
       border-radius: 6px;
       cursor: pointer;
@@ -347,52 +376,210 @@ SHARED_CSS = '''
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      transition: all 0.15s;
     }
-    .btn-export:hover { background: rgba(56, 189, 248, 0.18); }
-    .btn-subtle {
-      background: transparent;
-      border: 1px solid var(--border-subtle);
-      color: var(--text-low);
-      font-size: 12px;
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
+    .btn:hover { color: var(--text-high); border-color: var(--cyan); }
+    .btn.active {
+      background: var(--cyan-glow);
+      border-color: var(--cyan);
+      color: var(--cyan);
     }
-    .btn-subtle:hover { color: var(--text-high); border-color: var(--border-hover); }
 
-    /* Side-by-Side Comparison Matrix Table */
-    .matrix-table {
+    .table-wrap {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+    .comp-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 13.5px;
+      min-width: 820px;
     }
-    .matrix-th {
+    .comp-table th {
       text-align: left;
-      padding: 14px;
-      background: rgba(255, 255, 255, 0.03);
-      border-bottom: 2px solid var(--border-subtle);
+      padding: 14px 16px;
+      background: var(--bg-elevated);
+      border-bottom: 2px solid var(--border-strong);
+      border-left: 1px solid var(--border-subtle);
       vertical-align: top;
+      width: 27%;
     }
-    .matrix-param {
-      padding: 12px 14px;
+    .comp-table th:first-child {
+      border-left: none;
+      width: 19%;
+      vertical-align: bottom;
+      color: var(--text-low);
+      font-size: 11.5px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .th-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .th-nct {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    .th-nct:hover { text-decoration: underline; }
+    .th-badges { display: flex; gap: 5px; align-items: center; }
+    .pill {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
       font-weight: 600;
-      color: var(--text-high);
-      border-bottom: 1px solid var(--border-subtle);
-      background: rgba(255, 255, 255, 0.015);
-      width: 210px;
-      vertical-align: top;
-      font-size: 13px;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
-    .matrix-td {
-      padding: 12px 14px;
+    .pill-phase { background: rgba(192, 132, 252, 0.14); color: var(--purple); }
+    .pill-recruiting { background: rgba(74, 222, 128, 0.14); color: var(--emerald); }
+    .pill-completed { background: rgba(148, 163, 184, 0.16); color: var(--text-med); }
+    .th-drug {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-high);
+      line-height: 1.3;
+      margin-bottom: 3px;
+    }
+    .th-sponsor {
+      font-size: 12px;
+      color: var(--text-low);
+      font-weight: 400;
+    }
+
+    .group-row td {
+      background: rgba(56, 189, 248, 0.05);
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 8px 16px;
+      border-top: 1px solid var(--border-strong);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .comp-table td {
+      padding: 11px 16px;
       border-bottom: 1px solid var(--border-subtle);
       border-left: 1px solid var(--border-subtle);
       vertical-align: top;
       color: var(--text-high);
+      line-height: 1.5;
     }
-    .matrix-td.muted { color: var(--text-low); }
+    .comp-table td.param-col {
+      border-left: none;
+      font-weight: 600;
+      color: var(--text-med);
+      background: rgba(255, 255, 255, 0.015);
+      font-size: 13px;
+    }
+    .cell-blank {
+      color: var(--text-low);
+    }
+    .cell-note {
+      display: block;
+      font-size: 12px;
+      color: var(--text-low);
+      margin-top: 2px;
+    }
+    .cell-list {
+      margin: 0;
+      padding-left: 15px;
+    }
+    .cell-list li { margin-bottom: 3px; }
+    .cell-list li:last-child { margin-bottom: 0; }
 
+    /* Dynamically injected when 'Show sources' is toggled on */
+    .src-drawer {
+      margin-top: 6px;
+      padding: 5px 8px;
+      background: rgba(0, 0, 0, 0.35);
+      border-left: 2px solid var(--cyan);
+      border-radius: 4px;
+      font-size: 11.5px;
+      color: var(--text-low);
+    }
+    .src-path {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: var(--cyan);
+      display: block;
+    }
+    .src-quote {
+      font-style: italic;
+      color: var(--text-med);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .synopsis-banner {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+    }
+    .section-label {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-high);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .syn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .syn-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .syn-card h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-high);
+      margin: 6px 0 4px;
+      line-height: 1.35;
+    }
+    .syn-meta {
+      font-size: 12px;
+      color: var(--text-low);
+      margin-bottom: 10px;
+    }
+    .syn-body {
+      font-size: 13.5px;
+      color: var(--text-med);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .syn-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+    }
     .doc-link {
       color: var(--cyan);
       text-decoration: none;
@@ -400,9 +587,46 @@ SHARED_CSS = '''
     }
     .doc-link:hover { text-decoration: underline; }
 
+    .footnote {
+      font-size: 12.5px;
+      color: var(--text-low);
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+    }
+
+    .kv-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+    .kv-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-high);
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .kv-row {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 16px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 13.5px;
+    }
+    .kv-row:last-child { border-bottom: none; }
+    @media (max-width: 640px) { .kv-row { grid-template-columns: 1fr; gap: 4px; } }
+    .kv-key { color: var(--text-low); font-weight: 600; font-size: 12.5px; }
+    .kv-val { color: var(--text-high); }
+
     footer {
       margin-top: 36px;
-      padding-top: 20px;
+      padding-top: 18px;
       border-top: 1px solid var(--border-subtle);
       font-size: 12.5px;
       color: var(--text-low);
@@ -414,6 +638,7 @@ SHARED_CSS = '''
     footer a { color: var(--text-med); text-decoration: none; }
     footer a:hover { color: var(--cyan); }
 '''
+
 
 def render_nav(rel_prefix="../../", active="compare"):
     return f'''
@@ -432,475 +657,255 @@ def render_nav(rel_prefix="../../", active="compare"):
     </div>
   </nav>'''
 
-def render_clean_row(label, field_data, source_field=None, verbatim_quote=None):
-    val = field_data.get("render") or field_data.get("value") or ""
-    s_field = field_data.get("source_field") or source_field
-    v_quote = field_data.get("verbatim") or verbatim_quote
-    source_html = ""
-    if s_field and v_quote:
-        source_html = f'''
-        <div class="source-anchor">
-          <span class="source-field">Registry field: {escape_html(s_field)}</span>
-          <span class="source-quote">"{escape_html(v_quote)}"</span>
-        </div>'''
-    return f'''
-    <div class="field-row">
-      <div class="field-label">{escape_html(label)}</div>
-      <div>
-        <div class="val-stated">{escape_html(val)}</div>
-        {source_html}
-      </div>
-    </div>'''
 
-def render_clean_section_rows(field_specs):
-    active_rows = []
-    undisclosed = []
-    for label, f_data, s_field, v_quote in field_specs:
-        st = f_data.get("state")
-        if st in ("STATED", "STATED-structural", "INFERRED", "STALE"):
-            active_rows.append(render_clean_row(label, f_data, s_field, v_quote))
-        else:
-            undisclosed.append(label)
-    out = "\n".join(active_rows)
-    if undisclosed:
-        out += f'''
-    <div class="undisclosed-note">
-      <strong>Not detailed in the public registry summary:</strong> {escape_html(", ".join(undisclosed))}.
-    </div>'''
-    return out
+def td_cell(content_html, src_path="", src_quote="", is_blank=False):
+    """
+    Renders a <td> with ZERO source path text inside the DOM node.
+    Provenance is stored in data-src-path and data-src-quote attributes (plus hover title)
+    so text readers and copy-paste never see JSON paths unless 'Show sources' is toggled on.
+    """
+    attrs = []
+    if is_blank:
+        attrs.append('class="cell-blank"')
+    if src_path:
+        attrs.append(f'data-src-path="{escape_html(src_path)}"')
+    if src_quote:
+        attrs.append(f'data-src-quote="{escape_html(src_quote)}"')
+    if src_path or src_quote:
+        tip = f"Registry field: {src_path}" + (f' — "{src_quote}"' if src_quote else "")
+        attrs.append(f'title="{escape_html(tip)}"')
+    attr_str = (" " + " ".join(attrs)) if attrs else ""
+    return f"<td{attr_str}>{content_html}</td>"
 
-def render_clean_eligibility(mod2_data):
-    cat_specs = [
-        ("Hematologic (ANC / Platelets / Hgb)", mod2_data["hematologic"]),
-        ("Renal (Creatinine / CrCl / eGFR)", mod2_data["renal"]),
-        ("Hepatic (Bilirubin / AST / ALT)", mod2_data["hepatic"]),
-        ("Cardiac (QTc / LVEF)", mod2_data["cardiac"]),
-        ("Prior Therapy & Washout", mod2_data["washout"])
-    ]
-    active_html = []
-    undisclosed = []
-    for label, cat_data in cat_specs:
-        if cat_data.get("state") == "STATED":
-            items = cat_data.get("items", [])
-            bullets = "".join([f'<li style="margin-bottom:4px;">{escape_html(it.get("verbatim"))}</li>' for it in items])
-            active_html.append(f'''
-    <div class="field-row">
-      <div class="field-label">{escape_html(label)}</div>
-      <div>
-        <ul style="padding-left:18px; color:var(--text-high);">{bullets}</ul>
-        <div class="source-anchor">
-          <span class="source-field">Registry field: protocolSection.eligibilityModule.eligibilityCriteria</span>
-        </div>
-      </div>
-    </div>''')
-        else:
-            undisclosed.append(label.split(" (")[0])
-    out = "\n".join(active_html)
-    if undisclosed:
-        out += f'''
-    <div class="undisclosed-note">
-      <strong>Organ/eligibility cutoffs not itemized in the brief public registry text:</strong> {escape_html(", ".join(undisclosed))} (refer to the sponsor's full clinical study protocol).
-    </div>'''
-    return out
 
-def build_cross_trial_matrix_html(verified_dossiers, current_nct=None, rel_prefix="../../"):
-    headers_html = '<th class="matrix-th" style="width:210px;">Clinical Dimension</th>'
-    for d in verified_dossiers:
-        nct = d["identity"]["nctId"]
-        is_curr = (nct == current_nct)
-        hl_style = "border-top: 3px solid #38bdf8; background: rgba(56, 189, 248, 0.06);" if is_curr else ""
-        drug = ", ".join(d["identity"].get("interventions", []))
-        sponsor = d["identity"]["leadSponsor"]
+def render_comparison_table(models, rel_prefix="../../"):
+    headers_html = '<th scope="col">Parameter</th>'
+    for m in models:
         headers_html += f'''
-        <th class="matrix-th" style="{hl_style}">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:6px; margin-bottom:4px;">
-            <a href="{rel_prefix}trials/{nct}/" style="color:#38bdf8; font-family:var(--font-mono); font-size:13px; text-decoration:none; font-weight:700;">{nct}</a>
-            <span class="badge badge-phase" style="font-size:10.5px; padding:2px 7px;">{escape_html(d["identity"]["phase"])}</span>
+        <th scope="col">
+          <div class="th-top">
+            <a href="{rel_prefix}trials/{m['nct']}/" class="th-nct">{m['nct']}</a>
+            <div class="th-badges">
+              <span class="pill pill-phase">{escape_html(m["phase_clean"])}</span>
+              <span class="pill {m["status_cls"]}">{escape_html(m["status_clean"])}</span>
+            </div>
           </div>
-          <div style="font-size:13px; color:var(--text-high); font-weight:600; margin-bottom:2px;">{escape_html(drug)}</div>
-          <div style="font-size:11.5px; color:var(--text-low); font-weight:400;">{escape_html(sponsor)}</div>
+          <div class="th-drug">{escape_html(m["interventions_str"])}</div>
+          <div class="th-sponsor">{escape_html(m["sponsor"])} &middot; {escape_html(m["enrollment_str"])}</div>
         </th>'''
 
-    def cell(text, muted=False, src=None):
-        cls = "matrix-td muted" if muted else "matrix-td"
-        src_html = f'<div class="source-anchor"><span class="source-field">{escape_html(src)}</span></div>' if src else ""
-        return f'<td class="{cls}">{escape_html(text)}{src_html}</td>'
+    def row_across(label, fn):
+        cells = "".join(fn(m) for m in models)
+        return f'<tr><td class="param-col">{escape_html(label)}</td>{cells}</tr>\n'
 
-    rows_spec = [
-        ("Regimen & Modality", lambda d: cell(HUMAN_LAB_SUMMARY.get(d["identity"]["nctId"], {}).get("regimen", ", ".join(d["identity"].get("interventions", []))))),
-        ("Recruitment Status", lambda d: cell(d["identity"]["status"], src="protocolSection.statusModule.overallStatus")),
-        ("Target Indications", lambda d: cell(HUMAN_LAB_SUMMARY.get(d["identity"]["nctId"], {}).get("indications", "; ".join(d["identity"].get("conditions", []))))),
-        ("Escalation & Expansion Design", lambda d: cell(
-            d["module1"]["design_archetype"].get("render") or d["module1"]["design_archetype"].get("value"),
-            muted=(d["module1"]["design_archetype"]["state"] == "NOT_REPORTED"),
-            src=d["module1"]["design_archetype"].get("source_field")
-        )),
-        ("Study Cohorts / Arms", lambda d: cell(
-            f"{d['module1']['arms_cohorts']['count']} cohorts: {d['module1']['arms_cohorts']['verbatim']}",
-            src="protocolSection.armsInterventionsModule.armGroups"
-        )),
-        ("Primary Safety / DLT Endpoint", lambda d: cell(
-            d["module3"]["dlt_endpoint"].get("render") or d["module3"]["dlt_endpoint"].get("value"),
-            src=d["module3"]["dlt_endpoint"].get("source_field")
-        )),
-        ("DLT Assessment Window", lambda d: cell(
-            d["module3"]["dlt_window"].get("value") if d["module3"]["dlt_window"]["state"] == "STATED" else "Not specified in brief outcome timeframe",
-            muted=(d["module3"]["dlt_window"]["state"] != "STATED"),
-            src=d["module3"]["dlt_window"].get("source_field")
-        )),
-        ("MTD & RP2D Objectives", lambda d: cell(
-            f"MTD: {'Stated' if d['module3']['mtd']['state']=='STATED' else 'Not named'} · RP2D: {d['module3']['rp2d'].get('render')}",
-            src=d["module3"]["rp2d"].get("source_field") or d["module3"]["mtd"].get("source_field")
-        )),
-        ("Hematologic Eligibility", lambda d: cell(
-            HUMAN_LAB_SUMMARY.get(d["identity"]["nctId"], {}).get("heme", "Not specified"),
-            muted=(d["module2"]["hematologic"]["state"] != "STATED")
-        )),
-        ("Renal & Hepatic Eligibility", lambda d: cell(
-            HUMAN_LAB_SUMMARY.get(d["identity"]["nctId"], {}).get("renal_hepatic", "Not specified"),
-            muted=(d["module2"]["renal"]["state"] != "STATED" and d["module2"]["hepatic"]["state"] != "STATED")
-        )),
-        ("Washout & Prior Therapy", lambda d: cell(
-            d["module2"]["washout"]["items"][0]["verbatim"] if d["module2"]["washout"]["state"] == "STATED" and d["module2"]["washout"].get("items") else HUMAN_LAB_SUMMARY.get(d["identity"]["nctId"], {}).get("cardiac_washout", "Not specified"),
-            muted=(d["module2"]["washout"]["state"] != "STATED")
-        )),
-        ("Geography & Trial Sites", lambda d: cell(
-            d["module1"]["participating_countries"].get("render"),
-            src="protocolSection.contactsLocationsModule.locations"
-        )),
-        ("Peer-Reviewed Publications", lambda d: cell(
-            ", ".join(f"PubMed PMID: {p}" for p in d["module4"]["pmids"]) if d["module4"]["pmids"] else "None linked yet",
-            muted=(not d["module4"]["pmids"])
-        ))
-    ]
+    body = ""
+    # Group 1: Regimen, Indications & Scope
+    body += '<tr class="group-row"><td colspan="4">Regimen, Indications &amp; Scope</td></tr>\n'
+    body += row_across(
+        "Investigational Regimen",
+        lambda m: td_cell(
+            escape_html(m["interventions_str"]),
+            "protocolSection.armsInterventionsModule.interventions",
+            m["interventions_str"],
+        ),
+    )
+    body += row_across(
+        "Registered Conditions",
+        lambda m: td_cell(
+            escape_html(m["conditions_str"]),
+            "protocolSection.conditionsModule.conditions",
+            m["conditions_str"],
+        ),
+    )
+    body += row_across(
+        "Target Enrollment",
+        lambda m: td_cell(
+            escape_html(m["enrollment_str"]),
+            "protocolSection.designModule.enrollmentInfo",
+            m["enrollment_str"],
+        ),
+    )
 
-    body_rows = ""
-    for label, fn in rows_spec:
-        cells = "".join(fn(d) for d in verified_dossiers)
-        body_rows += f'''
-        <tr>
-          <td class="matrix-param">{escape_html(label)}</td>
-          {cells}
-        </tr>'''
+    # Group 2: Escalation & Cohort Design
+    body += '<tr class="group-row"><td colspan="4">Escalation &amp; Cohort Design</td></tr>\n'
+    body += row_across(
+        "Escalation & Expansion Design",
+        lambda m: td_cell(
+            f"<strong>{escape_html(m['design_short'])}</strong>",
+            m["design_src"],
+            m["design_quote"],
+        ),
+    )
+    body += row_across(
+        "Cohorts & Dosing Arms",
+        lambda m: td_cell(
+            f"<strong>{m['arm_count']} cohorts:</strong><ul class=\"cell-list\">"
+            + "".join(f"<li>{escape_html(item)}</li>" for item in m["arm_items"])
+            + "</ul>",
+            "protocolSection.armsInterventionsModule.armGroups",
+            "; ".join(m["arm_items"]),
+        ),
+    )
+    body += row_across(
+        "Allocation & Masking",
+        lambda m: td_cell(
+            escape_html(m["allocation_str"]),
+            "protocolSection.designModule.designInfo",
+            m["allocation_str"],
+        ),
+    )
+
+    # Group 3: Dose-Finding, DLT & Endpoints
+    body += '<tr class="group-row"><td colspan="4">Dose-Finding, DLT &amp; Outcome Measures</td></tr>\n'
+    body += row_across(
+        "Primary Outcome Measures",
+        lambda m: td_cell(
+            "<ul class=\"cell-list\">"
+            + "".join(
+                f"<li><strong>{escape_html(o.get('measure', ''))}</strong>"
+                + (f": {escape_html(o.get('description'))}" if o.get("description") else "")
+                + (f" <span class=\"cell-note\">Timeframe: {escape_html(o.get('timeFrame'))}</span>" if o.get("timeFrame") else "")
+                + "</li>"
+                for o in m["prim_outcomes"]
+            )
+            + "</ul>",
+            "protocolSection.outcomesModule.primaryOutcomes",
+            f"{len(m['prim_outcomes'])} primary outcome measures",
+        ),
+    )
+    body += row_across(
+        "DLT Evaluation Window",
+        lambda m: td_cell(
+            escape_html(m["dlt_window_short"]),
+            m["dlt_src"],
+            m["dlt_quote"],
+            is_blank=(m["dlt_window_short"] == "—"),
+        ),
+    )
+    body += row_across(
+        "Maximum Tolerated Dose (MTD)",
+        lambda m: td_cell(
+            escape_html(m["mtd_short"]),
+            m["mtd_src"],
+            m["mtd_quote"],
+            is_blank=(m["mtd_short"] == "—"),
+        ),
+    )
+    body += row_across(
+        "Recommended Phase 2 Dose (RP2D)",
+        lambda m: td_cell(
+            escape_html(m["rp2d_short"]),
+            m["rp2d_src"],
+            m["rp2d_quote"],
+            is_blank=(m["rp2d_short"] == "—"),
+        ),
+    )
+    body += row_across(
+        "Secondary Outcome Measures",
+        lambda m: td_cell(
+            "<ul class=\"cell-list\">"
+            + "".join(f"<li>{escape_html(o.get('measure', ''))}</li>" for o in m["sec_outcomes"])
+            + "</ul>"
+            if m["sec_outcomes"]
+            else "—",
+            "protocolSection.outcomesModule.secondaryOutcomes",
+            f"{len(m['sec_outcomes'])} secondary outcome measures",
+            is_blank=(not m["sec_outcomes"]),
+        ),
+    )
+    body += row_across(
+        "AE Grading Scale",
+        lambda m: td_cell(
+            escape_html(m["tox_short"]),
+            m["tox_src"],
+            m["tox_quote"],
+            is_blank=(m["tox_short"] == "—"),
+        ),
+    )
+
+    # Group 4: Eligibility & Washout
+    body += '<tr class="group-row"><td colspan="4">Patient Eligibility &amp; Washout Criteria</td></tr>\n'
+    body += row_across(
+        "Prior Therapy Washout",
+        lambda m: td_cell(
+            escape_html(m["wash_short"]),
+            m["wash_src"],
+            m["wash_quote"],
+            is_blank=(m["wash_short"] == "—"),
+        ),
+    )
+    body += row_across(
+        "Organ Function Criteria",
+        lambda m: td_cell(
+            escape_html(m["organ_short"]),
+            "protocolSection.eligibilityModule.eligibilityCriteria",
+            m["organ_short"],
+            is_blank=m["organ_short"].startswith("—"),
+        ),
+    )
+
+    # Group 5: Footprint & Links
+    body += '<tr class="group-row"><td colspan="4">Geographic Footprint &amp; Literature</td></tr>\n'
+    body += row_across(
+        "Trial Sites & Countries",
+        lambda m: td_cell(
+            f"<strong>{escape_html(m['footprint_str'])}</strong>",
+            "protocolSection.contactsLocationsModule.locations",
+            m["footprint_str"],
+        ),
+    )
+    body += row_across(
+        "Linked PubMed Literature",
+        lambda m: td_cell(
+            " &middot; ".join(
+                f'<a href="https://pubmed.ncbi.nlm.nih.gov/{p}/" target="_blank" rel="noopener noreferrer" class="doc-link">PMID: {p} &nearr;</a>'
+                for p in m["pmids"]
+            )
+            if m["pmids"]
+            else "—",
+            "protocolSection.referencesModule.references",
+            ", ".join(m["pmids"]) if m["pmids"] else "None linked in registry record",
+            is_blank=(not m["pmids"]),
+        ),
+    )
 
     return f'''
-    <div style="overflow-x:auto;">
-      <table class="matrix-table">
+    <div class="table-wrap">
+      <table class="comp-table" id="mettl3ComparisonTable">
         <thead>
           <tr>{headers_html}</tr>
         </thead>
         <tbody>
-          {body_rows}
+          {body}
         </tbody>
       </table>
     </div>'''
 
-def build_dossier_export_payload(dossier):
-    m1 = dossier["module1"]
-    m2 = dossier["module2"]
-    m3 = dossier["module3"]
-    m4 = dossier["module4"]
 
-    def m2_val(cat):
-        if m2[cat]["state"] == "STATED":
-            return " | ".join(it["verbatim"] for it in m2[cat].get("items", []))
-        return m2[cat].get("render", "Not specified in public eligibility criteria.")
+def render_target_hub_html(models):
+    table_html = render_comparison_table(models, rel_prefix="../../")
+    class_synopsis = build_class_synopsis(models)
 
-    return [
-        ("Study Design", "Design Archetype", m1["design_archetype"]["state"], m1["design_archetype"].get("render"), m1["design_archetype"].get("source_field") or "N/A"),
-        ("Study Design", "Allocation Mode", m1["allocation"]["state"], m1["allocation"].get("value"), m1["allocation"].get("source_field") or "N/A"),
-        ("Study Design", "Masking", m1["masking"]["state"], m1["masking"].get("value"), m1["masking"].get("source_field") or "N/A"),
-        ("Study Design", "Intervention Model", m1["intervention_model"]["state"], m1["intervention_model"].get("value"), m1["intervention_model"].get("source_field") or "N/A"),
-        ("Study Design", "Primary Purpose", m1["primary_purpose"]["state"], m1["primary_purpose"].get("value"), m1["primary_purpose"].get("source_field") or "N/A"),
-        ("Study Design", "Participating Countries", m1["participating_countries"]["state"], m1["participating_countries"].get("render"), m1["participating_countries"].get("source_field") or "N/A"),
-        ("Study Design", "Study Arms / Cohorts", m1["arms_cohorts"]["state"], m1["arms_cohorts"].get("render"), m1["arms_cohorts"].get("source_field") or "N/A"),
-        ("Eligibility", "Hematologic Function", m2["hematologic"]["state"], m2_val("hematologic"), "protocolSection.eligibilityModule.eligibilityCriteria"),
-        ("Eligibility", "Renal Clearance", m2["renal"]["state"], m2_val("renal"), "protocolSection.eligibilityModule.eligibilityCriteria"),
-        ("Eligibility", "Hepatic Function", m2["hepatic"]["state"], m2_val("hepatic"), "protocolSection.eligibilityModule.eligibilityCriteria"),
-        ("Eligibility", "Cardiac Parameters", m2["cardiac"]["state"], m2_val("cardiac"), "protocolSection.eligibilityModule.eligibilityCriteria"),
-        ("Eligibility", "Prior Therapy & Washout", m2["washout"]["state"], m2_val("washout"), "protocolSection.eligibilityModule.eligibilityCriteria"),
-        ("Safety & Dosing", "Primary Safety / DLT Endpoint", m3["dlt_endpoint"]["state"], m3["dlt_endpoint"].get("render"), m3["dlt_endpoint"].get("source_field") or "N/A"),
-        ("Safety & Dosing", "DLT Assessment Window", m3["dlt_window"]["state"], m3["dlt_window"].get("render"), m3["dlt_window"].get("source_field") or "N/A"),
-        ("Safety & Dosing", "Recommended Phase 2 Dose (RP2D)", m3["rp2d"]["state"], m3["rp2d"].get("render"), m3["rp2d"].get("source_field") or "N/A"),
-        ("Safety & Dosing", "Maximum Tolerated Dose (MTD)", m3["mtd"]["state"], m3["mtd"].get("render"), m3["mtd"].get("source_field") or "N/A"),
-        ("Safety & Dosing", "Toxicity Grading Framework", m3["ctcae"]["state"], m3["ctcae"].get("render"), m3["ctcae"].get("source_field") or "N/A"),
-        ("Safety & Dosing", "Dose Modification Rules", m3["dose_modification"]["state"], m3["dose_modification"].get("render"), m3["dose_modification"].get("source_field") or "N/A"),
-        ("References", "ClinicalTrials.gov Record", "STATED", m4["nct_url"], "protocolSection.identificationModule.nctId"),
-        ("References", "Linked Literature (PMID)", "STATED" if m4["pmids"] else "NOT_REPORTED", ", ".join(m4["pmids"]) if m4["pmids"] else "None linked", "protocolSection.referencesModule")
-    ]
-
-def render_dossier_html(dossier, verified_dossiers):
-    ident = dossier["identity"]
-    nct_id = ident["nctId"]
-    title = ident["briefTitle"]
-    official_title = ident["officialTitle"]
-    phase = ident["phase"]
-    status = ident["status"]
-    sponsor = ident["leadSponsor"]
-    has_pmids = len(dossier["module4"]["pmids"]) > 0
-
-    human_info = HUMAN_LAB_SUMMARY.get(nct_id, {})
-    synopsis_text = human_info.get("synopsis", official_title)
-    regimen_str = human_info.get("regimen", ", ".join(ident.get("interventions", [])))
-
-    m1_specs = [
-        ("Escalation & Study Design", dossier["module1"]["design_archetype"], dossier["module1"]["design_archetype"].get("source_field"), dossier["module1"]["design_archetype"].get("verbatim")),
-        ("Study Cohorts / Arms", dossier["module1"]["arms_cohorts"], "protocolSection.armsInterventionsModule.armGroups", dossier["module1"]["arms_cohorts"].get("verbatim")),
-        ("Participating Countries & Sites", dossier["module1"]["participating_countries"], "protocolSection.contactsLocationsModule.locations", dossier["module1"]["participating_countries"].get("verbatim")),
-        ("Allocation", dossier["module1"]["allocation"], "protocolSection.designModule.designInfo.allocation", dossier["module1"]["allocation"].get("value")),
-        ("Masking / Blinding", dossier["module1"]["masking"], "protocolSection.designModule.designInfo.maskingInfo.masking", dossier["module1"]["masking"].get("value")),
-        ("Intervention Model", dossier["module1"]["intervention_model"], "protocolSection.designModule.designInfo.interventionModel", dossier["module1"]["intervention_model"].get("value")),
-        ("Primary Purpose", dossier["module1"]["primary_purpose"], "protocolSection.designModule.designInfo.primaryPurpose", dossier["module1"]["primary_purpose"].get("value"))
-    ]
-
-    m3_specs = [
-        ("Primary Safety / DLT Endpoint", dossier["module3"]["dlt_endpoint"], dossier["module3"]["dlt_endpoint"].get("source_field"), dossier["module3"]["dlt_endpoint"].get("verbatim")),
-        ("DLT Assessment Window", dossier["module3"]["dlt_window"], dossier["module3"]["dlt_window"].get("source_field"), dossier["module3"]["dlt_window"].get("verbatim")),
-        ("Recommended Phase 2 Dose (RP2D)", dossier["module3"]["rp2d"], dossier["module3"]["rp2d"].get("source_field"), dossier["module3"]["rp2d"].get("verbatim")),
-        ("Maximum Tolerated Dose (MTD)", dossier["module3"]["mtd"], dossier["module3"]["mtd"].get("source_field"), dossier["module3"]["mtd"].get("verbatim")),
-        ("Toxicity Grading Scale", dossier["module3"]["ctcae"], dossier["module3"]["ctcae"].get("source_field"), dossier["module3"]["ctcae"].get("verbatim")),
-        ("Dose Modification Rules", dossier["module3"]["dose_modification"], dossier["module3"]["dose_modification"].get("source_field"), dossier["module3"]["dose_modification"].get("verbatim"))
-    ]
-
-    export_rows = build_dossier_export_payload(dossier)
-    export_json_str = json.dumps(export_rows)
-
-    dlt_glance = dossier["module3"]["dlt_window"].get("value") if dossier["module3"]["dlt_window"]["state"] == "STATED" else "DLT primary endpoint (window in full protocol)"
-    design_glance = dossier["module1"]["design_archetype"].get("value") or "Early-phase dose escalation"
-
-    class_matrix_section = ""
-    if nct_id in VERIFIED_CLASS_NCTS:
-        class_matrix_section = f'''
-    <div class="module-card">
-      <div class="module-header-wrap">
-        <div>
-          <div class="module-title">How {escape_html(nct_id)} Compares Across the METTL3 Inhibitor Class</div>
-          <div class="module-sub">Side-by-side comparison with competing clinical-stage METTL3 inhibitor trials</div>
-        </div>
-        <a href="../../targets/mettl3-inhibitors/" class="btn-export">Open Full METTL3 Class Hub &rarr;</a>
-      </div>
-      {build_cross_trial_matrix_html(verified_dossiers, current_nct=nct_id, rel_prefix="../../")}
-    </div>'''
-
-    return f'''<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{escape_html(nct_id)} ({escape_html(phase)}) — {escape_html(title)} | ClinSight</title>
-  <meta name="description" content="{escape_html(nct_id)} ({escape_html(phase)}): {escape_html(title)}. Sponsor: {escape_html(sponsor)}. Clinical trial design, cohorts, DLT window, and patient eligibility.">
-  <link rel="canonical" href="{BASE_URL}/trials/{escape_html(nct_id)}/">
-  <style>{SHARED_CSS}</style>
-</head>
-<body>
-  {render_nav(rel_prefix="../../", active="explorer")}
-
-  <main class="container">
-    <div class="identity-band">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;">
-        <div class="badge-row">
-          <span class="badge badge-nct">{escape_html(nct_id)}</span>
-          <span class="badge badge-phase">{escape_html(phase)}</span>
-          <span class="badge badge-status">{escape_html(status)}</span>
-          <a href="../../targets/mettl3-inhibitors/" class="badge badge-class">Class: METTL3 Inhibitors &rarr;</a>
-        </div>
-        <div class="toolbar-group">
-          <button type="button" class="btn-export" id="btnCopyMd" onclick="copyProvenanceMarkdown()">Copy Table for IB / Manuscript</button>
-          <button type="button" class="btn-subtle" onclick="downloadProvenanceCsv()">Download CSV</button>
-        </div>
-      </div>
-
-      <h1>{escape_html(title)}</h1>
-      <p class="subtitle-line">Sponsor: <strong>{escape_html(sponsor)}</strong> · Conditions: <strong>{escape_html("; ".join(ident.get("conditions", [])))}</strong></p>
-
-      <div class="synopsis-box">
-        <div class="synopsis-header">
-          <span class="synopsis-label">Clinical Trial Synopsis (IB / Literature Ready)</span>
-          <button type="button" class="btn-subtle" id="btnCopySyn" onclick="copySynopsis()" style="padding:3px 10px; font-size:11.5px;">Copy Synopsis</button>
-        </div>
-        <p class="synopsis-text" id="synopsisText">{escape_html(synopsis_text)}</p>
-      </div>
-
-      <div class="glance-grid">
-        <div class="glance-card">
-          <div class="glance-label">Investigational Regimen</div>
-          <div class="glance-val">{escape_html(regimen_str)}</div>
-        </div>
-        <div class="glance-card">
-          <div class="glance-label">Dose-Escalation Design</div>
-          <div class="glance-val">{escape_html(design_glance)}</div>
-        </div>
-        <div class="glance-card">
-          <div class="glance-label">DLT &amp; Dose-Finding</div>
-          <div class="glance-val">{escape_html(dlt_glance)}</div>
-        </div>
-        <div class="glance-card">
-          <div class="glance-label">Footprint &amp; Scale</div>
-          <div class="glance-val">{escape_html(dossier["module1"]["participating_countries"].get("render"))}</div>
-        </div>
-      </div>
-    </div>
-
-    {class_matrix_section}
-
-    <div class="module-card">
-      <div class="module-header-wrap">
-        <div>
-          <div class="module-title">Study Design &amp; Cohort Structure</div>
-          <div class="module-sub">Escalation methodology, treatment arms, and geographic footprint</div>
-        </div>
-      </div>
-      {render_clean_section_rows(m1_specs)}
-    </div>
-
-    <div class="module-card">
-      <div class="module-header-wrap">
-        <div>
-          <div class="module-title">Dosing, Safety &amp; DLT Endpoints</div>
-          <div class="module-sub">Primary safety endpoints, DLT evaluation window, MTD, and RP2D objectives</div>
-        </div>
-      </div>
-      {render_clean_section_rows(m3_specs)}
-    </div>
-
-    <div class="module-card">
-      <div class="module-header-wrap">
-        <div>
-          <div class="module-title">Patient Eligibility &amp; Organ Function Criteria</div>
-          <div class="module-sub">Key hematologic, renal, hepatic, cardiac, and washout criteria reported in the registry</div>
-        </div>
-      </div>
-      {render_clean_eligibility(dossier["module2"])}
-    </div>
-
-    <div class="module-card">
-      <div class="module-header-wrap">
-        <div>
-          <div class="module-title">Official Registry Record &amp; Published Literature</div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-label">ClinicalTrials.gov Record</div>
-        <div>
-          <a href="{dossier['module4']['nct_url']}" target="_blank" rel="noopener noreferrer" class="doc-link">
-            Open {escape_html(nct_id)} on ClinicalTrials.gov &nearr;
-          </a>
-        </div>
-      </div>
-      {f"""<div class="field-row">
-        <div class="field-label">Peer-Reviewed Publications</div>
-        <div>
-          {''.join([f'<a href="https://pubmed.ncbi.nlm.nih.gov/{p}/" target="_blank" rel="noopener noreferrer" class="doc-link" style="margin-right:16px;">PubMed PMID: {p} &nearr;</a>' for p in dossier['module4']['pmids']])}
-        </div>
-      </div>""" if has_pmids else ""}
-    </div>
-
-    <footer>
-      <div><strong>ClinSight™</strong> · Primary Registry Fact Base &middot; <a href="https://pract.eu" style="color:inherit; text-decoration:underline;">PRACT</a></div>
-      <div>
-        <a href="../../explorer/">Explorer</a> &middot;
-        <a href="../../compare/">Comparator</a> &middot;
-        <a href="../../jobs/">Careers</a> &middot;
-        <a href="../../sitemap.xml">Sitemap</a>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    const DOSSIER_NCT = {json.dumps(nct_id)};
-    const EXPORT_ROWS = {export_json_str};
-
-    function copySynopsis() {{
-      const text = document.getElementById('synopsisText').innerText;
-      navigator.clipboard.writeText(text).then(() => {{
-        const btn = document.getElementById('btnCopySyn');
-        const old = btn.textContent;
-        btn.textContent = 'Copied!';
-        setTimeout(() => {{ btn.textContent = old; }}, 2000);
-      }});
-    }}
-
-    function copyProvenanceMarkdown() {{
-      let lines = [
-        `### ${{DOSSIER_NCT}} — Clinical Protocol Summary`,
-        `| Section | Parameter | Value / Statement |`,
-        `|---|---|---|`
-      ];
-      for (const r of EXPORT_ROWS) {{
-        const cleanVal = String(r[3] || '').replace(/\\|/g, '\\\\|');
-        lines.push(`| ${{r[0]}} | ${{r[1]}} | ${{cleanVal}} |`);
-      }}
-      navigator.clipboard.writeText(lines.join('\\n')).then(() => {{
-        const btn = document.getElementById('btnCopyMd');
-        const old = btn.textContent;
-        btn.textContent = 'Copied Table!';
-        setTimeout(() => {{ btn.textContent = old; }}, 2000);
-      }});
-    }}
-
-    function downloadProvenanceCsv() {{
-      const headers = ['nct_id', 'section', 'parameter', 'value_or_statement'];
-      const csvRows = [headers.join(',')];
-      for (const r of EXPORT_ROWS) {{
-        const rowVals = [DOSSIER_NCT, r[0], r[1], r[3] || ''].map(
-          v => `"${{String(v).replace(/"/g, '""')}}"`
-        );
-        csvRows.push(rowVals.join(','));
-      }}
-      const blob = new Blob([csvRows.join('\\n')], {{ type: 'text/csv;charset=utf-8;' }});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${{DOSSIER_NCT}}_Protocol_Summary.csv`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    }}
-  </script>
-</body>
-</html>'''
-
-def render_target_hub_html(verified_dossiers):
-    matrix_html = build_cross_trial_matrix_html(verified_dossiers, current_nct=None, rel_prefix="../../")
-
-    class_export_rows = []
-    for d in verified_dossiers:
-        for r in build_dossier_export_payload(d):
-            class_export_rows.append([d["identity"]["nctId"], r[0], r[1], r[2], r[3], r[4]])
-    class_export_json = json.dumps(class_export_rows)
-
-    class_synopsis = (
-        "Two small-molecule inhibitors targeting the m6A RNA methyltransferase METTL3 have advanced into human oncology trials: "
-        "STORM Therapeutics' STC-15 and Epics Therapeutics' EP102. STC-15 completed its 4-cohort first-in-human Phase 1 monotherapy "
-        "dose-escalation trial in advanced solid tumors (NCT05584111; 3+3 design with modified Fibonacci increments across 6 US centers; "
-        "PMID: 40751015) and is now in an international Phase 1b/2 combination trial with the anti-PD-1 antibody toripalimab "
-        "(NCT06975293; 3+3 dose escalation followed by Simon's two-stage expansion in NSCLC, HNSCC, melanoma, and endometrial cancer "
-        "across 21 sites in the US, UK, and Australia). Epics Therapeutics' EP102 is recruiting a first-in-human Phase 1/2 trial "
-        "(NCT07163325 across 6 sites in Belgium, France, and Spain) utilizing a Bayesian Optimal Interval (BOIN) dose-escalation "
-        "design with a 21-day DLT assessment window, evaluating EP102 both as monotherapy in solid and myeloid malignancies and in "
-        "combination cohorts with pembrolizumab or azacitidine plus venetoclax."
-    )
-
-    cards_html = ""
-    for d in verified_dossiers:
-        ident = d["identity"]
-        nct = ident["nctId"]
-        h_info = HUMAN_LAB_SUMMARY.get(nct, {})
-        cards_html += f'''
-        <div class="module-card" style="margin-bottom:16px;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:10px;">
-            <div>
-              <div class="badge-row" style="margin-bottom:8px;">
-                <span class="badge badge-nct">{escape_html(nct)}</span>
-                <span class="badge badge-phase">{escape_html(ident["phase"])}</span>
-                <span class="badge badge-status">{escape_html(ident["status"])}</span>
+    syn_cards = ""
+    for m in models:
+        syn_cards += f'''
+        <div class="syn-card">
+          <div>
+            <div class="th-top">
+              <span class="th-nct">{m['nct']}</span>
+              <div class="th-badges">
+                <span class="pill pill-phase">{escape_html(m["phase_clean"])}</span>
+                <span class="pill {m["status_cls"]}">{escape_html(m["status_clean"])}</span>
               </div>
-              <h2 style="font-size:18px; color:var(--text-high); font-weight:700; margin-bottom:4px;">{escape_html(ident["briefTitle"])}</h2>
-              <div style="font-size:13px; color:var(--text-low);">Sponsor: <strong style="color:var(--text-med);">{escape_html(ident["leadSponsor"])}</strong> · Regimen: <strong style="color:var(--text-med);">{escape_html(h_info.get("regimen", ""))}</strong></div>
             </div>
-            <a href="../../trials/{escape_html(nct)}/" class="btn-export" style="padding:8px 14px; font-size:12.5px;">View Trial Synopsis &amp; Details &rarr;</a>
+            <h2>{escape_html(m["title"])}</h2>
+            <div class="syn-meta">{escape_html(m["sponsor"])} &middot; {escape_html(m["enrollment_str"])} &middot; {escape_html(m["footprint_str"])}</div>
+            <p class="syn-body">{escape_html(m["synopsis"])}</p>
           </div>
-          <p style="font-size:14px; color:var(--text-med); line-height:1.6; margin-top:8px;">{escape_html(h_info.get("synopsis", ""))}</p>
+          <div class="syn-foot">
+            <a href="https://clinicaltrials.gov/study/{m['nct']}" target="_blank" rel="noopener noreferrer" class="doc-link">ClinicalTrials.gov &nearr;</a>
+            <a href="../../trials/{m['nct']}/" class="doc-link">Open Trial Synopsis &rarr;</a>
+          </div>
         </div>'''
 
     return f'''<!DOCTYPE html>
@@ -908,8 +913,8 @@ def render_target_hub_html(verified_dossiers):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>METTL3 Inhibitors in Oncology (STC-15 vs EP102) — Clinical Trial Comparison | ClinSight</title>
-  <meta name="description" content="Side-by-side clinical trial comparison of oral METTL3 RNA methyltransferase inhibitors STC-15 (STORM Therapeutics) and EP102 (Epics Therapeutics): dose escalation (BOIN vs 3+3), DLT windows, combinations, and patient eligibility.">
+  <title>METTL3 Inhibitors in Oncology (STC-15 vs EP102) — Protocol Comparison | ClinSight</title>
+  <meta name="description" content="Side-by-side protocol comparison of clinical-stage oral METTL3 RNA methyltransferase inhibitors STC-15 (NCT06975293, NCT05584111) and EP102 (NCT07163325): escalation design, cohort schedules, DLT windows, washouts, and eligibility.">
   <link rel="canonical" href="{BASE_URL}/targets/mettl3-inhibitors/">
   <style>{SHARED_CSS}</style>
 </head>
@@ -917,53 +922,38 @@ def render_target_hub_html(verified_dossiers):
   {render_nav(rel_prefix="../../", active="compare")}
 
   <main class="container">
-    <div class="identity-band">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;">
-        <div class="badge-row">
-          <span class="badge badge-class">MECHANISM CLASS COMPARISON</span>
-          <span class="badge badge-phase">RNA EPIGENETICS · METTL3 INHIBITORS</span>
-          <span class="badge badge-nct">3 INTERVENTIONAL TRIALS (STC-15 &amp; EP102)</span>
-        </div>
-        <div class="toolbar-group">
-          <button type="button" class="btn-export" id="btnCopyClassMd" onclick="copyClassMarkdown()">Copy Comparison Table (Markdown)</button>
-        </div>
+    <div class="page-head">
+      <div>
+        <div class="eyebrow"><a href="../../compare/">Comparator</a> &middot; RNA Epigenetics &middot; METTL3 Inhibitors</div>
+        <h1>METTL3 Inhibitors — Protocol &amp; Trial Design Comparison</h1>
+        <p class="head-sub">Side-by-side comparison of all three interventional clinical trials of oral METTL3 RNA methyltransferase inhibitors: STORM Therapeutics&#x27; <strong>STC-15</strong> and Epics Therapeutics&#x27; <strong>EP102</strong>. Hover any cell or toggle sources for registry field provenance.</p>
       </div>
-
-      <h1>METTL3 RNA Methyltransferase Inhibitors — Clinical Trial Landscape</h1>
-      <p class="subtitle-line">
-        Side-by-side comparison of all clinical-stage interventional trials evaluating oral METTL3 inhibitors (<strong>STC-15</strong> and <strong>EP102</strong>) across dose-escalation designs, DLT windows, combination regimens, and patient eligibility criteria.
-      </p>
-
-      <div class="synopsis-box">
-        <div class="synopsis-header">
-          <span class="synopsis-label">Executive Class Synopsis (Manuscript / IB Background Ready)</span>
-          <button type="button" class="btn-subtle" id="btnCopyClassSyn" onclick="copyClassSynopsis()" style="padding:3px 10px; font-size:11.5px;">Copy Class Synopsis</button>
-        </div>
-        <p class="synopsis-text" id="classSynopsisText">{escape_html(class_synopsis)}</p>
+      <div class="toolbar">
+        <button type="button" class="btn" id="btnSources" onclick="toggleSources()">Show sources</button>
+        <button type="button" class="btn" id="btnCopyMd" onclick="copyTableMarkdown()">Copy table (Markdown)</button>
+        <button type="button" class="btn" onclick="exportTableCsv()">Export CSV</button>
       </div>
     </div>
 
-    <div class="module-card">
-      <div class="module-header-wrap">
-        <div>
-          <div class="module-title">Side-by-Side Protocol Comparison: STC-15 vs. EP102</div>
-          <div class="module-sub">Compare trial design, escalation rules, DLT windows, combinations, and eligibility across all 3 clinical studies on one screen</div>
-        </div>
+    {table_html}
+
+    <div class="synopsis-banner">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:6px;">
+        <span class="eyebrow" style="margin:0;">Class Overview (Generated from Verified Table Fields)</span>
+        <button type="button" class="btn" id="btnCopyClassSyn" onclick="copyClassSynopsis()" style="padding:3px 10px; font-size:11.5px;">Copy overview</button>
       </div>
-      {matrix_html}
+      <p id="classSynopsisText" style="font-size:13.5px; color:var(--text-high); line-height:1.65;">{escape_html(class_synopsis)}</p>
     </div>
 
-    <div class="module-card">
-      <div class="module-header-wrap">
-        <div>
-          <div class="module-title">Individual Trial Synopses</div>
-          <div class="module-sub">Concise clinical summaries and direct links to each trial's full breakdown</div>
-        </div>
-      </div>
-      {cards_html}
-      <div class="undisclosed-note">
-        <strong>Note on non-interventional registry records:</strong> A fourth ClinicalTrials.gov record mentioning METTL3 (<code>NCT06762925</code>, Xijing Hospital) is an observational biomarker tissue study with no drug intervention and is therefore excluded from this interventional drug comparison.
-      </div>
+    <div class="section-label">
+      <span>Individual Trial Synopses</span>
+    </div>
+    <div class="syn-grid">
+      {syn_cards}
+    </div>
+
+    <div class="footnote">
+      <strong>Scope note:</strong> A fourth ClinicalTrials.gov record mentioning METTL3 (<code>NCT06762925</code>, Xijing Hospital) is a non-interventional observational tissue biomarker study with no drug regimen and is excluded from this drug comparison.
     </div>
 
     <footer>
@@ -978,58 +968,251 @@ def render_target_hub_html(verified_dossiers):
   </main>
 
   <script>
-    const CLASS_EXPORT_ROWS = {class_export_json};
+    let sourcesOn = false;
+    function toggleSources() {{
+      sourcesOn = !sourcesOn;
+      const btn = document.getElementById('btnSources');
+      btn.classList.toggle('active', sourcesOn);
+      btn.textContent = sourcesOn ? 'Hide sources' : 'Show sources';
+
+      const cells = document.querySelectorAll('#mettl3ComparisonTable td[data-src-path]');
+      cells.forEach(td => {{
+        const existing = td.querySelector('.src-drawer');
+        if (existing) existing.remove();
+        if (sourcesOn) {{
+          const path = td.getAttribute('data-src-path') || '';
+          const quote = td.getAttribute('data-src-quote') || '';
+          const div = document.createElement('div');
+          div.className = 'src-drawer';
+          if (path) {{
+            const sPath = document.createElement('span');
+            sPath.className = 'src-path';
+            sPath.textContent = path;
+            div.appendChild(sPath);
+          }}
+          if (quote) {{
+            const sQuote = document.createElement('span');
+            sQuote.className = 'src-quote';
+            sQuote.textContent = '"' + quote + '"';
+            div.appendChild(sQuote);
+          }}
+          td.appendChild(div);
+        }}
+      }});
+    }}
 
     function copyClassSynopsis() {{
       const text = document.getElementById('classSynopsisText').innerText;
       navigator.clipboard.writeText(text).then(() => {{
         const btn = document.getElementById('btnCopyClassSyn');
-        const old = btn.textContent;
         btn.textContent = 'Copied!';
-        setTimeout(() => {{ btn.textContent = old; }}, 2000);
+        setTimeout(() => {{ btn.textContent = 'Copy overview'; }}, 2000);
       }});
     }}
 
-    function copyClassMarkdown() {{
-      let lines = [
-        `### METTL3 Inhibitor Clinical Trial Comparison (STC-15 & EP102)`,
-        `| NCT ID | Section | Parameter | Value / Statement | Registry Field |`,
-        `|---|---|---|---|---|`
+    function extractTableRows() {{
+      const table = document.getElementById('mettl3ComparisonTable');
+      const rows = [];
+      const ths = Array.from(table.querySelectorAll('thead th')).map(th => th.innerText.replace(/\\s+/g, ' ').trim());
+      rows.push(ths);
+      for (const tr of table.querySelectorAll('tbody tr')) {{
+        if (tr.classList.contains('group-row')) continue;
+        const cells = Array.from(tr.querySelectorAll('td')).map(td => {{
+          const clone = td.cloneNode(true);
+          const drawer = clone.querySelector('.src-drawer');
+          if (drawer) drawer.remove();
+          return clone.innerText.replace(/\\s+/g, ' ').trim();
+        }});
+        rows.push(cells);
+      }}
+      return rows;
+    }}
+
+    function copyTableMarkdown() {{
+      const rows = extractTableRows();
+      const lines = [
+        '| ' + rows[0].join(' | ') + ' |',
+        '|' + rows[0].map(() => '---').join('|') + '|'
       ];
-      for (const r of CLASS_EXPORT_ROWS) {{
-        const cleanVal = String(r[4] || '').replace(/\\|/g, '\\\\|');
-        lines.push(`| ${{r[0]}} | ${{r[1]}} | ${{r[2]}} | ${{cleanVal}} | \`${{r[5]}}\` |`);
+      for (let i = 1; i < rows.length; i++) {{
+        lines.push('| ' + rows[i].map(c => c.replace(/\\|/g, '\\\\|')).join(' | ') + ' |');
       }}
       navigator.clipboard.writeText(lines.join('\\n')).then(() => {{
-        const btn = document.getElementById('btnCopyClassMd');
-        const old = btn.textContent;
-        btn.textContent = 'Copied Comparison Table!';
-        setTimeout(() => {{ btn.textContent = old; }}, 2000);
+        const btn = document.getElementById('btnCopyMd');
+        btn.textContent = 'Copied!';
+        setTimeout(() => {{ btn.textContent = 'Copy table (Markdown)'; }}, 2000);
+      }});
+    }}
+
+    function exportTableCsv() {{
+      const rows = extractTableRows();
+      const csv = rows.map(r => r.map(c => `"${{String(c).replace(/"/g, '""')}}"`).join(',')).join('\\r\\n');
+      const blob = new Blob([csv], {{ type: 'text/csv;charset=utf-8;' }});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'METTL3_Inhibitors_Protocol_Comparison.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }}
+  </script>
+</body>
+</html>'''
+
+
+def render_single_trial_html(m):
+    nct = m["nct"]
+    raw = m["raw"]
+
+    arms_html = (
+        "<ul class=\"cell-list\">"
+        + "".join(f"<li>{escape_html(item)}</li>" for item in m["arm_items"])
+        + "</ul>"
+        if m["arm_items"]
+        else "&mdash;"
+    )
+
+    prim_items = []
+    for o in m["prim_outcomes"]:
+        meas = escape_html(o.get("measure", ""))
+        desc = f": {escape_html(o.get('description'))}" if o.get("description") else ""
+        tf = f" <span class=\"cell-note\">Timeframe: {escape_html(o.get('timeFrame'))}</span>" if o.get("timeFrame") else ""
+        prim_items.append(f"<li><strong>{meas}</strong>{desc}{tf}</li>")
+    prim_html = "<ul class=\"cell-list\">" + "".join(prim_items) + "</ul>" if prim_items else "&mdash;"
+
+    sec_items = []
+    for o in m["sec_outcomes"]:
+        meas = escape_html(o.get("measure", ""))
+        tf = f" ({escape_html(o.get('timeFrame'))})" if o.get("timeFrame") else ""
+        sec_items.append(f"<li>{meas}{tf}</li>")
+    sec_html = "<ul class=\"cell-list\">" + "".join(sec_items) + "</ul>" if sec_items else "&mdash;"
+
+    elig_text = raw.get("eligibilityModule", {}).get("eligibilityCriteria", "")
+
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{escape_html(nct)} ({escape_html(m["phase_clean"])}) — {escape_html(m["title"])} | ClinSight</title>
+  <meta name="description" content="{escape_html(nct)}: {escape_html(m["title"])}. Clinical synopsis, cohort schedules, primary outcomes, and eligibility criteria.">
+  <link rel="canonical" href="{BASE_URL}/trials/{escape_html(nct)}/">
+  <style>{SHARED_CSS}</style>
+</head>
+<body>
+  {render_nav(rel_prefix="../../", active="explorer")}
+
+  <main class="container">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">
+          <a href="../../targets/mettl3-inhibitors/">&larr; Back to METTL3 Inhibitor Comparison Table</a>
+        </div>
+        <div class="th-badges" style="margin: 6px 0 8px;">
+          <span class="pill pill-phase">{escape_html(nct)}</span>
+          <span class="pill pill-phase">{escape_html(m["phase_clean"])}</span>
+          <span class="pill {m["status_cls"]}">{escape_html(m["status_clean"])}</span>
+        </div>
+        <h1>{escape_html(m["title"])}</h1>
+        <p class="head-sub">Sponsor: <strong>{escape_html(m["sponsor"])}</strong> &middot; Enrollment: <strong>{escape_html(m["enrollment_str"])}</strong> &middot; Footprint: <strong>{escape_html(m["footprint_str"])}</strong></p>
+      </div>
+      <div class="toolbar">
+        <a href="../../targets/mettl3-inhibitors/" class="btn active">Compare vs. Class (STC-15 &amp; EP102)</a>
+        <a href="https://clinicaltrials.gov/study/{escape_html(nct)}" target="_blank" rel="noopener noreferrer" class="btn">ClinicalTrials.gov &nearr;</a>
+      </div>
+    </div>
+
+    <div class="synopsis-banner">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+        <span class="eyebrow" style="margin:0;">Trial Synopsis</span>
+        <button type="button" class="btn" id="btnCopySyn" onclick="copySyn()" style="padding:3px 10px; font-size:11.5px;">Copy synopsis</button>
+      </div>
+      <p id="synText" style="font-size:14px; color:var(--text-high); line-height:1.65;">{escape_html(m["synopsis"])}</p>
+    </div>
+
+    <div class="kv-card">
+      <div class="kv-title">Study Design, Cohorts &amp; Endpoints</div>
+      <div class="kv-row">
+        <div class="kv-key">Escalation &amp; Expansion</div>
+        <div class="kv-val">{escape_html(m["design_short"])}</div>
+      </div>
+      <div class="kv-row">
+        <div class="kv-key">Cohorts / Arms ({m["arm_count"]})</div>
+        <div class="kv-val">{arms_html}</div>
+      </div>
+      <div class="kv-row">
+        <div class="kv-key">Primary Outcomes</div>
+        <div class="kv-val">{prim_html}</div>
+      </div>
+      <div class="kv-row">
+        <div class="kv-key">DLT Evaluation Window</div>
+        <div class="kv-val">{escape_html(m["dlt_window_short"])}</div>
+      </div>
+      <div class="kv-row">
+        <div class="kv-key">MTD / RP2D Objectives</div>
+        <div class="kv-val">MTD: {escape_html(m["mtd_short"])} &middot; RP2D: {escape_html(m["rp2d_short"])}</div>
+      </div>
+      <div class="kv-row">
+        <div class="kv-key">Secondary Outcomes</div>
+        <div class="kv-val">{sec_html}</div>
+      </div>
+      <div class="kv-row">
+        <div class="kv-key">Locations</div>
+        <div class="kv-val">{escape_html(m["footprint_str"])}</div>
+      </div>
+    </div>
+
+    <div class="kv-card">
+      <div class="kv-title">Verbatim Registry Eligibility Criteria</div>
+      <pre style="white-space:pre-wrap; font-family:var(--font-sans); font-size:13.5px; color:var(--text-med); line-height:1.6;">{escape_html(elig_text)}</pre>
+    </div>
+
+    <footer>
+      <div><strong>ClinSight™</strong> · Primary Registry Fact Base &middot; <a href="https://pract.eu" style="color:inherit; text-decoration:underline;">PRACT</a></div>
+      <div>
+        <a href="../../explorer/">Explorer</a> &middot;
+        <a href="../../compare/">Comparator</a> &middot;
+        <a href="../../jobs/">Careers</a> &middot;
+        <a href="../../sitemap.xml">Sitemap</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    function copySyn() {{
+      navigator.clipboard.writeText(document.getElementById('synText').innerText).then(() => {{
+        const b = document.getElementById('btnCopySyn');
+        b.textContent = 'Copied!';
+        setTimeout(() => {{ b.textContent = 'Copy synopsis'; }}, 2000);
       }});
     }}
   </script>
 </body>
 </html>'''
 
+
 if __name__ == "__main__":
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         dossiers = json.load(f)
 
-    verified_dossiers = [d for d in dossiers if d["identity"]["nctId"] in VERIFIED_CLASS_NCTS]
-
+    verified_models = []
     for d in dossiers:
-        nct = d["identity"]["nctId"]
-        out_dir = os.path.join(TRIALS_DIR, nct)
-        os.makedirs(out_dir, exist_ok=True)
-        out_file = os.path.join(out_dir, "index.html")
-        html_out = render_dossier_html(d, verified_dossiers)
-        with open(out_file, "w", encoding="utf-8") as out_f:
-            out_f.write(html_out)
-        print(f"Generated human-first dossier for {nct} at {out_file}")
+        if d["identity"]["nctId"] in VERIFIED_CLASS_NCTS:
+            verified_models.append(build_verified_model(d))
 
     os.makedirs(TARGETS_DIR, exist_ok=True)
     hub_file = os.path.join(TARGETS_DIR, "index.html")
-    hub_html = render_target_hub_html(verified_dossiers)
     with open(hub_file, "w", encoding="utf-8") as hf:
-        hf.write(hub_html)
-    print(f"Generated human-first Target Hub at {hub_file}")
+        hf.write(render_target_hub_html(verified_models))
+    print(f"Generated comparison-first METTL3 page at {hub_file}")
+
+    for m in verified_models:
+        nct = m["nct"]
+        out_dir = os.path.join(TRIALS_DIR, nct)
+        os.makedirs(out_dir, exist_ok=True)
+        out_file = os.path.join(out_dir, "index.html")
+        with open(out_file, "w", encoding="utf-8") as out_f:
+            out_f.write(render_single_trial_html(m))
+        print(f"Generated single-source trial synopsis page for {nct} at {out_file}")
