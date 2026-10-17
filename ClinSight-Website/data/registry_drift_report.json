@@ -1,34 +1,69 @@
 {
-  "checked_at_utc": "2026-10-17T09:44:36Z",
+  "spec_version": "ClinSight_Registry_Drift_Monitor_Spec_v1.0",
+  "checked_at_utc": "2026-10-17T10:04:31Z",
   "total_trials_monitored": 3,
-  "drift_detected_count": 0,
+  "protocol_drift_detected_count": 0,
+  "metadata_refresh_count": 0,
   "trials": [
     {
       "nct_id": "NCT05584111",
       "drift_status": "NO_DRIFT_BYTE_IDENTICAL",
+      "sitemap_eligible": true,
       "archived_sha256": "4e47750f7f5f1c4857a3296255277a380ba85c326807bec224e24dedf1387738",
       "live_sha256": "4e47750f7f5f1c4857a3296255277a380ba85c326807bec224e24dedf1387738",
       "archived_last_update_post_date": "2025-03-26",
       "live_last_update_post_date": "2025-03-26",
-      "drifted_protocol_modules": []
+      "class_a_protocol_modules_drifted": [],
+      "class_b_metadata_modules_drifted": [],
+      "stale_gated_fields_count": 0,
+      "stale_gated_fields": [],
+      "canonical_class_a_hashes_16": {
+        "designModule": "d0eb0db37e325398",
+        "armsInterventionsModule": "d19c49a8a56309f9",
+        "outcomesModule": "2e9031d67a08070c",
+        "eligibilityModule": "1c3bd425271df32e",
+        "descriptionModule": "a68d5e2b9f9bdc88"
+      }
     },
     {
       "nct_id": "NCT06975293",
       "drift_status": "NO_DRIFT_BYTE_IDENTICAL",
+      "sitemap_eligible": true,
       "archived_sha256": "473367ad0d2cb4ad91d627b057f8f3243300e081c7b4ff13c25e13bb4017a93e",
       "live_sha256": "473367ad0d2cb4ad91d627b057f8f3243300e081c7b4ff13c25e13bb4017a93e",
       "archived_last_update_post_date": "2026-10-07",
       "live_last_update_post_date": "2026-10-07",
-      "drifted_protocol_modules": []
+      "class_a_protocol_modules_drifted": [],
+      "class_b_metadata_modules_drifted": [],
+      "stale_gated_fields_count": 0,
+      "stale_gated_fields": [],
+      "canonical_class_a_hashes_16": {
+        "designModule": "bc19ebb2ee3b88a6",
+        "armsInterventionsModule": "5122a8f9e023d89f",
+        "outcomesModule": "46138b427d3ae212",
+        "eligibilityModule": "e65d5faecd5285e7",
+        "descriptionModule": "464f6048ab560173"
+      }
     },
     {
       "nct_id": "NCT07163325",
       "drift_status": "NO_DRIFT_BYTE_IDENTICAL",
+      "sitemap_eligible": true,
       "archived_sha256": "7013791775f784c1534e1f2ad2bb8604941d03ed62608d45334ae99b9a153437",
       "live_sha256": "7013791775f784c1534e1f2ad2bb8604941d03ed62608d45334ae99b9a153437",
       "archived_last_update_post_date": "2026-06-11",
       "live_last_update_post_date": "2026-06-11",
-      "drifted_protocol_modules": []
+      "class_a_protocol_modules_drifted": [],
+      "class_b_metadata_modules_drifted": [],
+      "stale_gated_fields_count": 0,
+      "stale_gated_fields": [],
+      "canonical_class_a_hashes_16": {
+        "designModule": "7094628274c5478d",
+        "armsInterventionsModule": "dee88eab5d530bf3",
+        "outcomesModule": "d4f16d52d6293713",
+        "eligibilityModule": "af2b96419d7f6d0b",
+        "descriptionModule": "0d33a48d2f4ddca4"
+      }
     }
   ]
 }

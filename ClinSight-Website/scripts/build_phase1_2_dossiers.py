@@ -57,6 +57,18 @@ def render_field_row(label, field_data, source_field=None, verbatim_quote=None, 
           <span class="evidence-label">Verbatim Evidence:</span> "{escape_html(field_data.get("verbatim"))}" 
           <span class="evidence-source">({escape_html(field_data.get("source_field"))})</span>
         </div>'''
+    elif state == "STALE":
+        chip_html = '<span class="prov-chip prov-stale">⟳ stale — amended</span>'
+        border_class = "row-stale"
+        val = field_data.get("render") or field_data.get("value")
+        arch_d = field_data.get("archived_post_date") or "prior snapshot"
+        live_d = field_data.get("live_post_date") or "live registry"
+        s_field = field_data.get("source_field") or source_field or "protocolSection"
+        value_html = f'<span class="val-stale">{escape_html(val)}</span>'
+        source_html = f'''
+        <div class="stale-notice">
+          <strong>Superseded by registry amendment</strong> (archived <code>{escape_html(arch_d)}</code> &rarr; live <code>{escape_html(live_d)}</code> in <code>{escape_html(s_field)}</code>) &mdash; pending re-verification against live ClinicalTrials.gov record.
+        </div>'''
     else:  # NOT_REPORTED
         chip_html = '<span class="prov-chip prov-not-reported">— not reported</span>'
         border_class = "row-not-reported"
@@ -79,8 +91,8 @@ def render_field_row(label, field_data, source_field=None, verbatim_quote=None, 
 
 def render_module_rows_with_gaps(field_specs):
     """
-    Implements Layout Spec §6 (Collapse-as-Density):
-    - STATED / INFERRED rows render individually by default.
+    Implements Layout Spec §6 (Collapse-as-Density) & Drift Monitor Spec §4:
+    - STATED / INFERRED / STALE rows render individually by default.
     - NOT_REPORTED fields are enumerated in a single visible 'Statutory Record Gaps (N)' row.
     - In Audit Mode, individual NOT_REPORTED rows expand in full.
     """
@@ -90,7 +102,7 @@ def render_module_rows_with_gaps(field_specs):
 
     for label, f_data, s_field, v_quote in field_specs:
         st = f_data.get("state")
-        if st in ("STATED", "STATED-structural", "INFERRED"):
+        if st in ("STATED", "STATED-structural", "INFERRED", "STALE"):
             active_rows_html.append(render_field_row(label, f_data, s_field, v_quote))
         else:
             gap_labels.append(label)
@@ -580,6 +592,10 @@ SHARED_CSS = '''
     
     .row-stated { border-left: 3.5px solid var(--teal-fact); }
     .row-inferred { border-left: 3.5px dashed var(--amber-inferred); }
+    .row-stale {
+      border-left: 4px double #fb7185;
+      background: rgba(244, 63, 94, 0.06);
+    }
     .row-not-reported {
       border-left: 3.5px dotted var(--grey-silent);
       background: var(--grey-bg);
@@ -605,6 +621,20 @@ SHARED_CSS = '''
       color: var(--text-med);
       border-bottom: 1px dotted var(--amber-inferred);
     }
+    .val-stale {
+      color: #fda4af;
+      text-decoration: line-through;
+      opacity: 0.9;
+    }
+    .stale-notice {
+      margin-top: 6px;
+      font-size: 12px;
+      color: #fecdd3;
+      background: rgba(244, 63, 94, 0.12);
+      border: 1px solid rgba(251, 113, 133, 0.35);
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
     .val-not-reported { color: var(--text-low); font-style: italic; }
     
     .prov-chip {
@@ -617,6 +647,7 @@ SHARED_CSS = '''
     }
     .prov-stated { background: var(--teal-glow); color: var(--teal-fact); border: 1px solid rgba(20, 184, 166, 0.3); }
     .prov-inferred { background: var(--amber-glow); color: var(--amber-inferred); border: 1px solid rgba(245, 158, 11, 0.3); }
+    .prov-stale { background: rgba(244, 63, 94, 0.15); color: #fda4af; border: 1px solid rgba(251, 113, 133, 0.4); }
     .prov-not-reported { background: var(--grey-bg); color: var(--grey-silent); border: 1px solid rgba(100, 116, 139, 0.25); }
     
     .source-anchor { margin-top: 6px; font-size: 11.5px; }
@@ -789,6 +820,9 @@ def render_dossier_html(dossier, verified_dossiers):
       {build_cross_trial_matrix_html(verified_dossiers, current_nct=nct_id, rel_prefix="../../")}
     </div>'''
 
+    has_stale_core = "STALE" in m1_3_states
+    noindex_tag = '\n  <meta name="robots" content="noindex">' if has_stale_core else ''
+
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -796,7 +830,7 @@ def render_dossier_html(dossier, verified_dossiers):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{escape_html(nct_id)} — {escape_html(phase)} Protocol &amp; Regulatory Dossier | ClinSight</title>
   <meta name="description" content="{escape_html(nct_id)} ({escape_html(phase)}): {escape_html(title)}. Sponsor: {escape_html(sponsor)}. Protocol design, DLT window, and eligibility cutoffs.">
-  <link rel="canonical" href="{BASE_URL}/trials/{escape_html(nct_id)}/">
+  <link rel="canonical" href="{BASE_URL}/trials/{escape_html(nct_id)}/">{noindex_tag}
   <style>{SHARED_CSS}</style>
 </head>
 <body>
