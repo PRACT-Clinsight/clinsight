@@ -365,13 +365,12 @@
     <div class="nav-inner">
       <a href="../../" class="nav-brand">
         <span class="logo-text">ClinSight™</span>
-        <span class="logo-tag">Clinical Trial Protocols &amp; Research Intelligence</span>
+        <span class="logo-tag">Clinical Trials &amp; Evidence Generation</span>
       </a>
       <div class="nav-links">
         <a href="../../">Home</a>
-        <a href="../../targets/mettl3-inhibitors/" class="active">METTL3 Inhibitors</a>
-        <a href="../../compare/">Comparisons</a>
-        <a href="../../explorer/">Trials Explorer</a>
+        <a href="../../explorer/" class="active">Trials Explorer</a>
+        <a href="../../compare/" class="">Comparator</a>
         <a href="../../jobs/">Careers</a>
       </div>
     </div>
@@ -389,7 +388,6 @@
         <div class="toolbar-group">
           <button type="button" class="btn-export" id="btnCopyMd" onclick="copyProvenanceMarkdown()">Copy Table for IB / Manuscript</button>
           <button type="button" class="btn-subtle" onclick="downloadProvenanceCsv()">Download CSV</button>
-          <button type="button" class="btn-subtle" id="btnSources" onclick="toggleSources()">Show Registry Sources</button>
         </div>
       </div>
 
@@ -676,22 +674,15 @@
         </div>
       </div>
       
-      <div class="field-row">
-        <div class="field-label">Archived API v2 Snapshot</div>
-        <div>
-          <a href="../../data/raw_api_v2/NCT06975293.json" target="_blank" class="doc-link" style="font-size:12.5px;">
-            View Raw ClinicalTrials.gov JSON Snapshot &nearr;
-          </a>
-        </div>
-      </div>
     </div>
 
     <footer>
-      <div>&copy; 2026 ClinSight · Primary-source clinical trial protocol intelligence</div>
+      <div><strong>ClinSight™</strong> · Primary Registry Fact Base &middot; <a href="https://pract.eu" style="color:inherit; text-decoration:underline;">PRACT</a></div>
       <div>
-        <a href="../../targets/mettl3-inhibitors/">METTL3 Class Hub</a> &middot;
-        <a href="../../data/ClinSight_Phase1_2_Master_Verification_Ledger.csv">Download Class CSV</a> &middot;
-        <a href="../../data/raw_api_v2/NCT06975293.json">Raw API JSON</a>
+        <a href="../../explorer/">Explorer</a> &middot;
+        <a href="../../compare/">Comparator</a> &middot;
+        <a href="../../jobs/">Careers</a> &middot;
+        <a href="../../sitemap.xml">Sitemap</a>
       </div>
     </footer>
   </main>
@@ -699,14 +690,6 @@
   <script>
     const DOSSIER_NCT = "NCT06975293";
     const EXPORT_ROWS = [["Study Design", "Design Archetype", "STATED", "Uses a 3+3 + Simon's 2-stage design.", "protocolSection.armsInterventionsModule.armGroups[0].description; protocolSection.descriptionModule.briefSummary"], ["Study Design", "Allocation Mode", "STATED", "NON_RANDOMIZED", "protocolSection.designModule.designInfo.allocation"], ["Study Design", "Masking", "STATED", "NONE", "protocolSection.designModule.designInfo.maskingInfo.masking"], ["Study Design", "Intervention Model", "STATED", "SEQUENTIAL", "protocolSection.designModule.designInfo.interventionModel"], ["Study Design", "Primary Purpose", "STATED", "TREATMENT", "protocolSection.designModule.designInfo.primaryPurpose"], ["Study Design", "Participating Countries", "STATED-structural", "1 participating country (United States) across 14 clinical trial sites.", "protocolSection.contactsLocationsModule.locations"], ["Study Design", "Study Arms / Cohorts", "STATED-structural", "3 designated study arms / cohorts (Phase 1 dose escalation; Phase 2 Stage 1 Monotherapy; Phase 2 Stage 2 Monotherapy).", "protocolSection.armsInterventionsModule.armGroups"], ["Eligibility", "Hematologic Function", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Eligibility", "Renal Clearance", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Eligibility", "Hepatic Function", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Eligibility", "Cardiac Parameters", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Eligibility", "Prior Therapy & Washout", "STATED", "Received prior systemic anticancer therapy including investigational agents within 4 weeks or 5 half-lives, whichever is shorter, prior to first IMP administration. | Participants who have not recovered from all AEs due to previous therapies to Grade \u2264 1 or baseline, according to NCI-CTCAE v5.0. Exceptions include: alopecia, Grade \u2264 2 neuropathy, and endocrine-related AEs Grade \u2264 2 who are stable on treatment or hormone replacement.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Safety & Dosing", "Primary Safety / DLT Endpoint", "NOT_REPORTED", "Not reported in outcome measures.", "N/A"], ["Safety & Dosing", "DLT Assessment Window", "NOT_REPORTED", "Not reported separately from study duration.", "N/A"], ["Safety & Dosing", "Recommended Phase 2 Dose (RP2D)", "NOT_REPORTED", "Not reported as a designated outcome measure.", "N/A"], ["Safety & Dosing", "Maximum Tolerated Dose (MTD)", "NOT_REPORTED", "Not reported as a designated outcome measure.", "N/A"], ["Safety & Dosing", "Toxicity Grading Framework", "STATED", "Adverse events graded according to CTCAE (v5.0).", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Safety & Dosing", "Dose Modification Rules", "NOT_REPORTED", "Dose-modification rules not described in the registry record.", "N/A"], ["References", "ClinicalTrials.gov Record", "STATED", "https://clinicaltrials.gov/study/NCT06975293", "protocolSection.identificationModule.nctId"], ["References", "Linked Literature (PMID)", "NOT_REPORTED", "None linked", "protocolSection.referencesModule"]];
-
-    let sourcesVisible = false;
-    function toggleSources() {
-      sourcesVisible = !sourcesVisible;
-      document.body.classList.toggle('show-sources', sourcesVisible);
-      const btn = document.getElementById('btnSources');
-      if (btn) btn.textContent = sourcesVisible ? 'Hide Registry Sources' : 'Show Registry Sources';
-    }
 
     function copySynopsis() {
       const text = document.getElementById('synopsisText').innerText;
@@ -721,12 +704,12 @@
     function copyProvenanceMarkdown() {
       let lines = [
         `### ${DOSSIER_NCT} — Clinical Protocol Summary`,
-        `| Section | Parameter | Value / Statement | Registry Field |`,
-        `|---|---|---|---|`
+        `| Section | Parameter | Value / Statement |`,
+        `|---|---|---|`
       ];
       for (const r of EXPORT_ROWS) {
         const cleanVal = String(r[3] || '').replace(/\|/g, '\\|');
-        lines.push(`| ${r[0]} | ${r[1]} | ${cleanVal} | \`${r[4]}\` |`);
+        lines.push(`| ${r[0]} | ${r[1]} | ${cleanVal} |`);
       }
       navigator.clipboard.writeText(lines.join('\n')).then(() => {
         const btn = document.getElementById('btnCopyMd');
@@ -737,10 +720,10 @@
     }
 
     function downloadProvenanceCsv() {
-      const headers = ['nct_id', 'section', 'parameter', 'provenance_state', 'value_or_statement', 'registry_source_field'];
+      const headers = ['nct_id', 'section', 'parameter', 'value_or_statement'];
       const csvRows = [headers.join(',')];
       for (const r of EXPORT_ROWS) {
-        const rowVals = [DOSSIER_NCT, r[0], r[1], r[2], r[3] || '', r[4] || ''].map(
+        const rowVals = [DOSSIER_NCT, r[0], r[1], r[3] || ''].map(
           v => `"${String(v).replace(/"/g, '""')}"`
         );
         csvRows.push(rowVals.join(','));

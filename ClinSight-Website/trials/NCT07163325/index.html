@@ -365,13 +365,12 @@
     <div class="nav-inner">
       <a href="../../" class="nav-brand">
         <span class="logo-text">ClinSight™</span>
-        <span class="logo-tag">Clinical Trial Protocols &amp; Research Intelligence</span>
+        <span class="logo-tag">Clinical Trials &amp; Evidence Generation</span>
       </a>
       <div class="nav-links">
         <a href="../../">Home</a>
-        <a href="../../targets/mettl3-inhibitors/" class="active">METTL3 Inhibitors</a>
-        <a href="../../compare/">Comparisons</a>
-        <a href="../../explorer/">Trials Explorer</a>
+        <a href="../../explorer/" class="active">Trials Explorer</a>
+        <a href="../../compare/" class="">Comparator</a>
         <a href="../../jobs/">Careers</a>
       </div>
     </div>
@@ -389,7 +388,6 @@
         <div class="toolbar-group">
           <button type="button" class="btn-export" id="btnCopyMd" onclick="copyProvenanceMarkdown()">Copy Table for IB / Manuscript</button>
           <button type="button" class="btn-subtle" onclick="downloadProvenanceCsv()">Download CSV</button>
-          <button type="button" class="btn-subtle" id="btnSources" onclick="toggleSources()">Show Registry Sources</button>
         </div>
       </div>
 
@@ -717,22 +715,15 @@
           <a href="https://pubmed.ncbi.nlm.nih.gov/39883878/" target="_blank" rel="noopener noreferrer" class="doc-link" style="margin-right:16px;">PubMed PMID: 39883878 &nearr;</a><a href="https://pubmed.ncbi.nlm.nih.gov/42210870/" target="_blank" rel="noopener noreferrer" class="doc-link" style="margin-right:16px;">PubMed PMID: 42210870 &nearr;</a>
         </div>
       </div>
-      <div class="field-row">
-        <div class="field-label">Archived API v2 Snapshot</div>
-        <div>
-          <a href="../../data/raw_api_v2/NCT07163325.json" target="_blank" class="doc-link" style="font-size:12.5px;">
-            View Raw ClinicalTrials.gov JSON Snapshot &nearr;
-          </a>
-        </div>
-      </div>
     </div>
 
     <footer>
-      <div>&copy; 2026 ClinSight · Primary-source clinical trial protocol intelligence</div>
+      <div><strong>ClinSight™</strong> · Primary Registry Fact Base &middot; <a href="https://pract.eu" style="color:inherit; text-decoration:underline;">PRACT</a></div>
       <div>
-        <a href="../../targets/mettl3-inhibitors/">METTL3 Class Hub</a> &middot;
-        <a href="../../data/ClinSight_Phase1_2_Master_Verification_Ledger.csv">Download Class CSV</a> &middot;
-        <a href="../../data/raw_api_v2/NCT07163325.json">Raw API JSON</a>
+        <a href="../../explorer/">Explorer</a> &middot;
+        <a href="../../compare/">Comparator</a> &middot;
+        <a href="../../jobs/">Careers</a> &middot;
+        <a href="../../sitemap.xml">Sitemap</a>
       </div>
     </footer>
   </main>
@@ -740,14 +731,6 @@
   <script>
     const DOSSIER_NCT = "NCT07163325";
     const EXPORT_ROWS = [["Study Design", "Design Archetype", "STATED", "Uses a BOIN design.", "protocolSection.designModule.designInfo.interventionModelDescription"], ["Study Design", "Allocation Mode", "STATED", "NON_RANDOMIZED", "protocolSection.designModule.designInfo.allocation"], ["Study Design", "Masking", "STATED", "NONE", "protocolSection.designModule.designInfo.maskingInfo.masking"], ["Study Design", "Intervention Model", "STATED", "SEQUENTIAL", "protocolSection.designModule.designInfo.interventionModel"], ["Study Design", "Primary Purpose", "STATED", "TREATMENT", "protocolSection.designModule.designInfo.primaryPurpose"], ["Study Design", "Participating Countries", "STATED-structural", "4 participating countries (Belgium, Czechia, Netherlands, Spain) across 11 clinical trial sites.", "protocolSection.contactsLocationsModule.locations"], ["Study Design", "Study Arms / Cohorts", "STATED-structural", "5 designated study arms / cohorts (EP102 Dose level 1; EP102 Dose level 2; EP102 Dose level 3; EP102 Dose level 4; EP102 Dose level 5).", "protocolSection.armsInterventionsModule.armGroups"], ["Eligibility", "Hematologic Function", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Eligibility", "Renal Clearance", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Eligibility", "Hepatic Function", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Eligibility", "Cardiac Parameters", "NOT_REPORTED", "Not specified in the eligibility criteria.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Eligibility", "Prior Therapy & Washout", "STATED", "Participants who have received IMP or devices in other clinical trials within four weeks before the first dose.", "protocolSection.eligibilityModule.eligibilityCriteria"], ["Safety & Dosing", "Primary Safety / DLT Endpoint", "STATED", "Primary outcome evaluates: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie \u2014 [description: Incidence of Dose Limiting Toxicities (DLT)]", "protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie')"], ["Safety & Dosing", "DLT Assessment Window", "STATED", "DLT assessment window specified as: Up to 21 Days after first administration", "protocolSection.outcomesModule.primaryOutcomes[2].description (under measure: 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie') + .timeFrame"], ["Safety & Dosing", "Recommended Phase 2 Dose (RP2D)", "INFERRED", "States a goal of 'Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie'; consistent with an RP2D objective, term not used.", "protocolSection.outcomesModule.primaryOutcomes[2].measure"], ["Safety & Dosing", "Maximum Tolerated Dose (MTD)", "STATED", "Designated primary measure: Explore the maximum tolerated dose (MTD) and recommended doses of EP102 monotherapy for subsequent studie", "protocolSection.outcomesModule.primaryOutcomes[2].measure"], ["Safety & Dosing", "Toxicity Grading Framework", "NOT_REPORTED", "Toxicity grading framework not stated in registry record.", "N/A"], ["Safety & Dosing", "Dose Modification Rules", "NOT_REPORTED", "Dose-modification rules not described in the registry record.", "N/A"], ["References", "ClinicalTrials.gov Record", "STATED", "https://clinicaltrials.gov/study/NCT07163325", "protocolSection.identificationModule.nctId"], ["References", "Linked Literature (PMID)", "STATED", "39883878, 42210870", "protocolSection.referencesModule"]];
-
-    let sourcesVisible = false;
-    function toggleSources() {
-      sourcesVisible = !sourcesVisible;
-      document.body.classList.toggle('show-sources', sourcesVisible);
-      const btn = document.getElementById('btnSources');
-      if (btn) btn.textContent = sourcesVisible ? 'Hide Registry Sources' : 'Show Registry Sources';
-    }
 
     function copySynopsis() {
       const text = document.getElementById('synopsisText').innerText;
@@ -762,12 +745,12 @@
     function copyProvenanceMarkdown() {
       let lines = [
         `### ${DOSSIER_NCT} — Clinical Protocol Summary`,
-        `| Section | Parameter | Value / Statement | Registry Field |`,
-        `|---|---|---|---|`
+        `| Section | Parameter | Value / Statement |`,
+        `|---|---|---|`
       ];
       for (const r of EXPORT_ROWS) {
         const cleanVal = String(r[3] || '').replace(/\|/g, '\\|');
-        lines.push(`| ${r[0]} | ${r[1]} | ${cleanVal} | \`${r[4]}\` |`);
+        lines.push(`| ${r[0]} | ${r[1]} | ${cleanVal} |`);
       }
       navigator.clipboard.writeText(lines.join('\n')).then(() => {
         const btn = document.getElementById('btnCopyMd');
@@ -778,10 +761,10 @@
     }
 
     function downloadProvenanceCsv() {
-      const headers = ['nct_id', 'section', 'parameter', 'provenance_state', 'value_or_statement', 'registry_source_field'];
+      const headers = ['nct_id', 'section', 'parameter', 'value_or_statement'];
       const csvRows = [headers.join(',')];
       for (const r of EXPORT_ROWS) {
-        const rowVals = [DOSSIER_NCT, r[0], r[1], r[2], r[3] || '', r[4] || ''].map(
+        const rowVals = [DOSSIER_NCT, r[0], r[1], r[3] || ''].map(
           v => `"${String(v).replace(/"/g, '""')}"`
         );
         csvRows.push(rowVals.join(','));

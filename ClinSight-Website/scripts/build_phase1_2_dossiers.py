@@ -415,19 +415,18 @@ SHARED_CSS = '''
     footer a:hover { color: var(--cyan); }
 '''
 
-def render_nav(rel_prefix="../../", active="mettl3"):
+def render_nav(rel_prefix="../../", active="compare"):
     return f'''
   <nav class="site-nav" aria-label="Primary Navigation">
     <div class="nav-inner">
       <a href="{rel_prefix}" class="nav-brand">
         <span class="logo-text">ClinSight™</span>
-        <span class="logo-tag">Clinical Trial Protocols &amp; Research Intelligence</span>
+        <span class="logo-tag">Clinical Trials &amp; Evidence Generation</span>
       </a>
       <div class="nav-links">
         <a href="{rel_prefix}">Home</a>
-        <a href="{rel_prefix}targets/mettl3-inhibitors/" class="{'active' if active=='mettl3' else ''}">METTL3 Inhibitors</a>
-        <a href="{rel_prefix}compare/">Comparisons</a>
-        <a href="{rel_prefix}explorer/">Trials Explorer</a>
+        <a href="{rel_prefix}explorer/" class="{'active' if active=='explorer' else ''}">Trials Explorer</a>
+        <a href="{rel_prefix}compare/" class="{'active' if active=='compare' else ''}">Comparator</a>
         <a href="{rel_prefix}jobs/">Careers</a>
       </div>
     </div>
@@ -694,7 +693,7 @@ def render_dossier_html(dossier, verified_dossiers):
   <style>{SHARED_CSS}</style>
 </head>
 <body>
-  {render_nav(rel_prefix="../../", active="mettl3")}
+  {render_nav(rel_prefix="../../", active="explorer")}
 
   <main class="container">
     <div class="identity-band">
@@ -708,7 +707,6 @@ def render_dossier_html(dossier, verified_dossiers):
         <div class="toolbar-group">
           <button type="button" class="btn-export" id="btnCopyMd" onclick="copyProvenanceMarkdown()">Copy Table for IB / Manuscript</button>
           <button type="button" class="btn-subtle" onclick="downloadProvenanceCsv()">Download CSV</button>
-          <button type="button" class="btn-subtle" id="btnSources" onclick="toggleSources()">Show Registry Sources</button>
         </div>
       </div>
 
@@ -795,22 +793,15 @@ def render_dossier_html(dossier, verified_dossiers):
           {''.join([f'<a href="https://pubmed.ncbi.nlm.nih.gov/{p}/" target="_blank" rel="noopener noreferrer" class="doc-link" style="margin-right:16px;">PubMed PMID: {p} &nearr;</a>' for p in dossier['module4']['pmids']])}
         </div>
       </div>""" if has_pmids else ""}
-      <div class="field-row">
-        <div class="field-label">Archived API v2 Snapshot</div>
-        <div>
-          <a href="../../data/raw_api_v2/{escape_html(nct_id)}.json" target="_blank" class="doc-link" style="font-size:12.5px;">
-            View Raw ClinicalTrials.gov JSON Snapshot &nearr;
-          </a>
-        </div>
-      </div>
     </div>
 
     <footer>
-      <div>&copy; 2026 ClinSight · Primary-source clinical trial protocol intelligence</div>
+      <div><strong>ClinSight™</strong> · Primary Registry Fact Base &middot; <a href="https://pract.eu" style="color:inherit; text-decoration:underline;">PRACT</a></div>
       <div>
-        <a href="../../targets/mettl3-inhibitors/">METTL3 Class Hub</a> &middot;
-        <a href="../../data/ClinSight_Phase1_2_Master_Verification_Ledger.csv">Download Class CSV</a> &middot;
-        <a href="../../data/raw_api_v2/{escape_html(nct_id)}.json">Raw API JSON</a>
+        <a href="../../explorer/">Explorer</a> &middot;
+        <a href="../../compare/">Comparator</a> &middot;
+        <a href="../../jobs/">Careers</a> &middot;
+        <a href="../../sitemap.xml">Sitemap</a>
       </div>
     </footer>
   </main>
@@ -818,14 +809,6 @@ def render_dossier_html(dossier, verified_dossiers):
   <script>
     const DOSSIER_NCT = {json.dumps(nct_id)};
     const EXPORT_ROWS = {export_json_str};
-
-    let sourcesVisible = false;
-    function toggleSources() {{
-      sourcesVisible = !sourcesVisible;
-      document.body.classList.toggle('show-sources', sourcesVisible);
-      const btn = document.getElementById('btnSources');
-      if (btn) btn.textContent = sourcesVisible ? 'Hide Registry Sources' : 'Show Registry Sources';
-    }}
 
     function copySynopsis() {{
       const text = document.getElementById('synopsisText').innerText;
@@ -840,12 +823,12 @@ def render_dossier_html(dossier, verified_dossiers):
     function copyProvenanceMarkdown() {{
       let lines = [
         `### ${{DOSSIER_NCT}} — Clinical Protocol Summary`,
-        `| Section | Parameter | Value / Statement | Registry Field |`,
-        `|---|---|---|---|`
+        `| Section | Parameter | Value / Statement |`,
+        `|---|---|---|`
       ];
       for (const r of EXPORT_ROWS) {{
         const cleanVal = String(r[3] || '').replace(/\\|/g, '\\\\|');
-        lines.push(`| ${{r[0]}} | ${{r[1]}} | ${{cleanVal}} | \`${{r[4]}}\` |`);
+        lines.push(`| ${{r[0]}} | ${{r[1]}} | ${{cleanVal}} |`);
       }}
       navigator.clipboard.writeText(lines.join('\\n')).then(() => {{
         const btn = document.getElementById('btnCopyMd');
@@ -856,10 +839,10 @@ def render_dossier_html(dossier, verified_dossiers):
     }}
 
     function downloadProvenanceCsv() {{
-      const headers = ['nct_id', 'section', 'parameter', 'provenance_state', 'value_or_statement', 'registry_source_field'];
+      const headers = ['nct_id', 'section', 'parameter', 'value_or_statement'];
       const csvRows = [headers.join(',')];
       for (const r of EXPORT_ROWS) {{
-        const rowVals = [DOSSIER_NCT, r[0], r[1], r[2], r[3] || '', r[4] || ''].map(
+        const rowVals = [DOSSIER_NCT, r[0], r[1], r[3] || ''].map(
           v => `"${{String(v).replace(/"/g, '""')}}"`
         );
         csvRows.push(rowVals.join(','));
@@ -931,7 +914,7 @@ def render_target_hub_html(verified_dossiers):
   <style>{SHARED_CSS}</style>
 </head>
 <body>
-  {render_nav(rel_prefix="../../", active="mettl3")}
+  {render_nav(rel_prefix="../../", active="compare")}
 
   <main class="container">
     <div class="identity-band">
@@ -943,8 +926,6 @@ def render_target_hub_html(verified_dossiers):
         </div>
         <div class="toolbar-group">
           <button type="button" class="btn-export" id="btnCopyClassMd" onclick="copyClassMarkdown()">Copy Comparison Table (Markdown)</button>
-          <a href="../../data/ClinSight_Phase1_2_Master_Verification_Ledger.csv" download class="btn-subtle">Download CSV</a>
-          <button type="button" class="btn-subtle" id="btnSources" onclick="toggleSources()">Show Registry Sources</button>
         </div>
       </div>
 
@@ -986,24 +967,18 @@ def render_target_hub_html(verified_dossiers):
     </div>
 
     <footer>
-      <div>&copy; 2026 ClinSight · Primary-source clinical trial protocol intelligence</div>
+      <div><strong>ClinSight™</strong> · Primary Registry Fact Base &middot; <a href="https://pract.eu" style="color:inherit; text-decoration:underline;">PRACT</a></div>
       <div>
-        <a href="../../data/ClinSight_Phase1_2_Master_Verification_Ledger.csv">Download Verification Ledger (.csv)</a> &middot;
-        <a href="../../data/registry_drift_report.json">Registry Sync Status (.json)</a>
+        <a href="../../explorer/">Explorer</a> &middot;
+        <a href="../../compare/">Comparator</a> &middot;
+        <a href="../../jobs/">Careers</a> &middot;
+        <a href="../../sitemap.xml">Sitemap</a>
       </div>
     </footer>
   </main>
 
   <script>
     const CLASS_EXPORT_ROWS = {class_export_json};
-
-    let sourcesVisible = false;
-    function toggleSources() {{
-      sourcesVisible = !sourcesVisible;
-      document.body.classList.toggle('show-sources', sourcesVisible);
-      const btn = document.getElementById('btnSources');
-      if (btn) btn.textContent = sourcesVisible ? 'Hide Registry Sources' : 'Show Registry Sources';
-    }}
 
     function copyClassSynopsis() {{
       const text = document.getElementById('classSynopsisText').innerText;
